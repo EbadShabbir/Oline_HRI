@@ -1,0 +1,35 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+data/
+logs/
+
+# Generated evaluation bundles contain prompts, answers, provenance, and
+# device telemetry. Keep dated raw bundles and generated reports private.
+benchmarks/step16_*/
+benchmarks/step16_*_report.md
+
+# Local configuration and private-key material must never be versioned.
+.env*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.p8
+*.ppk
+*.jks
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+id_ecdsa_sk
+id_ed25519_sk

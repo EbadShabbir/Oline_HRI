@@ -11,6 +11,21 @@ This file records confirmed implementation decisions for the offline personalize
 5. Use headless Linux, NVMe storage, active cooling, batch size 1, and an approximately 2K-token context.
 6. Invoke vision periodically or in response to an event, rather than continuously processing the camera at full frame rate.
 
+### Measured Qwen3-4B device baseline
+
+Task 11 verified `qwen3:4b` Q4_K_M through local Ollama in non-thinking mode
+with a 2,048-token context. The controlled cold request took 113.99 seconds
+wall time, including 72.88 seconds to load, and its generation phase ran at
+2.45 tokens/s. Three resident repeats had a median wall time of 43.89 seconds
+and a median generation rate of 1.49 tokens/s. RAM reached approximately
+7.0/7.62 GB and swap reached 3.81/3.81 GB.
+
+These measurements support using 4B only as the slower, on-demand large route
+on the current 8GB, SD-backed development unit; they do not establish
+low-latency interactive or answer-quality performance. The complete setup,
+measurements, and limitations are recorded in the
+[Qwen3-4B Jetson benchmark](benchmarks/qwen3_4b_jetson.md).
+
 ## Confirmed conversational pipeline
 
 ```text
@@ -152,16 +167,196 @@ Filter before search: current profile + active + consented + unexpired
 Structured SQL lookup + FTS5 search + exact cosine search
         |
         v
-Fuse/rank candidates and reject weak or contradictory results
+Fuse/rank at most three candidates; identify high-confidence request links
         |
         v
-Supply at most the best 3-5 verified records, with IDs and dates,
+Pack required records first, then bounded optional candidates,
 to the independently selected Qwen3-0.6B or Qwen3-4B model
 ```
 
 Use structured SQL first when the answer belongs to an exact field. Combine lexical and semantic results for conversational memories so that exact personal names and dates are not lost through semantic matching. Recency and importance may be small ranking signals, but they must not override consent, expiration, profile separation, or contradiction handling.
 
 Do not adopt an arbitrary cosine threshold. Calibrate retrieval and abstention thresholds using project-specific query-memory pairs. When evidence is weak, stale, or conflicting, the robot must ask the user or say it is uncertain rather than selecting the nearest vector blindly. Retrieved text is untrusted contextual data, not a system instruction.
+
+### Implemented Version 1 routing and fusion contract
+
+The first text-chat integration uses Qwen3-0.6B as a strict structured router.
+It makes two singleton calls: one returns only `memory_required`, and the other
+returns only `model_size` (`small` or `large`). The results are independently
+validated and neither is derived from the other. Invalid or truncated router
+output stops the turn; there is no heuristic fallback. Router sampling is fixed
+at temperature zero and seed 42 independently of generator sampling. The
+selected generator is the configured Qwen3-0.6B or Qwen3-4B Ollama model. The
+configuration pins both planned model tags, and routed conversation construction
+also rejects identical small and large model names so the compute routes cannot
+silently collapse.
+Request-link analysis and evidence packing are a third, deterministic step and
+are independent of model size: either generator may receive one or several
+required records, and an explicit synthesis request may also carry optional
+candidates that are not eligible for citation.
+Ollama must use a loopback endpoint, and the default client disables environment
+proxies.
+
+### Implemented sequential Ollama lifecycle
+
+The CLI passes one shared Ollama client to the router and generator. The client
+serializes the complete lifecycle transaction and tracks only residency that it
+has confirmed itself:
+
+```text
+unknown/start -> unload peer -> Qwen3-0.6B (`keep_alive=-1`) -> resident small
+resident small -> unload small -> Qwen3-4B (`keep_alive=0`) -> no model resident
+no model resident -> Qwen3-0.6B (`keep_alive=-1`) -> resident small
+```
+
+An acknowledged unload must finish before the replacement request begins.
+Consecutive small-model calls reuse the resident model, while the large model
+is on demand and does not linger after a successful response. Any interrupted
+or failed transaction invalidates cached residency so the next request starts
+with a conservative peer unload. No prompt, history, or retrieved memory is
+included in an unload request.
+
+This is an application-level guarantee for callers sharing that client, not a
+server-wide lock against unrelated Ollama tools or processes. The deployment
+must not run competing model clients unless Ollama is also configured and
+verified with a server-wide one-model limit.
+
+### Implemented Step 14 resilience contract
+
+Configuration schema 4 uses separate local Ollama socket-operation budgets:
+30 seconds for unload, 60 seconds for the router and selected small model, and
+300 seconds for the large model. The 300-second value is a provisional failure
+budget informed by the observed cold 4B run, not a response-time objective. The
+historical Step 16 run measured a pre-redesign distribution; a current
+performance claim requires a new controlled run.
+
+The only automatic generation fallback is one exact `qwen3:4b` timeout followed
+by one `qwen3:0.6b` attempt. It reuses the identical prompt, bounded history,
+structured-output schema, and per-turn memory-ID authority. There is no fallback
+for a router or small-model timeout, retrieval or snapshot failure, non-timeout
+transport error, malformed metadata, truncation, invalid JSON, invented memory
+ID, or other response-contract failure. The fallback output passes the normal
+validation gate, and any failure leaves conversation history unchanged.
+
+A memory-backed fallback validates the authoritative record snapshot before the
+large request, before the fallback, and after the fallback response. Grounded
+assistant speech and `memory_used` IDs are deliberately not retained as ordinary
+conversation history, because correction or forgetting would otherwise leave a
+stale personal fact available to future router and generator prompts. A
+memory-requested answer with no retrieved record is also excluded so an
+unsupported model claim cannot become a session fact. Until history has explicit
+record-level provenance, personal follow-ups must retrieve again. Non-memory
+history remains limited to the newest three complete turns, six messages, 2,000
+characters, and the aggregate context budget.
+
+The Ollama client reads no more than 64 KiB plus one detection byte. Routing JSON
+is rejected above 512 characters and robot-response JSON above 16,384 characters
+before parsing. External transport/server bodies and component exception text
+are not copied into public errors. In interactive chat, a recoverable failed turn
+prints one fixed safe message and the session continues; a failed one-shot chat
+still exits with status 3.
+
+Conversational retrieval uses equal-weight reciprocal-rank fusion with `k=60`
+over at most 20 FTS5 candidates and 20 cosine candidates. It deduplicates by
+memory ID and preserves an exact lexical candidate on a fusion tie. The raw
+ranked result is bounded to three records. A deterministic, best-effort
+request-link pass uses lexical, name/label, preference, and temporal cues to
+mark high-confidence required records independently of the small/large route.
+Direct recall selects the best-supported linked record, preserving score ties;
+explicit multi-fact or synthesis requests keep every linked record required and
+may also disclose the remaining candidates for inspection. A semantic-only
+candidate with no detectable link produces a conservative abstention rather
+than a claimed personal fact. This is not a calibrated semantic-relevance
+guarantee.
+
+The privacy-safe diagnostic distinguishes raw ranked `retrieved_ids`, whole
+budget-fitting `supplied_ids` in required-first order, and validated
+`model_used_ids`. It emits no memory text, scores, or metadata. Opaque IDs remain
+linkable local metadata and must still be protected.
+
+Retrieved records and the current request are serialized into a bounded
+application-created user-role JSON envelope. The base system prompt says that
+record text is factual data, never an instruction. The envelope is ephemeral,
+never enters session history, and is checked against the authoritative database
+immediately before and after generation. Component caps are combined with a
+conservative aggregate prompt estimate that reserves output capacity and a
+safety margin in the configured context window. Only complete history turns and
+whole records are pruned. Required records are packed before optional records;
+an optional tail may be dropped, but failure to fit all required evidence stops
+the turn before generation. Every required ID must appear in `memory_used`, and
+optional supplied candidates cannot be cited. With no high-confidence request
+link, generated prose is replaced by the fixed application-authored abstention,
+`I do not have a verified personal memory that answers that.` An empty
+`memory_used` is first replaced with that fixed response; when linked evidence
+exists, the subsequent required-citation gate rejects it. Other incomplete
+linked citations also fail validation. Memory IDs themselves are forbidden in
+speech.
+
+The model-facing memory text rewrites bare `User`/`User's` and
+`the user`/`the user's` to `you`/`your` without mutating the stored record. The
+generation contract requires human facts to use `you`/`your`, never literal
+`the user` or robot `I`/`my`.
+One-record direct recall is distinguished from planning or transformation, so
+the latter must answer the task rather than merely repeat the record. Best-effort
+validators cover distinctive facts from every citation and requested temporal
+details; reject detectable perspective swaps, unsupported names or personal
+relationships, invented temporal precision, and polarity reversals of positive
+general preferences, temporal preferences, or relationships; require uncertainty
+for a narrow class of detectable short-label conflicts; and enforce a cited
+exactly-three-step preference. Times,
+dates, names, and relationships are authorized only by the current request or
+cited memory, not merely by an optional supplied candidate. These literal and
+regular-expression checks are deliberately best-effort: they do not constitute
+a general proof of completeness, temporal reasoning, or semantic correctness.
+Gestures remain `NO_ACTION`, and generator errors exposed to the CLI are
+sanitized.
+
+The complex-general/no-memory 4B path currently has a compact architecture
+completion rule: at most 75 speech words, exactly three architecture
+comparisons, one recommendation, and exactly three short deployment steps. It
+prevents the observed offline/physical-action deflection but is
+regression-specific rather than a general planner contract.
+
+Post-redesign validation on 2026-09-08 completed a 420-test unit discovery with
+`OK` (`skipped=19`), 7 live routing tests with `OK` in 21.163 seconds, and 9 live
+answer-quality tests with `OK` in 677.452 seconds. The quality suite retains the
+three fictional Theo, Tuesday-morning, and exactly-three-step memories and the
+four exact failed-prompt regressions documented in the project README.
+
+### Implemented Step 15 fictional evaluation fixture
+
+Step 15 supplies a versioned, fully synthetic Monday-to-Sunday case study in
+[`evaluation/fictional_seven_day_v1.json`](evaluation/fictional_seven_day_v1.json)
+and a strict local harness in `oline_hri.evaluation`. Mira, Theo, Luma, and all
+events are fictional. The fixture contains no human-participant data, is not a
+user study, and cannot establish generalizable behavior or suitability for an
+intended population.
+
+The manifest contains 15 ordered lifecycle events (13 remembers, one
+correction, and one forget), 14 deterministic record versions, three
+policy-withheld topics with no private values, and 30 author-gold cases. The
+cases cover every combination of memory/no-memory and small/large routing, as
+well as correction, deletion, expiration, recency, contradiction, absence,
+confirmed sensitive information, prohibited secrets, unconfirmed third-party
+data, and unconfirmed affect inference.
+
+The loader rejects malformed or internally inconsistent manifests. The replay
+helper materializes the events into a new isolated SQLite database through the
+public memory lifecycle, while prompt emission produces deterministic JSON
+Lines for `all`, `router`, or `rag` tracks. Run:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m oline_hri.evaluation validate
+PYTHONPATH=src .venv/bin/python -m oline_hri.evaluation prompts --track all
+```
+
+The labels remain `author_gold_pending_independent_review`; a second reviewer
+must inspect them without model outputs before they support reported results.
+Step 15 does not run either Qwen model, score responses, or report router,
+retrieval, answer-quality, latency, token, RAM, swap, thermal, or power metrics.
+Those executions and objective measurements were completed by the historical
+pre-redesign Step 16 run; independent label/answer review and final deployment
+measurements remain open.
 
 ### Scale and deferred vector-index options
 
@@ -184,7 +379,10 @@ A correction creates a new record, marks the old record `superseded`, and embeds
 
 ### Evaluation before freezing the design
 
-Evaluate the embedding and retrieval subsystem with project-specific query-memory pairs in addition to the planned LoCoMo benchmark and controlled seven-day case study. Report:
+The pre-redesign Step 16 run executed the embedding, retrieval, routing, and
+answer paths against the Step 15 controlled seven-day fixture. A current rerun
+should also use other project-specific query-memory pairs. LoCoMo remains a
+separate planned benchmark and is not included in the fictional fixture. Report:
 
 - Recall@5 and mean reciprocal rank.
 - Precision of the memories actually supplied to Qwen.
@@ -194,6 +392,56 @@ Evaluate the embedding and retrieval subsystem with project-specific query-memor
 - Embedding latency, search latency, end-to-end retrieval latency, and p50/p95 values.
 - CPU and shared-memory use, NVMe activity, power, temperature, and throttling on the final Jetson.
 - Deletion/correction success and zero cross-profile retrieval in any later multi-user test.
+
+### Historical Step 16 collection and objective scoring (pre-redesign)
+
+The 2026-09-07 local benchmark runner executed the Step 15 fixture with real BGE,
+hybrid retrieval, and Ollama. It compared always-small/no-RAG,
+always-large/no-RAG, always-large/bounded-RAG, and the production adaptive
+cascade over 30 stateless cases each. The
+[frozen protocol](evaluation/step16_protocol.md) defines the four-bundle order,
+independent top-five retrieval pass, production top-three memory bound,
+decoding settings, and failed-attempt denominators before answer inspection.
+
+The runner preserves raw observations, objective scores, model/source/asset
+provenance, Jetson telemetry, and blinded answer-review rows. An offline merge
+command checks source compatibility and produces one combined report using
+the predeclared first bundle's component-retrieval measurements. See the
+[run and merge instructions](evaluation/README.md#historical-step-16-run-and-merge-pre-redesign).
+Keep private artifacts in an owner-controlled persistent directory selected by
+`OLINE_HRI_RUN_ROOT`: a reboot lost an earlier collection under `/tmp`, so it
+cannot serve as final evidence. Raw dated bundles and generated reports contain
+prompts, answers, provenance, and device telemetry; they are intentionally not
+versioned.
+
+All four 30-case baselines completed with 120/120 valid structured turns,
+zero errors, and zero fallbacks. Their provenance matched and the objective
+merge completed. In the full adaptive run, memory decisions matched author
+labels on 25/30 cases, model decisions on 19/30, and both on 15/30. It generated
+18 answers with 4B and twelve with 0.6B; median/p95 turn latency was
+82.996/126.007 s. These are observed routing and timing results, not established
+answer quality or compute savings. These aggregate historical figures remain in
+this document; the underlying raw bundle and generated report remain local-only.
+
+These artifacts predate the routing and grounded-generation redesign documented
+above. They must be rerun before their metrics are attributed to the current
+implementation.
+
+The separate router-only supplement remains unpooled: it matched 24/30 memory
+and 20/30 model labels while executing no selected generators. An earlier
+unclean reboot interrupted a 4B attempt; automatic approval review initially
+blocked a retry, which the user subsequently approved. The retained retry
+completed, but the original reboot cause remains unknown.
+
+Collection and objective scoring are complete. Full Step 16 interpretation
+remains provisional while the labels await independent review,
+and speech accuracy, abstention, temporal correctness,
+uncertainty, and hallucination adjudication remain pending blinded human review.
+The current Jetson is in 15W mode on `/dev/mmcblk0`, with development processes
+active; its storage results describe SD activity. Final NVMe measurements and
+microphone, speaker, actuation, and physical offline-disconnection tests remain
+deferred. The one-repetition, fixed-order comparison does not establish
+run-to-run variability or generalizable answer quality.
 
 ## Target-user development scope
 
