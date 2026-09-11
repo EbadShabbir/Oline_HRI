@@ -1,20 +1,21 @@
 {
-  "schema_version": 4,
+  "schema_version": 7,
   "profile": {
     "active": "general"
   },
   "ollama": {
     "base_url": "http://127.0.0.1:11434",
     "small_model": "qwen3:0.6b",
-    "large_model": "qwen3:4b",
+    "general_large_model": "qwen3:1.7b",
+    "large_model": "qwen3:1.7b",
     "request_timeout_seconds": 60,
-    "large_request_timeout_seconds": 300,
+    "large_request_timeout_seconds": 120,
     "unload_timeout_seconds": 30
   },
   "generation": {
     "context_length": 2048,
-    "max_output_tokens": 256,
-    "temperature": 0.2,
+    "max_output_tokens": 192,
+    "temperature": 0.0,
     "thinking": false
   },
   "conversation": {
@@ -22,11 +23,42 @@
   },
   "memory": {
     "database_path": "~/.local/share/oline-hri/memory.sqlite3",
-    "profile_id": "default_user"
+    "profile_id": "default_user",
+    "retention_days": 7
   },
   "embedding": {
     "model_directory": "~/.local/share/oline-hri/models/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
     "intra_op_threads": 2
+  },
+  "speech": {
+    "capture_executable_path": "/usr/bin/arecord",
+    "capture_device": "plughw:CARD=Microphone,DEV=0",
+    "sample_rate_hz": 16000,
+    "chunk_samples": 512,
+    "silero": {
+      "model_path": "~/.local/share/oline-hri/stt/models/silero_vad-v6.2.1.onnx",
+      "threshold": 0.5,
+      "silence_threshold": 0.35,
+      "pre_roll_seconds": 0.3,
+      "start_timeout_seconds": 30.0,
+      "start_trigger_seconds": 0.096,
+      "end_silence_seconds": 1.0,
+      "min_utterance_seconds": 0.3,
+      "max_utterance_seconds": 30.0
+    },
+    "whisper": {
+      "executable_path": "~/.local/share/oline-hri/stt/bin/whisper-cli",
+      "primary_model_path": "~/.local/share/oline-hri/stt/models/ggml-small.en-q5_0.bin",
+      "fallback_model_path": "~/.local/share/oline-hri/stt/models/ggml-base.en-q5_0.bin",
+      "language": "en",
+      "threads": 4,
+      "timeout_seconds": 120
+    },
+    "quality": {
+      "min_mean_token_probability": 0.2,
+      "min_text_characters": 1,
+      "max_text_characters": 1000
+    }
   },
   "logging": {
     "level": "INFO"

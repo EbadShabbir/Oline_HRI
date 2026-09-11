@@ -1,0 +1,27 @@
+{
+  "description": "Additional fictional checks fixed before live collection; not an independent benchmark.",
+  "memories": [
+    {"text": "I own a yellow scooter.", "kind": "fact"},
+    {"text": "My office fern is called Hazel.", "kind": "fact"},
+    {"text": "I completed an acoustic sensor test.", "kind": "event"},
+    {"text": "I prefer replies under two sentences.", "kind": "preference"},
+    {"text": "Lena is my astronomy club partner.", "kind": "relationship"},
+    {"text": "My astronomy meetings are Friday afternoons.", "kind": "routine"},
+    {"text": "I own a bicycle.", "kind": "fact"},
+    {"text": "My backpack is red.", "kind": "fact"}
+  ],
+  "cases": [
+    {"id": "scooter_colour", "prompt": "What colour is my scooter?", "expected": "yellow", "memory_indices": [0]},
+    {"id": "fern_name", "prompt": "What is my office fern's name?", "expected": "Hazel", "memory_indices": [1]},
+    {"id": "completed_test", "prompt": "Which test did I complete?", "expected": "You completed an acoustic sensor test.", "memory_indices": [2]},
+    {"id": "reply_preference", "prompt": "Do I prefer brief or lengthy replies?", "expected": "replies under two sentences", "memory_indices": [3]},
+    {"id": "partner", "prompt": "Who is Lena to me?", "expected": "your astronomy club partner", "memory_indices": [4]},
+    {"id": "meeting_time", "prompt": "When do I have astronomy meetings?", "expected": "Friday afternoons", "memory_indices": [5]},
+    {"id": "unknown_bike_colour", "prompt": "What color is my bike?", "expected": "abstain; bicycle color was never supplied", "memory_indices": []},
+    {"id": "unknown_scooter_name", "prompt": "What is my scooter's name?", "expected": "abstain; scooter name was never supplied", "memory_indices": []},
+    {"id": "unknown_dog", "prompt": "What is my dog's name?", "expected": "abstain; no dog record", "memory_indices": []},
+    {"id": "unknown_music", "prompt": "What is my favorite kind of music?", "expected": "abstain; no music record", "memory_indices": []},
+    {"id": "test_free_paraphrase", "prompt": "Remind me what test I finished.", "expected": "You completed an acoustic sensor test.", "memory_indices": [2]},
+    {"id": "scooter_free_paraphrase", "prompt": "What do you remember about my scooter?", "expected": "You own a yellow scooter.", "memory_indices": [0]}
+  ]
+}

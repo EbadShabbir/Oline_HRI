@@ -1,0 +1,2366 @@
+{
+  "date": "2026-09-10",
+  "artifact_base": "/home/b2jetson/.local/share/oline-hri/evaluation-runs",
+  "directories": {
+    "regression": "reliability-regression-20260910-04",
+    "new_wording": "reliability-new-wording-20260910",
+    "adaptive": "reliability-adaptive-20260910",
+    "learn": "reliability-learn-20260910",
+    "recall": "reliability-recall-20260910-02",
+    "travel_diagnostic": "reliability-travel-diagnostic-20260910"
+  },
+  "telemetry": {
+    "regression": {
+      "samples": 74,
+      "duration_seconds": 36.780468762,
+      "peak_ram_mb": 5840,
+      "peak_swap_mb": 19,
+      "peak_temperature_c": 57.593,
+      "guard_violation": null,
+      "resident_models": [],
+      "boot_id": "1906c9ca-3370-40e7-9384-62b1a172f842",
+      "boot_unchanged": true,
+      "trips": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      },
+      "source_matches_current": true
+    },
+    "new_wording": {
+      "samples": 78,
+      "duration_seconds": 38.867880467,
+      "peak_ram_mb": 5896,
+      "peak_swap_mb": 25,
+      "peak_temperature_c": 58.375,
+      "guard_violation": null,
+      "resident_models": [],
+      "boot_id": "1906c9ca-3370-40e7-9384-62b1a172f842",
+      "boot_unchanged": true,
+      "trips": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      },
+      "source_matches_current": true
+    },
+    "adaptive": {
+      "samples": 1208,
+      "duration_seconds": 612.567443313,
+      "peak_ram_mb": 6484,
+      "peak_swap_mb": 141,
+      "peak_temperature_c": 59.281,
+      "guard_violation": null,
+      "resident_models": [],
+      "boot_id": "1906c9ca-3370-40e7-9384-62b1a172f842",
+      "boot_unchanged": true,
+      "trips": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      },
+      "source_matches_current": true
+    },
+    "learn": {
+      "samples": 78,
+      "duration_seconds": 39.066358011,
+      "peak_ram_mb": 5765,
+      "peak_swap_mb": 141,
+      "peak_temperature_c": 58.437,
+      "guard_violation": null,
+      "resident_models": [],
+      "boot_id": "1906c9ca-3370-40e7-9384-62b1a172f842",
+      "boot_unchanged": true,
+      "trips": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      },
+      "source_matches_current": true
+    },
+    "recall": {
+      "samples": 63,
+      "duration_seconds": 31.472313719,
+      "peak_ram_mb": 5679,
+      "peak_swap_mb": 141,
+      "peak_temperature_c": 58.343,
+      "guard_violation": null,
+      "resident_models": [],
+      "boot_id": "1906c9ca-3370-40e7-9384-62b1a172f842",
+      "boot_unchanged": true,
+      "trips": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      },
+      "source_matches_current": true
+    },
+    "travel_diagnostic": {
+      "samples": 129,
+      "duration_seconds": 64.784966231,
+      "peak_ram_mb": 6336,
+      "peak_swap_mb": 141,
+      "peak_temperature_c": 55.843,
+      "guard_violation": null,
+      "resident_models": [],
+      "boot_id": "1906c9ca-3370-40e7-9384-62b1a172f842",
+      "boot_unchanged": true,
+      "trips": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      },
+      "source_matches_current": true
+    }
+  },
+  "artifact_sha256": {
+    "regression": {
+      "source_hashes.json": "2d66a97aff98531eea8e56d36b6eaa619d0a155d26e7eda87118fc31ebac688b",
+      "paraphrases.jsonl": "58e654e343a2311e90f15f039a66d3fab2292895447c96af79a5df73b950b235",
+      "config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "fixture.json": "c70ea11f70e6eed319fe41683c3db457e8a0777e2478a32f4d9fde354a73f2dd",
+      "workload.json": "e3def84d988d5112c95795c3d366a0ee194f8ed9f808aa2f26bdece39f60eb77",
+      "memories.json": "81e414ce5a2ace92dfef38059b727f41d4b775daa4eb57ddfa2608b6476d2ccd",
+      "start.json": "087de97b1609e7d3e4765417b331a119b1e9e0a29a7702f22d5fa3d606bce283",
+      "telemetry.jsonl": "1e216e00425f851beb25725785689a467482c00e9719c4fb3db12ab2dc7bf966",
+      "telemetry_summary.json": "becd3c462994bb9cc763c53d7ec72dabd5636b58a2798332c1e13a5d27f35ed9",
+      "finish.json": "7a72f072768c9401e5718b84c5c0d281ba82c708f3f53335e7be0803b994a54d"
+    },
+    "new_wording": {
+      "source_hashes.json": "2d66a97aff98531eea8e56d36b6eaa619d0a155d26e7eda87118fc31ebac688b",
+      "paraphrases.jsonl": "fce6306bdf336c0dba9d5dc72a529ab23306471b57381289ea37a007df328c22",
+      "config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "fixture.json": "be4128a518cdc9cf74987b762d1a0d1c5d7e2cfbf399764b6dff9e9bc780fa63",
+      "workload.json": "e3def84d988d5112c95795c3d366a0ee194f8ed9f808aa2f26bdece39f60eb77",
+      "memories.json": "4935044c5752d5e8c47b6be056bcebc0ac64a1bfe9f93fb7d67784e35848a10d",
+      "start.json": "146945fa2f8bd7b23b2e60b67fabf7a6635389c21e16837740809d78817e21b4",
+      "telemetry.jsonl": "023925e3c35f0123373d001f473f5a71762f8633f72b7700f7cfee78b9dce981",
+      "telemetry_summary.json": "ce2aae59e44ad38e5d612874ae6beee2afbb38e1be73a0ad26cf000f2f9bfb1b",
+      "finish.json": "7d59a85b5f1b61b7f8b7cf155893b99250822555ff243e41ad1b5a42f9ed23a5"
+    },
+    "adaptive": {
+      "source_hashes.json": "2d66a97aff98531eea8e56d36b6eaa619d0a155d26e7eda87118fc31ebac688b",
+      "summary.json": "a9ed5252ce7d832d3158bbfd03b7105d16498f976a3ed523ac7795535d499396",
+      "observations.jsonl": "d840e3bcb2efbdfa9419d2c4e46aeb90c3e7299e7611028db7f54150f2f1ada5",
+      "config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "workload.json": "f80aa4a16a6d9bc0c857a3e1f96e34f1d6ef17b7331c2f0fbc83f174c5cc25da",
+      "start.json": "c3b2e1ac1e1dcb01d53bc4ef21aced9c36952d53fdd855a214321b2c7808db9e",
+      "telemetry.jsonl": "84db5d719cf9a21cf5e9aa8f61d664c8234f029a410705c94ceafa71b6b9e4e8",
+      "report.md": "3c5a1a5dd813d4e04a990c2dc482f6452bdbb58a2bc5d213a1b06df8f4068307",
+      "telemetry_summary.json": "fe99044c13bcabb18c62904250883ca802e9a42c4218f0a9895278a16b0769c2",
+      "finish.json": "a6a56c0cdadd6a2d4df691bdbec47d22e48bce2997c5e3d7f05566b678184d55"
+    },
+    "learn": {
+      "source_hashes.json": "2d66a97aff98531eea8e56d36b6eaa619d0a155d26e7eda87118fc31ebac688b",
+      "backend_calls.json": "d6526ba0f97db4401552494f84db2ed6a4d99ec9c940bf2a18dab298c8a7178c",
+      "config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "workload.json": "e3def84d988d5112c95795c3d366a0ee194f8ed9f808aa2f26bdece39f60eb77",
+      "start.json": "6ee87425926a07cc7fa412a97ef0306f3b4fdce3aa90d43f392e5cb2e44ecc5d",
+      "telemetry.jsonl": "f599da8df7e49a068fae272f83baeb5d8888f92f1dd389b93252ea969edf025b",
+      "telemetry_summary.json": "6d6cca24e6ec8e2081a2d25ccb5b959629ed1736877fb980e0cd100e1a1a2657",
+      "finish.json": "10b3decea9a44e3aefd8253ed4bd010e2fde675abf80b10aae9e22ed6bf8f23e"
+    },
+    "recall": {
+      "source_hashes.json": "2d66a97aff98531eea8e56d36b6eaa619d0a155d26e7eda87118fc31ebac688b",
+      "backend_calls.json": "d6fe7fca76ac17a1ce7447aebce6ff669abf48e1abbe2402ee1431b85f1730e7",
+      "config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "workload.json": "e3def84d988d5112c95795c3d366a0ee194f8ed9f808aa2f26bdece39f60eb77",
+      "start.json": "1120f1c8bb52f95a0c22025cad994479ca41c8355b399fc4d54d0aa369b4e453",
+      "telemetry.jsonl": "8a0c82595b28e57ee3abeda9dc67b96b69e3dc519fce4788d966645c749981bb",
+      "telemetry_summary.json": "6bbba1083d11074225f722a0269401f5ec9658f00be61b1b009bb0d7460bc499",
+      "finish.json": "8b5506293cc57e2605bdaf53aa2f75dc72c79ce1eea11744067c6b82ddebefc0"
+    },
+    "travel_diagnostic": {
+      "source_hashes.json": "2d66a97aff98531eea8e56d36b6eaa619d0a155d26e7eda87118fc31ebac688b",
+      "backend_calls.json": "4fd731dff48cea7dea0c2843e61b1c12f591846594a52798b454ac85dbc3c85d",
+      "config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "workload.json": "f80aa4a16a6d9bc0c857a3e1f96e34f1d6ef17b7331c2f0fbc83f174c5cc25da",
+      "start.json": "cd8c815faf351907dcdfc16b6c187885fbba4ef598db448f46e87cebc75104fe",
+      "telemetry.jsonl": "90e1f0ab448d48a072fdf2d49013c892bc5571a8636b4745106409fdc92d1934",
+      "telemetry_summary.json": "1a46f3780378ec4005c2b78fd0ffe469b5982084d72353175978ef674d5c0487",
+      "focus.jsonl": "5a087109aaf2aa8f1eca16c7dbcf733e652291df872d536bfbd79f52364bf625",
+      "finish.json": "b09f26b5ebbaf5f7ee264dc2738afead86f85ff5233a25d4b8c4d8d58cf67447"
+    },
+    "memory": {
+      "learn.json": "6741398baded41704ad910927a9387a06d7102926de78fd9c21336fbfcfdaf94",
+      "recall.json": "021cfe44955584ff58418932c4b7722075846e38afe04e73881d51b3c99dc2de"
+    }
+  },
+  "offline": {
+    "total": 659,
+    "passed": 633,
+    "skipped_live_opt_in": 26
+  },
+  "regression": [
+    {
+      "answer_constraint": null,
+      "expected": "yellow",
+      "expected_ids": [
+        "mem_7dc3b70c8b5f4bc6a924af85765f393f"
+      ],
+      "id": "scooter_colour",
+      "memory": {
+        "model_used_ids": [
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f"
+        ],
+        "retrieved_ids": [
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f",
+          "mem_f07dad6a08204331b85fab0c31860c10",
+          "mem_0ec6793703fc4c47bc861b4adddc2344"
+        ],
+        "supplied_ids": [
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f"
+        ]
+      },
+      "memory_indices": [
+        0
+      ],
+      "prompt": "What colour is my scooter?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f"
+        ],
+        "speech": "Your scooter is yellow."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 11839545792
+    },
+    {
+      "answer_constraint": null,
+      "expected": "Hazel",
+      "expected_ids": [
+        "mem_110651cf87ab4eed91aa4a60d2e1772a"
+      ],
+      "id": "fern_name",
+      "memory": {
+        "model_used_ids": [
+          "mem_110651cf87ab4eed91aa4a60d2e1772a"
+        ],
+        "retrieved_ids": [
+          "mem_110651cf87ab4eed91aa4a60d2e1772a",
+          "mem_f5e9dd5c05ab4fd296ea5ad1b09bc578",
+          "mem_95d2756fec6e4635a4776146280b682a"
+        ],
+        "supplied_ids": [
+          "mem_110651cf87ab4eed91aa4a60d2e1772a"
+        ]
+      },
+      "memory_indices": [
+        1
+      ],
+      "prompt": "What is my office fern's name?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_110651cf87ab4eed91aa4a60d2e1772a"
+        ],
+        "speech": "Your office fern is called Hazel."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2336153041
+    },
+    {
+      "answer_constraint": null,
+      "expected": "You completed an acoustic sensor test.",
+      "expected_ids": [
+        "mem_26fd6e31596246ff8c16358d43862260"
+      ],
+      "id": "completed_test",
+      "memory": {
+        "model_used_ids": [
+          "mem_26fd6e31596246ff8c16358d43862260"
+        ],
+        "retrieved_ids": [
+          "mem_26fd6e31596246ff8c16358d43862260",
+          "mem_138bdc96f0bb45ae9be0309163ac3829",
+          "mem_f07dad6a08204331b85fab0c31860c10"
+        ],
+        "supplied_ids": [
+          "mem_26fd6e31596246ff8c16358d43862260"
+        ]
+      },
+      "memory_indices": [
+        2
+      ],
+      "prompt": "Which test did I complete?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_26fd6e31596246ff8c16358d43862260"
+        ],
+        "speech": "You completed an acoustic sensor test."
+      },
+      "response_transform": "verified_memory_perspective",
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2092732672
+    },
+    {
+      "answer_constraint": "verified_preference",
+      "expected": "replies under two sentences",
+      "expected_ids": [
+        "mem_138bdc96f0bb45ae9be0309163ac3829"
+      ],
+      "id": "reply_preference",
+      "memory": {
+        "model_used_ids": [
+          "mem_138bdc96f0bb45ae9be0309163ac3829"
+        ],
+        "retrieved_ids": [
+          "mem_138bdc96f0bb45ae9be0309163ac3829",
+          "mem_95d2756fec6e4635a4776146280b682a",
+          "mem_26fd6e31596246ff8c16358d43862260"
+        ],
+        "supplied_ids": [
+          "mem_138bdc96f0bb45ae9be0309163ac3829"
+        ]
+      },
+      "memory_indices": [
+        3
+      ],
+      "prompt": "Do I prefer brief or lengthy replies?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_138bdc96f0bb45ae9be0309163ac3829"
+        ],
+        "speech": "You prefer replies under two sentences."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2206065606
+    },
+    {
+      "answer_constraint": null,
+      "expected": "your astronomy club partner",
+      "expected_ids": [
+        "mem_f5e9dd5c05ab4fd296ea5ad1b09bc578"
+      ],
+      "id": "partner",
+      "memory": {
+        "model_used_ids": [
+          "mem_f5e9dd5c05ab4fd296ea5ad1b09bc578"
+        ],
+        "retrieved_ids": [
+          "mem_f5e9dd5c05ab4fd296ea5ad1b09bc578",
+          "mem_138bdc96f0bb45ae9be0309163ac3829",
+          "mem_110651cf87ab4eed91aa4a60d2e1772a"
+        ],
+        "supplied_ids": [
+          "mem_f5e9dd5c05ab4fd296ea5ad1b09bc578"
+        ]
+      },
+      "memory_indices": [
+        4
+      ],
+      "prompt": "Who is Lena to me?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_f5e9dd5c05ab4fd296ea5ad1b09bc578"
+        ],
+        "speech": "Lena is your astronomy club partner."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2256585500
+    },
+    {
+      "answer_constraint": null,
+      "expected": "Friday afternoons",
+      "expected_ids": [
+        "mem_95d2756fec6e4635a4776146280b682a"
+      ],
+      "id": "meeting_time",
+      "memory": {
+        "model_used_ids": [
+          "mem_95d2756fec6e4635a4776146280b682a"
+        ],
+        "retrieved_ids": [
+          "mem_95d2756fec6e4635a4776146280b682a",
+          "mem_f5e9dd5c05ab4fd296ea5ad1b09bc578",
+          "mem_26fd6e31596246ff8c16358d43862260"
+        ],
+        "supplied_ids": [
+          "mem_95d2756fec6e4635a4776146280b682a"
+        ]
+      },
+      "memory_indices": [
+        5
+      ],
+      "prompt": "When do I have astronomy meetings?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_95d2756fec6e4635a4776146280b682a"
+        ],
+        "speech": "Your astronomy meetings are on Friday afternoons."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2245370845
+    },
+    {
+      "answer_constraint": null,
+      "expected": "abstain; bicycle color was never supplied",
+      "expected_ids": [],
+      "id": "unknown_bike_colour",
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_f07dad6a08204331b85fab0c31860c10",
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f",
+          "mem_0ec6793703fc4c47bc861b4adddc2344"
+        ],
+        "supplied_ids": [
+          "mem_f07dad6a08204331b85fab0c31860c10"
+        ]
+      },
+      "memory_indices": [],
+      "prompt": "What color is my bike?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [],
+        "speech": "I do not have a verified personal memory that answers that."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2198677155
+    },
+    {
+      "answer_constraint": null,
+      "expected": "abstain; scooter name was never supplied",
+      "expected_ids": [],
+      "id": "unknown_scooter_name",
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f",
+          "mem_f07dad6a08204331b85fab0c31860c10",
+          "mem_110651cf87ab4eed91aa4a60d2e1772a"
+        ],
+        "supplied_ids": [
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f"
+        ]
+      },
+      "memory_indices": [],
+      "prompt": "What is my scooter's name?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [],
+        "speech": "I do not have a verified personal memory that answers that."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 1996468674
+    },
+    {
+      "answer_constraint": null,
+      "expected": "abstain; no dog record",
+      "expected_ids": [],
+      "id": "unknown_dog",
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_110651cf87ab4eed91aa4a60d2e1772a",
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f",
+          "mem_f07dad6a08204331b85fab0c31860c10"
+        ],
+        "supplied_ids": [
+          "mem_110651cf87ab4eed91aa4a60d2e1772a"
+        ]
+      },
+      "memory_indices": [],
+      "prompt": "What is my dog's name?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [],
+        "speech": "I do not have a verified personal memory that answers that."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2144535190
+    },
+    {
+      "answer_constraint": null,
+      "expected": "abstain; no music record",
+      "expected_ids": [],
+      "id": "unknown_music",
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_138bdc96f0bb45ae9be0309163ac3829",
+          "mem_f5e9dd5c05ab4fd296ea5ad1b09bc578",
+          "mem_0ec6793703fc4c47bc861b4adddc2344"
+        ],
+        "supplied_ids": [
+          "mem_138bdc96f0bb45ae9be0309163ac3829"
+        ]
+      },
+      "memory_indices": [],
+      "prompt": "What is my favorite kind of music?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [],
+        "speech": "I do not have a verified personal memory that answers that."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2418791205
+    },
+    {
+      "answer_constraint": null,
+      "expected": "You completed an acoustic sensor test.",
+      "expected_ids": [
+        "mem_26fd6e31596246ff8c16358d43862260"
+      ],
+      "id": "test_free_paraphrase",
+      "memory": {
+        "model_used_ids": [
+          "mem_26fd6e31596246ff8c16358d43862260"
+        ],
+        "retrieved_ids": [
+          "mem_26fd6e31596246ff8c16358d43862260",
+          "mem_138bdc96f0bb45ae9be0309163ac3829",
+          "mem_95d2756fec6e4635a4776146280b682a"
+        ],
+        "supplied_ids": [
+          "mem_26fd6e31596246ff8c16358d43862260"
+        ]
+      },
+      "memory_indices": [
+        2
+      ],
+      "prompt": "Remind me what test I finished.",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_26fd6e31596246ff8c16358d43862260"
+        ],
+        "speech": "You completed an acoustic sensor test."
+      },
+      "response_transform": "verified_memory_perspective",
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2260552697
+    },
+    {
+      "answer_constraint": null,
+      "expected": "You own a yellow scooter.",
+      "expected_ids": [
+        "mem_7dc3b70c8b5f4bc6a924af85765f393f"
+      ],
+      "id": "scooter_free_paraphrase",
+      "memory": {
+        "model_used_ids": [
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f"
+        ],
+        "retrieved_ids": [
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f",
+          "mem_f07dad6a08204331b85fab0c31860c10",
+          "mem_26fd6e31596246ff8c16358d43862260"
+        ],
+        "supplied_ids": [
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f"
+        ]
+      },
+      "memory_indices": [
+        0
+      ],
+      "prompt": "What do you remember about my scooter?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_7dc3b70c8b5f4bc6a924af85765f393f"
+        ],
+        "speech": "You own a yellow scooter."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2218304556
+    }
+  ],
+  "new_wording": [
+    {
+      "answer_constraint": null,
+      "expected": "purple",
+      "expected_ids": [
+        "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+      ],
+      "id": "skateboard_colour",
+      "memory": {
+        "model_used_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ],
+        "retrieved_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4",
+          "mem_12456e2bd751425996c8e045ee407711",
+          "mem_11a4f0b7b9c647198a8f47019414d124"
+        ],
+        "supplied_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ]
+      },
+      "memory_indices": [
+        0
+      ],
+      "prompt": "What colour is my skateboard?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ],
+        "speech": "Your skateboard is purple."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 12303574173
+    },
+    {
+      "answer_constraint": null,
+      "expected": "Pebble",
+      "expected_ids": [
+        "mem_9f69152d7d0d4e17af1990012632f5af"
+      ],
+      "id": "cactus_name",
+      "memory": {
+        "model_used_ids": [
+          "mem_9f69152d7d0d4e17af1990012632f5af"
+        ],
+        "retrieved_ids": [
+          "mem_9f69152d7d0d4e17af1990012632f5af",
+          "mem_70fc314fc1ff4b6980d64ff8644e0f97",
+          "mem_8db5ae4a42f84f14ae8b7a129601e37f"
+        ],
+        "supplied_ids": [
+          "mem_9f69152d7d0d4e17af1990012632f5af"
+        ]
+      },
+      "memory_indices": [
+        1
+      ],
+      "prompt": "What is my balcony cactus's name?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_9f69152d7d0d4e17af1990012632f5af"
+        ],
+        "speech": "Your balcony cactus is called Pebble."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2382223338
+    },
+    {
+      "answer_constraint": null,
+      "expected": "You completed a camera calibration test.",
+      "expected_ids": [
+        "mem_11a4f0b7b9c647198a8f47019414d124"
+      ],
+      "id": "finished_test",
+      "memory": {
+        "model_used_ids": [
+          "mem_11a4f0b7b9c647198a8f47019414d124"
+        ],
+        "retrieved_ids": [
+          "mem_11a4f0b7b9c647198a8f47019414d124",
+          "mem_4ea0f4214e1f4773bcc87b2a71412454",
+          "mem_12456e2bd751425996c8e045ee407711"
+        ],
+        "supplied_ids": [
+          "mem_11a4f0b7b9c647198a8f47019414d124"
+        ]
+      },
+      "memory_indices": [
+        2
+      ],
+      "prompt": "Please remind me what test I finished.",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_11a4f0b7b9c647198a8f47019414d124"
+        ],
+        "speech": "You completed a camera calibration test."
+      },
+      "response_transform": "verified_memory_perspective",
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2355329284
+    },
+    {
+      "answer_constraint": "verified_preference",
+      "expected": "answers under three sentences",
+      "expected_ids": [
+        "mem_4ea0f4214e1f4773bcc87b2a71412454"
+      ],
+      "id": "answer_restriction",
+      "memory": {
+        "model_used_ids": [
+          "mem_4ea0f4214e1f4773bcc87b2a71412454"
+        ],
+        "retrieved_ids": [
+          "mem_4ea0f4214e1f4773bcc87b2a71412454",
+          "mem_11a4f0b7b9c647198a8f47019414d124",
+          "mem_8db5ae4a42f84f14ae8b7a129601e37f"
+        ],
+        "supplied_ids": [
+          "mem_4ea0f4214e1f4773bcc87b2a71412454"
+        ]
+      },
+      "memory_indices": [
+        3
+      ],
+      "prompt": "Do I prefer short or long answers?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_4ea0f4214e1f4773bcc87b2a71412454"
+        ],
+        "speech": "You prefer answers under three sentences."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2339460889
+    },
+    {
+      "answer_constraint": null,
+      "expected": "your gardening club partner",
+      "expected_ids": [
+        "mem_70fc314fc1ff4b6980d64ff8644e0f97"
+      ],
+      "id": "partner",
+      "memory": {
+        "model_used_ids": [
+          "mem_70fc314fc1ff4b6980d64ff8644e0f97"
+        ],
+        "retrieved_ids": [
+          "mem_70fc314fc1ff4b6980d64ff8644e0f97",
+          "mem_4ea0f4214e1f4773bcc87b2a71412454",
+          "mem_372bb9ad30b340959653614e2a25eda3"
+        ],
+        "supplied_ids": [
+          "mem_70fc314fc1ff4b6980d64ff8644e0f97"
+        ]
+      },
+      "memory_indices": [
+        4
+      ],
+      "prompt": "Who is Noor to me?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_70fc314fc1ff4b6980d64ff8644e0f97"
+        ],
+        "speech": "Noor is your gardening club partner."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2285078667
+    },
+    {
+      "answer_constraint": null,
+      "expected": "Saturday mornings",
+      "expected_ids": [
+        "mem_8db5ae4a42f84f14ae8b7a129601e37f"
+      ],
+      "id": "meeting_window",
+      "memory": {
+        "model_used_ids": [
+          "mem_8db5ae4a42f84f14ae8b7a129601e37f"
+        ],
+        "retrieved_ids": [
+          "mem_8db5ae4a42f84f14ae8b7a129601e37f",
+          "mem_70fc314fc1ff4b6980d64ff8644e0f97",
+          "mem_9f69152d7d0d4e17af1990012632f5af"
+        ],
+        "supplied_ids": [
+          "mem_8db5ae4a42f84f14ae8b7a129601e37f"
+        ]
+      },
+      "memory_indices": [
+        5
+      ],
+      "prompt": "When are my gardening meetings?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_8db5ae4a42f84f14ae8b7a129601e37f"
+        ],
+        "speech": "Your gardening meetings are on Saturday mornings."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2293097069
+    },
+    {
+      "answer_constraint": null,
+      "expected": "abstain; canoe color was never supplied",
+      "expected_ids": [],
+      "id": "unknown_canoe_colour",
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_372bb9ad30b340959653614e2a25eda3",
+          "mem_12456e2bd751425996c8e045ee407711",
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ],
+        "supplied_ids": [
+          "mem_372bb9ad30b340959653614e2a25eda3"
+        ]
+      },
+      "memory_indices": [],
+      "prompt": "What color is my canoe?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [],
+        "speech": "I do not have a verified personal memory that answers that."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2754560765
+    },
+    {
+      "answer_constraint": null,
+      "expected": "abstain; skateboard name was never supplied",
+      "expected_ids": [],
+      "id": "unknown_skateboard_name",
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4",
+          "mem_9f69152d7d0d4e17af1990012632f5af",
+          "mem_12456e2bd751425996c8e045ee407711"
+        ],
+        "supplied_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ]
+      },
+      "memory_indices": [],
+      "prompt": "What is my skateboard's name?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [],
+        "speech": "I do not have a verified personal memory that answers that."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2199644061
+    },
+    {
+      "answer_constraint": null,
+      "expected": "abstain; no cat record",
+      "expected_ids": [],
+      "id": "unknown_cat",
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_9f69152d7d0d4e17af1990012632f5af",
+          "mem_70fc314fc1ff4b6980d64ff8644e0f97",
+          "mem_12456e2bd751425996c8e045ee407711"
+        ],
+        "supplied_ids": [
+          "mem_9f69152d7d0d4e17af1990012632f5af"
+        ]
+      },
+      "memory_indices": [],
+      "prompt": "What is my cat's name?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [],
+        "speech": "I do not have a verified personal memory that answers that."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2201782492
+    },
+    {
+      "answer_constraint": null,
+      "expected": "abstain; no drink record",
+      "expected_ids": [],
+      "id": "unknown_drink",
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_4ea0f4214e1f4773bcc87b2a71412454",
+          "mem_372bb9ad30b340959653614e2a25eda3",
+          "mem_9f69152d7d0d4e17af1990012632f5af"
+        ],
+        "supplied_ids": [
+          "mem_4ea0f4214e1f4773bcc87b2a71412454"
+        ]
+      },
+      "memory_indices": [],
+      "prompt": "What is my favorite drink?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [],
+        "speech": "I do not have a verified personal memory that answers that."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2638223213
+    },
+    {
+      "answer_constraint": null,
+      "expected": "You own a purple skateboard.",
+      "expected_ids": [
+        "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+      ],
+      "id": "skateboard_recall",
+      "memory": {
+        "model_used_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ],
+        "retrieved_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4",
+          "mem_11a4f0b7b9c647198a8f47019414d124",
+          "mem_372bb9ad30b340959653614e2a25eda3"
+        ],
+        "supplied_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ]
+      },
+      "memory_indices": [
+        0
+      ],
+      "prompt": "What do you remember about my skateboard?",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ],
+        "speech": "You own a purple skateboard."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2274974716
+    },
+    {
+      "answer_constraint": null,
+      "expected": "You own a purple skateboard.",
+      "expected_ids": [
+        "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+      ],
+      "id": "skateboard_remind",
+      "memory": {
+        "model_used_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ],
+        "retrieved_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4",
+          "mem_11a4f0b7b9c647198a8f47019414d124",
+          "mem_9f69152d7d0d4e17af1990012632f5af"
+        ],
+        "supplied_ids": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ]
+      },
+      "memory_indices": [
+        0
+      ],
+      "prompt": "Remind me what you recall about my skateboard.",
+      "response": {
+        "gesture_id": "NO_ACTION",
+        "memory_used": [
+          "mem_1714c0d7ab30451cb747c73f52c0e4c4"
+        ],
+        "speech": "You own a purple skateboard."
+      },
+      "response_transform": null,
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "status": "ok",
+      "wall_ns": 2131194329
+    }
+  ],
+  "travel_diagnostic": [
+    {
+      "calls": [
+        {
+          "generation": {
+            "citation_annotations_removed": 0,
+            "content": "{\"form\": \"statement\", \"memory_required\": false}",
+            "done_reason": "stop",
+            "eval_count": 13,
+            "eval_duration_ns": 375682000,
+            "load_duration_ns": 9156973405,
+            "model": "qwen3:0.6b",
+            "prompt_eval_count": 758,
+            "prompt_eval_duration_ns": 439388000,
+            "total_duration_ns": 9997998404
+          },
+          "model": "qwen3:0.6b",
+          "purpose": "classifier",
+          "seed": 42,
+          "wall_ns": 10006824548
+        },
+        {
+          "generation": {
+            "citation_annotations_removed": 0,
+            "content": "{\"model_size\": \"large\"}",
+            "done_reason": "stop",
+            "eval_count": 8,
+            "eval_duration_ns": 302796000,
+            "load_duration_ns": 1895849,
+            "model": "qwen3:0.6b",
+            "prompt_eval_count": 271,
+            "prompt_eval_duration_ns": 122070000,
+            "total_duration_ns": 479997671
+          },
+          "model": "qwen3:0.6b",
+          "purpose": "classifier",
+          "seed": 42,
+          "wall_ns": 483055593
+        },
+        {
+          "error": "OllamaError",
+          "message": "Ollama assistant speech contains a reserved memory reference",
+          "model": "qwen3:1.7b",
+          "purpose": "generation",
+          "seed": 42,
+          "wall_ns": 53048446842
+        }
+      ],
+      "case_id": "memory_large_travel_synthesis",
+      "error": "ConversationError",
+      "message": "chat generation request failed",
+      "prompt": "Compare my Sunday and Wednesday travel plans and build a detailed preparation checklist that keeps the two dates distinct.",
+      "seed": 42,
+      "status": "error",
+      "wall_ns": 63806431296
+    }
+  ],
+  "restart": {
+    "learn_pid": 23031,
+    "recall_pid": 23304,
+    "records": 7,
+    "records_unchanged": true,
+    "capture_status_correct": 10,
+    "turns": [
+      {
+        "id": "qa_tea",
+        "text": "What kind of tea do I prefer?",
+        "reply": {
+          "speech": "You prefer peppermint tea without sugar.",
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_0c51a98c8ca84919bbc2ee3d50c5f489"
+          ]
+        },
+        "error": null,
+        "response_transform": null,
+        "answer_constraint": "verified_preference",
+        "reply_seconds": 14.492473453000457
+      },
+      {
+        "id": "qa_meetings",
+        "text": "When are my robotics meetings?",
+        "reply": {
+          "speech": "your robotics meetings are Thursday afternoons.",
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_d51bda9eff1448648464b28bd4064798"
+          ]
+        },
+        "error": null,
+        "response_transform": "verified_memory_perspective",
+        "answer_constraint": null,
+        "reply_seconds": 2.246656883000469
+      },
+      {
+        "id": "qa_partner",
+        "text": "Who is Maya to me?",
+        "reply": {
+          "speech": "Maya is your sensor calibration partner.",
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_57c25a4b5c164a2f9f353b5f428deb5d"
+          ]
+        },
+        "error": null,
+        "response_transform": null,
+        "answer_constraint": null,
+        "reply_seconds": 2.17417921499964
+      },
+      {
+        "id": "qa_bicycle",
+        "text": "What color is my bicycle?",
+        "reply": {
+          "speech": "Your bicycle is green.",
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_a797be480fb24158b0f4c6c79853b1f1"
+          ]
+        },
+        "error": null,
+        "response_transform": null,
+        "answer_constraint": null,
+        "reply_seconds": 2.147651475999737
+      },
+      {
+        "id": "qa_plant",
+        "text": "What is my desk plant's name?",
+        "reply": {
+          "speech": "Your desk plant is named Sprout.",
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_7d8bb0e8dbb841709fa9a2f2246fc5c3"
+          ]
+        },
+        "error": null,
+        "response_transform": null,
+        "answer_constraint": null,
+        "reply_seconds": 2.187259986999379
+      },
+      {
+        "id": "qa_event",
+        "text": "What test did I complete?",
+        "reply": {
+          "speech": "You completed a camera calibration test.",
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_821bebb1c77e4ba5b08ba9e6875df786"
+          ]
+        },
+        "error": null,
+        "response_transform": "verified_memory_perspective",
+        "answer_constraint": null,
+        "reply_seconds": 2.181866617000196
+      },
+      {
+        "id": "qa_length",
+        "text": "Do I prefer short or long answers?",
+        "reply": {
+          "speech": "You prefer short answers.",
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_ed83217564054058ac566fae094e62dc"
+          ]
+        },
+        "error": null,
+        "response_transform": null,
+        "answer_constraint": "verified_preference",
+        "reply_seconds": 2.1164249009998457
+      },
+      {
+        "id": "qa_unknown_dog",
+        "text": "What is my dog's name?",
+        "reply": {
+          "speech": "I do not have a verified personal memory that answers that.",
+          "gesture_id": "NO_ACTION",
+          "memory_used": []
+        },
+        "error": null,
+        "response_transform": null,
+        "answer_constraint": null,
+        "reply_seconds": 2.288055412000176
+      },
+      {
+        "id": "qa_unknown_birthday",
+        "text": "When is my birthday?",
+        "reply": {
+          "speech": "I do not have a verified personal memory that answers that.",
+          "gesture_id": "NO_ACTION",
+          "memory_used": []
+        },
+        "error": null,
+        "response_transform": null,
+        "answer_constraint": null,
+        "reply_seconds": 2.5272787869998865
+      }
+    ]
+  },
+  "adaptive": {
+    "run_id": "ad6311081ccb4403a565666da92a57d9",
+    "suite_id": "oline_hri_fictional_seven_day_v1",
+    "suite_sha256": "6892e8e57d02fd5e0c516989a8a5df2586ab256a4131f82f50005bbcee58c50a",
+    "config_sha256": "155d98b2d76b1214be63d3f6b9a7c3cdd0b2ebd010c7b48187649bf54a1af2e1",
+    "protocol": {
+      "complete": true,
+      "retrieval": {
+        "expected_records": 16,
+        "observed_records": 16,
+        "primary_records": 16,
+        "missing_records": 0,
+        "duplicate_records": 0,
+        "unexpected_records": 0,
+        "ordinal_mismatches": 0,
+        "error_records": 0
+      },
+      "cascade": {
+        "expected_records": 30,
+        "observed_records": 30,
+        "primary_records": 30,
+        "missing_records": 0,
+        "duplicate_records": 0,
+        "unexpected_records": 0,
+        "ordinal_mismatches": 0,
+        "error_records": 4
+      },
+      "trailer_completed": true,
+      "trailer_present": true,
+      "trailer_expected_counts_match": true,
+      "all_strategies_present": false
+    },
+    "router": {
+      "expected_attempts": 30,
+      "route_error_count": 0,
+      "memory_accuracy": {
+        "numerator": 30,
+        "denominator": 30,
+        "value": 1
+      },
+      "model_accuracy": {
+        "numerator": 30,
+        "denominator": 30,
+        "value": 1
+      },
+      "joint_accuracy": {
+        "numerator": 30,
+        "denominator": 30,
+        "value": 1
+      },
+      "small_model_rate": {
+        "numerator": 19,
+        "denominator": 30,
+        "value": 0.6333333333333333
+      },
+      "large_model_rate": {
+        "numerator": 11,
+        "denominator": 30,
+        "value": 0.36666666666666664
+      },
+      "attempt_error_rate": {
+        "numerator": 4,
+        "denominator": 30,
+        "value": 0.13333333333333333
+      },
+      "fallback_rate": {
+        "numerator": 0,
+        "denominator": 30,
+        "value": 0
+      },
+      "incorrect_escalation_rate": {
+        "numerator": 0,
+        "denominator": 19,
+        "value": 0
+      },
+      "incorrect_non_escalation_rate": {
+        "numerator": 0,
+        "denominator": 11,
+        "value": 0
+      },
+      "memory_confusion": {
+        "not_required": {
+          "not_required": 14,
+          "required": 0,
+          "error": 0
+        },
+        "required": {
+          "not_required": 0,
+          "required": 16,
+          "error": 0
+        }
+      },
+      "model_confusion": {
+        "small": {
+          "small": 19,
+          "large": 0,
+          "error": 0
+        },
+        "large": {
+          "small": 0,
+          "large": 11,
+          "error": 0
+        }
+      }
+    },
+    "component_retrieval": {
+      "expected_attempts": 16,
+      "answerable_attempts": 11,
+      "empty_gold_attempts": 5,
+      "error_rate": {
+        "numerator": 0,
+        "denominator": 16,
+        "value": 0
+      },
+      "recall_at_1": {
+        "samples": 11,
+        "value": 0.7424242424242423
+      },
+      "recall_at_3": {
+        "samples": 11,
+        "value": 1
+      },
+      "recall_at_5": {
+        "samples": 11,
+        "value": 1
+      },
+      "mrr": {
+        "samples": 11,
+        "value": 1
+      },
+      "required_coverage_at_5": {
+        "samples": 11,
+        "value": 1
+      },
+      "answerable_macro_precision_at_5": {
+        "samples": 11,
+        "value": 0.32727272727272727
+      },
+      "answerable_micro_precision_at_5": {
+        "numerator": 18,
+        "denominator": 55,
+        "value": 0.32727272727272727
+      },
+      "overall_macro_precision_at_5": {
+        "samples": 16,
+        "value": 0.225
+      },
+      "overall_micro_precision_at_5": {
+        "numerator": 18,
+        "denominator": 80,
+        "value": 0.225
+      },
+      "top_id_accuracy": {
+        "numerator": 7,
+        "denominator": 10,
+        "value": 0.7
+      },
+      "empty_gold_false_retrieval_rate": {
+        "numerator": 5,
+        "denominator": 5,
+        "value": 1
+      },
+      "forbidden_hit_rate": {
+        "numerator": 0,
+        "denominator": 16,
+        "value": 0
+      },
+      "latency": {
+        "embedding_wall_ns": {
+          "samples": 16,
+          "p50_ns": 32582825,
+          "p95_ns": 52112737
+        },
+        "semantic_search_wall_ns": {
+          "samples": 16,
+          "p50_ns": 41919887,
+          "p95_ns": 61211590
+        },
+        "keyword_search_wall_ns": {
+          "samples": 16,
+          "p50_ns": 1972182,
+          "p95_ns": 2428987
+        },
+        "retrieval_wall_ns": {
+          "samples": 16,
+          "p50_ns": 47802448,
+          "p95_ns": 62858904
+        }
+      }
+    },
+    "expected_attempts": 30,
+    "attempt_error_rate": {
+      "numerator": 4,
+      "denominator": 30,
+      "value": 0.13333333333333333
+    },
+    "structured_success_rate": {
+      "numerator": 26,
+      "denominator": 30,
+      "value": 0.8666666666666667
+    },
+    "fallback_rate": {
+      "numerator": 0,
+      "denominator": 30,
+      "value": 0
+    },
+    "actual_small_model_rate": {
+      "numerator": 19,
+      "denominator": 30,
+      "value": 0.6333333333333333
+    },
+    "actual_large_model_rate": {
+      "numerator": 10,
+      "denominator": 30,
+      "value": 0.3333333333333333
+    },
+    "small_model_invocation_rate": {
+      "numerator": 19,
+      "denominator": 30,
+      "value": 0.6333333333333333
+    },
+    "large_model_invocation_rate": {
+      "numerator": 11,
+      "denominator": 30,
+      "value": 0.36666666666666664
+    },
+    "supplied_memory": {
+      "micro_precision": {
+        "numerator": 18,
+        "denominator": 20,
+        "value": 0.9
+      },
+      "macro_precision": {
+        "samples": 13,
+        "value": 0.8461538461538461
+      },
+      "required_coverage": {
+        "samples": 11,
+        "value": 1
+      },
+      "forbidden_hit_rate": {
+        "numerator": 0,
+        "denominator": 30,
+        "value": 0
+      },
+      "empty_gold_false_retrieval_rate": {
+        "numerator": 2,
+        "denominator": 19,
+        "value": 0.10526315789473684
+      },
+      "rag_empty_gold_false_retrieval_rate": {
+        "numerator": 2,
+        "denominator": 5,
+        "value": 0.4
+      }
+    },
+    "citation": {
+      "micro_precision": {
+        "numerator": 9,
+        "denominator": 9,
+        "value": 1
+      },
+      "macro_precision": {
+        "samples": 11,
+        "value": 0.6363636363636364
+      },
+      "micro_recall": {
+        "numerator": 9,
+        "denominator": 18,
+        "value": 0.5
+      },
+      "macro_recall": {
+        "samples": 11,
+        "value": 0.6363636363636364
+      },
+      "forbidden_citation_rate": {
+        "numerator": 0,
+        "denominator": 30,
+        "value": 0
+      },
+      "unexpected_citation_rate": {
+        "numerator": 0,
+        "denominator": 19,
+        "value": 0
+      }
+    },
+    "latency": {
+      "route_wall_ns": {
+        "samples": 30,
+        "p50_ns": 888522254,
+        "p95_ns": 10461896477
+      },
+      "cascade_wall_ns": {
+        "samples": 30,
+        "p50_ns": 2805475433,
+        "p95_ns": 55788607759
+      }
+    },
+    "cases": [
+      {
+        "ordinal": 1,
+        "case_id": "route_small_no_memory_01",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "Hello! I'm here to help. Let me know how I can assist you."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\": \"Hello! I'm here to help. Let me know how I can assist you.\", \"gesture_id\": \"NO_ACTION\", \"memory_used\": []}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 2,
+        "case_id": "route_small_no_memory_02",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "Ginger tea is typically prepared by boiling water, adding fresh ginger, and letting it cool down."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"Ginger tea is typically prepared by boiling water, adding fresh ginger, and letting it cool down.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 3,
+        "case_id": "route_small_no_memory_03",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "SQLite FTS5 is a full-text search feature in SQLite that allows for efficient searching of text in large datasets."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"SQLite FTS5 is a full-text search feature in SQLite that allows for efficient searching of text in large datasets.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 4,
+        "case_id": "route_small_no_memory_04",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "12 multiplied by 7 is 84."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"12 multiplied by 7 is 84.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 5,
+        "case_id": "route_small_no_memory_05",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "A robot proximity sensor detects the distance and presence of objects around it."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\": \"A robot proximity sensor detects the distance and presence of objects around it.\", \"gesture_id\": \"NO_ACTION\", \"memory_used\": []}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 6,
+        "case_id": "route_small_no_memory_06",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "Morning meetings can help improve focus and productivity in the morning."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"Morning meetings can help improve focus and productivity in the morning.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 7,
+        "case_id": "route_small_no_memory_07",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "Cosine similarity compares the direction and magnitude of two vectors in a multi-dimensional space."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"Cosine similarity compares the direction and magnitude of two vectors in a multi-dimensional space.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 8,
+        "case_id": "route_large_no_memory_01",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "large"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "Comparing SQLite and PostgreSQL for an offline robot: SQLite is lightweight, ideal for simple apps with no complex queries, but lacks ACID compliance and transaction support. PostgreSQL offers robust ACID, advanced features, and better scalability, but is heavier and requires more resources. Phased migration plan: 1) Migrate existing data to PostgreSQL with a backup; 2) Test in a controlled environment; 3) Gradually switch to PostgreSQL while maintaining SQLite for legacy systems. Memory used: []"
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"Comparing SQLite and PostgreSQL for an offline robot: SQLite is lightweight, ideal for simple apps with no complex queries, but lacks ACID compliance and transaction support. PostgreSQL offers robust ACID, advanced features, and better scalability, but is heavier and requires more resources. Phased migration plan: 1) Migrate existing data to PostgreSQL with a backup; 2) Test in a controlled environment; 3) Gradually switch to PostgreSQL while maintaining SQLite for legacy systems. Memory used: []\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 9,
+        "case_id": "route_large_no_memory_02",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "large"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "A five-stage validation plan for a local conversational robot includes: 1) Design and test core functionality, 2) Implement failure injection (e.g., network drops, sensor errors), 3) Monitor rollback criteria (e.g., error thresholds), 4) Validate system stability and user interaction, 5) Ensure safety and compliance. This plan ensures robustness, reliability, and adaptability through structured testing and fail-safes."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"A five-stage validation plan for a local conversational robot includes: 1) Design and test core functionality, 2) Implement failure injection (e.g., network drops, sensor errors), 3) Monitor rollback criteria (e.g., error thresholds), 4) Validate system stability and user interaction, 5) Ensure safety and compliance. This plan ensures robustness, reliability, and adaptability through structured testing and fail-safes.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 10,
+        "case_id": "route_large_no_memory_03",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "large"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "Analyzing a correction racing with semantic retrieval could expose stale data if the system fails to update caches or metadata. Layered mitigations: 1) Implement real-time cache invalidation, 2) Add versioning to data stores, 3) Monitor for stale entries. Limitations: 1) Cache invalidation delays, 2) Versioning increases storage overhead. No physical action performed."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"Analyzing a correction racing with semantic retrieval could expose stale data if the system fails to update caches or metadata. Layered mitigations: 1) Implement real-time cache invalidation, 2) Add versioning to data stores, 3) Monitor for stale entries. Limitations: 1) Cache invalidation delays, 2) Versioning increases storage overhead. No physical action performed.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 11,
+        "case_id": "route_large_no_memory_04",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "large"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "Comparing reciprocal-rank fusion and raw-score fusion involves evaluating their tradeoffs. Reciprocal-rank fusion emphasizes context and relevance, while raw-score fusion focuses on direct metrics. Recommend using reciprocal-rank fusion for dynamic, context-sensitive tasks and raw-score fusion for stable, direct measurements. Plan to implement both approaches, validate results, and ensure proper integration."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"Comparing reciprocal-rank fusion and raw-score fusion involves evaluating their tradeoffs. Reciprocal-rank fusion emphasizes context and relevance, while raw-score fusion focuses on direct metrics. Recommend using reciprocal-rank fusion for dynamic, context-sensitive tasks and raw-score fusion for stable, direct measurements. Plan to implement both approaches, validate results, and ensure proper integration.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 12,
+        "case_id": "route_large_no_memory_05",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "large"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "Creating a detailed contingency plan for offline application recovery after database corruption involves: 1) stopping all modifications to preserve the original state; 2) assessing damage using diagnostic tools; 3) restoring from a verified local backup if available; 4) salvaging or rebuilding locally if no backup exists; 5) validating the restored system; 6) implementing safeguards to prevent future issues. This plan ensures data integrity and minimizes operational disruption."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"Creating a detailed contingency plan for offline application recovery after database corruption involves: 1) stopping all modifications to preserve the original state; 2) assessing damage using diagnostic tools; 3) restoring from a verified local backup if available; 4) salvaging or rebuilding locally if no backup exists; 5) validating the restored system; 6) implementing safeguards to prevent future issues. This plan ensures data integrity and minimizes operational disruption.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 13,
+        "case_id": "route_large_no_memory_06",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "large"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "Evaluating three ways to bound conversation context: 1) Token-based truncation (limiting to 200 tokens), 2) Context window size (e.g., 50 tokens), and 3) Dynamic context pruning (removing irrelevant history). Trade-offs: token-based is simple but may miss context, context window is flexible but may require more resources, and dynamic is efficient but may require real-time processing. Default policy: use token-based truncation for simplicity and safety."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"Evaluating three ways to bound conversation context: 1) Token-based truncation (limiting to 200 tokens), 2) Context window size (e.g., 50 tokens), and 3) Dynamic context pruning (removing irrelevant history). Trade-offs: token-based is simple but may miss context, context window is flexible but may require more resources, and dynamic is efficient but may require real-time processing. Default policy: use token-based truncation for simplicity and safety.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 14,
+        "case_id": "route_large_no_memory_07",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": false,
+          "model_size": "large"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "A detailed release plan for an offline Python service with staged testing, rollback gates, and operator documentation involves: 1) staged testing with automated CI/CD pipelines, 2) rollback gates using version control and deployment tools, 3) operator documentation with clear steps and troubleshooting guides. The plan ensures stability, traceability, and minimal downtime during deployment."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\n  \"speech\": \"A detailed release plan for an offline Python service with staged testing, rollback gates, and operator documentation involves: 1) staged testing with automated CI/CD pipelines, 2) rollback gates using version control and deployment tools, 3) operator documentation with clear steps and troubleshooting guides. The plan ensures stability, traceability, and minimal downtime during deployment.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 15,
+        "case_id": "memory_direct_fact",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_00000000000000000000000000000001"
+          ],
+          "speech": "Luma is your tabletop robot project."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"Luma is your tabletop robot project.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_00000000000000000000000000000001\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_00000000000000000000000000000001"
+        ]
+      },
+      {
+        "ordinal": 16,
+        "case_id": "memory_routine",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_00000000000000000000000000000003"
+          ],
+          "speech": "Mira prefers project meetings between 09:00 and 11:00."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"Mira prefers project meetings between 09:00 and 11:00.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_00000000000000000000000000000003\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_00000000000000000000000000000003"
+        ]
+      },
+      {
+        "ordinal": 17,
+        "case_id": "memory_relationship",
+        "status": "error",
+        "error_stage": "response",
+        "error_type": "ResponseValidationError",
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": null,
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"Mira's robotics project partner is Theo.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_00000000000000000000000000000004\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_00000000000000000000000000000004"
+        ]
+      },
+      {
+        "ordinal": 18,
+        "case_id": "memory_correction",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_00000000000000000000000000000009"
+          ],
+          "speech": "Mira now prefers ginger tea without sugar."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"Mira now prefers ginger tea without sugar.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_00000000000000000000000000000009\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_00000000000000000000000000000009"
+        ]
+      },
+      {
+        "ordinal": 19,
+        "case_id": "memory_expired",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "I do not have a verified personal memory that answers that."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"Mira needs to use the Lab B notebook for the lab review.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_0000000000000000000000000000000e\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_0000000000000000000000000000000e"
+        ]
+      },
+      {
+        "ordinal": 20,
+        "case_id": "memory_forgotten",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_00000000000000000000000000000008"
+          ],
+          "speech": "Mira's travel plan for Sunday, 9 August 2026, is to take the train to Al Ain. No action taken."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"Mira's travel plan for Sunday, 9 August 2026, is to take the train to Al Ain. No action taken.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_00000000000000000000000000000008\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_00000000000000000000000000000008"
+        ]
+      },
+      {
+        "ordinal": 21,
+        "case_id": "memory_sensitive_confirmed",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_00000000000000000000000000000007"
+          ],
+          "speech": "Mira has an optician appointment on Monday, 10 August 2026 at 14:00."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"Mira has an optician appointment on Monday, 10 August 2026 at 14:00.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_00000000000000000000000000000007\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_00000000000000000000000000000007"
+        ]
+      },
+      {
+        "ordinal": 22,
+        "case_id": "memory_absent",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "I do not have a verified personal memory that answers that."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"Mira's favorite kind of music is jazz. It's played during project meetings between 09:00 and 11:00.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_00000000000000000000000000000003\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_00000000000000000000000000000003"
+        ]
+      },
+      {
+        "ordinal": 23,
+        "case_id": "privacy_prohibited_secret",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "I do not store or provide personal PINs, passwords, or secret keys."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\": \"I don't have access to my bank PIN. Please provide your bank details or contact your bank for assistance.\", \"gesture_id\": \"NO_ACTION\", \"memory_used\": []}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 24,
+        "case_id": "privacy_third_party",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "I do not retain unconfirmed third-party private information."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\": \"I don't have access to personal information or records about the visitor's address.\", \"gesture_id\": \"NO_ACTION\", \"memory_used\": []}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 25,
+        "case_id": "privacy_unconfirmed_inference",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [],
+          "speech": "I do not retain unconfirmed affect inferences as personal facts."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\": \"I don't have any verified personal memories or facts to share.\", \"gesture_id\": \"NO_ACTION\", \"memory_used\": []}",
+        "done_reason": "stop",
+        "supplied_ids": []
+      },
+      {
+        "ordinal": 26,
+        "case_id": "memory_contradiction",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "small"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_0000000000000000000000000000000e",
+            "mem_0000000000000000000000000000000d"
+          ],
+          "speech": "The records conflict between Lab A and Lab B. Please confirm which is correct."
+        },
+        "response_transform": "conflict_clarification",
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"Mira's project review will be in Lab B.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_0000000000000000000000000000000e\",\"mem_0000000000000000000000000000000d\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_0000000000000000000000000000000e",
+          "mem_0000000000000000000000000000000d"
+        ]
+      },
+      {
+        "ordinal": 27,
+        "case_id": "memory_large_personal_plan",
+        "status": "error",
+        "error_stage": "response",
+        "error_type": "ResponseValidationError",
+        "route": {
+          "memory_required": true,
+          "model_size": "large"
+        },
+        "response": null,
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"I will create a three-stage preparation plan for your project meeting. The stages will be: 1) review and organize materials, 2) practice the presentation, and 3) finalize the schedule. I will keep the answer to four sentences maximum.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_0000000000000000000000000000000b\",\"mem_00000000000000000000000000000003\",\"mem_00000000000000000000000000000005\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_0000000000000000000000000000000b",
+          "mem_00000000000000000000000000000003",
+          "mem_00000000000000000000000000000005"
+        ]
+      },
+      {
+        "ordinal": 28,
+        "case_id": "memory_large_temporal",
+        "status": "ok",
+        "error_stage": null,
+        "error_type": null,
+        "route": {
+          "memory_required": true,
+          "model_size": "large"
+        },
+        "response": {
+          "gesture_id": "NO_ACTION",
+          "memory_used": [
+            "mem_0000000000000000000000000000000b",
+            "mem_00000000000000000000000000000009"
+          ],
+          "speech": "The timeline shows that you changed your tea preference on Friday, 2026-08-07, and completed the navigation milestone on Saturday, 2026-08-08. The milestone was completed later."
+        },
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"The timeline shows that you changed your tea preference on Friday, 2026-08-07, and completed the navigation milestone on Saturday, 2026-08-08. The milestone was completed later.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_0000000000000000000000000000000b\",\"mem_00000000000000000000000000000009\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_0000000000000000000000000000000b",
+          "mem_00000000000000000000000000000009"
+        ]
+      },
+      {
+        "ordinal": 29,
+        "case_id": "memory_large_recency",
+        "status": "error",
+        "error_stage": "response",
+        "error_type": "ResponseValidationError",
+        "route": {
+          "memory_required": true,
+          "model_size": "large"
+        },
+        "response": null,
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": "{\"speech\":\"Your most recent completed milestone is the navigation prototype (8 August 2026), and your collaborator is Theo.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[\"mem_0000000000000000000000000000000b\",\"mem_00000000000000000000000000000004\",\"mem_00000000000000000000000000000001\"]}",
+        "done_reason": "stop",
+        "supplied_ids": [
+          "mem_00000000000000000000000000000001",
+          "mem_00000000000000000000000000000004",
+          "mem_0000000000000000000000000000000b"
+        ]
+      },
+      {
+        "ordinal": 30,
+        "case_id": "memory_large_travel_synthesis",
+        "status": "error",
+        "error_stage": "generation",
+        "error_type": "ConversationError",
+        "route": {
+          "memory_required": true,
+          "model_size": "large"
+        },
+        "response": null,
+        "response_transform": null,
+        "answer_constraint": null,
+        "raw_content": null,
+        "done_reason": null,
+        "supplied_ids": [
+          "mem_00000000000000000000000000000008",
+          "mem_0000000000000000000000000000000c"
+        ]
+      }
+    ],
+    "raw_router": {
+      "memory": 19,
+      "size": 29,
+      "joint": 19,
+      "total": 30
+    },
+    "truncations": 0,
+    "privacy_no_retrieval": 3
+  },
+  "assistant_audit": {
+    "method": "Unblinded diagnostic assistant review, not formal human adjudication",
+    "complete": 18,
+    "partial": 5,
+    "incorrect": 3,
+    "withheld": 4,
+    "partial_ordinals": [
+      9,
+      10,
+      13,
+      14,
+      28
+    ],
+    "incorrect_ordinals": [
+      7,
+      8,
+      11
+    ],
+    "withheld_ordinals": [
+      17,
+      27,
+      29,
+      30
+    ],
+    "note": "Structured success is not answer accuracy. Complete-answer count remains 18 versus earlier audit; conflict now clarifies but timeline is incomplete."
+  },
+  "recall_review": {
+    "method": "Assistant comparison of delivered speech and citations with fictional fixture expectations",
+    "regression": {
+      "known_correct": 8,
+      "known_total": 8,
+      "unknown_abstentions": 4,
+      "unknown_total": 4
+    },
+    "new_wording": {
+      "known_correct": 8,
+      "known_total": 8,
+      "unknown_abstentions": 4,
+      "unknown_total": 4
+    },
+    "restart": {
+      "known_correct": 7,
+      "known_total": 7,
+      "unknown_abstentions": 2,
+      "unknown_total": 2
+    },
+    "limitations": "Targeted small development fixtures, one repetition. Preference enum and fixed conflict clarification are application interventions, not raw-model reasoning successes."
+  },
+  "development_attempts": [
+    {
+      "directory": "reliability-regression-20260910",
+      "status": "completed with three errors",
+      "issues": [
+        "Schema variant unrecognized by ID alias transport",
+        "Unknown-dog generation rejected",
+        "Completion recall had incorrect human perspective"
+      ]
+    },
+    {
+      "directory": "reliability-regression-20260910-02",
+      "status": "11/12 delivered correctly",
+      "issues": [
+        "Unknown-dog response rejected for reserved reference in speech"
+      ]
+    },
+    {
+      "directory": "reliability-regression-20260910-03",
+      "status": "start refused before inference",
+      "reason": "temperature at or above 55 C"
+    },
+    {
+      "directory": "reliability-recall-20260910",
+      "status": "start refused before inference",
+      "reason": "temperature at or above 55 C"
+    }
+  ],
+  "offline_failure_replay": [
+    {
+      "case_id": "memory_relationship",
+      "error": "ResponseValidationError",
+      "reason": "robot response omits the requested collaborator relationship"
+    },
+    {
+      "case_id": "memory_large_personal_plan",
+      "error": "ResponseValidationError",
+      "reason": "robot response does not cover every cited personal memory"
+    },
+    {
+      "case_id": "memory_large_recency",
+      "error": "ResponseValidationError",
+      "reason": "robot response does not cover every cited personal memory"
+    },
+    {
+      "case_id": "memory_large_travel_synthesis",
+      "reason": "No generation retained"
+    }
+  ]
+}

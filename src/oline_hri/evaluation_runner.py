@@ -68,7 +68,7 @@ from .ollama import (
 )
 from .response import ResponseValidationError
 from .retrieval import HybridMatch, HybridRetriever
-from .routing import ConversationRouter, RouteDecision, RoutingResult
+from .routing import ConversationRouter, RouteDecision, RoutingResult, privacy_abstention
 
 
 RUN_SCHEMA_VERSION = 2
@@ -780,6 +780,7 @@ def run_evaluation(
             "python_version": platform.python_version(),
             "machine": platform.machine(),
             "small_model": config.ollama.small_model,
+            "general_large_model": config.ollama.general_large_model,
             "large_model": config.ollama.large_model,
             "embedding_model_id": EMBEDDING_MODEL_ID,
             "embedding_model_revision": EMBEDDING_MODEL_REVISION,
@@ -1156,7 +1157,7 @@ def _run_cascade_case(
         conversation = Conversation(
             backend,
             system_prompt=config.conversation.system_prompt,
-            model=config.ollama.large_model,
+            model=config.ollama.general_large_model,
             context_length=config.generation.context_length,
             max_output_tokens=config.generation.max_output_tokens,
         )
@@ -1182,6 +1183,7 @@ def _run_cascade_case(
             router=recording_router,
             retriever=recording_retriever,
             small_model=config.ollama.small_model,
+            general_large_model=config.ollama.general_large_model,
             large_model=config.ollama.large_model,
             context_length=config.generation.context_length,
             max_output_tokens=config.generation.max_output_tokens,
@@ -1242,6 +1244,15 @@ def _run_cascade_case(
         else None
     )
     cascade = {
+        **({"privacy_gate": True} if privacy_abstention(case.prompt) else {}),
+        **({"response_transform": reply.response_transform}
+           if reply is not None and reply.response_transform is not None else {}),
+        **({"answer_constraint": reply.answer_constraint}
+           if reply is not None and reply.answer_constraint is not None else {}),
+        **({"generation_policy": reply.generation_policy}
+           if reply is not None and reply.generation_policy is not None else {}),
+        **({"reference_ids": list(reply.reference_ids)}
+           if reply is not None and reply.reference_ids else {}),
         "started_monotonic_ns": started,
         "finished_monotonic_ns": finished,
         "wall_ns": wall_ns,
@@ -1434,8 +1445,16 @@ def _route_record(
     result = recorder.last_result
     if result is None:
         return None
+    policy_sources = {
+        "memory_required": result.memory_decision_source,
+        "model_size": result.model_size_decision_source,
+    }
+    hybrid = source == "model" and any(
+        value != "model" for value in policy_sources.values()
+    )
     return {
-        "source": source,
+        **({"decision_sources": policy_sources} if hybrid else {}),
+        "source": "hybrid" if hybrid else source,
         "memory_required": result.decision.memory_required,
         "model_size": result.decision.model_size,
         "wall_ns": recorder.last_wall_ns,
@@ -1467,7 +1486,11 @@ def _selected_model(
     if size == "small":
         return config.ollama.small_model
     if size == "large":
-        return config.ollama.large_model
+        return (
+            config.ollama.large_model
+            if route.get("memory_required") is True
+            else config.ollama.general_large_model
+        )
     return None
 
 
@@ -1665,7 +1688,7 @@ def _chat_purpose(response_format: Optional[Mapping[str, Any]]) -> str:
         properties = response_format.get("properties")
         if isinstance(properties, Mapping):
             fields = frozenset(properties)
-            if fields == {"memory_required"}:
+            if fields in ({"memory_required"}, {"form", "memory_required"}):
                 return "route_memory_required"
             if fields == {"model_size"}:
                 return "route_model_size"

@@ -1,0 +1,299 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09",
+  "hardware": {
+    "device": "NVIDIA Jetson Orin Nano 8GB",
+    "power_mode": "15W"
+  },
+  "protocol": {
+    "suite_id": "oline_hri_fictional_seven_day_v1",
+    "suite_sha256": "6892e8e57d02fd5e0c516989a8a5df2586ab256a4131f82f50005bbcee58c50a",
+    "routing_cases": 30,
+    "answer_cases": 8,
+    "answer_route_mode": "fixed_gold_expected_route",
+    "context_length": 2048,
+    "max_output_tokens": 128,
+    "temperature": 0.0,
+    "thinking": false,
+    "seed": 42,
+    "one_resident_model_at_a_time": true,
+    "max_model_bytes": 1610612736,
+    "min_start_available_kib": 2621440,
+    "min_runtime_available_kib": 786432,
+    "max_runtime_swap_used_kib": 524288,
+    "max_runtime_temperature_c": 68
+  },
+  "selection_policy": [
+    "complete without a safety violation or reboot",
+    "maximize strict semantically usable answers",
+    "maximize joint routing accuracy",
+    "prefer lower latency and resource pressure"
+  ],
+  "recommendation": {
+    "router_and_small_model": "qwen3:0.6b",
+    "general_large_model": "qwen3:1.7b",
+    "memory_large_model": "qwen3:1.7b",
+    "run_directory": "20260909_04_qwen3_06b_qwen3_17b",
+    "reason": "Tied for the best strict answer usability, achieved the best joint routing score, and was materially faster and lighter than the only equally usable alternative.",
+    "required_runtime_constraints": {
+      "context_length": 2048,
+      "max_output_tokens": 128,
+      "temperature": 0.0,
+      "thinking": false,
+      "serialize_inference": true,
+      "evict_small_before_large": true,
+      "large_keep_alive": 0
+    }
+  },
+  "alternative": {
+    "router_and_small_model": "qwen3.5:0.8b-q8_0",
+    "general_large_model": "qwen3:1.7b",
+    "memory_large_model": "qwen3:1.7b",
+    "run_directory": "20260909_09_qwen35_08bq8_qwen3_17b",
+    "benefit": "Memory intent accuracy was 29/30 instead of 19/30.",
+    "why_not_selected": "It selected the small model for all 11 tested large-model cases, had lower joint routing accuracy, and its warm routing median was about 2.2 times slower."
+  },
+  "runs": [
+    {
+      "run_directory": "20260909_04_qwen3_06b_qwen3_17b",
+      "router": "qwen3:0.6b",
+      "generator": "qwen3:1.7b",
+      "route": {
+        "valid": 30,
+        "joint_correct": 19,
+        "memory_correct": 19,
+        "model_size_correct": 28,
+        "median_wall_seconds": 0.859007694
+      },
+      "answers": {
+        "validator_accepted": 5,
+        "strict_semantically_usable": 5,
+        "small_usable": 3,
+        "large_usable": 2,
+        "median_wall_seconds": 17.225299747,
+        "generator_median_tokens_per_second_all_attempts": 18.18
+      },
+      "telemetry": {
+        "peak_ram_used_mb": 6065,
+        "peak_swap_used_mb": 34,
+        "peak_temperature_c": 56.312
+      },
+      "safety_passed": true
+    },
+    {
+      "run_directory": "20260909_05_llama32_1bq4_llama32_3bq2",
+      "router": "llama3.2:1b-instruct-q4_K_M",
+      "generator": "llama3.2:3b-instruct-q2_K",
+      "route": {
+        "valid": 30,
+        "joint_correct": 6,
+        "memory_correct": 14,
+        "model_size_correct": 16,
+        "median_wall_seconds": 1.0480078535
+      },
+      "answers": {
+        "validator_accepted": 3,
+        "strict_semantically_usable": 1,
+        "small_usable": 1,
+        "large_usable": 0,
+        "median_wall_seconds": 24.974255762,
+        "generator_median_tokens_per_second_all_attempts": 6.78
+      },
+      "telemetry": {
+        "peak_ram_used_mb": 6190,
+        "peak_swap_used_mb": 40,
+        "peak_temperature_c": 56.875
+      },
+      "safety_passed": true
+    },
+    {
+      "run_directory": "20260909_06_qwen3_06b_llama32_3bq2",
+      "router": "qwen3:0.6b",
+      "generator": "llama3.2:3b-instruct-q2_K",
+      "route": {
+        "valid": 30,
+        "joint_correct": 19,
+        "memory_correct": 19,
+        "model_size_correct": 28,
+        "median_wall_seconds": 0.897471067
+      },
+      "answers": {
+        "validator_accepted": 4,
+        "strict_semantically_usable": 3,
+        "small_usable": 3,
+        "large_usable": 0,
+        "median_wall_seconds": 22.4851290285,
+        "generator_median_tokens_per_second_all_attempts": 7.06
+      },
+      "telemetry": {
+        "peak_ram_used_mb": 6260,
+        "peak_swap_used_mb": 63,
+        "peak_temperature_c": 55.843
+      },
+      "safety_passed": true
+    },
+    {
+      "run_directory": "20260909_07_llama32_1bq4_qwen3_17b",
+      "router": "llama3.2:1b-instruct-q4_K_M",
+      "generator": "qwen3:1.7b",
+      "route": {
+        "valid": 30,
+        "joint_correct": 6,
+        "memory_correct": 14,
+        "model_size_correct": 16,
+        "median_wall_seconds": 1.0285658745
+      },
+      "answers": {
+        "validator_accepted": 4,
+        "strict_semantically_usable": 3,
+        "small_usable": 1,
+        "large_usable": 2,
+        "median_wall_seconds": 19.924088098,
+        "generator_median_tokens_per_second_all_attempts": 18.02
+      },
+      "telemetry": {
+        "peak_ram_used_mb": 6064,
+        "peak_swap_used_mb": 63,
+        "peak_temperature_c": 57.968
+      },
+      "safety_passed": true
+    },
+    {
+      "run_directory": "20260909_08_qwen3_06b_phi35_38bq2",
+      "router": "qwen3:0.6b",
+      "generator": "phi3.5:3.8b-mini-instruct-q2_K",
+      "route": {
+        "valid": 30,
+        "joint_correct": 19,
+        "memory_correct": 19,
+        "model_size_correct": 28,
+        "median_wall_seconds": 0.83586159
+      },
+      "answers": {
+        "validator_accepted": 3,
+        "strict_semantically_usable": 3,
+        "small_usable": 3,
+        "large_usable": 0,
+        "median_wall_seconds": 23.0544565535,
+        "generator_median_tokens_per_second_all_attempts": 3.76
+      },
+      "telemetry": {
+        "peak_ram_used_mb": 6404,
+        "peak_swap_used_mb": 102,
+        "peak_temperature_c": 56.781
+      },
+      "safety_passed": true
+    },
+    {
+      "run_directory": "20260909_09_qwen35_08bq8_qwen3_17b",
+      "router": "qwen3.5:0.8b-q8_0",
+      "generator": "qwen3:1.7b",
+      "route": {
+        "valid": 30,
+        "joint_correct": 18,
+        "memory_correct": 29,
+        "model_size_correct": 19,
+        "median_wall_seconds": 1.868436356
+      },
+      "answers": {
+        "validator_accepted": 5,
+        "strict_semantically_usable": 5,
+        "small_usable": 3,
+        "large_usable": 2,
+        "median_wall_seconds": 22.0140246905,
+        "generator_median_tokens_per_second_all_attempts": 17.76
+      },
+      "telemetry": {
+        "peak_ram_used_mb": 6005,
+        "peak_swap_used_mb": 128,
+        "peak_temperature_c": 58.375
+      },
+      "safety_passed": true
+    },
+    {
+      "run_directory": "20260909_10_qwen3_06b_phi2_27bq3m",
+      "router": "qwen3:0.6b",
+      "generator": "phi:2.7b-chat-v2-q3_K_M",
+      "route": {
+        "valid": 30,
+        "joint_correct": 19,
+        "memory_correct": 19,
+        "model_size_correct": 28,
+        "median_wall_seconds": 0.8382863395
+      },
+      "answers": {
+        "validator_accepted": 3,
+        "strict_semantically_usable": 3,
+        "small_usable": 3,
+        "large_usable": 0,
+        "median_wall_seconds": 20.5843759275,
+        "generator_median_tokens_per_second_all_attempts": 6.649
+      },
+      "telemetry": {
+        "peak_ram_used_mb": 6149,
+        "peak_swap_used_mb": 311,
+        "peak_temperature_c": 56.25
+      },
+      "safety_passed": true
+    }
+  ],
+  "excluded_from_live_loading": [
+    {
+      "candidate": "qwen3:4b and qwen3.5:4b",
+      "reason": "The request was strictly below 4B, their artifacts exceed the Jetson cap, and a prior qwen3:4b load ended in a BCCPLEXWDT reset."
+    },
+    {
+      "candidate": "qwen3.5:2b-q4_K_M",
+      "reason": "The official 1.9 GB artifact exceeds the 1.5 GiB live-run cap."
+    },
+    {
+      "candidate": "ministral-3:3b-instruct-2512-q4_K_M",
+      "reason": "The only official 3B Ollama artifact is 3.0 GB and exceeds the live-run cap."
+    },
+    {
+      "candidate": "nemotron-mini:4b and nemotron-3-nano:4b",
+      "reason": "They are 4B rather than below 4B, and their smallest official artifacts exceed the live-run cap."
+    },
+    {
+      "candidate": "nvidia/Nemotron-Flash-3B-Instruct",
+      "reason": "No official Ollama/GGUF package was available; it requires a separate custom runtime and has a non-commercial license."
+    }
+  ],
+  "integrity_and_cleanup": {
+    "canonical_runs": [
+      "20260909_04_qwen3_06b_qwen3_17b",
+      "20260909_05_llama32_1bq4_llama32_3bq2",
+      "20260909_06_qwen3_06b_llama32_3bq2",
+      "20260909_07_llama32_1bq4_qwen3_17b",
+      "20260909_08_qwen3_06b_phi35_38bq2",
+      "20260909_09_qwen35_08bq8_qwen3_17b",
+      "20260909_10_qwen3_06b_phi2_27bq3m"
+    ],
+    "artifact_hashes_verified": true,
+    "same_boot_for_all_runs": true,
+    "thermal_trip_counter_delta": 0,
+    "watchdog_trips": 0,
+    "resident_models_after_each_run": 0,
+    "temporary_candidate_models_removed": true,
+    "original_models_preserved": [
+      "qwen3:0.6b",
+      "qwen3:1.7b",
+      "qwen3:4b"
+    ],
+    "highest_observed_ram_used_mb": 6404,
+    "highest_observed_swap_used_mb": 311,
+    "highest_observed_temperature_c": 58.375
+  },
+  "verification": {
+    "offline_tests_passed": 601,
+    "opt_in_live_tests_skipped": 26,
+    "flake8": "passed",
+    "py_compile": "passed"
+  },
+  "limitations": [
+    "The answer screen uses the expected route to compare model answer quality independently; routing accuracy is reported separately and must be considered with it.",
+    "Strict semantic usability was manually reviewed from raw generations and final pipeline outcomes; it is not embedded into the immutable per-run summaries.",
+    "Stored summary token rates include accepted answers only and mix roles, so generator rates in this comparison were recomputed across all four generator attempts.",
+    "This is a safety-filtered representative comparison of official sub-4B candidates, not every quantization or community upload in a model registry."
+  ]
+}

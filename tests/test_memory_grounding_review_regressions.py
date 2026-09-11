@@ -3,7 +3,8 @@
 from dataclasses import replace
 import unittest
 
-from oline_hri.conversation import ConversationError
+from oline_hri.config import load_config
+from oline_hri.conversation import Conversation, ConversationError
 from oline_hri.response import ResponseValidationError
 from tests.test_conversation_routed import (
     LARGE_MODEL,
@@ -20,7 +21,157 @@ from tests.test_conversation_routed import (
 )
 
 
+_DISTINCT_DATE_CHRONOLOGY_PROMPT = (
+    "Create a chronological timeline comparing when I changed my tea "
+    "preference and completed my navigation milestone, and say which came "
+    "later."
+)
+_DISTINCT_DATE_CHRONOLOGY_SPEECH = (
+    "1. Friday, August 7, 2026: you changed your tea preference to ginger "
+    "without sugar. 2. Saturday, August 8, 2026: you completed the navigation "
+    "milestone. Saturday follows Friday, so the milestone came later."
+)
+
+
+def _distinct_date_chronology_memories():
+    corrected_tea = replace(
+        memory(9, "The user now prefers ginger tea without sugar."),
+        kind="preference",
+        supersedes_id=memory(2).id,
+        valid_from="2026-08-07T09:00:00.000000Z",
+    )
+    navigation = replace(
+        memory(
+            11,
+            "The user completed the navigation milestone on Saturday, "
+            "8 August 2026.",
+        ),
+        kind="event",
+        event_time="2026-08-08T10:00:00.000000Z",
+    )
+    return corrected_tea, navigation
+
+
+def _chronology_conversation(speech, first, second):
+    memory_ids = (first.id, second.id)
+    return routed_conversation(
+        FakeBackend(
+            (
+                chat_result(
+                    speech,
+                    memory_used=memory_ids,
+                    model=LARGE_MODEL,
+                ),
+            )
+        ),
+        FakeRouter((routing_result(True, "large"),)),
+        FakeRetriever((hybrid_match(first, 1), hybrid_match(second, 2))),
+        grounded_composition=False,  # Exercise unconstrained-answer validators.
+    )
+
+
+_RECENCY_COMPARISON_PROMPT = (
+    "Compare my earlier and most recent completed project milestones, "
+    "identify which is newer, and name my collaborator."
+)
+_RECENCY_COMPARISON_SPEECH = (
+    "Your Luma kickoff milestone was Monday, August 3, 2026. Your navigation "
+    "prototype milestone was Saturday, August 8, 2026, so navigation is "
+    "newer. Theo is your collaborator."
+)
+
+
+def _recency_comparison_memories():
+    navigation = replace(
+        memory(
+            11,
+            "Mira completed the navigation prototype milestone on Saturday, "
+            "8 August 2026.",
+        ),
+        kind="event",
+        event_time="2026-08-08T10:00:00.000000Z",
+    )
+    kickoff = replace(
+        memory(
+            1,
+            "Mira started a tabletop companion robot project named Luma by "
+            "completing its kickoff milestone on Monday, 3 August 2026.",
+        ),
+        kind="event",
+        event_time="2026-08-03T09:00:00.000000Z",
+    )
+    collaborator = replace(
+        memory(4, "Mira's robotics project partner is Theo."),
+        kind="relationship",
+    )
+    return navigation, kickoff, collaborator
+
+
+def _recency_comparison_conversation(
+    speech, memory_used, *, context_length=4096
+):
+    items = _recency_comparison_memories()
+    backend = FakeBackend(
+        (
+            chat_result(
+                speech,
+                memory_used=memory_used,
+                model=LARGE_MODEL,
+            ),
+        )
+    )
+    conversation = Conversation(
+        backend,
+        system_prompt=load_config().conversation.system_prompt,
+        router=FakeRouter((routing_result(True, "large"),)),
+        retriever=FakeRetriever(
+            tuple(
+                hybrid_match(item, position)
+                for position, item in enumerate(items, start=1)
+            )
+        ),
+        small_model=SMALL_MODEL,
+        large_model=LARGE_MODEL,
+        context_length=context_length,
+        max_output_tokens=320,
+        grounded_composition=False,  # Raw model paraphrase/omission coverage.
+    )
+    return conversation, backend, items
+
+
 class MemoryGroundingReviewRegressionTests(unittest.TestCase):
+    def test_legacy_question_record_is_not_used_as_factual_evidence(self) -> None:
+        stored_question = replace(
+            memory(1, "what is my preference regarding tea"),
+            kind="preference",
+        )
+        backend = FakeBackend(
+            (
+                chat_result(
+                    "I don't have personal preferences, but I can help choose tea.",
+                    memory_used=(),
+                ),
+            )
+        )
+        conversation = routed_conversation(
+            backend,
+            FakeRouter((routing_result(True, "small"),)),
+            FakeRetriever((hybrid_match(stored_question),)),
+        )
+
+        reply = conversation.send("What kind of tea do I prefer?")
+
+        self.assertEqual(
+            reply.memory_diagnostics.retrieved_ids,
+            (stored_question.id,),
+        )
+        self.assertEqual(reply.memory_diagnostics.supplied_ids, ())
+        self.assertEqual(reply.response.memory_used, ())
+        self.assertEqual(
+            reply.response.speech,
+            "I do not have a verified personal memory that answers that.",
+        )
+
     def test_irrelevant_nearest_candidate_can_be_left_unused(self) -> None:
         unrelated = memory(1, "The user prefers jasmine tea without sugar.")
         backend = FakeBackend(
@@ -332,16 +483,139 @@ class MemoryGroundingReviewRegressionTests(unittest.TestCase):
                     reply.memory_diagnostics.retrieved_ids,
                     tuple(match.memory.id for match in matches),
                 )
-                self.assertIn(
+                self.assertNotIn(
                     distractor.id, reply.memory_diagnostics.supplied_ids
                 )
                 self.assertNotIn(
                     distractor.id, reply.memory_diagnostics.model_used_ids
                 )
 
-        all_ids = tuple(match.memory.id for match in matches)
-        self.assertEqual(supplied_by_size["small"], all_ids)
-        self.assertEqual(supplied_by_size["large"], all_ids)
+        self.assertEqual(supplied_by_size["small"], expected_ids)
+        self.assertEqual(supplied_by_size["large"], expected_ids)
+
+    def test_incidental_punctuation_does_not_expand_memory_candidates(
+        self,
+    ) -> None:
+        partner = replace(
+            memory(
+                1,
+                "Rina is the user's fictional sensor-calibration partner.",
+            ),
+            kind="relationship",
+        )
+        schedule = replace(
+            memory(
+                2,
+                "The user prefers sensor-calibration sessions on Friday "
+                "afternoons.",
+            ),
+            kind="routine",
+        )
+        plan_format = replace(
+            memory(
+                3,
+                "The user prefers calibration plans containing exactly four "
+                "short numbered steps.",
+            ),
+            kind="preference",
+        )
+        matches = tuple(
+            hybrid_match(item, position)
+            for position, item in enumerate(
+                (partner, schedule, plan_format), start=1
+            )
+        )
+
+        for request in (
+            "today i talked to rina, i am so stressed after talking to her",
+            "Today I talked to Rina, afterward, I felt stressed.",
+            "Who is Rina; answer directly; keep it brief?",
+        ):
+            with self.subTest(request=request):
+                backend = FakeBackend(
+                    (
+                        chat_result(
+                            "Rina is your fictional sensor-calibration partner.",
+                            memory_used=(partner.id,),
+                        ),
+                    )
+                )
+                conversation = routed_conversation(
+                    backend,
+                    FakeRouter((routing_result(True, "small"),)),
+                    FakeRetriever(matches),
+                )
+
+                reply = conversation.send(request)
+
+                self.assertEqual(
+                    reply.memory_diagnostics.retrieved_ids,
+                    tuple(match.memory.id for match in matches),
+                )
+                self.assertEqual(
+                    reply.memory_diagnostics.supplied_ids, (partner.id,)
+                )
+
+    def test_explicit_delimited_list_still_supplies_all_memories(self) -> None:
+        partner = replace(
+            memory(
+                1,
+                "Rina is the user's fictional sensor-calibration partner.",
+            ),
+            kind="relationship",
+        )
+        schedule = replace(
+            memory(
+                2,
+                "The user prefers sensor-calibration sessions on Friday "
+                "afternoons.",
+            ),
+            kind="routine",
+        )
+        plan_format = replace(
+            memory(
+                3,
+                "The user prefers calibration plans containing exactly four "
+                "short numbered steps.",
+            ),
+            kind="preference",
+        )
+        items = (partner, schedule, plan_format)
+        expected_ids = tuple(item.id for item in items)
+        matches = tuple(
+            hybrid_match(item, position)
+            for position, item in enumerate(items, start=1)
+        )
+
+        for request in (
+            "Use Rina, Friday afternoons, four short steps.",
+            "Use Rina; Friday afternoons; four short steps.",
+        ):
+            with self.subTest(request=request):
+                backend = FakeBackend(
+                    (
+                        chat_result(
+                            "1. Meet Rina, your fictional sensor-calibration "
+                            "partner. 2. Calibrate sensors Friday afternoon. "
+                            "3. Record readings. 4. Review results.",
+                            memory_used=expected_ids,
+                        ),
+                    )
+                )
+                conversation = routed_conversation(
+                    backend,
+                    FakeRouter((routing_result(True, "small"),)),
+                    FakeRetriever(matches),
+                )
+
+                reply = conversation.send(request)
+
+                self.assertEqual(
+                    reply.memory_diagnostics.supplied_ids, expected_ids
+                )
+                self.assertEqual(
+                    reply.memory_diagnostics.model_used_ids, expected_ids
+                )
 
     def test_direct_meeting_time_selects_only_time_bearing_evidence(self) -> None:
         partner = memory(
@@ -419,7 +693,7 @@ class MemoryGroundingReviewRegressionTests(unittest.TestCase):
 
         self.assertEqual(
             reply.memory_diagnostics.supplied_ids,
-            tuple(match.memory.id for match in matches),
+            required_ids,
         )
         self.assertEqual(reply.memory_diagnostics.model_used_ids, required_ids)
 
@@ -469,8 +743,12 @@ class MemoryGroundingReviewRegressionTests(unittest.TestCase):
             FakeRetriever((hybrid_match(first, 1), hybrid_match(second, 2))),
         )
 
-        with self.assertRaises(ResponseValidationError):
-            conversation.send("Was Monday's project review in Lab A or Lab B?")
+        reply = conversation.send("Was Monday's project review in Lab A or Lab B?")
+        self.assertEqual(reply.response_transform, "conflict_clarification")
+        self.assertIn("records conflict between Lab A and Lab B", reply.response.speech)
+        self.assertIn("Please confirm", reply.response.speech)
+        self.assertEqual(reply.response.memory_used, ids)
+        self.assertIn("The review is in Lab A, not Lab B.", reply.generation.content)
 
     def test_denial_of_detected_conflict_is_not_an_acknowledgement(self) -> None:
         first = memory(
@@ -494,8 +772,11 @@ class MemoryGroundingReviewRegressionTests(unittest.TestCase):
             FakeRetriever((hybrid_match(first, 1), hybrid_match(second, 2))),
         )
 
-        with self.assertRaises(ResponseValidationError):
-            conversation.send("Was Monday's project review in Lab A or Lab B?")
+        reply = conversation.send("Was Monday's project review in Lab A or Lab B?")
+        self.assertEqual(reply.response_transform, "conflict_clarification")
+        self.assertNotIn("not conflicting", reply.response.speech)
+        self.assertIn("not conflicting", reply.generation.content)
+        self.assertEqual(reply.response.memory_used, ids)
 
     def test_conflict_is_detected_without_or_in_the_request(self) -> None:
         first = memory(
@@ -518,8 +799,10 @@ class MemoryGroundingReviewRegressionTests(unittest.TestCase):
             FakeRetriever((hybrid_match(first, 1), hybrid_match(second, 2))),
         )
 
-        with self.assertRaises(ResponseValidationError):
-            conversation.send("Where is Monday's project review?")
+        reply = conversation.send("Where is Monday's project review?")
+        self.assertEqual(reply.response_transform, "conflict_clarification")
+        self.assertIn("Please confirm", reply.response.speech)
+        self.assertEqual(reply.response.memory_used, ids)
 
     def test_compatible_alternatives_are_not_misclassified_as_conflict(self) -> None:
         jasmine = memory(1, "The user prefers jasmine tea.")
@@ -707,7 +990,8 @@ class MemoryGroundingReviewRegressionTests(unittest.TestCase):
             FakeBackend(
                 (
                     chat_result(
-                        "First: Coordinate with Theo. Second: Hold the robotics "
+                        "First: Coordinate with Theo, your robotics project "
+                        "partner. Second: Hold the robotics "
                         "project meeting Tuesday morning. Finally: Write a "
                         "concise plan.",
                         memory_used=ids,
@@ -904,6 +1188,231 @@ class MemoryGroundingReviewRegressionTests(unittest.TestCase):
 
         with self.assertRaises(ResponseValidationError):
             conversation.send("When do I prefer robotics project meetings?")
+
+    def test_temporal_recall_cannot_omit_correction_effective_time(self) -> None:
+        corrected = replace(
+            memory(2, "The user now prefers ginger tea without sugar."),
+            kind="preference",
+            supersedes_id=memory(1).id,
+            valid_from="2026-08-07T09:00:00.000000Z",
+        )
+        conversation = routed_conversation(
+            FakeBackend(
+                (
+                    chat_result(
+                        "You now prefer ginger tea without sugar.",
+                        memory_used=(corrected.id,),
+                    ),
+                )
+            ),
+            FakeRouter((routing_result(True, "small"),)),
+            FakeRetriever((hybrid_match(corrected),)),
+        )
+
+        with self.assertRaises(ResponseValidationError):
+            conversation.send("When did I change my tea preference?")
+
+    def test_distinct_date_chronology_may_omit_metadata_clocks(self) -> None:
+        corrected_tea, navigation = _distinct_date_chronology_memories()
+        conversation = _chronology_conversation(
+            _DISTINCT_DATE_CHRONOLOGY_SPEECH,
+            corrected_tea,
+            navigation,
+        )
+
+        reply = conversation.send(_DISTINCT_DATE_CHRONOLOGY_PROMPT)
+
+        self.assertNotIn("09:00", reply.response.speech)
+        self.assertNotIn("10:00", reply.response.speech)
+        self.assertEqual(
+            reply.response.memory_used,
+            (corrected_tea.id, navigation.id),
+        )
+
+    def test_distinct_date_chronology_still_requires_exact_times(self) -> None:
+        corrected_tea, navigation = _distinct_date_chronology_memories()
+        conversation = _chronology_conversation(
+            _DISTINCT_DATE_CHRONOLOGY_SPEECH,
+            corrected_tea,
+            navigation,
+        )
+
+        with self.assertRaises(ResponseValidationError):
+            conversation.send(
+                _DISTINCT_DATE_CHRONOLOGY_PROMPT
+                + " Include the exact clock time for each entry."
+            )
+
+    def test_same_day_chronology_requires_metadata_clocks(self) -> None:
+        corrected_tea = replace(
+            memory(9, "The user now prefers ginger tea without sugar."),
+            kind="preference",
+            supersedes_id=memory(2).id,
+            valid_from="2026-08-07T09:00:00.000000Z",
+        )
+        navigation = replace(
+            memory(
+                11,
+                "The user completed the navigation milestone on Friday, "
+                "7 August 2026.",
+            ),
+            kind="event",
+            event_time="2026-08-07T10:00:00.000000Z",
+        )
+        conversation = _chronology_conversation(
+            "1. Friday, August 7, 2026: you changed your tea preference to "
+            "ginger without sugar. 2. Later that Friday, you completed the "
+            "navigation milestone.",
+            corrected_tea,
+            navigation,
+        )
+
+        with self.assertRaises(ResponseValidationError):
+            conversation.send(_DISTINCT_DATE_CHRONOLOGY_PROMPT)
+
+    def test_chronology_cannot_omit_clock_from_canonical_text(self) -> None:
+        corrected_tea, navigation = _distinct_date_chronology_memories()
+        corrected_tea = replace(
+            corrected_tea,
+            canonical_text=(
+                "The user changed her tea preference to ginger without sugar "
+                "at 09:00 on Friday, 7 August 2026."
+            ),
+        )
+        conversation = _chronology_conversation(
+            _DISTINCT_DATE_CHRONOLOGY_SPEECH,
+            corrected_tea,
+            navigation,
+        )
+
+        with self.assertRaises(ResponseValidationError):
+            conversation.send(_DISTINCT_DATE_CHRONOLOGY_PROMPT)
+
+    def test_incomplete_or_ambiguous_dates_disable_clock_omission(self) -> None:
+        _, navigation = _distinct_date_chronology_memories()
+        missing_date = replace(
+            memory(
+                9,
+                "The user changed her tea preference to ginger without sugar "
+                "at 09:00.",
+            ),
+            kind="preference",
+        )
+        ambiguous_date = replace(
+            memory(
+                9,
+                "The user's tea change was recorded for either Friday, "
+                "7 August 2026 or Saturday, 8 August 2026.",
+            ),
+            kind="event",
+            event_time="2026-08-07T09:00:00.000000Z",
+        )
+        cases = (
+            (
+                "missing",
+                missing_date,
+                "You changed your tea preference to ginger without sugar. "
+                "You completed the navigation milestone on Saturday, August "
+                "8, 2026, but the records do not establish their order.",
+            ),
+            (
+                "ambiguous",
+                ambiguous_date,
+                "Your tea change was recorded for either Friday, August 7, "
+                "2026 or Saturday, August 8, 2026. You completed the navigation "
+                "milestone on Saturday, August 8, 2026, so their exact order "
+                "is ambiguous.",
+            ),
+        )
+
+        for label, first, speech in cases:
+            with self.subTest(label=label):
+                conversation = _chronology_conversation(
+                    speech,
+                    first,
+                    navigation,
+                )
+                with self.assertRaises(ResponseValidationError):
+                    conversation.send(_DISTINCT_DATE_CHRONOLOGY_PROMPT)
+
+    def test_distinct_date_chronology_rejects_invented_clock(self) -> None:
+        corrected_tea, navigation = _distinct_date_chronology_memories()
+        conversation = _chronology_conversation(
+            _DISTINCT_DATE_CHRONOLOGY_SPEECH.replace(
+                "Friday, August 7, 2026:",
+                "Friday, August 7, 2026 at 11:00:",
+            ),
+            corrected_tea,
+            navigation,
+        )
+
+        with self.assertRaisesRegex(
+            ResponseValidationError,
+            "unsupported temporal precision",
+        ):
+            conversation.send(_DISTINCT_DATE_CHRONOLOGY_PROMPT)
+
+    def test_distinct_date_chronology_requires_weekday_and_date(self) -> None:
+        corrected_tea, navigation = _distinct_date_chronology_memories()
+        incomplete_speeches = (
+            _DISTINCT_DATE_CHRONOLOGY_SPEECH.replace("Friday, ", ""),
+            _DISTINCT_DATE_CHRONOLOGY_SPEECH.replace(
+                "August 7, 2026",
+                "Friday",
+            ),
+        )
+
+        for speech in incomplete_speeches:
+            with self.subTest(speech=speech):
+                conversation = _chronology_conversation(
+                    speech,
+                    corrected_tea,
+                    navigation,
+                )
+                with self.assertRaises(ResponseValidationError):
+                    conversation.send(_DISTINCT_DATE_CHRONOLOGY_PROMPT)
+
+    def test_correction_effective_time_authorizes_only_entailed_detail(
+        self,
+    ) -> None:
+        corrected = replace(
+            memory(2, "The user now prefers ginger tea without sugar."),
+            kind="preference",
+            supersedes_id=memory(1).id,
+            valid_from="2026-08-07T09:00:00.000000Z",
+        )
+
+        supported = routed_conversation(
+            FakeBackend(
+                (
+                    chat_result(
+                        "You now prefer ginger tea without sugar; the correction "
+                        "became effective Friday, August 7, 2026 at 09:00.",
+                        memory_used=(corrected.id,),
+                    ),
+                )
+            ),
+            FakeRouter((routing_result(True, "small"),)),
+            FakeRetriever((hybrid_match(corrected),)),
+        )
+        reply = supported.send("Summarize my current ginger tea preference.")
+        self.assertIn("Friday", reply.response.speech)
+
+        invented = routed_conversation(
+            FakeBackend(
+                (
+                    chat_result(
+                        "You now prefer ginger tea without sugar; the correction "
+                        "became effective Friday, August 7, 2026 at 10:00.",
+                        memory_used=(corrected.id,),
+                    ),
+                )
+            ),
+            FakeRouter((routing_result(True, "small"),)),
+            FakeRetriever((hybrid_match(corrected),)),
+        )
+        with self.assertRaises(ResponseValidationError):
+            invented.send("Summarize my current ginger tea preference.")
 
     def test_invented_personal_relationship_is_rejected(self) -> None:
         meeting = memory(
@@ -1440,6 +1949,212 @@ class MemoryGroundingReviewRegressionTests(unittest.TestCase):
         reply = conversation.send("When is my appointment?")
 
         self.assertIn("noon", reply.response.speech)
+
+
+class RecencyComparisonRegressionTests(unittest.TestCase):
+    def test_declared_budget_supplies_and_allows_all_three_records(self) -> None:
+        items = _recency_comparison_memories()
+        memory_ids = tuple(item.id for item in items)
+        conversation, backend, _ = _recency_comparison_conversation(
+            _RECENCY_COMPARISON_SPEECH,
+            memory_ids,
+            context_length=2176,
+        )
+
+        reply = conversation.send(_RECENCY_COMPARISON_PROMPT)
+
+        self.assertEqual(reply.memory_diagnostics.supplied_ids, memory_ids)
+        self.assertEqual(reply.response.memory_used, memory_ids)
+        _, messages, schema = backend.calls[0]
+        payload, _ = decode_memory_envelope(messages[-1])
+        self.assertEqual(
+            tuple(record["id"] for record in payload["records"]),
+            memory_ids,
+        )
+        self.assertEqual(
+            tuple(schema["properties"]["memory_used"]["items"]["enum"]),
+            memory_ids,
+        )
+
+    def test_collaborator_answer_and_citation_are_both_required(self) -> None:
+        items = _recency_comparison_memories()
+        memory_ids = tuple(item.id for item in items)
+        milestone_ids = memory_ids[:2]
+        milestones_only = (
+            "Your Luma kickoff milestone was Monday, August 3, 2026. Your "
+            "navigation prototype milestone was Saturday, August 8, 2026, so "
+            "navigation is newer."
+        )
+        incomplete_answers = (
+            (milestones_only, milestone_ids),
+            (milestones_only, memory_ids),
+            (_RECENCY_COMPARISON_SPEECH, milestone_ids),
+            (
+                milestones_only + " Theo is not your collaborator.",
+                memory_ids,
+            ),
+            (
+                milestones_only + " Theo is Alice's collaborator.",
+                memory_ids,
+            ),
+        )
+
+        for speech, cited_ids in incomplete_answers:
+            with self.subTest(speech=speech, cited_ids=cited_ids):
+                conversation, _, _ = _recency_comparison_conversation(
+                    speech,
+                    cited_ids,
+                )
+                with self.assertRaises(ResponseValidationError):
+                    conversation.send(_RECENCY_COMPARISON_PROMPT)
+
+    def test_collaborator_binding_accepts_positive_user_owned_forms(self) -> None:
+        items = _recency_comparison_memories()
+        memory_ids = tuple(item.id for item in items)
+        milestone_speech = (
+            "Your Luma kickoff milestone was Monday, August 3, 2026. Your "
+            "navigation prototype milestone was Saturday, August 8, 2026, so "
+            "navigation is newer. "
+        )
+        collaborator_forms = (
+            "Theo is your collaborator.",
+            "Theo, your robotics project partner, is the collaborator.",
+            "Your robotics project partner is Theo.",
+            "Theo works with you.",
+        )
+
+        for collaborator_form in collaborator_forms:
+            with self.subTest(collaborator_form=collaborator_form):
+                conversation, _, _ = _recency_comparison_conversation(
+                    milestone_speech + collaborator_form,
+                    memory_ids,
+                )
+                reply = conversation.send(_RECENCY_COMPARISON_PROMPT)
+                self.assertEqual(reply.response.memory_used, memory_ids)
+
+
+class RelationshipCompletenessRegressionTests(unittest.TestCase):
+    """Citations must express the relationship, not just its person's name."""
+
+    def conversation(self, texts, speech, *, model_size="large"):
+        items = tuple(memory(index, text) for index, text in enumerate(texts, 1))
+        model = LARGE_MODEL if model_size == "large" else SMALL_MODEL
+        backend = FakeBackend((
+            chat_result(
+                speech, memory_used=tuple(item.id for item in items), model=model
+            ),
+        ))
+        matches = tuple(
+            hybrid_match(item, index) for index, item in enumerate(items, 1)
+        )
+        conversation = routed_conversation(
+            backend,
+            FakeRouter((routing_result(True, model_size),)),
+            FakeRetriever(matches),
+            context_length=4096,
+        )
+        return conversation, backend
+
+    def test_three_memory_plan_rejects_missing_or_unbound_relationship(
+        self,
+    ) -> None:
+        texts = (
+            "Theo is the user's fictional robotics project partner.",
+            "The user prefers robotics project meetings on Tuesday mornings.",
+            "The user prefers project plans containing exactly three concise steps.",
+        )
+        bad_steps = (
+            "Meet Theo on Tuesday mornings.",
+            "Meet Theo, your partner, on Tuesday mornings.",
+            "Meet Theo on Tuesday mornings with your robotics project partner.",
+            "Meet Theo on Tuesday mornings. Your robotics project partner can help.",
+            "Meet Theo on Tuesday mornings. Discuss your robotics project partner.",
+        )
+        for first_step in bad_steps:
+            speech = (
+                "1. " + first_step
+                + " 2. Review your robotics project. 3. Plan your next tasks."
+            )
+            with self.subTest(first_step=first_step):
+                conversation, backend = self.conversation(texts, speech)
+                before = conversation.messages
+                with self.assertRaisesRegex(
+                    ResponseValidationError, "relationship"
+                ) as caught:
+                    conversation.send(
+                        "Using what you remember about Theo, my robotics-project "
+                        "meeting schedule, and my preferred project-plan format, "
+                        "create a plan for our next meeting."
+                    )
+                self.assertEqual(conversation.messages, before)
+                self.assertEqual(len(backend.calls), 1)
+                self.assertNotIn("Theo", str(caught.exception))
+                self.assertNotIn("mem_", str(caught.exception))
+
+    def test_relationship_paraphrases_preserve_name_role_and_context(self) -> None:
+        text = "Theo is the user's fictional robotics project partner."
+        answers = (
+            "Theo is your robotics project partner.",
+            "Theo, your robotics-project partner, can review the agenda.",
+            "Coordinate with your robotics project partner, Theo.",
+            "Your partner on the robotics project is Theo.",
+            "Meet Theo, your partner for the robotics project.",
+            "You and Theo are robotics project partners.",
+            "Theo and you are partners on the robotics project.",
+        )
+        for speech in answers:
+            with self.subTest(speech=speech):
+                conversation, _ = self.conversation(
+                    (text,), speech, model_size="small"
+                )
+                reply = conversation.send("Who is Theo to me?")
+                self.assertEqual(reply.response.speech, speech)
+
+    def test_relationship_context_cannot_be_borrowed_from_other_sentences(
+        self,
+    ) -> None:
+        text = "Theo is the user's fictional robotics project partner."
+        answers = (
+            "Theo is your partner. You work on a robotics project.",
+            "Theo helps with robotics projects. Your partner joins you.",
+            "Theo is your project partner. You like robotics.",
+        )
+        for speech in answers:
+            with self.subTest(speech=speech):
+                conversation, _ = self.conversation((text,), speech)
+                with self.assertRaisesRegex(
+                    ResponseValidationError, "relationship"
+                ):
+                    conversation.send("Summarize what you remember about Theo.")
+
+    def test_two_known_people_cannot_exchange_relationships(self) -> None:
+        texts = (
+            "Theo is the user's robotics project partner.",
+            "Mira is the user's sister.",
+        )
+        conversation, _ = self.conversation(
+            texts, "Theo is your sister. Mira is your robotics project partner."
+        )
+        with self.assertRaisesRegex(ResponseValidationError, "relationship"):
+            conversation.send("Who are Theo and Mira to me?")
+
+    def test_non_fixture_relationship_is_checked_without_kind_metadata(
+        self,
+    ) -> None:
+        text = "Mira is the user's older sister."
+        for speech in ("Mira can help.", "Mira is your sister."):
+            with self.subTest(speech=speech):
+                conversation, _ = self.conversation((text,), speech)
+                with self.assertRaisesRegex(
+                    ResponseValidationError, "relationship"
+                ):
+                    conversation.send("Who is Mira to me?")
+        conversation, _ = self.conversation(
+            (text,), "Ask Mira, your older sister, to help."
+        )
+        self.assertIn(
+            "older sister", conversation.send("Who is Mira to me?").response.speech
+        )
 
 
 if __name__ == "__main__":

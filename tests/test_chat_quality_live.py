@@ -34,6 +34,10 @@ ARCHITECTURE_PROMPT = (
     "Compare three offline robot architectures, reason through their "
     "tradeoffs, and create a detailed deployment plan."
 )
+DATABASE_RECOVERY_PROMPT = (
+    "Create a detailed contingency plan for recovering an offline application "
+    "after database corruption without assuming network access."
+)
 COMPLEX_PLAN_PROMPT = (
     "Using what you remember about Theo, my robotics-project meeting schedule, "
     "and my preferred project-plan format, create a plan for our next meeting."
@@ -122,6 +126,19 @@ _PARTNER_PERSPECTIVE_PATTERN = re.compile(
     r"\byour partner (?:on|for) the robotics project\b",
     re.IGNORECASE,
 )
+_PLAN_PARTNER_ROLE = (
+    r"your\s+(?:fictional\s+)?(?:robotics\s+project\s+partner|"
+    r"partner\s+(?:on|for)\s+(?:the|your)\s+robotics\s+project)"
+)
+# Bind the relationship to Theo through direct predication or apposition.
+# Merely finding the name and role somewhere in the same answer is insufficient.
+_PLAN_PARTNER_RELATIONSHIP_PATTERN = re.compile(
+    r"\bTheo\s*(?:,\s*|\(\s*)?"
+    r"(?:(?:who\s+)?(?:is|remains)\s+(?:still\s+)?|as\s+)?"
+    + _PLAN_PARTNER_ROLE + r"\b|\b" + _PLAN_PARTNER_ROLE
+    + r"\s*(?:,\s*|\(\s*)?(?:(?:is|named)\s+)?Theo\b",
+    re.IGNORECASE,
+)
 _NEGATED_PARTNER_PATTERN = re.compile(
     r"\bTheo\b[^.!?]{0,80}\b(?:is not|isn't|was not|wasn't)\b"
     r"[^.!?]{0,80}\b(?:partner|robotics project)\b|"
@@ -145,6 +162,20 @@ _PLAN_ACTION_PATTERN = re.compile(
     r"finali[sz]e|gather|identify|meet|outline|plan|prepare|review|"
     r"schedule|send|set|share)\w*\b",
     re.IGNORECASE,
+)
+# Recognize common distinct designs without requiring one canned comparison.
+_ARCHITECTURE_DESIGN_PATTERNS = tuple(
+    re.compile(pattern, re.IGNORECASE)
+    for pattern in (
+        r"\b(?:centrali[sz]ed|monolithic|single[- ]controller)\b",
+        r"\b(?:distributed|decentrali[sz]ed)\b",
+        r"\bhybrid\b",
+        r"\b(?:hierarchical|layered)\b",
+        r"\b(?:reactive|behavio[u]?r[- ]based|subsumption)\b",
+        r"\b(?:deliberative|planning[- ]based)\b",
+        r"\b(?:modular|component[- ]based)\b",
+        r"\b(?:pipeline|cascad(?:e|ed|ing))\b",
+    )
 )
 
 
@@ -300,6 +331,7 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
             ),
             retriever=HybridRetriever(self.store),
             small_model=self.config.ollama.small_model,
+            general_large_model=self.config.ollama.general_large_model,
             large_model=self.config.ollama.large_model,
             context_length=(
                 self.config.generation.context_length
@@ -320,6 +352,7 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
             ),
             retriever=HybridRetriever(self.store),
             small_model=self.config.ollama.small_model,
+            general_large_model=self.config.ollama.general_large_model,
             large_model=self.config.ollama.large_model,
             context_length=self.config.generation.context_length,
             max_output_tokens=self.config.generation.max_output_tokens,
@@ -348,6 +381,12 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
     def assert_architecture_answer(self, speech: str) -> None:
         self.assertNotRegex(speech, _REFUSAL_PATTERN)
         self.assertNotRegex(speech, _PHYSICAL_DEFLECTION_PATTERN)
+        self.assertGreaterEqual(
+            sum(bool(pattern.search(speech))
+                for pattern in _ARCHITECTURE_DESIGN_PATTERNS),
+            3,
+            "Expected three distinct architecture designs: " + speech,
+        )
         tradeoff_terms = (
             "adapt",
             "bandwidth",
@@ -379,10 +418,6 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
             speech,
             re.compile(r"\b(?:but|however|whereas|while)\b|trade-?offs?", re.I),
         )
-        self.assertRegex(
-            speech,
-            re.compile(r"\b(?:recommend|best fit|choose)\w*\b", re.I),
-        )
         plan_actions = re.findall(
             r"\b(?:define|deploy|implement|integrate|monitor|select|test|"
             r"validate|verify)\w*\b",
@@ -390,6 +425,88 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
             re.IGNORECASE,
         )
         self.assertGreaterEqual(len(plan_actions), 2, speech)
+
+    def assert_database_recovery_plan(self, speech: str) -> None:
+        """Check recovery milestones, allowing ordinary wording variations."""
+
+        self.assertNotRegex(speech, _REFUSAL_PATTERN)
+        self.assertNotRegex(speech, _PHYSICAL_DEFLECTION_PATTERN)
+        self.assertRegex(
+            speech,
+            re.compile(
+                r"\b(?:stop|halt|suspend|pause|disable|block|prevent)\w*"
+                r"[^.!?]{0,70}\b(?:writ\w*|application|app|service)\b|"
+                r"\b(?:read[- ]only|preserv\w*|work\w* on|creat\w*|"
+                r"mak\w*|take|keep)\b[^.!?]{0,70}"
+                r"\b(?:cop(?:y|ies)|clone|image|original\w*)\b|"
+                r"\b(?:copy|clone|image)\b[^.!?]{0,60}"
+                r"\b(?:database|data|files?|disk)\b",
+                re.IGNORECASE,
+            ),
+            "Recovery must protect the original or stop further writes.",
+        )
+        backup = r"(?:backups?|snapshots?)"
+        self.assertRegex(
+            speech,
+            re.compile(
+                r"\b(?:restor\w*|recover\w*|load\w*)\b[^.!?]{0,80}"
+                r"\b(?:valid|verified|tested|intact|usable|healthy|known[- ]good)"
+                r"\b[^.!?]{0,30}\b" + backup + r"\b|"
+                r"\b(?:if|when|where|check|verify|test|validat\w*)\b"
+                r"[^.!?]{0,100}\b" + backup + r"\b"
+                r"[^.!?]{0,100}\b(?:restor\w*|recover\w*|load\w*)\b|"
+                r"\b" + backup + r"\b[^.!?]{0,60}"
+                r"\b(?:valid|verified|tested|intact|usable|healthy|available)"
+                r"\b[^.!?]{0,60}\brestor\w*\b",
+                re.IGNORECASE,
+            ),
+            "Restoration must depend on an available, usable backup.",
+        )
+        self.assertRegex(
+            speech,
+            re.compile(
+                r"(?:\b(?:no|without|lack\w*)\b[^.!?]{0,30}\b"
+                + backup + r"\b|\b" + backup + r"\b[^.!?]{0,40}"
+                r"\b(?:unavailable|unusable|missing|absent|corrupt\w*|"
+                r"invalid|fail\w*|lost|"
+                r"(?:do not|does not|don['’]t|doesn['’]t) exist|"
+                r"(?:not|isn['’]t|aren['’]t) (?:available|usable|valid))\b|"
+                r"\bif\s+(?:(?:a|an|the|any|valid|verified|usable|local|"
+                r"intact|working)\s+){0,3}" + backup
+                + r"\s+(?:exists?|(?:is|are)\s+"
+                r"(?:available|valid|usable|intact))\b"
+                r"(?:(?!\bif\b)[^.!?;]){0,120}[.;]\s*if not\b|"
+                r"\b(?:otherwise|else)\b)"
+                r"[^.!?]{0,180}\b(?:salvag\w*|extract\w*|rebuild\w*|"
+                r"repair\w*|reconstruct\w*|re[- ]?enter\w*|manual\w*|"
+                r"recover\w* (?:readable|intact|remaining|surviving))\b|"
+                r"\b(?:salvag\w*|extract\w*|rebuild\w*|repair\w*|"
+                r"reconstruct\w*)\b[^.!?]{0,80}\bif\b[^.!?]{0,30}"
+                r"\bno\b[^.!?]{0,20}\b(?:backups?|snapshots?)\b",
+                re.IGNORECASE,
+            ),
+            "Include a recovery contingency when no usable backup exists.",
+        )
+        validation = (
+            r"(?:validat\w*|verif\w*|integrity|consistency|"
+            r"smoke[- ]?tests?|tests? (?:pass|succeed)|checks? pass)"
+        )
+        resume = r"(?:resum\w*|restart\w*|reopen\w*|re[- ]?enabl\w*)"
+        self.assertRegex(
+            speech,
+            re.compile(
+                r"\b" + validation + r"\b[\s\S]{0,160}\b"
+                + resume + r"\b|\bbefore\b[^.!?]{0,35}\b"
+                + resume + r"\b[^.!?]{0,100}\b" + validation
+                + r"\b|\b" + resume + r"\b[^.!?]{0,35}"
+                r"\b(?:only|after|once)\b[^.!?]{0,80}\b"
+                + validation + r"\b|\b" + validation
+                + r"\b[^.!?]{0,80}\bbefore\b[^.!?]{0,40}"
+                r"\b(?:normal\s+)?(?:use|operation\w*)\b",
+                re.IGNORECASE,
+            ),
+            "Validate recovered data or behavior before normal resumption.",
+        )
 
     def assert_three_concise_plan_steps(self, speech: str) -> None:
         marker_patterns = (
@@ -443,6 +560,16 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
             self.assertLessEqual(len(step), 200, speech)
             self.assertRegex(step, _PLAN_ACTION_PATTERN, speech)
 
+    def assert_theo_project_partner_relationship(self, speech: str) -> None:
+        normalized = re.sub(r"[-\u2010-\u2015]", " ", speech)
+        self.assertRegex(
+            normalized,
+            _PLAN_PARTNER_RELATIONSHIP_PATTERN,
+            "Expected Theo's relationship as your robotics project partner, "
+            "not only his name or an unrelated partner reference.",
+        )
+        self.assertNotRegex(speech, _NEGATED_PARTNER_PATTERN)
+
     def test_large_general_architecture_is_answered_without_refusal(
         self,
     ) -> None:
@@ -453,7 +580,7 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
         self.assert_route_and_model(
             reply,
             RouteDecision(False, "large"),
-            self.config.ollama.large_model,
+            self.config.ollama.general_large_model,
         )
         self.assertEqual(
             reply.memory_diagnostics.to_dict(),
@@ -465,6 +592,21 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
         )
         speech = reply.response.speech
         self.assert_architecture_answer(speech)
+
+    def test_offline_database_recovery_plan_end_to_end(self) -> None:
+        reply = self.real_routed_conversation().send(DATABASE_RECOVERY_PROMPT)
+
+        self.assert_route_and_model(
+            reply,
+            RouteDecision(False, "large"),
+            self.config.ollama.general_large_model,
+        )
+        self.assertEqual(reply.memory_diagnostics.to_dict(), {
+            "retrieved_ids": [],
+            "supplied_ids": [],
+            "model_used_ids": [],
+        })
+        self.assert_database_recovery_plan(reply.response.speech)
 
     def test_theo_recall_is_small_grounded_and_uses_user_perspective(
         self,
@@ -611,8 +753,7 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
 
         speech = reply.response.speech
         self.assert_three_concise_plan_steps(speech)
-        self.assertRegex(speech, re.compile(r"\bTheo\b", re.I))
-        self.assertNotRegex(speech, _NEGATED_PARTNER_PATTERN)
+        self.assert_theo_project_partner_relationship(speech)
         self.assertRegex(
             speech, re.compile(r"\btuesday mornings?\b", re.IGNORECASE)
         )
@@ -621,6 +762,21 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
         self.assertNotRegex(speech, _REFUSAL_PATTERN)
         self.assertNotRegex(speech, _PHYSICAL_DEFLECTION_PATTERN)
         self.assert_user_perspective(speech)
+
+    def test_grounded_large_route_uses_configured_large_model(self) -> None:
+        reply = self.conversation(RouteDecision(True, "large")).send(
+            "Who is Theo to me?"
+        )
+
+        self.assert_route_and_model(
+            reply,
+            RouteDecision(True, "large"),
+            self.config.ollama.large_model,
+        )
+        self.assertEqual(
+            reply.memory_diagnostics.model_used_ids, (PARTNER_MEMORY_ID,)
+        )
+        self.assert_theo_project_partner_relationship(reply.response.speech)
 
     def test_exact_failed_greeting_then_architecture_end_to_end(self) -> None:
         conversation = self.real_routed_conversation()
@@ -733,11 +889,10 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
         )
         speech = reply.response.speech
         self.assert_three_concise_plan_steps(speech)
-        self.assertRegex(speech, re.compile(r"\bTheo\b", re.IGNORECASE))
+        self.assert_theo_project_partner_relationship(speech)
         self.assertRegex(
             speech, re.compile(r"\btuesday mornings?\b", re.IGNORECASE)
         )
-        self.assertNotRegex(speech, _NEGATED_PARTNER_PATTERN)
         self.assertNotRegex(speech, _NEGATED_MEETING_PATTERN)
         self.assert_no_invented_time_or_date(speech)
         self.assertNotRegex(speech, _REFUSAL_PATTERN)
@@ -745,6 +900,152 @@ class LiveChatQualityRegressionTests(unittest.TestCase):
         self.assertNotRegex(speech, _UNSUPPORTED_PERSON_NAME_PATTERN)
         self.assertNotRegex(speech, _UNSUPPORTED_RELATIONSHIP_PATTERN)
         self.assert_user_perspective(speech)
+
+
+class QualityAssertionTests(unittest.TestCase):
+    """Check semantic regression assertions without loading a local model."""
+
+    def test_partner_assertion_accepts_supported_relationship_paraphrases(
+        self,
+    ) -> None:
+        assertions = LiveChatQualityRegressionTests()
+        for speech in (
+            "Meet Theo, your robotics project partner, on Tuesday mornings.",
+            "Theo is your fictional robotics-project partner. Review progress.",
+            "Meet your robotics project partner Theo on Tuesday mornings.",
+            "Meet your robotics-project partner, Theo, on Tuesday mornings.",
+            "Plan with Theo (your partner on the robotics project).",
+            "Theo, who is your partner for your robotics project, can review it.",
+            "Meet your partner on the robotics project (Theo).",
+            "Your partner for the robotics project is Theo.",
+            "Meet Theo\u2014your robotics-project partner\u2014on Tuesday mornings.",
+        ):
+            with self.subTest(speech=speech):
+                assertions.assert_theo_project_partner_relationship(speech)
+
+    def test_partner_assertion_rejects_prior_live_omission(self) -> None:
+        assertions = LiveChatQualityRegressionTests()
+        prior_live_reply = (
+            "I'll create a three-step plan for your Tuesday morning robotics "
+            "meeting with Theo. Step 1: Review last week's project progress. "
+            "Step 2: Discuss next week's prototype testing timeline. "
+            "Step 3: Finalize shared goals for the upcoming sprint. This "
+            "follows your preference for concise, actionable steps."
+        )
+        assertions.assert_three_concise_plan_steps(prior_live_reply)
+        with self.assertRaisesRegex(AssertionError, "Theo's relationship"):
+            assertions.assert_theo_project_partner_relationship(prior_live_reply)
+
+    def test_partner_assertion_rejects_incomplete_or_misassigned_roles(
+        self,
+    ) -> None:
+        assertions = LiveChatQualityRegressionTests()
+        for speech in (
+            "1. Meet Theo on Tuesday mornings. 2. Review your robotics project. "
+            "3. Plan your next tasks.",
+            "Meet Theo on Tuesday mornings. Your robotics project partner "
+            "can review progress.",
+            "Meet Theo and your robotics project partner Alex.",
+            "Meet Theo, while Alex is your robotics project partner.",
+            "Your robotics project partner Alex can meet Theo.",
+            "Theo is your partner. Review the robotics project.",
+            "Theo is your robotics partner.",
+            "Theo is your project partner.",
+            "Theo is my robotics project partner.",
+            "Theo is not your robotics project partner.",
+            "Theo isn't your robotics-project partner.",
+            "Theo isn\u2019t your partner for the robotics project.",
+            "Your robotics project partner is not Theo.",
+        ):
+            with self.subTest(speech=speech):
+                with self.assertRaisesRegex(AssertionError, "Theo's relationship"):
+                    assertions.assert_theo_project_partner_relationship(speech)
+
+    def test_architecture_assertion_requires_three_distinct_designs(self) -> None:
+        assertions = LiveChatQualityRegressionTests()
+        one_design = (
+            "Centralized control has low latency but high cost and memory "
+            "overhead. I recommend centralized control. Deploy and test it."
+        )
+        with self.assertRaisesRegex(AssertionError, "three distinct"):
+            assertions.assert_architecture_answer(one_design)
+
+        alternatives = (
+            "Centralized has low latency but one failure point; distributed "
+            "isolates faults with coordination overhead; hybrid balances "
+            "flexibility and cost. Recommend hybrid. Define interfaces, "
+            "integrate sensors, and test faults before deployment.",
+            "Reactive behavior is predictable but inflexible; deliberative "
+            "planning improves flexibility with compute overhead; hierarchical "
+            "control isolates faults. Define "
+            "interfaces, integrate sensors, and validate offline.",
+        )
+        for speech in alternatives:
+            with self.subTest(speech=speech):
+                assertions.assert_architecture_answer(speech)
+
+    def test_recovery_assertion_requires_contingencies_and_safe_resumption(
+        self,
+    ) -> None:
+        assertions = LiveChatQualityRegressionTests()
+        snapshot_only = (
+            "Compare: 1) Manual backup restoration (low latency, high risk of "
+            "data loss), 2) On-device snapshot recovery (fast, requires "
+            "pre-configured snapshots), 3) Cloud-based recovery (unavailable "
+            "offline). Recommended: On-device snapshot recovery. Steps: "
+            "1) Verify snapshot integrity, 2) Apply snapshot to current "
+            "database, 3) Validate data consistency."
+        )
+        with self.assertRaisesRegex(AssertionError, "protect the original"):
+            assertions.assert_database_recovery_plan(snapshot_only)
+
+        missing_contingency = (
+            "Stop the application and copy the damaged database. Restore a "
+            "verified local backup into a clean database. Validate consistency "
+            "and run offline smoke tests before restarting the application."
+        )
+        with self.assertRaisesRegex(AssertionError, "no usable backup"):
+            assertions.assert_database_recovery_plan(missing_contingency)
+
+        for unrelated_condition in (
+            "If the recovery tool is installed, run it. If not, manually "
+            "reconstruct the tool configuration.",
+            "If backups exist, restore them. If checks pass, resume. If not, "
+            "manually repair the failed checks.",
+            "If backups exist, restore them if checks pass. If not, manually "
+            "repair the failed checks.",
+        ):
+            with self.subTest(unrelated_condition=unrelated_condition):
+                with self.assertRaisesRegex(AssertionError, "no usable backup"):
+                    assertions.assert_database_recovery_plan(
+                        missing_contingency + " " + unrelated_condition
+                    )
+
+        alternatives = (
+            "Stop the application and copy the damaged database. Restore a "
+            "verified local backup into a clean database. If no usable backup "
+            "exists, salvage readable records and rebuild locally. Validate "
+            "consistency and run offline smoke tests before restarting the "
+            "application.",
+            "Preserve the original files. Check whether an intact snapshot "
+            "exists, then restore it to a separate instance. Otherwise extract "
+            "recoverable rows and reconstruct missing records manually. Resume "
+            "only after integrity checks pass.",
+            "Disable writes and preserve the original database. Restore a "
+            "verified backup to a separate instance. If backups don't exist, "
+            "salvage readable records into a clean database and record gaps. "
+            "Validate the recovered records before resuming normal work.",
+            "Stop writes and copy the current database. If backups exist, "
+            "restore the latest verified backup to a separate instance. "
+            "If not, salvage readable records and manually reconstruct "
+            "missing data. Validate the recovered database before resuming.",
+            "Halt modifications and preserve an untouched copy. Assess damage. "
+            "Restore a verified local backup if available. Salvage or rebuild "
+            "locally if no backup exists. Validate functionality before use.",
+        )
+        for speech in alternatives:
+            with self.subTest(speech=speech):
+                assertions.assert_database_recovery_plan(speech)
 
 
 if __name__ == "__main__":

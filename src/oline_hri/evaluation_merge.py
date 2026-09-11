@@ -57,6 +57,7 @@ _SOURCE_PATHS = (
     "src/oline_hri/evaluation_benchmark.py",
     "src/oline_hri/memory.py",
     "src/oline_hri/ollama.py",
+    "src/oline_hri/relationships.py",
     "src/oline_hri/response.py",
     "src/oline_hri/retrieval.py",
     "src/oline_hri/routing.py",
@@ -808,7 +809,7 @@ def _validate_ollama(value: object) -> None:
     if ollama["status"] not in {"available", "unavailable"}:
         raise EvaluationMergeError("environment Ollama status is invalid")
     models = ollama["configured_models"]
-    if not isinstance(models, list) or len(models) != 2:
+    if not isinstance(models, list) or len(models) not in {2, 3}:
         raise EvaluationMergeError("environment Ollama models are invalid")
     roles = []
     for item in models:
@@ -816,7 +817,7 @@ def _validate_ollama(value: object) -> None:
         if not {"role", "tag"}.issubset(model):
             raise EvaluationMergeError("environment Ollama model is invalid")
         role = model["role"]
-        if role not in {"small", "large"} or role in roles:
+        if role not in {"small", "general_large", "large"} or role in roles:
             raise EvaluationMergeError("environment Ollama model role is invalid")
         roles.append(role)
         if not _text(model["tag"], 256):
@@ -837,7 +838,10 @@ def _validate_ollama(value: object) -> None:
                 raise EvaluationMergeError("environment Ollama digest is invalid")
         elif set(model) != {"role", "tag"}:
             raise EvaluationMergeError("environment Ollama model is invalid")
-    if roles != ["small", "large"]:
+    if roles not in (
+        ["small", "large"],
+        ["small", "general_large", "large"],
+    ):
         raise EvaluationMergeError("environment Ollama model order is invalid")
     version = _mapping(ollama["version"], "Ollama version")
     if version.get("status") == "available":
@@ -956,6 +960,11 @@ def _bind_environment(
     kernel = _mapping(device["kernel"], "kernel")
     if (
         runtime.get("small_model") != model_tags.get("small")
+        or (
+            "general_large_model" in runtime
+            and runtime.get("general_large_model")
+            != model_tags.get("general_large")
+        )
         or runtime.get("large_model") != model_tags.get("large")
         or runtime.get("embedding_model_id") != embedding["model_id"]
         or runtime.get("embedding_model_revision") != embedding["model_revision"]

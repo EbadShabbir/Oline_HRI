@@ -21,9 +21,22 @@ from .memory import (
     MemoryStoreError,
     MemoryValidationError,
 )
+from .memory_capture import (
+    AutomaticMemoryCapture,
+    AutomaticMemoryClassifier,
+    MemoryCaptureError,
+)
 from .ollama import OllamaClient, OllamaError
 from .retrieval import HybridRetriever
 from .routing import ConversationRouter, RoutingError, RoutingResult
+from .speech import (
+    NoSpeechDetected,
+    OfflineSpeechRecognizer,
+    SpeechRecognitionError,
+    Transcription,
+    TranscriptionRejected,
+    speech_runtime_status,
+)
 
 
 class _RouteReportingRouter:
@@ -34,22 +47,25 @@ class _RouteReportingRouter:
         router: ConversationRouter,
         *,
         small_model: str,
+        general_large_model: str,
         large_model: str,
         output: TextIO,
     ) -> None:
         self._router = router
         self._small_model = small_model
+        self._general_large_model = general_large_model
         self._large_model = large_model
         self._output = output
 
     def route(self, user_text, *, history=()) -> RoutingResult:
         result = self._router.route(user_text, history=history)
         decision = result.decision
-        selected_model = (
-            self._large_model
-            if decision.model_size == "large"
-            else self._small_model
-        )
+        if decision.model_size == "small":
+            selected_model = self._small_model
+        elif decision.memory_required:
+            selected_model = self._large_model
+        else:
+            selected_model = self._general_large_model
         memory_required = "true" if decision.memory_required else "false"
         print(
             "route> "
@@ -86,9 +102,15 @@ def build_parser() -> argparse.ArgumentParser:
     chat_parser = commands.add_parser(
         "chat", help="chat through the local memory and model router"
     )
-    chat_parser.add_argument(
+    chat_input = chat_parser.add_mutually_exclusive_group()
+    chat_input.add_argument(
         "--prompt",
         help="send one prompt and exit; omit for an interactive session",
+    )
+    chat_input.add_argument(
+        "--voice",
+        action="store_true",
+        help="use the configured offline microphone and speech recognizer",
     )
     chat_parser.add_argument(
         "--show-route",
@@ -102,6 +124,32 @@ def build_parser() -> argparse.ArgumentParser:
             "show retrieved, supplied, and model-used memory IDs after each "
             "validated reply"
         ),
+    )
+    chat_parser.add_argument(
+        "--auto-memory",
+        action="store_true",
+        help=(
+            "opt in to local automatic capture of eligible personal statements "
+            "for the configured retention window"
+        ),
+    )
+
+    speech_parser = commands.add_parser(
+        "speech", help="inspect or run offline speech recognition"
+    )
+    speech_commands = speech_parser.add_subparsers(
+        dest="speech_command", required=True
+    )
+    speech_commands.add_parser(
+        "check", help="check configured capture, VAD, Whisper, and model assets"
+    )
+    listen_parser = speech_commands.add_parser(
+        "listen", help="capture and transcribe one utterance"
+    )
+    listen_parser.add_argument(
+        "--show-metrics",
+        action="store_true",
+        help="show non-audio recognition measurements on standard error",
     )
 
     memory_parser = commands.add_parser(
@@ -172,6 +220,9 @@ def build_parser() -> argparse.ArgumentParser:
     memory_commands.add_parser(
         "embedding-status", help="show semantic-index coverage"
     )
+    memory_commands.add_parser(
+        "prune", help="delete memories past the configured retention window"
+    )
 
     correct_parser = memory_commands.add_parser(
         "correct", help="replace one active memory by exact ID"
@@ -225,7 +276,50 @@ def main(
             print(json.dumps(config.to_dict(), indent=2, sort_keys=True), file=output)
             return 0
 
+    if args.command == "speech":
+        if args.speech_command == "check":
+            try:
+                status = speech_runtime_status(config.speech)
+            except KeyboardInterrupt:
+                print("speech check interrupted", file=errors)
+                return 130
+            for component, valid in status.to_dict().items():
+                positive = {
+                    "capture_executable": "present",
+                    "whisper_executable": "runnable",
+                }.get(component, "verified")
+                print(
+                    f"{component}: {positive if valid else 'missing_or_invalid'}",
+                    file=output,
+                )
+            return 0 if status.ready else 5
+        if args.speech_command == "listen":
+            try:
+                recognizer = OfflineSpeechRecognizer(config.speech)
+                print("listening...", file=errors, flush=True)
+                transcription = recognizer.listen()
+            except (NoSpeechDetected, TranscriptionRejected):
+                print(
+                    "speech> no usable speech detected; please try again",
+                    file=errors,
+                )
+                return 5
+            except SpeechRecognitionError:
+                print(
+                    "speech error: request could not be completed safely",
+                    file=errors,
+                )
+                return 5
+            except KeyboardInterrupt:
+                print("speech interrupted", file=errors)
+                return 130
+            if args.show_metrics:
+                _report_speech_metrics(transcription, errors)
+            print(transcription.text, file=output)
+            return 0
+
     if args.command == "chat":
+        client: Optional[OllamaClient] = None
         try:
             client = OllamaClient(config.ollama, config.generation)
             embedder = BgeOnnxEmbedder(
@@ -236,6 +330,17 @@ def main(
                 config.memory.database_path,
                 profile_id=config.memory.profile_id,
                 embedder=embedder,
+                retention_days=config.memory.retention_days,
+            )
+            automatic_memory = (
+                AutomaticMemoryCapture(
+                    AutomaticMemoryClassifier(
+                        client, model=config.ollama.small_model
+                    ),
+                    store,
+                )
+                if args.auto_memory
+                else None
             )
             router = ConversationRouter(
                 client, model=config.ollama.small_model
@@ -244,6 +349,7 @@ def main(
                 router = _RouteReportingRouter(
                     router,
                     small_model=config.ollama.small_model,
+                    general_large_model=config.ollama.general_large_model,
                     large_model=config.ollama.large_model,
                     output=errors,
                 )
@@ -252,19 +358,44 @@ def main(
                 router=router,
                 retriever=HybridRetriever(store),
                 small_model=config.ollama.small_model,
+                general_large_model=config.ollama.general_large_model,
                 large_model=config.ollama.large_model,
                 system_prompt=config.conversation.system_prompt,
                 context_length=config.generation.context_length,
                 max_output_tokens=config.generation.max_output_tokens,
             )
+            if args.voice:
+                recognizer = OfflineSpeechRecognizer(config.speech)
+                return _run_voice_chat(
+                    conversation,
+                    recognizer,
+                    client=client,
+                    automatic_memory=automatic_memory,
+                    output=output,
+                    errors=errors,
+                    show_memory_ids=args.show_memory_ids,
+                )
             return _run_chat(
                 conversation,
+                memory_store=store,
+                automatic_memory=automatic_memory,
                 prompt=args.prompt,
                 input_stream=input_stream,
                 output=output,
                 errors=errors,
                 show_memory_ids=args.show_memory_ids,
             )
+        except KeyboardInterrupt:
+            if args.voice and client is not None:
+                _best_effort_unload(client)
+            print("voice interrupted" if args.voice else "chat interrupted", file=errors)
+            return 130
+        except SpeechRecognitionError:
+            print(
+                "speech error: request could not be completed safely",
+                file=errors,
+            )
+            return 5
         except (
             ConversationError,
             EmbeddingError,
@@ -295,7 +426,10 @@ def main(
                 config.memory.database_path,
                 profile_id=config.memory.profile_id,
                 embedder=embedder,
+                retention_days=config.memory.retention_days,
             )
+            if args.memory_command != "prune":
+                store.purge_expired()
             return _run_memory(
                 args,
                 store,
@@ -313,6 +447,8 @@ def main(
 def _run_chat(
     conversation: Conversation,
     *,
+    memory_store: MemoryStore,
+    automatic_memory: Optional[AutomaticMemoryCapture],
     prompt: Optional[str],
     input_stream: TextIO,
     output: TextIO,
@@ -320,14 +456,38 @@ def _run_chat(
     show_memory_ids: bool,
 ) -> int:
     if prompt is not None:
-        reply = conversation.send(prompt)
+        try:
+            reply = conversation.send(prompt)
+        except (
+            ConversationError,
+            EmbeddingError,
+            MemoryStoreError,
+            OllamaError,
+            RoutingError,
+            ValueError,
+        ):
+            _consider_automatic_memory(
+                automatic_memory, prompt, diagnostics=errors
+            )
+            raise
         if show_memory_ids:
             _report_memory_ids(reply, errors)
-        print(reply.response.speech, file=output)
+        print(reply.response.speech, file=output, flush=True)
+        _consider_automatic_memory(
+            automatic_memory, prompt, diagnostics=errors
+        )
         return 0
 
     print("Offline text chat", file=output)
-    print("Commands: /clear, /exit", file=output)
+    print(
+        "Commands: /remember KIND TEXT, /memories, /clear, /exit",
+        file=output,
+    )
+    if automatic_memory is not None:
+        print(
+            "Automatic seven-day memory is ON for eligible personal statements.",
+            file=output,
+        )
     while True:
         print("you> ", end="", file=output, flush=True)
         line = input_stream.readline()
@@ -345,6 +505,43 @@ def _run_chat(
             conversation.clear()
             print("conversation cleared", file=output)
             continue
+        if command == "/memories":
+            try:
+                memory_store.purge_expired()
+                memories = memory_store.list_memories()
+            except MemoryStoreError as exc:
+                print(f"memory error: {exc}", file=errors)
+                continue
+            if not memories:
+                print("robot> No active memories.", file=output)
+                continue
+            for item in memories:
+                print(
+                    f"memory> {item.id} [{item.kind}] "
+                    f"until {item.retention_until}: {item.canonical_text}",
+                    file=output,
+                )
+            continue
+        if command == "/remember" or command.startswith("/remember "):
+            parts = user_text.split(maxsplit=2)
+            if len(parts) != 3 or parts[1].lower() not in MEMORY_KINDS:
+                print(
+                    "robot> Usage: /remember KIND TEXT; KIND is event, fact, "
+                    "preference, relationship, or routine.",
+                    file=output,
+                )
+                continue
+            try:
+                memory_store.purge_expired()
+                item = memory_store.remember(parts[2], kind=parts[1].lower())
+            except MemoryStoreError as exc:
+                print(f"memory error: {exc}", file=errors)
+                continue
+            print(
+                f"robot> Remembered {item.id} until {item.retention_until}.",
+                file=output,
+            )
+            continue
 
         try:
             reply = conversation.send(user_text)
@@ -360,10 +557,15 @@ def _run_chat(
                 "chat error: request could not be completed safely",
                 file=errors,
             )
-            continue
-        if show_memory_ids:
-            _report_memory_ids(reply, errors)
-        print(f"robot> {reply.response.speech}", file=output)
+        else:
+            if show_memory_ids:
+                _report_memory_ids(reply, errors)
+            print(f"robot> {reply.response.speech}", file=output, flush=True)
+        # Capture the user's accepted input independently of reply generation.
+        # Successful replies remain visible before the classification call.
+        _consider_automatic_memory(
+            automatic_memory, user_text, diagnostics=errors
+        )
 
 
 def _report_memory_ids(reply: ConversationReply, output: TextIO) -> None:
@@ -375,6 +577,127 @@ def _report_memory_ids(reply: ConversationReply, output: TextIO) -> None:
         separators=(",", ":"),
     )
     print(f"memory> {payload}", file=output, flush=True)
+
+
+def _run_voice_chat(
+    conversation: Conversation,
+    recognizer: OfflineSpeechRecognizer,
+    *,
+    client: OllamaClient,
+    automatic_memory: Optional[AutomaticMemoryCapture],
+    output: TextIO,
+    errors: TextIO,
+    show_memory_ids: bool,
+) -> int:
+    print("Offline voice chat", file=output)
+    print("Speak after 'listening...'; press Ctrl+C to exit", file=output)
+    if automatic_memory is not None:
+        print(
+            "Automatic seven-day memory is ON for eligible personal statements.",
+            file=output,
+        )
+    try:
+        while True:
+            client.unload_all()
+            print("listening...", file=output, flush=True)
+            try:
+                transcription = recognizer.listen()
+            except (NoSpeechDetected, TranscriptionRejected):
+                print(
+                    "speech> no usable speech detected; please try again",
+                    file=errors,
+                )
+                continue
+
+            print(f"you> {transcription.text}", file=output)
+            try:
+                reply = conversation.send(transcription.text)
+            except (
+                ConversationError,
+                EmbeddingError,
+                MemoryStoreError,
+                OllamaError,
+                RoutingError,
+                ValueError,
+            ):
+                print(
+                    "chat error: request could not be completed safely",
+                    file=errors,
+                )
+            else:
+                if show_memory_ids:
+                    _report_memory_ids(reply, errors)
+                print(f"robot> {reply.response.speech}", file=output, flush=True)
+            _consider_automatic_memory(
+                automatic_memory,
+                transcription.text,
+                diagnostics=errors,
+            )
+    except KeyboardInterrupt:
+        print(file=output)
+        return 0
+    finally:
+        _best_effort_unload(client)
+
+
+def _best_effort_unload(client: OllamaClient) -> None:
+    try:
+        client.unload_all()
+    except (OllamaError, KeyboardInterrupt):
+        pass
+
+
+def _consider_automatic_memory(
+    capture: Optional[AutomaticMemoryCapture],
+    user_text: str,
+    *,
+    diagnostics: TextIO,
+) -> None:
+    if capture is None:
+        return
+    try:
+        outcome = capture.consider_with_outcome(user_text)
+    except (EmbeddingError, MemoryCaptureError, MemoryStoreError):
+        print("memory> automatic capture skipped safely", file=diagnostics)
+        return
+    item = outcome.item
+    if outcome.status == "stored" and item is not None:
+        print(
+            f"memory> automatically remembered {item.id} until "
+            f"{item.retention_until}",
+            file=diagnostics,
+            flush=True,
+        )
+    elif outcome.status == "duplicate" and item is not None:
+        print(
+            f"memory> already remembered {item.id} until {item.retention_until}",
+            file=diagnostics,
+            flush=True,
+        )
+
+
+def _report_speech_metrics(transcription: Transcription, output: TextIO) -> None:
+    payload = json.dumps(
+        {
+            "audio_duration_seconds": round(
+                transcription.audio_duration_seconds, 3
+            ),
+            "capture_seconds": round(transcription.capture_seconds, 3),
+            "inference_seconds": round(transcription.inference_seconds, 3),
+            "mean_token_probability": round(
+                transcription.mean_token_probability, 4
+            ),
+            "model": transcription.model_name,
+            "peak_vad_probability": round(
+                transcription.peak_vad_probability, 4
+            ),
+            "used_fallback": transcription.used_fallback,
+        },
+        ensure_ascii=True,
+        separators=(",", ":"),
+        sort_keys=True,
+    )
+    print(f"speech> {payload}", file=output, flush=True)
 
 
 def _run_memory(
@@ -402,6 +725,7 @@ def _run_memory(
         )
         print(f"remembered {item.id}", file=output)
         print(f"text: {item.canonical_text}", file=output)
+        print(f"retained until: {item.retention_until}", file=output)
         return 0
 
     if args.memory_command == "list":
@@ -410,7 +734,10 @@ def _run_memory(
             label = "memories" if args.include_inactive else "active memories"
             print(f"no {label}", file=output)
             return 0
-        print("ID\tSTATUS\tKIND\tSENSITIVITY\tCREATED\tTEXT", file=output)
+        print(
+            "ID\tSTATUS\tKIND\tSENSITIVITY\tCREATED\tRETAINED_UNTIL\tTEXT",
+            file=output,
+        )
         for item in memories:
             _print_memory(item, output)
         return 0
@@ -428,7 +755,8 @@ def _run_memory(
             print("no matching active memories", file=output)
             return 0
         print(
-            "BM25_RANK\tID\tSTATUS\tKIND\tSENSITIVITY\tCREATED\tTEXT",
+            "BM25_RANK\tID\tSTATUS\tKIND\tSENSITIVITY\tCREATED\t"
+            "RETAINED_UNTIL\tTEXT",
             file=output,
         )
         for match in matches:
@@ -449,7 +777,8 @@ def _run_memory(
             print("no semantically matching active memories", file=output)
             return 0
         print(
-            "COSINE_SCORE\tID\tSTATUS\tKIND\tSENSITIVITY\tCREATED\tTEXT",
+            "COSINE_SCORE\tID\tSTATUS\tKIND\tSENSITIVITY\tCREATED\t"
+            "RETAINED_UNTIL\tTEXT",
             file=output,
         )
         for match in matches:
@@ -471,7 +800,7 @@ def _run_memory(
             return 0
         print(
             "FUSED_SCORE\tKEYWORD_POS\tSEMANTIC_POS\tID\tSTATUS\tKIND\t"
-            "SENSITIVITY\tCREATED\tTEXT",
+            "SENSITIVITY\tCREATED\tRETAINED_UNTIL\tTEXT",
             file=output,
         )
         for match in matches:
@@ -511,6 +840,11 @@ def _run_memory(
             f"{status.eligible}\t{status.indexed}\t{status.missing}\t{status.invalid}",
             file=output,
         )
+        return 0
+
+    if args.memory_command == "prune":
+        identifiers = store.purge_expired()
+        print(f"pruned {len(identifiers)} expired memory record(s)", file=output)
         return 0
 
     if args.memory_command == "correct":
@@ -574,6 +908,7 @@ def _print_memory(item: MemoryItem, output: TextIO) -> None:
                 item.kind,
                 item.sensitivity,
                 item.created_at,
+                item.retention_until or "-",
                 item.canonical_text,
             )
         ),

@@ -105,13 +105,19 @@ class MemoryStoreTests(unittest.TestCase):
         self.clock = MutableClock()
         self.ids = iter(memory_id(number) for number in range(1, 20))
 
-    def store(self, profile_id: str = "alice", embedder=None) -> MemoryStore:
+    def store(
+        self,
+        profile_id: str = "alice",
+        embedder=None,
+        retention_days=None,
+    ) -> MemoryStore:
         return MemoryStore(
             self.database,
             profile_id=profile_id,
             clock=self.clock,
             memory_id_factory=lambda: next(self.ids),
             embedder=embedder,
+            retention_days=retention_days,
         )
 
     def test_initialization_is_lazy_versioned_and_creates_fts_objects(self) -> None:
@@ -165,10 +171,116 @@ class MemoryStoreTests(unittest.TestCase):
             ).fetchone()
         self.assertEqual(audit, (item.id, "remember"))
 
+    def test_retention_policy_sets_a_rolling_seven_day_deadline(self) -> None:
+        store = self.store(retention_days=7)
+
+        item = store.remember("User likes jasmine tea.", kind="preference")
+
+        self.assertEqual(store.retention_days, 7)
+        self.assertEqual(
+            item.retention_until,
+            "2026-09-12T12:00:00.000000Z",
+        )
+
+    def test_retention_policy_allows_shorter_but_rejects_longer_deadlines(
+        self,
+    ) -> None:
+        store = self.store(retention_days=7)
+        shorter = (self.clock.value + timedelta(days=1)).isoformat()
+        longer = (self.clock.value + timedelta(days=8)).isoformat()
+
+        item = store.remember(
+            "Short-lived memory.",
+            kind="fact",
+            retention_until=shorter,
+        )
+        self.assertEqual(item.retention_until, "2026-09-06T12:00:00.000000Z")
+
+        with self.assertRaisesRegex(
+            MemoryValidationError, "configured retention policy"
+        ):
+            store.remember(
+                "Too-long memory.",
+                kind="fact",
+                retention_until=longer,
+            )
+
+    def test_retention_policy_validation_is_lazy_and_strict(self) -> None:
+        for value in (True, 0, 3651, 7.0, "7"):
+            with self.subTest(value=value):
+                with self.assertRaisesRegex(MemoryValidationError, "retention_days"):
+                    MemoryStore(
+                        self.database,
+                        profile_id="alice",
+                        retention_days=value,
+                    )
+                self.assertFalse(self.database.exists())
+
+    def test_correction_keeps_original_retention_deadline(self) -> None:
+        store = self.store(retention_days=7)
+        original = store.remember("User likes mint tea.", kind="preference")
+        self.clock.advance()
+
+        replacement = store.correct(
+            original.id, "User likes ginger tea."
+        )
+
+        self.assertEqual(replacement.retention_until, original.retention_until)
+
+    def test_correction_caps_a_legacy_memory_without_restarting_its_clock(
+        self,
+    ) -> None:
+        legacy = self.store().remember("User likes mint tea.", kind="preference")
+        self.clock.advance()
+        policy_store = self.store(retention_days=7)
+
+        replacement = policy_store.correct(
+            legacy.id, "User likes ginger tea."
+        )
+
+        self.assertEqual(
+            replacement.retention_until,
+            "2026-09-12T12:00:00.000000Z",
+        )
+
+    def test_purge_expired_is_boundary_exact_profile_scoped_and_hard_deletes(
+        self,
+    ) -> None:
+        embedder = FakeEmbedder()
+        alice = self.store("alice", embedder=embedder, retention_days=7)
+        bob = self.store("bob", embedder=embedder, retention_days=7)
+        alice_item = alice.remember("Alice likes jasmine tea.", kind="preference")
+        bob_item = bob.remember("Bob likes mint tea.", kind="preference")
+
+        self.clock.value += timedelta(days=7)
+        purged = alice.purge_expired()
+
+        self.assertEqual(purged, (alice_item.id,))
+        self.assertEqual(alice.list_memories(include_inactive=True), ())
+        self.assertEqual(bob.list_memories(), (bob_item,))
+        with sqlite3.connect(self.database) as connection:
+            alice_fts = connection.execute(
+                "SELECT count(*) FROM memory_fts WHERE profile_id = 'alice'"
+            ).fetchone()[0]
+            alice_embeddings = connection.execute(
+                """
+                SELECT count(*) FROM memory_embedding
+                WHERE memory_id = ?
+                """,
+                (alice_item.id,),
+            ).fetchone()[0]
+        self.assertEqual(alice_fts, 0)
+        self.assertEqual(alice_embeddings, 0)
+
     def test_invalid_input_is_rejected_before_database_creation(self) -> None:
         cases = (
             {"canonical_text": " ", "kind": "fact"},
             {"canonical_text": "line\nbreak", "kind": "fact"},
+            {
+                "canonical_text": "what is my preference regarding tea",
+                "kind": "preference",
+            },
+            {"canonical_text": "Which tea do I prefer?", "kind": "preference"},
             {
                 "canonical_text": "x" * (MAX_MEMORY_TEXT_LENGTH + 1),
                 "kind": "fact",

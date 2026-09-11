@@ -89,6 +89,7 @@ _SOURCE_ALLOWLIST = (
     "src/oline_hri/evaluation_benchmark.py",
     "src/oline_hri/memory.py",
     "src/oline_hri/ollama.py",
+    "src/oline_hri/relationships.py",
     "src/oline_hri/response.py",
     "src/oline_hri/retrieval.py",
     "src/oline_hri/routing.py",
@@ -573,6 +574,7 @@ def _capture_environment(config: AppConfig, block_device: str) -> dict[str, obje
             config.ollama.base_url,
             config.ollama.small_model,
             config.ollama.large_model,
+            general_large_model=config.ollama.general_large_model,
         ),
         "python": {
             "implementation": platform.python_implementation(),
@@ -806,9 +808,21 @@ def _git_snapshot() -> dict[str, object]:
 
 
 def _ollama_snapshot(
-    base_url: str, small_model: str, large_model: str
+    base_url: str,
+    small_model: str,
+    large_model: str,
+    *,
+    general_large_model: Optional[str] = None,
 ) -> dict[str, object]:
-    roles = (("small", small_model), ("large", large_model))
+    roles = (
+        (("small", small_model), ("large", large_model))
+        if general_large_model is None
+        else (
+            ("small", small_model),
+            ("general_large", general_large_model),
+            ("large", large_model),
+        )
+    )
     try:
         local_url = _local_ollama_url(base_url)
         tags_payload = _read_local_ollama_json(local_url, "/api/tags")

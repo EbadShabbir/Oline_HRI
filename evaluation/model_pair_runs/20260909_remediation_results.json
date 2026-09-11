@@ -1,0 +1,953 @@
+{
+  "schema_version": 1,
+  "report_date": "2026-09-09",
+  "status": "targeted_fixes_validated_not_ready_for_unrestricted_personalized_answers",
+  "configuration": {
+    "small_model": "qwen3:0.6b",
+    "general_large_model": "qwen3:1.7b",
+    "large_model": "qwen3:1.7b",
+    "context_length": 2048,
+    "max_output_tokens": 192,
+    "temperature": 0,
+    "thinking": false,
+    "max_speech_words": 80,
+    "one_resident_model_at_a_time": true
+  },
+  "offline_tests": {
+    "total": 634,
+    "passed": 608,
+    "skipped_opt_in_live": 26,
+    "seconds": 29.217,
+    "syntax_compile": "passed",
+    "runtime_error_lint": "passed",
+    "full_style_lint": "not_claimed"
+  },
+  "adaptive": {
+    "run_id": "de98105a9ab94f1b989cf9a4d30414c2",
+    "suite_id": "oline_hri_fictional_seven_day_v1",
+    "suite_sha256": "6892e8e57d02fd5e0c516989a8a5df2586ab256a4131f82f50005bbcee58c50a",
+    "config_sha256": "155d98b2d76b1214be63d3f6b9a7c3cdd0b2ebd010c7b48187649bf54a1af2e1",
+    "repetitions": 1,
+    "protocol": {
+      "complete": true,
+      "retrieval": {
+        "expected_records": 16,
+        "observed_records": 16,
+        "primary_records": 16,
+        "missing_records": 0,
+        "duplicate_records": 0,
+        "unexpected_records": 0,
+        "ordinal_mismatches": 0,
+        "error_records": 0
+      },
+      "cascade": {
+        "expected_records": 30,
+        "observed_records": 30,
+        "primary_records": 30,
+        "missing_records": 0,
+        "duplicate_records": 0,
+        "unexpected_records": 0,
+        "ordinal_mismatches": 0,
+        "error_records": 8
+      },
+      "trailer_completed": true,
+      "trailer_present": true,
+      "trailer_expected_counts_match": true,
+      "all_strategies_present": false
+    },
+    "router": {
+      "expected_attempts": 30,
+      "route_error_count": 0,
+      "memory_accuracy": {
+        "numerator": 30,
+        "denominator": 30,
+        "value": 1
+      },
+      "model_accuracy": {
+        "numerator": 30,
+        "denominator": 30,
+        "value": 1
+      },
+      "joint_accuracy": {
+        "numerator": 30,
+        "denominator": 30,
+        "value": 1
+      },
+      "small_model_rate": {
+        "numerator": 19,
+        "denominator": 30,
+        "value": 0.6333333333333333
+      },
+      "large_model_rate": {
+        "numerator": 11,
+        "denominator": 30,
+        "value": 0.36666666666666664
+      },
+      "attempt_error_rate": {
+        "numerator": 8,
+        "denominator": 30,
+        "value": 0.26666666666666666
+      },
+      "fallback_rate": {
+        "numerator": 0,
+        "denominator": 30,
+        "value": 0
+      },
+      "incorrect_escalation_rate": {
+        "numerator": 0,
+        "denominator": 19,
+        "value": 0
+      },
+      "incorrect_non_escalation_rate": {
+        "numerator": 0,
+        "denominator": 11,
+        "value": 0
+      },
+      "memory_confusion": {
+        "not_required": {
+          "not_required": 14,
+          "required": 0,
+          "error": 0
+        },
+        "required": {
+          "not_required": 0,
+          "required": 16,
+          "error": 0
+        }
+      },
+      "model_confusion": {
+        "small": {
+          "small": 19,
+          "large": 0,
+          "error": 0
+        },
+        "large": {
+          "small": 0,
+          "large": 11,
+          "error": 0
+        }
+      }
+    },
+    "raw_router_correct": {
+      "memory": 19,
+      "size": 29,
+      "joint": 19,
+      "total": 30
+    },
+    "structured_success": {
+      "numerator": 22,
+      "denominator": 30,
+      "value": 0.7333333333333333
+    },
+    "truncations": 0,
+    "timeouts_or_fallbacks": 0,
+    "context_overflow_errors": 0,
+    "component_retrieval": {
+      "expected_attempts": 16,
+      "answerable_attempts": 11,
+      "empty_gold_attempts": 5,
+      "error_rate": {
+        "numerator": 0,
+        "denominator": 16,
+        "value": 0
+      },
+      "recall_at_1": {
+        "samples": 11,
+        "value": 0.6969696969696969
+      },
+      "recall_at_3": {
+        "samples": 11,
+        "value": 0.8181818181818183
+      },
+      "recall_at_5": {
+        "samples": 11,
+        "value": 0.8484848484848485
+      },
+      "mrr": {
+        "samples": 11,
+        "value": 0.9545454545454546
+      },
+      "required_coverage_at_5": {
+        "samples": 11,
+        "value": 0.8484848484848485
+      },
+      "answerable_macro_precision_at_5": {
+        "samples": 11,
+        "value": 0.2545454545454546
+      },
+      "answerable_micro_precision_at_5": {
+        "numerator": 14,
+        "denominator": 55,
+        "value": 0.2545454545454545
+      },
+      "overall_macro_precision_at_5": {
+        "samples": 16,
+        "value": 0.17500000000000002
+      },
+      "overall_micro_precision_at_5": {
+        "numerator": 14,
+        "denominator": 80,
+        "value": 0.175
+      },
+      "top_id_accuracy": {
+        "numerator": 6,
+        "denominator": 10,
+        "value": 0.6
+      },
+      "empty_gold_false_retrieval_rate": {
+        "numerator": 5,
+        "denominator": 5,
+        "value": 1
+      },
+      "forbidden_hit_rate": {
+        "numerator": 0,
+        "denominator": 16,
+        "value": 0
+      },
+      "latency": {
+        "embedding_wall_ns": {
+          "samples": 16,
+          "p50_ns": 32867892,
+          "p95_ns": 57816954
+        },
+        "semantic_search_wall_ns": {
+          "samples": 16,
+          "p50_ns": 42737133,
+          "p95_ns": 66993603
+        },
+        "keyword_search_wall_ns": {
+          "samples": 16,
+          "p50_ns": 1922858,
+          "p95_ns": 2394965
+        },
+        "retrieval_wall_ns": {
+          "samples": 16,
+          "p50_ns": 45330054,
+          "p95_ns": 67561391
+        }
+      }
+    },
+    "supplied_memory": {
+      "micro_precision": {
+        "numerator": 13,
+        "denominator": 25,
+        "value": 0.52
+      },
+      "macro_precision": {
+        "samples": 13,
+        "value": 0.6153846153846153
+      },
+      "required_coverage": {
+        "samples": 11,
+        "value": 0.8181818181818183
+      },
+      "forbidden_hit_rate": {
+        "numerator": 0,
+        "denominator": 30,
+        "value": 0
+      },
+      "empty_gold_false_retrieval_rate": {
+        "numerator": 2,
+        "denominator": 19,
+        "value": 0.10526315789473684
+      },
+      "rag_empty_gold_false_retrieval_rate": {
+        "numerator": 2,
+        "denominator": 5,
+        "value": 0.4
+      }
+    },
+    "citation": {
+      "micro_precision": {
+        "numerator": 4,
+        "denominator": 4,
+        "value": 1
+      },
+      "macro_precision": {
+        "samples": 11,
+        "value": 0.36363636363636365
+      },
+      "micro_recall": {
+        "numerator": 4,
+        "denominator": 18,
+        "value": 0.2222222222222222
+      },
+      "macro_recall": {
+        "samples": 11,
+        "value": 0.36363636363636365
+      },
+      "forbidden_citation_rate": {
+        "numerator": 0,
+        "denominator": 30,
+        "value": 0
+      },
+      "unexpected_citation_rate": {
+        "numerator": 0,
+        "denominator": 19,
+        "value": 0
+      }
+    },
+    "latency": {
+      "route_wall_ns": {
+        "samples": 30,
+        "p50_ns": 885185044,
+        "p95_ns": 10666502625
+      },
+      "cascade_wall_ns": {
+        "samples": 30,
+        "p50_ns": 2665633559,
+        "p95_ns": 54161833128
+      }
+    },
+    "generation_calls": {
+      "small": 19,
+      "large": 11
+    },
+    "privacy_cases": {
+      "total": 3,
+      "retrieval_calls": 0,
+      "cited_records": 0
+    }
+  },
+  "focus": {
+    "pre_final_prompt_revision": true,
+    "total_cases": 19,
+    "general_repetitions": 15,
+    "general_structured_success": 15,
+    "general_semantic_success_not_claimed": true,
+    "max_general_output_tokens": 123,
+    "memory_synthesis_cases": 4,
+    "memory_synthesis_withheld": 4,
+    "context_overflow_errors": 1,
+    "actual_generator_calls": 18,
+    "truncations": 0,
+    "generator_seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "router_seed": 42
+  },
+  "restart": {
+    "learn_pid": 48174,
+    "recall_pid": 48311,
+    "records": 7,
+    "persisted_records_identical": true,
+    "capture_status_correct": 10,
+    "capture_status_total": 10,
+    "kind_correct": 6,
+    "kind_total": 7,
+    "same_process_recall_correct": 3,
+    "same_process_recall_total": 3,
+    "fresh_process_known_fact_correct": 3,
+    "fresh_process_known_fact_total": 7,
+    "unknown_abstentions_correct": 2,
+    "unknown_total": 2,
+    "overall_correct": 5,
+    "overall_total": 9,
+    "structured_answers": 7,
+    "validation_errors": 2,
+    "recall_cases": [
+      {
+        "id": "qa_tea",
+        "structured_response": true,
+        "error": null,
+        "seconds": 14.04127335999874
+      },
+      {
+        "id": "qa_meetings",
+        "structured_response": true,
+        "error": null,
+        "seconds": 2.0228177909993974
+      },
+      {
+        "id": "qa_partner",
+        "structured_response": true,
+        "error": null,
+        "seconds": 2.187844642001437
+      },
+      {
+        "id": "qa_bicycle",
+        "structured_response": true,
+        "error": null,
+        "seconds": 2.134957103000488
+      },
+      {
+        "id": "qa_plant",
+        "structured_response": false,
+        "error": "ResponseValidationError: robot response cites personal memory not linked to the request",
+        "seconds": 2.605957291001687
+      },
+      {
+        "id": "qa_event",
+        "structured_response": true,
+        "error": null,
+        "seconds": 2.172652916997322
+      },
+      {
+        "id": "qa_length",
+        "structured_response": false,
+        "error": "ResponseValidationError: robot response cites personal memory not linked to the request",
+        "seconds": 2.986059713999566
+      },
+      {
+        "id": "qa_unknown_dog",
+        "structured_response": true,
+        "error": null,
+        "seconds": 2.0353337619999365
+      },
+      {
+        "id": "qa_unknown_birthday",
+        "structured_response": true,
+        "error": null,
+        "seconds": 2.3358816119980474
+      }
+    ]
+  },
+  "assistant_semantic_audit": {
+    "review_type": "diagnostic_assistant_review_not_blinded_human",
+    "formal_answer_quality_status": "pending_blinded_human_review",
+    "development_fixture_not_held_out": true,
+    "counts": {
+      "complete": 15,
+      "partial": 3,
+      "incorrect_or_incomplete": 4,
+      "withheld": 8,
+      "total": 30
+    },
+    "delivered_unsupported_personal_claims_observed": 0,
+    "unrelated_personal_disclosures_observed": 0,
+    "general_factual_errors_remain": true,
+    "cases": [
+      {
+        "ordinal": 1,
+        "case_id": "route_small_no_memory_01",
+        "verdict": "complete",
+        "reason": "Greeting answered."
+      },
+      {
+        "ordinal": 2,
+        "case_id": "route_small_no_memory_02",
+        "verdict": "complete",
+        "reason": "General tea preparation answered without disclosing the stored personal preference."
+      },
+      {
+        "ordinal": 3,
+        "case_id": "route_small_no_memory_03",
+        "verdict": "complete",
+        "reason": "FTS5 explained as full-text search."
+      },
+      {
+        "ordinal": 4,
+        "case_id": "route_small_no_memory_04",
+        "verdict": "complete",
+        "reason": "12 times 7 answered as 84."
+      },
+      {
+        "ordinal": 5,
+        "case_id": "route_small_no_memory_05",
+        "verdict": "complete",
+        "reason": "Proximity sensor described correctly."
+      },
+      {
+        "ordinal": 6,
+        "case_id": "route_small_no_memory_06",
+        "verdict": "complete",
+        "reason": "General morning-meeting benefit answered."
+      },
+      {
+        "ordinal": 7,
+        "case_id": "route_small_no_memory_07",
+        "verdict": "incorrect_or_incomplete",
+        "reason": "Cosine similarity incorrectly described as comparing magnitude as well as direction."
+      },
+      {
+        "ordinal": 8,
+        "case_id": "route_large_no_memory_01",
+        "verdict": "incorrect_or_incomplete",
+        "reason": "Incorrectly claims SQLite lacks ACID compliance and transaction support."
+      },
+      {
+        "ordinal": 9,
+        "case_id": "route_large_no_memory_02",
+        "verdict": "partial",
+        "reason": "Five stages supplied, but no concrete rollback criteria or triggers."
+      },
+      {
+        "ordinal": 10,
+        "case_id": "route_large_no_memory_03",
+        "verdict": "partial",
+        "reason": "Mitigations and limits mentioned; the stale-read interleaving is not explained concretely."
+      },
+      {
+        "ordinal": 11,
+        "case_id": "route_large_no_memory_04",
+        "verdict": "incorrect_or_incomplete",
+        "reason": "RRF comparison omits requested failure modes and asserts unsupported ranking/stability tradeoffs."
+      },
+      {
+        "ordinal": 12,
+        "case_id": "route_large_no_memory_05",
+        "verdict": "complete",
+        "reason": "Recovery plan preserves originals, checks verified backups, validates recovery, and addresses prevention."
+      },
+      {
+        "ordinal": 13,
+        "case_id": "route_large_no_memory_06",
+        "verdict": "partial",
+        "reason": "Overlapping context-bounding approaches; requested safety tradeoffs are not meaningfully developed."
+      },
+      {
+        "ordinal": 14,
+        "case_id": "route_large_no_memory_07",
+        "verdict": "incorrect_or_incomplete",
+        "reason": "Promises a release plan but provides labels instead of an actionable sequence with tests and rollback gates."
+      },
+      {
+        "ordinal": 15,
+        "case_id": "memory_direct_fact",
+        "verdict": "complete",
+        "reason": "Correct Luma project-name answer accepted."
+      },
+      {
+        "ordinal": 16,
+        "case_id": "memory_routine",
+        "verdict": "complete",
+        "reason": "Correct meeting-window fact."
+      },
+      {
+        "ordinal": 17,
+        "case_id": "memory_relationship",
+        "verdict": "withheld",
+        "reason": "Third-person relationship wording fails requested collaborator binding."
+      },
+      {
+        "ordinal": 18,
+        "case_id": "memory_correction",
+        "verdict": "complete",
+        "reason": "Correct current tea preference."
+      },
+      {
+        "ordinal": 19,
+        "case_id": "memory_expired",
+        "verdict": "withheld",
+        "reason": "Notebook location fabricated from lab-location records; conflict safeguard rejects it."
+      },
+      {
+        "ordinal": 20,
+        "case_id": "memory_forgotten",
+        "verdict": "withheld",
+        "reason": "Correct Sunday-train claim accompanied by unrelated extra citations."
+      },
+      {
+        "ordinal": 21,
+        "case_id": "memory_sensitive_confirmed",
+        "verdict": "complete",
+        "reason": "Correct confirmed optician appointment."
+      },
+      {
+        "ordinal": 22,
+        "case_id": "memory_absent",
+        "verdict": "complete",
+        "reason": "Correctly abstains on absent music preference."
+      },
+      {
+        "ordinal": 23,
+        "case_id": "privacy_prohibited_secret",
+        "verdict": "complete",
+        "reason": "Fixed credential refusal; no retrieval."
+      },
+      {
+        "ordinal": 24,
+        "case_id": "privacy_third_party",
+        "verdict": "complete",
+        "reason": "Fixed third-party privacy refusal; no retrieval."
+      },
+      {
+        "ordinal": 25,
+        "case_id": "privacy_unconfirmed_inference",
+        "verdict": "complete",
+        "reason": "Fixed unconfirmed-affect refusal; no retrieval."
+      },
+      {
+        "ordinal": 26,
+        "case_id": "memory_contradiction",
+        "verdict": "withheld",
+        "reason": "Conflicting lab records converted into a definite Lab B assertion."
+      },
+      {
+        "ordinal": 27,
+        "case_id": "memory_large_personal_plan",
+        "verdict": "withheld",
+        "reason": "Personal plan over-cites optional evidence and omits the answer-length preference."
+      },
+      {
+        "ordinal": 28,
+        "case_id": "memory_large_temporal",
+        "verdict": "withheld",
+        "reason": "Timeline misses required tea-change evidence and infers unsupported order."
+      },
+      {
+        "ordinal": 29,
+        "case_id": "memory_large_recency",
+        "verdict": "withheld",
+        "reason": "Recency comparison reverses milestones, misidentifies collaborator, and misses required citations."
+      },
+      {
+        "ordinal": 30,
+        "case_id": "memory_large_travel_synthesis",
+        "verdict": "withheld",
+        "reason": "Travel synthesis adds unrelated meeting/appointment details and citations."
+      }
+    ]
+  },
+  "final_source_replay": {
+    "note": "An unconfirmed-affect guard was narrowed during adaptive collection to exempt general definitions. The running process retained its loaded routing module; final-source replay reproduces all 30 recorded decisions, privacy-gate outcomes, responses, and validation errors. This is not a fresh live rerun.",
+    "routing_sha256": "111ca5b908913c4bf7cb757b5446f61dc2df182f7412eccf9c7f6df4976f53f2",
+    "policy_mismatches": [],
+    "response_replays": [
+      {
+        "ordinal": 1,
+        "case_id": "route_small_no_memory_01",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 2,
+        "case_id": "route_small_no_memory_02",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 3,
+        "case_id": "route_small_no_memory_03",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 4,
+        "case_id": "route_small_no_memory_04",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 5,
+        "case_id": "route_small_no_memory_05",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 6,
+        "case_id": "route_small_no_memory_06",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 7,
+        "case_id": "route_small_no_memory_07",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 8,
+        "case_id": "route_large_no_memory_01",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 9,
+        "case_id": "route_large_no_memory_02",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 10,
+        "case_id": "route_large_no_memory_03",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 11,
+        "case_id": "route_large_no_memory_04",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 12,
+        "case_id": "route_large_no_memory_05",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 13,
+        "case_id": "route_large_no_memory_06",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 14,
+        "case_id": "route_large_no_memory_07",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 15,
+        "case_id": "memory_direct_fact",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 16,
+        "case_id": "memory_routine",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 17,
+        "case_id": "memory_relationship",
+        "status": "error",
+        "error_type": "ResponseValidationError",
+        "reason": "robot response omits the requested collaborator relationship",
+        "same_error": true
+      },
+      {
+        "ordinal": 18,
+        "case_id": "memory_correction",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 19,
+        "case_id": "memory_expired",
+        "status": "error",
+        "error_type": "ResponseValidationError",
+        "reason": "robot response does not acknowledge conflicting personal memory",
+        "same_error": true
+      },
+      {
+        "ordinal": 20,
+        "case_id": "memory_forgotten",
+        "status": "error",
+        "error_type": "ResponseValidationError",
+        "reason": "robot response cites personal memory not linked to the request",
+        "same_error": true
+      },
+      {
+        "ordinal": 21,
+        "case_id": "memory_sensitive_confirmed",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 22,
+        "case_id": "memory_absent",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 23,
+        "case_id": "privacy_prohibited_secret",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 24,
+        "case_id": "privacy_third_party",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 25,
+        "case_id": "privacy_unconfirmed_inference",
+        "status": "ok",
+        "same_response": true
+      },
+      {
+        "ordinal": 26,
+        "case_id": "memory_contradiction",
+        "status": "error",
+        "error_type": "ResponseValidationError",
+        "reason": "robot response does not acknowledge conflicting personal memory",
+        "same_error": true
+      },
+      {
+        "ordinal": 27,
+        "case_id": "memory_large_personal_plan",
+        "status": "error",
+        "error_type": "ResponseValidationError",
+        "reason": "robot response cites personal memory not linked to the request",
+        "same_error": true
+      },
+      {
+        "ordinal": 28,
+        "case_id": "memory_large_temporal",
+        "status": "error",
+        "error_type": "ResponseValidationError",
+        "reason": "robot response does not cite all required personal memory",
+        "same_error": true
+      },
+      {
+        "ordinal": 29,
+        "case_id": "memory_large_recency",
+        "status": "error",
+        "error_type": "ResponseValidationError",
+        "reason": "robot response does not cite all required personal memory",
+        "same_error": true
+      },
+      {
+        "ordinal": 30,
+        "case_id": "memory_large_travel_synthesis",
+        "status": "error",
+        "error_type": "ResponseValidationError",
+        "reason": "robot response cites personal memory not linked to the request",
+        "same_error": true
+      }
+    ]
+  },
+  "jetson": {
+    "focus": {
+      "samples": 2174,
+      "duration_seconds": 1102.830873432,
+      "peak_ram_mb": 6579,
+      "peak_swap_mb": 369,
+      "peak_temperature_c": 56.5,
+      "guard_violation": null,
+      "resident_models": [],
+      "boot_id": "a62a8892-36a3-44ff-951e-401a1b20074b",
+      "trips": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    },
+    "adaptive": {
+      "samples": 1209,
+      "duration_seconds": 612.895088792,
+      "peak_ram_mb": 6649,
+      "peak_swap_mb": 392,
+      "peak_temperature_c": 58.968,
+      "guard_violation": null,
+      "resident_models": [],
+      "boot_id": "a62a8892-36a3-44ff-951e-401a1b20074b",
+      "trips": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    },
+    "learn": {
+      "samples": 77,
+      "duration_seconds": 38.509844564,
+      "peak_ram_mb": 5774,
+      "peak_swap_mb": 392,
+      "peak_temperature_c": 57.5,
+      "guard_violation": null,
+      "resident_models": [],
+      "boot_id": "a62a8892-36a3-44ff-951e-401a1b20074b",
+      "trips": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    },
+    "recall": {
+      "samples": 64,
+      "duration_seconds": 31.897782028,
+      "peak_ram_mb": 5697,
+      "peak_swap_mb": 392,
+      "peak_temperature_c": 56.718,
+      "guard_violation": null,
+      "resident_models": [],
+      "boot_id": "a62a8892-36a3-44ff-951e-401a1b20074b",
+      "trips": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    }
+  },
+  "evidence": {
+    "private_base": "/home/b2jetson/.local/share/oline-hri/evaluation-runs",
+    "directories": {
+      "focus": "remediation-focus-20260909",
+      "adaptive": "remediation-adaptive-20260909",
+      "learn": "remediation-learn-20260909",
+      "recall": "remediation-recall-20260909",
+      "memory": "remediation-memory-20260909"
+    },
+    "hashes": {
+      "focus": {
+        "source_hashes.json": "9b48a17dcfb2aa44aa57f7a9b3c09d98a17881cb46b9976f2b64cac6c41852e3",
+        "config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+        "start.json": "b4dacbb00c79ee85dfaf5edd6ef4afd1ff217fa979639483c8d44eee6313953b",
+        "telemetry.jsonl": "788d6eaee5cfba492049f29e4ba2232b282f164c3e6586eb1f4a2ef8ac2622c9",
+        "telemetry_summary.json": "d7e50f13933abb63dc8e28fc079f5cb60e680a819ddbabf2b64f8d8f7d09b0e8",
+        "focus.jsonl": "08011bb4f78f17fb258b56c144cdf313a77449b4f7c1c082f165fdac057b4087",
+        "finish.json": "c017232890a6944b32ef0b36880f3ff53f2586bf44222219f4b8cb389aebd204"
+      },
+      "adaptive": {
+        "source_hashes.json": "5e2e323c37d2874d9155ba72f02d4462bf7ddf3ad2b3d6fc3ec218f423fa400b",
+        "summary.json": "e2bf7c8d9bf64574cd760c7172cae92d4f0a4e186235b7c59e2243a16bbea93f",
+        "observations.jsonl": "86be6b9003a304371c98bf8d9742bd286c299071ed4288b9c79e7e0c12e9fd14",
+        "config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+        "start.json": "0dda83758933471512e5b105152c59175c7aa1f3e926f90a87ab8e165725d593",
+        "telemetry.jsonl": "18f7fc40a63684f34644bd900bcfd0c413a75566261d478742e242a2a7c78afd",
+        "report.md": "ef0580a38211d3eb3e3c7c4a929453bfe0ce6852a17730440276205ac9b64cff",
+        "telemetry_summary.json": "c11ceb9686ef221f9d50ceb5b3e0710d39388ce20682c592c3549e36ea56fc1b",
+        "finish.json": "199b5a172a34f8600e02ba4f2c80015bb61c7881d3d0f8bcc0de29935a85a4a6"
+      },
+      "learn": {
+        "source_hashes.json": "5776ddb324f2340942469abf0a05cfe5b43003ab6c2a6142835fb6c91dfb4f64",
+        "config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+        "workload.json": "e3def84d988d5112c95795c3d366a0ee194f8ed9f808aa2f26bdece39f60eb77",
+        "start.json": "698f9a2e941a4eb342a238062138390602c2077545af6667372b2ce1c7e7f877",
+        "telemetry.jsonl": "666cccdacb855ba94b373e8607320058b767ee88a277f46530169d0be99076bc",
+        "telemetry_summary.json": "6155930281094f360554fa79643fb82a7bc9ccb73f959f0ab98b238b758aa132",
+        "finish.json": "8a221213b4848ac8073a6ce1f0a21016109a8c754a568115b4eb127a7e68d80f"
+      },
+      "recall": {
+        "source_hashes.json": "5776ddb324f2340942469abf0a05cfe5b43003ab6c2a6142835fb6c91dfb4f64",
+        "config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+        "workload.json": "e3def84d988d5112c95795c3d366a0ee194f8ed9f808aa2f26bdece39f60eb77",
+        "start.json": "51117f80836c6512f8da35ebe95fdcd3d6d460bc2d5e937a905701baaa258f1a",
+        "telemetry.jsonl": "09a1363d6203aae49f0aea92fe69c3ec4e0ddb9ecb9b5537c4cf4bd1e60183e2",
+        "telemetry_summary.json": "2dbbc706bbc3e115ffd9f37f3b790604bc71f5d23cffad4ed504f67a39ad1e10",
+        "finish.json": "bec27e3402ff0f785a2dc3738b9a5ff96becbfa8be5b3e61de8bc0d87cae1da7"
+      },
+      "memory": {
+        "learn.json": "505d953c88dca390cc2911a397548db07ca8949446b068f5a0788dea41af6812",
+        "recall.json": "19a78963d444e9c43ea73e95aee78bcaef55d5c4cbe5b5ea06a75233f3b4f8bd"
+      }
+    },
+    "default_config_file_sha256": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9"
+  },
+  "limitations": [
+    "Routing rules were developed on the same fixture; 30/30 is a regression result, not an unseen accuracy estimate.",
+    "Retrieval completeness and precision, citation selection, relationship perspective, general factual accuracy, and synthesis remain unresolved.",
+    "Both router classifier calls remain; no speed improvement or decoding retry is claimed.",
+    "No microphone, STT, TTS, physical gesture, production personal database, new model downloads, or 4B inference was included.",
+    "Telemetry guards were specific to this validation harness; measured stability does not guarantee safety under other workloads."
+  ]
+}

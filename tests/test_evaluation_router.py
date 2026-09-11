@@ -41,7 +41,7 @@ class Backend:
         if index == self.interrupt_at:
             raise KeyboardInterrupt()
         if kwargs.get("response_format") == MEMORY_REQUIRED_SCHEMA:
-            response = {"memory_required": self.memory}
+            response = {"form": "request", "memory_required": self.memory}
         elif kwargs.get("response_format") == MODEL_SIZE_SCHEMA:
             response = {"model_size": self.model}
         else:
@@ -134,10 +134,10 @@ class RouterEvaluationTests(unittest.TestCase):
         self.assertIsNotNone(records[1]["memory_required_generation"])
         self.assertIsNotNone(records[1]["model_size_generation"])
         self.assertNotIn("generation", records[1])
-        self.assertEqual(summary["memory_accuracy"], 14 / 30)
-        self.assertEqual(summary["model_accuracy"], 19 / 30)
-        self.assertEqual(summary["joint_accuracy"], 7 / 30)
-        self.assertEqual(summary["incorrect_non_escalations"], 11)
+        self.assertEqual(summary["memory_accuracy"], 29 / 30)
+        self.assertEqual(summary["model_accuracy"], 28 / 30)
+        self.assertEqual(summary["joint_accuracy"], 27 / 30)
+        self.assertEqual(summary["incorrect_non_escalations"], 2)
         self.assertEqual(summary["classifier_calls_attempted"], 60)
         self.assertEqual(summary["memory_required_calls_attempted"], 30)
         self.assertEqual(summary["model_size_calls_attempted"], 30)
@@ -168,8 +168,8 @@ class RouterEvaluationTests(unittest.TestCase):
         records = self.records()
         self.assertEqual(summary["accuracy_denominator"], 30)
         self.assertEqual(summary["failed_slots"], 2)
-        self.assertEqual(summary["memory_accuracy"], 12 / 30)
-        self.assertEqual(summary["joint_accuracy"], 5 / 30)
+        self.assertEqual(summary["memory_accuracy"], 27 / 30)
+        self.assertEqual(summary["joint_accuracy"], 25 / 30)
         self.assertEqual(summary["classifier_calls_attempted"], 59)
         self.assertEqual(summary["wall_latency_ms_all_attempts"]["count"], 30)
         self.assertEqual(summary["prompt_tokens_reported"]["count"], 29)

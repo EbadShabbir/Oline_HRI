@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "experiment_id": "response_quality_temperature_ab_v3_1_memory_gate_seed47",
+  "run_id": "f7d3054985b94ad48dc649fdc2a05918",
+  "paired_review_sha256": "e510ca8222377844d9fe3f34f03b8b0584ffe7ab4fc47f0501e51144d6aac360",
+  "review_state": "frozen_before_unblinding_and_raw-output_diagnosis",
+  "reviews": [
+    {
+      "review_id": "pair_60f51ee775899e3651b58b0b",
+      "reviewer_id": "reviewer_a",
+      "paired_review_sha256": "e510ca8222377844d9fe3f34f03b8b0584ffe7ab4fc47f0501e51144d6aac360",
+      "candidate_1_correct": true,
+      "candidate_2_correct": true,
+      "preference": "tie",
+      "notes": "Both answered candidates are identical, satisfy every required claim in chronological order, avoid the forbidden claim, and have the exact-citation flag set."
+    },
+    {
+      "review_id": "pair_60f51ee775899e3651b58b0b",
+      "reviewer_id": "reviewer_b",
+      "paired_review_sha256": "e510ca8222377844d9fe3f34f03b8b0584ffe7ab4fc47f0501e51144d6aac360",
+      "candidate_1_correct": true,
+      "candidate_2_correct": true,
+      "preference": "tie",
+      "notes": "Both answered responses are identical, valid, satisfy every required claim, contain no forbidden claim, and have exact citation status."
+    }
+  ],
+  "resolved_judgments": [
+    {
+      "review_id": "pair_60f51ee775899e3651b58b0b",
+      "candidate_1_correct": true,
+      "candidate_2_correct": true,
+      "preference": "tie",
+      "resolution": "unanimous_two_reviewer_agreement"
+    }
+  ]
+}

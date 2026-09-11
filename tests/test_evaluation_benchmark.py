@@ -563,6 +563,12 @@ class ThrottleCaptureTests(unittest.TestCase):
 
 
 class EnvironmentCaptureTests(unittest.TestCase):
+    def test_source_snapshot_includes_relationship_grounding_code(self) -> None:
+        self.assertIn(
+            "src/oline_hri/relationships.py",
+            benchmark._SOURCE_ALLOWLIST,
+        )
+
     def test_source_snapshot_hashes_exact_allowlisted_bytes(self) -> None:
         with tempfile.TemporaryDirectory() as root:
             project = Path(root)
@@ -619,7 +625,10 @@ class EnvironmentCaptureTests(unittest.TestCase):
             benchmark, "_read_local_ollama_json", side_effect=response
         ):
             snapshot = benchmark._ollama_snapshot(
-                "http://127.0.0.1:11434", "qwen3:0.6b", "qwen3:4b"
+                "http://127.0.0.1:11434",
+                "qwen3:0.6b",
+                "qwen3:4b",
+                general_large_model="qwen3:1.7b",
             )
 
         self.assertEqual(snapshot["status"], "available")
@@ -628,12 +637,16 @@ class EnvironmentCaptureTests(unittest.TestCase):
             snapshot["configured_models"][0]["digest"], f"sha256:{digest}"
         )
         self.assertFalse(snapshot["configured_models"][1]["installed"])
+        self.assertFalse(snapshot["configured_models"][2]["installed"])
         self.assertNotIn("unselected", json.dumps(snapshot))
         self.assertNotIn("private", json.dumps(snapshot))
 
         with patch.object(benchmark, "_read_local_ollama_json") as request:
             unavailable = benchmark._ollama_snapshot(
-                "https://example.com", "qwen3:0.6b", "qwen3:4b"
+                "https://example.com",
+                "qwen3:0.6b",
+                "qwen3:4b",
+                general_large_model="qwen3:1.7b",
             )
         self.assertEqual(unavailable["status"], "unavailable")
         request.assert_not_called()

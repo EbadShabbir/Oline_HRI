@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "experiment_id": "response_quality_temperature_ab_v1",
+  "run_id": "4b4602cce5f949429f7b4e20ef5bcc92",
+  "paired_review_sha256": "202129d1419c66e52d13e6784b28f28cb55e512ee02b3a479b8a5e068b773895",
+  "review_state": "frozen_before_unblinding",
+  "judgments": [
+    {
+      "review_id": "pair_527394f969a42dc1b10e13d2",
+      "candidate_1_correct": false,
+      "candidate_2_correct": false,
+      "preference": "candidate_2",
+      "notes": "Both responses cover isolation, restore, and verification, but neither explicitly covers detection or prevention. Candidate 2 is preferred for its clearer integrity check and more honest statement about the limits of recovery without backups or logs."
+    },
+    {
+      "review_id": "pair_06951305f6afe84c1ddd44e3",
+      "candidate_1_correct": false,
+      "candidate_2_correct": false,
+      "preference": "tie",
+      "notes": "Both candidates failed to produce a response, so neither satisfies any required claim."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "experiment_id": "response_speed_model_ab_v2_seed51",
+  "description": "Seed-51 shard of the prompt-revised qwen3:1.7b response-speed comparison.",
+  "case_ids": [
+    "route_large_no_memory_05",
+    "memory_large_temporal",
+    "memory_large_recency"
+  ],
+  "repetitions": 1,
+  "base_seed": 51,
+  "context_length": 2176,
+  "max_output_tokens": 320,
+  "routing_mode": "fixed_expected",
+  "evidence_mode": "fixed_required",
+  "arms": [
+    {
+      "name": "temp_0",
+      "temperature": 0.0
+    },
+    {
+      "name": "temp_0_2",
+      "temperature": 0.2
+    }
+  ]
+}

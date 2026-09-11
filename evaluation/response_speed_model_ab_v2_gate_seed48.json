@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "experiment_id": "response_speed_model_ab_v2_gate_seed48",
+  "description": "Unseen-seed qualification gate for the prompt-revised qwen3:1.7b speed candidate.",
+  "case_ids": [
+    "memory_large_recency"
+  ],
+  "repetitions": 1,
+  "base_seed": 48,
+  "context_length": 2176,
+  "max_output_tokens": 320,
+  "routing_mode": "fixed_expected",
+  "evidence_mode": "fixed_required",
+  "arms": [
+    {
+      "name": "temp_0",
+      "temperature": 0.0
+    },
+    {
+      "name": "temp_0_2",
+      "temperature": 0.2
+    }
+  ]
+}

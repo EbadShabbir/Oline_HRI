@@ -6,16 +6,20 @@ from dataclasses import asdict, dataclass
 from importlib import resources
 from ipaddress import ip_address
 import json
+from math import ceil
 from pathlib import Path
 import re
 from typing import Any, Mapping, Optional, Union
+import unicodedata
 from urllib.parse import urlparse
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_CONFIG_PATH = PROJECT_ROOT / "config" / "default.json"
 ROUTER_MODEL_ID = "qwen3:0.6b"
-LARGE_MODEL_ID = "qwen3:4b"
+GENERAL_LARGE_MODEL_ID = "qwen3:1.7b"
+LARGE_MODEL_ID = "qwen3:1.7b"
+_UNSAFE_CONFIG_CATEGORIES = frozenset({"Cc", "Cf", "Cs", "Zl", "Zp"})
 PathLike = Union[str, Path]
 
 
@@ -32,6 +36,7 @@ class ProfileConfig:
 class OllamaConfig:
     base_url: str
     small_model: str
+    general_large_model: str
     large_model: str
     request_timeout_seconds: int
     large_request_timeout_seconds: int
@@ -55,12 +60,54 @@ class ConversationConfig:
 class MemoryConfig:
     database_path: str
     profile_id: str
+    retention_days: int
 
 
 @dataclass(frozen=True)
 class EmbeddingConfig:
     model_directory: str
     intra_op_threads: int
+
+
+@dataclass(frozen=True)
+class SileroConfig:
+    model_path: str
+    threshold: float
+    silence_threshold: float
+    pre_roll_seconds: float
+    start_timeout_seconds: float
+    start_trigger_seconds: float
+    end_silence_seconds: float
+    min_utterance_seconds: float
+    max_utterance_seconds: float
+
+
+@dataclass(frozen=True)
+class WhisperConfig:
+    executable_path: str
+    primary_model_path: str
+    fallback_model_path: str
+    language: str
+    threads: int
+    timeout_seconds: int
+
+
+@dataclass(frozen=True)
+class TranscriptionQualityConfig:
+    min_mean_token_probability: float
+    min_text_characters: int
+    max_text_characters: int
+
+
+@dataclass(frozen=True)
+class SpeechConfig:
+    capture_executable_path: str
+    capture_device: str
+    sample_rate_hz: int
+    chunk_samples: int
+    silero: SileroConfig
+    whisper: WhisperConfig
+    quality: TranscriptionQualityConfig
 
 
 @dataclass(frozen=True)
@@ -77,6 +124,7 @@ class AppConfig:
     conversation: ConversationConfig
     memory: MemoryConfig
     embedding: EmbeddingConfig
+    speech: SpeechConfig
     logging: LoggingConfig
 
     def to_dict(self) -> dict[str, Any]:
@@ -122,13 +170,35 @@ def _number(data: Mapping[str, Any], key: str, section: str) -> float:
     value = data.get(key)
     if isinstance(value, bool) or not isinstance(value, (int, float)):
         raise ConfigError(f"{section}.{key} must be a number")
-    return float(value)
+    try:
+        return float(value)
+    except (OverflowError, ValueError):
+        raise ConfigError(f"{section}.{key} must be a finite number") from None
 
 
 def _boolean(data: Mapping[str, Any], key: str, section: str) -> bool:
     value = data.get(key)
     if not isinstance(value, bool):
         raise ConfigError(f"{section}.{key} must be true or false")
+    return value
+
+
+def _absolute_path(data: Mapping[str, Any], key: str, section: str) -> str:
+    value = _string(data, key, section)
+    try:
+        expanded = Path(value).expanduser()
+    except RuntimeError as exc:
+        raise ConfigError(f"{section}.{key} cannot be expanded") from exc
+    if (
+        any(
+            unicodedata.category(character) in _UNSAFE_CONFIG_CATEGORIES
+            for character in value
+        )
+        or not expanded.is_absolute()
+    ):
+        raise ConfigError(
+            f"{section}.{key} must resolve to an absolute filesystem path"
+        )
     return value
 
 
@@ -146,10 +216,11 @@ def parse_config(data: Mapping[str, Any]) -> AppConfig:
         "conversation",
         "memory",
         "embedding",
+        "speech",
         "logging",
     }
     schema_version = _integer(data, "schema_version", "configuration")
-    if schema_version != 4:
+    if schema_version != 7:
         raise ConfigError(f"unsupported schema_version: {schema_version}")
     _check_keys(data, section="configuration", required=root_fields)
 
@@ -161,6 +232,7 @@ def parse_config(data: Mapping[str, Any]) -> AppConfig:
     ollama_fields = {
         "base_url",
         "small_model",
+        "general_large_model",
         "large_model",
         "request_timeout_seconds",
         "large_request_timeout_seconds",
@@ -223,6 +295,14 @@ def parse_config(data: Mapping[str, Any]) -> AppConfig:
             f'ollama.small_model must be exactly "{ROUTER_MODEL_ID}" '
             "for structured routing"
         )
+    general_large_model = _string(
+        ollama_data, "general_large_model", "ollama"
+    )
+    if general_large_model != GENERAL_LARGE_MODEL_ID:
+        raise ConfigError(
+            f'ollama.general_large_model must be exactly '
+            f'"{GENERAL_LARGE_MODEL_ID}" for large requests without memory'
+        )
     large_model = _string(ollama_data, "large_model", "ollama")
     if large_model != LARGE_MODEL_ID:
         raise ConfigError(
@@ -232,6 +312,7 @@ def parse_config(data: Mapping[str, Any]) -> AppConfig:
     ollama = OllamaConfig(
         base_url=base_url,
         small_model=small_model,
+        general_large_model=general_large_model,
         large_model=large_model,
         request_timeout_seconds=timeout,
         large_request_timeout_seconds=large_timeout,
@@ -279,7 +360,7 @@ def parse_config(data: Mapping[str, Any]) -> AppConfig:
     _check_keys(
         memory_data,
         section="memory",
-        required={"database_path", "profile_id"},
+        required={"database_path", "profile_id", "retention_days"},
     )
     database_path = _string(memory_data, "database_path", "memory")
     try:
@@ -296,9 +377,13 @@ def parse_config(data: Mapping[str, Any]) -> AppConfig:
             "memory.profile_id must be 1-64 letters, numbers, dots, "
             "underscores, or hyphens"
         )
+    retention_days = _integer(memory_data, "retention_days", "memory")
+    if not 1 <= retention_days <= 3650:
+        raise ConfigError("memory.retention_days must be between 1 and 3650")
     memory = MemoryConfig(
         database_path=database_path,
         profile_id=memory_profile_id,
+        retention_days=retention_days,
     )
 
     embedding_data = _section(data, "embedding")
@@ -328,6 +413,268 @@ def parse_config(data: Mapping[str, Any]) -> AppConfig:
         intra_op_threads=intra_op_threads,
     )
 
+    speech_data = _section(data, "speech")
+    _check_keys(
+        speech_data,
+        section="speech",
+        required={
+            "capture_executable_path",
+            "capture_device",
+            "sample_rate_hz",
+            "chunk_samples",
+            "silero",
+            "whisper",
+            "quality",
+        },
+    )
+    capture_executable_path = _absolute_path(
+        speech_data, "capture_executable_path", "speech"
+    )
+    capture_device = _string(speech_data, "capture_device", "speech")
+    if len(capture_device) > 255 or any(
+        unicodedata.category(character) in _UNSAFE_CONFIG_CATEGORIES
+        for character in capture_device
+    ):
+        raise ConfigError(
+            "speech.capture_device must be at most 255 characters with no "
+            "control characters"
+        )
+    sample_rate_hz = _integer(speech_data, "sample_rate_hz", "speech")
+    if sample_rate_hz != 16000:
+        raise ConfigError("speech.sample_rate_hz must be exactly 16000")
+    chunk_samples = _integer(speech_data, "chunk_samples", "speech")
+    if chunk_samples != 512:
+        raise ConfigError("speech.chunk_samples must be exactly 512")
+
+    silero_data = _section(speech_data, "silero")
+    _check_keys(
+        silero_data,
+        section="speech.silero",
+        required={
+            "model_path",
+            "threshold",
+            "silence_threshold",
+            "pre_roll_seconds",
+            "start_timeout_seconds",
+            "start_trigger_seconds",
+            "end_silence_seconds",
+            "min_utterance_seconds",
+            "max_utterance_seconds",
+        },
+    )
+    silero_model_path = _absolute_path(
+        silero_data, "model_path", "speech.silero"
+    )
+    vad_threshold = _number(silero_data, "threshold", "speech.silero")
+    if not 0.0 < vad_threshold < 1.0:
+        raise ConfigError("speech.silero.threshold must be between 0 and 1")
+    silence_threshold = _number(
+        silero_data, "silence_threshold", "speech.silero"
+    )
+    if not 0.0 <= silence_threshold < vad_threshold:
+        raise ConfigError(
+            "speech.silero.silence_threshold must be at least 0 and smaller "
+            "than threshold"
+        )
+    pre_roll_seconds = _number(
+        silero_data, "pre_roll_seconds", "speech.silero"
+    )
+    if not 0.0 <= pre_roll_seconds <= 5.0:
+        raise ConfigError(
+            "speech.silero.pre_roll_seconds must be between 0 and 5"
+        )
+    start_timeout_seconds = _number(
+        silero_data, "start_timeout_seconds", "speech.silero"
+    )
+    if not 1.0 <= start_timeout_seconds <= 600.0:
+        raise ConfigError(
+            "speech.silero.start_timeout_seconds must be between 1 and 600"
+        )
+    start_trigger_seconds = _number(
+        silero_data, "start_trigger_seconds", "speech.silero"
+    )
+    if not 0.01 <= start_trigger_seconds <= 2.0:
+        raise ConfigError(
+            "speech.silero.start_trigger_seconds must be between 0.01 and 2"
+        )
+    end_silence_seconds = _number(
+        silero_data, "end_silence_seconds", "speech.silero"
+    )
+    if not 0.1 <= end_silence_seconds <= 5.0:
+        raise ConfigError(
+            "speech.silero.end_silence_seconds must be between 0.1 and 5"
+        )
+    min_utterance_seconds = _number(
+        silero_data, "min_utterance_seconds", "speech.silero"
+    )
+    if not 0.1 <= min_utterance_seconds <= 10.0:
+        raise ConfigError(
+            "speech.silero.min_utterance_seconds must be between 0.1 and 10"
+        )
+    max_utterance_seconds = _number(
+        silero_data, "max_utterance_seconds", "speech.silero"
+    )
+    if not 1.0 <= max_utterance_seconds <= 300.0:
+        raise ConfigError(
+            "speech.silero.max_utterance_seconds must be between 1 and 300"
+        )
+    if start_trigger_seconds > min_utterance_seconds:
+        raise ConfigError(
+            "speech.silero.start_trigger_seconds must be no larger than "
+            "min_utterance_seconds"
+        )
+    if start_trigger_seconds > start_timeout_seconds:
+        raise ConfigError(
+            "speech.silero.start_trigger_seconds must be no larger than "
+            "start_timeout_seconds"
+        )
+    if min_utterance_seconds > max_utterance_seconds:
+        raise ConfigError(
+            "speech.silero.min_utterance_seconds must be no larger than "
+            "max_utterance_seconds"
+        )
+    if end_silence_seconds > max_utterance_seconds:
+        raise ConfigError(
+            "speech.silero.end_silence_seconds must be no larger than "
+            "max_utterance_seconds"
+        )
+    chunk_seconds = chunk_samples / sample_rate_hz
+    start_trigger_chunks = ceil(start_trigger_seconds / chunk_seconds)
+    # The endpoint uses a strict wall-clock deadline: a frame completing exactly
+    # at the timeout is too late to establish speech onset.
+    start_timeout_chunks = ceil(start_timeout_seconds / chunk_seconds) - 1
+    min_utterance_chunks = ceil(min_utterance_seconds / chunk_seconds)
+    max_utterance_chunks = int(max_utterance_seconds / chunk_seconds)
+    if start_trigger_chunks > start_timeout_chunks:
+        raise ConfigError(
+            "speech.silero.start trigger cannot complete within the configured "
+            "start timeout at the 512-sample frame boundary"
+        )
+    if min_utterance_chunks > max_utterance_chunks:
+        raise ConfigError(
+            "speech.silero.minimum utterance cannot complete within the configured "
+            "maximum at the 512-sample frame boundary"
+        )
+    pre_roll_chunks = ceil(pre_roll_seconds / chunk_seconds)
+    if pre_roll_chunks + min_utterance_chunks > max_utterance_chunks:
+        raise ConfigError(
+            "speech.silero.pre-roll plus minimum utterance cannot fit within "
+            "the configured maximum at the 512-sample frame boundary"
+        )
+    silero = SileroConfig(
+        model_path=silero_model_path,
+        threshold=vad_threshold,
+        silence_threshold=silence_threshold,
+        pre_roll_seconds=pre_roll_seconds,
+        start_timeout_seconds=start_timeout_seconds,
+        start_trigger_seconds=start_trigger_seconds,
+        end_silence_seconds=end_silence_seconds,
+        min_utterance_seconds=min_utterance_seconds,
+        max_utterance_seconds=max_utterance_seconds,
+    )
+
+    whisper_data = _section(speech_data, "whisper")
+    _check_keys(
+        whisper_data,
+        section="speech.whisper",
+        required={
+            "executable_path",
+            "primary_model_path",
+            "fallback_model_path",
+            "language",
+            "threads",
+            "timeout_seconds",
+        },
+    )
+    whisper_executable_path = _absolute_path(
+        whisper_data, "executable_path", "speech.whisper"
+    )
+    whisper_primary_model_path = _absolute_path(
+        whisper_data, "primary_model_path", "speech.whisper"
+    )
+    whisper_fallback_model_path = _absolute_path(
+        whisper_data, "fallback_model_path", "speech.whisper"
+    )
+    if whisper_primary_model_path == whisper_fallback_model_path:
+        raise ConfigError(
+            "speech.whisper.primary_model_path and fallback_model_path "
+            "must be different"
+        )
+    whisper_language = _string(whisper_data, "language", "speech.whisper")
+    if whisper_language.casefold() != "en":
+        raise ConfigError(
+            "speech.whisper.language must be en for the configured English models"
+        )
+    whisper_threads = _integer(whisper_data, "threads", "speech.whisper")
+    if not 1 <= whisper_threads <= 64:
+        raise ConfigError("speech.whisper.threads must be between 1 and 64")
+    whisper_timeout_seconds = _integer(
+        whisper_data, "timeout_seconds", "speech.whisper"
+    )
+    if not 1 <= whisper_timeout_seconds <= 3600:
+        raise ConfigError(
+            "speech.whisper.timeout_seconds must be between 1 and 3600"
+        )
+    whisper = WhisperConfig(
+        executable_path=whisper_executable_path,
+        primary_model_path=whisper_primary_model_path,
+        fallback_model_path=whisper_fallback_model_path,
+        language=whisper_language.casefold(),
+        threads=whisper_threads,
+        timeout_seconds=whisper_timeout_seconds,
+    )
+
+    quality_data = _section(speech_data, "quality")
+    _check_keys(
+        quality_data,
+        section="speech.quality",
+        required={
+            "min_mean_token_probability",
+            "min_text_characters",
+            "max_text_characters",
+        },
+    )
+    min_mean_token_probability = _number(
+        quality_data, "min_mean_token_probability", "speech.quality"
+    )
+    if not 0.0 <= min_mean_token_probability <= 1.0:
+        raise ConfigError(
+            "speech.quality.min_mean_token_probability must be between 0 and 1"
+        )
+    min_text_characters = _integer(
+        quality_data, "min_text_characters", "speech.quality"
+    )
+    if not 1 <= min_text_characters <= 100:
+        raise ConfigError(
+            "speech.quality.min_text_characters must be between 1 and 100"
+        )
+    max_text_characters = _integer(
+        quality_data, "max_text_characters", "speech.quality"
+    )
+    if not 1 <= max_text_characters <= 1000:
+        raise ConfigError(
+            "speech.quality.max_text_characters must be between 1 and 1000"
+        )
+    if min_text_characters > max_text_characters:
+        raise ConfigError(
+            "speech.quality.min_text_characters must be no larger than "
+            "max_text_characters"
+        )
+    quality = TranscriptionQualityConfig(
+        min_mean_token_probability=min_mean_token_probability,
+        min_text_characters=min_text_characters,
+        max_text_characters=max_text_characters,
+    )
+    speech = SpeechConfig(
+        capture_executable_path=capture_executable_path,
+        capture_device=capture_device,
+        sample_rate_hz=sample_rate_hz,
+        chunk_samples=chunk_samples,
+        silero=silero,
+        whisper=whisper,
+        quality=quality,
+    )
+
     logging_data = _section(data, "logging")
     _check_keys(logging_data, section="logging", required={"level"})
     log_level = _string(logging_data, "level", "logging").upper()
@@ -342,6 +689,7 @@ def parse_config(data: Mapping[str, Any]) -> AppConfig:
         conversation=conversation,
         memory=memory,
         embedding=embedding,
+        speech=speech,
         logging=LoggingConfig(level=log_level),
     )
 

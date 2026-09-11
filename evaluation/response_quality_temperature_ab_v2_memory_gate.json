@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "experiment_id": "response_quality_temperature_ab_v2_memory_gate",
+  "description": "Two-call regression gate for structural model-facing memory-ID separation before the three-seed comparison.",
+  "case_ids": [
+    "memory_large_temporal"
+  ],
+  "repetitions": 1,
+  "base_seed": 42,
+  "context_length": 2176,
+  "max_output_tokens": 320,
+  "routing_mode": "fixed_expected",
+  "evidence_mode": "fixed_required",
+  "arms": [
+    {
+      "name": "temp_0",
+      "temperature": 0.0
+    },
+    {
+      "name": "temp_0_2",
+      "temperature": 0.2
+    }
+  ]
+}

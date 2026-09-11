@@ -2,16 +2,32 @@
 
 This file records confirmed implementation decisions for the offline personalized conversational robot.
 
+## Superseding deployment decision — 2026-09-09
+
+Deploy `qwen3:0.6b` as the resident router/small generator and
+`qwen3:1.7b` as the shared generator for both large roles. Only those two tags
+are reachable by the application. Use a 2,048-token context, 128-token output
+cap, temperature `0`, thinking disabled, and a 120-second large-request timeout.
+Inference remains serialized: evict the small model before a large request and
+give the large model zero keep-alive.
+
+This decision supersedes the earlier split 1.7B/4B deployment and the earlier
+temperature `0.2`, `2176/320`, 600-second baseline. A later `qwen3:4b` load
+caused a recorded `BCCPLEXWDT` reset, so the 4B measurements below are retained
+only as unsafe historical evidence and must not be rerun on this Jetson. The
+selection evidence and known answer limitations are recorded in the
+[2026-09-09 model-pair report](evaluation/model_pair_runs/20260909_report.md).
+
 ## Jetson Orin Nano deployment baseline
 
 1. Keep Qwen3-0.6B as the resident small model and router.
-2. Run Qwen3-4B in INT4, non-thinking mode.
+2. Run Qwen3-1.7B for both large roles in non-thinking mode.
 3. Initially use a dedicated TensorRT vision detector rather than a generative vision-language model.
 4. Run only one heavy model at a time.
 5. Use headless Linux, NVMe storage, active cooling, batch size 1, and an approximately 2K-token context.
 6. Invoke vision periodically or in response to an event, rather than continuously processing the camera at full frame rate.
 
-### Measured Qwen3-4B device baseline
+### Retired Qwen3-4B device baseline (historical, superseded)
 
 Task 11 verified `qwen3:4b` Q4_K_M through local Ollama in non-thinking mode
 with a 2,048-token context. The controlled cold request took 113.99 seconds
@@ -20,11 +36,25 @@ wall time, including 72.88 seconds to load, and its generation phase ran at
 and a median generation rate of 1.49 tokens/s. RAM reached approximately
 7.0/7.62 GB and swap reached 3.81/3.81 GB.
 
-These measurements support using 4B only as the slower, on-demand large route
-on the current 8GB, SD-backed development unit; they do not establish
-low-latency interactive or answer-quality performance. The complete setup,
-measurements, and limitations are recorded in the
+At the time, these measurements supported considering 4B only as the slower,
+on-demand grounded-large route. The later watchdog reset and model-pair result
+supersede that conclusion. The archived setup, measurements, and limitations
+are recorded in the
 [Qwen3-4B Jetson benchmark](benchmarks/qwen3_4b_jetson.md).
+
+### Target 2 route-specific speed decision (historical, superseded)
+
+On 2026-09-09, Qwen3-1.7B passed the frozen large/no-memory recovery gate and
+three comparison seeds at the retained temperature 0.2. The comparison median
+was 32.697 seconds cold wall time and 21.791 seconds model load, versus reused
+exact-case Qwen3-4B medians of 75.516 and 44.380 seconds. This is a 56.7% wall
+reduction on that case. Global replacement was rejected at that stage: 1.7B
+failed every grounded recency case and a second prompt gate. The then-current
+decision changed only the large no-memory route and retained 4B for grounded
+responses; the superseding decision above replaces that deployment mapping.
+See the
+[Target 2 frozen protocol](evaluation/response_speed_general_model_v3_protocol.md)
+and [result report](evaluation/response_speed_general_model_v3_report_20260909.md).
 
 ## Confirmed conversational pipeline
 
@@ -32,8 +62,8 @@ measurements, and limitations are recorded in the
 Speech -> STT -> compute-and-memory router
                     |-- no memory + small model -> Qwen3-0.6B
                     |-- memory + small model    -> retrieval + Qwen3-0.6B
-                    |-- no memory + large model -> Qwen3-4B
-                    `-- memory + large model    -> retrieval + Qwen3-4B
+                    |-- no memory + large model -> Qwen3-1.7B
+                    `-- memory + large model    -> retrieval + Qwen3-1.7B
                                                      |
                                                      v
                                         validated speech + action
@@ -42,7 +72,13 @@ Speech -> STT -> compute-and-memory router
                                               TTS + gesture
 ```
 
-The router makes two independent decisions: whether personal-memory retrieval is needed, and whether the request requires Qwen3-0.6B or Qwen3-4B. RAG does not automatically require the larger model. A simple personalized question may use retrieval with Qwen3-0.6B, while a complex non-personal question may use Qwen3-4B without retrieval. Generated speech and action output must be validated before TTS or gesture execution.
+The router makes two independent decisions: whether personal-memory retrieval
+is needed and whether the request requires a small or large compute route. RAG
+does not automatically require the larger model. A simple personalized
+question may use retrieval with Qwen3-0.6B, a complex non-personal question uses
+Qwen3-1.7B, and a complex grounded question uses that same 1.7B tag with
+retrieved evidence. Generated speech
+and action output must be validated before TTS or gesture execution.
 
 ## Offline personal-memory embedding and storage
 
@@ -171,7 +207,7 @@ Fuse/rank at most three candidates; identify high-confidence request links
         |
         v
 Pack required records first, then bounded optional candidates,
-to the independently selected Qwen3-0.6B or Qwen3-4B model
+to the independently selected Qwen3-0.6B or Qwen3-1.7B model
 ```
 
 Use structured SQL first when the answer belongs to an exact field. Combine lexical and semantic results for conversational memories so that exact personal names and dates are not lost through semantic matching. Recency and importance may be small ranking signals, but they must not override consent, expiration, profile separation, or contradiction handling.
@@ -181,15 +217,21 @@ Do not adopt an arbitrary cosine threshold. Calibrate retrieval and abstention t
 ### Implemented Version 1 routing and fusion contract
 
 The first text-chat integration uses Qwen3-0.6B as a strict structured router.
-It makes two singleton calls: one returns only `memory_required`, and the other
-returns only `model_size` (`small` or `large`). The results are independently
+It makes two calls: the memory classifier returns `form` (`question`,
+`statement`, or `request`) followed by `memory_required`, and the other returns
+only `model_size` (`small` or `large`). The input-form label was added after
+live automatic-memory testing exposed confusion between supplying a personal
+fact and asking to recall one; it does not require an additional model call.
+Historical Boolean-only routing artifacts remain readable by evaluation.
+The routing decisions are independently
 validated and neither is derived from the other. Invalid or truncated router
 output stops the turn; there is no heuristic fallback. Router sampling is fixed
 at temperature zero and seed 42 independently of generator sampling. The
-selected generator is the configured Qwen3-0.6B or Qwen3-4B Ollama model. The
-configuration pins both planned model tags, and routed conversation construction
-also rejects identical small and large model names so the compute routes cannot
-silently collapse.
+selected generator is Qwen3-0.6B for a small route and Qwen3-1.7B for either
+large route; retrieval remains independently controlled by memory need.
+Configuration pins those two tags. Routed conversation construction rejects a
+large model that collides with the resident small model so the compute routes
+cannot silently collapse.
 Request-link analysis and evidence packing are a third, deterministic step and
 are independent of model size: either generator may receive one or several
 required records, and an explicit synthesis request may also carry optional
@@ -204,16 +246,16 @@ serializes the complete lifecycle transaction and tracks only residency that it
 has confirmed itself:
 
 ```text
-unknown/start -> unload peer -> Qwen3-0.6B (`keep_alive=-1`) -> resident small
-resident small -> unload small -> Qwen3-4B (`keep_alive=0`) -> no model resident
-no model resident -> Qwen3-0.6B (`keep_alive=-1`) -> resident small
+unknown/start -> unload 1.7B -> Qwen3-0.6B (`keep_alive=-1`) -> resident small
+resident small -> unload small -> Qwen3-1.7B (`keep_alive=0`) -> no model resident
+no model resident -> selected Qwen model
 ```
 
 An acknowledged unload must finish before the replacement request begins.
-Consecutive small-model calls reuse the resident model, while the large model
-is on demand and does not linger after a successful response. Any interrupted
+Consecutive small-model calls reuse the resident model, while the shared large
+model is on demand and does not linger after a successful response. Any interrupted
 or failed transaction invalidates cached residency so the next request starts
-with a conservative peer unload. No prompt, history, or retrieved memory is
+with conservative unloads of every configured peer. No prompt, history, or retrieved memory is
 included in an unload request.
 
 This is an application-level guarantee for callers sharing that client, not a
@@ -223,15 +265,15 @@ verified with a server-wide one-model limit.
 
 ### Implemented Step 14 resilience contract
 
-Configuration schema 4 uses separate local Ollama socket-operation budgets:
+Configuration schema 6 uses separate local Ollama socket-operation budgets:
 30 seconds for unload, 60 seconds for the router and selected small model, and
-300 seconds for the large model. The 300-second value is a provisional failure
-budget informed by the observed cold 4B run, not a response-time objective. The
+120 seconds for the large model. The former 300- and 600-second values were
+failure budgets for the retired 4B route, not response-time objectives. The
 historical Step 16 run measured a pre-redesign distribution; a current
 performance claim requires a new controlled run.
 
-The only automatic generation fallback is one exact `qwen3:4b` timeout followed
-by one `qwen3:0.6b` attempt. It reuses the identical prompt, bounded history,
+The only automatic generation fallback is one `qwen3:1.7b` timeout followed by
+one `qwen3:0.6b` attempt. It reuses the identical prompt, bounded history,
 structured-output schema, and per-turn memory-ID authority. There is no fallback
 for a router or small-model timeout, retrieval or snapshot failure, non-timeout
 transport error, malformed metadata, truncation, invalid JSON, invented memory
@@ -311,17 +353,42 @@ a general proof of completeness, temporal reasoning, or semantic correctness.
 Gestures remain `NO_ACTION`, and generator errors exposed to the CLI are
 sanitized.
 
-The complex-general/no-memory 4B path currently has a compact architecture
-completion rule: at most 75 speech words, exactly three architecture
-comparisons, one recommendation, and exactly three short deployment steps. It
-prevents the observed offline/physical-action deflection but is
-regression-specific rather than a general planner contract.
+The complex-general/no-memory 1.7B path has a task-neutral completion rule that
+asks for at most 90 speech words. It follows the requested topic, constraints,
+counts, and format, with comparisons or recommendations only when requested.
+Planning instructions call for concrete ordered actions and explicit handling
+of missing prerequisites. Recovery or changes must stop modifications and
+preserve an untouched copy, assess damage, restore only from an available
+verified local backup, salvage or rebuild when no backup exists, validate
+before normal use, and prevent or monitor recurrence. The instructions prohibit
+assumed resources and claims that the model performed actions. This replaces a rule that imposed an
+architecture comparison and deployment format on unrelated requests while
+preserving normal answers to offline informational tasks. These are generation
+instructions, not runtime word-count or plan-completeness guarantees.
 
-Post-redesign validation on 2026-09-08 completed a 420-test unit discovery with
-`OK` (`skipped=19`), 7 live routing tests with `OK` in 21.163 seconds, and 9 live
-answer-quality tests with `OK` in 677.452 seconds. The quality suite retains the
-three fictional Theo, Tuesday-morning, and exactly-three-step memories and the
-four exact failed-prompt regressions documented in the project README.
+The opt-in live-quality suite now includes an offline database-corruption
+recovery plan. Its heuristic checks require protection of the original,
+conditional use of a usable backup, a no-backup contingency, and validation
+before resumption. Architecture checks require three distinct designs,
+tradeoffs, and deployment actions. These assertions detect known omissions but
+do not prove arbitrary semantic completeness; actual answers still need review.
+
+Historical post-redesign validation on 2026-09-08 completed a 420-test unit
+discovery with `OK` (`skipped=19`), 7 live routing tests with `OK` in 21.163
+seconds, and 9 live answer-quality tests with `OK` in 677.452 seconds. The
+quality suite retains the three fictional Theo, Tuesday-morning, and
+exactly-three-step memories and the four exact failed-prompt regressions
+documented in the project README. Those
+recorded results predate the task-neutral general-planning rule and expanded
+assertions above and do not validate those later changes.
+
+The general-planning follow-up on 2026-09-08 passed a fresh 424-test discovery
+in 18.919 seconds (`skipped=20`, 404 passed). Focused live database-recovery and
+greeting-to-architecture checks passed with the final instruction rule, using
+the large model without memory retrieval. The new recovery regression failed
+on the original rule before implementation. This follow-up verifies general
+planning; it does not claim a rerun of the entire expanded live-quality suite
+or resolution of the separate relationship-completeness issue.
 
 ### Implemented Step 15 fictional evaluation fixture
 
@@ -553,7 +620,7 @@ This choice supersedes the preliminary Faster-Whisper preference. Faster-Whisper
 2. Keep a lightweight VAD active and preserve a short audio pre-roll so the first word is not clipped.
 3. Treat approximately 0.8 to 1.2 seconds of silence as the initial end-of-turn range and tune it on real recordings.
 4. Permit a longer silence threshold in the `older_adult_companion` profile to accommodate natural pauses.
-5. Transcribe the completed utterance before invoking Qwen3-4B, preserving the one-heavy-model-at-a-time rule.
+5. Transcribe the completed utterance before invoking Qwen3-1.7B, preserving the one-heavy-model-at-a-time rule.
 6. Begin with half-duplex audio: pause VAD and STT while TTS is playing so the robot does not transcribe itself.
 7. Keep full-duplex interruption, barge-in, and acoustic echo cancellation as later work after the basic pipeline is stable and measured.
 

@@ -22,6 +22,8 @@ from typing import Any, Iterable, Mapping, Optional, Sequence
 import unicodedata
 
 from .evaluation import EvaluationCase, EvaluationSuite, prompt_records
+from .answer_guidance import REFERENCE_IDS
+from .operational_planning import OPERATIONAL_CONSTRAINTS
 
 
 OBSERVATION_SCHEMA_VERSION = 2
@@ -41,6 +43,7 @@ _MEMORY_ID_PATTERN = re.compile(r"mem_[0-9a-f]{32}\Z")
 _SHA256_PATTERN = re.compile(r"[0-9a-f]{64}\Z")
 _IDENTIFIER_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}\Z")
 _MODEL_SIZES = frozenset({"small", "large"})
+_UTTERANCE_FORMS = frozenset({"question", "statement", "request"})
 _STATUSES = frozenset({"ok", "error"})
 _ROUTE_PURPOSES = (
     "route_memory_required",
@@ -1381,7 +1384,7 @@ def _score_strategy(
                 supplied = tuple(str(item) for item in cascade["supplied_ids"])
                 actual = cascade["actual_model"]
                 actual_small += int(actual == "qwen3:0.6b")
-                actual_large += int(actual == "qwen3:4b")
+                actual_large += int(actual in {"qwen3:1.7b", "qwen3:4b"})
                 fallbacks += int(cascade["fallback_from_model"] is not None)
                 response = cascade["response"]
                 if (
@@ -1401,7 +1404,10 @@ def _score_strategy(
                     any(call["model"] == "qwen3:0.6b" for call in generation_calls)
                 )
                 large_invocation_attempts += int(
-                    any(call["model"] == "qwen3:4b" for call in generation_calls)
+                    any(
+                        call["model"] in {"qwen3:1.7b", "qwen3:4b"}
+                        for call in generation_calls
+                    )
                 )
                 for call in cascade["backend_calls"]:
                     purpose = str(call["purpose"])
@@ -1878,14 +1884,27 @@ def _case(
                 "successful retrieval cascade needs retrieval_wall_ns"
             )
     if route is not None and cascade is not None:
-        expected_model = (
-            "qwen3:0.6b" if route["model_size"] == "small" else "qwen3:4b"
-        )
+        runtime = header.get("runtime")
+        if route["model_size"] == "small":
+            expected_model = "qwen3:0.6b"
+        elif route["memory_required"]:
+            expected_model = (
+                runtime.get("large_model", "qwen3:4b")
+                if isinstance(runtime, Mapping)
+                else "qwen3:4b"
+            )
+        else:
+            expected_model = (
+                runtime.get("general_large_model", "qwen3:4b")
+                if isinstance(runtime, Mapping)
+                else "qwen3:4b"
+            )
         if cascade["requested_model"] != expected_model:
             raise EvaluationScoringError(
                 "cascade requested_model does not match its route"
             )
-        if cascade["retrieval_invoked"] != route["memory_required"]:
+        expected_retrieval = route["memory_required"] and not cascade.get("privacy_gate", False)
+        if cascade["retrieval_invoked"] != expected_retrieval:
             raise EvaluationScoringError(
                 "cascade retrieval_invoked does not match its route"
             )
@@ -1913,7 +1932,7 @@ def _case(
             )
         if (
             isinstance(route, Mapping)
-            and route["source"] == "model"
+            and route["source"] in {"model", "hybrid"}
             and route_purposes != _ROUTE_PURPOSES
         ):
             raise EvaluationScoringError(
@@ -1927,7 +1946,7 @@ def _case(
             raise EvaluationScoringError(
                 "adaptive generation needs both router backend calls"
             )
-        if isinstance(route, Mapping) and route["source"] == "model":
+        if isinstance(route, Mapping) and route["source"] in {"model", "hybrid"}:
             route_generation_fields = (
                 "memory_required_generation",
                 "model_size_generation",
@@ -2020,9 +2039,13 @@ def _partial_trailer(
 
 
 def _route(value: object, strategy: str) -> Mapping[str, object]:
-    data = _exact(value, _ROUTE_FIELDS, "route observation")
-    source = _choice(data["source"], "route source", frozenset({"model", "strategy"}))
-    if (strategy == "adaptive") != (source == "model"):
+    hybrid = isinstance(value, Mapping) and value.get("source") == "hybrid"
+    fields = _ROUTE_FIELDS | {"decision_sources"} if hybrid else _ROUTE_FIELDS
+    data = _exact(value, fields, "route observation")
+    source = _choice(
+        data["source"], "route source", frozenset({"model", "hybrid", "strategy"})
+    )
+    if (strategy == "adaptive") != (source in {"model", "hybrid"}):
         raise EvaluationScoringError("route source does not match strategy")
     memory_required = data["memory_required"]
     if type(memory_required) is not bool:
@@ -2039,7 +2062,7 @@ def _route(value: object, strategy: str) -> Mapping[str, object]:
         if data["model_size_generation"] is None
         else _generation(data["model_size_generation"])
     )
-    if source == "model" and (
+    if source in {"model", "hybrid"} and (
         memory_generation is None
         or model_size_generation is None
         or wall is None
@@ -2055,7 +2078,7 @@ def _route(value: object, strategy: str) -> Mapping[str, object]:
         raise EvaluationScoringError(
             "fixed-strategy route cannot contain model timing or generations"
         )
-    if source == "model":
+    if source in {"model", "hybrid"}:
         assert memory_generation is not None
         assert model_size_generation is not None
         if (
@@ -2065,15 +2088,30 @@ def _route(value: object, strategy: str) -> Mapping[str, object]:
             raise EvaluationScoringError(
                 "route classifier generation model is inconsistent"
             )
-        if _route_generation_value(
-            memory_generation, "memory_required"
-        ) != memory_required:
+        decision_sources = (
+            _exact(data["decision_sources"], frozenset({"memory_required", "model_size"}),
+                   "decision sources")
+            if hybrid else {"memory_required": "model", "model_size": "model"}
+        )
+        memory_source = _choice(
+            decision_sources["memory_required"], "memory decision source",
+            frozenset({"model", "policy_general", "policy_personal", "policy_privacy"}),
+        )
+        size_source = _choice(
+            decision_sources["model_size"], "size decision source",
+            frozenset({"model", "policy_complex"}),
+        )
+        raw_memory = _route_generation_value(memory_generation, "memory_required")
+        raw_size = _route_generation_value(model_size_generation, "model_size")
+        expected_memory = (
+            raw_memory if memory_source == "model"
+            else memory_source != "policy_general"
+        )
+        if expected_memory != memory_required:
             raise EvaluationScoringError(
                 "memory-required generation contradicts route decision"
             )
-        if _route_generation_value(
-            model_size_generation, "model_size"
-        ) != model_size:
+        if (raw_size if size_source == "model" else "large") != model_size:
             raise EvaluationScoringError(
                 "model-size generation contradicts route decision"
             )
@@ -2107,12 +2145,22 @@ def _route_generation_value(
         raise EvaluationScoringError(
             "route classifier generation is not valid JSON"
         ) from None
-    if not isinstance(decoded, dict) or set(decoded) != {field}:
+    # Preserve historical boolean-only observations while validating the
+    # current form-first classifier payload exactly as recorded. The added
+    # form is metadata, not an application override of the model's decision.
+    allowed_fields = ({field},)
+    if field == "memory_required":
+        allowed_fields += ({"form", "memory_required"},)
+    if not isinstance(decoded, dict) or set(decoded) not in allowed_fields:
         raise EvaluationScoringError(
             "route classifier generation has invalid fields"
         )
     decision = decoded[field]
     if field == "memory_required":
+        if "form" in decoded:
+            _choice(
+                decoded["form"], "memory-required generation form", _UTTERANCE_FORMS
+            )
         if type(decision) is not bool:
             raise EvaluationScoringError(
                 "memory-required generation has an invalid decision"
@@ -2124,7 +2172,71 @@ def _route_generation_value(
 
 
 def _cascade(value: object) -> Mapping[str, object]:
-    data = _exact(value, _CASCADE_FIELDS, "cascade observation")
+    has_privacy_gate = isinstance(value, Mapping) and "privacy_gate" in value
+    fields = _CASCADE_FIELDS | {"privacy_gate"} if has_privacy_gate else _CASCADE_FIELDS
+    has_transform = isinstance(value, Mapping) and "response_transform" in value
+    if has_transform:
+        fields = fields | {"response_transform"}
+    has_constraint = isinstance(value, Mapping) and "answer_constraint" in value
+    if has_constraint:
+        fields = fields | {"answer_constraint"}
+    has_generation_policy = isinstance(value, Mapping) and "generation_policy" in value
+    if has_generation_policy:
+        fields = fields | {"generation_policy"}
+    has_references = isinstance(value, Mapping) and "reference_ids" in value
+    if has_references:
+        fields = fields | {"reference_ids"}
+    data = _exact(value, fields, "cascade observation")
+    if has_references and not (
+        isinstance(data["reference_ids"], list)
+        and 1 <= len(data["reference_ids"]) <= 2
+        and all(isinstance(item, str) and item in REFERENCE_IDS
+                for item in data["reference_ids"])
+        and len(set(data["reference_ids"])) == len(data["reference_ids"])
+        and not data["retrieval_invoked"] and not has_privacy_gate
+        and isinstance(data["response"], Mapping)
+        and data["response"].get("memory_used") == []
+    ):
+        raise EvaluationScoringError("invalid non-personal reference notes")
+    transform_bounds = {
+        "verified_memory_perspective": (1, 1),
+        "conflict_clarification": (2, 3),
+    }
+    bounds = transform_bounds.get(str(data.get("response_transform")))
+    if has_transform and (
+        bounds is None
+        or has_privacy_gate or not data["retrieval_invoked"]
+        or not isinstance(data["supplied_ids"], list)
+        or not bounds[0] <= len(data["supplied_ids"]) <= bounds[1]
+        or not isinstance(data["response"], Mapping)
+        or data["response"].get("memory_used") != data["supplied_ids"]
+    ):
+        raise EvaluationScoringError("invalid verified-memory response transform")
+    constraint_bounds = {
+        "verified_preference": (1, 1), "verified_named_relationship": (1, 1),
+        "verified_user_relationship": (1, 1),
+        "verified_timeline": (2, 2), "verified_milestone_comparison": (2, 3),
+        "verified_presentation_plan": (2, 3), "verified_travel_checklist": (2, 2),
+        **{name: (0, 0) for name in OPERATIONAL_CONSTRAINTS},
+    }
+    bounds = constraint_bounds.get(str(data.get("answer_constraint")))
+    if has_constraint and (
+        bounds is None
+        or has_privacy_gate
+        or bool(data["retrieval_invoked"]) == (data.get("answer_constraint") in OPERATIONAL_CONSTRAINTS)
+        or not isinstance(data["supplied_ids"], list)
+        or not bounds[0] <= len(data["supplied_ids"]) <= bounds[1]
+        or not isinstance(data["response"], Mapping)
+        or not isinstance(data["response"].get("memory_used"), list)
+        or not all(isinstance(value, str) for value in data["response"]["memory_used"])
+        or not all(isinstance(value, str) for value in data["supplied_ids"])
+        or set(data["response"]["memory_used"]) != set(data["supplied_ids"])
+    ):
+        raise EvaluationScoringError("invalid verified-answer constraint")
+    if has_privacy_gate and data["privacy_gate"] is not True:
+        raise EvaluationScoringError("privacy_gate must be true when present")
+    if has_privacy_gate and (data["retrieval_invoked"] or data["supplied_ids"]):
+        raise EvaluationScoringError("privacy gate must block memory access")
     wall = _optional_ns(data["wall_ns"], "cascade wall_ns")
     started = _optional_ns(
         data["started_monotonic_ns"], "cascade started_monotonic_ns"
@@ -2198,8 +2310,16 @@ def _cascade(value: object) -> Mapping[str, object]:
     fallback = _optional_model(
         data["fallback_from_model"], "fallback_from_model"
     )
+    if has_generation_policy and not (
+        data["generation_policy"] == "verified_constraint_small"
+        and has_constraint and data["answer_constraint"] != "verified_preference"
+        and requested in {"qwen3:1.7b", "qwen3:4b"}
+        and actual == "qwen3:0.6b" and fallback is None
+    ):
+        raise EvaluationScoringError("invalid constrained generation policy")
     if fallback is not None and not (
-        fallback == "qwen3:4b" and actual == "qwen3:0.6b"
+        fallback in {"qwen3:1.7b", "qwen3:4b"}
+        and actual == "qwen3:0.6b"
     ):
         raise EvaluationScoringError("fallback model metadata is inconsistent")
     response = None if data["response"] is None else _response(data["response"])
@@ -2553,7 +2673,7 @@ def _optional_model(
             raise EvaluationScoringError(f"{field} is required")
         return None
     model = _text(value, field, 1, 128)
-    if model not in {"qwen3:0.6b", "qwen3:4b"}:
+    if model not in {"qwen3:0.6b", "qwen3:1.7b", "qwen3:4b"}:
         raise EvaluationScoringError(f"{field} is not a configured model")
     return model
 

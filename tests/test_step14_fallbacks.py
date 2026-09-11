@@ -23,6 +23,7 @@ from oline_hri.routing import (
 
 
 SMALL_MODEL = "qwen3:0.6b"
+GENERAL_LARGE_MODEL = "qwen3:1.7b"
 LARGE_MODEL = "qwen3:4b"
 
 
@@ -208,6 +209,32 @@ def routed_conversation(backend, router, retriever) -> Conversation:
 
 
 class Step14FallbackTests(unittest.TestCase):
+    def test_general_large_timeout_falls_back_to_small(self) -> None:
+        route = routing_result(model_size="large")
+        backend = ScriptedBackend(
+            (
+                OllamaTimeoutError("private general timeout"),
+                chat_result("Best-effort answer.", model=SMALL_MODEL),
+            )
+        )
+        conversation = Conversation(
+            backend,
+            system_prompt="Be helpful, safe, and concise.",
+            router=ScriptedRouter((route,)),
+            retriever=ScriptedRetriever(),
+            small_model=SMALL_MODEL,
+            general_large_model=GENERAL_LARGE_MODEL,
+            large_model=LARGE_MODEL,
+        )
+
+        reply = conversation.send("Compare the options carefully.")
+
+        self.assertEqual(
+            [call[0] for call in backend.calls],
+            [GENERAL_LARGE_MODEL, SMALL_MODEL],
+        )
+        self.assertEqual(reply.fallback_from_model, GENERAL_LARGE_MODEL)
+
     def test_large_timeout_falls_back_once_with_identical_request_contract(
         self,
     ) -> None:

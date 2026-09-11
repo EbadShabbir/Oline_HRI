@@ -47,6 +47,15 @@ EXPIRED_NOTEBOOK_ID = "mem_00000000000000000000000000000006"
 NEW_TEA_ID = "mem_00000000000000000000000000000009"
 FORGOTTEN_STAY_HOME_ID = "mem_0000000000000000000000000000000a"
 UNKNOWN_MEMORY_ID = "mem_ffffffffffffffffffffffffffffffff"
+VERSIONED_MANIFEST_PATH = DEFAULT_MANIFEST_PATH.with_name(
+    "fictional_seven_day_v1_1.json"
+)
+VERSIONED_PACKAGED_MANIFEST_PATH = (
+    Path(__file__).resolve().parents[1]
+    / "src"
+    / "oline_hri"
+    / "fictional_seven_day_v1_1.json"
+)
 
 
 def _manifest_data() -> dict[str, object]:
@@ -169,6 +178,30 @@ class EvaluationManifestTests(unittest.TestCase):
             packaged_suite = load_evaluation_suite()
 
         self.assertEqual(packaged_suite, source_suite)
+
+    def test_v1_1_manifest_copies_match_and_suite_id_is_versioned(self) -> None:
+        self.assertEqual(
+            VERSIONED_PACKAGED_MANIFEST_PATH.read_bytes(),
+            VERSIONED_MANIFEST_PATH.read_bytes(),
+        )
+        suite = load_evaluation_suite(VERSIONED_MANIFEST_PATH)
+        self.assertEqual(
+            suite.suite_id,
+            "oline_hri_fictional_seven_day_v1_1",
+        )
+
+    def test_v1_1_temporal_prompt_requests_undisclosed_new_value(self) -> None:
+        suite = load_evaluation_suite(VERSIONED_MANIFEST_PATH)
+        temporal = next(
+            case for case in suite.cases if case.id == "memory_large_temporal"
+        )
+        prompt = temporal.prompt.casefold()
+        self.assertIn("what it changed to", prompt)
+        self.assertNotIn("ginger", prompt)
+        self.assertIn(
+            "tea changed to ginger on friday",
+            {claim.casefold() for claim in temporal.answer_rubric.required_claims},
+        )
 
     def test_prompt_jsonl_is_deterministic_canonical_and_track_filtered(self) -> None:
         suite = load_evaluation_suite()

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "experiment_id": "response_quality_temperature_ab_v3_memory_gate",
+  "run_id": "10d27412f6dd4ded9faa44541973020e",
+  "paired_review_sha256": "f0187bc93b43012b323d03284cd8b1e027f214231fa05438001cfb167da94457",
+  "review_state": "frozen_before_unblinding_and_raw-output_diagnosis",
+  "reviewers": 2,
+  "judgments": [
+    {
+      "review_id": "pair_cd89b8bfb5212ef8a5d5eab4",
+      "candidate_1_correct": false,
+      "candidate_2_correct": false,
+      "preference": "candidate_1",
+      "notes": "Two independent blinded reviewers agreed: candidate 1 gives the two dated entries and correct later-event conclusion with exact citation status, but omits the required claim that the tea changed specifically to ginger. Candidate 2 failed with no delivered speech and no exact citation."
+    }
+  ]
+}

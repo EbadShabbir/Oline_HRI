@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from contextlib import contextmanager
 from dataclasses import asdict, dataclass
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from hashlib import sha256
 import os
 from pathlib import Path
@@ -24,6 +24,7 @@ MAX_MEMORY_TEXT_LENGTH = 1000
 MAX_SEARCH_QUERY_LENGTH = 200
 MAX_SEMANTIC_QUERY_LENGTH = 1000
 MAX_SEARCH_TERMS = 16
+MAX_RETENTION_DAYS = 3650
 MEMORY_KINDS = ("event", "fact", "preference", "relationship", "routine")
 MEMORY_SENSITIVITIES = ("normal", "sensitive")
 MEMORY_STATUSES = ("active", "superseded", "retracted")
@@ -31,6 +32,13 @@ MEMORY_STATUSES = ("active", "superseded", "retracted")
 _PROFILE_PATTERN = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,63}\Z")
 _MEMORY_ID_PATTERN = re.compile(r"mem_[0-9a-f]{32}\Z")
 _CONTENT_SHA256_PATTERN = re.compile(r"[0-9a-f]{64}\Z")
+_QUESTION_SHAPED_MEMORY_PATTERN = re.compile(
+    r"\A\s*(?:(?:what|who|when|where|why|how)\s+"
+    r"(?:am|are|can|could|did|do|does|had|has|have|is|should|was|were|will|would)\b|"
+    r"(?:am|are|can|could|did|do|does|had|has|have|is|shall|should|was|were|would)"
+    r"\s+(?:i|you|we|they|he|she|it|my|your|our|the)\b)",
+    re.IGNORECASE,
+)
 _EMBEDDING_VECTOR_BYTES = EMBEDDING_DIMENSION * np.dtype("<f4").itemsize
 _EMBEDDING_LABEL_MAX_LENGTH = 255
 _MEMORY_COLUMNS = """
@@ -311,6 +319,7 @@ class MemoryStore:
         clock: Optional[Callable[[], datetime]] = None,
         memory_id_factory: Optional[Callable[[], str]] = None,
         embedder: Optional[EmbeddingProvider] = None,
+        retention_days: Optional[int] = None,
     ) -> None:
         self._path = _database_path(database_path)
         self._profile_id = _profile_id(profile_id)
@@ -319,6 +328,7 @@ class MemoryStore:
             memory_id_factory if memory_id_factory is not None else _new_memory_id
         )
         self._embedder = embedder
+        self._retention_days = _retention_days(retention_days)
 
     @property
     def database_path(self) -> Path:
@@ -327,6 +337,10 @@ class MemoryStore:
     @property
     def profile_id(self) -> str:
         return self._profile_id
+
+    @property
+    def retention_days(self) -> Optional[int]:
+        return self._retention_days
 
     def remember(
         self,
@@ -351,7 +365,8 @@ class MemoryStore:
         normalized_importance = _importance(importance)
         normalized_source = _optional_short_text(source_turn_id, "source_turn_id")
         normalized_event = _optional_timestamp(event_time, "event_time")
-        now = _timestamp(self._clock(), "clock")
+        clock_now = self._clock()
+        now = _timestamp(clock_now, "clock")
         normalized_valid_from = (
             _timestamp_text(valid_from, "valid_from")
             if valid_from is not None
@@ -361,6 +376,22 @@ class MemoryStore:
         normalized_retention = _optional_timestamp(
             retention_until, "retention_until"
         )
+        if self._retention_days is not None:
+            try:
+                policy_retention = _timestamp(
+                    clock_now + timedelta(days=self._retention_days),
+                    "retention policy",
+                )
+            except OverflowError as exc:
+                raise MemoryValidationError(
+                    "retention policy produced an invalid deadline"
+                ) from exc
+            if normalized_retention is None:
+                normalized_retention = policy_retention
+            elif normalized_retention > policy_retention:
+                raise MemoryValidationError(
+                    "retention_until cannot exceed the configured retention policy"
+                )
         _validate_time_range(
             normalized_valid_from,
             normalized_valid_until,
@@ -433,6 +464,62 @@ class MemoryStore:
                 parameters,
             ).fetchall()
         return tuple(_row_to_item(row) for row in rows)
+
+    def purge_expired(self) -> tuple[str, ...]:
+        """Hard-delete current-profile records past their retention deadline."""
+
+        clock_now = self._clock()
+        reference_time = _timestamp(clock_now, "clock")
+        policy_boundary: Optional[str] = None
+        if self._retention_days is not None:
+            try:
+                policy_boundary = _timestamp(
+                    clock_now - timedelta(days=self._retention_days),
+                    "retention policy",
+                )
+            except OverflowError as exc:
+                raise MemoryValidationError(
+                    "retention policy produced an invalid boundary"
+                ) from exc
+
+        with self._connection() as connection:
+            with _write_transaction(connection):
+                if policy_boundary is None:
+                    rows = connection.execute(
+                        """
+                        SELECT id FROM memory_item
+                        WHERE profile_id = ?
+                          AND retention_until IS NOT NULL
+                          AND retention_until <= ?
+                        ORDER BY id ASC
+                        """,
+                        (self._profile_id, reference_time),
+                    ).fetchall()
+                else:
+                    rows = connection.execute(
+                        """
+                        SELECT id FROM memory_item
+                        WHERE profile_id = ?
+                          AND (
+                              (retention_until IS NOT NULL
+                               AND retention_until <= ?)
+                              OR created_at <= ?
+                          )
+                        ORDER BY id ASC
+                        """,
+                        (self._profile_id, reference_time, policy_boundary),
+                    ).fetchall()
+                identifiers = tuple(row["id"] for row in rows)
+                for memory_id in identifiers:
+                    deleted = connection.execute(
+                        "DELETE FROM memory_item WHERE id = ? AND profile_id = ?",
+                        (memory_id, self._profile_id),
+                    ).rowcount
+                    if deleted != 1:
+                        raise MemoryConflictError(
+                            "memory changed during expiry cleanup"
+                        )
+        return identifiers
 
     def search_keywords(
         self,
@@ -556,6 +643,8 @@ class MemoryStore:
 
         normalized_query = _semantic_query(query)
         normalized_limit = _search_limit(limit)
+        if self._retention_days is not None:
+            self.purge_expired()
         embedder, identity = self._embedder_and_identity()
         reference_time = _timestamp(self._clock(), "clock")
 
@@ -688,6 +777,29 @@ class MemoryStore:
         with self._connection() as connection:
             previous = _row_to_item(self._active_row(connection, target_id))
         _validate_correction(previous, text, now)
+        replacement_retention = previous.retention_until
+        if self._retention_days is not None:
+            try:
+                policy_retention = _timestamp(
+                    datetime.fromisoformat(
+                        previous.created_at.replace("Z", "+00:00")
+                    )
+                    + timedelta(days=self._retention_days),
+                    "retention policy",
+                )
+            except (OverflowError, ValueError) as exc:
+                raise MemoryStoreError(
+                    "stored memory has an invalid retention boundary"
+                ) from exc
+            if policy_retention <= now:
+                raise MemoryConflictError(
+                    "cannot correct a memory past its retention policy"
+                )
+            if (
+                replacement_retention is None
+                or replacement_retention > policy_retention
+            ):
+                replacement_retention = policy_retention
 
         replacement = MemoryItem(
             id=replacement_id,
@@ -704,7 +816,7 @@ class MemoryStore:
             supersedes_id=previous.id,
             valid_from=now,
             valid_until=previous.valid_until,
-            retention_until=previous.retention_until,
+            retention_until=replacement_retention,
             created_at=now,
             updated_at=now,
         )
@@ -1413,6 +1525,18 @@ def _profile_id(value: str) -> str:
     return value
 
 
+def _retention_days(value: Optional[int]) -> Optional[int]:
+    if value is None:
+        return None
+    if isinstance(value, bool) or not isinstance(value, int):
+        raise MemoryValidationError("retention_days must be an integer or null")
+    if not 1 <= value <= MAX_RETENTION_DAYS:
+        raise MemoryValidationError(
+            f"retention_days must be between 1 and {MAX_RETENTION_DAYS}"
+        )
+    return value
+
+
 def _memory_id(value: str) -> str:
     if not isinstance(value, str) or _MEMORY_ID_PATTERN.fullmatch(value) is None:
         raise MemoryValidationError("memory ID has an invalid format")
@@ -1431,7 +1555,22 @@ def _canonical_text(value: str) -> str:
         )
     if any(unicodedata.category(character) == "Cc" for character in normalized):
         raise MemoryValidationError("memory text cannot contain control characters")
+    if is_question_shaped_memory(normalized):
+        raise MemoryValidationError(
+            "memory text must state a fact or preference, not ask a question"
+        )
     return normalized
+
+
+def is_question_shaped_memory(value: str) -> bool:
+    """Return whether text looks like a query rather than memory evidence."""
+
+    if not isinstance(value, str):
+        return False
+    normalized = unicodedata.normalize("NFKC", value).strip()
+    return normalized.endswith(("?", "？")) or (
+        _QUESTION_SHAPED_MEMORY_PATTERN.search(normalized) is not None
+    )
 
 
 def _keyword_expression(value: str) -> str:

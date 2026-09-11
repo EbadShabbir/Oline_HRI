@@ -1,6 +1,7 @@
 import json
 import os
 import socket
+from copy import deepcopy
 from io import BytesIO
 from threading import Event, Lock, Thread, get_ident
 import unittest
@@ -15,7 +16,12 @@ from oline_hri.ollama import (
     OllamaError,
     OllamaTimeoutError,
 )
-from oline_hri.response import ROBOT_RESPONSE_SCHEMA
+from oline_hri.response import (
+    ROBOT_RESPONSE_SCHEMA,
+    ResponseValidationError,
+    build_robot_response_schema,
+    parse_robot_response,
+)
 
 
 class FakeResponse:
@@ -63,7 +69,694 @@ def unload_or_chat_response(
     return FakeResponse(chat_payload, raw=raw)
 
 
+def memory_id(digit: str) -> str:
+    return "mem_" + digit * 32
+
+
 class OllamaClientTests(unittest.TestCase):
+    def test_grounded_chat_pseudonymizes_outbound_bytes_and_restores_only_citations(
+        self,
+    ) -> None:
+        first = memory_id("1")
+        second = memory_id("2")
+        # Reversed numeric order proves aliases follow supplied order, not ID
+        # sorting. A nested extra field in the model result proves restoration
+        # is intentionally limited to top-level memory_used.
+        schema = build_robot_response_schema(
+            (second, first), require_citation=True
+        )
+        original_schema = deepcopy(schema)
+        memory_message = ChatMessage(
+            role="system",
+            content=json.dumps(
+                {
+                    "records": [
+                        {"id": second, "related": {"id": first}},
+                    ]
+                },
+                separators=(",", ":"),
+            ),
+        )
+        original_message_content = memory_message.content
+        captured_chat_bytes = []
+
+        def opener(request, timeout):
+            if request.full_url.endswith("/api/generate"):
+                requested_model = json.loads(request.data)["model"]
+                return FakeResponse(successful_unload(requested_model))
+            captured_chat_bytes.append(request.data)
+            return FakeResponse(
+                successful_chat(
+                    content=json.dumps(
+                        {
+                            "speech": "The supplied records support this answer.",
+                            "gesture_id": "NO_ACTION",
+                            "memory_used": [
+                                "memory_ref_2",
+                                "memory_ref_1",
+                                "memory_ref_2",
+                            ],
+                            "nested": {"citation": "memory_ref_1"},
+                        },
+                        separators=(",", ":"),
+                    )
+                )
+            )
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+        result = client.chat(
+            config.ollama.small_model,
+            [memory_message, ChatMessage(role="user", content=first)],
+            response_format=schema,
+        )
+
+        self.assertEqual(len(captured_chat_bytes), 1)
+        outbound = captured_chat_bytes[0]
+        self.assertNotIn(first.encode("ascii"), outbound)
+        self.assertNotIn(second.encode("ascii"), outbound)
+        payload = json.loads(outbound)
+        self.assertEqual(
+            payload["format"]["properties"]["memory_used"]["items"]["enum"],
+            ["memory_ref_1", "memory_ref_2"],
+        )
+        self.assertIn("memory_ref_1", payload["messages"][0]["content"])
+        self.assertIn("memory_ref_2", payload["messages"][0]["content"])
+        self.assertEqual(payload["messages"][1]["content"], "memory_ref_2")
+
+        restored = json.loads(result.content)
+        self.assertEqual(
+            restored["memory_used"], [first, second, first]
+        )
+        self.assertEqual(restored["nested"]["citation"], "memory_ref_1")
+        self.assertNotIn(first, restored["speech"])
+        self.assertNotIn(second, restored["speech"])
+        self.assertEqual(result.citation_annotations_removed, 0)
+        self.assertEqual(schema, original_schema)
+        self.assertEqual(memory_message.content, original_message_content)
+
+    def test_grounded_aliases_are_stable_across_model_calls(self) -> None:
+        first = memory_id("1")
+        second = memory_id("2")
+        schema = build_robot_response_schema((first, second))
+        chat_payloads = []
+
+        def opener(request, timeout):
+            payload = json.loads(request.data)
+            if request.full_url.endswith("/api/generate"):
+                return FakeResponse(successful_unload(payload["model"]))
+            chat_payloads.append(payload)
+            return FakeResponse(
+                successful_chat(
+                    payload["model"],
+                    '{"speech":"Fine.","gesture_id":"NO_ACTION",'
+                    '"memory_used":["memory_ref_2"]}',
+                )
+            )
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+        message = ChatMessage(role="user", content=f"Compare {first} and {second}")
+
+        small = client.chat(
+            config.ollama.small_model,
+            [message],
+            response_format=schema,
+        )
+        large = client.chat(
+            config.ollama.large_model,
+            [message],
+            response_format=schema,
+        )
+
+        self.assertEqual(len(chat_payloads), 2)
+        for payload in chat_payloads:
+            self.assertEqual(
+                payload["format"]["properties"]["memory_used"]["items"][
+                    "enum"
+                ],
+                ["memory_ref_1", "memory_ref_2"],
+            )
+            self.assertEqual(
+                payload["messages"][0]["content"],
+                "Compare memory_ref_1 and memory_ref_2",
+            )
+        self.assertEqual(json.loads(small.content)["memory_used"], [second])
+        self.assertEqual(json.loads(large.content)["memory_used"], [second])
+        self.assertEqual(small.citation_annotations_removed, 0)
+        self.assertEqual(large.citation_annotations_removed, 0)
+
+    def test_grounded_request_rejects_unknown_ids_before_any_network_work(
+        self,
+    ) -> None:
+        allowed = memory_id("1")
+        schema = build_robot_response_schema((allowed,))
+        fullwidth_unknown = "ＭＥＭ＿" + "Ａ" * 32
+        unknown_values = (
+            memory_id("2"),
+            "MEM_" + "A" * 32,
+            fullwidth_unknown,
+        )
+        config = load_config()
+        for unknown in unknown_values:
+            with self.subTest(unknown=unknown):
+                calls = []
+                client = OllamaClient(
+                    config.ollama,
+                    config.generation,
+                    opener=lambda request, timeout: calls.append(request),
+                )
+                with self.assertRaisesRegex(OllamaError, "unpseudonymized"):
+                    client.chat(
+                        config.ollama.small_model,
+                        [
+                            ChatMessage(
+                                role="user",
+                                content=f"Use {allowed}, ignore {unknown}",
+                            )
+                        ],
+                        response_format=schema,
+                    )
+                self.assertEqual(calls, [])
+
+    def test_grounded_request_rejects_reserved_alias_collisions_preflight(
+        self,
+    ) -> None:
+        allowed = memory_id("1")
+        schema = build_robot_response_schema((allowed,))
+        collisions = (
+            "memory_ref_1",
+            "MEMORY_REF_999",
+            "ｍｅｍｏｒｙ＿ｒｅｆ＿７",
+        )
+        config = load_config()
+        for collision in collisions:
+            with self.subTest(collision=collision):
+                calls = []
+                client = OllamaClient(
+                    config.ollama,
+                    config.generation,
+                    opener=lambda request, timeout: calls.append(request),
+                )
+                with self.assertRaisesRegex(OllamaError, "reserved"):
+                    client.chat(
+                        config.ollama.small_model,
+                        [
+                            ChatMessage(
+                                role="user",
+                                content=f"{allowed} and {collision}",
+                            )
+                        ],
+                        response_format=schema,
+                    )
+                self.assertEqual(calls, [])
+
+    def test_duplicate_memory_enum_fails_closed_before_network_work(self) -> None:
+        allowed = memory_id("1")
+        schema = build_robot_response_schema((allowed,))
+        schema["properties"]["memory_used"]["items"]["enum"].append(allowed)
+        calls = []
+        config = load_config()
+        client = OllamaClient(
+            config.ollama,
+            config.generation,
+            opener=lambda request, timeout: calls.append(request),
+        )
+
+        with self.assertRaisesRegex(OllamaError, "unpseudonymized"):
+            client.chat(
+                config.ollama.small_model,
+                [ChatMessage(role="user", content="Use supplied memory")],
+                response_format=schema,
+            )
+
+        self.assertEqual(calls, [])
+
+    def test_type_coerced_robot_schema_fails_closed_before_network_work(
+        self,
+    ) -> None:
+        allowed = memory_id("1")
+        config = load_config()
+        mutations = (
+            ("minItems", True),
+            ("maxItems", 1.0),
+        )
+        for field, value in mutations:
+            with self.subTest(field=field, value=value):
+                schema = build_robot_response_schema(
+                    (allowed,), require_citation=True
+                )
+                schema["properties"]["memory_used"][field] = value
+                calls = []
+                client = OllamaClient(
+                    config.ollama,
+                    config.generation,
+                    opener=lambda request, timeout: calls.append(request),
+                )
+
+                with self.assertRaisesRegex(OllamaError, "unpseudonymized"):
+                    client.chat(
+                        config.ollama.small_model,
+                        [ChatMessage(role="user", content=allowed)],
+                        response_format=schema,
+                    )
+
+                self.assertEqual(calls, [])
+
+    def test_no_memory_robot_schema_preserves_payload_and_content(self) -> None:
+        captured = []
+        raw_content = (
+            '{ "speech": "memory_ref_1 is ordinary text here", '
+            '"gesture_id": "NO_ACTION", "memory_used": [] }'
+        )
+
+        def opener(request, timeout):
+            if request.full_url.endswith("/api/generate"):
+                requested_model = json.loads(request.data)["model"]
+                return FakeResponse(successful_unload(requested_model))
+            captured.append(json.loads(request.data))
+            return FakeResponse(successful_chat(content=raw_content))
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+        result = client.chat(
+            config.ollama.small_model,
+            [ChatMessage(role="user", content="An ordinary question")],
+            response_format=ROBOT_RESPONSE_SCHEMA,
+        )
+
+        self.assertEqual(captured[0]["format"], ROBOT_RESPONSE_SCHEMA)
+        self.assertEqual(result.content, raw_content)
+
+    def test_invalid_memory_enum_does_not_activate_alias_translation(self) -> None:
+        schema = build_robot_response_schema((memory_id("1"),))
+        schema["properties"]["memory_used"]["items"]["enum"] = [
+            "external_record_1"
+        ]
+        raw_content = (
+            '{"speech":"memory_ref_1 stays ordinary text",'
+            '"gesture_id":"NO_ACTION","memory_used":["memory_ref_1"]}'
+        )
+        captured = []
+
+        def opener(request, timeout):
+            if request.full_url.endswith("/api/generate"):
+                requested_model = json.loads(request.data)["model"]
+                return FakeResponse(successful_unload(requested_model))
+            captured.append(json.loads(request.data))
+            return FakeResponse(successful_chat(content=raw_content))
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+        result = client.chat(
+            config.ollama.small_model,
+            [ChatMessage(role="user", content="memory_ref_1")],
+            response_format=schema,
+        )
+
+        self.assertEqual(captured[0]["format"], schema)
+        self.assertEqual(result.content, raw_content)
+        self.assertEqual(result.citation_annotations_removed, 0)
+
+    def test_grounded_exact_suffix_citations_are_removed_and_audited(
+        self,
+    ) -> None:
+        first = memory_id("1")
+        second = memory_id("2")
+        schema = build_robot_response_schema(
+            (first, second), require_citation=True
+        )
+        raw_speech = (
+            "Friday was the ginger-tea correction (per memory_ref_1). "
+            "Saturday was the navigation milestone (per memory_ref_2); "
+            "therefore Saturday came later."
+        )
+
+        def opener(request, timeout):
+            if request.full_url.endswith("/api/generate"):
+                requested_model = json.loads(request.data)["model"]
+                return FakeResponse(successful_unload(requested_model))
+            return FakeResponse(
+                successful_chat(
+                    content=json.dumps(
+                        {
+                            "speech": raw_speech,
+                            "gesture_id": "NO_ACTION",
+                            "memory_used": [
+                                "memory_ref_1",
+                                "memory_ref_2",
+                            ],
+                        }
+                    )
+                )
+            )
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+        result = client.chat(
+            config.ollama.small_model,
+            [ChatMessage(role="user", content=f"Compare {first} and {second}")],
+            response_format=schema,
+        )
+
+        expected_speech = (
+            "Friday was the ginger-tea correction. "
+            "Saturday was the navigation milestone; "
+            "therefore Saturday came later."
+        )
+        restored = json.loads(result.content)
+        self.assertEqual(restored["speech"], expected_speech)
+        self.assertEqual(restored["memory_used"], [first, second])
+        self.assertEqual(result.citation_annotations_removed, 2)
+        parsed = parse_robot_response(
+            result.content, allowed_memory_ids=(first, second)
+        )
+        self.assertEqual(parsed.speech, expected_speech)
+        self.assertEqual(parsed.memory_used, (first, second))
+
+    def test_grounded_adjacent_exact_suffix_citations_are_removed(
+        self,
+    ) -> None:
+        first = memory_id("1")
+        second = memory_id("2")
+        schema = build_robot_response_schema((first, second))
+
+        def opener(request, timeout):
+            if request.full_url.endswith("/api/generate"):
+                requested_model = json.loads(request.data)["model"]
+                return FakeResponse(successful_unload(requested_model))
+            return FakeResponse(
+                successful_chat(
+                    content=json.dumps(
+                        {
+                            "speech": (
+                                "Both records support this"
+                                " (per memory_ref_1) (per memory_ref_2)."
+                            ),
+                            "gesture_id": "NO_ACTION",
+                            "memory_used": [
+                                "memory_ref_1",
+                                "memory_ref_2",
+                            ],
+                        }
+                    )
+                )
+            )
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+        result = client.chat(
+            config.ollama.small_model,
+            [ChatMessage(role="user", content=f"Use {first} and {second}")],
+            response_format=schema,
+        )
+
+        self.assertEqual(
+            json.loads(result.content)["speech"],
+            "Both records support this.",
+        )
+        self.assertEqual(result.citation_annotations_removed, 2)
+
+    def test_grounded_suffix_citation_must_be_declared_and_known(self) -> None:
+        allowed = memory_id("1")
+        schema = build_robot_response_schema((allowed,))
+        cases = (
+            ("Claim (per memory_ref_1).", []),
+            ("Claim (per memory_ref_9).", ["memory_ref_1"]),
+        )
+        config = load_config()
+        for speech, memory_used in cases:
+            with self.subTest(speech=speech, memory_used=memory_used):
+                def opener(
+                    request,
+                    timeout,
+                    speech=speech,
+                    memory_used=memory_used,
+                ):
+                    if request.full_url.endswith("/api/generate"):
+                        requested_model = json.loads(request.data)["model"]
+                        return FakeResponse(successful_unload(requested_model))
+                    return FakeResponse(
+                        successful_chat(
+                            content=json.dumps(
+                                {
+                                    "speech": speech,
+                                    "gesture_id": "NO_ACTION",
+                                    "memory_used": memory_used,
+                                }
+                            )
+                        )
+                    )
+
+                client = OllamaClient(
+                    config.ollama, config.generation, opener=opener
+                )
+                with self.assertRaisesRegex(OllamaError, "assistant speech"):
+                    client.chat(
+                        config.ollama.small_model,
+                        [ChatMessage(role="user", content=allowed)],
+                        response_format=schema,
+                    )
+
+    def test_grounded_near_miss_citation_annotations_are_never_removed(
+        self,
+    ) -> None:
+        allowed = memory_id("1")
+        schema = build_robot_response_schema((allowed,))
+        speech_values = (
+            "Claim (from memory_ref_1).",
+            "Claim (not per memory_ref_1).",
+            "Claim (per memory_ref_1 because it is relevant).",
+            "Claim per memory_ref_1.",
+            "Claim(per memory_ref_1).",
+            "Claim (per memory_ref_1) carefully.",
+            "Claim (per MEMORY_REF_1).",
+            "Claim (per ｍｅｍｏｒｙ＿ｒｅｆ＿１).",
+            "Claim (ginger tea, per memory_ref_1).",
+        )
+        config = load_config()
+        for speech in speech_values:
+            with self.subTest(speech=speech):
+                def opener(request, timeout, speech=speech):
+                    if request.full_url.endswith("/api/generate"):
+                        requested_model = json.loads(request.data)["model"]
+                        return FakeResponse(successful_unload(requested_model))
+                    return FakeResponse(
+                        successful_chat(
+                            content=json.dumps(
+                                {
+                                    "speech": speech,
+                                    "gesture_id": "NO_ACTION",
+                                    "memory_used": ["memory_ref_1"],
+                                }
+                            )
+                        )
+                    )
+
+                client = OllamaClient(
+                    config.ollama, config.generation, opener=opener
+                )
+                with self.assertRaisesRegex(OllamaError, "assistant speech"):
+                    client.chat(
+                        config.ollama.small_model,
+                        [ChatMessage(role="user", content=allowed)],
+                        response_format=schema,
+                    )
+
+    def test_grounded_malformed_json_is_preserved_for_downstream_validation(
+        self,
+    ) -> None:
+        allowed = memory_id("1")
+        schema = build_robot_response_schema((allowed,))
+        malformed_outputs = (
+            (
+                '{"speech":"first","speech":"second",'
+                '"gesture_id":"NO_ACTION",'
+                '"memory_used":["memory_ref_1"]}'
+            ),
+            (
+                '{"speech":NaN,"gesture_id":"NO_ACTION",'
+                '"memory_used":["memory_ref_1"]}'
+            ),
+            (
+                '{"speech":"unfinished","gesture_id":"NO_ACTION",'
+                '"memory_used":["memory_ref_1"]'
+            ),
+            (
+                '{"speech":"Claim (per memory_ref_1).",'
+                '"gesture_id":"NO_ACTION",'
+                '"memory_used":["memory_ref_1"]'
+            ),
+        )
+        config = load_config()
+        for raw_content in malformed_outputs:
+            with self.subTest(raw_content=raw_content):
+                def opener(request, timeout, raw_content=raw_content):
+                    if request.full_url.endswith("/api/generate"):
+                        requested_model = json.loads(request.data)["model"]
+                        return FakeResponse(successful_unload(requested_model))
+                    return FakeResponse(successful_chat(content=raw_content))
+
+                client = OllamaClient(
+                    config.ollama, config.generation, opener=opener
+                )
+                result = client.chat(
+                    config.ollama.small_model,
+                    [ChatMessage(role="user", content=allowed)],
+                    response_format=schema,
+                )
+
+                self.assertEqual(result.content, raw_content)
+                self.assertEqual(result.citation_annotations_removed, 0)
+                self.assertNotIn(allowed, result.content)
+                with self.assertRaises(ResponseValidationError):
+                    parse_robot_response(
+                        result.content, allowed_memory_ids=(allowed,)
+                    )
+
+    def test_grounded_valid_json_rejects_any_reserved_alias_in_speech(
+        self,
+    ) -> None:
+        allowed = memory_id("1")
+        schema = build_robot_response_schema((allowed,))
+        speech_values = (
+            "I used memory_ref_1.",
+            "I used MEMORY_REF_999.",
+            "I used ｍｅｍｏｒｙ＿ｒｅｆ＿７.",
+        )
+        config = load_config()
+        for speech in speech_values:
+            with self.subTest(speech=speech):
+                def opener(request, timeout, speech=speech):
+                    if request.full_url.endswith("/api/generate"):
+                        requested_model = json.loads(request.data)["model"]
+                        return FakeResponse(successful_unload(requested_model))
+                    return FakeResponse(
+                        successful_chat(
+                            content=json.dumps(
+                                {
+                                    "speech": speech,
+                                    "gesture_id": "NO_ACTION",
+                                    "memory_used": ["memory_ref_1"],
+                                }
+                            )
+                        )
+                    )
+
+                client = OllamaClient(
+                    config.ollama, config.generation, opener=opener
+                )
+                with self.assertRaisesRegex(OllamaError, "assistant speech"):
+                    client.chat(
+                        config.ollama.small_model,
+                        [ChatMessage(role="user", content=allowed)],
+                        response_format=schema,
+                    )
+
+    def test_grounded_confusable_alias_fails_closed(
+        self,
+    ) -> None:
+        allowed = memory_id("1")
+        schema = build_robot_response_schema((allowed,))
+        speeches = (
+            "Friday came before Saturday (per mem\u043ery_ref_1).",
+            "Friday came before Saturday (per memory_ref_\u0661).",
+        )
+        config = load_config()
+
+        for speech in speeches:
+            with self.subTest(speech=speech):
+                def opener(request, timeout, speech=speech):
+                    if request.full_url.endswith("/api/generate"):
+                        requested_model = json.loads(request.data)["model"]
+                        return FakeResponse(successful_unload(requested_model))
+                    return FakeResponse(
+                        successful_chat(
+                            content=json.dumps(
+                                {
+                                    "speech": speech,
+                                    "gesture_id": "NO_ACTION",
+                                    "memory_used": ["memory_ref_1"],
+                                }
+                            )
+                        )
+                    )
+
+                client = OllamaClient(
+                    config.ollama, config.generation, opener=opener
+                )
+                with self.assertRaisesRegex(OllamaError, "assistant speech"):
+                    client.chat(
+                        config.ollama.small_model,
+                        [ChatMessage(role="user", content=allowed)],
+                        response_format=schema,
+                    )
+
+    def test_grounded_response_rejects_direct_internal_id_citation(self) -> None:
+        allowed = memory_id("1")
+        schema = build_robot_response_schema((allowed,))
+
+        def opener(request, timeout):
+            if request.full_url.endswith("/api/generate"):
+                requested_model = json.loads(request.data)["model"]
+                return FakeResponse(successful_unload(requested_model))
+            return FakeResponse(
+                successful_chat(
+                    content=json.dumps(
+                        {
+                            "speech": "A guessed ID must not be trusted.",
+                            "gesture_id": "NO_ACTION",
+                            "memory_used": [allowed],
+                        }
+                    )
+                )
+            )
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+
+        with self.assertRaisesRegex(OllamaError, "internal memory ID"):
+            client.chat(
+                config.ollama.small_model,
+                [ChatMessage(role="user", content=allowed)],
+                response_format=schema,
+            )
+
+    def test_zero_width_split_alias_in_speech_fails_downstream(self) -> None:
+        allowed = memory_id("1")
+        schema = build_robot_response_schema((allowed,))
+        split_alias = "memory_ref_\u200b1"
+
+        def opener(request, timeout):
+            if request.full_url.endswith("/api/generate"):
+                requested_model = json.loads(request.data)["model"]
+                return FakeResponse(successful_unload(requested_model))
+            return FakeResponse(
+                successful_chat(
+                    content=json.dumps(
+                        {
+                            "speech": f"Do not expose {split_alias}.",
+                            "gesture_id": "NO_ACTION",
+                            "memory_used": ["memory_ref_1"],
+                        }
+                    )
+                )
+            )
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+        result = client.chat(
+            config.ollama.small_model,
+            [ChatMessage(role="user", content=allowed)],
+            response_format=schema,
+        )
+
+        self.assertEqual(json.loads(result.content)["memory_used"], [allowed])
+        with self.assertRaisesRegex(ResponseValidationError, "unsafe control"):
+            parse_robot_response(
+                result.content, allowed_memory_ids=(allowed,)
+            )
+
     def test_chat_sends_expected_small_model_payload(self) -> None:
         captured = []
 
@@ -96,19 +789,22 @@ class OllamaClientTests(unittest.TestCase):
         )
 
         self.assertEqual(len(captured), 2)
-        unload_request, unload_timeout = captured[0]
-        self.assertTrue(unload_request.full_url.endswith("/api/generate"))
-        self.assertEqual(unload_request.method, "POST")
-        self.assertEqual(
-            json.loads(unload_request.data),
-            {
-                "model": config.ollama.large_model,
-                "prompt": "",
-                "stream": False,
-                "keep_alive": 0,
-            },
-        )
-        self.assertEqual(unload_timeout, 30)
+        for (unload_request, unload_timeout), expected_model in zip(
+            captured[:1],
+            (config.ollama.general_large_model,),
+        ):
+            self.assertTrue(unload_request.full_url.endswith("/api/generate"))
+            self.assertEqual(unload_request.method, "POST")
+            self.assertEqual(
+                json.loads(unload_request.data),
+                {
+                    "model": expected_model,
+                    "prompt": "",
+                    "stream": False,
+                    "keep_alive": 0,
+                },
+            )
+            self.assertEqual(unload_timeout, 30)
 
         chat_request, chat_timeout = captured[1]
         self.assertTrue(chat_request.full_url.endswith("/api/chat"))
@@ -119,7 +815,8 @@ class OllamaClientTests(unittest.TestCase):
         self.assertFalse(payload["think"])
         self.assertEqual(payload["keep_alive"], -1)
         self.assertEqual(payload["options"]["num_ctx"], 2048)
-        self.assertEqual(payload["options"]["temperature"], 0.2)
+        self.assertEqual(payload["options"]["num_predict"], 192)
+        self.assertEqual(payload["options"]["temperature"], 0.0)
         self.assertNotIn("seed", payload["options"])
         self.assertEqual(payload["format"], ROBOT_RESPONSE_SCHEMA)
         self.assertEqual(chat_timeout, 60)
@@ -238,21 +935,53 @@ class OllamaClientTests(unittest.TestCase):
 
         self.assertEqual(result.model, config.ollama.large_model)
         self.assertEqual(len(requests), 2)
-        self.assertTrue(requests[0][0].endswith("/api/generate"))
-        self.assertEqual(
-            requests[0][1],
-            {
-                "model": config.ollama.small_model,
-                "prompt": "",
-                "stream": False,
-                "keep_alive": 0,
-            },
-        )
-        self.assertEqual(requests[0][2], 30)
+        for request, expected_model in zip(
+            requests[:1],
+            (config.ollama.small_model,),
+        ):
+            self.assertTrue(request[0].endswith("/api/generate"))
+            self.assertEqual(
+                request[1],
+                {
+                    "model": expected_model,
+                    "prompt": "",
+                    "stream": False,
+                    "keep_alive": 0,
+                },
+            )
+            self.assertEqual(request[2], 30)
         self.assertTrue(requests[1][0].endswith("/api/chat"))
         self.assertEqual(requests[1][1]["model"], config.ollama.large_model)
         self.assertEqual(requests[1][1]["keep_alive"], 0)
-        self.assertEqual(requests[1][2], 300)
+        self.assertEqual(requests[1][2], 120)
+
+    def test_general_large_model_unloads_small_and_expires(self) -> None:
+        requests = []
+
+        def opener(request, timeout):
+            payload = json.loads(request.data)
+            requests.append((request.full_url.rsplit("/", 1)[-1], payload))
+            if request.full_url.endswith("/api/generate"):
+                return FakeResponse(successful_unload(payload["model"]))
+            return FakeResponse(successful_chat(payload["model"]))
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+
+        result = client.chat(
+            config.ollama.general_large_model,
+            [ChatMessage(role="user", content="Create a detailed plan")],
+        )
+
+        self.assertEqual(result.model, config.ollama.general_large_model)
+        self.assertEqual(
+            [(endpoint, payload["model"]) for endpoint, payload in requests],
+            [
+                ("generate", config.ollama.small_model),
+                ("chat", config.ollama.general_large_model),
+            ],
+        )
+        self.assertEqual(requests[-1][1]["keep_alive"], 0)
 
     def test_repeated_small_calls_do_not_repeat_peer_unload(self) -> None:
         requests = []
@@ -275,10 +1004,94 @@ class OllamaClientTests(unittest.TestCase):
             [url.rsplit("/", 1)[-1] for url, _ in requests],
             ["generate", "chat", "chat"],
         )
-        self.assertEqual(requests[0][1]["model"], config.ollama.large_model)
+        self.assertEqual(
+            [payload["model"] for _, payload in requests[:1]],
+            [config.ollama.general_large_model],
+        )
         self.assertEqual(
             [payload["keep_alive"] for _, payload in requests[1:]],
             [-1, -1],
+        )
+
+    def test_unload_all_establishes_and_reuses_known_empty_state(self) -> None:
+        unloaded = []
+
+        def opener(request, timeout):
+            self.assertTrue(request.full_url.endswith("/api/generate"))
+            payload = json.loads(request.data)
+            unloaded.append(payload["model"])
+            return FakeResponse(successful_unload(payload["model"]))
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+
+        client.unload_all()
+        client.unload_all()
+
+        self.assertEqual(
+            unloaded,
+            [
+                config.ollama.small_model,
+                config.ollama.general_large_model,
+            ],
+        )
+
+    def test_unload_all_releases_only_the_known_resident_model(self) -> None:
+        requests = []
+
+        def opener(request, timeout):
+            payload = json.loads(request.data)
+            requests.append((request.full_url.rsplit("/", 1)[-1], payload["model"]))
+            if request.full_url.endswith("/api/generate"):
+                return FakeResponse(successful_unload(payload["model"]))
+            return FakeResponse(successful_chat(payload["model"]))
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+        client.chat(
+            config.ollama.small_model,
+            [ChatMessage(role="user", content="Load the small model")],
+        )
+
+        client.unload_all()
+        client.unload_all()
+
+        self.assertEqual(
+            requests,
+            [
+                ("generate", config.ollama.general_large_model),
+                ("chat", config.ollama.small_model),
+                ("generate", config.ollama.small_model),
+            ],
+        )
+
+    def test_failed_unload_all_forgets_residency_and_retries_both(self) -> None:
+        attempted = []
+        fail_once = True
+
+        def opener(request, timeout):
+            nonlocal fail_once
+            payload = json.loads(request.data)
+            attempted.append(payload["model"])
+            if fail_once:
+                fail_once = False
+                raise URLError("private server detail")
+            return FakeResponse(successful_unload(payload["model"]))
+
+        config = load_config()
+        client = OllamaClient(config.ollama, config.generation, opener=opener)
+
+        with self.assertRaises(OllamaError):
+            client.unload_all()
+        client.unload_all()
+
+        self.assertEqual(
+            attempted,
+            [
+                config.ollama.small_model,
+                config.ollama.small_model,
+                config.ollama.general_large_model,
+            ],
         )
 
     def test_switching_small_to_large_explicitly_unloads_small(self) -> None:
@@ -304,7 +1117,7 @@ class OllamaClientTests(unittest.TestCase):
                 for url, payload in requests
             ],
             [
-                ("generate", config.ollama.large_model),
+                ("generate", config.ollama.general_large_model),
                 ("chat", config.ollama.small_model),
                 ("generate", config.ollama.small_model),
                 ("chat", config.ollama.large_model),
@@ -467,7 +1280,7 @@ class OllamaClientTests(unittest.TestCase):
         self.assertEqual(
             calls,
             [
-                ("generate", config.ollama.large_model),
+                ("generate", config.ollama.general_large_model),
                 ("chat", config.ollama.small_model),
                 ("generate", config.ollama.small_model),
                 ("chat", config.ollama.large_model),
@@ -521,9 +1334,9 @@ class OllamaClientTests(unittest.TestCase):
         self.assertEqual(
             calls,
             [
-                ("generate", config.ollama.large_model),
+                ("generate", config.ollama.general_large_model),
                 ("chat", config.ollama.small_model),
-                ("generate", config.ollama.large_model),
+                ("generate", config.ollama.general_large_model),
                 ("chat", config.ollama.small_model),
             ],
         )
@@ -571,8 +1384,8 @@ class OllamaClientTests(unittest.TestCase):
         self.assertEqual(
             calls,
             [
-                ("generate", config.ollama.large_model),
-                ("generate", config.ollama.large_model),
+                ("generate", config.ollama.general_large_model),
+                ("generate", config.ollama.general_large_model),
                 ("chat", config.ollama.small_model),
             ],
         )

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "experiment_id": "response_quality_temperature_ab_v1_memory_retry",
+  "run_id": "7535c2e5d9194c6194bcbcb21230d237",
+  "paired_review_sha256": "073fb5b28cca0305112f3e86dff010bbd932b29f598cf93413af80b69063ea7c",
+  "review_state": "frozen_before_raw-output_diagnosis",
+  "judgments": [
+    {
+      "review_id": "pair_e62631544b39d93952b89382",
+      "candidate_1_correct": false,
+      "candidate_2_correct": false,
+      "preference": "tie",
+      "notes": "Both candidates failed application validation and produced no reviewable response, so neither satisfies any required claim."
+    }
+  ]
+}

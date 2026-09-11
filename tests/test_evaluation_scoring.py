@@ -321,6 +321,85 @@ def _refresh_trailer(records):
 
 
 class ObservationParsingTests(unittest.TestCase):
+    def test_form_first_classifier_content_is_preserved_with_legacy_records(self):
+        for form in ("question", "statement", "request"):
+            with self.subTest(form=form):
+                records = _raw_records()
+                case = _find(
+                    records, "case", strategy="adaptive", case_id="memory_direct_fact"
+                )
+                generation = case["route"]["memory_required_generation"]
+                content = json.dumps({"form": form, "memory_required": True})
+                generation["content"] = content
+                case["cascade"]["backend_calls"][0]["generation"] = copy.deepcopy(
+                    generation
+                )
+
+                parsed = parse_observation_jsonl(_encode(records))
+
+                actual = _find(
+                    parsed.cases, "case", strategy="adaptive",
+                    case_id="memory_direct_fact",
+                )
+                self.assertEqual(
+                    actual["route"]["memory_required_generation"], generation
+                )
+                self.assertEqual(
+                    actual["cascade"]["backend_calls"][0]["generation"], generation
+                )
+                legacy = _find(
+                    parsed.cases, "case", strategy="adaptive",
+                    case_id="route_small_no_memory_01",
+                )
+                self.assertEqual(
+                    legacy["route"]["memory_required_generation"]["content"],
+                    '{"memory_required":false}',
+                )
+
+    def test_form_first_classifier_rejects_invalid_payloads(self):
+        payloads = (
+            '{"form":"unknown","memory_required":true}',
+            '{"form":true,"memory_required":true}',
+            '{"form":null,"memory_required":true}',
+            '{"form":[],"memory_required":true}',
+            '{"form":"question","memory_required":1}',
+            '{"form":"question","memory_required":"true"}',
+            '{"form":"question","memory_required":true,"extra":0}',
+            '{"form":"question"}',
+            '{"form":"question","form":"request","memory_required":true}',
+            '{"form":"question","memory_required":true,"memory_required":false}',
+            '{"form":"question","memory_required":false}',
+        )
+        for content in payloads:
+            with self.subTest(content=content):
+                records = _raw_records()
+                case = _find(
+                    records, "case", strategy="adaptive", case_id="memory_direct_fact"
+                )
+                generation = case["route"]["memory_required_generation"]
+                generation["content"] = content
+                case["cascade"]["backend_calls"][0]["generation"] = copy.deepcopy(
+                    generation
+                )
+
+                with self.assertRaises(EvaluationScoringError):
+                    parse_observation_jsonl(_encode(records))
+
+    def test_form_first_classifier_does_not_hide_raw_backend_mismatch(self):
+        records = _raw_records()
+        case = _find(
+            records, "case", strategy="adaptive", case_id="memory_direct_fact"
+        )
+        case["route"]["memory_required_generation"]["content"] = (
+            '{"form":"question","memory_required":true}'
+        )
+        case["cascade"]["backend_calls"][0]["generation"] = _generation(
+            SMALL, '{"form":"request","memory_required":true}'
+        )
+
+        with self.assertRaisesRegex(EvaluationScoringError, "backend"):
+            parse_observation_jsonl(_encode(records))
+
     def test_supplied_candidate_can_be_nonprefix_and_uncited(self):
         records = _raw_records()
         case = _find(

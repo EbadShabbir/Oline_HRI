@@ -32,6 +32,11 @@ SOURCE_SHA = "c" * 64
 GIT_HEAD = "d" * 40
 
 
+class SourceCoverageTests(unittest.TestCase):
+    def test_merge_requires_relationship_grounding_source(self) -> None:
+        self.assertIn("src/oline_hri/relationships.py", merge._SOURCE_PATHS)
+
+
 def _private_directory(parent: Path, name: str) -> Path:
     path = parent / name
     path.mkdir(mode=0o700)
@@ -63,6 +68,7 @@ def _run(strategy: str, ordinal: int, *, completed: bool = True) -> ObservationR
             "runtime": {
                 "embedding_model_id": "BAAI/bge-small-en-v1.5",
                 "embedding_model_revision": "revision",
+                "general_large_model": "qwen3:1.7b",
                 "large_model": "qwen3:4b",
                 "machine": "aarch64",
                 "python_version": "3.10.12",
@@ -161,6 +167,12 @@ def _environment(run: ObservationRun, ordinal: int) -> dict[str, object]:
                     "installed": True,
                     "role": "small",
                     "tag": "qwen3:0.6b",
+                },
+                {
+                    "digest": "a" * 64,
+                    "installed": True,
+                    "role": "general_large",
+                    "tag": "qwen3:1.7b",
                 },
                 {
                     "digest": "1" * 64,

@@ -30,6 +30,7 @@ class LiveOllamaLifecycleTests(unittest.TestCase):
         self.client = OllamaClient(self.ollama, generation)
         self.models = {
             self.ollama.small_model,
+            self.ollama.general_large_model,
             self.ollama.large_model,
         }
         self.opener = build_opener(ProxyHandler({})).open
@@ -40,15 +41,19 @@ class LiveOllamaLifecycleTests(unittest.TestCase):
         self._unload_configured_models()
         self._wait_for_models(set())
 
-    def test_small_large_small_never_leaves_both_models_resident(self) -> None:
+    def test_small_large_small_never_overlap_residency(self) -> None:
         message = (ChatMessage(role="user", content="Reply with only OK."),)
 
         first_small = self.client.chat(self.ollama.small_model, message)
         self.assertEqual(first_small.model, self.ollama.small_model)
         self._wait_for_models({self.ollama.small_model})
 
-        large = self.client.chat(self.ollama.large_model, message)
-        self.assertEqual(large.model, self.ollama.large_model)
+        large = self.client.chat(
+            self.ollama.general_large_model, message
+        )
+        self.assertEqual(
+            large.model, self.ollama.general_large_model
+        )
         self._wait_for_models(set())
 
         second_small = self.client.chat(self.ollama.small_model, message)
@@ -56,7 +61,13 @@ class LiveOllamaLifecycleTests(unittest.TestCase):
         self._wait_for_models({self.ollama.small_model})
 
     def _unload_configured_models(self) -> None:
-        for model in (self.ollama.large_model, self.ollama.small_model):
+        for model in dict.fromkeys(
+            (
+                self.ollama.large_model,
+                self.ollama.general_large_model,
+                self.ollama.small_model,
+            )
+        ):
             request = Request(
                 f"{self.ollama.base_url}/api/generate",
                 data=json.dumps(

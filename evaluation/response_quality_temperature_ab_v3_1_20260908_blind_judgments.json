@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "experiment_family": "response_quality_temperature_ab_v3_1",
+  "run_ids": {
+    "seed43": "06ea983595b7406c9b2f81233b5faeb3",
+    "seed44": "48cdcccfa23b42d6a9da108c2fab0fc1",
+    "seed45": "a84e17d547ec49deabb6e52038bf4aab"
+  },
+  "paired_review_sha256": {
+    "seed43": "440fd0db32b71bee12ed625424b0ff11afc5479846704fc1b7dd6dde0d7eddb2",
+    "seed44": "1e0a633b5ea774a0b528a010a16aeae7dc37172d9437835943b9c4b4e8d4acfc",
+    "seed45": "c5db828f3956edcf2326211e2e3dcc4dda9c91488564f1b76adf5d43ad17d60c"
+  },
+  "review_state": "frozen_before_unblinding_and_raw-output_diagnosis",
+  "reviews": [
+    {
+      "reviewer_id": "reviewer_a",
+      "judgments": [
+        {
+          "review_id": "pair_033cb237bba44d61ac6ed1d2",
+          "candidate_1_correct": false,
+          "candidate_2_correct": false,
+          "preference": "candidate_1",
+          "notes": "Both omit prevention and do not clearly describe detection. Candidate 1 has stronger local validation and post-recovery testing; candidate 2's Git-based database recovery and checksum verification are less reliable."
+        },
+        {
+          "review_id": "pair_8d9ec92c4362e30fb016a583",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses give the two events in chronological order, the requested details, and the correct later event; both exact-citation flags pass."
+        },
+        {
+          "review_id": "pair_7cefd2fc6b57efa3c1e88933",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses correctly identify both dated milestones, navigation as newer, and Theo as collaborator; both exact-citation flags pass."
+        },
+        {
+          "review_id": "pair_77bea5a3c2304a7fe53f9d6f",
+          "candidate_1_correct": false,
+          "candidate_2_correct": false,
+          "preference": "candidate_2",
+          "notes": "Both omit prevention and do not clearly describe detection. Candidate 2 is slightly more precise about schema-guided repair and avoids candidate 1's broad safety guarantee."
+        },
+        {
+          "review_id": "pair_f8420b4d34c87fe0d1dce26b",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses give the two events in chronological order, the requested details, and the correct later event; both exact-citation flags pass."
+        },
+        {
+          "review_id": "pair_5bf0185d028df23de0044bc9",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses correctly identify both dated milestones, navigation as newer, and Theo as collaborator; both exact-citation flags pass."
+        },
+        {
+          "review_id": "pair_c77f0d66939a61e769b9e791",
+          "candidate_1_correct": false,
+          "candidate_2_correct": false,
+          "preference": "candidate_1",
+          "notes": "Both omit prevention and do not clearly describe detection. Candidate 1 provides stronger integrity checking and application testing; candidate 2 mischaracterizes SQLite .dump and relies on weaker checksum verification."
+        },
+        {
+          "review_id": "pair_135e50a3e0d84b495cb1fda3",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses give the two events in chronological order, the requested details, and the correct later event; both exact-citation flags pass."
+        },
+        {
+          "review_id": "pair_be71b4953372db901a12f1bc",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses correctly identify both dated milestones, navigation as newer, and Theo as collaborator; both exact-citation flags pass."
+        }
+      ]
+    },
+    {
+      "reviewer_id": "reviewer_b",
+      "judgments": [
+        {
+          "review_id": "pair_033cb237bba44d61ac6ed1d2",
+          "candidate_1_correct": false,
+          "candidate_2_correct": false,
+          "preference": "candidate_1",
+          "notes": "Both omit an explicit prevention step and do not distinctly cover corruption detection. Candidate 1 gives the safer, more technically grounded repair and schema-based fallback; candidate 2's Git/checksum advice is unreliable for database recovery."
+        },
+        {
+          "review_id": "pair_8d9ec92c4362e30fb016a583",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses give both entries in chronological order, the ginger preference and Friday date, the Saturday navigation milestone, and the correct later-event conclusion."
+        },
+        {
+          "review_id": "pair_7cefd2fc6b57efa3c1e88933",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses correctly identify both dated milestones, navigation as newer, and Theo as collaborator."
+        },
+        {
+          "review_id": "pair_77bea5a3c2304a7fe53f9d6f",
+          "candidate_1_correct": false,
+          "candidate_2_correct": false,
+          "preference": "candidate_2",
+          "notes": "Both omit an explicit prevention step and do not distinctly cover corruption detection. Their recovery coverage is otherwise nearly equivalent, but candidate 2 avoids candidate 1's unsupported assurance that the plan avoids data loss and ensures safety."
+        },
+        {
+          "review_id": "pair_f8420b4d34c87fe0d1dce26b",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses give both entries in chronological order, the ginger preference and Friday date, the Saturday navigation milestone, and the correct later-event conclusion."
+        },
+        {
+          "review_id": "pair_5bf0185d028df23de0044bc9",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses correctly identify both dated milestones, navigation as newer, and Theo as collaborator."
+        },
+        {
+          "review_id": "pair_c77f0d66939a61e769b9e791",
+          "candidate_1_correct": false,
+          "candidate_2_correct": false,
+          "preference": "candidate_1",
+          "notes": "Both omit an explicit prevention step and do not distinctly cover corruption detection. Candidate 1 offers the more coherent repair path; candidate 2 ambiguously proposes a post-corruption dump as a backup and assumes usable checksums or transaction logs."
+        },
+        {
+          "review_id": "pair_135e50a3e0d84b495cb1fda3",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses give both entries in chronological order, the ginger preference and Friday date, the Saturday navigation milestone, and the correct later-event conclusion."
+        },
+        {
+          "review_id": "pair_be71b4953372db901a12f1bc",
+          "candidate_1_correct": true,
+          "candidate_2_correct": true,
+          "preference": "tie",
+          "notes": "Identical responses correctly identify both dated milestones, navigation as newer, and Theo as collaborator."
+        }
+      ]
+    }
+  ],
+  "resolved_judgments": [
+    {"review_id": "pair_033cb237bba44d61ac6ed1d2", "candidate_1_correct": false, "candidate_2_correct": false, "preference": "candidate_1", "resolution": "unanimous_two_reviewer_agreement"},
+    {"review_id": "pair_8d9ec92c4362e30fb016a583", "candidate_1_correct": true, "candidate_2_correct": true, "preference": "tie", "resolution": "unanimous_two_reviewer_agreement"},
+    {"review_id": "pair_7cefd2fc6b57efa3c1e88933", "candidate_1_correct": true, "candidate_2_correct": true, "preference": "tie", "resolution": "unanimous_two_reviewer_agreement"},
+    {"review_id": "pair_77bea5a3c2304a7fe53f9d6f", "candidate_1_correct": false, "candidate_2_correct": false, "preference": "candidate_2", "resolution": "unanimous_two_reviewer_agreement"},
+    {"review_id": "pair_f8420b4d34c87fe0d1dce26b", "candidate_1_correct": true, "candidate_2_correct": true, "preference": "tie", "resolution": "unanimous_two_reviewer_agreement"},
+    {"review_id": "pair_5bf0185d028df23de0044bc9", "candidate_1_correct": true, "candidate_2_correct": true, "preference": "tie", "resolution": "unanimous_two_reviewer_agreement"},
+    {"review_id": "pair_c77f0d66939a61e769b9e791", "candidate_1_correct": false, "candidate_2_correct": false, "preference": "candidate_1", "resolution": "unanimous_two_reviewer_agreement"},
+    {"review_id": "pair_135e50a3e0d84b495cb1fda3", "candidate_1_correct": true, "candidate_2_correct": true, "preference": "tie", "resolution": "unanimous_two_reviewer_agreement"},
+    {"review_id": "pair_be71b4953372db901a12f1bc", "candidate_1_correct": true, "candidate_2_correct": true, "preference": "tie", "resolution": "unanimous_two_reviewer_agreement"}
+  ]
+}

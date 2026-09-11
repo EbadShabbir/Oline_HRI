@@ -20,6 +20,30 @@ unresolved contradiction, genuine older-versus-newer event selection, temporal
 reasoning, absent information, confirmed sensitive information, prohibited
 secrets, unconfirmed third-party data, and unconfirmed affect inference.
 
+## Version 1.1 prompt-contract revision
+
+`fictional_seven_day_v1_1.json` preserves version 1 and changes only
+suite-identifying text plus `memory_large_temporal`. That prompt now explicitly
+asks what the tea preference changed to as well as when, without containing the
+answer `ginger`; its evidence and rubric remain unchanged. The copies in
+`evaluation/` and `src/oline_hri/` are byte-identical. The v3.1 temperature
+experiment uses v1.1, while the default Step 16 CLI remains on v1.
+
+## Current Jetson reproduction configuration
+
+Current deployment validation uses only `qwen3:0.6b` for routing/small answers
+and `qwen3:1.7b` for both large roles. Install those two tags only. The measured
+configuration is a 2,048-token context, 128-token output cap, temperature `0`,
+thinking disabled, and a 120-second large-request timeout. Keep inference
+serialized, stop both configured tags before a fresh bundle, and do not load
+`qwen3:4b` on this Jetson because a prior load caused a recorded `BCCPLEXWDT`
+reset. See the [model-pair report](model_pair_runs/20260909_report.md).
+
+```bash
+ollama pull qwen3:0.6b
+ollama pull qwen3:1.7b
+```
+
 ## Replay contract
 
 Replay `memory_events` in manifest order with a clock fixed to each event's
@@ -85,6 +109,42 @@ reviewer should check the prompts and labels without seeing model outputs before
 the suite is used for reported results. This manifest contains no model output,
 measurements, scores, pass rates, latency, resource use, or Step 16 results.
 
+## Response-quality temperature A/B v3.1
+
+The completed scoped comparison did not identify a globally better generator
+temperature. Both `0.0` and `0.2` produced 9/9 application-valid outputs; all
+12 memory outputs were correct with exact citations, and all six memory pairs
+tied. All six general offline-recovery outputs were application-valid but
+rubric-incomplete because they omitted explicit prevention and did not clearly
+cover corruption detection. Blinded reviewers preferred temperature `0.0` in
+all three of those pairs, but both candidates were incorrect each time.
+
+| Case | Temperature 0.0 | Temperature 0.2 | Blinded result |
+| --- | ---: | ---: | --- |
+| General recovery | 0/3 correct | 0/3 correct | 0.0 preferred 3/3; both incorrect |
+| Temporal memory | 3/3 correct | 3/3 correct | 3 ties |
+| Recency/collaborator memory | 3/3 correct | 3/3 correct | 3 ties |
+| Application validity | 9/9 | 9/9 | 18/18 combined |
+
+Neither temperature met the frozen requirement for at least two of three wins
+in every case and at least six wins overall, so the result is inconclusive and
+production remains at temperature `0.2`, context/output `2176/320`, with a
+600-second large-request failure budget. Latency was descriptive only. Target 2
+can now test response speed from this functional baseline.
+
+That sentence records the v3.1 decision at the time. The current configuration
+above supersedes it; the experiment and its frozen evidence are unchanged.
+
+The preserved evidence trail includes the [failed v3 gate report](response_quality_temperature_ab_v3_memory_gate_report_20260908.md),
+[frozen v3.1 protocol](response_quality_temperature_ab_v3_1_protocol.md),
+[gate preflight](response_quality_temperature_ab_v3_1_preflight_20260908.md),
+[shard preflights](response_quality_temperature_ab_v3_1_shard_preflights_20260908.md),
+[gate judgments](response_quality_temperature_ab_v3_1_memory_gate_seed47_20260908_blind_judgments.json),
+[comparison judgments](response_quality_temperature_ab_v3_1_20260908_blind_judgments.json),
+and [final report](response_quality_temperature_ab_v3_1_report_20260908.md).
+This three-case review does not resolve the full suite's pending independent
+label status or the historical Step 16 answer review.
+
 ## Historical Step 16 run and merge (pre-redesign)
 
 The following results are historical, pre-redesign Step 16 measurements from
@@ -100,8 +160,8 @@ separate from the adaptive results. An earlier run was interrupted by an
 unclean reboot, whose trigger remains unknown. Full Step 16 interpretation is
 still provisional pending independent label and answer review and the deferred
 deployment measurements. They must be rerun before being attributed to the
-current routing and grounded-generation implementation. Current post-redesign
-unit and live-regression results are recorded in the
+current routing and grounded-generation implementation. Historical post-redesign
+results and the scoped general-planning follow-up are recorded in the
 [project README](../README.md#post-fix-validation).
 
 Settings and scoring rules are fixed in
@@ -115,11 +175,18 @@ ranked retrieval candidates, the whole evidence actually supplied to
 generation, and the model's validated citations. The current deterministic,
 best-effort request-link analysis is independent of model size. Direct recall
 uses the best-supported high-confidence linked evidence, while explicit
-multi-memory wording may supply up to three candidates. Required records are
-packed first; optional tail records may be pruned, but all required records must
-fit or the turn fails before generation. A semantic-only candidate without a
+multi-memory wording may supply up to three linked records. A bounded lexical
+topic-coverage pass reranks the RRF pool without another model call. When linked
+evidence exists, optional candidates are excluded from the prompt and citation
+allowlist; all required records must fit or the turn fails before generation.
+A semantic-only candidate without a
 detectable lexical, name/label, preference, or temporal link causes a
 conservative abstention. This is not a calibrated semantic-relevance guarantee.
+
+The 256-token cap above belongs to the frozen historical protocol. A collection
+made with the current recipe uses the deployed 192-token cap and must be labeled
+as a new current-configuration run, not as a reproduction of that archived
+protocol result.
 
 For a grounded answer, every runtime-required evidence ID must be cited and its
 high-confidence literal anchors covered in speech. Optional supplied candidates
@@ -135,20 +202,33 @@ details; reject detectable perspective swaps, unsupported names and personal
 relationships, unsupported temporal precision, and preference/relationship
 polarity reversals, including temporal-preference negation; and enforce a cited
 exactly-three-step preference. A narrow short-label conflict check requires
-uncertainty. The complex-general/no-memory
-rule used by the current architecture regression caps speech at 75 words,
-compares exactly three architectures, gives one recommendation, and requires
-exactly three short deployment steps.
+uncertainty. The complex-general/no-memory generation rule asks for at most
+90 speech words and follows the requested topic, constraints, format, and
+counts. Comparisons and recommendations apply only when requested. Plans should
+give ordered actions and explicitly handle missing prerequisites. Recovery or
+changes should first stop modifications and preserve an untouched copy; if
+recovery resources are unavailable, give a fallback or state recovery limits.
+Validate results before resumption. The model must not assume resources exist
+or claim it performed the actions. These are generation instructions, not
+runtime word-count or plan-completeness guarantees.
+
+The opt-in live-quality suite adds an offline database-corruption recovery
+case. Heuristic assertions check protection of the original, conditional use of
+a usable backup, a contingency without a usable backup, and validation before
+resuming normal use. Architecture assertions check three distinct designs,
+tradeoffs, and deployment actions. These cases and checks postdate the
+historical validation results linked above.
 
 These checks are literal and heuristic. They do not prove general semantic
 completeness, contradiction handling, or temporal correctness, and conservative
 abstention can reject a truly relevant semantic-only match. They supplement but
 do not replace blinded semantic review.
 
-The following recipe reproduces a full collection in a fresh directory. Avoid
-competing inference clients. Run from the repository root with the local
-Ollama models and pinned BGE assets installed. Use a fresh private directory
-on persistent storage. An
+The following recipe collects the current implementation in a fresh directory;
+it does not recreate the 2026-09-07 bundles with their retired model mapping.
+Avoid competing inference clients. Run from the repository root with the two
+configured Ollama models and pinned BGE assets installed. Use a fresh private
+directory on persistent storage. An
 earlier collection stored under `/tmp` disappeared when the Jetson rebooted;
 those lost artifacts cannot support a final report.
 
@@ -159,7 +239,7 @@ printf '%s\n' "$RUN_DIR"
 for STRATEGY in always_small_no_rag always_large_no_rag always_large_with_rag adaptive; do
   mkdir -m 700 "$RUN_DIR/$STRATEGY"
   ollama stop qwen3:0.6b
-  ollama stop qwen3:4b
+  ollama stop qwen3:1.7b
   ollama ps
   PYTHONPATH=src .venv/bin/python -m oline_hri.evaluation_benchmark run \
     --output-dir "$RUN_DIR/$STRATEGY" \
@@ -171,8 +251,8 @@ done
 
 Keep the printed `RUN_DIR` path so the results can be found after reconnecting.
 The order above is frozen, and Ollama must have no resident model before each
-bundle; avoid other inference clients during collection. Cold 4B generations
-can make the complete comparison take several hours. A completed bundle may
+bundle; avoid other inference clients during collection. Cold 1.7B generations
+can make the complete comparison take considerable time. A completed bundle may
 contain failed individual cases: timeouts and invalid responses remain in the
 scoring denominator. If the process is interrupted, preserve its incomplete
 bundle and use a fresh directory for a replacement run. The tools never

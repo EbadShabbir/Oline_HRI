@@ -1,0 +1,20 @@
+{
+  "description": "Frozen before live collection: five targeted fictional composition checks with different facts and wording. Not an independent general-reasoning benchmark.",
+  "memories": [
+    {"text": "I completed the camera kickoff milestone on Monday, 17 August 2026.", "kind": "event", "event_time": "2026-08-17T09:00:00Z"},
+    {"text": "I completed the thermal imaging prototype milestone on Thursday, 20 August 2026.", "kind": "event", "event_time": "2026-08-20T10:00:00Z"},
+    {"text": "Noor is my telescope workshop partner.", "kind": "relationship"},
+    {"text": "I prefer workshop meetings between 10:00 and 12:00.", "kind": "routine"},
+    {"text": "I prefer answers no longer than three sentences unless I ask for detail.", "kind": "preference"},
+    {"text": "I changed my tea preference to hibiscus without sugar on Wednesday, 19 August 2026.", "kind": "event", "event_time": "2026-08-19T09:00:00Z"},
+    {"text": "I plan to take the bus to Fujairah on Friday, 21 August 2026.", "kind": "event", "event_time": "2026-08-21T07:00:00Z"},
+    {"text": "I plan to visit the maritime museum in Ajman on Sunday, 23 August 2026.", "kind": "event", "event_time": "2026-08-23T10:00:00Z"}
+  ],
+  "cases": [
+    {"id": "new_partner", "prompt": "Who is my telescope workshop partner?", "expected": "Noor is your telescope workshop partner.", "memory_indices": [2]},
+    {"id": "new_timeline", "prompt": "Create a two-entry chronological timeline comparing when I changed my tea preference with when I completed the thermal imaging milestone, and explain which came later.", "expected": "Hibiscus without sugar on Wednesday 19 August, thermal imaging completed Thursday 20 August; second entry later.", "memory_indices": [5, 1]},
+    {"id": "new_milestones", "prompt": "Compare my earlier and most recent completed milestones, say which is newer, and name my collaborator.", "expected": "Camera kickoff Monday 17 August, thermal imaging Thursday 20 August newer; Noor is your telescope workshop partner.", "memory_indices": [0, 1, 2]},
+    {"id": "new_presentation", "prompt": "Create a detailed three-stage preparation plan for presenting the completed thermal imaging prototype during my preferred workshop-meeting window, and explicitly note my answer-length preference.", "expected": "Three preparation stages, completed thermal imaging prototype, meetings 10:00 to 12:00, answers no longer than three sentences unless detail requested.", "memory_indices": [1, 3, 4]},
+    {"id": "new_travel", "prompt": "Compare my Friday and Sunday travel plans and build a preparation checklist that keeps both dates and destinations distinct.", "expected": "Friday 21 August bus to Fujairah; Sunday 23 August maritime museum in Ajman; checklist for each date.", "memory_indices": [6, 7]}
+  ]
+}

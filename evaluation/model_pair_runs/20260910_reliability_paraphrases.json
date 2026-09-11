@@ -1,0 +1,27 @@
+{
+  "description": "Frozen before this revision's live collection. Additional fictional wording and negative controls; small targeted sample, not a blind independent benchmark.",
+  "memories": [
+    {"text": "I own a purple skateboard.", "kind": "fact"},
+    {"text": "My balcony cactus is called Pebble.", "kind": "fact"},
+    {"text": "I completed a camera calibration test.", "kind": "event"},
+    {"text": "I prefer answers under three sentences.", "kind": "preference"},
+    {"text": "Noor is my gardening club partner.", "kind": "relationship"},
+    {"text": "My gardening meetings are Saturday mornings.", "kind": "routine"},
+    {"text": "I own a canoe.", "kind": "fact"},
+    {"text": "My helmet is green.", "kind": "fact"}
+  ],
+  "cases": [
+    {"id": "skateboard_colour", "prompt": "What colour is my skateboard?", "expected": "purple", "memory_indices": [0]},
+    {"id": "cactus_name", "prompt": "What is my balcony cactus's name?", "expected": "Pebble", "memory_indices": [1]},
+    {"id": "finished_test", "prompt": "Please remind me what test I finished.", "expected": "You completed a camera calibration test.", "memory_indices": [2]},
+    {"id": "answer_restriction", "prompt": "Do I prefer short or long answers?", "expected": "answers under three sentences", "memory_indices": [3]},
+    {"id": "partner", "prompt": "Who is Noor to me?", "expected": "your gardening club partner", "memory_indices": [4]},
+    {"id": "meeting_window", "prompt": "When are my gardening meetings?", "expected": "Saturday mornings", "memory_indices": [5]},
+    {"id": "unknown_canoe_colour", "prompt": "What color is my canoe?", "expected": "abstain; canoe color was never supplied", "memory_indices": []},
+    {"id": "unknown_skateboard_name", "prompt": "What is my skateboard's name?", "expected": "abstain; skateboard name was never supplied", "memory_indices": []},
+    {"id": "unknown_cat", "prompt": "What is my cat's name?", "expected": "abstain; no cat record", "memory_indices": []},
+    {"id": "unknown_drink", "prompt": "What is my favorite drink?", "expected": "abstain; no drink record", "memory_indices": []},
+    {"id": "skateboard_recall", "prompt": "What do you remember about my skateboard?", "expected": "You own a purple skateboard.", "memory_indices": [0]},
+    {"id": "skateboard_remind", "prompt": "Remind me what you recall about my skateboard.", "expected": "You own a purple skateboard.", "memory_indices": [0]}
+  ]
+}

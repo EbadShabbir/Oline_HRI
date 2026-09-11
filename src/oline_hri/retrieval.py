@@ -14,6 +14,7 @@ from .memory import (
     MemoryValidationError,
     SemanticMatch,
 )
+from .memory_evidence import evidence_order
 
 
 RRF_K = 60
@@ -154,6 +155,10 @@ class HybridRetriever:
                 candidate.memory.id,
             ),
         )
+        # Reorder only the bounded, already-validated pool. Keep original RRF
+        # scores and source positions as diagnostics rather than invent scores.
+        order = evidence_order(query, [c.memory.canonical_text for c in ordered])
+        ordered = [ordered[index] for index in order]
         return tuple(
             HybridMatch(
                 memory=candidate.memory,

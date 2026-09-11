@@ -367,6 +367,10 @@ def run_router_evaluation(
                     "memory_required": route.decision.memory_required,
                     "model_size": route.decision.model_size,
                 }
+                record["decision_sources"] = {
+                    "memory_required": route.memory_decision_source,
+                    "model_size": route.model_size_decision_source,
+                }
                 record["status"] = "ok"
             except BaseException as error:
                 record["error_type"] = _error_type(error)

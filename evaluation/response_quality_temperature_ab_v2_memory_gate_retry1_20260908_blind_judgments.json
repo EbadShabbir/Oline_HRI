@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "experiment_id": "response_quality_temperature_ab_v2_memory_gate",
+  "run_id": "ca298e4db02c45e6998588c7b59d11b9",
+  "paired_review_sha256": "1a61493d481d37b096871645b3dfa9003a684a84ab1b8090e8e4c9b59a96cff3",
+  "review_state": "frozen_before_unblinding_and_raw-output_diagnosis",
+  "judgments": [
+    {
+      "review_id": "pair_74117e4130278309fa36fe52",
+      "candidate_1_correct": false,
+      "candidate_2_correct": false,
+      "preference": "tie",
+      "notes": "Both candidates failed application validation and produced no reviewable speech, so neither satisfies the required timeline claims or exact-citation gate."
+    }
+  ]
+}

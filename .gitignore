@@ -12,6 +12,10 @@ htmlcov/
 data/
 logs/
 
+# Local scratch output, generated PDF previews, and test memory databases.
+# Existing evaluation evidence in this directory is retained locally.
+/tmp/
+
 # Generated evaluation bundles contain prompts, answers, provenance, and
 # device telemetry. Keep dated raw bundles and generated reports private.
 benchmarks/step16_*/

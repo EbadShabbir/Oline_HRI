@@ -159,7 +159,7 @@ class FakeBackend:
     ):
         properties = response_format["properties"]
         fields = set(properties)
-        if fields == {"memory_required"}:
+        if fields == {"form", "memory_required"}:
             purpose = "route_memory_required"
         elif fields == {"model_size"}:
             purpose = "route_model_size"
@@ -179,7 +179,7 @@ class FakeBackend:
             if self.route_calls in self.fail_route_calls:
                 raise RuntimeError("private route detail")
             content = json.dumps(
-                {"memory_required": self.route_memory},
+                {"form": "question", "memory_required": self.route_memory},
                 separators=(",", ":"),
             )
             return _chat_result(model, content)
@@ -220,6 +220,11 @@ class FakeBackend:
                 grounded_parts.append(record["canonical_text"])
                 if record.get("event_time") is not None:
                     grounded_parts.append("Event time: " + record["event_time"])
+                if record.get("correction_effective_time") is not None:
+                    grounded_parts.append(
+                        "Correction effective time: "
+                        + record["correction_effective_time"]
+                    )
             speech += " " + " ".join(grounded_parts)
             break
         content = json.dumps(
@@ -339,7 +344,9 @@ class EvaluationRunnerTests(unittest.TestCase):
         self.assertEqual(summary.retrieval_records, 16)
         self.assertEqual(summary.cascade_records, 120)
         self.assertEqual(summary.retrieval_errors, 0)
-        self.assertEqual(summary.cascade_errors, 0)
+        # The one-record fake lacks the collaborator requested by recency.
+        # Both retrieval-enabled strategies must now withhold that partial answer.
+        self.assertEqual(summary.cascade_errors, 2)
         self.assertEqual(len(records), 139)
         header, trailer = records[0], records[-1]
         setup = next(item for item in records if item["record_type"] == "setup")
@@ -349,6 +356,8 @@ class EvaluationRunnerTests(unittest.TestCase):
         case_records = tuple(
             item for item in records if item["record_type"] == "case"
         )
+        self.assertEqual({r['case_id'] for r in case_records if r['status'] == 'error'},
+                         {'memory_large_recency'})
 
         self.assertEqual(header["record_type"], "header")
         self.assertEqual(setup["status"], "ok")
@@ -435,7 +444,7 @@ class EvaluationRunnerTests(unittest.TestCase):
         )
         self.assertEqual(
             sum(limit == 3 for _, limit in retriever.calls[16:]),
-            60,
+            48,
         )
         routes = {
             strategy: next(
@@ -570,7 +579,7 @@ class EvaluationRunnerTests(unittest.TestCase):
             item for item in records if item["record_type"] == "case"
         )
         first = cases[0]
-        self.assertEqual(summary.cascade_errors, 1)
+        self.assertEqual(summary.cascade_errors, 2)  # Classifier + absent collaborator.
         self.assertEqual(first["status"], "error")
         self.assertEqual(first["error_stage"], "route")
         self.assertIsNone(first["route"])
@@ -632,7 +641,7 @@ class EvaluationRunnerTests(unittest.TestCase):
         self.assertGreaterEqual(setup["passage_embedding_wall_ns"], 0)
         self.assertEqual(setup["passage_embedding_calls"], 14)
         self.assertEqual(len(embedder.passage_calls), 14)
-        self.assertEqual(len(embedder.query_calls), 46)
+        self.assertEqual(len(embedder.query_calls), 43)
         self.assertTrue(telemetry_states)
         self.assertTrue(all(telemetry_states))
         self.assertTrue(
@@ -666,11 +675,18 @@ class EvaluationRunnerTests(unittest.TestCase):
                 <= item["retrieval_wall_ns"]
                 and item["retrieval_keyword_search_wall_ns"]
                 <= item["retrieval_wall_ns"]
-                for item in cascades
+                for item in cascades if not item.get("privacy_gate")
             )
         )
         self.assertEqual(summary.retrieval_errors, 0)
-        self.assertEqual(summary.cascade_errors, 0)
+        # This test exercises real replay/index timing with a deliberately
+        # content-agnostic fake embedder and generator. Stricter response
+        # grounding may reject those synthetic answers; the summary must still
+        # account for every such case consistently.
+        self.assertEqual(
+            summary.cascade_errors,
+            sum(item["response"] is None for item in cascades),
+        )
         self.assertEqual(remaining, (output,))
 
     def test_source_timing_keeps_error_leg_and_nulls_unattempted_leg(self) -> None:
@@ -871,7 +887,7 @@ class EvaluationRunnerTests(unittest.TestCase):
         generator_calls = tuple(
             call for call in backend.calls if call["purpose"] == "generation"
         )
-        self.assertEqual(summary.cascade_errors, 1)
+        self.assertEqual(summary.cascade_errors, 2)  # Timeout + absent collaborator.
         self.assertEqual(len(generator_calls), 30)
         self.assertEqual(first["status"], "error")
         self.assertEqual(first["error_stage"], "generation")
@@ -919,7 +935,7 @@ class EvaluationRunnerTests(unittest.TestCase):
             item for item in records if item["record_type"] == "case"
         )
         calls = first["cascade"]["backend_calls"]
-        self.assertEqual(summary.cascade_errors, 0)
+        self.assertEqual(summary.cascade_errors, 1)  # Only the absent collaborator.
         self.assertEqual(first["status"], "ok")
         self.assertEqual(
             [call["purpose"] for call in calls],

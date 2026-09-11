@@ -82,7 +82,9 @@ returned `done_reason: "load"`; the preload is not included in the warm table.
 
 The cold request completed only about 6 seconds inside the 120-second client
 limit used for this benchmark. That narrow margin motivated the application's
-current provisional 300-second large-model failure budget.
+former provisional 300-second large-model failure budget. A later quality gate
+showed that 300 seconds could expire shortly before Ollama completed under host
+pressure, so the current shipped functional baseline uses 600 seconds.
 
 ### Resident warm requests
 

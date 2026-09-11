@@ -1,5 +1,6 @@
 from io import StringIO
 from hashlib import sha256
+from datetime import datetime, timedelta, timezone
 import json
 from pathlib import Path
 import tempfile
@@ -16,10 +17,16 @@ from oline_hri.embedding import (
     MODEL_REVISION,
     EmbeddingError,
 )
-from oline_hri.memory import MemoryStore
+from oline_hri.memory import MemoryStore, MemoryStoreError
 from oline_hri.ollama import ChatResult, OllamaError
 from oline_hri.response import RobotResponse
 from oline_hri.routing import RouteDecision, RoutingResult
+from oline_hri.speech import (
+    NoSpeechDetected,
+    SpeechRuntimeError,
+    SpeechRuntimeStatus,
+    Transcription,
+)
 
 
 def chat_result(content: str = "Hello from the robot.") -> ChatResult:
@@ -35,13 +42,28 @@ def chat_result(content: str = "Hello from the robot.") -> ChatResult:
     )
 
 
+def memory_capture_result() -> ChatResult:
+    return ChatResult(
+        model="qwen3:0.6b",
+        content='{"store_memory":true,"kind":"preference"}',
+        done_reason="stop",
+        total_duration_ns=1,
+        load_duration_ns=0,
+        prompt_eval_count=1,
+        eval_count=1,
+        eval_duration_ns=1,
+    )
+
+
 def routing_result(
-    *, memory_required: bool = False, model_size: str = "small"
+    *, memory_required: bool = False, model_size: str = "small",
+    form: str = "question",
 ) -> RoutingResult:
     memory_required_generation = ChatResult(
         model="qwen3:0.6b",
         content=json.dumps(
-            {"memory_required": memory_required}, separators=(",", ":")
+            {"form": form, "memory_required": memory_required},
+            separators=(",", ":"),
         ),
         done_reason="stop",
         total_duration_ns=1,
@@ -68,10 +90,11 @@ def routing_result(
 
 
 def routing_generations(
-    *, memory_required: bool = False, model_size: str = "small"
+    *, memory_required: bool = False, model_size: str = "small",
+    form: str = "question",
 ) -> tuple[ChatResult, ChatResult]:
     result = routing_result(
-        memory_required=memory_required, model_size=model_size
+        memory_required=memory_required, model_size=model_size, form=form
     )
     return (
         result.memory_required_generation,
@@ -111,6 +134,21 @@ def memory_config(directory: str, *, profile_id: str = "test_user") -> Path:
     path = Path(directory) / f"{profile_id}.json"
     path.write_text(json.dumps(data), encoding="utf-8")
     return path
+
+
+def transcription(text: str = "Hello from the microphone.") -> Transcription:
+    return Transcription(
+        raw_text=f" {text}",
+        text=text,
+        language="en",
+        audio_duration_seconds=1.25,
+        capture_seconds=2.0,
+        inference_seconds=0.75,
+        mean_token_probability=0.91,
+        peak_vad_probability=0.97,
+        model_name="ggml-small.en-q5_0.bin",
+        used_fallback=False,
+    )
 
 
 class DeterministicEmbedder:
@@ -176,6 +214,405 @@ class CliTests(unittest.TestCase):
 
         self.assertEqual(result, 0)
         self.assertEqual(data["ollama"]["small_model"], "qwen3:0.6b")
+        self.assertEqual(
+            data["ollama"]["general_large_model"], "qwen3:1.7b"
+        )
+        self.assertEqual(data["ollama"]["large_model"], "qwen3:1.7b")
+
+    @patch("oline_hri.cli.speech_runtime_status")
+    def test_speech_check_reports_each_runtime_component(self, status) -> None:
+        status.return_value = SpeechRuntimeStatus(True, True, True, True, True)
+        output = StringIO()
+
+        result = main(["speech", "check"], stdout=output)
+
+        self.assertEqual(result, 0)
+        self.assertEqual(
+            output.getvalue(),
+            "capture_executable: present\n"
+            "silero_model: verified\n"
+            "whisper_executable: runnable\n"
+            "primary_model: verified\n"
+            "fallback_model: verified\n",
+        )
+
+    @patch("oline_hri.cli.speech_runtime_status")
+    def test_speech_check_fails_when_no_whisper_model_exists(self, status) -> None:
+        status.return_value = SpeechRuntimeStatus(True, True, True, False, False)
+
+        result = main(["speech", "check"], stdout=StringIO())
+
+        self.assertEqual(result, 5)
+
+    @patch("oline_hri.cli.speech_runtime_status")
+    def test_speech_check_handles_interrupt_without_traceback(self, status) -> None:
+        status.side_effect = KeyboardInterrupt()
+        errors = StringIO()
+
+        result = main(["speech", "check"], stdout=StringIO(), stderr=errors)
+
+        self.assertEqual(result, 130)
+        self.assertEqual(errors.getvalue(), "speech check interrupted\n")
+
+    @patch("oline_hri.cli.OfflineSpeechRecognizer")
+    def test_speech_listen_prints_transcript_and_optional_metrics(
+        self, recognizer_class
+    ) -> None:
+        recognizer_class.return_value.listen.return_value = transcription()
+        output = StringIO()
+        errors = StringIO()
+
+        result = main(
+            ["speech", "listen", "--show-metrics"],
+            stdout=output,
+            stderr=errors,
+        )
+
+        self.assertEqual(result, 0)
+        self.assertEqual(output.getvalue(), "Hello from the microphone.\n")
+        self.assertTrue(errors.getvalue().startswith("listening...\n"))
+        metrics = json.loads(errors.getvalue().split("speech> ", 1)[1])
+        self.assertEqual(metrics["mean_token_probability"], 0.91)
+        self.assertEqual(metrics["model"], "ggml-small.en-q5_0.bin")
+        self.assertNotIn("Hello", errors.getvalue())
+
+    @patch("oline_hri.cli.OfflineSpeechRecognizer")
+    def test_speech_listen_sanitizes_runtime_failures(
+        self, recognizer_class
+    ) -> None:
+        recognizer_class.side_effect = SpeechRuntimeError("private model path")
+        errors = StringIO()
+
+        result = main(["speech", "listen"], stderr=errors, stdout=StringIO())
+
+        self.assertEqual(result, 5)
+        self.assertEqual(
+            errors.getvalue(),
+            "speech error: request could not be completed safely\n",
+        )
+        self.assertNotIn("private", errors.getvalue())
+
+    @patch("oline_hri.cli.OfflineSpeechRecognizer")
+    def test_speech_listen_reports_no_usable_speech(
+        self, recognizer_class
+    ) -> None:
+        recognizer_class.return_value.listen.side_effect = NoSpeechDetected(
+            "private capture detail"
+        )
+        errors = StringIO()
+
+        result = main(["speech", "listen"], stderr=errors, stdout=StringIO())
+
+        self.assertEqual(result, 5)
+        self.assertEqual(
+            errors.getvalue(),
+            "listening...\nspeech> no usable speech detected; please try again\n",
+        )
+        self.assertNotIn("private", errors.getvalue())
+
+    @patch("oline_hri.cli.OfflineSpeechRecognizer")
+    def test_speech_listen_handles_interrupt_without_traceback(
+        self, recognizer_class
+    ) -> None:
+        recognizer_class.return_value.listen.side_effect = KeyboardInterrupt()
+        errors = StringIO()
+
+        result = main(["speech", "listen"], stderr=errors, stdout=StringIO())
+
+        self.assertEqual(result, 130)
+        self.assertEqual(errors.getvalue(), "listening...\nspeech interrupted\n")
+
+    def test_prompt_and_voice_are_mutually_exclusive(self) -> None:
+        with patch("sys.stderr", StringIO()), self.assertRaises(SystemExit):
+            main(["chat", "--prompt", "Hello", "--voice"])
+
+    @patch("oline_hri.cli.OfflineSpeechRecognizer")
+    @patch("oline_hri.cli.OllamaClient")
+    def test_voice_auto_memory_stores_an_eligible_transcript(
+        self, client_class, recognizer_class
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            config_path = memory_config(directory)
+            recognizer_class.return_value.listen.side_effect = (
+                transcription("I prefer jasmine tea without sugar."),
+                KeyboardInterrupt(),
+            )
+
+            def respond(model, messages, **kwargs):
+                fields = set(kwargs["response_format"]["properties"])
+                if fields == {"form", "memory_required"}:
+                    return routing_generations(
+                        memory_required=False, form="statement"
+                    )[0]
+                if fields == {"model_size"}:
+                    return routing_generations(model_size="small")[1]
+                if fields == {"store_memory", "kind"}:
+                    return ChatResult(
+                        model="qwen3:0.6b",
+                        content=(
+                            '{"store_memory":true,"kind":"preference"}'
+                        ),
+                        done_reason="stop",
+                        total_duration_ns=1,
+                        load_duration_ns=0,
+                        prompt_eval_count=1,
+                        eval_count=1,
+                        eval_duration_ns=1,
+                    )
+                return chat_result("Thanks for telling me.")
+
+            client_class.return_value.chat.side_effect = respond
+            output = StringIO()
+            errors = StringIO()
+
+            result = main(
+                [
+                    "--config",
+                    str(config_path),
+                    "chat",
+                    "--voice",
+                    "--auto-memory",
+                ],
+                stdout=output,
+                stderr=errors,
+            )
+
+            config = load_config(config_path)
+            stored = MemoryStore(
+                config.memory.database_path,
+                profile_id=config.memory.profile_id,
+            ).list_memories()
+
+        self.assertEqual(result, 0)
+        self.assertEqual(len(stored), 1)
+        self.assertEqual(
+            stored[0].canonical_text,
+            "I prefer jasmine tea without sugar.",
+        )
+        self.assertEqual(stored[0].kind, "preference")
+        self.assertIn("Automatic seven-day memory is ON", output.getvalue())
+        self.assertIn("automatically remembered", errors.getvalue())
+
+    @patch("oline_hri.cli.OfflineSpeechRecognizer")
+    @patch("oline_hri.cli.ConversationRouter")
+    @patch("oline_hri.cli.OllamaClient")
+    def test_auto_memory_survives_reply_failure_in_all_chat_modes(
+        self, client_class, router_class, recognizer_class
+    ) -> None:
+        statement = "I prefer jasmine tea without sugar."
+        router_class.return_value.route.return_value = routing_result()
+        for mode in ("text", "voice", "prompt"):
+            with self.subTest(mode=mode), tempfile.TemporaryDirectory() as directory:
+                config_path = memory_config(directory)
+                generation_calls = 0
+                capture_calls = 0
+
+                def respond(model, messages, **kwargs):
+                    nonlocal generation_calls, capture_calls
+                    fields = set(kwargs["response_format"]["properties"])
+                    if fields == {"store_memory", "kind"}:
+                        capture_calls += 1
+                        return memory_capture_result()
+                    generation_calls += 1
+                    if generation_calls == 1:
+                        raise OllamaError("private generation failure detail")
+                    return chat_result("Hello again.")
+
+                client_class.return_value.chat.side_effect = respond
+                recognizer_class.return_value.listen.side_effect = (
+                    transcription(statement),
+                    transcription("Hello"),
+                    KeyboardInterrupt(),
+                )
+                args = ["--config", str(config_path), "chat", "--auto-memory"]
+                if mode == "voice":
+                    args.append("--voice")
+                elif mode == "prompt":
+                    args.extend(("--prompt", statement))
+                output = StringIO()
+                errors = StringIO()
+
+                result = main(
+                    args,
+                    stdin=StringIO(f"{statement}\nHello\n/exit\n"),
+                    stdout=output,
+                    stderr=errors,
+                )
+
+                config = load_config(config_path)
+                stored = MemoryStore(
+                    config.memory.database_path,
+                    profile_id=config.memory.profile_id,
+                ).list_memories()
+
+                self.assertEqual(result, 3 if mode == "prompt" else 0)
+                self.assertEqual(capture_calls, 1)
+                self.assertEqual(len(stored), 1)
+                self.assertEqual(stored[0].canonical_text, statement)
+                self.assertIn("chat error:", errors.getvalue())
+                self.assertIn("automatically remembered", errors.getvalue())
+                self.assertNotIn("private", errors.getvalue())
+                self.assertNotIn(statement, errors.getvalue())
+                if mode != "prompt":
+                    self.assertIn("robot> Hello again.", output.getvalue())
+
+    @patch("oline_hri.cli.ConversationRouter")
+    @patch("oline_hri.cli.OllamaClient")
+    def test_auto_memory_reports_duplicate_and_classifies_after_answer(
+        self, client_class, router_class
+    ) -> None:
+        router_class.return_value.route.return_value = routing_result()
+        with tempfile.TemporaryDirectory() as directory:
+            config_path = memory_config(directory)
+            output = StringIO()
+            errors = StringIO()
+            capture_calls = 0
+
+            def respond(model, messages, **kwargs):
+                nonlocal capture_calls
+                fields = set(kwargs["response_format"]["properties"])
+                if fields == {"store_memory", "kind"}:
+                    self.assertIn("robot> Thanks for telling me.", output.getvalue())
+                    capture_calls += 1
+                    return memory_capture_result()
+                return chat_result("Thanks for telling me.")
+
+            client_class.return_value.chat.side_effect = respond
+            result = main(
+                ["--config", str(config_path), "chat", "--auto-memory"],
+                stdin=StringIO(
+                    "I prefer jasmine tea.\ni prefer jasmine tea\n/exit\n"
+                ),
+                stdout=output,
+                stderr=errors,
+            )
+            config = load_config(config_path)
+            stored = MemoryStore(
+                config.memory.database_path,
+                profile_id=config.memory.profile_id,
+            ).list_memories()
+
+        self.assertEqual(result, 0)
+        self.assertEqual(capture_calls, 1)
+        self.assertEqual(len(stored), 1)
+        self.assertIn(f"automatically remembered {stored[0].id}", errors.getvalue())
+        self.assertIn(f"already remembered {stored[0].id}", errors.getvalue())
+        self.assertNotIn("jasmine", errors.getvalue())
+
+    @patch("oline_hri.cli.ConversationRouter")
+    @patch("oline_hri.cli.OllamaClient")
+    def test_auto_memory_storage_failures_allow_the_next_chat_turn(
+        self, client_class, router_class
+    ) -> None:
+        router_class.return_value.route.return_value = routing_result()
+
+        def respond(model, messages, **kwargs):
+            fields = set(kwargs["response_format"]["properties"])
+            if fields == {"store_memory", "kind"}:
+                return memory_capture_result()
+            return chat_result("Hello again.")
+
+        client_class.return_value.chat.side_effect = respond
+        failures = (
+            ("oline_hri.cli.MemoryStore.remember", MemoryStoreError),
+            ("oline_hri.cli.BgeOnnxEmbedder.embed_passages", EmbeddingError),
+        )
+        for target, error_class in failures:
+            with self.subTest(target=target), tempfile.TemporaryDirectory() as directory:
+                config_path = memory_config(directory)
+                output = StringIO()
+                errors = StringIO()
+                with patch(target, side_effect=error_class("private failure detail")):
+                    result = main(
+                        ["--config", str(config_path), "chat", "--auto-memory"],
+                        stdin=StringIO("I prefer jasmine tea.\nHello\n/exit\n"),
+                        stdout=output,
+                        stderr=errors,
+                    )
+                config = load_config(config_path)
+                stored = MemoryStore(
+                    config.memory.database_path,
+                    profile_id=config.memory.profile_id,
+                ).list_memories()
+
+                self.assertEqual(result, 0)
+                self.assertEqual(stored, ())
+                self.assertEqual(output.getvalue().count("robot> Hello again."), 2)
+                self.assertEqual(
+                    errors.getvalue(), "memory> automatic capture skipped safely\n"
+                )
+
+    @patch("oline_hri.cli.OfflineSpeechRecognizer")
+    @patch("oline_hri.cli.OllamaClient")
+    def test_voice_chat_retries_no_speech_and_sends_only_normalized_text(
+        self, client_class, recognizer_class
+    ) -> None:
+        client_class.return_value.chat.return_value = chat_result("Hi by voice!")
+        recognizer_class.return_value.listen.side_effect = (
+            NoSpeechDetected("private audio detail"),
+            transcription("Normalized microphone text."),
+            KeyboardInterrupt(),
+        )
+        output = StringIO()
+        errors = StringIO()
+
+        with patch("oline_hri.cli.ConversationRouter") as router_class:
+            router_class.return_value.route.return_value = routing_result()
+            result = main(
+                ["chat", "--voice"],
+                stdout=output,
+                stderr=errors,
+            )
+
+        self.assertEqual(result, 0)
+        self.assertIn("Offline voice chat", output.getvalue())
+        self.assertIn("you> Normalized microphone text.", output.getvalue())
+        self.assertIn("robot> Hi by voice!", output.getvalue())
+        self.assertEqual(
+            errors.getvalue(),
+            "speech> no usable speech detected; please try again\n",
+        )
+        self.assertNotIn("private", errors.getvalue())
+        self.assertEqual(client_class.return_value.unload_all.call_count, 4)
+        messages = client_class.return_value.chat.call_args.args[1]
+        self.assertEqual(messages[-1].content, "Normalized microphone text.")
+
+    @patch("oline_hri.cli.OfflineSpeechRecognizer")
+    @patch("oline_hri.cli.OllamaClient")
+    def test_voice_interrupt_during_generation_unloads_without_a_traceback(
+        self, client_class, recognizer_class
+    ) -> None:
+        recognizer_class.return_value.listen.return_value = transcription()
+        client_class.return_value.chat.side_effect = KeyboardInterrupt()
+
+        with patch("oline_hri.cli.ConversationRouter") as router_class:
+            router_class.return_value.route.return_value = routing_result()
+            result = main(
+                ["chat", "--voice"],
+                stdout=StringIO(),
+                stderr=StringIO(),
+            )
+
+        self.assertEqual(result, 0)
+        self.assertEqual(client_class.return_value.unload_all.call_count, 2)
+
+    @patch("oline_hri.cli.OfflineSpeechRecognizer")
+    @patch("oline_hri.cli.OllamaClient")
+    def test_voice_interrupt_during_setup_is_clean_and_unloads(
+        self, client_class, recognizer_class
+    ) -> None:
+        recognizer_class.side_effect = KeyboardInterrupt()
+        errors = StringIO()
+
+        result = main(
+            ["chat", "--voice"],
+            stdout=StringIO(),
+            stderr=errors,
+        )
+
+        self.assertEqual(result, 130)
+        self.assertEqual(errors.getvalue(), "voice interrupted\n")
+        client_class.return_value.unload_all.assert_called_once_with()
 
     def test_invalid_config_returns_nonzero(self) -> None:
         errors = StringIO()
@@ -235,6 +672,87 @@ class CliTests(unittest.TestCase):
         self.assertIn("robot> Hi!", output.getvalue())
 
     @patch("oline_hri.cli.OllamaClient")
+    def test_interactive_chat_can_remember_ten_lines_then_recall_a_statement(
+        self, client_class
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            config_path = memory_config(directory)
+            route_outputs = iter(routing_generations(memory_required=True))
+            calls = 0
+
+            def respond(model, messages, **kwargs):
+                nonlocal calls
+                calls += 1
+                if calls <= 2:
+                    return next(route_outputs)
+                allowed_ids = tuple(
+                    kwargs["response_format"]["properties"]["memory_used"]
+                    ["items"]["enum"]
+                )
+                return authorized_chat_result(
+                    "You prefer jasmine tea without sugar.",
+                    allowed_ids,
+                )
+
+            client_class.return_value.chat.side_effect = respond
+            output = StringIO()
+            errors = StringIO()
+
+            result = main(
+                ["--config", str(config_path), "chat", "--show-memory-ids"],
+                stdin=StringIO(
+                    "/remember preference I prefer jasmine tea without sugar.\n"
+                    "/remember routine I usually drink tea in the morning.\n"
+                    "/remember relationship Theo is my robotics project partner.\n"
+                    "/remember fact I own a blue bicycle.\n"
+                    "/remember preference I prefer concise answers.\n"
+                    "/remember routine My robotics meetings are Tuesday mornings.\n"
+                    "/remember event I completed a sensor prototype today.\n"
+                    "/remember fact My desk plant is named Fern.\n"
+                    "/remember preference I prefer a quiet workspace.\n"
+                    "/remember event I plan to travel on Friday.\n"
+                    "/memories\n"
+                    "What kind of tea do I prefer?\n"
+                    "/exit\n"
+                ),
+                stdout=output,
+                stderr=errors,
+            )
+
+            config = load_config(config_path)
+            stored = MemoryStore(
+                config.memory.database_path,
+                profile_id=config.memory.profile_id,
+            ).list_memories()
+
+        self.assertEqual(result, 0)
+        self.assertEqual(len(stored), 10)
+        tea = next(
+            item
+            for item in stored
+            if item.canonical_text == "I prefer jasmine tea without sugar."
+        )
+        self.assertIsNotNone(tea.retention_until)
+        self.assertEqual(output.getvalue().count("robot> Remembered "), 10)
+        self.assertIn("[preference]", output.getvalue())
+        self.assertIn(
+            "robot> You prefer jasmine tea without sugar.",
+            output.getvalue(),
+        )
+        self.assertIn(tea.id, errors.getvalue())
+        generation_messages = client_class.return_value.chat.call_args_list[2].args[1]
+        memory_messages = [
+            message
+            for message in generation_messages
+            if "PERSONAL_MEMORY_DATA=" in message.content
+        ]
+        self.assertEqual(len(memory_messages), 1)
+        self.assertIn(
+            "You prefer jasmine tea without sugar.",
+            memory_messages[0].content,
+        )
+
+    @patch("oline_hri.cli.OllamaClient")
     def test_show_route_reports_decision_before_generation(
         self, client_class
     ) -> None:
@@ -244,17 +762,17 @@ class CliTests(unittest.TestCase):
             (
                 *routing_generations(model_size="large"),
                 authorized_chat_result(
-                    "Routed answer.", (), model="qwen3:4b"
+                    "Routed answer.", (), model="qwen3:1.7b"
                 ),
             )
         )
 
         def respond(*args, **kwargs):
             result = next(calls)
-            if result.model == "qwen3:4b":
+            if result.model == "qwen3:1.7b":
                 self.assertEqual(
                     errors.getvalue(),
-                    "route> model_size=large selected_generator=qwen3:4b "
+                    "route> model_size=large selected_generator=qwen3:1.7b "
                     "memory_required=false\n",
                 )
             return result
@@ -276,7 +794,7 @@ class CliTests(unittest.TestCase):
         self.assertEqual(output.getvalue(), "Routed answer.\n")
         self.assertEqual(
             errors.getvalue(),
-            "route> model_size=large selected_generator=qwen3:4b "
+            "route> model_size=large selected_generator=qwen3:1.7b "
             "memory_required=false\n",
         )
 
@@ -287,7 +805,7 @@ class CliTests(unittest.TestCase):
         client_class.return_value.chat.side_effect = (
             *routing_generations(model_size="large"),
             authorized_chat_result(
-                "Routed answer.", (), model="qwen3:4b"
+                "Routed answer.", (), model="qwen3:1.7b"
             ),
         )
         output = StringIO()
@@ -309,7 +827,7 @@ class CliTests(unittest.TestCase):
         self.assertEqual(output.getvalue(), "Routed answer.\n")
         self.assertEqual(
             errors.getvalue(),
-            "route> model_size=large selected_generator=qwen3:4b "
+            "route> model_size=large selected_generator=qwen3:1.7b "
             "memory_required=false\n"
             'memory> {"retrieved_ids":[],"supplied_ids":[],'
             '"model_used_ids":[]}\n',
@@ -371,7 +889,7 @@ class CliTests(unittest.TestCase):
     ) -> None:
         for model_size, selected_model in (
             ("small", "qwen3:0.6b"),
-            ("large", "qwen3:4b"),
+            ("large", "qwen3:1.7b"),
         ):
             with self.subTest(model_size=model_size):
                 client = client_class.return_value
@@ -411,8 +929,12 @@ class CliTests(unittest.TestCase):
                     "response_format"
                 ]
                 self.assertEqual(
-                    set(memory_route_format["properties"]),
-                    {"memory_required"},
+                    list(memory_route_format["properties"]),
+                    ["form", "memory_required"],
+                )
+                self.assertEqual(
+                    memory_route_format["required"],
+                    ["form", "memory_required"],
                 )
                 self.assertEqual(
                     set(model_route_format["properties"]),
@@ -584,6 +1106,7 @@ class CliTests(unittest.TestCase):
 
             self.assertEqual(result, 0)
             self.assertTrue(first_id.startswith("mem_"))
+            self.assertIn("retained until:", remembered_output.getvalue())
 
             listed_output = StringIO()
             result = main(
@@ -692,6 +1215,33 @@ class CliTests(unittest.TestCase):
             )
             self.assertEqual(result, 0)
             self.assertEqual(empty_output.getvalue().strip(), "no memories")
+
+    def test_memory_prune_removes_legacy_records_older_than_seven_days(
+        self,
+    ) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            config_path = memory_config(directory)
+            config = load_config(config_path)
+            old_clock = lambda: datetime.now(timezone.utc) - timedelta(days=8)
+            old_item = MemoryStore(
+                config.memory.database_path,
+                profile_id=config.memory.profile_id,
+                clock=old_clock,
+            ).remember("Old temporary memory.", kind="fact")
+            output = StringIO()
+
+            result = main(
+                ["--config", str(config_path), "memory", "prune"],
+                stdout=output,
+            )
+
+            remaining = MemoryStore(
+                config.memory.database_path,
+                profile_id=config.memory.profile_id,
+            ).list_memories(include_inactive=True)
+        self.assertEqual(result, 0)
+        self.assertEqual(output.getvalue(), "pruned 1 expired memory record(s)\n")
+        self.assertNotIn(old_item.id, {item.id for item in remaining})
 
     @patch("oline_hri.cli.OllamaClient")
     def test_memory_input_is_interactive_and_does_not_call_ollama(
@@ -870,7 +1420,8 @@ class CliTests(unittest.TestCase):
         lines = output.getvalue().splitlines()
         self.assertEqual(
             lines[0],
-            "COSINE_SCORE\tID\tSTATUS\tKIND\tSENSITIVITY\tCREATED\tTEXT",
+            "COSINE_SCORE\tID\tSTATUS\tKIND\tSENSITIVITY\tCREATED\t"
+            "RETAINED_UNTIL\tTEXT",
         )
         self.assertIn(tea_id, lines[1])
         self.assertEqual(len(lines), 2)
@@ -939,7 +1490,7 @@ class CliTests(unittest.TestCase):
         self.assertEqual(
             lines[0],
             "FUSED_SCORE\tKEYWORD_POS\tSEMANTIC_POS\tID\tSTATUS\tKIND\t"
-            "SENSITIVITY\tCREATED\tTEXT",
+            "SENSITIVITY\tCREATED\tRETAINED_UNTIL\tTEXT",
         )
         self.assertIn(f"\t1\t1\t{memory_id}\t", lines[1])
         self.assertEqual(len(lines), 2)

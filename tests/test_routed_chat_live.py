@@ -11,6 +11,7 @@ from oline_hri.embedding import BgeOnnxEmbedder
 from oline_hri.memory import MemoryStore
 from oline_hri.ollama import ChatMessage, OllamaClient
 from oline_hri.retrieval import HybridRetriever
+from oline_hri.relationships import missing_user_relationship
 from oline_hri.routing import ConversationRouter, RouteDecision
 
 
@@ -35,6 +36,8 @@ class LiveRoutedChatTests(unittest.TestCase):
         cases = (
             "Who is Theo to me?",
             "How do I know Theo?",
+            "Do you know who rina is?",
+            "do you knwo who rina is",
             "What is my preferred meeting time for the robotics project?",
             "When do I usually want robotics project meetings?",
         )
@@ -45,6 +48,16 @@ class LiveRoutedChatTests(unittest.TestCase):
                     self.router.route(query).decision,
                     RouteDecision(True, "small"),
                 )
+
+    def test_self_contained_emotional_disclosure_skips_memory_and_is_small(
+        self,
+    ) -> None:
+        query = "today i talked to rina , i am so stressed after talking to her "
+
+        self.assertEqual(
+            self.router.route(query).decision,
+            RouteDecision(False, "small"),
+        )
 
     def test_complex_general_planning_skips_memory_and_uses_large_model(
         self,
@@ -193,6 +206,7 @@ class LiveRoutedChatTests(unittest.TestCase):
                 Path(directory) / "memory.sqlite3",
                 profile_id="fictional_live_test",
                 embedder=embedder,
+                retention_days=self.config.memory.retention_days,
             )
             item = store.remember(
                 "User prefers jasmine tea without sugar.",
@@ -204,6 +218,7 @@ class LiveRoutedChatTests(unittest.TestCase):
                 router=self.router,
                 retriever=HybridRetriever(store),
                 small_model=self.config.ollama.small_model,
+                general_large_model=self.config.ollama.general_large_model,
                 large_model=self.config.ollama.large_model,
                 context_length=self.config.generation.context_length,
                 max_output_tokens=self.config.generation.max_output_tokens,
@@ -211,6 +226,7 @@ class LiveRoutedChatTests(unittest.TestCase):
 
             reply = conversation.send("What kind of tea do I prefer?")
 
+        self.assertIsNotNone(item.retention_until)
         self.assertEqual(reply.route.decision, RouteDecision(True, "small"))
         self.assertEqual(
             tuple(match.memory.id for match in reply.retrieval), (item.id,)
@@ -232,6 +248,7 @@ class LiveRoutedChatTests(unittest.TestCase):
             router=self.router,
             retriever=UnexpectedRetriever(),
             small_model=self.config.ollama.small_model,
+            general_large_model=self.config.ollama.general_large_model,
             large_model=self.config.ollama.large_model,
             context_length=self.config.generation.context_length,
             max_output_tokens=self.config.generation.max_output_tokens,
@@ -243,6 +260,62 @@ class LiveRoutedChatTests(unittest.TestCase):
         self.assertEqual(reply.retrieval, ())
         self.assertEqual(reply.response.memory_used, ())
         self.assertEqual(reply.generation.model, self.config.ollama.small_model)
+
+    def test_emotional_disclosure_then_lowercase_relationship_recall(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            embedder = BgeOnnxEmbedder(
+                self.config.embedding.model_directory,
+                self.config.embedding.intra_op_threads,
+            )
+            store = MemoryStore(
+                Path(directory) / "memory.sqlite3",
+                profile_id="fictional_rina_session_test",
+                embedder=embedder,
+            )
+            rina = store.remember(
+                "Rina is the user's fictional sensor-calibration partner.",
+                kind="relationship",
+            )
+            store.remember(
+                "The user prefers sensor-calibration sessions on Friday "
+                "afternoons.",
+                kind="routine",
+            )
+            store.remember(
+                "The user prefers plans containing exactly four short "
+                "numbered steps.",
+                kind="preference",
+            )
+            conversation = Conversation(
+                self.client,
+                system_prompt=self.config.conversation.system_prompt,
+                router=self.router,
+                retriever=HybridRetriever(store),
+                small_model=self.config.ollama.small_model,
+                general_large_model=self.config.ollama.general_large_model,
+                large_model=self.config.ollama.large_model,
+                context_length=self.config.generation.context_length,
+                max_output_tokens=self.config.generation.max_output_tokens,
+            )
+
+            disclosure = conversation.send(
+                "today i talked to rina , i am so stressed after talking to "
+                "her "
+            )
+            reply = conversation.send("do you knwo who rina is")
+
+        self.assertEqual(
+            disclosure.route.decision, RouteDecision(False, "small")
+        )
+        self.assertEqual(disclosure.response.memory_used, ())
+        self.assertEqual(reply.route.decision, RouteDecision(True, "small"))
+        self.assertEqual(reply.memory_diagnostics.supplied_ids, (rina.id,))
+        self.assertEqual(reply.response.memory_used, (rina.id,))
+        self.assertFalse(
+            missing_user_relationship(
+                rina.canonical_text, reply.response.speech
+            )
+        )
 
 
 if __name__ == "__main__":
