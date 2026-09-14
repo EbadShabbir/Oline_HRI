@@ -1,0 +1,173 @@
+{
+  "approved": true,
+  "checks": 112,
+  "completion_link_exists_but_final_seal_pending": true,
+  "condition_table_rows_verified": 12,
+  "content_findings": [
+    "All new condition totals, known-recall denominators, access reductions, mean-time direction and unfavorable p95/category outcomes match approved report and independently audited numbers.",
+    "Known authorized abstentions receive no recall credit; no general quality preservation, population equivalence or uniform speed claim is made.",
+    "Six policies/model combinations, fresh cases/history, preapplied fixed lifecycle snapshots, separate authorization, sole-model controls and decoding settings are represented.",
+    "Eight RAM-floor interruptions,26 physical fragments,35 rejected admissions,24 helper rewrites, retained failed analysis/renderer artifacts and live-propagation scope are disclosed.",
+    "Independent blinded reviews/adjudication and numeric/report audits are documented; human validation remains explicitly pending.",
+    "Reproduction commands name existing entry points and sealed inputs; no commands were re-executed for this documentation-only review."
+  ],
+  "created_at": "2026-09-13T19:10:22.289999+00:00",
+  "errors": [],
+  "human_validation": "pending",
+  "links": [
+    {
+      "document": "results.md",
+      "target": "evaluation/independent_retrieval_20260913/report_reviewed_v3/report.md"
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/independent_retrieval_20260913/report_reviewed_v3/tables.md"
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/independent_retrieval_20260913/numeric_audit_v1/numeric_audit.json"
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/independent_retrieval_20260913/analysis_audit_correction_v1.md"
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/independent_retrieval_20260913/README.md"
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/independent_retrieval_20260913/report_reviewed_v3/answers.md"
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/independent_retrieval_20260913/reviews_verified_v1/review_agreement.json"
+    },
+    {
+      "document": "developments.MD",
+      "target": "evaluation/independent_retrieval_20260913/report_reviewed_v3/report.md"
+    },
+    {
+      "document": "developments.MD",
+      "target": "evaluation/independent_retrieval_20260913/README.md"
+    },
+    {
+      "document": "developments.MD",
+      "target": "evaluation/independent_retrieval_20260913/analysis_audit_correction_v1.md"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "report_reviewed_v3/report.md"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "report_reviewed_v3/tables.md"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "report_reviewed_v3/answers.md"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "numeric_audit_v1/numeric_audit.json"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "reviews/final_report_review_v1.json"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "frozen_v1/protocol.md"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "frozen_v1/runtime.json"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "frozen_v1/references.json"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "frozen_v1/freeze.json"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "../../scripts/independent_retrieval_adapter.py"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "../../scripts/run_independent_retrieval.py"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "../../scripts/independent_retrieval_supervisor.py"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "../../scripts/independent_retrieval_continuation.py"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "run_v9/batch_finish.json"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "reviews/final_collection_preflight_review.json"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "analysis_audit_correction_v1.md"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "report_reviewed_v1/failure.json"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "reviews_verified_v1/review_agreement.json"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "documentation_before_final_v1/"
+    },
+    {
+      "document": "evaluation/independent_retrieval_20260913/README.md",
+      "target": "completion_v1/"
+    }
+  ],
+  "links_verified": 30,
+  "prior_documentation": {
+    "developments.MD": {
+      "appended_heading": "## Independent retrieval experiment completed \u2014 2026-09-13",
+      "archived_before_sha256": "723b24e9ea7818118174ed09f4280aac7030b82ee3c7b63d5edec08d2bb2095f",
+      "current_sha256": "59df88b5359e6173d3e4b1ceb046304472949a9a9c07ba1e039603314f43486b",
+      "navigation_after": "Latest completed evaluation: [independent personal-memory retrieval, 13 September 2026](evaluation/independent_retrieval_20260913/README.md). All 864 attempts are recorded; selective retrieval reduces unnecessary access, with model-dependent quality and timing tradeoffs. Human validation is pending.",
+      "navigation_before": "Latest completed evaluation: [routing overhead, 12 September 2026](evaluation/routing_overhead_20260912/README.md). All 576 turns are recorded; the report separates measured speed from reviewed answer quality.",
+      "previous_body_preserved_exactly_except_navigation_line_3": true
+    },
+    "results.md": {
+      "appended_heading": "## Independent personal-memory retrieval \u2014 13 September 2026",
+      "archived_before_sha256": "c1c5e83555a6e0774ff29cc99f0bf7141c4466191ec7834cb4b946b2d48d69af",
+      "current_sha256": "316e989397d3b3a830b22dfce79a9acfc54461b076b9c993016784ade1088ac3",
+      "navigation_after": "Latest completed evaluation: [independent personal-memory retrieval, 13 September 2026](evaluation/independent_retrieval_20260913/README.md). All 864 attempts are recorded; selective retrieval reduces unnecessary access, with model-dependent quality and timing tradeoffs. Human validation is pending.",
+      "navigation_before": "Latest completed evaluation: [routing overhead, 12 September 2026](evaluation/routing_overhead_20260912/README.md). All 576 turns are recorded; the report separates measured speed from reviewed answer quality.",
+      "previous_body_preserved_exactly_except_navigation_line_3": true
+    }
+  },
+  "resolved_findings": [
+    "results.md latest evaluation navigation initially pointed at 12 September; it now correctly points at completed13 September experiment. Both files preserve prior body bytes exactly except the documented line3 latest-navigation update."
+  ],
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Only newly appended results/development sections, updated latest-navigation lines and new experiment README; byte-level preservation checks on archived prior documentation. No semantic regrading.",
+  "sha256": {
+    "developments.MD": "59df88b5359e6173d3e4b1ceb046304472949a9a9c07ba1e039603314f43486b",
+    "evaluation/independent_retrieval_20260913/README.md": "b0c5f524167c38d819ce4de7c15d6ed9da88cfe61e1318928252dbc49f8fd935",
+    "evaluation/independent_retrieval_20260913/analysis_reviewed_v1/seal.json": "47ff6211d065d97505e8869c7a980e04b94843d8d481aa03463eccff7f2fad91",
+    "evaluation/independent_retrieval_20260913/documentation_before_final_v1/seal.json": "3ddd2cd71b57f7e06713a032849b3e90643b63c57de080215ccd0afee5719a8b",
+    "evaluation/independent_retrieval_20260913/numeric_audit_v1/seal.json": "d43729c7724de91e2697668ac036c972df26cf9e15155161f085bb98b91c833d",
+    "evaluation/independent_retrieval_20260913/report_reviewed_v3/seal.json": "ecf337777add258006b0160a5cbe36445f0f883bc1745bea166bcfd067250d1a",
+    "evaluation/independent_retrieval_20260913/reviews/final_report_review_v1.json": "5ee8591ee31ec683a2863b8ae53de6ad5469787d4b9de253f1789e8178be89d1",
+    "results.md": "316e989397d3b3a830b22dfce79a9acfc54461b076b9c993016784ade1088ac3"
+  }
+}

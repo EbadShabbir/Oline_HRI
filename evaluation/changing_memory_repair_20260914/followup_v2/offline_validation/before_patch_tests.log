@@ -1,0 +1,320 @@
+test_conversation_delivers_supported_replacement_with_real_validators (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) ... ERROR
+test_conversation_rejects_past_or_wrong_person_without_composition (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) ... ok
+test_current_delivery_requires_the_same_present_person_role_and_domain (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) ... test_multiple_cited_current_people_cannot_silently_lose_one (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) ... ok
+test_snapshot_change_still_withholds_and_missing_record_still_abstains (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) ... ok
+test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... ERROR
+test_noncurrent_relationship_query_keeps_legacy_behavior (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... ok
+test_optional_filters_preserve_existing_historical_lookup (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... ERROR
+test_query_link_accepts_present_tense_without_literal_current (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... test_query_link_cannot_borrow_role_domain_or_named_owner (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... 
+======================================================================
+ERROR: test_conversation_delivers_supported_replacement_with_real_validators (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 148, in test_conversation_delivers_supported_replacement_with_real_validators
+    reply = conversation.send(QUERY)
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/src/oline_hri/timing.py", line 97, in wrapped
+    return function(*args, **kwargs)
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/src/oline_hri/conversation.py", line 783, in send
+    return self._send(user_text)
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/src/oline_hri/conversation.py", line 1154, in _send
+    _require_requested_named_collaborator(response, supplied, text)
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/src/oline_hri/conversation.py", line 2156, in _require_requested_named_collaborator
+    raise ResponseValidationError("robot response lacks evidence for the requested collaborator")
+oline_hri.response.ResponseValidationError: robot response lacks evidence for the requested collaborator
+
+======================================================================
+ERROR: test_current_delivery_requires_the_same_present_person_role_and_domain (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) (speech='Your walking partner is Niko Fern.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 127, in test_current_delivery_requires_the_same_present_person_role_and_domain
+    _require_requested_named_collaborator(response, (hybrid_match(item),), QUERY)
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/src/oline_hri/conversation.py", line 2156, in _require_requested_named_collaborator
+    raise ResponseValidationError("robot response lacks evidence for the requested collaborator")
+oline_hri.response.ResponseValidationError: robot response lacks evidence for the requested collaborator
+
+======================================================================
+ERROR: test_current_delivery_requires_the_same_present_person_role_and_domain (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) (speech='Niko Fern is your walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 127, in test_current_delivery_requires_the_same_present_person_role_and_domain
+    _require_requested_named_collaborator(response, (hybrid_match(item),), QUERY)
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/src/oline_hri/conversation.py", line 2156, in _require_requested_named_collaborator
+    raise ResponseValidationError("robot response lacks evidence for the requested collaborator")
+oline_hri.response.ResponseValidationError: robot response lacks evidence for the requested collaborator
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern was your walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Your walking partner was Niko Fern.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='You and Niko Fern were walking partners.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern was your current walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is your former walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is your previous walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is your past walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is your old walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is not your walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Maybe Niko Fern is your walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text="Niko Fern is Lina's walking partner.")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Elora Vale is your walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is your chess partner. You enjoy walking.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is your walking friend. Your partner is Elora Vale.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 71, in test_current_lookup_rejects_past_former_negative_and_other_person
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Your walking partner is Niko Fern.', addressed=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 41, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Your walking partner is Niko Fern.', addressed=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 41, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is your walking partner.', addressed=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 41, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is your walking partner.', addressed=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 41, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is your current walking partner.', addressed=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 41, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern is your current walking partner.', addressed=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 41, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern, your walking partner, can help.', addressed=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 41, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='Niko Fern, your walking partner, can help.', addressed=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 41, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='You and Niko Fern are walking partners.', addressed=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 41, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (text='You and Niko Fern are walking partners.', addressed=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 41, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 45, in test_current_source_and_addressed_speech_are_bound_to_one_witness
+    self.assertTrue(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+ERROR: test_optional_filters_preserve_existing_historical_lookup (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 28, in test_optional_filters_preserve_existing_historical_lookup
+    self.assertFalse(has_named_user_relationship(
+TypeError: has_named_user_relationship() got an unexpected keyword argument 'current_only'
+
+======================================================================
+FAIL: test_query_link_accepts_present_tense_without_literal_current (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (query='Returning to my earlier walking partner information, who is my current walking partner?', source='Your walking partner is Niko Fern.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 83, in test_query_link_accepts_present_tense_without_literal_current
+    self.assertTrue(_collaborator_request_link(query, source))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_query_link_accepts_present_tense_without_literal_current (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (query='Who is my current walking partner?', source='Niko Fern is your walking partner.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 83, in test_query_link_accepts_present_tense_without_literal_current
+    self.assertTrue(_collaborator_request_link(query, source))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_query_link_accepts_present_tense_without_literal_current (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (query='Who is my current garden project partner?', source='Your garden project partner is Rina Moss.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 83, in test_query_link_accepts_present_tense_without_literal_current
+    self.assertTrue(_collaborator_request_link(query, source))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_query_link_accepts_present_tense_without_literal_current (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (query='Identify my current garden-project partner.', source='Rina Moss is your partner on the garden project.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 83, in test_query_link_accepts_present_tense_without_literal_current
+    self.assertTrue(_collaborator_request_link(query, source))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_query_link_cannot_borrow_role_domain_or_named_owner (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (source='Your current walking partner was Niko Fern.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 99, in test_query_link_cannot_borrow_role_domain_or_named_owner
+    self.assertIs(_collaborator_request_link(QUERY, source), expected)
+AssertionError: True is not False
+
+======================================================================
+FAIL: test_query_link_cannot_borrow_role_domain_or_named_owner (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (source='Niko Fern is your friend. Your current walking partner is unknown.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 99, in test_query_link_cannot_borrow_role_domain_or_named_owner
+    self.assertIs(_collaborator_request_link(QUERY, source), expected)
+AssertionError: True is not False
+
+======================================================================
+FAIL: test_query_link_cannot_borrow_role_domain_or_named_owner (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (source='Niko Fern is your chess partner. Your current walking routine is pleasant.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 99, in test_query_link_cannot_borrow_role_domain_or_named_owner
+    self.assertIs(_collaborator_request_link(QUERY, source), expected)
+AssertionError: True is not False
+
+======================================================================
+FAIL: test_query_link_cannot_borrow_role_domain_or_named_owner (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) (source="Niko Fern is Lina's current walking partner.")
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_current_relationship_repair.py", line 99, in test_query_link_cannot_borrow_role_domain_or_named_owner
+    self.assertIs(_collaborator_request_link(QUERY, source), expected)
+AssertionError: True is not False
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.043s
+
+FAILED (failures=8, errors=29)

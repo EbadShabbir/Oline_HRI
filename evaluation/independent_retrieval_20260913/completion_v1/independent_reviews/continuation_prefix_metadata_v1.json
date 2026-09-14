@@ -1,0 +1,43 @@
+{
+  "auditor_sha256": "12b4f1442dd5816d23da98019eabed6e236ebdbe438d22e37c8ac6d21578b339",
+  "created_at": "2026-09-13T17:02:38.317953+00:00",
+  "fragments": [
+    {
+      "attempted": 48,
+      "slot": 1,
+      "status": "complete"
+    },
+    {
+      "attempted": 48,
+      "slot": 2,
+      "status": "complete"
+    },
+    {
+      "attempted": 48,
+      "slot": 3,
+      "status": "complete"
+    },
+    {
+      "attempted": 13,
+      "slot": 4,
+      "status": "interrupted"
+    }
+  ],
+  "freeze_seal_sha256": "fda698a52067906e3a071c36dee68d3abb579f5b9c199533cd731708a717a9fd",
+  "human_validation": "pending",
+  "next_case_id": "ir_04_04",
+  "next_scheduled_index": 14,
+  "next_slot": 4,
+  "observed_attempts": 157,
+  "original_sources_unchanged": 44,
+  "passed": true,
+  "preserved_rejected_admissions": 11,
+  "prior_run_seal_sha256": "e2e0afa7c8a645bfd8cd5060dcc1d825058f8db4acee28e615b798d692b08a9c",
+  "remaining_attempts": 707,
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Independent metadata arithmetic and seals; no answer text printed or semantically judged.",
+  "status_counts": {
+    "interrupted": 1,
+    "ok": 156
+  }
+}

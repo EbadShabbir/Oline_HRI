@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-14T13:48:01.522369+00:00",
+  "reviewer": "assistant /root/lifecycle_routing_fix",
+  "review_type": "independent code review addendum; structural trace parsing integration only",
+  "status": "passed_with_original_scope_limits",
+  "prior_review": "code_review_v1.json",
+  "prior_review_sha256": "dbd221d07ffce06cfb3ae3190f7c55a8c24915c5010e1e7ef55fa8ed94870a4a",
+  "prior_review_preserved": true,
+  "integration": "Register verified_location with exactly one supplied and cited record in evaluation_scoring._cascade constraint_bounds.",
+  "production_diff_check": "evaluation_scoring.py exactly matches the original frozen source after removing the one added verified_location bounds entry.",
+  "previous_review_source_changes": [
+    "tests/test_lifecycle_history_repair.py"
+  ],
+  "source_sha256": {
+    "src/oline_hri/conversation.py": "0717344dbf1ae1f8cfa33914a1c2e471513bc71cdf6308fa0aebd9f3c18dabe6",
+    "src/oline_hri/grounded_composition.py": "52e458baa35b59aa7bc00736daf7a2e8b98b38a0fae1ce77b872fcf40eff7507",
+    "src/oline_hri/memory_evidence.py": "c0b1b0744f022fd593501e7a7310040309b4d198ba56435643ba14f2645d22e7",
+    "src/oline_hri/relationships.py": "759d2a6c671581ffd5db2b07e14a89b81d90fc58ed5fd3625bcf6ec9860b80f6",
+    "src/oline_hri/routing.py": "2604cc1a386a7f4e40f9528794423f46a4976501394c8e17d3479145e83f8bd1",
+    "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+    "tests/test_lifecycle_history_repair.py": "3e9392b94e4fe9bdbc5403af453acd0f1eeae7f6ba07cd82576dcf22b1be0d63",
+    "tests/test_memory_lifecycle_validation.py": "d22b48a23278bf4500588d7f96dc1b02363114815e96fd16898539428e11912f",
+    "tests/test_routing_lifecycle_revalidation.py": "92f2c13819d03eb1e1ed5ee8559b2fe0fb47d15f2791ae6740ea56f78f515182",
+    "tests/test_routing.py": "354c394cef9a0b3e4f2a7dc7d5ba0818604f5ff1c874fdb32b881799008feb9a",
+    "tests/test_memory_intent_regressions.py": "9fdc3b50d8f152002dff43001da1ec0daf1a98fec85f46cadabdbbd5b3f73de6",
+    "tests/test_lightweight_routing.py": "71b69e2e349904dc56e32ed578d9ff0e1f978c6967129ec97c89e4d9c19ce120",
+    "tests/test_pair_remediation.py": "32be3dfd654a35fc3b14395c69e394af4b1a48f0b268a8ba40ee31041376fbc3",
+    "src/oline_hri/evaluation_scoring.py": "f73f7f01b89a5a3d83ac2543fdb585a120c19bccf94062e8c38bf498a8ca6a09",
+    "tests/test_evaluation_scoring.py": "0b7d39b3ccfaf939745eac1b4913c9fc2ea587e7212d5e53fd506bdd6b15ade4"
+  },
+  "validation": {
+    "command": "PYTHONPATH=src:tests .venv/bin/python -m unittest test_lifecycle_history_repair test_evaluation_scoring -v",
+    "exit_code": 0,
+    "tests_passed": 33,
+    "new_structural_regression": "Accept one-record verified_location; reject no retrieval, zero or multiple supplied records, and unknown constraint.",
+    "additional_parser_checks": [
+      {
+        "case": "missing_citation",
+        "rejected": true
+      },
+      {
+        "case": "privacy_constraint",
+        "rejected": true
+      },
+      {
+        "case": "unknown_constraint",
+        "rejected": true
+      }
+    ],
+    "positive_parser_roundtrip": true,
+    "live_inference": false,
+    "experimental_answers_scored": false
+  },
+  "conclusion": "The new answer constraint remains parsable without weakening retrieval, citation cardinality, privacy, or unknown-constraint checks. No blocking finding for this integration.",
+  "limits": [
+    "Routing still uses bounded English heuristics and model classification for unsupported paraphrases; this is not universal non-disclosure assurance.",
+    "Prior conversation lacks per-record provenance; unresolved pronoun-only recall may abstain after safe revalidation.",
+    "The metadata consistency check declines the extractive shortcut; this code review does not claim all possible contradictory source data is automatically corrected.",
+    "Offline fake transports test control flow and validation, not live generation quality.",
+    "The reviewer implemented routing changes and therefore does not provide independent authorship separation for that file."
+  ],
+  "human_code_validation": "pending",
+  "full_suite_result": "Not asserted by this addendum; root separately owns the full-suite run."
+}

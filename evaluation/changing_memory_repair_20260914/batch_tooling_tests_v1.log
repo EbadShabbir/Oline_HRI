@@ -1,0 +1,11 @@
+test_conflicting_duplicate_scores_rejected (test_batch_memory_reviews.BatchReviewBindingTests) ... ok
+test_gaps_and_reviewer_identity_changes_rejected (test_batch_memory_reviews.BatchReviewBindingTests) ... ok
+test_prepare_uses_only_selected_sealed_branches (test_batch_memory_reviews.BatchReviewBindingTests) ... ok
+test_rebinding_changes_only_identity_and_packet_hash (test_batch_memory_reviews.BatchReviewBindingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.103s
+
+OK
+{"output": "/tmp/clara-batch-review-offline-7c6sp5q_/prepared_batch", "scenarios": ["cm01"], "checkpoints": 24, "review_groups": 11, "packet_sha256": "5ea388617301f0627abe96ab5f62805dc35df1fb6068e3fad9b8a0f4414a945f"}
+{"output": "/tmp/clara-batch-review-offline-b9ve352f/bound", "final_groups": 2, "batches": 2, "reviewer_a": "offline-a", "reviewer_b": "offline-b"}

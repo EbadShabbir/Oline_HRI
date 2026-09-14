@@ -1,0 +1,11 @@
+test_correct_without_runtime_evidence_remains_separate_diagnostic (__main__.IndependentReportChecks.test_correct_without_runtime_evidence_remains_separate_diagnostic) ... ok
+test_csv_booleans_zero_and_missing_values_remain_distinct (__main__.IndependentReportChecks.test_csv_booleans_zero_and_missing_values_remain_distinct) ... ok
+test_distinct_request_wins_do_not_count_repeats_as_independent (__main__.IndependentReportChecks.test_distinct_request_wins_do_not_count_repeats_as_independent) ... ok
+test_interval_sign_units_and_undefined (__main__.IndependentReportChecks.test_interval_sign_units_and_undefined) ... ok
+test_known_caution_is_not_success_and_forbidden_is_not_clean_caution (__main__.IndependentReportChecks.test_known_caution_is_not_success_and_forbidden_is_not_clean_caution) ... ok
+test_unfavorable_and_null_results_are_reported_directly (__main__.IndependentReportChecks.test_unfavorable_and_null_results_are_reported_directly) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
+
+OK

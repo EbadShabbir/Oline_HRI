@@ -1,0 +1,99 @@
+...............................sssssssssss...........................................................................................................................................................................................ss................................................................................................................................................................................................................................................................................................................sss........................................................................................................................................................................................s...............................BATCH /tmp/tmpshrf41tj/run status=interrupted
+.SESSION 1/9 large r1
+SESSION 2/9 cascade r1
+SESSION 3/9 small r1
+SESSION 4/9 cascade r2
+SESSION 5/9 small r2
+SESSION 6/9 large r2
+SESSION 7/9 small r3
+SESSION 8/9 large r3
+SESSION 9/9 cascade r3
+BATCH /tmp/tmpnr6tmedl/run status=complete
+.SESSION 1/9 large r1
+BATCH /tmp/tmpp3pff7t5/run status=interrupted
+...SESSION 1/9 large r1
+BATCH /tmp/tmpm_c3j0_5/run status=interrupted
+....................................................................sssssssss...............................................EF.........................................................
+======================================================================
+ERROR: test_fixed_peer_is_rejected_before_http (test_routing_overhead_runner.RoutingOverheadRunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_overhead_runner.py", line 259, in test_fixed_peer_is_rejected_before_http
+    backend = runner.OverheadBackend(client, {}, SimpleNamespace(monitor=SimpleNamespace(violation=None)), (LARGE,))
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/run_routing_overhead.py", line 188, in chat
+    placement["models"] = list(_resident_models())
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/src/oline_hri/evaluation_model_pairs.py", line 636, in _resident_models
+    payload = _http_json("/api/ps")
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/src/oline_hri/evaluation_model_pairs.py", line 591, in _http_json
+    raise ModelPairEvaluationError("cannot reach local Ollama") from None
+oline_hri.evaluation_model_pairs.ModelPairEvaluationError: cannot reach local Ollama
+
+======================================================================
+FAIL: test_full_sequence_switching_accounting_and_fixed_system_isolation (test_routing_overhead_runner.RoutingOverheadRunnerTests) (arm='small')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_overhead_runner.py", line 117, in test_full_sequence_switching_accounting_and_fixed_system_isolation
+    self.assertEqual(run.finish["sequence_total_ns"], run.finish["startup_ns"] + sum(r["wall_ns"] for r in run.rows) + run.finish["sequence_gaps_ns"])
+AssertionError: 690061572 != 617610258
+
+======================================================================
+FAIL: test_full_sequence_switching_accounting_and_fixed_system_isolation (test_routing_overhead_runner.RoutingOverheadRunnerTests) (arm='large')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_overhead_runner.py", line 117, in test_full_sequence_switching_accounting_and_fixed_system_isolation
+    self.assertEqual(run.finish["sequence_total_ns"], run.finish["startup_ns"] + sum(r["wall_ns"] for r in run.rows) + run.finish["sequence_gaps_ns"])
+AssertionError: 707182328 != 629561292
+
+======================================================================
+FAIL: test_full_sequence_switching_accounting_and_fixed_system_isolation (test_routing_overhead_runner.RoutingOverheadRunnerTests) (arm='adaptive')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_overhead_runner.py", line 117, in test_full_sequence_switching_accounting_and_fixed_system_isolation
+    self.assertEqual(run.finish["sequence_total_ns"], run.finish["startup_ns"] + sum(r["wall_ns"] for r in run.rows) + run.finish["sequence_gaps_ns"])
+AssertionError: 792047536 != 726872073
+
+======================================================================
+FAIL: test_preturn_guard_failure_is_preserved_without_inference (test_routing_overhead_runner.RoutingOverheadRunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_overhead_runner.py", line 199, in test_preturn_guard_failure_is_preserved_without_inference
+    self.assertEqual(run.transport.requests, [])
+AssertionError: 'startup_begin' != 'turn_attempt'
+- startup_begin
++ turn_attempt
+
+
+======================================================================
+FAIL: test_replay_payload_mismatch_stops_at_durable_attempt_before_different_generation (test_routing_overhead_runner.RoutingOverheadRunnerTests) (boundary='arguments')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_overhead_runner.py", line 182, in test_replay_payload_mismatch_stops_at_durable_attempt_before_different_generation
+    self.assertIn("differ", replay.finish["failure"]["message"])
+AssertionError: 'differs' not found in 'diagnostic replay generation arguments differ from adaptive trace'
+
+======================================================================
+FAIL: test_transport_failure_and_interrupt_preserve_failed_turn_and_cleanup (test_routing_overhead_runner.RoutingOverheadRunnerTests) (error='transport')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_overhead_runner.py", line 215, in test_transport_failure_and_interrupt_preserve_failed_turn_and_cleanup
+    self.assertEqual(run.transport.resident, set())
+AssertionError: 'startup_begin' != 'turn_attempt'
+- startup_begin
++ turn_attempt
+
+
+======================================================================
+FAIL: test_transport_failure_and_interrupt_preserve_failed_turn_and_cleanup (test_routing_overhead_runner.RoutingOverheadRunnerTests) (error='interrupt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_overhead_runner.py", line 215, in test_transport_failure_and_interrupt_preserve_failed_turn_and_cleanup
+    self.assertEqual(run.transport.resident, set())
+AssertionError: 'startup_begin' != 'turn_attempt'
+- startup_begin
++ turn_attempt
+
+
+----------------------------------------------------------------------
+Ran 945 tests in 74.290s
+
+FAILED (failures=7, errors=1, skipped=26)

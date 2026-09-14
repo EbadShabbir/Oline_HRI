@@ -1,0 +1,21 @@
+{
+  "amendment": "v2 actual-generation-message evidence parser for stage diagnostics only",
+  "prepared_by": "/root/runtime_audit",
+  "created_at": "2026-09-14T12:19:54.103742+00:00",
+  "original_analyzer_sha256": "60709a1002f7537f8cfd8ea57e8c89052f7ba2e608ca4b36e275a0fc79c95215",
+  "amended_analyzer_sha256": "65181ee60ac1064ac00fd27d956236d92bac343829cb0f56263bd2dd55297e00",
+  "amendment_tests_sha256": "e66fbf539e4a19e61191cb56c924f7cc3e1d97a5de6fb8523b4fbbf08ace2b6a",
+  "frozen_runtime_source_files_unchanged": 41,
+  "runtime_changed": false,
+  "inference_performed": false,
+  "scoring_rubric_or_vote_semantics_changed": false,
+  "human_validation": "pending",
+  "independent_review": {
+    "reviewer": "/root",
+    "approved": true,
+    "received_before_seal": true,
+    "scope": "Separate analysis amendment only; not blinded answer review.",
+    "statement": "Root reviewed v2 diff and regression tests: parser is restricted to actual generation request tails, validates unique structured envelopes and preserves IDs, with AST check limiting change to diagnostics. Approved this separate analysis amendment; no need to rerun tests already passing.",
+    "final_analysis_requirement": "Resolve v1 and v2 against same sealed votes, retaining both outputs and comparing non-diagnostic fields exactly."
+  }
+}

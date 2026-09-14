@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "captured_at": "2026-09-11T15:47:08.245108+00:00",
+  "scope": "Read-only final device audit after 184 observed attempts and scheduler admission timeout; no configuration/process/swap changes",
+  "artifact_provenance": {
+    "original_before": {
+      "path": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911/before.json",
+      "sha256": "8861726e35273ae68c3481f7f46803cbcee8cd29f991873731e32923e9466462"
+    },
+    "cohort_before": {
+      "path": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/before.json",
+      "sha256": "2292daa4707834ec630fcee55f03248ee4ad3b909961753de21fcb7cee804a71"
+    },
+    "continued_schedule_finish": {
+      "path": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/continued_schedule_finish.json",
+      "sha256": "bde6175f6a5b63562ee0c8cc99e405a6ecde114b7fea09c2189e60e9160d2389"
+    },
+    "01_small_r1": {
+      "path": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/finish.json",
+      "sha256": "fe697874dca44d3e07e720a14e6bfcaf4edda5b8c7fcb7cddd1912937f65e64f"
+    },
+    "02_large_r1": {
+      "path": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/finish.json",
+      "sha256": "6418049dd6337f408459a8420725805b78cf8d3e58ec26698408947d2eff13ab"
+    },
+    "03_cascade_r1": {
+      "path": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/03_cascade_r1/finish.json",
+      "sha256": "2b8bf6700146cd0afa8204a7a376f92ff0a3ea8a02e1cb082bbe4f85558efc46"
+    },
+    "04_large_r2": {
+      "path": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/finish.json",
+      "sha256": "7bf572fe4615af544a8f64b36f538e0c0571f3f833115e3c9930087687b4454f"
+    }
+  },
+  "swap_baseline_provenance": {
+    "path": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/arc-capability-20260911/04_continuation_environment_after.json",
+    "sha256": "ddfa123dc24b9f3cf599a9c0f927be3a31def1c885d5116a4ee878fafd950cf6"
+  },
+  "original_before": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-11T14:38:55.684669+00:00",
+    "fan_pwm": 81,
+    "memory": {
+      "mem_total_kib": 7803236,
+      "mem_available_kib": 2770840,
+      "swap_total_kib": 3901608,
+      "swap_free_kib": 3406760,
+      "swap_used_kib": 494848
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 53.156,
+      "gpu-thermal": 52.781,
+      "soc0-thermal": 51.843,
+      "soc1-thermal": 51.781,
+      "soc2-thermal": 52.125,
+      "tj-thermal": 53.156
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "cohort_before": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-11T14:42:46.476420+00:00",
+    "fan_pwm": 84,
+    "memory": {
+      "mem_total_kib": 7803236,
+      "mem_available_kib": 2527652,
+      "swap_total_kib": 3901608,
+      "swap_free_kib": 3406760,
+      "swap_used_kib": 494848
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 52.75,
+      "gpu-thermal": 52.562,
+      "soc0-thermal": 51.437,
+      "soc1-thermal": 51.656,
+      "soc2-thermal": 51.843,
+      "tj-thermal": 52.75
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "session_finishes": {
+    "01_small_r1": {
+      "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+      "captured_at": "2026-09-11T14:44:52.406480+00:00",
+      "cleanup_errors": [],
+      "failure": null,
+      "fan_pwm": 113,
+      "guard_violation": null,
+      "memory": {
+        "mem_available_kib": 2214348,
+        "mem_total_kib": 7803236,
+        "swap_free_kib": 3407016,
+        "swap_total_kib": 3901608,
+        "swap_used_kib": 494592
+      },
+      "power_mode": "NV Power Mode: 15W\n0",
+      "reset_reason": "SYS_RESET_N",
+      "resident_models": [],
+      "status": "complete_with_errors",
+      "telemetry_reader_error": null,
+      "temperatures_c": {
+        "cpu-thermal": 60.5,
+        "gpu-thermal": 60.625,
+        "soc0-thermal": 58.718,
+        "soc1-thermal": 58.375,
+        "soc2-thermal": 59.593,
+        "tj-thermal": 60.625
+      },
+      "thermal_trip_events": {
+        "cpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "gpu": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    },
+    "02_large_r1": {
+      "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+      "captured_at": "2026-09-11T15:06:14.962369+00:00",
+      "cleanup_errors": [],
+      "failure": null,
+      "fan_pwm": 100,
+      "guard_violation": null,
+      "memory": {
+        "mem_available_kib": 2329432,
+        "mem_total_kib": 7803236,
+        "swap_free_kib": 3183272,
+        "swap_total_kib": 3901608,
+        "swap_used_kib": 718336
+      },
+      "power_mode": "NV Power Mode: 15W\n0",
+      "reset_reason": "SYS_RESET_N",
+      "resident_models": [],
+      "status": "complete_with_errors",
+      "telemetry_reader_error": null,
+      "temperatures_c": {
+        "cpu-thermal": 55.593,
+        "gpu-thermal": 55.718,
+        "soc0-thermal": 54.375,
+        "soc1-thermal": 54.25,
+        "soc2-thermal": 54.781,
+        "tj-thermal": 55.875
+      },
+      "thermal_trip_events": {
+        "cpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "gpu": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    },
+    "03_cascade_r1": {
+      "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+      "captured_at": "2026-09-11T15:20:19.634006+00:00",
+      "cleanup_errors": [],
+      "failure": {
+        "message": "available memory crossed the runtime floor",
+        "type": "SafetyGateError"
+      },
+      "fan_pwm": 96,
+      "guard_violation": "available memory crossed the runtime floor",
+      "memory": {
+        "mem_available_kib": 2215324,
+        "mem_total_kib": 7803236,
+        "swap_free_kib": 3165864,
+        "swap_total_kib": 3901608,
+        "swap_used_kib": 735744
+      },
+      "power_mode": "NV Power Mode: 15W\n0",
+      "reset_reason": "SYS_RESET_N",
+      "resident_models": [],
+      "status": "interrupted",
+      "telemetry_reader_error": null,
+      "temperatures_c": {
+        "cpu-thermal": 56.312,
+        "gpu-thermal": 56.218,
+        "soc0-thermal": 54.843,
+        "soc1-thermal": 54.625,
+        "soc2-thermal": 55.312,
+        "tj-thermal": 56.593
+      },
+      "thermal_trip_events": {
+        "cpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "gpu": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    },
+    "04_large_r2": {
+      "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+      "captured_at": "2026-09-11T15:30:47.683469+00:00",
+      "cleanup_errors": [],
+      "failure": null,
+      "fan_pwm": 117,
+      "guard_violation": null,
+      "memory": {
+        "mem_available_kib": 2426164,
+        "mem_total_kib": 7803236,
+        "swap_free_kib": 3047848,
+        "swap_total_kib": 3901608,
+        "swap_used_kib": 853760
+      },
+      "power_mode": "NV Power Mode: 15W\n0",
+      "reset_reason": "SYS_RESET_N",
+      "resident_models": [],
+      "status": "complete_with_errors",
+      "telemetry_reader_error": null,
+      "temperatures_c": {
+        "cpu-thermal": 62.093,
+        "gpu-thermal": 62.375,
+        "soc0-thermal": 60.281,
+        "soc1-thermal": 60.187,
+        "soc2-thermal": 61.156,
+        "tj-thermal": 62.375
+      },
+      "thermal_trip_events": {
+        "cpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "gpu": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    }
+  },
+  "continued_schedule_finish": {
+    "status": "incomplete",
+    "failure": {
+      "type": "SafetyGateError",
+      "message": "swap use exceeds the Stage 2 768 MiB start gate"
+    },
+    "sessions": [
+      {
+        "directory": "01_small_r1",
+        "arm": "small",
+        "repetition": 1,
+        "status": "complete_with_errors",
+        "attempted": 48,
+        "planned": 48,
+        "unattempted": 0,
+        "guard_violation": null,
+        "artifact_sha256": {
+          "finish.json": "fe697874dca44d3e07e720a14e6bfcaf4edda5b8c7fcb7cddd1912937f65e64f",
+          "manifest.json": "79856f2209d1b28bb30084ae0d6de7ee4d20be55e84a59516ff7c984b887ff84",
+          "memory.sqlite3": "3e4b7247dff600d8c4b04fae81b712ecfc917846c557c4b3fc5f6d55fe56edf2",
+          "memory_setup.json": "714219d718fe29c9a5995305da54420f161ba5e75795c3c3f7b1d371cde62c81",
+          "observations.jsonl": "71574e63a3664b401d3870aca31d967390892240829fcb69d5d7bc7a2026c5a1",
+          "start.json": "e571661b684080f52074d0b2a0f3b9879013efebed7d64fdd09700e9f0c2be1e",
+          "summary.json": "1f0b92ee67aa86eda1f57e0a923da832637bd8aa6e0be7096c3c8bc0af532f15",
+          "telemetry.jsonl": "127680583aa2904cb11d1ce460ebfc96c75be57492ae01530e458d415132a9a0",
+          "telemetry_summary.json": "6893e8223daac037216636a4a1532cf7c1d4173289ead88efb18db1a807218ce",
+          "workload.json": "2083b3c028163baf857e2a99b46a4d5de1ec56265bebc15a198341061c92facc"
+        }
+      },
+      {
+        "directory": "02_large_r1",
+        "arm": "large",
+        "repetition": 1,
+        "status": "complete_with_errors",
+        "attempted": 48,
+        "planned": 48,
+        "unattempted": 0,
+        "guard_violation": null,
+        "artifact_sha256": {
+          "finish.json": "6418049dd6337f408459a8420725805b78cf8d3e58ec26698408947d2eff13ab",
+          "manifest.json": "84a0a27338c81e6cc6b5acebd44b737720dc81c61ca7f1480114359ea75f6bd4",
+          "memory.sqlite3": "2d27bb969d48fa64dcaaf51185d59d26616e43553a7a432afee16b1d9f02cb62",
+          "memory_setup.json": "bee75a79fdf7c1caea298f335ffcaa59235516217d76b5eb29bcd178c333cc13",
+          "observations.jsonl": "71ebc3a12f0c10e4b77835b3950ef43af4989825bdd4d7e7d5ca88c2ac179c29",
+          "start.json": "bea2931743220819d349e79ebfe3b537755b968410e67b750f093ecd7219ed83",
+          "summary.json": "b9f365c4964ec13b461927a4cbeb75de13cc1247f5e1bed4633a564227fa0f8e",
+          "telemetry.jsonl": "637c3dcdf1e28c78edb3d696dbe5fbf451542ea74d71f1c8af63cede4d7da2b9",
+          "telemetry_summary.json": "ffd53bd0e541a7490f65fdfda467f16ae97f34a99f23e78e016dd2cbe41f282d",
+          "workload.json": "2083b3c028163baf857e2a99b46a4d5de1ec56265bebc15a198341061c92facc"
+        }
+      },
+      {
+        "directory": "03_cascade_r1",
+        "arm": "cascade",
+        "repetition": 1,
+        "status": "interrupted",
+        "attempted": 40,
+        "planned": 48,
+        "unattempted": 8,
+        "guard_violation": "available memory crossed the runtime floor",
+        "artifact_sha256": {
+          "finish.json": "2b8bf6700146cd0afa8204a7a376f92ff0a3ea8a02e1cb082bbe4f85558efc46",
+          "manifest.json": "1c73881336a38b777302cbb1680a388590416c02929b77c8b3fa9f3a3b949fc9",
+          "memory.sqlite3": "96b20a427305b337b33712f36fec3e71e6b6512fded33116e601ad13128ae62e",
+          "memory_setup.json": "bf0e83e6983184cb7558a05adffe8428bbe83765cbc006dc9efc4aff326f2cd4",
+          "observations.jsonl": "1cef5f17f1c707ad8874465b6ca8e9512bb864bc3b151d441b60b45e0cc97509",
+          "start.json": "76276628a5a3ba3f9c3019a8928861b1c01a356323fe86dfd8102077c32b7655",
+          "summary.json": "d1b1027a1a0f89a4cbb9a43053d811abd50aa51d246c6cb9dcc7adb95bc5579e",
+          "telemetry.jsonl": "552fd7b1cde9ec82eaed5151e8fb573f17b20098c4326554c3eab039baadd3c2",
+          "telemetry_summary.json": "0afb6167263270d4b69f54f2d1807fbee177551ec0b85097949cfd19c5bc2f72",
+          "workload.json": "2083b3c028163baf857e2a99b46a4d5de1ec56265bebc15a198341061c92facc"
+        }
+      },
+      {
+        "directory": "04_large_r2",
+        "arm": "large",
+        "repetition": 2,
+        "status": "complete_with_errors",
+        "attempted": 48,
+        "planned": 48,
+        "unattempted": 0,
+        "guard_violation": null,
+        "artifact_sha256": {
+          "finish.json": "7bf572fe4615af544a8f64b36f538e0c0571f3f833115e3c9930087687b4454f",
+          "manifest.json": "5055b2d9911f16fd9dc69d21c931202f56e2c79289f7e5ae391916a6eae176ab",
+          "memory.sqlite3": "8ae4bf486fa354d338ef13c02195b709ca423b4d767f68af17c6a01474115083",
+          "memory_setup.json": "53605d4c7fa0f7a6a187985ec7030a428336b795710cf6337a544513276c7684",
+          "observations.jsonl": "0f5cc9056adab9cb26f6d458566f9b311a27a78840e0bb3d22c1441bc4d65973",
+          "start.json": "7c1c0f023955fc2d83c376fcec0b790b028d9913ab4fd33e9ff8fa1774aa2dfa",
+          "summary.json": "904d58254201097ea9b1e929e92ec1dc733dff636b38d5cc9209bf9e275d19e7",
+          "telemetry.jsonl": "6a2d314612e06af77086766cdcbb95b14266b2dd121bae21eecd35658934bf84",
+          "telemetry_summary.json": "2b151ad21b512b5191cddad82d4f3e5991df011f460ee4af567aa3af9a562355",
+          "workload.json": "2083b3c028163baf857e2a99b46a4d5de1ec56265bebc15a198341061c92facc"
+        },
+        "exit_code": 0
+      }
+    ],
+    "snapshot": {
+      "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+      "captured_at": "2026-09-11T15:45:49.389732+00:00",
+      "fan_pwm": 84,
+      "memory": {
+        "mem_total_kib": 7803236,
+        "mem_available_kib": 2602316,
+        "swap_total_kib": 3901608,
+        "swap_free_kib": 3051176,
+        "swap_used_kib": 850432
+      },
+      "power_mode": "NV Power Mode: 15W\n0",
+      "reset_reason": "SYS_RESET_N",
+      "resident_models": [],
+      "temperatures_c": {
+        "cpu-thermal": 52.375,
+        "gpu-thermal": 52.437,
+        "soc0-thermal": 51.437,
+        "soc1-thermal": 51.531,
+        "soc2-thermal": 51.812,
+        "tj-thermal": 52.437
+      },
+      "thermal_trip_events": {
+        "cpu": 0,
+        "gpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    },
+    "finished_at": "2026-09-11T15:45:49.398404+00:00"
+  },
+  "current_snapshot": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-11T15:47:08.172684+00:00",
+    "fan_pwm": 84,
+    "memory": {
+      "mem_total_kib": 7803236,
+      "mem_available_kib": 2584592,
+      "swap_total_kib": 3901608,
+      "swap_free_kib": 3053736,
+      "swap_used_kib": 847872
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 52.093,
+      "gpu-thermal": 52.031,
+      "soc0-thermal": 51.031,
+      "soc1-thermal": 51.187,
+      "soc2-thermal": 51.437,
+      "tj-thermal": 52.093
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "current_swap_devices": [
+    {
+      "device": "/dev/zram0",
+      "type": "partition",
+      "size_kib": 650268,
+      "used_kib": 141980,
+      "priority": 5
+    },
+    {
+      "device": "/dev/zram1",
+      "type": "partition",
+      "size_kib": 650268,
+      "used_kib": 142372,
+      "priority": 5
+    },
+    {
+      "device": "/dev/zram2",
+      "type": "partition",
+      "size_kib": 650268,
+      "used_kib": 141188,
+      "priority": 5
+    },
+    {
+      "device": "/dev/zram3",
+      "type": "partition",
+      "size_kib": 650268,
+      "used_kib": 139500,
+      "priority": 5
+    },
+    {
+      "device": "/dev/zram4",
+      "type": "partition",
+      "size_kib": 650268,
+      "used_kib": 140972,
+      "priority": 5
+    },
+    {
+      "device": "/dev/zram5",
+      "type": "partition",
+      "size_kib": 650268,
+      "used_kib": 141860,
+      "priority": 5
+    }
+  ],
+  "proc_swaps": "Filename\t\t\t\tType\t\tSize\t\tUsed\t\tPriority\n/dev/zram0                              partition\t650268\t\t141980\t\t5\n/dev/zram1                              partition\t650268\t\t142372\t\t5\n/dev/zram2                              partition\t650268\t\t141188\t\t5\n/dev/zram3                              partition\t650268\t\t139500\t\t5\n/dev/zram4                              partition\t650268\t\t140972\t\t5\n/dev/zram5                              partition\t650268\t\t141860\t\t5\n",
+  "ollama_service": {
+    "MainPID": "6412",
+    "ExecMainStartTimestamp": "Fri 2026-09-11 12:17:34 +04",
+    "ActiveState": "active"
+  },
+  "related_live_processes": [
+    {
+      "pid": 6412,
+      "ppid": 1,
+      "command": "ollama",
+      "args": "/usr/local/bin/ollama serve"
+    }
+  ],
+  "checks": {
+    "same_boot_as_original_and_all_finishes": true,
+    "same_power_15W_mode0": true,
+    "thermal_trips_unchanged_zero": true,
+    "current_fan_running": true,
+    "all_finishes_clean_unload": true,
+    "no_current_resident_models": true,
+    "exact_expected_six_zram_configuration": true,
+    "swap_configuration_matches_prior_environment_evidence": true,
+    "swap_total_3901608_kib": true,
+    "normal_existing_ollama_daemon": true,
+    "no_benchmark_or_ollama_runner_processes": true
+  },
+  "current_admission": {
+    "passed": false,
+    "failure": {
+      "type": "SafetyGateError",
+      "message": "swap use exceeds the Stage 2 768 MiB start gate"
+    }
+  },
+  "unattempted_slots": {
+    "05_cascade_r2": {
+      "directory_exists": false,
+      "observations_exist": false
+    },
+    "06_small_r2": {
+      "directory_exists": false,
+      "observations_exist": false
+    },
+    "07_cascade_r3": {
+      "directory_exists": false,
+      "observations_exist": false
+    },
+    "08_small_r3": {
+      "directory_exists": false,
+      "observations_exist": false
+    },
+    "09_large_r3": {
+      "directory_exists": false,
+      "observations_exist": false
+    }
+  },
+  "limitations": [
+    "Swap occupancy is dynamic and remains above the experiment startup gate; unchanged swap configuration does not mean identical occupancy.",
+    "No cause of the swap increase is inferred from snapshots.",
+    "Cascade r1 runtime RAM guard failure remains recorded; final clean state does not erase that incomplete run."
+  ]
+}

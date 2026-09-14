@@ -1,0 +1,22 @@
+{
+  "sha256": {
+    "provenance.json": "dde4c59d05233437203a24b24634239ebdbd398cc6cad13d6077fffa0d35f1ac",
+    "evaluation/changing_memory_20260914/author_ledger.py": "21004fec28d37c18bae5ba01c2196d950d18ad717edf542938a4d78133a39d03",
+    "evaluation/changing_memory_20260914/reproduce_analysis.sh": "7176b76bd421b64c142973877c48f26b0b658e2ea6a9ab756519a1de063bcd04",
+    "evaluation/changing_memory_20260914/render_report_tables.py": "400ee2674fd411eef3f25cdd3f7f6864c047c81d0a710a046c8a0895475414c4",
+    "evaluation/changing_memory_20260914/audit_collection.py": "5808d204cfc6b10ea5b8a7f15139d66c72fe52d875a0fcdd80a0bf996bab9ef5",
+    "evaluation/changing_memory_20260914/commands.sh": "3503ba7e87dda50cb20ba10be0579ddc26c9558acc9de1654bbaf92c8ff565c7",
+    "evaluation/changing_memory_20260914/reproduce_collection.sh": "eeb211ad7dbf21a18f60c8db4b559ec7edbc838a34538865b78101f7e539293e",
+    "evaluation/changing_memory_20260914/audit_collection_tests.py": "55dc5e99741b4eb7524b1ce9990fe59342796ee5c1b0c8d26b04ea0314574eff",
+    "evaluation/changing_memory_20260914/batch_reviews.py": "454206690cdf64c649e7c7c308f3618b2f2bbbdd43fedbca13363cd346769566",
+    "evaluation/changing_memory_20260914/render_checkpoint_figure.py": "daeb61d0b24f92d302d01f2706ddf36d8fb1a6c3e9ccf1f57e1a24f482f24ff6",
+    "scripts/analyze_changing_memory_v2.py": "65181ee60ac1064ac00fd27d956236d92bac343829cb0f56263bd2dd55297e00",
+    "scripts/analyze_changing_memory.py": "60709a1002f7537f8cfd8ea57e8c89052f7ba2e608ca4b36e275a0fc79c95215",
+    "scripts/run_changing_memory.py": "4b8102177858572e1a5244d443c798d53bf48b34743d93858412c2418972d893",
+    "tests/test_memory_report_tables.py": "352baac9d8bb0c8d61712121113cfcd081fae713af7b308d72cdafb45c97f2a5",
+    "tests/test_analysis_changing_memory.py": "be052c3e692ea477fdc89dd7703900599a5aa276dad284babb6389e6923592ab",
+    "tests/test_analysis_memory_evidence_v2.py": "e66fbf539e4a19e61191cb56c924f7cc3e1d97a5de6fb8523b4fbbf08ace2b6a",
+    "tests/test_batch_memory_reviews.py": "ef653df7ac5d838245e310d7260dac5f5014cebcc1e0fc841841224d7bddfac8",
+    "tests/test_changing_memory.py": "2c1717af83ed553cdd2426acf15bdeaa57a340d36d9c808a1ece5a65c78fd730"
+  }
+}

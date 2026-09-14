@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-09-14T12:27:56.295787+00:00",
+  "author": "/root/runtime_audit",
+  "scope": "Standalone aggregation renderer for final sealed analysis_v2 and bound final collection audit",
+  "source_sha256": {
+    "evaluation/changing_memory_20260914/render_report_tables.py": "400ee2674fd411eef3f25cdd3f7f6864c047c81d0a710a046c8a0895475414c4",
+    "tests/test_memory_report_tables.py": "352baac9d8bb0c8d61712121113cfcd081fae713af7b308d72cdafb45c97f2a5",
+    "scripts/analyze_changing_memory.py": "60709a1002f7537f8cfd8ea57e8c89052f7ba2e608ca4b36e275a0fc79c95215",
+    "scripts/analyze_changing_memory_v2.py": "65181ee60ac1064ac00fd27d956236d92bac343829cb0f56263bd2dd55297e00"
+  },
+  "validation": "7 offline tests passed in 1.530 seconds; no inference or live answer access",
+  "frozen_runtime_source_files_unchanged": 41,
+  "semantic_scoring_performed": false,
+  "human_validation": "pending",
+  "independent_review": {
+    "reviewer": "/root",
+    "approved": true,
+    "received_before_seal": true,
+    "statement": "Root independently reviewed renderer source and regression coverage. Approved: counts derive only from frozen booleans/canonical disclosure judgments; per-stage/pair/coverage invariants and exact audit-to-analysis seal binding look sound, actual generation calls separated from nominal routes."
+  }
+}

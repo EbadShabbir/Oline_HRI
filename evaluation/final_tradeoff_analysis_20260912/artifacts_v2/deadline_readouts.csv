@@ -1,0 +1,13 @@
+arm,deadline_seconds,correct_delivered,validated_delivered,denominator
+small,5,42,129,144
+small,10,42,132,144
+small,15,42,135,144
+small,30,42,135,144
+large,5,11,15,144
+large,10,32,77,144
+large,15,39,108,144
+large,30,44,135,144
+cascade,5,20,28,144
+cascade,10,43,105,144
+cascade,15,46,128,144
+cascade,30,46,136,144

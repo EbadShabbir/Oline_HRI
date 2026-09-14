@@ -1,0 +1,16 @@
+{
+  "artifact_type": "frozen_reviewer_batch",
+  "assembled_from_frozen_originals": true,
+  "human_validation": "pending",
+  "identity_aliases": [
+    "/root/inspect_harness/blinded_reviewer_a"
+  ],
+  "identity_scope": "caller-provided identity and alias attestation; not proof of independent cognition",
+  "newly_judged_groups": 9,
+  "packet_sha256": "acdfbd99fca887a0f90275f8d6d93ce4e98d5a3bb62ea188b6b40aceb2c47785",
+  "public_content_mapping_only": true,
+  "reused_groups": 150,
+  "review_kind": "independent blinded assistant review",
+  "reviewer": "/root/inspect_harness/blinded_reviewer_a",
+  "sheet_sha256": "702d27db2519af79a0a3903aa00659cb7a91361c3e0141f931cb00209b6d9cb5"
+}

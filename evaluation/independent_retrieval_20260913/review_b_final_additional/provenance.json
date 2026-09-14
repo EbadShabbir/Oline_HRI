@@ -1,0 +1,31 @@
+{
+  "command": [
+    "freeze-review",
+    "--packet",
+    "evaluation/independent_retrieval_20260913/remap_b_final_v1/missing_packet.jsonl",
+    "--instructions",
+    "evaluation/independent_retrieval_20260913/remap_b_final_v1/REVIEW_INSTRUCTIONS.md",
+    "--sheet",
+    "evaluation/independent_retrieval_20260913/blinded_work/reviewer_b/final_additional_original.jsonl",
+    "--reviewer",
+    "/root/prepare_dataset/blinded_reviewer_b",
+    "--output",
+    "evaluation/independent_retrieval_20260913/review_b_final_additional"
+  ],
+  "created_at": "2026-09-13T18:56:33.651380+00:00",
+  "human_validation": "pending",
+  "inputs": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/blinded_work/reviewer_b/final_additional_original.jsonl": "07752af0020a82738443999f4fc8f1b7aaac450aa85b84267243ad9ae6e12468",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/remap_b_final_v1/REVIEW_INSTRUCTIONS.md": "17c20d7fdbaa66f43c31ae83d645f37aa8d8bd3c77e53cdad78bbf2360655f18",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/remap_b_final_v1/missing_packet.jsonl": "a93e73f7f33885279b4085b133a40b634043ab74d6f6ea4df177a3b31ea4c05b"
+  },
+  "phase": "freeze_individual_review",
+  "private_mapping_read": false,
+  "semantic_judgments_generated_by_program": false,
+  "source_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/batch_independent_retrieval_reviews.py": "578d8078ce563cf399400ce3d5d4abea34dcf2d218800874276ece34222bbeed",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_retrieval_review_batches.py": "d9bc5815baf7a60a929ba19c9360f24ae96fbff56b45e6d0c0560df55350c5f7"
+  },
+  "working_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI"
+}

@@ -1,0 +1,3650 @@
+{
+  "admission_event_sources": [
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/startup_waits.jsonl",
+      "sha256": "3f43d88160a7ca8950a74970196ed1ee7753cbc1363817f0399c7fd51358dbe0"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2/startup_waits.jsonl",
+      "sha256": "19e33367826956bbe0236e94f335c6a656198d38365481067d7ebb4bad42f31b"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/startup_waits.jsonl",
+      "sha256": "36e42c0c2c41764ca0bc92daf2ecbff813d47b558f25e711bbde3ae2863fd0eb"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/startup_waits.jsonl",
+      "sha256": "6d80c358cd323ada062cc7c13b956a8db08d97d4ea0936037b03ba26cf00b99b"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/startup_waits.jsonl",
+      "sha256": "299d12699e3ea85b7be0ee220917dae7ffdf842d3a3b1978277682295ab71ced"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/startup_waits.jsonl",
+      "sha256": "5151d19b9e6f15e9f7180694ef753458ee39c79029d242c651eb1104a2c9ce96"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v7/startup_waits.jsonl",
+      "sha256": "07dfcdf271a38891942c17618062199392b59b6292b2da92f476c48c0a1cfb86"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8/startup_waits.jsonl",
+      "sha256": "2723baefd79bde83cdae631aeb88ee30f682e988340a7d28947d5d1b452de7da"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v9/startup_waits.jsonl",
+      "sha256": "df1d83f4ea0002b1db6091ad56474b3ad53a0f0168d3b3900475c0beb0042aec"
+    }
+  ],
+  "admission_supervisor_overhead_s": {
+    "max": 113.783847577,
+    "mean": 37.53138629808,
+    "median": 28.127329922,
+    "min": 0.613554066,
+    "n": 25,
+    "p95": 93.33104773579997,
+    "total": 938.284657452
+  },
+  "assistant_review": "pending unless external judgments supplied",
+  "authorized_current_truth_catalog_records": 23,
+  "batch_status": "complete",
+  "between_collection_request_boundary_gaps": [
+    {
+      "after_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2/session_04_from_14",
+      "before_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04",
+      "request_boundary_gap_s": 897.547105006,
+      "scope": "last request finish to next collection's first request start; includes prior cleanup, off-run pause, later admission and setup; not pure pause and not added to supervisor overhead"
+    },
+    {
+      "after_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_04_from_41",
+      "before_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2/session_04_from_14",
+      "request_boundary_gap_s": 191.84571016,
+      "scope": "last request finish to next collection's first request start; includes prior cleanup, off-run pause, later admission and setup; not pure pause and not added to supervisor overhead"
+    },
+    {
+      "after_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_05_from_26",
+      "before_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_05_from_01_admission_retry_01",
+      "request_boundary_gap_s": 214.037199286,
+      "scope": "last request finish to next collection's first request start; includes prior cleanup, off-run pause, later admission and setup; not pure pause and not added to supervisor overhead"
+    },
+    {
+      "after_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_07_from_41",
+      "before_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_03",
+      "request_boundary_gap_s": 187.152776308,
+      "scope": "last request finish to next collection's first request start; includes prior cleanup, off-run pause, later admission and setup; not pure pause and not added to supervisor overhead"
+    },
+    {
+      "after_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_16_from_43_admission_retry_03",
+      "before_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01_admission_retry_03",
+      "request_boundary_gap_s": 309.061347228,
+      "scope": "last request finish to next collection's first request start; includes prior cleanup, off-run pause, later admission and setup; not pure pause and not added to supervisor overhead"
+    },
+    {
+      "after_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v7/session_17_from_21",
+      "before_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_17_from_01",
+      "request_boundary_gap_s": 142.034116429,
+      "scope": "last request finish to next collection's first request start; includes prior cleanup, off-run pause, later admission and setup; not pure pause and not added to supervisor overhead"
+    },
+    {
+      "after_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8/session_17_from_44",
+      "before_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v7/session_17_from_21",
+      "request_boundary_gap_s": 144.681266341,
+      "scope": "last request finish to next collection's first request start; includes prior cleanup, off-run pause, later admission and setup; not pure pause and not added to supervisor overhead"
+    },
+    {
+      "after_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v9/session_18_from_45",
+      "before_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8/session_18_from_01",
+      "request_boundary_gap_s": 182.526349638,
+      "scope": "last request finish to next collection's first request start; includes prior cleanup, off-run pause, later admission and setup; not pure pause and not added to supervisor overhead"
+    }
+  ],
+  "collection_supervisor_intervals": [
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1",
+      "previous_run_seal_created_at": null,
+      "scope": "supervisor wall includes verification/ledger/launch/guard/wait and child exit/sealing, but excludes parent final batch manifest, sealing and exit; seal-header gap includes earlier sealing/exit and off-run pause, not pure pause; do not add to fragment or request timing",
+      "seal_header_to_supervisor_start_s": null,
+      "supervisor_started_at": null,
+      "supervisor_started_monotonic_ns": null,
+      "supervisor_wall_s": null
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2",
+      "previous_run_seal_created_at": "2026-09-13T16:48:42.734113+00:00",
+      "scope": "supervisor wall includes verification/ledger/launch/guard/wait and child exit/sealing, but excludes parent final batch manifest, sealing and exit; seal-header gap includes earlier sealing/exit and off-run pause, not pure pause; do not add to fragment or request timing",
+      "seal_header_to_supervisor_start_s": 892.740149,
+      "supervisor_started_at": "2026-09-13T17:03:35.474262+00:00",
+      "supervisor_started_monotonic_ns": 197893973376549,
+      "supervisor_wall_s": 283.244075648
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3",
+      "previous_run_seal_created_at": "2026-09-13T17:08:18.724613+00:00",
+      "scope": "supervisor wall includes verification/ledger/launch/guard/wait and child exit/sealing, but excludes parent final batch manifest, sealing and exit; seal-header gap includes earlier sealing/exit and off-run pause, not pure pause; do not add to fragment or request timing",
+      "seal_header_to_supervisor_start_s": 184.204773,
+      "supervisor_started_at": "2026-09-13T17:11:22.929386+00:00",
+      "supervisor_started_monotonic_ns": 198361428501635,
+      "supervisor_wall_s": 448.647184999
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4",
+      "previous_run_seal_created_at": "2026-09-13T17:18:51.589300+00:00",
+      "scope": "supervisor wall includes verification/ledger/launch/guard/wait and child exit/sealing, but excludes parent final batch manifest, sealing and exit; seal-header gap includes earlier sealing/exit and off-run pause, not pure pause; do not add to fragment or request timing",
+      "seal_header_to_supervisor_start_s": 204.238858,
+      "supervisor_started_at": "2026-09-13T17:22:15.828158+00:00",
+      "supervisor_started_monotonic_ns": 199014327276302,
+      "supervisor_wall_s": 1223.717596159
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5",
+      "previous_run_seal_created_at": "2026-09-13T17:42:39.553396+00:00",
+      "scope": "supervisor wall includes verification/ledger/launch/guard/wait and child exit/sealing, but excludes parent final batch manifest, sealing and exit; seal-header gap includes earlier sealing/exit and off-run pause, not pure pause; do not add to fragment or request timing",
+      "seal_header_to_supervisor_start_s": 172.611275,
+      "supervisor_started_at": "2026-09-13T17:45:32.164671+00:00",
+      "supervisor_started_monotonic_ns": 200410663787885,
+      "supervisor_wall_s": 2220.233259939
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6",
+      "previous_run_seal_created_at": "2026-09-13T18:22:32.405070+00:00",
+      "scope": "supervisor wall includes verification/ledger/launch/guard/wait and child exit/sealing, but excludes parent final batch manifest, sealing and exit; seal-header gap includes earlier sealing/exit and off-run pause, not pure pause; do not add to fragment or request timing",
+      "seal_header_to_supervisor_start_s": 163.449754,
+      "supervisor_started_at": "2026-09-13T18:25:15.854824+00:00",
+      "supervisor_started_monotonic_ns": 202794353942275,
+      "supervisor_wall_s": 358.031809563
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v7",
+      "previous_run_seal_created_at": "2026-09-13T18:31:13.897416+00:00",
+      "scope": "supervisor wall includes verification/ledger/launch/guard/wait and child exit/sealing, but excludes parent final batch manifest, sealing and exit; seal-header gap includes earlier sealing/exit and off-run pause, not pure pause; do not add to fragment or request timing",
+      "seal_header_to_supervisor_start_s": 97.516587,
+      "supervisor_started_at": "2026-09-13T18:32:51.414003+00:00",
+      "supervisor_started_monotonic_ns": 203249913123054,
+      "supervisor_wall_s": 223.497549375
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8",
+      "previous_run_seal_created_at": "2026-09-13T18:36:34.918035+00:00",
+      "scope": "supervisor wall includes verification/ledger/launch/guard/wait and child exit/sealing, but excludes parent final batch manifest, sealing and exit; seal-header gap includes earlier sealing/exit and off-run pause, not pure pause; do not add to fragment or request timing",
+      "seal_header_to_supervisor_start_s": 93.357507,
+      "supervisor_started_at": "2026-09-13T18:38:08.275542+00:00",
+      "supervisor_started_monotonic_ns": 203566774661439,
+      "supervisor_wall_s": 449.859814607
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v9",
+      "previous_run_seal_created_at": "2026-09-13T18:45:38.143597+00:00",
+      "scope": "supervisor wall includes verification/ledger/launch/guard/wait and child exit/sealing, but excludes parent final batch manifest, sealing and exit; seal-header gap includes earlier sealing/exit and off-run pause, not pure pause; do not add to fragment or request timing",
+      "seal_header_to_supervisor_start_s": 121.215134,
+      "supervisor_started_at": "2026-09-13T18:47:39.358731+00:00",
+      "supervisor_started_monotonic_ns": 204137857848469,
+      "supervisor_wall_s": 115.638714534
+    }
+  ],
+  "complete_logical_slots": 18,
+  "complete_sessions": 18,
+  "continuation_provenance": {
+    "ledgers": {
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2/ledger_04_13_admission_00": {
+        "ledger_sha256": "e9e8d78864de64563e58c1b7b4f34e36f4b0c03b18a1ae075512cbc8b430cc88",
+        "seal_sha256": "7218c56b8250e6770898d53702fb87e50ced85310441346367cef17efe8bdd0b",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2/session_04_from_14"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/ledger_04_40_admission_00": {
+        "ledger_sha256": "4c721dc2bcaa1478538b36d41f6bfeb25b84220793bc24650570f133a10dbebe",
+        "seal_sha256": "674b1f79bd5febb8ddba5afe23f5a9cb45eb72340115db45b09a3a93d9cfcefe",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_04_from_41"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/ledger_05_00_admission_00": {
+        "ledger_sha256": "7da563cd4c0a35b35dc0e69e394ce0c1f0d9a1fe72d93b03f734598cb342b13e",
+        "seal_sha256": "9117966100c9c2339597e040ad49452979d7c499adddd304da0496bb6969e0f1",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_05_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/ledger_05_00_admission_01": {
+        "ledger_sha256": "97261986b5d56254ee628fe42fc283a636b4ea2702330d99a7a5c9e709224ec9",
+        "seal_sha256": "c222e2f905c244cb8431327f379c8c05066bbb85c89e1e08d5f57ce5468d19fe",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_05_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/ledger_05_25_admission_00": {
+        "ledger_sha256": "de61a7744631f06c0f947f1a785069d656ef7ef7bf4f6f0951fa97d12ff8ece7",
+        "seal_sha256": "f59b6602a4cdda8d472ac4ce5dd33ca3d45eb907318c40c1023c5ad299c129fa",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_05_from_26"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/ledger_06_00_admission_00": {
+        "ledger_sha256": "31a2b28d221aebf0839a29bc72da874f1fe5bb8feed4469bb178c8ad4b27e074",
+        "seal_sha256": "88ebe8662bf0a90ea271ee4c4e2e9d5d8e87c504a938658e73690239157aa6a4",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_06_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/ledger_06_00_admission_01": {
+        "ledger_sha256": "e219ec1b80571ce2b9cf00ab8f8dffc37dff48f0db4ed5ffb6b3f8cd3d009c62",
+        "seal_sha256": "f87d393a74c58bbc0d61cf9eab7cea40bcf951515397331fd0c70b04a577a250",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_06_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/ledger_07_00_admission_00": {
+        "ledger_sha256": "6480436187aef9ba910f03963f94bc33be840cbf3fa52d0ea6c72c817a09141a",
+        "seal_sha256": "8952654acc968f17e94874559b265fac6a11248c0ba4d84a55b439d314d19df6",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/ledger_07_00_admission_01": {
+        "ledger_sha256": "bd8d996a1c10fd49ff14d033efd26ef15201e83bb9f2fc4419a8e97b2a676591",
+        "seal_sha256": "42083e5bdd274b7c7fb7f983dadf386829d1733519531e6d40f5f52b7ab7a8ad",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/ledger_07_00_admission_02": {
+        "ledger_sha256": "a892d320976f6a7c2241dff035babf9e444291a3c8e507b3fac434f6cefd6f5e",
+        "seal_sha256": "32560cd9c3cf23bf7997877e0ab2dd6bdd9caab9884cb74ca91e32c8fa96d1e0",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_02"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/ledger_07_00_admission_03": {
+        "ledger_sha256": "24ed6deef4fa23c18054cbbaffa21aebeac1d6b18d468a54f91773170e50eafb",
+        "seal_sha256": "b6a709a321e32c885e487c2c3239698c1071319b4dd2ee95c72ff15725ba5e78",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_03"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_07_40_admission_00": {
+        "ledger_sha256": "0f4a93a98e512419db7df6d8e47fc39e648726bef6db6a5162d94eaff94c30e9",
+        "seal_sha256": "8eadcb84ff8257d3f9595f8f5516073efe0be05ec87cdad0ddca4958167344c8",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_07_from_41"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_08_00_admission_00": {
+        "ledger_sha256": "e9a319f5a4599fb13468e3e2b0803e2a8853f4ab389d14f6133ca63619c37f49",
+        "seal_sha256": "2b6c4557b3cd7b4f42723a45db1f6f0c607bcb754144e2293f6f15d5ad9d0fbb",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_08_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_09_00_admission_00": {
+        "ledger_sha256": "f4ee2309b465f71a4f9d0559a1777ea0d5f33dcbcfc3e7d5fa5d0c074787fad8",
+        "seal_sha256": "357e0f7c6b8b03698f7580a08ce2b8907246d27439a9f236bbe2b6d823593a1b",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_09_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_09_00_admission_01": {
+        "ledger_sha256": "81a667017b5e7acd0661714dfcd5971faec0b83dbf1e5f7172078c5f5b40a906",
+        "seal_sha256": "617fb84dcd7e668187af1a060d57eef279d755443ef0f825fbae07a749ed3cf9",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_09_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_09_00_admission_02": {
+        "ledger_sha256": "5ef47846adfd584f00c744807fec8d37ea0b0d24ddaad8cbe85e6ea7becd7a54",
+        "seal_sha256": "ab7cf33e0223a37c7a5147f1ba1e42aaebcae9cdd83cca2be3ac2dbdccdd74e1",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_09_from_01_admission_retry_02"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_10_00_admission_00": {
+        "ledger_sha256": "630189b0c6ed239077e034666f47df4be074b9b3028b76850544b60a55da576c",
+        "seal_sha256": "891e5ab8cbb066c8fd135fe7839c5ea1f9b10cae677afc0d221c4a5849483da5",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_10_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_10_00_admission_01": {
+        "ledger_sha256": "8ce62b6218aa68276f4166130fb7cf9e830ee3e74a44a62ea01a0349d8866666",
+        "seal_sha256": "c9ee78e355f0c7e65cf62c269e145c3293857bff5a3d67c0440def89a7616d6a",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_10_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_11_00_admission_00": {
+        "ledger_sha256": "5a41bfd9a4ea273b4ec26e89d5288253bda3051997f18339f97d6685cf3b2633",
+        "seal_sha256": "ad5f5cef2e9451c3b7e6504c4383a292de07f78de2eacc53d0a042c1359ef715",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_11_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_11_00_admission_01": {
+        "ledger_sha256": "e9e181a6dc1bbcaf1945fd4a3f8021376a168bfe3dc52920f00b25648d6529c6",
+        "seal_sha256": "ca4827804363939729bbb97ed5b84f7d43909d5f98fd4c17ddb6d9149bd747e5",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_11_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_11_00_admission_02": {
+        "ledger_sha256": "75233a0146f1948f5ae10df116309b5b86dd76d7a0122329998b661c534309ed",
+        "seal_sha256": "5bb9066dbd761f7e64e528bab2fb890247f1f9ba86e5b8e1ff80bc7720880840",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_11_from_01_admission_retry_02"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_12_00_admission_00": {
+        "ledger_sha256": "2389035b57f5d25e08ab1941032be3ce2a9ba85b2efe10e5d184acaef324ff83",
+        "seal_sha256": "06c5c0d8e32a7ad51f77c7bb45037a6b2b7e0161a56bdbb0026b713e88ed6455",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_12_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_12_00_admission_01": {
+        "ledger_sha256": "03c19824322f5d5284ebc8236f52ac68fc9e534ac326cc68fd102f38a4ed8e7c",
+        "seal_sha256": "df9df824457d437543398c4a88acfc73a0ddb6b6a9f2f443edb9e0dd3366d236",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_12_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_12_00_admission_02": {
+        "ledger_sha256": "7d744b72e7d5a3784afcaba2b27059bede9c9e6715fbe8676cf9a865d6e92b02",
+        "seal_sha256": "b47c546b907adb1fd7442de7647f69b724e3b7ebd9e3617b42a8e10b796efdb0",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_12_from_01_admission_retry_02"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_13_00_admission_00": {
+        "ledger_sha256": "66ddd7669275fd1c6f4962cc175fe60d760b6a92358f78abf4aa01c50ff21e2a",
+        "seal_sha256": "1318b13eadf379874ff7853df07f5c32aab54356c4d79a33a2ba262b88a70d79",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_13_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_13_00_admission_01": {
+        "ledger_sha256": "545e2ade9a5f553ea85188116911d3c7a57b5cffac0c69520ab390484e62f346",
+        "seal_sha256": "04fb5d02f1c4b273bd3db5cf9e7c51ef10b782b20ea0feb334c9ba3bbc1cd648",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_13_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_13_00_admission_02": {
+        "ledger_sha256": "1f84e50fb24ac5e68ff85358182637284a47a730e646a8ee1868ce172fab730a",
+        "seal_sha256": "2ee9c57913d09cfd2289446b26bd9b2b695e5bba975a814532679cabde6f779d",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_13_from_01_admission_retry_02"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_14_00_admission_00": {
+        "ledger_sha256": "5bc42deae1f21e2b50e169b664b93a13f4e8d9cee91500e35cbd780a76ce5bd0",
+        "seal_sha256": "031927fe58d0907a7d73fda815750f62c87fedcc4e8e9dc09119f4ccacaf4145",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_14_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_14_00_admission_01": {
+        "ledger_sha256": "a205f4ff1b2a9d219c5f76983790840c0bef711599aa4f1ff11b358ec9e83733",
+        "seal_sha256": "25275d129936159829fce72f4e5ac28ff93cace1d1708617cc4941245ee074fc",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_14_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_14_00_admission_02": {
+        "ledger_sha256": "33cd358b7672f76d71189814831b776b63aade3b77e0c63a1a82b37086349df1",
+        "seal_sha256": "4496068a2f86956f90da248d4ada9c2e52b171de059fb4f250e1cc6bedd442bf",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_14_from_01_admission_retry_02"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_15_00_admission_00": {
+        "ledger_sha256": "d8e8614c65d6ad33fdef164f5b32a771b37e80e9be419d2a65bb314d651fe43d",
+        "seal_sha256": "24d4de4b64d88a3721ce4be45b7cdde1b2cede3de04c2a25bef67e82a911a6c1",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_15_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_15_00_admission_01": {
+        "ledger_sha256": "512061da0274a2208736f88ef2442bf475662e633dbb958d680c41ffc0db03e9",
+        "seal_sha256": "3c9d05e5922b38694f5ed5aeead8e8cc0041120a137aa6a1976f22dcd77f0c2b",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_15_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_15_00_admission_02": {
+        "ledger_sha256": "8080d2dbe9ef84580abbf93537d5da98b1922cce58191b12981550d0e407232a",
+        "seal_sha256": "e928d68c10c46947e5f107fd5b2a056a1764f076bf30c0520c0bfc48f72a9166",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_15_from_01_admission_retry_02"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_16_00_admission_00": {
+        "ledger_sha256": "c7cfd35e28cbad3c0f1889a90155baac14112970e0d2ebaf43f73396e65d19c9",
+        "seal_sha256": "ea8aaba0feb03bcda94bb1e9a900c5e1f2e0d6e605fa2da4534fa48c08028a30",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_16_00_admission_01": {
+        "ledger_sha256": "16efdc3b01986c3fb16ce1ebd178a592c217d6297cfecc890be3eaa453e20db8",
+        "seal_sha256": "10d82bcff4d11670c32f21ea2cb6f952bd5548a810d8130bccee16bc88de709d",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_16_00_admission_02": {
+        "ledger_sha256": "5819139ed97cc6acdbf168bfa4c466eaed09ae2db7fbd2ef897cd82b5353d6e5",
+        "seal_sha256": "c746853ef5eefa4dd1348b659aec1de7f7f22942207895e582f7e5aad28e5c6d",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01_admission_retry_02"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/ledger_16_00_admission_03": {
+        "ledger_sha256": "af480dfd44b95fd09af98109b57105991d89cea8584686a9a578b1c4fd37e2c9",
+        "seal_sha256": "65554a140234cfb85ddc9948017f44b4eb5afd878b6e92f9a1df36f9273a571e",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01_admission_retry_03"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/ledger_16_42_admission_00": {
+        "ledger_sha256": "f36adb14736ec2a3d56a4f70eaa62c04aee2e8eb130e524692d1f9afa04adc63",
+        "seal_sha256": "d0bdc76ef582bcfde1b83ba6c5f3934a1332930f44a14975b41039af14c63095",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_16_from_43"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/ledger_16_42_admission_01": {
+        "ledger_sha256": "605e04aaf9f1e7978113ae2b35adb02c2f20c4bffdf301670781f3a42751c342",
+        "seal_sha256": "22024a0617c467870909dd9e2e1ff79e806af6caf1de24a15aa8aa123a72a1ba",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_16_from_43_admission_retry_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/ledger_16_42_admission_02": {
+        "ledger_sha256": "2657add2043e48b26cef04db74a9f9a369cdb63de1209a28c2ae7d533378c64e",
+        "seal_sha256": "83881a0a31a2ada4c15342d49fca59231219d1ef1f3a4c50d41eb29e3008d1cd",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_16_from_43_admission_retry_02"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/ledger_16_42_admission_03": {
+        "ledger_sha256": "c4cf8afa9f55a1c392461c1a7885a5bde4780c154901d2575e79fd83c369bff0",
+        "seal_sha256": "42d6e2c3ef7268bbb6253975777ad8e60424a36e06be7cb60e904b1406834a8f",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_16_from_43_admission_retry_03"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/ledger_17_00_admission_00": {
+        "ledger_sha256": "8aae7f676cce5263f3a9e5505a192ae6838fb8e6594b23fcbe4ae56bb2e87f7a",
+        "seal_sha256": "f03a8a49824bb77d3ecaaf4a317b6b672423b1f6bc69430288fc17c31382c6ff",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_17_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v7/ledger_17_20_admission_00": {
+        "ledger_sha256": "310f03b1e4a71df5d4b57527c773bfe64015a8acaadd1a5b95260270e5809889",
+        "seal_sha256": "38261518c47724e9f486896f01dea96c522987da6a852ed525d1320760eec24a",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v7/session_17_from_21"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8/ledger_17_43_admission_00": {
+        "ledger_sha256": "5beba5839264edaee71c91c7495e77604cb86ad179496b95a46e063be22e6224",
+        "seal_sha256": "b503bfe0d467d5fcb1487abe867328042ee383554b3e23266444a6559f2160c2",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8/session_17_from_44"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8/ledger_18_00_admission_00": {
+        "ledger_sha256": "cd3509863708deab276c2fc07af91a3c28ee5902ab6199513eb40de13df6a431",
+        "seal_sha256": "73238cef9b0f86ed67445f1cc031f0f2d8f76a8559ea8c950752f7cee50c8dcb",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8/session_18_from_01"
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v9/ledger_18_44_admission_00": {
+        "ledger_sha256": "520aab59592f1074446528ef922fcd013ed753147fcf1546f163bddc6a36ef8c",
+        "seal_sha256": "5360b5b899ab73ad3e0fcf3689169d1f91669e74048b5107aa9a5912337c9350",
+        "worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v9/session_18_from_45"
+      }
+    },
+    "plans": {
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v1": {
+        "continuation_sha256": "072332931ed0c1eb6e504d8f5d18bb7d69b0e80d878f0eef1bbc116b6c1f8b96",
+        "prior_run": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1",
+        "prior_run_seal_sha256": "e2e0afa7c8a645bfd8cd5060dcc1d825058f8db4acee28e615b798d692b08a9c",
+        "retained_attempts": 157,
+        "seal_sha256": "f8d30a86bab0213c08db033fbc59d1876e9323b09f722a91584f4612c68f0bac",
+        "source_sha256": {
+          "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+          "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+          "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+          "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+        }
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v2": {
+        "continuation_sha256": "ae318bf4b215c58147471fc55432db4ae0142e9c82e9bac36fe76f7429beb0cd",
+        "prior_run": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2",
+        "prior_run_seal_sha256": "09dd4362ffaf8504093e920cd44887d10b67585cbc71049416ed539f10b27c76",
+        "retained_attempts": 184,
+        "seal_sha256": "3d436bf3382260d45cd52bb0c546a3ba6195a3fe2edd2922490429e5a5da8356",
+        "source_sha256": {
+          "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+          "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+          "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+          "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+        }
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v3": {
+        "continuation_sha256": "e97a7343d890ee46ea440511cf0b461fdedeb004370093d6d18e5146acb8d20b",
+        "prior_run": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3",
+        "prior_run_seal_sha256": "3c4c9ee76914fe57f93d57c4d1f4e745bec01c56f5372ef4ac394e8ba6ab015c",
+        "retained_attempts": 217,
+        "seal_sha256": "e06742b8f08e9fdffc62274edb8333e9884e816df6d36db2e7bcc426675b7782",
+        "source_sha256": {
+          "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+          "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+          "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+          "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+        }
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v4": {
+        "continuation_sha256": "8a31bf678f6bee8e7f980628cdd8538b0fb53bd5cdd35c04fe12358133c58bc6",
+        "prior_run": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4",
+        "prior_run_seal_sha256": "94b0a9e9157910b066a61c5811ce542bc31e916fa5b0fe51a27970cd23940ddb",
+        "retained_attempts": 328,
+        "seal_sha256": "fead2d5969569b5cd623a8f5cf2c476b4465f9163916fe5dc0036ae06a490f20",
+        "source_sha256": {
+          "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+          "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+          "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+          "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+        }
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v5": {
+        "continuation_sha256": "55f089e2c29222037d6b6e8da094f6310d29f91ed5aadc5f3714703d01536454",
+        "prior_run": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5",
+        "prior_run_seal_sha256": "0c41977fd23ab42dcad9abce6ebf5ab57d3933fcc0e24198d9cde3edff1c1cbb",
+        "retained_attempts": 762,
+        "seal_sha256": "fa669094e6002dfbebbf6ae7c8644a421dde7601e09bc0b22c133cbebbeda86c",
+        "source_sha256": {
+          "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+          "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+          "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+          "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+        }
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v6": {
+        "continuation_sha256": "5119c106720a7f872f5560ccfd9b6ffaedf06036c6e4a4c596bfa00e338aa42d",
+        "prior_run": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6",
+        "prior_run_seal_sha256": "a75023de8436c481f71b7a550461de829d1d108aa5cd5986e9821763e28bc242",
+        "retained_attempts": 788,
+        "seal_sha256": "655f72b5ebaef95feec507ff437be29f66816e1b391809856e3533119cab0065",
+        "source_sha256": {
+          "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+          "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+          "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+          "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+        }
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v7": {
+        "continuation_sha256": "8e2ab44042d8f6c79b8fcb297a045416cf607febd5e1c98afa685c07b6c7a46b",
+        "prior_run": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v7",
+        "prior_run_seal_sha256": "2a74b98f33e4b85fa2f70094ee1644da20f37716dc423c3d38c8b87a2d7b33e5",
+        "retained_attempts": 811,
+        "seal_sha256": "e0cdf914298650802b0138002ae91c44a05b453044f0f27cdec8a43491b8f95f",
+        "source_sha256": {
+          "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+          "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+          "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+          "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+        }
+      },
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v8": {
+        "continuation_sha256": "0a05e049df6917760c474ce85fbafc571c3854e012444ed6e3a63af691fb6cb6",
+        "prior_run": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8",
+        "prior_run_seal_sha256": "54b9721df3a1c95efc838255b6c8ad2941cfc2e1596f81974191a449bd531653",
+        "retained_attempts": 860,
+        "seal_sha256": "a3b3194b5008e40b3d91f3333399b4308692d8dd69f4544b45a0372f43d4919c",
+        "source_sha256": {
+          "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+          "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+          "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+          "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+        }
+      }
+    }
+  },
+  "equal_evidence_input_groups_checked": 78,
+  "errors": [
+    "slot_02:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_02:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_03:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_03:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_04:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_04:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_05:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_05:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_07:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_07:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_09:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_09:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_10:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_10:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_12:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_12:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_13:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_13:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_14:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_14:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_17:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_17:ir_06_06: generation contains prior history or unexpected message roles",
+    "slot_18:ir_03_01: generation contains prior history or unexpected message roles",
+    "slot_18:ir_06_06: generation contains prior history or unexpected message roles"
+  ],
+  "human_validation": "pending",
+  "inherited_rejected_admission_count": 35,
+  "new_rejected_admission_count": 0,
+  "observed_attempts": 864,
+  "observed_logical_slots": 18,
+  "physical_fragments": 26,
+  "planned_attempts": 864,
+  "planned_logical_slots": 18,
+  "rejected_admission_count": 35,
+  "rejected_admissions": [
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:37:21.679801+00:00",
+        "fan_pwm": 110,
+        "memory": {
+          "mem_available_kib": 2346308,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1511336,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2390272
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 58.031,
+          "gpu-thermal": 58.312,
+          "soc0-thermal": 56.968,
+          "soc1-thermal": 56.781,
+          "soc2-thermal": 57.343,
+          "tj-thermal": 58.312
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "24d8143f4aff32acb882d16719fc7b4daa39b0b2f550d3bcd1fe478a4de89977",
+      "slot": 2,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:37:21.662445+00:00",
+        "fan_pwm": 110,
+        "memory": {
+          "mem_available_kib": 2346308,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1511336,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2390272
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 58.0,
+          "gpu-thermal": 58.5,
+          "soc0-thermal": 56.937,
+          "soc1-thermal": 56.937,
+          "soc2-thermal": 57.437,
+          "tj-thermal": 58.312
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.203993421
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:37:42.431473+00:00",
+        "fan_pwm": 98,
+        "memory": {
+          "mem_available_kib": 2297336,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1511848,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2389760
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.968,
+          "gpu-thermal": 56.531,
+          "soc0-thermal": 55.218,
+          "soc1-thermal": 55.218,
+          "soc2-thermal": 55.437,
+          "tj-thermal": 56.531
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "200148ecdd00c2eb315136d544e8f0744957e48d33a8c77cda08ee5949896101",
+      "slot": 2,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:37:42.409224+00:00",
+        "fan_pwm": 98,
+        "memory": {
+          "mem_available_kib": 2297336,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1511848,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2389760
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 56.343,
+          "gpu-thermal": 56.093,
+          "soc0-thermal": 55.343,
+          "soc1-thermal": 55.156,
+          "soc2-thermal": 55.406,
+          "tj-thermal": 56.343
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.186771094
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_02",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:38:03.173145+00:00",
+        "fan_pwm": 93,
+        "memory": {
+          "mem_available_kib": 2354496,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1511848,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2389760
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.187,
+          "gpu-thermal": 55.093,
+          "soc0-thermal": 54.25,
+          "soc1-thermal": 54.125,
+          "soc2-thermal": 54.375,
+          "tj-thermal": 55.187
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "ea53584fb1d0884bf20762cb0d6b62ed3730afecb52cb476a880adb5afaf1adf",
+      "slot": 2,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:38:03.156108+00:00",
+        "fan_pwm": 93,
+        "memory": {
+          "mem_available_kib": 2354496,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1511848,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2389760
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.031,
+          "gpu-thermal": 55.156,
+          "soc0-thermal": 54.25,
+          "soc1-thermal": 54.281,
+          "soc2-thermal": 54.375,
+          "tj-thermal": 55.312
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.180697334
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:40:01.086439+00:00",
+        "fan_pwm": 110,
+        "memory": {
+          "mem_available_kib": 2403784,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1512872,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2388736
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 59.281,
+          "gpu-thermal": 59.468,
+          "soc0-thermal": 58.093,
+          "soc1-thermal": 57.75,
+          "soc2-thermal": 58.281,
+          "tj-thermal": 59.468
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "13c0d8f58d01842d6baa662258841da1b5da2b71c23c54f2cb46d98cf38665db",
+      "slot": 3,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:40:01.066278+00:00",
+        "fan_pwm": 110,
+        "memory": {
+          "mem_available_kib": 2403784,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1512872,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2388736
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 59.156,
+          "gpu-thermal": 59.281,
+          "soc0-thermal": 57.906,
+          "soc1-thermal": 57.75,
+          "soc2-thermal": 58.312,
+          "tj-thermal": 59.281
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.213252604
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:40:21.865583+00:00",
+        "fan_pwm": 101,
+        "memory": {
+          "mem_available_kib": 2378408,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1512872,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2388736
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.031,
+          "gpu-thermal": 57.343,
+          "soc0-thermal": 56.062,
+          "soc1-thermal": 55.906,
+          "soc2-thermal": 56.281,
+          "tj-thermal": 57.375
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "0be62a1be8f38b3315a7fcf17b683f585d66c264048461fd387157bb98b31f16",
+      "slot": 3,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:40:21.847299+00:00",
+        "fan_pwm": 101,
+        "memory": {
+          "mem_available_kib": 2378408,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1512872,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2388736
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.187,
+          "gpu-thermal": 57.031,
+          "soc0-thermal": 56.0,
+          "soc1-thermal": 56.0,
+          "soc2-thermal": 56.25,
+          "tj-thermal": 57.187
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.183185864
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_02",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:40:42.632957+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2372264,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1512872,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2388736
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.468,
+          "gpu-thermal": 55.875,
+          "soc0-thermal": 54.968,
+          "soc1-thermal": 54.812,
+          "soc2-thermal": 55.125,
+          "tj-thermal": 55.875
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "7c439e7063aef91a7a1d4a87bf337dee8b5507576011e202eab6a5fb2a90e3c8",
+      "slot": 3,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:40:42.613925+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2372244,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1512872,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2388736
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.687,
+          "gpu-thermal": 55.843,
+          "soc0-thermal": 54.875,
+          "soc1-thermal": 54.906,
+          "soc2-thermal": 55.093,
+          "tj-thermal": 55.843
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.198300387
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_03",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:41:03.391448+00:00",
+        "fan_pwm": 93,
+        "memory": {
+          "mem_available_kib": 2210448,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1513640,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2387968
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 54.843,
+          "gpu-thermal": 55.093,
+          "soc0-thermal": 54.156,
+          "soc1-thermal": 54.125,
+          "soc2-thermal": 54.343,
+          "tj-thermal": 55.093
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "069efaea8281cf17ed28e7da76cdda94733065e12dea616a753cebae89733e7d",
+      "slot": 3,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:41:03.374390+00:00",
+        "fan_pwm": 93,
+        "memory": {
+          "mem_available_kib": 2210700,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1513640,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2387968
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 54.968,
+          "gpu-thermal": 55.093,
+          "soc0-thermal": 54.125,
+          "soc1-thermal": 54.093,
+          "soc2-thermal": 54.437,
+          "tj-thermal": 55.156
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.185296815
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:43:06.600635+00:00",
+        "fan_pwm": 113,
+        "memory": {
+          "mem_available_kib": 2291960,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1515944,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2385664
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 59.125,
+          "gpu-thermal": 59.093,
+          "soc0-thermal": 57.906,
+          "soc1-thermal": 57.875,
+          "soc2-thermal": 58.406,
+          "tj-thermal": 59.375
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "713b143b18543f2982c4388edffcea93ccd1416bcd0bf8e675bd9dcec86b3ddf",
+      "slot": 4,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:43:06.582934+00:00",
+        "fan_pwm": 113,
+        "memory": {
+          "mem_available_kib": 2292716,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1515944,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2385664
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 59.125,
+          "gpu-thermal": 59.218,
+          "soc0-thermal": 58.062,
+          "soc1-thermal": 57.875,
+          "soc2-thermal": 58.375,
+          "tj-thermal": 59.218
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.185901051
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:43:27.340532+00:00",
+        "fan_pwm": 101,
+        "memory": {
+          "mem_available_kib": 2314872,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1515944,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2385664
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.25,
+          "gpu-thermal": 57.125,
+          "soc0-thermal": 56.156,
+          "soc1-thermal": 56.156,
+          "soc2-thermal": 56.437,
+          "tj-thermal": 57.25
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "8123bb7628bf42c9b8f3e88922dea1c1689dfcfdb2f82cc2d557bbfae6a5ee26",
+      "slot": 4,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:43:27.323109+00:00",
+        "fan_pwm": 101,
+        "memory": {
+          "mem_available_kib": 2314872,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1515944,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2385664
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.25,
+          "gpu-thermal": 57.343,
+          "soc0-thermal": 56.312,
+          "soc1-thermal": 56.093,
+          "soc2-thermal": 56.406,
+          "tj-thermal": 57.25
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.192523887
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_02",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:43:48.084215+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2310984,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1515944,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2385664
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.937,
+          "gpu-thermal": 56.312,
+          "soc0-thermal": 55.031,
+          "soc1-thermal": 55.093,
+          "soc2-thermal": 55.437,
+          "tj-thermal": 56.312
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "096f30c0e5588e8d5abb9ec133f9329b28fcc8d1122bbecf2a8278684b0d68ea",
+      "slot": 4,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:43:48.068089+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2310984,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1515944,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2385664
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 56.125,
+          "gpu-thermal": 56.218,
+          "soc0-thermal": 55.062,
+          "soc1-thermal": 55.218,
+          "soc2-thermal": 55.406,
+          "tj-thermal": 56.093
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.189186413
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_03",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:44:08.854514+00:00",
+        "fan_pwm": 92,
+        "memory": {
+          "mem_available_kib": 2331368,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1515944,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2385664
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 54.968,
+          "gpu-thermal": 55.468,
+          "soc0-thermal": 54.375,
+          "soc1-thermal": 54.437,
+          "soc2-thermal": 54.5,
+          "tj-thermal": 55.218
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "3ca5b6c5f7b65d3f59ec26ae9652acc18c044de1c670b43db0dbc4b3e42ecb36",
+      "slot": 4,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T16:44:08.834513+00:00",
+        "fan_pwm": 92,
+        "memory": {
+          "mem_available_kib": 2331196,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1515944,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2385664
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.343,
+          "gpu-thermal": 55.187,
+          "soc0-thermal": 54.281,
+          "soc1-thermal": 54.437,
+          "soc2-thermal": 54.562,
+          "tj-thermal": 55.343
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 0.197805057
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_05_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:13:20.981075+00:00",
+        "fan_pwm": 89,
+        "memory": {
+          "mem_available_kib": 2281036,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1235120,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2666488
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 54.843,
+          "gpu-thermal": 54.906,
+          "soc0-thermal": 54.031,
+          "soc1-thermal": 53.968,
+          "soc2-thermal": 54.343,
+          "tj-thermal": 55.187
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "240c322e9c2757ef835f83f54b878b0840c2db4311a26497125c2cb30f078529",
+      "slot": 5,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:13:20.959560+00:00",
+        "fan_pwm": 89,
+        "memory": {
+          "mem_available_kib": 2281512,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1235120,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2666488
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 54.937,
+          "gpu-thermal": 54.875,
+          "soc0-thermal": 54.0,
+          "soc1-thermal": 53.875,
+          "soc2-thermal": 54.312,
+          "tj-thermal": 55.031
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 2.670755829
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_06_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:27:14.853891+00:00",
+        "fan_pwm": 93,
+        "memory": {
+          "mem_available_kib": 2338008,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1089620,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2811988
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.75,
+          "gpu-thermal": 55.343,
+          "soc0-thermal": 54.343,
+          "soc1-thermal": 54.375,
+          "soc2-thermal": 54.593,
+          "tj-thermal": 55.75
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "OFF",
+      "repetition": 1,
+      "request_events": 0,
+      "seal_sha256": "c911da3caf6f40df44af6de2fa939164e82cb00df22d5f67b01f745fbcd326c7",
+      "slot": 6,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:27:14.818059+00:00",
+        "fan_pwm": 93,
+        "memory": {
+          "mem_available_kib": 2341536,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1089620,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2811988
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.781,
+          "gpu-thermal": 55.218,
+          "soc0-thermal": 54.375,
+          "soc1-thermal": 54.218,
+          "soc2-thermal": 54.625,
+          "tj-thermal": 55.906
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 4.238123796
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:32:48.311378+00:00",
+        "fan_pwm": 105,
+        "memory": {
+          "mem_available_kib": 2322452,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1057900,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2843708
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 59.031,
+          "gpu-thermal": 58.437,
+          "soc0-thermal": 57.281,
+          "soc1-thermal": 57.031,
+          "soc2-thermal": 57.625,
+          "tj-thermal": 59.031
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 2,
+      "request_events": 0,
+      "seal_sha256": "cd10e2277b40e704ff1d02086991ea1e3807f5a886847425b857dd2419dab61c",
+      "slot": 7,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:32:48.285499+00:00",
+        "fan_pwm": 105,
+        "memory": {
+          "mem_available_kib": 2322452,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1057900,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2843708
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 59.187,
+          "gpu-thermal": 58.5,
+          "soc0-thermal": 57.25,
+          "soc1-thermal": 57.125,
+          "soc2-thermal": 57.562,
+          "tj-thermal": 59.187
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 4.262504937
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:33:14.675499+00:00",
+        "fan_pwm": 100,
+        "memory": {
+          "mem_available_kib": 2306108,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1058156,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2843452
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 56.531,
+          "gpu-thermal": 56.437,
+          "soc0-thermal": 55.531,
+          "soc1-thermal": 55.468,
+          "soc2-thermal": 55.781,
+          "tj-thermal": 56.718
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 2,
+      "request_events": 0,
+      "seal_sha256": "834a34b8f035e89df832f167e124e8ebfd77c370869c778ee89273f0fc19fc34",
+      "slot": 7,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:33:14.656671+00:00",
+        "fan_pwm": 100,
+        "memory": {
+          "mem_available_kib": 2306108,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1058156,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2843452
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 56.5,
+          "gpu-thermal": 56.312,
+          "soc0-thermal": 55.531,
+          "soc1-thermal": 55.531,
+          "soc2-thermal": 55.812,
+          "tj-thermal": 56.5
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 4.546805848
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_02",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:33:40.888354+00:00",
+        "fan_pwm": 92,
+        "memory": {
+          "mem_available_kib": 2278052,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1058156,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2843452
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.187,
+          "gpu-thermal": 55.218,
+          "soc0-thermal": 54.375,
+          "soc1-thermal": 54.531,
+          "soc2-thermal": 54.656,
+          "tj-thermal": 55.218
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 2,
+      "request_events": 0,
+      "seal_sha256": "8ae50493d4956c065304025bb2e94bad4b643f004cda7123f4db5d42febc7622",
+      "slot": 7,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:33:40.868337+00:00",
+        "fan_pwm": 92,
+        "memory": {
+          "mem_available_kib": 2278620,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1058156,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2843452
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.375,
+          "gpu-thermal": 55.281,
+          "soc0-thermal": 54.281,
+          "soc1-thermal": 54.312,
+          "soc2-thermal": 54.718,
+          "tj-thermal": 55.437
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 4.381788506
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_09_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:51:27.341932+00:00",
+        "fan_pwm": 105,
+        "memory": {
+          "mem_available_kib": 2362660,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1160420,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2741188
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.718,
+          "gpu-thermal": 57.781,
+          "soc0-thermal": 56.812,
+          "soc1-thermal": 56.718,
+          "soc2-thermal": 57.093,
+          "tj-thermal": 57.625
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 2,
+      "request_events": 0,
+      "seal_sha256": "f028cf956bd8f5a348accb429dacc21289d38711411f3ea5344ddc23f9b22c5b",
+      "slot": 9,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:51:27.324971+00:00",
+        "fan_pwm": 105,
+        "memory": {
+          "mem_available_kib": 2362660,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1160420,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2741188
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.718,
+          "gpu-thermal": 57.843,
+          "soc0-thermal": 57.0,
+          "soc1-thermal": 56.687,
+          "soc2-thermal": 56.968,
+          "tj-thermal": 57.718
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 6.395776537
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_09_from_01_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:51:56.189824+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2377956,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1162980,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2738628
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.937,
+          "gpu-thermal": 55.625,
+          "soc0-thermal": 55.0,
+          "soc1-thermal": 54.781,
+          "soc2-thermal": 55.031,
+          "tj-thermal": 55.937
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 2,
+      "request_events": 0,
+      "seal_sha256": "34b4b7b5d700a31b57685eb21839e0ecc656778d9fe04fc8ef84ca1554bdc586",
+      "slot": 9,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:51:56.165406+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2379296,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1162980,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2738628
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 56.218,
+          "gpu-thermal": 55.718,
+          "soc0-thermal": 54.875,
+          "soc1-thermal": 54.937,
+          "soc2-thermal": 55.125,
+          "tj-thermal": 56.031
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 6.374725842
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_10_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:58:06.695884+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2375732,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1113616,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2787992
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.781,
+          "gpu-thermal": 56.031,
+          "soc0-thermal": 55.312,
+          "soc1-thermal": 55.062,
+          "soc2-thermal": 55.218,
+          "tj-thermal": 56.312
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 2,
+      "request_events": 0,
+      "seal_sha256": "97ac80bce536f29cff531bd97b35f06bce3870b156a5c3cbd0d7fd55b7a6bb99",
+      "slot": 10,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T17:58:06.677975+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2375732,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1113616,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2787992
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.812,
+          "gpu-thermal": 55.937,
+          "soc0-thermal": 55.281,
+          "soc1-thermal": 55.312,
+          "soc2-thermal": 55.218,
+          "tj-thermal": 56.093
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 6.352958749
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_11_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:00:25.799211+00:00",
+        "fan_pwm": 109,
+        "memory": {
+          "mem_available_kib": 2357740,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1115408,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2786200
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.687,
+          "gpu-thermal": 57.718,
+          "soc0-thermal": 56.781,
+          "soc1-thermal": 56.562,
+          "soc2-thermal": 56.843,
+          "tj-thermal": 57.718
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "OFF",
+      "repetition": 2,
+      "request_events": 0,
+      "seal_sha256": "ff17e7051ca1e8f4e91750048a206483569feb86f082b120ef4ead0a2e9f88c1",
+      "slot": 11,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:00:25.781579+00:00",
+        "fan_pwm": 109,
+        "memory": {
+          "mem_available_kib": 2357740,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1115408,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2786200
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.75,
+          "gpu-thermal": 57.656,
+          "soc0-thermal": 56.781,
+          "soc1-thermal": 56.5,
+          "soc2-thermal": 56.843,
+          "tj-thermal": 57.875
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 6.685944947
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_11_from_01_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:00:55.039713+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2364744,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1115664,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2785944
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.375,
+          "gpu-thermal": 55.625,
+          "soc0-thermal": 54.906,
+          "soc1-thermal": 54.781,
+          "soc2-thermal": 54.937,
+          "tj-thermal": 56.0
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "OFF",
+      "repetition": 2,
+      "request_events": 0,
+      "seal_sha256": "cb96f843b57a39815f5525a910f89199476ef832f168e200f6fbf2fa23786743",
+      "slot": 11,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:00:55.014153+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2364744,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1115664,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2785944
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.531,
+          "gpu-thermal": 55.781,
+          "soc0-thermal": 54.781,
+          "soc1-thermal": 54.781,
+          "soc2-thermal": 55.0,
+          "tj-thermal": 55.593
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 6.584710878
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_12_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:02:51.053385+00:00",
+        "fan_pwm": 109,
+        "memory": {
+          "mem_available_kib": 2331296,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1119760,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2781848
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.437,
+          "gpu-thermal": 57.312,
+          "soc0-thermal": 56.437,
+          "soc1-thermal": 56.406,
+          "soc2-thermal": 56.718,
+          "tj-thermal": 57.437
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 2,
+      "request_events": 0,
+      "seal_sha256": "a2d2e55bf17dc4f277414ad01ac57848ad000a3d661f8518a940ce909aecb8f4",
+      "slot": 12,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:02:51.034403+00:00",
+        "fan_pwm": 109,
+        "memory": {
+          "mem_available_kib": 2331124,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1119760,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2781848
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.25,
+          "gpu-thermal": 57.531,
+          "soc0-thermal": 56.468,
+          "soc1-thermal": 56.562,
+          "soc2-thermal": 56.687,
+          "tj-thermal": 57.531
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 6.857114541
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_12_from_01_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:03:20.559263+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2345720,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1119760,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2781848
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.343,
+          "gpu-thermal": 55.531,
+          "soc0-thermal": 54.656,
+          "soc1-thermal": 54.593,
+          "soc2-thermal": 54.781,
+          "tj-thermal": 55.687
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 2,
+      "request_events": 0,
+      "seal_sha256": "d392b1f0daf1d1148fcee5c6f636df27f33130a77e6b95118c32803b00397330",
+      "slot": 12,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:03:20.538821+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2345800,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1119760,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2781848
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.656,
+          "gpu-thermal": 55.406,
+          "soc0-thermal": 54.593,
+          "soc1-thermal": 54.625,
+          "soc2-thermal": 54.906,
+          "tj-thermal": 55.593
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 6.778387231
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_13_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:05:35.860513+00:00",
+        "fan_pwm": 109,
+        "memory": {
+          "mem_available_kib": 2316268,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1120016,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2781592
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.343,
+          "gpu-thermal": 57.687,
+          "soc0-thermal": 56.781,
+          "soc1-thermal": 56.593,
+          "soc2-thermal": 56.875,
+          "tj-thermal": 57.968
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "1d551d512755caac3936a60e9f72b6575835365791817ac2c539c141f35d7a4f",
+      "slot": 13,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:05:35.842465+00:00",
+        "fan_pwm": 109,
+        "memory": {
+          "mem_available_kib": 2316268,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1120016,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2781592
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.406,
+          "gpu-thermal": 57.75,
+          "soc0-thermal": 56.75,
+          "soc1-thermal": 56.656,
+          "soc2-thermal": 56.906,
+          "tj-thermal": 57.75
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 6.961074334
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_13_from_01_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:06:05.538309+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2342280,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1121040,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2780568
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.531,
+          "gpu-thermal": 55.656,
+          "soc0-thermal": 54.781,
+          "soc1-thermal": 54.656,
+          "soc2-thermal": 54.843,
+          "tj-thermal": 55.656
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "ALWAYS",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "0b42f72ee97bc23fc9d58c68813a18285fa278d04c75017f01b1a63baf71cfba",
+      "slot": 13,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:06:05.519501+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2341420,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1121040,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2780568
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.593,
+          "gpu-thermal": 55.906,
+          "soc0-thermal": 54.812,
+          "soc1-thermal": 54.812,
+          "soc2-thermal": 55.031,
+          "tj-thermal": 55.656
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 6.870520217
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_14_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:08:23.911744+00:00",
+        "fan_pwm": 101,
+        "memory": {
+          "mem_available_kib": 2308604,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1123600,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2778008
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.5,
+          "gpu-thermal": 57.375,
+          "soc0-thermal": 56.437,
+          "soc1-thermal": 56.593,
+          "soc2-thermal": 56.687,
+          "tj-thermal": 57.562
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "e8c79fa15314d111b51f7f0455dd1c4f802f0122227ae68517d775a58d92e55b",
+      "slot": 14,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:08:23.894998+00:00",
+        "fan_pwm": 101,
+        "memory": {
+          "mem_available_kib": 2308604,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1123600,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2778008
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.718,
+          "gpu-thermal": 57.406,
+          "soc0-thermal": 56.468,
+          "soc1-thermal": 56.562,
+          "soc2-thermal": 56.718,
+          "tj-thermal": 57.718
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 6.969525451
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_14_from_01_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:08:53.922463+00:00",
+        "fan_pwm": 92,
+        "memory": {
+          "mem_available_kib": 2347856,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1123856,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2777752
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.562,
+          "gpu-thermal": 55.437,
+          "soc0-thermal": 54.593,
+          "soc1-thermal": 54.562,
+          "soc2-thermal": 54.656,
+          "tj-thermal": 55.593
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "SELECTIVE",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "3f8b12f44b659a8fae9f50878690ed36bd87d83c2d629f195ac2a705621b9c04",
+      "slot": 14,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:08:53.869204+00:00",
+        "fan_pwm": 92,
+        "memory": {
+          "mem_available_kib": 2350528,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1123856,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2777752
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.375,
+          "gpu-thermal": 55.437,
+          "soc0-thermal": 54.687,
+          "soc1-thermal": 54.5,
+          "soc2-thermal": 54.781,
+          "tj-thermal": 55.656
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 7.267562925
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_15_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:11:16.187051+00:00",
+        "fan_pwm": 101,
+        "memory": {
+          "mem_available_kib": 2304952,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1124368,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2777240
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.5,
+          "gpu-thermal": 57.375,
+          "soc0-thermal": 56.468,
+          "soc1-thermal": 56.312,
+          "soc2-thermal": 56.531,
+          "tj-thermal": 57.625
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "OFF",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "d814a7b57e88657c0677739fc48f3ed89f837a523917c84b8b4bd75aa47b9d6a",
+      "slot": 15,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:11:16.170028+00:00",
+        "fan_pwm": 101,
+        "memory": {
+          "mem_available_kib": 2306464,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1124368,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2777240
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.375,
+          "gpu-thermal": 57.375,
+          "soc0-thermal": 56.437,
+          "soc1-thermal": 56.218,
+          "soc2-thermal": 56.625,
+          "tj-thermal": 57.437
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 7.136821505
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_15_from_01_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:11:46.417654+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2312828,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1124368,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2777240
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.875,
+          "gpu-thermal": 55.625,
+          "soc0-thermal": 54.718,
+          "soc1-thermal": 54.781,
+          "soc2-thermal": 54.906,
+          "tj-thermal": 55.875
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:0.6b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "OFF",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "01c80f69df97e2b2e394a8de40d3db66ac58b8162a86bdce1b111a3c3b85396d",
+      "slot": 15,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:11:46.397999+00:00",
+        "fan_pwm": 97,
+        "memory": {
+          "mem_available_kib": 2313080,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1124368,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2777240
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.906,
+          "gpu-thermal": 55.843,
+          "soc0-thermal": 54.781,
+          "soc1-thermal": 54.656,
+          "soc2-thermal": 54.906,
+          "tj-thermal": 55.906
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 7.229956018
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:13:46.147540+00:00",
+        "fan_pwm": 109,
+        "memory": {
+          "mem_available_kib": 2240708,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1141776,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2759832
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.718,
+          "gpu-thermal": 57.531,
+          "soc0-thermal": 56.562,
+          "soc1-thermal": 56.562,
+          "soc2-thermal": 56.906,
+          "tj-thermal": 57.843
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "OFF",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "02b9ba58534e45419515a3ee470939fac3a3a1f3b86ebab0fd1d9bb6cfb38964",
+      "slot": 16,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:13:46.128582+00:00",
+        "fan_pwm": 109,
+        "memory": {
+          "mem_available_kib": 2241452,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1141776,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2759832
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.75,
+          "gpu-thermal": 57.5,
+          "soc0-thermal": 56.5,
+          "soc1-thermal": 56.562,
+          "soc2-thermal": 56.843,
+          "tj-thermal": 57.75
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 7.551221398
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01_admission_retry_01",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:14:16.922316+00:00",
+        "fan_pwm": 96,
+        "memory": {
+          "mem_available_kib": 2248476,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1142032,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2759576
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 56.812,
+          "gpu-thermal": 56.062,
+          "soc0-thermal": 54.843,
+          "soc1-thermal": 55.0,
+          "soc2-thermal": 55.312,
+          "tj-thermal": 56.812
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "OFF",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "4856075f8ac0fbd999f4ab288191aebd265e46ead5528c35b51e7a1986024088",
+      "slot": 16,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:14:16.903759+00:00",
+        "fan_pwm": 96,
+        "memory": {
+          "mem_available_kib": 2248980,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1142032,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2759576
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 56.531,
+          "gpu-thermal": 55.906,
+          "soc0-thermal": 55.0,
+          "soc1-thermal": 55.0,
+          "soc2-thermal": 55.218,
+          "tj-thermal": 56.531
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 7.748239953
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01_admission_retry_02",
+      "failure": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:14:47.798318+00:00",
+        "fan_pwm": 96,
+        "memory": {
+          "mem_available_kib": 2245300,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1142032,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2759576
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.406,
+          "gpu-thermal": 54.812,
+          "soc0-thermal": 54.031,
+          "soc1-thermal": 53.875,
+          "soc2-thermal": 54.218,
+          "tj-thermal": 55.406
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 0,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 48,
+      "policy": "OFF",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "926d3d6f94937c3b1ceaa4c8d4adc32d808746b62cbdec6d85de4e52eac04186",
+      "slot": 16,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:14:47.776570+00:00",
+        "fan_pwm": 96,
+        "memory": {
+          "mem_available_kib": 2245300,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1142032,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2759576
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 55.468,
+          "gpu-thermal": 54.968,
+          "soc0-thermal": 53.875,
+          "soc1-thermal": 53.968,
+          "soc2-thermal": 54.343,
+          "tj-thermal": 55.25
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 7.646764134
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_16_from_43",
+      "failure": {
+        "message": "available memory is below the revised 2 GiB start gate",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:25:45.428534+00:00",
+        "fan_pwm": 84,
+        "memory": {
+          "mem_available_kib": 2049096,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1159156,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2742452
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 53.312,
+          "gpu-thermal": 53.0,
+          "soc0-thermal": 51.906,
+          "soc1-thermal": 52.093,
+          "soc2-thermal": 52.281,
+          "tj-thermal": 53.312
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 42,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 6,
+      "policy": "OFF",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "b9820de31d19e8f03ea84384866832897d8b7d0a1c4cf9f4abdcdad0086b60f5",
+      "slot": 16,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:25:45.411172+00:00",
+        "fan_pwm": 84,
+        "memory": {
+          "mem_available_kib": 2049596,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1159156,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2742452
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 53.375,
+          "gpu-thermal": 53.062,
+          "soc0-thermal": 51.875,
+          "soc1-thermal": 51.968,
+          "soc2-thermal": 52.343,
+          "tj-thermal": 53.375
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 12.546499104
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_16_from_43_admission_retry_01",
+      "failure": {
+        "message": "available memory is below the revised 2 GiB start gate",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:26:21.974921+00:00",
+        "fan_pwm": 84,
+        "memory": {
+          "mem_available_kib": 2036120,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1159156,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2742452
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 52.75,
+          "gpu-thermal": 52.562,
+          "soc0-thermal": 51.625,
+          "soc1-thermal": 51.812,
+          "soc2-thermal": 51.968,
+          "tj-thermal": 53.0
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 42,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 6,
+      "policy": "OFF",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "ace6f60ab2f4848ea31cafe609425587c137ebb6c9147c35dec7ea9a6c02df97",
+      "slot": 16,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:26:21.955080+00:00",
+        "fan_pwm": 84,
+        "memory": {
+          "mem_available_kib": 2036120,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1159156,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2742452
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 52.812,
+          "gpu-thermal": 52.625,
+          "soc0-thermal": 51.75,
+          "soc1-thermal": 51.781,
+          "soc2-thermal": 52.062,
+          "tj-thermal": 52.812
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 12.34880787
+    },
+    {
+      "accounting": "preserved zero-request admission launch; excludes quality/timing attempt denominators; its time is inside measured fragment supervisor overhead when available and must not be added twice",
+      "attempted": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_16_from_43_admission_retry_02",
+      "failure": {
+        "message": "available memory is below the revised 2 GiB start gate",
+        "type": "SafetyGateError"
+      },
+      "finish": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:26:58.397035+00:00",
+        "fan_pwm": 84,
+        "memory": {
+          "mem_available_kib": 2049432,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1160692,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2740916
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 52.281,
+          "gpu-thermal": 52.406,
+          "soc0-thermal": 51.593,
+          "soc1-thermal": 51.687,
+          "soc2-thermal": 51.906,
+          "tj-thermal": 52.312
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "fragment_offset": 42,
+      "http_events": 0,
+      "inherited_from_prior_collection": true,
+      "model": "qwen3:1.7b",
+      "observations": 0,
+      "planned": 6,
+      "policy": "OFF",
+      "repetition": 3,
+      "request_events": 0,
+      "seal_sha256": "eafd503dc1005190cadbc5bde9322e0858b3b52a50c60a0178e19d6986be2e29",
+      "slot": 16,
+      "start": {
+        "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+        "captured_at": "2026-09-13T18:26:58.380143+00:00",
+        "fan_pwm": 84,
+        "memory": {
+          "mem_available_kib": 2049432,
+          "mem_total_kib": 7803236,
+          "swap_free_kib": 1160692,
+          "swap_total_kib": 3901608,
+          "swap_used_kib": 2740916
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "SYS_RESET_N",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 52.562,
+          "gpu-thermal": 52.468,
+          "soc0-thermal": 51.437,
+          "soc1-thermal": 51.593,
+          "soc2-thermal": 51.781,
+          "tj-thermal": 52.406
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "gpu": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "status": "interrupted",
+      "worker_session_wall_s": 12.377545365
+    }
+  ],
+  "strict_frozen_global_prefix": true,
+  "unavailable_fragment_supervisor_overheads": 1,
+  "unobserved_attempts": [],
+  "valid": false,
+  "warnings": []
+}

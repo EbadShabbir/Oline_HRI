@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-09-14T14:29:53.346227+00:00",
+  "reviewer_contexts": "Two fresh independent contexts with fork_turns=none; no previous answers or diagnostics supplied.",
+  "original_review_source_paths": {
+    "a": "/tmp/clara-neutral-review-c-20260914/judgments.json",
+    "b": "/tmp/clara-neutral-review-d-20260914/judgments.json"
+  },
+  "original_review_sha256": {
+    "a": "0bd7ab4b2e6ebb0ed80fdfd5144925896fef16cdc9004041b7e12e0d2546674b",
+    "b": "9ec165903d30db075fde830fb032df92ff6bfdda6e9dbbf069266daaedd50a0d"
+  },
+  "packet_sha256": "365fa306ae7a3a66e6a6cca11bf6701c0b406cfaf827320e6762b4e183a28b1b",
+  "judgments_frozen_before_diagnostics": true,
+  "human_validation": "pending"
+}

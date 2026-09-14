@@ -1,0 +1,777 @@
+{
+  "captured_at": "2026-09-13T16:53:12.875178+00:00",
+  "read_only_probe": true,
+  "no_inference_or_embedding": true,
+  "memory_kib": {
+    "MemTotal": 7803236,
+    "MemFree": 1622184,
+    "MemAvailable": 2340452,
+    "Buffers": 32548,
+    "Cached": 933052,
+    "SwapCached": 1264,
+    "Active": 1701456,
+    "Inactive": 1919364,
+    "Active(anon)": 1220256,
+    "Inactive(anon)": 1577092,
+    "Active(file)": 481200,
+    "Inactive(file)": 342272,
+    "Unevictable": 25920,
+    "Mlocked": 32,
+    "SwapTotal": 3901608,
+    "SwapFree": 1527464,
+    "Dirty": 616,
+    "Writeback": 0,
+    "AnonPages": 2630632,
+    "Mapped": 338464,
+    "Shmem": 119884,
+    "KReclaimable": 103288,
+    "Slab": 248248,
+    "SReclaimable": 103288,
+    "SUnreclaim": 144960,
+    "KernelStack": 21232,
+    "PageTables": 58920,
+    "NFS_Unstable": 0,
+    "Bounce": 0,
+    "WritebackTmp": 0,
+    "CommitLimit": 7803224,
+    "Committed_AS": 16946304,
+    "VmallocTotal": 133143592960,
+    "VmallocUsed": 76360,
+    "VmallocChunk": 0,
+    "Percpu": 5352,
+    "HardwareCorrupted": 0,
+    "AnonHugePages": 964608,
+    "ShmemHugePages": 0,
+    "ShmemPmdMapped": 0,
+    "FileHugePages": 0,
+    "FilePmdMapped": 0,
+    "CmaTotal": 262144,
+    "CmaFree": 2272,
+    "HugePages_Total": 0,
+    "HugePages_Free": 0,
+    "HugePages_Rsvd": 0,
+    "HugePages_Surp": 0,
+    "Hugepagesize": 2048,
+    "Hugetlb": 0
+  },
+  "temperatures_c": {
+    "cpu-thermal": 51.687,
+    "soc2-thermal": 51.343,
+    "soc0-thermal": 50.937,
+    "gpu-thermal": 51.937,
+    "tj-thermal": 51.937,
+    "soc1-thermal": 51.218
+  },
+  "fan_pwm_values": [
+    84
+  ],
+  "thermal_trip_events": {
+    "soc1-throttle-alert": 0,
+    "soc0-throttle-alert": 0,
+    "cv2-throttle-alert": 0,
+    "cv1-throttle-alert": 0,
+    "soc2-throttle-alert": 0,
+    "cv0-throttle-alert": 0,
+    "gpu-throttle-alert": 0,
+    "cpu-throttle-alert": 0
+  },
+  "residency": {
+    "models": []
+  },
+  "power_mode": "NV Power Mode: 15W\n0",
+  "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+  "processes": [
+    {
+      "pid": 10521,
+      "ppid": 10463,
+      "name": "codex",
+      "rss_kib": 622952,
+      "swap_kib": 436652,
+      "threads": 28,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10359,
+      "ppid": 10201,
+      "name": "code",
+      "rss_kib": 498788,
+      "swap_kib": 48340,
+      "threads": 11,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10271,
+      "ppid": 10201,
+      "name": "code",
+      "rss_kib": 325320,
+      "swap_kib": 79720,
+      "threads": 14,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10463,
+      "ppid": 10179,
+      "name": "code",
+      "rss_kib": 224596,
+      "swap_kib": 42284,
+      "threads": 27,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 7979,
+      "ppid": 6659,
+      "name": "gnome-shell",
+      "rss_kib": 201060,
+      "swap_kib": 72476,
+      "threads": 11,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 24135,
+      "ppid": 7979,
+      "name": "firefox",
+      "rss_kib": 154648,
+      "swap_kib": 90224,
+      "threads": 87,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8343,
+      "ppid": 7949,
+      "name": "gnome-software",
+      "rss_kib": 141768,
+      "swap_kib": 124856,
+      "threads": 4,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 9831,
+      "ppid": 6635,
+      "name": "anydesk",
+      "rss_kib": 103176,
+      "swap_kib": 45508,
+      "threads": 35,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10179,
+      "ppid": 7979,
+      "name": "code",
+      "rss_kib": 99036,
+      "swap_kib": 86396,
+      "threads": 49,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10233,
+      "ppid": 10198,
+      "name": "code",
+      "rss_kib": 90044,
+      "swap_kib": 66852,
+      "threads": 12,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 7291,
+      "ppid": 7288,
+      "name": "Xorg",
+      "rss_kib": 73412,
+      "swap_kib": 25268,
+      "threads": 2,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 24417,
+      "ppid": 24357,
+      "name": "Privileged Cont",
+      "rss_kib": 70516,
+      "swap_kib": 17256,
+      "threads": 22,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 6674,
+      "ppid": 1,
+      "name": "nxserver.bin",
+      "rss_kib": 67808,
+      "swap_kib": 72940,
+      "threads": 31,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8224,
+      "ppid": 1,
+      "name": "packagekitd",
+      "rss_kib": 62524,
+      "swap_kib": 13568,
+      "threads": 3,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10365,
+      "ppid": 10179,
+      "name": "code",
+      "rss_kib": 59340,
+      "swap_kib": 23052,
+      "threads": 21,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10530,
+      "ppid": 10463,
+      "name": "code",
+      "rss_kib": 51940,
+      "swap_kib": 26548,
+      "threads": 8,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10368,
+      "ppid": 10179,
+      "name": "code",
+      "rss_kib": 50780,
+      "swap_kib": 24256,
+      "threads": 22,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10432,
+      "ppid": 10179,
+      "name": "code",
+      "rss_kib": 49824,
+      "swap_kib": 46224,
+      "threads": 20,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 6635,
+      "ppid": 1,
+      "name": "anydesk",
+      "rss_kib": 36736,
+      "swap_kib": 6180,
+      "threads": 6,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 9369,
+      "ppid": 9368,
+      "name": "nxnode.bin",
+      "rss_kib": 34696,
+      "swap_kib": 22424,
+      "threads": 16,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10236,
+      "ppid": 10179,
+      "name": "code",
+      "rss_kib": 28752,
+      "swap_kib": 9148,
+      "threads": 10,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 6412,
+      "ppid": 1,
+      "name": "ollama",
+      "rss_kib": 28024,
+      "swap_kib": 3780,
+      "threads": 23,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 5711,
+      "ppid": 1,
+      "name": "snapd",
+      "rss_kib": 27512,
+      "swap_kib": 2812,
+      "threads": 13,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8326,
+      "ppid": 7949,
+      "name": "python3",
+      "rss_kib": 25608,
+      "swap_kib": 7232,
+      "threads": 5,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8617,
+      "ppid": 7979,
+      "name": "gjs",
+      "rss_kib": 25472,
+      "swap_kib": 16492,
+      "threads": 11,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 11159,
+      "ppid": 10432,
+      "name": "code",
+      "rss_kib": 25308,
+      "swap_kib": 112380,
+      "threads": 19,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 222,
+      "ppid": 1,
+      "name": "systemd-journal",
+      "rss_kib": 21908,
+      "swap_kib": 672,
+      "threads": 1,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 6479,
+      "ppid": 1,
+      "name": "containerd",
+      "rss_kib": 21372,
+      "swap_kib": 5136,
+      "threads": 12,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 9998,
+      "ppid": 6659,
+      "name": "gnome-terminal-",
+      "rss_kib": 21228,
+      "swap_kib": 11416,
+      "threads": 5,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 7018,
+      "ppid": 1,
+      "name": "dockerd",
+      "rss_kib": 20804,
+      "swap_kib": 18576,
+      "threads": 14,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8157,
+      "ppid": 1,
+      "name": "geoclue",
+      "rss_kib": 19740,
+      "swap_kib": 2196,
+      "threads": 4,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 24641,
+      "ppid": 24357,
+      "name": "Isolated Web Co",
+      "rss_kib": 18612,
+      "swap_kib": 18392,
+      "threads": 24,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 10093,
+      "ppid": 7949,
+      "name": "update-notifier",
+      "rss_kib": 16604,
+      "swap_kib": 4468,
+      "threads": 4,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 167655,
+      "ppid": 167653,
+      "name": "python3",
+      "rss_kib": 16512,
+      "swap_kib": 0,
+      "threads": 1,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8334,
+      "ppid": 7949,
+      "name": "evolution-alarm",
+      "rss_kib": 16448,
+      "swap_kib": 16144,
+      "threads": 6,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8251,
+      "ppid": 6659,
+      "name": "gjs",
+      "rss_kib": 16408,
+      "swap_kib": 1248,
+      "threads": 9,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 24378,
+      "ppid": 24357,
+      "name": "WebExtensions",
+      "rss_kib": 15788,
+      "swap_kib": 22696,
+      "threads": 22,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8503,
+      "ppid": 1,
+      "name": "fwupd",
+      "rss_kib": 15480,
+      "swap_kib": 146804,
+      "threads": 5,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8276,
+      "ppid": 6659,
+      "name": "gsd-color",
+      "rss_kib": 15268,
+      "swap_kib": 4032,
+      "threads": 4,
+      "python_script_basenames": [],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8547,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 10856,
+      "swap_kib": 12796,
+      "threads": 2,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8529,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 8444,
+      "swap_kib": 14732,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8531,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 8444,
+      "swap_kib": 14732,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8532,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 8444,
+      "swap_kib": 14736,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8534,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 8444,
+      "swap_kib": 14736,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8548,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 8096,
+      "swap_kib": 14596,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8549,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 8092,
+      "swap_kib": 14596,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8535,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 8028,
+      "swap_kib": 14624,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8542,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7984,
+      "swap_kib": 14628,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8543,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7984,
+      "swap_kib": 14628,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8544,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7984,
+      "swap_kib": 14628,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8545,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7984,
+      "swap_kib": 14628,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8540,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7980,
+      "swap_kib": 14632,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8536,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7976,
+      "swap_kib": 14632,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8537,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7956,
+      "swap_kib": 14632,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8528,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7724,
+      "swap_kib": 14736,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8523,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7716,
+      "swap_kib": 14812,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8524,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7716,
+      "swap_kib": 14816,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    },
+    {
+      "pid": 8525,
+      "ppid": 8326,
+      "name": "python3",
+      "rss_kib": 7716,
+      "swap_kib": 14816,
+      "threads": 1,
+      "python_script_basenames": [
+        "nvpmodel_indicator.py"
+      ],
+      "experiment_command": false,
+      "ollama_runner": false
+    }
+  ],
+  "admission_checks_against_frozen_thresholds": {
+    "available_ram": true,
+    "logical_swap": true,
+    "swap_capacity": true,
+    "temperature": true,
+    "fan": true,
+    "zero_thermal_trips": true,
+    "no_resident_models": true,
+    "power_mode": true,
+    "same_boot": true
+  },
+  "all_observed_admission_checks_pass": true,
+  "comparison_limit": "Snapshot checks are not an admission guarantee after worker imports or a sustained-residency fit test.",
+  "probe_note": "Initial unbounded sysfs read under conda Python3.13 failed before saving or changing state; bounded reads under system Python were used."
+}

@@ -1,0 +1,23 @@
+{
+  "command": [
+    "verify-mapping",
+    "--resolution",
+    "evaluation/independent_retrieval_20260913/review_resolution_v1",
+    "--analysis",
+    "evaluation/independent_retrieval_20260913/analysis_reviewed_v1",
+    "--output",
+    "evaluation/independent_retrieval_20260913/reviews_verified_v1"
+  ],
+  "created_at": "2026-09-13T19:02:55.505615+00:00",
+  "human_validation": "pending",
+  "inputs": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/analysis_reviewed_v1/seal.json": "47ff6211d065d97505e8869c7a980e04b94843d8d481aa03463eccff7f2fad91",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_resolution_v1/seal.json": "35298ca8605c09da25a4113b7f569535276ad540b9aa02ea20785cbcc1bbef1b"
+  },
+  "mapping_content_exported": false,
+  "mapping_read": true,
+  "phase": "verify_mapping_after_judgments_frozen",
+  "semantic_judgments_generated_by_program": false,
+  "source_sha256": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+  "working_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI"
+}

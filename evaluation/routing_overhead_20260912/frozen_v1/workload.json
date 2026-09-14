@@ -1,0 +1,1599 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "workload_id": "clara_routing_overhead_20260912_v1",
+    "created_on": "2026-09-12",
+    "status": "authored_before_live_collection",
+    "annotation_status": "assistant_authored_pending_independent_human_review",
+    "scope": "four_turn_text_sequences_routing_overhead",
+    "fictional_data": true,
+    "public_benchmark": false,
+    "planned_repetitions": 3,
+    "planned_sequences": 12,
+    "planned_turns_per_sequence": 4,
+    "planned_main_attempts": 432,
+    "planned_diagnostic_replay_attempts": 144,
+    "counterbalanced_arm_orders": [
+      [
+        "small",
+        "large",
+        "adaptive"
+      ],
+      [
+        "large",
+        "adaptive",
+        "small"
+      ],
+      [
+        "adaptive",
+        "small",
+        "large"
+      ]
+    ],
+    "diagnostic_replay_order": "after_the_three_main_arms_for_each_sequence_repetition",
+    "conversation_history": "one_persistent_Conversation_per_sequence_initially_empty_normal_history_rules",
+    "model_residency": "normal_retained_single_active_model_within_four_turn_sequence_cold_between_sequences",
+    "labels_are_routing_targets": false,
+    "quality_unit": "12_authored_sequences_with_shared_templates_and_fictional_profile_not_576_independent_observations",
+    "execution_gold_boundary": "Only execution_cases.prompt enters the user path; rubrics, IDs, labels, pattern and diagnostic expectations are never model input.",
+    "predefined_pass_thresholds": null,
+    "memory_provenance": {
+      "source": "evaluation/post_memory_comparison_20260912/frozen_v2/workload.json",
+      "source_sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+      "reused_field": "memory_seed",
+      "new_prompts": true
+    }
+  },
+  "initial_history": [],
+  "generation_settings": {
+    "small_model": "qwen3:0.6b",
+    "large_model": "qwen3:1.7b",
+    "context_length": 2048,
+    "max_output_tokens": 192,
+    "temperature": 0,
+    "seed": 42,
+    "think": false
+  },
+  "sequences": [
+    {
+      "id": "ro_eeee_1",
+      "pattern": "EEEE",
+      "variant": 1,
+      "case_ids": [
+        "ro_eeee_1_t1",
+        "ro_eeee_1_t2",
+        "ro_eeee_1_t3",
+        "ro_eeee_1_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_eeee_2",
+      "pattern": "EEEE",
+      "variant": 2,
+      "case_ids": [
+        "ro_eeee_2_t1",
+        "ro_eeee_2_t2",
+        "ro_eeee_2_t3",
+        "ro_eeee_2_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_eeee_3",
+      "pattern": "EEEE",
+      "variant": 3,
+      "case_ids": [
+        "ro_eeee_3_t1",
+        "ro_eeee_3_t2",
+        "ro_eeee_3_t3",
+        "ro_eeee_3_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_dddd_1",
+      "pattern": "DDDD",
+      "variant": 1,
+      "case_ids": [
+        "ro_dddd_1_t1",
+        "ro_dddd_1_t2",
+        "ro_dddd_1_t3",
+        "ro_dddd_1_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_dddd_2",
+      "pattern": "DDDD",
+      "variant": 2,
+      "case_ids": [
+        "ro_dddd_2_t1",
+        "ro_dddd_2_t2",
+        "ro_dddd_2_t3",
+        "ro_dddd_2_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_dddd_3",
+      "pattern": "DDDD",
+      "variant": 3,
+      "case_ids": [
+        "ro_dddd_3_t1",
+        "ro_dddd_3_t2",
+        "ro_dddd_3_t3",
+        "ro_dddd_3_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_eded_1",
+      "pattern": "EDED",
+      "variant": 1,
+      "case_ids": [
+        "ro_eded_1_t1",
+        "ro_eded_1_t2",
+        "ro_eded_1_t3",
+        "ro_eded_1_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_eded_2",
+      "pattern": "EDED",
+      "variant": 2,
+      "case_ids": [
+        "ro_eded_2_t1",
+        "ro_eded_2_t2",
+        "ro_eded_2_t3",
+        "ro_eded_2_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_eded_3",
+      "pattern": "EDED",
+      "variant": 3,
+      "case_ids": [
+        "ro_eded_3_t1",
+        "ro_eded_3_t2",
+        "ro_eded_3_t3",
+        "ro_eded_3_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_ddee_1",
+      "pattern": "DDEE",
+      "variant": 1,
+      "case_ids": [
+        "ro_ddee_1_t1",
+        "ro_ddee_1_t2",
+        "ro_ddee_1_t3",
+        "ro_ddee_1_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_ddee_2",
+      "pattern": "DDEE",
+      "variant": 2,
+      "case_ids": [
+        "ro_ddee_2_t1",
+        "ro_ddee_2_t2",
+        "ro_ddee_2_t3",
+        "ro_ddee_2_t4"
+      ],
+      "initial_history": []
+    },
+    {
+      "id": "ro_ddee_3",
+      "pattern": "DDEE",
+      "variant": 3,
+      "case_ids": [
+        "ro_ddee_3_t1",
+        "ro_ddee_3_t2",
+        "ro_ddee_3_t3",
+        "ro_ddee_3_t4"
+      ],
+      "initial_history": []
+    }
+  ],
+  "memory_seed": {
+    "profile_id": "fictional_tideglass_post_memory_v1",
+    "evaluation_at": "2026-10-03T20:00:00.000000Z",
+    "retention_days": 7,
+    "clock_basis": "UTC for all fictional stored and requested times; the evaluation clock is independent of real device time.",
+    "confirmation": "Every remember and correct operation is an explicitly confirmed fictional seed operation.",
+    "events": [
+      {
+        "id": "s3_seed_archive_name",
+        "at": "2026-09-29T08:00:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003101",
+        "canonical_text": "You call your neighbourhood sound archive Tideglass.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_editor",
+        "at": "2026-09-29T08:01:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003102",
+        "canonical_text": "Selma is your sound-archive editor and helps you check recordings.",
+        "kind": "relationship"
+      },
+      {
+        "id": "s3_seed_filename_rule",
+        "at": "2026-09-29T08:02:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003103",
+        "canonical_text": "For sound-archive clips, you want filenames to start with the recording date followed by the street name.",
+        "kind": "preference"
+      },
+      {
+        "id": "s3_seed_old_pickup",
+        "at": "2026-09-29T08:03:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003104",
+        "canonical_text": "You collect reserved library books from the lobby shelf.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_transit_card",
+        "at": "2026-09-29T08:04:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003105",
+        "canonical_text": "Your spare transit card is inside the striped notebook.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_locker",
+        "at": "2026-09-29T08:05:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003106",
+        "canonical_text": "Your temporary equipment locker number is 17.",
+        "kind": "fact",
+        "valid_until": "2026-10-02T18:00:00.000000Z"
+      },
+      {
+        "id": "s3_seed_map_early",
+        "at": "2026-09-29T08:06:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003107",
+        "canonical_text": "Your community map session on 5 October 2026 starts at 14:00.",
+        "kind": "event",
+        "event_time": "2026-10-05T14:00:00.000000Z"
+      },
+      {
+        "id": "s3_seed_map_late",
+        "at": "2026-09-29T08:07:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003108",
+        "canonical_text": "Your community map session on 5 October 2026 starts at 15:00.",
+        "kind": "event",
+        "event_time": "2026-10-05T15:00:00.000000Z"
+      },
+      {
+        "id": "s3_seed_shed_hook",
+        "at": "2026-09-29T08:08:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003109",
+        "canonical_text": "The square hook beside the shed door is where you keep the watering-can key.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_pots",
+        "at": "2026-09-29T08:09:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310a",
+        "canonical_text": "Your balcony rack holds fourteen seedling pots.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_fan_rule",
+        "at": "2026-09-29T08:10:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310b",
+        "canonical_text": "You keep the desktop fan off whenever the recording light is on.",
+        "kind": "preference"
+      },
+      {
+        "id": "s3_seed_other_ticket",
+        "at": "2026-09-29T08:11:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310c",
+        "canonical_text": "Dalia's river-ferry ticket is valid for the upper deck.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_water_credit",
+        "at": "2026-09-29T08:12:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310d",
+        "canonical_text": "Your allotment tap meter has 42 litres of prepaid water remaining.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_water_reserve",
+        "at": "2026-09-29T08:13:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310e",
+        "canonical_text": "You reserve 10 litres of the remaining allotment tap water for seedlings.",
+        "kind": "preference"
+      },
+      {
+        "id": "s3_seed_booth",
+        "at": "2026-09-29T08:14:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310f",
+        "canonical_text": "Your editing-booth booking on 4 October 2026 runs from 09:10 to 10:50.",
+        "kind": "event",
+        "event_time": "2026-10-04T09:10:00.000000Z"
+      },
+      {
+        "id": "s3_seed_review_call",
+        "at": "2026-09-29T08:15:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003110",
+        "canonical_text": "Your audio-review call on 4 October 2026 begins at 10:30.",
+        "kind": "event",
+        "event_time": "2026-10-04T10:30:00.000000Z"
+      },
+      {
+        "id": "s3_seed_cycle_rule",
+        "at": "2026-09-29T08:16:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003111",
+        "canonical_text": "For cycle commutes, you allow at most two road crossings and choose the quickest route among those allowed.",
+        "kind": "preference"
+      },
+      {
+        "id": "s3_seed_cameras",
+        "at": "2026-09-29T08:17:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003112",
+        "canonical_text": "You have five loan cameras ready for use.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_tripods",
+        "at": "2026-09-29T08:18:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003113",
+        "canonical_text": "You have three loan tripods ready for use.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_repair",
+        "at": "2026-09-29T08:19:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003114",
+        "canonical_text": "Your clock-repair appointment on 6 October 2026 starts at 11:20.",
+        "kind": "event",
+        "event_time": "2026-10-06T11:20:00.000000Z"
+      },
+      {
+        "id": "s3_seed_adhesive_rule",
+        "at": "2026-09-29T08:20:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003115",
+        "canonical_text": "For your display frames, you leave newly applied adhesive untouched for 25 minutes.",
+        "kind": "routine"
+      },
+      {
+        "id": "s3_seed_atlas_due",
+        "at": "2026-09-29T08:21:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003116",
+        "canonical_text": "Your borrowed atlas is due back on 7 October 2026.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_returns_close",
+        "at": "2026-09-29T08:22:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003117",
+        "canonical_text": "On 7 October 2026, your library book-returns desk closes at 18:15.",
+        "kind": "event",
+        "event_time": "2026-10-07T18:15:00.000000Z"
+      },
+      {
+        "id": "s3_seed_scan_start",
+        "at": "2026-09-30T23:41:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003118",
+        "canonical_text": "You started the photo scanning batch on 30 September 2026 at 23:40.",
+        "kind": "event",
+        "event_time": "2026-09-30T23:40:00.000000Z"
+      },
+      {
+        "id": "s3_seed_scan_done",
+        "at": "2026-10-01T00:26:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003119",
+        "canonical_text": "You finished the photo scanning batch on 1 October 2026 at 00:25.",
+        "kind": "event",
+        "event_time": "2026-10-01T00:25:00.000000Z"
+      },
+      {
+        "id": "s3_seed_upload_done",
+        "at": "2026-10-01T01:06:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000311a",
+        "canonical_text": "The scanned-photo upload finished on 1 October 2026 at 01:05.",
+        "kind": "event",
+        "event_time": "2026-10-01T01:05:00.000000Z"
+      },
+      {
+        "id": "s3_seed_basin_recording",
+        "at": "2026-10-02T07:40:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000311b",
+        "canonical_text": "You recorded the Basin Road sound clip on 2 October 2026 at 07:35.",
+        "kind": "event",
+        "event_time": "2026-10-02T07:35:00.000000Z"
+      },
+      {
+        "id": "s3_seed_correct_pickup",
+        "at": "2026-10-02T12:00:00.000000Z",
+        "operation": "correct",
+        "target_id": "mem_00000000000000000000000000003104",
+        "memory_id": "mem_0000000000000000000000000000311c",
+        "canonical_text": "Your reserved library books are now collected at the side-window desk."
+      },
+      {
+        "id": "s3_seed_forget_transit_card",
+        "at": "2026-10-03T10:00:00.000000Z",
+        "operation": "forget",
+        "target_id": "mem_00000000000000000000000000003105"
+      },
+      {
+        "id": "s3_seed_adhesive_start",
+        "at": "2026-10-03T16:46:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000311d",
+        "canonical_text": "You applied adhesive to the delivery display frame on 3 October 2026 at 16:45.",
+        "kind": "event",
+        "event_time": "2026-10-03T16:45:00.000000Z"
+      }
+    ],
+    "expected_state": {
+      "eligible_current_memory_ids": [
+        "mem_00000000000000000000000000003101",
+        "mem_00000000000000000000000000003102",
+        "mem_00000000000000000000000000003103",
+        "mem_00000000000000000000000000003107",
+        "mem_00000000000000000000000000003108",
+        "mem_00000000000000000000000000003109",
+        "mem_0000000000000000000000000000310a",
+        "mem_0000000000000000000000000000310b",
+        "mem_0000000000000000000000000000310c",
+        "mem_0000000000000000000000000000310d",
+        "mem_0000000000000000000000000000310e",
+        "mem_0000000000000000000000000000310f",
+        "mem_00000000000000000000000000003110",
+        "mem_00000000000000000000000000003111",
+        "mem_00000000000000000000000000003112",
+        "mem_00000000000000000000000000003113",
+        "mem_00000000000000000000000000003114",
+        "mem_00000000000000000000000000003115",
+        "mem_00000000000000000000000000003116",
+        "mem_00000000000000000000000000003117",
+        "mem_00000000000000000000000000003118",
+        "mem_00000000000000000000000000003119",
+        "mem_0000000000000000000000000000311a",
+        "mem_0000000000000000000000000000311b",
+        "mem_0000000000000000000000000000311c",
+        "mem_0000000000000000000000000000311d"
+      ],
+      "superseded_memory_ids": [
+        "mem_00000000000000000000000000003104"
+      ],
+      "forgotten_memory_ids": [
+        "mem_00000000000000000000000000003105"
+      ],
+      "expired_memory_ids": [
+        "mem_00000000000000000000000000003106"
+      ],
+      "unknown_fields": [
+        "user audiobook-language preference",
+        "user river-ferry ticket deck",
+        "home-to-clock-repair tram journey duration"
+      ],
+      "unresolved_conflict_groups": [
+        [
+          "mem_00000000000000000000000000003107",
+          "mem_00000000000000000000000000003108"
+        ]
+      ],
+      "memory_id_labels": {
+        "archive_name": "mem_00000000000000000000000000003101",
+        "editor": "mem_00000000000000000000000000003102",
+        "filename_rule": "mem_00000000000000000000000000003103",
+        "old_pickup": "mem_00000000000000000000000000003104",
+        "transit_card": "mem_00000000000000000000000000003105",
+        "locker": "mem_00000000000000000000000000003106",
+        "map_early": "mem_00000000000000000000000000003107",
+        "map_late": "mem_00000000000000000000000000003108",
+        "shed_hook": "mem_00000000000000000000000000003109",
+        "pots": "mem_0000000000000000000000000000310a",
+        "fan_rule": "mem_0000000000000000000000000000310b",
+        "other_ticket": "mem_0000000000000000000000000000310c",
+        "water_credit": "mem_0000000000000000000000000000310d",
+        "water_reserve": "mem_0000000000000000000000000000310e",
+        "booth": "mem_0000000000000000000000000000310f",
+        "review_call": "mem_00000000000000000000000000003110",
+        "cycle_rule": "mem_00000000000000000000000000003111",
+        "cameras": "mem_00000000000000000000000000003112",
+        "tripods": "mem_00000000000000000000000000003113",
+        "repair": "mem_00000000000000000000000000003114",
+        "adhesive_rule": "mem_00000000000000000000000000003115",
+        "atlas_due": "mem_00000000000000000000000000003116",
+        "returns_close": "mem_00000000000000000000000000003117",
+        "scan_start": "mem_00000000000000000000000000003118",
+        "scan_done": "mem_00000000000000000000000000003119",
+        "upload_done": "mem_0000000000000000000000000000311a",
+        "basin_recording": "mem_0000000000000000000000000000311b",
+        "current_pickup": "mem_0000000000000000000000000000311c",
+        "adhesive_start": "mem_0000000000000000000000000000311d"
+      },
+      "notes": "The two map-session start times are separate current assertions, not a correction chain. The ferry ticket belongs to Dalia, not the user. Seed transitions happen before requests, so the evaluation tests a fixed lifecycle snapshot only."
+    }
+  },
+  "execution_cases": [
+    {
+      "id": "ro_eeee_1_t1",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_1",
+      "prompt": "Hello!"
+    },
+    {
+      "id": "ro_eeee_1_t2",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_1",
+      "prompt": "Thanks!"
+    },
+    {
+      "id": "ro_eeee_1_t3",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_1",
+      "prompt": "Good evening!"
+    },
+    {
+      "id": "ro_eeee_1_t4",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_1",
+      "prompt": "Goodbye!"
+    },
+    {
+      "id": "ro_eeee_2_t1",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_2",
+      "prompt": "What is a triangle?"
+    },
+    {
+      "id": "ro_eeee_2_t2",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_2",
+      "prompt": "Thank you!"
+    },
+    {
+      "id": "ro_eeee_2_t3",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_2",
+      "prompt": "Hi!"
+    },
+    {
+      "id": "ro_eeee_2_t4",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_2",
+      "prompt": "Bye!"
+    },
+    {
+      "id": "ro_eeee_3_t1",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_3",
+      "prompt": "Who is my sound-archive editor?"
+    },
+    {
+      "id": "ro_eeee_3_t2",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_3",
+      "prompt": "Thanks!"
+    },
+    {
+      "id": "ro_eeee_3_t3",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_3",
+      "prompt": "Good morning!"
+    },
+    {
+      "id": "ro_eeee_3_t4",
+      "stratum": "easy",
+      "scenario_id": "ro_eeee_3",
+      "prompt": "Good night!"
+    },
+    {
+      "id": "ro_dddd_1_t1",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_1",
+      "prompt": "What is the number of usable cups in seven crates of six cups each after five damaged cups are removed? Explain the calculation briefly."
+    },
+    {
+      "id": "ro_dddd_1_t2",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_1",
+      "prompt": "A packing job starts at 09:10. Task A takes 12 minutes, task B takes 7 minutes after A, and task C takes 5 minutes after B. Calculate the finishing time."
+    },
+    {
+      "id": "ro_dddd_1_t3",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_1",
+      "prompt": "Choose the offer with the largest capacity within a cost limit of 15 credits: A costs 12 with capacity 7; B costs 15 with capacity 9; C costs 14 with capacity 8. Give the offer and capacity."
+    },
+    {
+      "id": "ro_dddd_1_t4",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_1",
+      "prompt": "Select red objects except squares, and blue objects only if round. A is red and round; B is red and square; C is blue and round; D is blue and square. List only the qualifying labels."
+    },
+    {
+      "id": "ro_dddd_2_t1",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_2",
+      "prompt": "A 30-credit budget buys notebooks at 4 credits each. At least 6 credits must remain. Calculate the maximum notebook count and remaining credits."
+    },
+    {
+      "id": "ro_dddd_2_t2",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_2",
+      "prompt": "Put these tasks in a valid order: R must follow P and Q; Q must follow P; S must follow R. Give the complete order."
+    },
+    {
+      "id": "ro_dddd_2_t3",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_2",
+      "prompt": "Compare two routes: A takes 18 minutes plus two waits of 4 minutes; B takes 23 minutes plus one wait of 2 minutes. Choose the faster route and state the difference."
+    },
+    {
+      "id": "ro_dddd_2_t4",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_2",
+      "prompt": "List every two-digit code using 1, 2, and 3 without repeating a digit, with the first digit smaller than the second."
+    },
+    {
+      "id": "ro_dddd_3_t1",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_3",
+      "prompt": "Using my stored allotment water supply and reserve, calculate how many litres are available without using the reserve."
+    },
+    {
+      "id": "ro_dddd_3_t2",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_3",
+      "prompt": "Using my stored loan equipment counts, calculate how many camera-and-tripod pairs I can lend and how many cameras remain spare."
+    },
+    {
+      "id": "ro_dddd_3_t3",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_3",
+      "prompt": "Using my stored photo scanning start and finish times, calculate the elapsed minutes."
+    },
+    {
+      "id": "ro_dddd_3_t4",
+      "stratum": "demanding",
+      "scenario_id": "ro_dddd_3",
+      "prompt": "Using my stored display-frame adhesive rule and application time, calculate the earliest safe handling time for the delivery frame."
+    },
+    {
+      "id": "ro_eded_1_t1",
+      "stratum": "easy",
+      "scenario_id": "ro_eded_1",
+      "prompt": "What is a compass?"
+    },
+    {
+      "id": "ro_eded_1_t2",
+      "stratum": "demanding",
+      "scenario_id": "ro_eded_1",
+      "prompt": "What is the total number of pencils left from four boxes of nine after eleven pencils are given away? Show the calculation."
+    },
+    {
+      "id": "ro_eded_1_t3",
+      "stratum": "easy",
+      "scenario_id": "ro_eded_1",
+      "prompt": "What is an island?"
+    },
+    {
+      "id": "ro_eded_1_t4",
+      "stratum": "demanding",
+      "scenario_id": "ro_eded_1",
+      "prompt": "Sort these packages by increasing weight, breaking a weight tie alphabetically by label: D weighs 3; A weighs 2; C weighs 2; B weighs 1."
+    },
+    {
+      "id": "ro_eded_2_t1",
+      "stratum": "easy",
+      "scenario_id": "ro_eded_2",
+      "prompt": "Hey!"
+    },
+    {
+      "id": "ro_eded_2_t2",
+      "stratum": "demanding",
+      "scenario_id": "ro_eded_2",
+      "prompt": "A train leaves at 10:45 and travels for 35 minutes, then a walk takes 12 minutes. Calculate the final arrival time."
+    },
+    {
+      "id": "ro_eded_2_t3",
+      "stratum": "easy",
+      "scenario_id": "ro_eded_2",
+      "prompt": "Thank you!"
+    },
+    {
+      "id": "ro_eded_2_t4",
+      "stratum": "demanding",
+      "scenario_id": "ro_eded_2",
+      "prompt": "Select the cheapest box that holds at least 10 tokens and weighs at most 4 units: A holds 12, weighs 5, costs 3; B holds 10, weighs 4, costs 6; C holds 11, weighs 3, costs 8."
+    },
+    {
+      "id": "ro_eded_3_t1",
+      "stratum": "easy",
+      "scenario_id": "ro_eded_3",
+      "prompt": "Where is my watering-can key?"
+    },
+    {
+      "id": "ro_eded_3_t2",
+      "stratum": "demanding",
+      "scenario_id": "ro_eded_3",
+      "prompt": "Using my stored cycle-commute preference, choose among A with one road crossing and 19 minutes, B with three crossings and 12 minutes, and C with two crossings and 16 minutes."
+    },
+    {
+      "id": "ro_eded_3_t3",
+      "stratum": "easy",
+      "scenario_id": "ro_eded_3",
+      "prompt": "Who is my sound-archive editor?"
+    },
+    {
+      "id": "ro_eded_3_t4",
+      "stratum": "demanding",
+      "scenario_id": "ro_eded_3",
+      "prompt": "Using my stored desktop-fan preference, explain whether the fan may be on while the recording light is on."
+    },
+    {
+      "id": "ro_ddee_1_t1",
+      "stratum": "demanding",
+      "scenario_id": "ro_ddee_1",
+      "prompt": "What is the number of tickets remaining after selling three groups of eight from a stock of forty? Explain briefly."
+    },
+    {
+      "id": "ro_ddee_1_t2",
+      "stratum": "demanding",
+      "scenario_id": "ro_ddee_1",
+      "prompt": "A workshop starts at 13:20, runs for 25 minutes, pauses for 10 minutes, and runs another 15 minutes. Calculate its finish time."
+    },
+    {
+      "id": "ro_ddee_1_t3",
+      "stratum": "easy",
+      "scenario_id": "ro_ddee_1",
+      "prompt": "Thanks!"
+    },
+    {
+      "id": "ro_ddee_1_t4",
+      "stratum": "easy",
+      "scenario_id": "ro_ddee_1",
+      "prompt": "Goodbye!"
+    },
+    {
+      "id": "ro_ddee_2_t1",
+      "stratum": "demanding",
+      "scenario_id": "ro_ddee_2",
+      "prompt": "Compare offers A and B: A gives 6 folders for 18 credits; B gives 5 folders for 20 credits. Identify the lower cost per folder and the difference per folder."
+    },
+    {
+      "id": "ro_ddee_2_t2",
+      "stratum": "demanding",
+      "scenario_id": "ro_ddee_2",
+      "prompt": "Arrange these stages under the constraints: wash before dry; dry before label; label before store. Give the complete order."
+    },
+    {
+      "id": "ro_ddee_2_t3",
+      "stratum": "easy",
+      "scenario_id": "ro_ddee_2",
+      "prompt": "Thank you!"
+    },
+    {
+      "id": "ro_ddee_2_t4",
+      "stratum": "easy",
+      "scenario_id": "ro_ddee_2",
+      "prompt": "Bye!"
+    },
+    {
+      "id": "ro_ddee_3_t1",
+      "stratum": "demanding",
+      "scenario_id": "ro_ddee_3",
+      "prompt": "Using my stored display-frame waiting preference, calculate the earliest handling time if adhesive is applied at 10:05."
+    },
+    {
+      "id": "ro_ddee_3_t2",
+      "stratum": "demanding",
+      "scenario_id": "ro_ddee_3",
+      "prompt": "Using my stored loan camera and tripod counts, calculate how many complete camera-and-tripod kits can be assembled."
+    },
+    {
+      "id": "ro_ddee_3_t3",
+      "stratum": "easy",
+      "scenario_id": "ro_ddee_3",
+      "prompt": "Hello!"
+    },
+    {
+      "id": "ro_ddee_3_t4",
+      "stratum": "easy",
+      "scenario_id": "ro_ddee_3",
+      "prompt": "Good evening!"
+    }
+  ],
+  "rubrics": {
+    "ro_eeee_1_t1": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_1_t2": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_1_t3": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_1_t4": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_2_t1": {
+      "mode": "supported",
+      "reference_answer": "A triangle is a polygon with three straight sides.",
+      "required_claims": [
+        "Defines a triangle as a shape or polygon with three straight sides."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_2_t2": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_2_t3": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_2_t4": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_3_t1": {
+      "mode": "supported",
+      "reference_answer": "Selma is your sound-archive editor.",
+      "required_claims": [
+        "Selma is your sound-archive editor."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003102"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_3_t2": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_3_t3": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eeee_3_t4": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_1_t1": {
+      "mode": "supported",
+      "reference_answer": "37 usable cups: 7 times 6 minus 5.",
+      "required_claims": [
+        "Reports 37 usable cups.",
+        "Shows or explains multiplication before subtracting the five damaged cups."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_1_t2": {
+      "mode": "supported",
+      "reference_answer": "09:34.",
+      "required_claims": [
+        "Gives 09:34 as the finish time."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_1_t3": {
+      "mode": "supported",
+      "reference_answer": "B, capacity 9.",
+      "required_claims": [
+        "Selects B.",
+        "States capacity 9."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_1_t4": {
+      "mode": "supported",
+      "reference_answer": "A and C.",
+      "required_claims": [
+        "Lists A and C and no other label."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_2_t1": {
+      "mode": "supported",
+      "reference_answer": "6 notebooks; 6 credits remain.",
+      "required_claims": [
+        "Gives a maximum of 6 notebooks.",
+        "States 6 credits remain."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_2_t2": {
+      "mode": "supported",
+      "reference_answer": "P, Q, R, S.",
+      "required_claims": [
+        "Gives all four tasks in the order P, Q, R, S."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_2_t3": {
+      "mode": "supported",
+      "reference_answer": "B is faster by 1 minute; A totals 26 and B totals 25 minutes.",
+      "required_claims": [
+        "Selects B as faster.",
+        "States a 1-minute difference."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_2_t4": {
+      "mode": "supported",
+      "reference_answer": "12, 13, 23.",
+      "required_claims": [
+        "Lists exactly 12, 13, and 23, allowing different listing order."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_3_t1": {
+      "mode": "supported",
+      "reference_answer": "32 litres are available: 42 minus the 10-litre reserve.",
+      "required_claims": [
+        "Reports 32 available litres.",
+        "Keeps the 10-litre reserve intact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000310d",
+        "mem_0000000000000000000000000000310e"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_3_t2": {
+      "mode": "supported",
+      "reference_answer": "You can lend 3 pairs and retain 2 spare cameras.",
+      "required_claims": [
+        "Reports 3 complete camera-and-tripod pairs.",
+        "Reports 2 spare cameras."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003112",
+        "mem_00000000000000000000000000003113"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_3_t3": {
+      "mode": "supported",
+      "reference_answer": "The scanning lasted 45 minutes, from 23:40 on 30 September to 00:25 on 1 October.",
+      "required_claims": [
+        "Reports 45 minutes across midnight."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003118",
+        "mem_00000000000000000000000000003119"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_dddd_3_t4": {
+      "mode": "supported",
+      "reference_answer": "17:10 on 3 October 2026, after the 25-minute wait from 16:45.",
+      "required_claims": [
+        "Gives 17:10 on 3 October as the earliest handling time.",
+        "Respects the 25-minute wait."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003115",
+        "mem_0000000000000000000000000000311d"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_1_t1": {
+      "mode": "supported",
+      "reference_answer": "A compass is an instrument for finding direction using a needle that points toward magnetic north.",
+      "required_claims": [
+        "Identifies a compass as a direction-finding instrument.",
+        "Mentions magnetic north or a magnetic needle."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_1_t2": {
+      "mode": "supported",
+      "reference_answer": "25 pencils: 4 times 9 minus 11.",
+      "required_claims": [
+        "Reports 25 pencils.",
+        "Shows 36 minus 11 or an equivalent calculation."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_1_t3": {
+      "mode": "supported",
+      "reference_answer": "An island is a piece of land surrounded by water.",
+      "required_claims": [
+        "Defines an island as land surrounded by water."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_1_t4": {
+      "mode": "supported",
+      "reference_answer": "B, A, C, D.",
+      "required_claims": [
+        "Gives exactly B, A, C, D in that order."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_2_t1": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_2_t2": {
+      "mode": "supported",
+      "reference_answer": "11:32.",
+      "required_claims": [
+        "Gives 11:32 as final arrival time."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_2_t3": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_2_t4": {
+      "mode": "supported",
+      "reference_answer": "B, costing 6.",
+      "required_claims": [
+        "Selects B.",
+        "States cost 6."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_3_t1": {
+      "mode": "supported",
+      "reference_answer": "Your watering-can key is on the square hook beside the shed door.",
+      "required_claims": [
+        "Your watering-can key is on the square hook beside the shed door."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003109"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_3_t2": {
+      "mode": "supported",
+      "reference_answer": "Choose C: its two crossings are allowed and it is the fastest allowed route at 16 minutes.",
+      "required_claims": [
+        "Chooses C.",
+        "Respects the at-most-two-crossings rule.",
+        "Identifies C as faster than the other allowed route."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003111"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_3_t3": {
+      "mode": "supported",
+      "reference_answer": "Selma is your sound-archive editor.",
+      "required_claims": [
+        "Selma is your sound-archive editor."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003102"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_eded_3_t4": {
+      "mode": "supported",
+      "reference_answer": "The fan should be off whenever the recording light is on.",
+      "required_claims": [
+        "Says the fan must remain off while the recording light is on."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000310b"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_1_t1": {
+      "mode": "supported",
+      "reference_answer": "16 tickets remain: 40 minus 3 times 8.",
+      "required_claims": [
+        "Reports 16 tickets.",
+        "Shows or explains subtraction of 24 from 40."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_1_t2": {
+      "mode": "supported",
+      "reference_answer": "14:10.",
+      "required_claims": [
+        "Gives 14:10 as the finish time."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_1_t3": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_1_t4": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_2_t1": {
+      "mode": "supported",
+      "reference_answer": "A costs 3 credits per folder, B costs 4; A is cheaper by 1 credit per folder.",
+      "required_claims": [
+        "Chooses A as cheaper per folder.",
+        "States a 1-credit difference per folder."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_2_t2": {
+      "mode": "supported",
+      "reference_answer": "Wash, dry, label, store.",
+      "required_claims": [
+        "Gives all four stages in exactly wash, dry, label, store order."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_2_t3": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_2_t4": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_3_t1": {
+      "mode": "supported",
+      "reference_answer": "10:30, after waiting 25 minutes.",
+      "required_claims": [
+        "Gives 10:30.",
+        "Applies the stored 25-minute waiting rule."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003115"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_3_t2": {
+      "mode": "supported",
+      "reference_answer": "3 complete kits, limited by the 3 tripods.",
+      "required_claims": [
+        "Reports 3 complete camera-and-tripod kits.",
+        "Identifies tripods as the limiting equipment."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003112",
+        "mem_00000000000000000000000000003113"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_3_t3": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "ro_ddee_3_t4": {
+      "mode": "supported",
+      "reference_answer": "A brief appropriate greeting, acknowledgment, or farewell matching the user message.",
+      "required_claims": [
+        "Responds appropriately to this greeting, thanks, or farewell without inventing a personal fact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    }
+  }
+}

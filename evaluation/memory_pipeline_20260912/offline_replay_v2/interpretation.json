@@ -1,0 +1,240 @@
+{
+  "baseline_vs_historical": {
+    "all_differences_empty_helper_vs_first_recorded_candidate_supplied": true,
+    "attempt_keys": [
+      "small:r1:s2_p06",
+      "small:r1:s2_p04",
+      "small:r1:s2_p05",
+      "small:r1:s2_r11",
+      "small:r1:s2_p07",
+      "small:r1:s2_p08",
+      "large:r1:s2_p06",
+      "large:r1:s2_p04",
+      "large:r1:s2_p05",
+      "large:r1:s2_p07",
+      "large:r1:s2_p08",
+      "cascade:r1:s2_p06",
+      "cascade:r1:s2_p04",
+      "cascade:r1:s2_p05",
+      "cascade:r1:s2_r11",
+      "cascade:r1:s2_p07",
+      "large:r2:s2_p06",
+      "large:r2:s2_p04",
+      "large:r2:s2_p05",
+      "large:r2:s2_p07",
+      "large:r2:s2_p08"
+    ],
+    "differences_by_case": {
+      "s2_p04": 4,
+      "s2_p05": 4,
+      "s2_p06": 4,
+      "s2_p07": 4,
+      "s2_p08": 3,
+      "s2_r11": 2
+    },
+    "different_attempts": 21,
+    "explanation": "The archived Conversation uses linked_matches or factual_retrieved[:1]. Helper output excludes this fallback and the subsequent context-packing/schema path. Archived function AST equality supports continuity of the two specific replayed function bodies, not byte-for-byte equality of complete implementations.",
+    "set_equal_attempts": 53
+  },
+  "changed_policy_cases": {
+    "s2_r08": {
+      "authored_memory_intent": false,
+      "baseline": {
+        "case_id": "s2_r08",
+        "memory_required": null,
+        "source": "model"
+      },
+      "current": {
+        "case_id": "s2_r08",
+        "memory_required": false,
+        "source": "policy_general"
+      }
+    },
+    "s2_t04": {
+      "authored_memory_intent": true,
+      "baseline": {
+        "case_id": "s2_t04",
+        "memory_required": null,
+        "source": "model"
+      },
+      "current": {
+        "case_id": "s2_t04",
+        "memory_required": true,
+        "source": "policy_personal"
+      }
+    },
+    "s2_t05": {
+      "authored_memory_intent": true,
+      "baseline": {
+        "case_id": "s2_t05",
+        "memory_required": null,
+        "source": "model"
+      },
+      "current": {
+        "case_id": "s2_t05",
+        "memory_required": true,
+        "source": "policy_personal"
+      }
+    },
+    "s2_t07": {
+      "authored_memory_intent": true,
+      "baseline": {
+        "case_id": "s2_t07",
+        "memory_required": null,
+        "source": "model"
+      },
+      "current": {
+        "case_id": "s2_t07",
+        "memory_required": true,
+        "source": "policy_personal"
+      }
+    },
+    "s2_t08": {
+      "authored_memory_intent": true,
+      "baseline": {
+        "case_id": "s2_t08",
+        "memory_required": null,
+        "source": "model"
+      },
+      "current": {
+        "case_id": "s2_t08",
+        "memory_required": true,
+        "source": "policy_personal"
+      }
+    },
+    "s2_t09": {
+      "authored_memory_intent": true,
+      "baseline": {
+        "case_id": "s2_t09",
+        "memory_required": null,
+        "source": "model"
+      },
+      "current": {
+        "case_id": "s2_t09",
+        "memory_required": true,
+        "source": "policy_personal"
+      }
+    },
+    "s2_t10": {
+      "authored_memory_intent": true,
+      "baseline": {
+        "case_id": "s2_t10",
+        "memory_required": null,
+        "source": "model"
+      },
+      "current": {
+        "case_id": "s2_t10",
+        "memory_required": true,
+        "source": "policy_personal"
+      }
+    },
+    "s2_t11": {
+      "authored_memory_intent": true,
+      "baseline": {
+        "case_id": "s2_t11",
+        "memory_required": null,
+        "source": "model"
+      },
+      "current": {
+        "case_id": "s2_t11",
+        "memory_required": true,
+        "source": "policy_personal"
+      }
+    },
+    "s2_t12": {
+      "authored_memory_intent": true,
+      "baseline": {
+        "case_id": "s2_t12",
+        "memory_required": null,
+        "source": "model"
+      },
+      "current": {
+        "case_id": "s2_t12",
+        "memory_required": true,
+        "source": "policy_personal"
+      }
+    }
+  },
+  "denominators": {
+    "candidate_attempts": 74,
+    "distinct_cases": 48,
+    "observed_attempts": 184,
+    "required_attempts_all": 80,
+    "required_candidate_attempts": 56,
+    "unassessed_candidate_attempts": 110
+  },
+  "ids_outside_minimum_gold": {
+    "baseline": {
+      "attempts": 15,
+      "occurrences": 22
+    },
+    "current": {
+      "attempts": 0,
+      "occurrences": 0
+    }
+  },
+  "limits": [
+    "Repeated attempts are dependent; the unique authored workload has 48 prompts.",
+    "Eight personal prompts now explicitly request retrieval; historical candidate lists are missing for 24 attempts, so no new retrieval success is measured.",
+    "None policy decisions defer to downstream routing and are neither measured false positives nor false negatives.",
+    "No required-ID regression occurs in recorded candidate sets; this does not establish performance on unseen wording or memories.",
+    "No model calls, embedding calls, retrieval calls, new answer accuracy, or latency measurements."
+  ],
+  "remaining_required_selection_misses": [
+    {
+      "absent_from_recorded_candidates": [
+        "mem_00000000000000000000000000002018"
+      ],
+      "key": "small:r1:s2_t07",
+      "missing_ids": [
+        "mem_00000000000000000000000000002018"
+      ]
+    },
+    {
+      "absent_from_recorded_candidates": [
+        "mem_00000000000000000000000000002018"
+      ],
+      "key": "cascade:r1:s2_t07",
+      "missing_ids": [
+        "mem_00000000000000000000000000002018"
+      ]
+    }
+  ],
+  "replay_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/memory_pipeline_20260912/offline_replay_v2/replay.json",
+  "replay_sha256": "0785f8452ef233d64180419e452ec0f50640670db0700b01c7439fedc5094018",
+  "replayed_function_provenance": {
+    "_required_memory_ids": {
+      "function_ast_equal": true,
+      "pre_step_baseline": {
+        "file_sha256": "ecb7f29b894ed302b0e1085f86be6c0dae205af1b4263da693f11dbf8327ae63",
+        "function_ast_sha256": "d0861628f8c2ec35bc134a11e1494792843b3e9ff6884aa299446b4614494a41",
+        "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/memory_pipeline_20260912/baseline_source/src/oline_hri/conversation.py"
+      },
+      "stage2_execution_freeze": {
+        "file_sha256": "3a1e371355a5c19b0b56f5e232252df21cfce526d859903bb881b4f006fcec4a",
+        "function_ast_sha256": "d0861628f8c2ec35bc134a11e1494792843b3e9ff6884aa299446b4614494a41",
+        "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/complete_system_20260911/frozen_source_v2/src/oline_hri/conversation.py"
+      }
+    },
+    "memory_intent_policy": {
+      "function_ast_equal": true,
+      "pre_step_baseline": {
+        "file_sha256": "a3b86350c085b5c37401354fad7f816789c4740059d442593b8c6d75201d01d9",
+        "function_ast_sha256": "d567783638ad90f5658dc229a514900e181540954b40308f6bd9891d2b31e9b3",
+        "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/memory_pipeline_20260912/baseline_source/src/oline_hri/routing.py"
+      },
+      "stage2_execution_freeze": {
+        "file_sha256": "36263deb5fd317cd2881dff2270c407619697672ef82f094feeaec35e9767eff",
+        "function_ast_sha256": "d567783638ad90f5658dc229a514900e181540954b40308f6bd9891d2b31e9b3",
+        "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/complete_system_20260911/frozen_source_v2/src/oline_hri/routing.py"
+      }
+    }
+  },
+  "required_completeness_improvements_by_case": {
+    "s2_p04": 4,
+    "s2_p08": 3
+  },
+  "scope": "Historical authored DEVELOPMENT data. Deterministic policy and evidence-linking helpers only. No new answer, retrieval or performance evaluation.",
+  "selected_required_id_regressions": [],
+  "v1_v2_comparison_identical": true
+}

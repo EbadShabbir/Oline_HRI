@@ -1,0 +1,11 @@
+{
+  "schema_version": "independent_release_answer_review_v1",
+  "created_at": "2026-09-14T18:43:34.942548+00:00",
+  "candidate_freeze_path": "evaluation/routing_reliability_20260914/candidate_freeze_v1/freeze.json",
+  "candidate_freeze_sha256": "11e467b2a382f13e723008b7e6ca556c965bf80cfffc2513c4a0bfd49d8e5a07",
+  "review_plan_sha256": "25a77acd014eff2f904a9930c7af5cea0af4aa63b1ac1195cffd56d9271ff451",
+  "candidate_observations_path": "evaluation/routing_reliability_20260914/release_learned_v1/observations.jsonl",
+  "reviewer_provenance": "Corpus author with legacy architecture knowledge; release authored before reading replacement semantic implementation. Review plan frozen before release outputs. No model grading calls.",
+  "candidate_source_integrity_at_review_start": "all frozen source hashes matched",
+  "policy": "No production code, prompts, model artifacts, corpus, or labels changed from release knowledge. Count all32 and report safety, usefulness, and clarification friction separately."
+}

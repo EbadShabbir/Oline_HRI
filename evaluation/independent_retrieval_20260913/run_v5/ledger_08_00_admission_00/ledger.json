@@ -1,0 +1,1810 @@
+{
+  "admission_index": 0,
+  "admission_rejections": [],
+  "authorized_worker_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_08_from_01",
+  "baseline": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01/start.json",
+  "continuation_sha256": "8a31bf678f6bee8e7f980628cdd8538b0fb53bd5cdd35c04fe12358133c58bc6",
+  "freeze_sha256": "5e9cbd1b31543d7aad08d3a154bb4986a377b154d20f1b9c8085bdd70602528a",
+  "offset": 0,
+  "prior_attempts": [
+    {
+      "case_id": "ir_07_02",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_01",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_03",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_04",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_05",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_06",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_04",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_02",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_04",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_02",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_04",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_01",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_03",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_04",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_04",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_06",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_01",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_01",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_02",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_02",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_05",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_02",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_05",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_04",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_06",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_03",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_05",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_01",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_06",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_01",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_03",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_05",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_06",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_06",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_04",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_03",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_05",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_03",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_03",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_02",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_02",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_05",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_06",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_01",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_03",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_01",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_05",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_06",
+      "slot": 1,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_02",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_01",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_03",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_04",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_05",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_06",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_04",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_02",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_04",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_02",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_04",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_01",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_03",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_04",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_04",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_06",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_01",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_01",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_02",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_02",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_05",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_02",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_05",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_04",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_06",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_03",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_05",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_01",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_06",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_01",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_03",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_05",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_06",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_06",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_04",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_03",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_05",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_03",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_03",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_02",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_02",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_05",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_06",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_01",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_03",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_01",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_05",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_06",
+      "slot": 2,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_02",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_01",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_03",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_04",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_05",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_06",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_04",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_02",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_04",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_02",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_04",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_01",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_03",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_04",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_04",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_06",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_01",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_01",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_02",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_02",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_05",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_02",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_05",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_04",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_06",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_03",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_05",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_01",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_06",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_01",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_03",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_05",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_06",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_06",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_04",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_03",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_05",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_03",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_03",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_02",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_02",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_05",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_06",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_01",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_03",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_01",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_05",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_06",
+      "slot": 3,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_02",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_01",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_03",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_04",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_05",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_06",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_04",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_02",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_04",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_02",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_04",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_01",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_03",
+      "slot": 4,
+      "status": "interrupted"
+    },
+    {
+      "case_id": "ir_04_04",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_04",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_06",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_01",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_01",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_02",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_02",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_05",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_02",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_05",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_04",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_06",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_03",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_05",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_01",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_06",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_01",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_03",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_05",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_06",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_06",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_04",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_03",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_05",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_03",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_03",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_02",
+      "slot": 4,
+      "status": "interrupted"
+    },
+    {
+      "case_id": "ir_05_02",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_05",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_06",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_01",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_03",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_01",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_05",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_06",
+      "slot": 4,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_02",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_01",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_03",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_04",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_05",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_06",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_04",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_02",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_04",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_02",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_04",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_01",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_03",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_04",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_04",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_06",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_01",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_01",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_02",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_02",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_05",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_02",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_05",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_04",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_06",
+      "slot": 5,
+      "status": "interrupted"
+    },
+    {
+      "case_id": "ir_08_03",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_05",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_01",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_06",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_01",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_03",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_05",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_06",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_06",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_04",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_03",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_05",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_03",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_03",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_02",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_02",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_05",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_06",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_01",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_03",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_01",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_05",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_06",
+      "slot": 5,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_02",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_01",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_03",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_04",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_05",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_06",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_04",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_02",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_04",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_02",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_04",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_01",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_03",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_04",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_04",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_06",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_01",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_01",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_02",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_02",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_05",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_02",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_05",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_04",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_06",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_03",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_05",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_01",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_06",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_01",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_03",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_05",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_06",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_06",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_04",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_03",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_05",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_03",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_03",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_02",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_02",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_05",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_06",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_01",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_03",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_01",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_05",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_06",
+      "slot": 6,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_01",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_06",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_06",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_03",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_06",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_01",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_05",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_05",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_03",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_05",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_02",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_06",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_04",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_04",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_03",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_05",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_02",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_04",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_06",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_05",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_03",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_02",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_01",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_03",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_02",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_01",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_01",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_03",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_01",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_02",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_02",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_03",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_06",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_05",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_02",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_06_04",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_03_01",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_05",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_04",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_04_03",
+      "slot": 7,
+      "status": "interrupted"
+    },
+    {
+      "case_id": "ir_06_01",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_07_04",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_05",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_01_06",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_04",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_08_06",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_02_02",
+      "slot": 7,
+      "status": "ok"
+    },
+    {
+      "case_id": "ir_05_04",
+      "slot": 7,
+      "status": "ok"
+    }
+  ],
+  "prior_sessions": [
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01",
+      "exit_code": 0,
+      "seal_sha256": "db3525fe2d2563ba0d042dcc42a2d3b95f88d99217e2b0dd61709f2ad08fa13e",
+      "slot": 1
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03",
+      "exit_code": 0,
+      "seal_sha256": "cd0b060dd6d8f34e39f3ba345c7d6c9649d454851fe275096fc2bd1725b02b8e",
+      "slot": 2
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04",
+      "exit_code": 0,
+      "seal_sha256": "7893fc42e187861ce33c7302e4848eac670e180ca6f1a96a1f956334245ccebb",
+      "slot": 3
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04",
+      "exit_code": 1,
+      "seal_sha256": "d3217b69d9a860d1b566f5984e03e4da01f61094286e5c158d4e8cc475f08b12",
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2/session_04_from_14",
+      "exit_code": 1,
+      "seal_sha256": "cc50e94b94f344b5c8009b100a5ae5336776a7f1baf2ae296b1799ed4eb15bba",
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_04_from_41",
+      "exit_code": 0,
+      "seal_sha256": "dea4862189961224639a4199268fcd8e71a7298083a1326397cda4c383455a4d",
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_05_from_01_admission_retry_01",
+      "exit_code": 1,
+      "seal_sha256": "9397e6c0d2e84758f82e028ff52a7d80cac34fa3f1c40f4c2061cbabed835871",
+      "slot": 5
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_05_from_26",
+      "exit_code": 0,
+      "seal_sha256": "42bb5d2a3e12c271466678636cf23dab95eef4b464c0262783e34c55fe5d8607",
+      "slot": 5
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_06_from_01_admission_retry_01",
+      "exit_code": 0,
+      "seal_sha256": "35f94b951af71c835e5795807a376c04864d64ec211d43457d1954c201552ca1",
+      "slot": 6
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_03",
+      "exit_code": 1,
+      "seal_sha256": "3a5629d37b5f64fec7a7edb587b4f3702e2e49f0a137034bd3199792edaeec53",
+      "slot": 7
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_07_from_41",
+      "exit_code": 0,
+      "seal_sha256": "ac064b64e59bdfb7323ce73c8815a39440d230755aabc8d8191cb457f512d20a",
+      "slot": 7
+    }
+  ],
+  "request_ids": [
+    "ir_08_01",
+    "ir_02_06",
+    "ir_06_06",
+    "ir_07_03",
+    "ir_05_06",
+    "ir_07_01",
+    "ir_03_05",
+    "ir_06_05",
+    "ir_06_03",
+    "ir_07_05",
+    "ir_05_02",
+    "ir_03_06",
+    "ir_04_04",
+    "ir_01_04",
+    "ir_02_03",
+    "ir_04_05",
+    "ir_08_02",
+    "ir_03_04",
+    "ir_07_06",
+    "ir_01_05",
+    "ir_03_03",
+    "ir_03_02",
+    "ir_01_01",
+    "ir_05_03",
+    "ir_06_02",
+    "ir_04_01",
+    "ir_05_01",
+    "ir_08_03",
+    "ir_02_01",
+    "ir_07_02",
+    "ir_04_02",
+    "ir_01_03",
+    "ir_04_06",
+    "ir_08_05",
+    "ir_01_02",
+    "ir_06_04",
+    "ir_03_01",
+    "ir_05_05",
+    "ir_02_04",
+    "ir_04_03",
+    "ir_06_01",
+    "ir_07_04",
+    "ir_02_05",
+    "ir_01_06",
+    "ir_08_04",
+    "ir_08_06",
+    "ir_02_02",
+    "ir_05_04"
+  ],
+  "slot": 8
+}

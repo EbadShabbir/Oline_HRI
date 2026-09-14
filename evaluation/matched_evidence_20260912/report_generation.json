@@ -1,0 +1,10 @@
+{
+  "source_sha256": "1c91b3b1e17ab7bdd9c491c1bf27b553e99d4f111e8d0fa1ef28f0df0b3aa739",
+  "inputs": [
+    "analysis_v1",
+    "resource_audit_v1",
+    "frozen_v1",
+    "run_v1"
+  ],
+  "scope": "postfreeze rendering from frozen reviewed results"
+}

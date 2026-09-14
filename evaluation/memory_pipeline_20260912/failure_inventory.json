@@ -1,0 +1,652 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-12T11:18:47.185141+00:00",
+  "data_status": "Historical Stage 2 authored fixture and outputs are DEVELOPMENT DATA for the new shared-memory implementation; not held-out validation or a new quality result.",
+  "scope": "184 observed attempts in four historical sessions; incomplete cascade and unattempted sessions remain unchanged.",
+  "provenance": {
+    "workload_sha256": "5ac0f9f8c160862e0a14a2162e6bda0d61a3cdf6045ed31e844f63f93996542c",
+    "pipeline_diagnostics_sha256": "4ef5fb28696bdb8b0bf57f20fc68b44da27185ba975088edc13c71294238cc26",
+    "source_observations_sha256": {
+      "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/observations.jsonl": "71574e63a3664b401d3870aca31d967390892240829fcb69d5d7bc7a2026c5a1",
+      "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl": "71ebc3a12f0c10e4b77835b3950ef43af4989825bdd4d7e7d5ca88c2ac179c29",
+      "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/03_cascade_r1/observations.jsonl": "1cef5f17f1c707ad8874465b6ca8e9512bb864bc3b151d441b60b45e0cc97509",
+      "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl": "0f5cc9056adab9cb26f6d458566f9b311a27a78840e0bb3d22c1441bc4d65973"
+    }
+  },
+  "mechanical_stage_counts": {
+    "retrieval_candidates_missing_required_ids": 2,
+    "routing_false_negative_required_personal_evidence": 24,
+    "routing_retrieved_for_self_contained_general": 6,
+    "selection_dropped_required_retrieved_ids": 3
+  },
+  "stage_examples": {
+    "retrieval_candidates_missing_required_ids": [
+      {
+        "session": "small_r1",
+        "case_id": "s2_t07",
+        "prompt": "Each table label and each badge uses one blank card. I need four table labels and three badges. Using my stored card supply and badge preference, how many extra cards must I obtain, and what names should go on the badges?",
+        "gold_ids": [
+          "mem_00000000000000000000000000002012",
+          "mem_00000000000000000000000000002018"
+        ],
+        "retrieved_ids": [
+          "mem_00000000000000000000000000002005",
+          "mem_00000000000000000000000000002012",
+          "mem_00000000000000000000000000002017"
+        ],
+        "supplied_ids": [
+          "mem_00000000000000000000000000002012"
+        ],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/observations.jsonl",
+        "observation_index": 16
+      },
+      {
+        "session": "cascade_r1",
+        "case_id": "s2_t07",
+        "prompt": "Each table label and each badge uses one blank card. I need four table labels and three badges. Using my stored card supply and badge preference, how many extra cards must I obtain, and what names should go on the badges?",
+        "gold_ids": [
+          "mem_00000000000000000000000000002012",
+          "mem_00000000000000000000000000002018"
+        ],
+        "retrieved_ids": [
+          "mem_00000000000000000000000000002005",
+          "mem_00000000000000000000000000002012",
+          "mem_00000000000000000000000000002017"
+        ],
+        "supplied_ids": [
+          "mem_00000000000000000000000000002012"
+        ],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/03_cascade_r1/observations.jsonl",
+        "observation_index": 16
+      }
+    ],
+    "routing_false_negative_required_personal_evidence": [
+      {
+        "session": "small_r1",
+        "case_id": "s2_t05",
+        "prompt": "Remind me of both my current workshop-lunch grain preference and the container holding my embroidery kit.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002005",
+          "mem_0000000000000000000000000000201a"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/observations.jsonl",
+        "observation_index": 23
+      },
+      {
+        "session": "small_r1",
+        "case_id": "s2_t12",
+        "prompt": "Put my completed paper-frame trial, volunteer-form submission, and completed lampshade trial in chronological order, giving each stored date and time.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_0000000000000000000000000000200c",
+          "mem_00000000000000000000000000002016"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/observations.jsonl",
+        "observation_index": 29
+      },
+      {
+        "session": "small_r1",
+        "case_id": "s2_t10",
+        "prompt": "For my pottery demonstration on 26 September 2026, name the room where I should direct visitors. If the stored information does not support one definite room, explain what needs confirming.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/observations.jsonl",
+        "observation_index": 40
+      },
+      {
+        "session": "small_r1",
+        "case_id": "s2_t04",
+        "prompt": "Find the earliest complete community lantern project meeting slot that fits my preferred time window, Idris's availability, and our usual meeting length. Give its start and end times.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002003",
+          "mem_0000000000000000000000000000200f",
+          "mem_00000000000000000000000000002010"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/observations.jsonl",
+        "observation_index": 43
+      },
+      {
+        "session": "small_r1",
+        "case_id": "s2_t09",
+        "prompt": "Suppose my dress rehearsal lasts 45 minutes from its stored start time. Would that finish before the stored finish-by time for my next lantern workshop? Give the finish time and remaining margin.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000200e",
+          "mem_00000000000000000000000000002017"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/observations.jsonl",
+        "observation_index": 45
+      },
+      {
+        "session": "large_r1",
+        "case_id": "s2_t11",
+        "prompt": "Before the workshop, tell me my current lunch-grain preference and my display banner's current location. If either is not known, identify which one.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000201a"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl",
+        "observation_index": 6
+      },
+      {
+        "session": "large_r1",
+        "case_id": "s2_t07",
+        "prompt": "Each table label and each badge uses one blank card. I need four table labels and three badges. Using my stored card supply and badge preference, how many extra cards must I obtain, and what names should go on the badges?",
+        "gold_ids": [
+          "mem_00000000000000000000000000002012",
+          "mem_00000000000000000000000000002018"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl",
+        "observation_index": 16
+      },
+      {
+        "session": "large_r1",
+        "case_id": "s2_t08",
+        "prompt": "The walk to my materials-collection location takes 18 minutes. Using my stored short-journey travel preference and collection time, how should I travel and what is the latest departure time to arrive exactly on time? Assume no delay or buffer.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000200d",
+          "mem_00000000000000000000000000002014"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl",
+        "observation_index": 17
+      },
+      {
+        "session": "large_r1",
+        "case_id": "s2_t05",
+        "prompt": "Remind me of both my current workshop-lunch grain preference and the container holding my embroidery kit.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002005",
+          "mem_0000000000000000000000000000201a"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl",
+        "observation_index": 23
+      },
+      {
+        "session": "large_r1",
+        "case_id": "s2_t12",
+        "prompt": "Put my completed paper-frame trial, volunteer-form submission, and completed lampshade trial in chronological order, giving each stored date and time.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_0000000000000000000000000000200c",
+          "mem_00000000000000000000000000002016"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl",
+        "observation_index": 29
+      },
+      {
+        "session": "large_r1",
+        "case_id": "s2_t10",
+        "prompt": "For my pottery demonstration on 26 September 2026, name the room where I should direct visitors. If the stored information does not support one definite room, explain what needs confirming.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl",
+        "observation_index": 40
+      },
+      {
+        "session": "large_r1",
+        "case_id": "s2_t04",
+        "prompt": "Find the earliest complete community lantern project meeting slot that fits my preferred time window, Idris's availability, and our usual meeting length. Give its start and end times.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002003",
+          "mem_0000000000000000000000000000200f",
+          "mem_00000000000000000000000000002010"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl",
+        "observation_index": 43
+      },
+      {
+        "session": "large_r1",
+        "case_id": "s2_t09",
+        "prompt": "Suppose my dress rehearsal lasts 45 minutes from its stored start time. Would that finish before the stored finish-by time for my next lantern workshop? Give the finish time and remaining margin.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000200e",
+          "mem_00000000000000000000000000002017"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl",
+        "observation_index": 45
+      },
+      {
+        "session": "cascade_r1",
+        "case_id": "s2_t05",
+        "prompt": "Remind me of both my current workshop-lunch grain preference and the container holding my embroidery kit.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002005",
+          "mem_0000000000000000000000000000201a"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/03_cascade_r1/observations.jsonl",
+        "observation_index": 23
+      },
+      {
+        "session": "cascade_r1",
+        "case_id": "s2_t12",
+        "prompt": "Put my completed paper-frame trial, volunteer-form submission, and completed lampshade trial in chronological order, giving each stored date and time.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_0000000000000000000000000000200c",
+          "mem_00000000000000000000000000002016"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/03_cascade_r1/observations.jsonl",
+        "observation_index": 29
+      },
+      {
+        "session": "cascade_r1",
+        "case_id": "s2_t10",
+        "prompt": "For my pottery demonstration on 26 September 2026, name the room where I should direct visitors. If the stored information does not support one definite room, explain what needs confirming.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "interrupted",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/03_cascade_r1/observations.jsonl",
+        "observation_index": 40
+      },
+      {
+        "session": "large_r2",
+        "case_id": "s2_t11",
+        "prompt": "Before the workshop, tell me my current lunch-grain preference and my display banner's current location. If either is not known, identify which one.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000201a"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl",
+        "observation_index": 6
+      },
+      {
+        "session": "large_r2",
+        "case_id": "s2_t07",
+        "prompt": "Each table label and each badge uses one blank card. I need four table labels and three badges. Using my stored card supply and badge preference, how many extra cards must I obtain, and what names should go on the badges?",
+        "gold_ids": [
+          "mem_00000000000000000000000000002012",
+          "mem_00000000000000000000000000002018"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl",
+        "observation_index": 16
+      },
+      {
+        "session": "large_r2",
+        "case_id": "s2_t08",
+        "prompt": "The walk to my materials-collection location takes 18 minutes. Using my stored short-journey travel preference and collection time, how should I travel and what is the latest departure time to arrive exactly on time? Assume no delay or buffer.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000200d",
+          "mem_00000000000000000000000000002014"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl",
+        "observation_index": 17
+      },
+      {
+        "session": "large_r2",
+        "case_id": "s2_t05",
+        "prompt": "Remind me of both my current workshop-lunch grain preference and the container holding my embroidery kit.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002005",
+          "mem_0000000000000000000000000000201a"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl",
+        "observation_index": 23
+      },
+      {
+        "session": "large_r2",
+        "case_id": "s2_t12",
+        "prompt": "Put my completed paper-frame trial, volunteer-form submission, and completed lampshade trial in chronological order, giving each stored date and time.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_0000000000000000000000000000200c",
+          "mem_00000000000000000000000000002016"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl",
+        "observation_index": 29
+      },
+      {
+        "session": "large_r2",
+        "case_id": "s2_t10",
+        "prompt": "For my pottery demonstration on 26 September 2026, name the room where I should direct visitors. If the stored information does not support one definite room, explain what needs confirming.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl",
+        "observation_index": 40
+      },
+      {
+        "session": "large_r2",
+        "case_id": "s2_t04",
+        "prompt": "Find the earliest complete community lantern project meeting slot that fits my preferred time window, Idris's availability, and our usual meeting length. Give its start and end times.",
+        "gold_ids": [
+          "mem_00000000000000000000000000002003",
+          "mem_0000000000000000000000000000200f",
+          "mem_00000000000000000000000000002010"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl",
+        "observation_index": 43
+      },
+      {
+        "session": "large_r2",
+        "case_id": "s2_t09",
+        "prompt": "Suppose my dress rehearsal lasts 45 minutes from its stored start time. Would that finish before the stored finish-by time for my next lantern workshop? Give the finish time and remaining margin.",
+        "gold_ids": [
+          "mem_0000000000000000000000000000200e",
+          "mem_00000000000000000000000000002017"
+        ],
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl",
+        "observation_index": 45
+      }
+    ],
+    "routing_retrieved_for_self_contained_general": [
+      {
+        "session": "small_r1",
+        "case_id": "s2_r11",
+        "prompt": "In this task, a minute measures time and a metre measures length. Which of those units should label a duration?",
+        "gold_ids": [],
+        "retrieved_ids": [
+          "mem_00000000000000000000000000002004",
+          "mem_0000000000000000000000000000200f",
+          "mem_00000000000000000000000000002014"
+        ],
+        "supplied_ids": [
+          "mem_0000000000000000000000000000200f"
+        ],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/observations.jsonl",
+        "observation_index": 27
+      },
+      {
+        "session": "small_r1",
+        "case_id": "s2_r08",
+        "prompt": "A timer starts at 10:35 and runs for 20 minutes. At what time does it finish?",
+        "gold_ids": [],
+        "retrieved_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_0000000000000000000000000000200f",
+          "mem_00000000000000000000000000002014"
+        ],
+        "supplied_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_00000000000000000000000000002014"
+        ],
+        "status": "error",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/observations.jsonl",
+        "observation_index": 35
+      },
+      {
+        "session": "large_r1",
+        "case_id": "s2_r08",
+        "prompt": "A timer starts at 10:35 and runs for 20 minutes. At what time does it finish?",
+        "gold_ids": [],
+        "retrieved_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_0000000000000000000000000000200f",
+          "mem_00000000000000000000000000002014"
+        ],
+        "supplied_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_00000000000000000000000000002014"
+        ],
+        "status": "error",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl",
+        "observation_index": 35
+      },
+      {
+        "session": "cascade_r1",
+        "case_id": "s2_r11",
+        "prompt": "In this task, a minute measures time and a metre measures length. Which of those units should label a duration?",
+        "gold_ids": [],
+        "retrieved_ids": [
+          "mem_00000000000000000000000000002004",
+          "mem_0000000000000000000000000000200f",
+          "mem_00000000000000000000000000002014"
+        ],
+        "supplied_ids": [
+          "mem_0000000000000000000000000000200f"
+        ],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/03_cascade_r1/observations.jsonl",
+        "observation_index": 27
+      },
+      {
+        "session": "cascade_r1",
+        "case_id": "s2_r08",
+        "prompt": "A timer starts at 10:35 and runs for 20 minutes. At what time does it finish?",
+        "gold_ids": [],
+        "retrieved_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_0000000000000000000000000000200f",
+          "mem_00000000000000000000000000002014"
+        ],
+        "supplied_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_00000000000000000000000000002014"
+        ],
+        "status": "error",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/03_cascade_r1/observations.jsonl",
+        "observation_index": 35
+      },
+      {
+        "session": "large_r2",
+        "case_id": "s2_r08",
+        "prompt": "A timer starts at 10:35 and runs for 20 minutes. At what time does it finish?",
+        "gold_ids": [],
+        "retrieved_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_0000000000000000000000000000200f",
+          "mem_00000000000000000000000000002014"
+        ],
+        "supplied_ids": [
+          "mem_0000000000000000000000000000200b",
+          "mem_00000000000000000000000000002014"
+        ],
+        "status": "error",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl",
+        "observation_index": 35
+      }
+    ],
+    "selection_dropped_required_retrieved_ids": [
+      {
+        "session": "small_r1",
+        "case_id": "s2_p08",
+        "prompt": "Which room is booked for my pottery demonstration on 26 September 2026?",
+        "gold_ids": [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a"
+        ],
+        "retrieved_ids": [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a",
+          "mem_00000000000000000000000000002015"
+        ],
+        "supplied_ids": [
+          "mem_00000000000000000000000000002009"
+        ],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/01_small_r1/observations.jsonl",
+        "observation_index": 47
+      },
+      {
+        "session": "large_r1",
+        "case_id": "s2_p08",
+        "prompt": "Which room is booked for my pottery demonstration on 26 September 2026?",
+        "gold_ids": [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a"
+        ],
+        "retrieved_ids": [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a",
+          "mem_00000000000000000000000000002015"
+        ],
+        "supplied_ids": [
+          "mem_00000000000000000000000000002009"
+        ],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/02_large_r1/observations.jsonl",
+        "observation_index": 47
+      },
+      {
+        "session": "large_r2",
+        "case_id": "s2_p08",
+        "prompt": "Which room is booked for my pottery demonstration on 26 September 2026?",
+        "gold_ids": [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a"
+        ],
+        "retrieved_ids": [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a",
+          "mem_00000000000000000000000000002015"
+        ],
+        "supplied_ids": [
+          "mem_00000000000000000000000000002009"
+        ],
+        "status": "ok",
+        "source_observations": "/home/b2jetson/.local/share/oline-hri/evaluation-runs/complete-system-20260911-v2-resumed/04_large_r2/observations.jsonl",
+        "observation_index": 47
+      }
+    ]
+  },
+  "historical_overall": {
+    "all_required_ids_supplied_attempts": 51,
+    "answer_constraints": {
+      "none": 162,
+      "unrecorded": 18,
+      "verified_user_relationship": 4
+    },
+    "attempted": 184,
+    "backend_call_errors": {
+      "KeyboardInterrupt: Jetson safety boundary crossed": 1,
+      "OllamaError: Ollama assistant speech contains a reserved memory reference": 2
+    },
+    "delivered_personal_attempts_with_required_ids": 66,
+    "delivered_personal_missing_required_citation_occurrences": 63,
+    "delivered_personal_with_missing_required_citations": 32,
+    "delivered_with_forbidden_cited_ids": 0,
+    "model_call_purposes": {
+      "compute_selector": 40,
+      "generation": 184,
+      "memory_selector": 184
+    },
+    "personal_attempts": 92,
+    "personal_attempts_with_required_ids": 80,
+    "recorded_reference_ids": {},
+    "reference_ids_field": {
+      "empty": 166,
+      "unrecorded": 18
+    },
+    "request_errors": {
+      "ConversationError: chat generation request failed": 2,
+      "ResponseValidationError: robot response does not cover every cited personal memory": 3,
+      "ResponseValidationError: robot response omits a cited personal relationship detail": 3,
+      "ResponseValidationError: robot response omits requested temporal memory detail": 9,
+      "SafetyGateError: available memory crossed the runtime floor": 1
+    },
+    "requests_with_known_forbidden_supplied_ids": 0,
+    "requests_with_retrieval": 74,
+    "required_evidence_known_attempts": 80,
+    "required_evidence_unknown_attempts": 0,
+    "required_id_occurrences": 128,
+    "required_id_occurrences_supplied": 70,
+    "response_transforms": {
+      "none": 166,
+      "unrecorded": 18
+    },
+    "retrieval_call_count": 74,
+    "route_memory_required": {
+      "False": 110,
+      "True": 74
+    },
+    "some_required_ids_missing_from_evidence_attempts": 29,
+    "status_counts": {
+      "error": 17,
+      "interrupted": 1,
+      "ok": 166
+    }
+  },
+  "limitations": [
+    "No new inference or embedding model execution occurred.",
+    "Counts diagnose necessary evidence flow, not semantic correctness.",
+    "Failures can span multiple stages; overinclusive selection and generation errors require case-level inspection.",
+    "Forbidden-ID counts do not by themselves prove absence of unsupported personal claims.",
+    "No historical semantic scores or rejected-response credit were changed."
+  ],
+  "new_offline_process_tests": {
+    "path": "tests/test_memory_lifecycle_process.py",
+    "sha256": "0599416cb3d72fc33e7dd0526a9798a5b8877268b0841211b302ca9db9ae8e13",
+    "count": 6,
+    "result": "passed",
+    "memory_store_production_edited": false,
+    "real_subprocesses": true,
+    "embedder": "deterministic synthetic vectors; no model"
+  }
+}

@@ -1,0 +1,389 @@
+{
+  "schema_version": "routing_reliability_release_v2",
+  "purpose": "New finite holdout for a future candidate freeze. Do not inspect or use these cases for candidate training, selection, prompt changes, or guard tuning before that freeze.",
+  "provenance": {
+    "authoring_basis": "Independently authored from the requested four-part behavior. The author did not open release v1, its results, candidate outputs, or training corpora while authoring this set.",
+    "known_context": "The author previously contributed development corpora and was informed only that the prior release exposed unnecessary clarification and a followup routing failure. This is not a blinded population sample.",
+    "generated_before_uncertainty_repair_design": true,
+    "model_inference_used": false,
+    "selection_or_tuning_use": false
+  },
+  "composition": {
+    "none": 12,
+    "optional": 6,
+    "required": 8,
+    "clarify": 4,
+    "mixed_required": 2
+  },
+  "label_policy": {
+    "none": "Current assertions, general knowledge, runtime identity, or fully supplied general/draft task context suffice.",
+    "optional": "Known personal context is invited but a general answer is acceptable.",
+    "required": "An unstated personal value or constraint is necessary; ask for it if authorized records are absent.",
+    "clarify": "The intended object, referent, or task is unresolved even for a general response.",
+    "mixed": "Personal recall is required for one part, while expected_general_request is the exact standalone general span that remains answerable."
+  },
+  "limitations": [
+    "This finite authored set cannot establish universal routing accuracy, evidence safety, or response usefulness.",
+    "After the first exposure, failures become development evidence; repeated scores on this same set are regression results, not fresh holdout estimates.",
+    "Only text and prior_turns may reach routing or generation. IDs, categories, expected modes, expected spans, and provenance are evaluation metadata.",
+    "Personal questions intentionally omit factual values. Prior turns contain only general explanations or an explicitly fictional draft."
+  ],
+  "cases": [
+    {
+      "id": "r2_01",
+      "category": "none",
+      "text": "Why does a mirror seem to reverse left and right?",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_02",
+      "category": "none",
+      "text": "What makes a rainbow form?",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_03",
+      "category": "none",
+      "text": "Is a tomato a fruit in botany?",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_04",
+      "category": "none",
+      "text": "Does this assistant physically fetch objects, or provide conversation here?",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_05",
+      "category": "none",
+      "text": "I feel overwhelmed by two unfinished errands. Help me choose a manageable first step.",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_06",
+      "category": "none",
+      "text": "I have bread, hummus and cucumber. Give me one quick sandwich combination.",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_07",
+      "category": "none",
+      "text": "How many diagonals does a hexagon have?",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_08",
+      "category": "none",
+      "text": "I finally finished a tricky jigsaw puzzle.",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_09",
+      "category": "none",
+      "text": "What does a file checksum tell you?",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_10",
+      "category": "none",
+      "text": "Would dry air change that?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Why does iron rust?"
+        },
+        {
+          "role": "assistant",
+          "content": "Iron reacts with oxygen and moisture to form rust."
+        }
+      ],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_11",
+      "category": "none",
+      "text": "Rewrite it in a more hopeful tone.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Write a fictional paragraph for a farewell postcard from an explorer."
+        },
+        {
+          "role": "assistant",
+          "content": "The last ferry is leaving. I will miss this strange island."
+        }
+      ],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_12",
+      "category": "none",
+      "text": "Give a household example of each.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Distinguish a thermometer from a thermostat."
+        },
+        {
+          "role": "assistant",
+          "content": "A thermometer measures temperature. A thermostat controls a system to maintain a target temperature."
+        }
+      ],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_13",
+      "category": "optional",
+      "text": "I am choosing an escape-room theme. You can use any interests you know for me; otherwise pick a broadly appealing theme.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_14",
+      "category": "optional",
+      "text": "Recommend a short audio drama. Knowing my tastes could help, but choose a beginner-friendly one if you lack them.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_15",
+      "category": "optional",
+      "text": "Give me an idea for arranging a terrarium. My saved style preferences are optional.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_16",
+      "category": "optional",
+      "text": "Propose a theme for a trivia round. Adapt it to any interests you have for me, or just use general knowledge.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_17",
+      "category": "optional",
+      "text": "What could I make with origami paper? A familiar interest of mine can inspire it, but any simple design works.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_18",
+      "category": "optional",
+      "text": "Suggest a mocktail. You may consider any flavor preferences you know for me; a generic alcohol-free idea is enough.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_19",
+      "category": "required",
+      "text": "What is my shoe size?",
+      "prior_turns": [],
+      "expected_modes": [
+        "required"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_20",
+      "category": "required",
+      "text": "Which locker is assigned to me?",
+      "prior_turns": [],
+      "expected_modes": [
+        "required"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_21",
+      "category": "required",
+      "text": "Who is my emergency contact?",
+      "prior_turns": [],
+      "expected_modes": [
+        "required"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_22",
+      "category": "required",
+      "text": "How long is my commute to the workshop?",
+      "prior_turns": [],
+      "expected_modes": [
+        "required"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_23",
+      "category": "required",
+      "text": "Make a practice schedule that fits the days my fencing club meets.",
+      "prior_turns": [],
+      "expected_modes": [
+        "required"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_24",
+      "category": "required",
+      "text": "Use my available annual-leave balance to work out how many full five-day weeks I can take.",
+      "prior_turns": [],
+      "expected_modes": [
+        "required"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_25",
+      "category": "required",
+      "text": "What serial number is on my telescope?",
+      "prior_turns": [],
+      "expected_modes": [
+        "required"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_26",
+      "category": "required",
+      "text": "What is the expiry date of my makerspace membership?",
+      "prior_turns": [],
+      "expected_modes": [
+        "required"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_27",
+      "category": "clarify",
+      "text": "Could you switch it to the other one?",
+      "prior_turns": [],
+      "expected_modes": [
+        "clarify"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_28",
+      "category": "clarify",
+      "text": "The blue bit near, uh...",
+      "prior_turns": [],
+      "expected_modes": [
+        "clarify"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_29",
+      "category": "clarify",
+      "text": "Can you tell whether that is enough?",
+      "prior_turns": [],
+      "expected_modes": [
+        "clarify"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_30",
+      "category": "clarify",
+      "text": "What was the number on it?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Tell me what a pulley is."
+        },
+        {
+          "role": "assistant",
+          "content": "A pulley is a wheel with a groove that guides a rope and can change the direction of a pulling force."
+        }
+      ],
+      "expected_modes": [
+        "clarify"
+      ],
+      "expected_general_request": ""
+    },
+    {
+      "id": "r2_31",
+      "category": "mixed",
+      "text": "What is my bicycle helmet size? Explain how a helmet absorbs impact.",
+      "prior_turns": [],
+      "expected_modes": [
+        "required"
+      ],
+      "expected_general_request": "Explain how a helmet absorbs impact."
+    },
+    {
+      "id": "r2_32",
+      "category": "mixed",
+      "text": "Who is my calligraphy tutor, and explain what a broad-edged nib does.",
+      "prior_turns": [],
+      "expected_modes": [
+        "required"
+      ],
+      "expected_general_request": "explain what a broad-edged nib does."
+    }
+  ]
+}

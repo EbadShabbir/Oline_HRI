@@ -1,0 +1,26 @@
+COMMAND: ['/home/b2jetson/miniconda3/bin/python3', '-m', 'unittest', '-v', 'tests.test_retrieval_review_orchestration']
+test_comparison_preserves_exact_originals_and_ignores_rationale_only_difference (tests.test_retrieval_review_orchestration.ReviewOrchestrationTests.test_comparison_preserves_exact_originals_and_ignores_rationale_only_difference) ... ok
+test_known_general_and_flag_validation_match_shared_rubric (tests.test_retrieval_review_orchestration.ReviewOrchestrationTests.test_known_general_and_flag_validation_match_shared_rubric) ... ok
+test_mapping_is_checked_only_after_sealed_resolution_and_covers_each_attempt (tests.test_retrieval_review_orchestration.ReviewOrchestrationTests.test_mapping_is_checked_only_after_sealed_resolution_and_covers_each_attempt) ... ok
+test_resolution_recomputes_summary_counts_and_agreed_ids (tests.test_retrieval_review_orchestration.ReviewOrchestrationTests.test_resolution_recomputes_summary_counts_and_agreed_ids) ... ok
+test_resolution_rejects_missing_or_wrong_disagreement_ids (tests.test_retrieval_review_orchestration.ReviewOrchestrationTests.test_resolution_rejects_missing_or_wrong_disagreement_ids) ... ok
+test_resolution_uses_only_agreed_original_or_supplied_third_judgment (tests.test_retrieval_review_orchestration.ReviewOrchestrationTests.test_resolution_uses_only_agreed_original_or_supplied_third_judgment) ... ok
+test_reviewed_analysis_binding_preserves_exact_resolved_judgments_and_source_digest (tests.test_retrieval_review_orchestration.ReviewOrchestrationTests.test_reviewed_analysis_binding_preserves_exact_resolved_judgments_and_source_digest) ... ok
+test_reviewer_and_adjudicator_distinctness_uses_normalized_identity (tests.test_retrieval_review_orchestration.ReviewOrchestrationTests.test_reviewer_and_adjudicator_distinctness_uses_normalized_identity) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.549s
+
+OK
+
+COMMAND: ['/home/b2jetson/miniconda3/bin/python3', 'evaluation/independent_retrieval_20260913/reviews/reconciliation_synthetic_audit.py']
+test_every_label_flag_difference_requires_adjudication_but_rationale_does_not (__main__.IndependentReconciliationChecks.test_every_label_flag_difference_requires_adjudication_but_rationale_does_not) ... ok
+test_exact_review_id_coverage_rejects_duplicate_missing_and_unknown (__main__.IndependentReconciliationChecks.test_exact_review_id_coverage_rejects_duplicate_missing_and_unknown) ... ok
+test_failure_cannot_be_promoted_or_receive_delivered_claim_flags (__main__.IndependentReconciliationChecks.test_failure_cannot_be_promoted_or_receive_delivered_claim_flags) ... ok
+test_packet_must_hide_ids_and_undelivered_raw_text (__main__.IndependentReconciliationChecks.test_packet_must_hide_ids_and_undelivered_raw_text) ... ok
+test_seal_detects_modified_bytes_and_additional_files (__main__.IndependentReconciliationChecks.test_seal_detects_modified_bytes_and_additional_files) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.025s
+
+OK

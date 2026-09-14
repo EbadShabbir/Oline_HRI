@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "mode": "offline_no_embeddings_no_model_calls",
+  "requests": 48,
+  "categories": {
+    "direct_personal_recall": 8,
+    "paraphrased_personal_recall": 8,
+    "multi_fact_personal": 8,
+    "general_no_memory": 8,
+    "unknown_or_conflicting": 8,
+    "lifecycle_or_authorization": 8
+  },
+  "main_confirmed_lifecycle_events": 30,
+  "main_current_eligible_records": 23,
+  "main_database_records_including_inactive": 26,
+  "references_all_current_authorized_ids_exist": true,
+  "prohibited_request_recognized_by_current_privacy_gate": true,
+  "initial_author_check_correction": "The first author check assumed list_memories filters expiry and failed ir_05_06. It lists active-status records only; eligibility must use retrieval_snapshot_is_current. Corrected author check passed with no dataset/source changes.",
+  "other_profile_note": "Neighbor record validated by independent harness snapshot builder.",
+  "human_validation": "pending"
+}

@@ -1,0 +1,98 @@
+{
+  "prepared": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/prepared_final_v1",
+  "prepared_seal_sha256": "ba58ed648b438b686a46b545f0d00d84cd1c942e0e9fc41f60a3677b56cc9121",
+  "final_packet_sha256": "3a686dbf0564ba54fddcb977994595e5416c74cfd9c185588a9fc76723f0c238",
+  "inputs": [
+    {
+      "batch": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/review_batches/batch_01",
+      "batch_seal_sha256": "f27950b1d2a1f4a664909283506a626ca5ccb7603bcf61884a22db1b09dcca53",
+      "packet_sha256": "0ad6e0b5372efb95c8befc392fcc02af8575ebdf3df0e5aa133baf91f9981040",
+      "review_a": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_a/batch_01.json",
+      "review_a_sha256": "71b040a55d4e50b6d708816378027a9c109129afef77fa2b62eb56eab02c6e70",
+      "review_b": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_b/batch_01.json",
+      "review_b_sha256": "e8cd36112d9c14718e3776ae811805a95ef9697dabbc641345d4cb9267ea436e"
+    },
+    {
+      "batch": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/review_batches/batch_02",
+      "batch_seal_sha256": "7adc45a7a65580a0696493b9bc1bda31bc8839b72704ca45a2e59d251b0dd267",
+      "packet_sha256": "d1e53737215ece18b1b3db24680a77de4b051781e2e8c49605c44142d50364e2",
+      "review_a": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_a/batch_02.json",
+      "review_a_sha256": "b9fc5240b5fda116122f0dd2f763bb24da6e50bdd888fd1f1b9ced773a782659",
+      "review_b": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_b/batch_02.json",
+      "review_b_sha256": "849c64aaa92de80a02a5ba7326937ed1413e01a647cb6fc0cd47d4ca6f9b023e"
+    },
+    {
+      "batch": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/review_batches/batch_03",
+      "batch_seal_sha256": "18b2dc54e3f6d8d53244f7d236925dce7b505b7b7a8a72deb36e14b574c6eb22",
+      "packet_sha256": "a6ff627282d8e03e6c20052dd4c8009b2b19c258aea08dc771ff10b128ddb143",
+      "review_a": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_a/batch_03.json",
+      "review_a_sha256": "fd885fd414a91cce06352897c071b5260138de187e1f19fa4f00f9e0c49f42e0",
+      "review_b": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_b/batch_03.json",
+      "review_b_sha256": "6328990e023210b3d41de68306cfdeb7d292767eeb5fe1bca006cc8cb4f2378b"
+    },
+    {
+      "batch": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/review_batches/batch_04",
+      "batch_seal_sha256": "dcfc920ab602f363c764fc32ed2d50fc75407379b166fe1e4a70eb242358a569",
+      "packet_sha256": "d596585477c717793f5ff72f37e23f14011b3214803a1c438d4ba84e6f5ba41a",
+      "review_a": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_a/batch_04.json",
+      "review_a_sha256": "e8e3520f2683c88d3b25c70639091a90762ca4e60d87b9b4a58effd1a8444154",
+      "review_b": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_b/batch_04.json",
+      "review_b_sha256": "3221a8a5f1caf6ce6dcbc2149607ef1857cf590cb6073e9489688a0ac538a63a"
+    },
+    {
+      "batch": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/review_batches/batch_05",
+      "batch_seal_sha256": "a6c7d13fd6795de68af983b88b504ab71f69df7ed4aedc878eb80af148b3505e",
+      "packet_sha256": "eb08e6be68da6e3bd3c07712e62b528d004c1d9f406c5fcfd2c82a57858fcf2f",
+      "review_a": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_a/batch_05.json",
+      "review_a_sha256": "84a48077fc0105b7ec487f016b0ccc9631bf6db8ea9664182c1d55815728f914",
+      "review_b": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_b/batch_05.json",
+      "review_b_sha256": "db5a69d856556e9a9e450e3ca5e4d2cdc207f5f203ddec83af596248919c45cc"
+    },
+    {
+      "batch": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/review_batches/batch_06",
+      "batch_seal_sha256": "04235f25605e99b92a8c38fd4329abb9c1f3da92f7e6e13ad3afaf9413e7dd56",
+      "packet_sha256": "358f8b609fc4b563d454ffe92f703d47be1c4997118402a06acda901fc07367a",
+      "review_a": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_a/batch_06.json",
+      "review_a_sha256": "540b731e79e0014ad0a658ebed2105a73a1dbed82220740bbb6d0482878db2b9",
+      "review_b": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/reviewer_b/batch_06.json",
+      "review_b_sha256": "1a8d036b50b48363984f6dccecd5748ed1785f1225cca937d7a65b62985dff43"
+    }
+  ],
+  "final_groups": 214,
+  "batch_count": 6,
+  "script_sha256": "454206690cdf64c649e7c7c308f3618b2f2bbbdd43fedbca13363cd346769566",
+  "analyzer_sha256": "60709a1002f7537f8cfd8ea57e8c89052f7ba2e608ca4b36e275a0fc79c95215",
+  "command": [
+    "evaluation/changing_memory_20260914/batch_reviews.py",
+    "bind",
+    "--prepared",
+    "evaluation/changing_memory_20260914/prepared_final_v1",
+    "--batches",
+    "evaluation/changing_memory_20260914/review_batches/batch_01",
+    "evaluation/changing_memory_20260914/review_batches/batch_02",
+    "evaluation/changing_memory_20260914/review_batches/batch_03",
+    "evaluation/changing_memory_20260914/review_batches/batch_04",
+    "evaluation/changing_memory_20260914/review_batches/batch_05",
+    "evaluation/changing_memory_20260914/review_batches/batch_06",
+    "--reviews-a",
+    "evaluation/changing_memory_20260914/reviewer_a/batch_01.json",
+    "evaluation/changing_memory_20260914/reviewer_a/batch_02.json",
+    "evaluation/changing_memory_20260914/reviewer_a/batch_03.json",
+    "evaluation/changing_memory_20260914/reviewer_a/batch_04.json",
+    "evaluation/changing_memory_20260914/reviewer_a/batch_05.json",
+    "evaluation/changing_memory_20260914/reviewer_a/batch_06.json",
+    "--reviews-b",
+    "evaluation/changing_memory_20260914/reviewer_b/batch_01.json",
+    "evaluation/changing_memory_20260914/reviewer_b/batch_02.json",
+    "evaluation/changing_memory_20260914/reviewer_b/batch_03.json",
+    "evaluation/changing_memory_20260914/reviewer_b/batch_04.json",
+    "evaluation/changing_memory_20260914/reviewer_b/batch_05.json",
+    "evaluation/changing_memory_20260914/reviewer_b/batch_06.json",
+    "--output",
+    "evaluation/changing_memory_20260914/bound_reviews_v1"
+  ],
+  "judgment_transformation": "Only blind_id rebinding; all original semantic votes/reasons preserved. Final packet_sha256 replaces batch packet_sha256.",
+  "duplicate_policy": "Equivalent score duplicates use first supplied original unchanged; all originals and reasons preserved. Conflicting score duplicates are rejected.",
+  "human_validation": "pending",
+  "diagnostics_disclosed": false
+}

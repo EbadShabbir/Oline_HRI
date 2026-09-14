@@ -1,0 +1,24 @@
+--- frozen_v1
++++ frozen_v2
+@@ -58,6 +58,8 @@
+     )]
+     paths += list((ROOT / "tests").glob("test_routing_overhead*.py"))
+     paths.append(ROOT / "tests/test_routing_timing.py")
++    paths += [ROOT / "evaluation/routing_overhead_20260912" / name for name in
++              ("continue_collection.py", "analyze_continued.py")]
+     paths.append(ROOT / "config/default.json")
+     return {str(p.relative_to(ROOT)): sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
+ 
+@@ -261,10 +263,10 @@
+                           response_transform=reply.response_transform, reference_ids=list(reply.reference_ids),
+                           fallback_from_model=reply.fallback_from_model)
+             if replay is not None and (backend.expected_requests or backend.client.expected_bodies):
+-                raise ValueError("diagnostic replay did not consume every adaptive generation request")
++                raise SafetyGateError("diagnostic replay did not consume every adaptive generation request")
+         except BaseException as error:
+             record.update(error=type(error).__name__, message=str(error), status="error")
+-            if isinstance(error, (KeyboardInterrupt, SystemExit, SafetyGateError, ValueError)):
++            if isinstance(error, (KeyboardInterrupt, SystemExit, SafetyGateError)):
+                 fatal = error
+             elif backend.transport_error is not None:
+                 fatal = backend.transport_error

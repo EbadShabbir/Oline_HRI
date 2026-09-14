@@ -1,0 +1,12 @@
+{
+  "observed_at": "2026-09-14T13:15:25.222819+00:00",
+  "supervisor_exec_session": 75938,
+  "supervisor_exit_code": 0,
+  "planned_checkpoints": 288,
+  "recorded_checkpoints": 288,
+  "delivered": 283,
+  "withheld": 5,
+  "run_seal_sha256": "80dc632bfdb44fe30f5a6fd81693dfa4bc71a2e8269416e673974b3d47dd339b",
+  "finish_sha256": "ce954f76b7b2d0662d46b1c7f8550395d3e98b9f326b8a3c885cad8996343c70",
+  "source": "Supervisor session wait completed with exit code0; sealed run coverage checked by final prepare; independent audit follows."
+}

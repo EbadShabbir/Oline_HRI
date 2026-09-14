@@ -1,0 +1,747 @@
+{
+  "release_none_01": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": true,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "minimally_present",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "weak",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "A rice-and-peas dinner idea is present, but only as a dish name. The added promise to prepare it now implies physical cooking capability/action unsupported by deployment facts or the NO_ACTION trace; the larger model reviewer nevertheless passed it.",
+    "factual_scope": "Culinary feasibility and nutritional suitability were not independently assessed; no medical or safety conclusion is made."
+  },
+  "release_none_02": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The request is answerable from current inputs or admitted general task context; the generic clarification does not deliver the requested answer.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_none_03": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The request is answerable from current inputs or admitted general task context; the generic clarification does not deliver the requested answer.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_none_04": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The request is answerable from current inputs or admitted general task context; the generic clarification does not deliver the requested answer.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_none_05": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The request is answerable from current inputs or admitted general task context; the generic clarification does not deliver the requested answer.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_none_06": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The request is answerable from current inputs or admitted general task context; the generic clarification does not deliver the requested answer.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_none_07": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The request is answerable from current inputs or admitted general task context; the generic clarification does not deliver the requested answer.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_none_08": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The request is answerable from current inputs or admitted general task context; the generic clarification does not deliver the requested answer.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_none_09": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The request is answerable from current inputs or admitted general task context; the generic clarification does not deliver the requested answer.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_none_10": {
+    "primary_delivered_form": "refusal",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": true,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The cache explanation is in admitted general task history, yet the route becomes required and the application says it lacks a personal detail. No personal record is needed to give a library analogy.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_none_11": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The request is answerable from current inputs or admitted general task context; the generic clarification does not deliver the requested answer.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_none_12": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The request is answerable from current inputs or admitted general task context; the generic clarification does not deliver the requested answer.",
+    "factual_scope": "No factual answer delivered."
+  },
+  "release_optional_01": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "useful_with_awkwardness",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Provides four concrete varied options: nature walk, yoga, reading, and music. The optional-preference request and copied Otherwise, suggest wording are awkward, but they do not block the general answer.",
+    "factual_scope": "Assessed task delivery and evidence authorization; no external factual verification.",
+    "minor_echo_or_role_confusion": true
+  },
+  "release_optional_02": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": true
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "Correct optional dependency does not produce the desk-tidying plan. Two ConversationError entries occur before any answer-generation call; the only model call classifies model size. The generic reliability question adds unnecessary friction. Exact exception messages are unavailable, so the cause is not inferred.",
+    "factual_scope": "Assessed task delivery and evidence authorization; no external factual verification."
+  },
+  "release_optional_03": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "useful",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The final two-sentence thank-you note directly supplies the requested friendly neutral wording. The actual small-to-large retry is preserved; the initial hope-you-are-well draft was labeled unsupported_personal_claim by the guard, but no unsupported personal assertion is independently confirmed in that first draft.",
+    "factual_scope": "Assessed task delivery and evidence authorization; no external factual verification."
+  },
+  "release_optional_04": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "useful",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Names two concrete beginner craft options: watercolor sketch or handmade card. The visible forgotten paper-marbling preference is not admitted or asserted, and the optional followup offer does not block the requested recommendation.",
+    "factual_scope": "Assessed task delivery and evidence authorization; no external factual verification."
+  },
+  "release_optional_05": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": true,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "partial",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "partly_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "Provides two concrete conversation starters while announcing Three, so the explicitly requested count of three is not met. The larger answer reviewer passes this incomplete response. No personal preference is invented.",
+    "requested_count_violation": true,
+    "factual_scope": "The count mismatch is directly observable in the delivered text; no external verification is needed."
+  },
+  "release_optional_06": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "weak",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Gives a concrete Ctrl+A example and suggests using shortcuts in daily tasks, which minimally answers the practice request. The text also repeats the optional-preference condition and vague memorize/order wording, so its usefulness is weak rather than a strong routine. The earlier diagram preference is withheld and not asserted.",
+    "minor_echo_or_role_confusion": true,
+    "factual_scope": "Evaluated the presence of a general practice suggestion; no universal platform compatibility claim is inferred."
+  },
+  "release_required_01": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The required personal fact is unavailable in the empty canonical store. The application asks for the missing information without inventing a value or treating old dialogue as current authority.",
+    "factual_scope": "No personal value is delivered."
+  },
+  "release_required_02": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The required personal fact is unavailable in the empty canonical store. The application asks for the missing information without inventing a value or treating old dialogue as current authority.",
+    "factual_scope": "No personal value is delivered."
+  },
+  "release_required_03": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The required personal fact is unavailable in the empty canonical store. The application asks for the missing information without inventing a value or treating old dialogue as current authority.",
+    "factual_scope": "No personal value is delivered."
+  },
+  "release_required_04": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The required personal fact is unavailable in the empty canonical store. The application asks for the missing information without inventing a value or treating old dialogue as current authority.",
+    "factual_scope": "No personal value is delivered."
+  },
+  "release_required_05": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The required personal fact is unavailable in the empty canonical store. The application asks for the missing information without inventing a value or treating old dialogue as current authority.",
+    "factual_scope": "No personal value is delivered."
+  },
+  "release_required_06": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The required personal fact is unavailable in the empty canonical store. The application asks for the missing information without inventing a value or treating old dialogue as current authority.",
+    "factual_scope": "No personal value is delivered."
+  },
+  "release_required_07": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "not_targeted"
+    },
+    "independent_usefulness": "unfocused_clarification",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The obsolete visible time is safely withheld, but the actual required-recall request is classified clarify and receives a generic what-help question. The user already specified the needed corrected start time; the reply does not identify that missing information.",
+    "factual_scope": "No personal value is delivered.",
+    "unfocused_clarification": true
+  },
+  "release_required_08": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The required personal fact is unavailable in the empty canonical store. The application asks for the missing information without inventing a value or treating old dialogue as current authority.",
+    "factual_scope": "No personal value is delivered."
+  },
+  "release_clarify_01": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "not_applicable",
+      "request_context_question": "complete"
+    },
+    "independent_usefulness": "appropriate_request_clarification",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The incomplete or unresolved request does not identify a single actionable task. A short clarification is appropriate and no task or personal fact is invented.",
+    "factual_scope": "No factual answer is delivered."
+  },
+  "release_clarify_02": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "not_applicable",
+      "request_context_question": "complete"
+    },
+    "independent_usefulness": "appropriate_request_clarification",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The incomplete or unresolved request does not identify a single actionable task. A short clarification is appropriate and no task or personal fact is invented.",
+    "factual_scope": "No factual answer is delivered."
+  },
+  "release_clarify_03": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "not_applicable",
+      "request_context_question": "complete"
+    },
+    "independent_usefulness": "appropriate_request_clarification",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The incomplete or unresolved request does not identify a single actionable task. A short clarification is appropriate and no task or personal fact is invented.",
+    "factual_scope": "No factual answer is delivered."
+  },
+  "release_clarify_04": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "not_applicable",
+      "request_context_question": "complete"
+    },
+    "independent_usefulness": "appropriate_request_clarification",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The incomplete or unresolved request does not identify a single actionable task. A short clarification is appropriate and no task or personal fact is invented.",
+    "factual_scope": "No factual answer is delivered."
+  },
+  "release_mixed_01": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": true,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "incomplete_mixed_answer",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The missing saved walking route appropriately triggers a personal-information question, but the independent contour-line explanation is omitted. The fragment classifier predicts none but its margin triggers clarify, leaving general_request empty.",
+    "factual_scope": "No personal route is invented; no map explanation is delivered."
+  },
+  "release_mixed_02": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": true,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_targeted"
+    },
+    "independent_usefulness": "incomplete_mixed_answer",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The whole mixed request predicts none and falls to generic uncertainty clarification. It neither asks specifically for the missing rehearsal partner nor answers the metronome-versus-tuner question. The old named partner is withheld, so there is no personal-fact leak.",
+    "factual_scope": "No personal partner value or instrument comparison is delivered.",
+    "unfocused_clarification": true
+  }
+}

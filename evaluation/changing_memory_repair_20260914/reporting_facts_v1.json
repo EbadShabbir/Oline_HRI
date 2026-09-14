@@ -1,0 +1,1624 @@
+{
+  "created_at": "2026-09-14T14:20:16.419596+00:00",
+  "reviewer": "assistant /root/lifecycle_fix_validation_plan",
+  "review_kind": "Independent first-repair report factcheck; no new semantic scoring or inference",
+  "scope": "Only the sealed first 96-checkpoint repair; followup_v2 is separate and not pooled.",
+  "study_limitation": "Targeted matched development scenarios selected after baseline failures; not held-out.",
+  "source_sha256": "d5a92582d82a57a3d13534fe667f91cc78a676f54bfdf069518eecb2c438a727",
+  "input_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/analysis_v1/seal.json": "117327f6c1d19b4870180f5219ce1d8014a51dcf0bbb33ed04f22693b7e5d8a6",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/tables_v1/seal.json": "447c8b7101d270a87dfa5f01e92ff190a03b28451ee34df3c51d020fe04e804f",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/matched_comparison_v1/seal.json": "85cc869a9d123f13ee5cdc86fb4dc4b50e8fcf814ff876354d1a01a03295ab3e",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/analysis_v2/seal.json": "e46dfd0701457675845e9caf034e29f2126bdc950d1ba75838177326b97d9a47",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/collection_audit_bundle_v1_seal.json": "6506686862f5fdc7cc3f75dc81faae4d0da572f2d86098a2e223bf08d8a36af8",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/collection_audit_v1.json": "914786d716b005ce59eb83ae18e2aaa0912bd878a631c7546544d6075f26e860",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/collection_audit_findings_v1.json": "d2cea4f864e1012dc605c2d6e7e70baf3015d48b764f1cf39afd43690f1b9729"
+  },
+  "checks_passed": 433,
+  "checks": [
+    "Sealed file inventory: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/analysis_v1",
+    "Sealed content hashes: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/analysis_v1",
+    "Sealed file inventory: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/tables_v1",
+    "Sealed content hashes: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/tables_v1",
+    "Sealed file inventory: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/matched_comparison_v1",
+    "Sealed content hashes: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/matched_comparison_v1",
+    "Sealed file inventory: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/analysis_v2",
+    "Sealed content hashes: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/analysis_v2",
+    "Independent collection audit bundle hashes",
+    "All first-repair rows bind original frozen judgments",
+    "All 96 unique first-repair checkpoints present",
+    "Both assistant reviewers agree on all 47 groups",
+    "Judgments resolved before diagnostic unblinding",
+    "All matched expected-state/rubric objects identical",
+    "Matched comparison aggregates recomputed: baseline",
+    "Matched comparison aggregates recomputed: repair",
+    "Analysis total recomputed: planned",
+    "Analysis total recomputed: delivered",
+    "Analysis total recomputed: useful_correct",
+    "Analysis total recomputed: forbidden_disclosure",
+    "Analysis total recomputed: missing",
+    "All 24 stage/history groups present",
+    "Stage table recomputed: ('correction', 'corrected', 'fresh', 'before', 'replacement')",
+    "Stage table recomputed: ('correction', 'corrected', 'retained', 'before', 'replacement')",
+    "Stage table recomputed: ('correction', 'historical', 'fresh', 'before', 'historical_control')",
+    "Stage table recomputed: ('correction', 'historical', 'retained', 'before', 'historical_control')",
+    "Stage table recomputed: ('correction', 'prestore', 'retained', 'before', 'uncertainty')",
+    "Stage table recomputed: ('correction', 'recalled', 'retained', 'before', 'original')",
+    "Stage table recomputed: ('correction', 'restart', 'fresh', 'after', 'replacement')",
+    "Stage table recomputed: ('correction', 'restart', 'retained', 'after', 'replacement')",
+    "Stage table recomputed: ('correction', 'restart_historical', 'fresh', 'after', 'historical_control')",
+    "Stage table recomputed: ('correction', 'restart_historical', 'retained', 'after', 'historical_control')",
+    "Stage table recomputed: ('deletion', 'deleted', 'fresh', 'before', 'uncertainty')",
+    "Stage table recomputed: ('deletion', 'deleted', 'retained', 'before', 'uncertainty')",
+    "Stage table recomputed: ('deletion', 'deleted_historical', 'retained', 'before', 'uncertainty')",
+    "Stage table recomputed: ('deletion', 'recalled', 'retained', 'before', 'original')",
+    "Stage table recomputed: ('deletion', 'restart', 'fresh', 'after', 'uncertainty')",
+    "Stage table recomputed: ('deletion', 'restart', 'retained', 'after', 'uncertainty')",
+    "Stage table recomputed: ('deletion', 'restart_historical', 'retained', 'after', 'uncertainty')",
+    "Stage table recomputed: ('expiry', 'after', 'retained', 'before', 'uncertainty')",
+    "Stage table recomputed: ('expiry', 'at', 'fresh', 'before', 'uncertainty')",
+    "Stage table recomputed: ('expiry', 'at', 'retained', 'before', 'uncertainty')",
+    "Stage table recomputed: ('expiry', 'before', 'fresh', 'before', 'original')",
+    "Stage table recomputed: ('expiry', 'before', 'retained', 'before', 'original')",
+    "Stage table recomputed: ('expiry', 'restart', 'fresh', 'after', 'uncertainty')",
+    "Stage table recomputed: ('expiry', 'restart', 'retained', 'after', 'uncertainty')",
+    "Retained/fresh paired usefulness recomputed",
+    "Measured wall clock matches trace: baseline/cm01_correction_prestore",
+    "Measured wall clock matches trace: baseline/cm01_correction_recalled",
+    "Measured wall clock matches trace: baseline/cm01_correction_corrected_retained",
+    "Measured wall clock matches trace: baseline/cm01_correction_corrected_fresh",
+    "Measured wall clock matches trace: baseline/cm01_correction_historical_retained",
+    "Measured wall clock matches trace: baseline/cm01_correction_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm01_correction_restart_retained",
+    "Measured wall clock matches trace: baseline/cm01_correction_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm01_correction_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm01_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm01_deletion_recalled",
+    "Measured wall clock matches trace: baseline/cm01_deletion_deleted_retained",
+    "Measured wall clock matches trace: baseline/cm01_deletion_deleted_fresh",
+    "Measured wall clock matches trace: baseline/cm01_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: baseline/cm01_deletion_restart_retained",
+    "Measured wall clock matches trace: baseline/cm01_deletion_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm01_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm01_expiry_before_retained",
+    "Measured wall clock matches trace: baseline/cm01_expiry_before_fresh",
+    "Measured wall clock matches trace: baseline/cm01_expiry_at_retained",
+    "Measured wall clock matches trace: baseline/cm01_expiry_at_fresh",
+    "Measured wall clock matches trace: baseline/cm01_expiry_after_retained",
+    "Measured wall clock matches trace: baseline/cm01_expiry_restart_retained",
+    "Measured wall clock matches trace: baseline/cm01_expiry_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm04_correction_prestore",
+    "Measured wall clock matches trace: baseline/cm04_correction_recalled",
+    "Measured wall clock matches trace: baseline/cm04_correction_corrected_retained",
+    "Measured wall clock matches trace: baseline/cm04_correction_corrected_fresh",
+    "Measured wall clock matches trace: baseline/cm04_correction_historical_retained",
+    "Measured wall clock matches trace: baseline/cm04_correction_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm04_correction_restart_retained",
+    "Measured wall clock matches trace: baseline/cm04_correction_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm04_correction_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm04_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm04_deletion_recalled",
+    "Measured wall clock matches trace: baseline/cm04_deletion_deleted_retained",
+    "Measured wall clock matches trace: baseline/cm04_deletion_deleted_fresh",
+    "Measured wall clock matches trace: baseline/cm04_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: baseline/cm04_deletion_restart_retained",
+    "Measured wall clock matches trace: baseline/cm04_deletion_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm04_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm04_expiry_before_retained",
+    "Measured wall clock matches trace: baseline/cm04_expiry_before_fresh",
+    "Measured wall clock matches trace: baseline/cm04_expiry_at_retained",
+    "Measured wall clock matches trace: baseline/cm04_expiry_at_fresh",
+    "Measured wall clock matches trace: baseline/cm04_expiry_after_retained",
+    "Measured wall clock matches trace: baseline/cm04_expiry_restart_retained",
+    "Measured wall clock matches trace: baseline/cm04_expiry_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm07_correction_prestore",
+    "Measured wall clock matches trace: baseline/cm07_correction_recalled",
+    "Measured wall clock matches trace: baseline/cm07_correction_corrected_retained",
+    "Measured wall clock matches trace: baseline/cm07_correction_corrected_fresh",
+    "Measured wall clock matches trace: baseline/cm07_correction_historical_retained",
+    "Measured wall clock matches trace: baseline/cm07_correction_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm07_correction_restart_retained",
+    "Measured wall clock matches trace: baseline/cm07_correction_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm07_correction_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm07_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm07_deletion_recalled",
+    "Measured wall clock matches trace: baseline/cm07_deletion_deleted_retained",
+    "Measured wall clock matches trace: baseline/cm07_deletion_deleted_fresh",
+    "Measured wall clock matches trace: baseline/cm07_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: baseline/cm07_deletion_restart_retained",
+    "Measured wall clock matches trace: baseline/cm07_deletion_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm07_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm07_expiry_before_retained",
+    "Measured wall clock matches trace: baseline/cm07_expiry_before_fresh",
+    "Measured wall clock matches trace: baseline/cm07_expiry_at_retained",
+    "Measured wall clock matches trace: baseline/cm07_expiry_at_fresh",
+    "Measured wall clock matches trace: baseline/cm07_expiry_after_retained",
+    "Measured wall clock matches trace: baseline/cm07_expiry_restart_retained",
+    "Measured wall clock matches trace: baseline/cm07_expiry_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm09_correction_prestore",
+    "Measured wall clock matches trace: baseline/cm09_correction_recalled",
+    "Measured wall clock matches trace: baseline/cm09_correction_corrected_retained",
+    "Measured wall clock matches trace: baseline/cm09_correction_corrected_fresh",
+    "Measured wall clock matches trace: baseline/cm09_correction_historical_retained",
+    "Measured wall clock matches trace: baseline/cm09_correction_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm09_correction_restart_retained",
+    "Measured wall clock matches trace: baseline/cm09_correction_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm09_correction_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm09_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm09_deletion_recalled",
+    "Measured wall clock matches trace: baseline/cm09_deletion_deleted_retained",
+    "Measured wall clock matches trace: baseline/cm09_deletion_deleted_fresh",
+    "Measured wall clock matches trace: baseline/cm09_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: baseline/cm09_deletion_restart_retained",
+    "Measured wall clock matches trace: baseline/cm09_deletion_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm09_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm09_expiry_before_retained",
+    "Measured wall clock matches trace: baseline/cm09_expiry_before_fresh",
+    "Measured wall clock matches trace: baseline/cm09_expiry_at_retained",
+    "Measured wall clock matches trace: baseline/cm09_expiry_at_fresh",
+    "Measured wall clock matches trace: baseline/cm09_expiry_after_retained",
+    "Measured wall clock matches trace: baseline/cm09_expiry_restart_retained",
+    "Measured wall clock matches trace: baseline/cm09_expiry_restart_fresh",
+    "Measured wall clock matches trace: repair/cm01_correction_prestore",
+    "Measured wall clock matches trace: repair/cm01_correction_recalled",
+    "Measured wall clock matches trace: repair/cm01_correction_corrected_retained",
+    "Measured wall clock matches trace: repair/cm01_correction_corrected_fresh",
+    "Measured wall clock matches trace: repair/cm01_correction_historical_retained",
+    "Measured wall clock matches trace: repair/cm01_correction_historical_fresh",
+    "Measured wall clock matches trace: repair/cm01_correction_restart_retained",
+    "Measured wall clock matches trace: repair/cm01_correction_restart_fresh",
+    "Measured wall clock matches trace: repair/cm01_correction_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm01_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: repair/cm01_deletion_recalled",
+    "Measured wall clock matches trace: repair/cm01_deletion_deleted_retained",
+    "Measured wall clock matches trace: repair/cm01_deletion_deleted_fresh",
+    "Measured wall clock matches trace: repair/cm01_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: repair/cm01_deletion_restart_retained",
+    "Measured wall clock matches trace: repair/cm01_deletion_restart_fresh",
+    "Measured wall clock matches trace: repair/cm01_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm01_expiry_before_retained",
+    "Measured wall clock matches trace: repair/cm01_expiry_before_fresh",
+    "Measured wall clock matches trace: repair/cm01_expiry_at_retained",
+    "Measured wall clock matches trace: repair/cm01_expiry_at_fresh",
+    "Measured wall clock matches trace: repair/cm01_expiry_after_retained",
+    "Measured wall clock matches trace: repair/cm01_expiry_restart_retained",
+    "Measured wall clock matches trace: repair/cm01_expiry_restart_fresh",
+    "Measured wall clock matches trace: repair/cm04_correction_prestore",
+    "Measured wall clock matches trace: repair/cm04_correction_recalled",
+    "Measured wall clock matches trace: repair/cm04_correction_corrected_retained",
+    "Measured wall clock matches trace: repair/cm04_correction_corrected_fresh",
+    "Measured wall clock matches trace: repair/cm04_correction_historical_retained",
+    "Measured wall clock matches trace: repair/cm04_correction_historical_fresh",
+    "Measured wall clock matches trace: repair/cm04_correction_restart_retained",
+    "Measured wall clock matches trace: repair/cm04_correction_restart_fresh",
+    "Measured wall clock matches trace: repair/cm04_correction_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm04_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: repair/cm04_deletion_recalled",
+    "Measured wall clock matches trace: repair/cm04_deletion_deleted_retained",
+    "Measured wall clock matches trace: repair/cm04_deletion_deleted_fresh",
+    "Measured wall clock matches trace: repair/cm04_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: repair/cm04_deletion_restart_retained",
+    "Measured wall clock matches trace: repair/cm04_deletion_restart_fresh",
+    "Measured wall clock matches trace: repair/cm04_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm04_expiry_before_retained",
+    "Measured wall clock matches trace: repair/cm04_expiry_before_fresh",
+    "Measured wall clock matches trace: repair/cm04_expiry_at_retained",
+    "Measured wall clock matches trace: repair/cm04_expiry_at_fresh",
+    "Measured wall clock matches trace: repair/cm04_expiry_after_retained",
+    "Measured wall clock matches trace: repair/cm04_expiry_restart_retained",
+    "Measured wall clock matches trace: repair/cm04_expiry_restart_fresh",
+    "Measured wall clock matches trace: repair/cm07_correction_prestore",
+    "Measured wall clock matches trace: repair/cm07_correction_recalled",
+    "Measured wall clock matches trace: repair/cm07_correction_corrected_retained",
+    "Measured wall clock matches trace: repair/cm07_correction_corrected_fresh",
+    "Measured wall clock matches trace: repair/cm07_correction_historical_retained",
+    "Measured wall clock matches trace: repair/cm07_correction_historical_fresh",
+    "Measured wall clock matches trace: repair/cm07_correction_restart_retained",
+    "Measured wall clock matches trace: repair/cm07_correction_restart_fresh",
+    "Measured wall clock matches trace: repair/cm07_correction_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm07_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: repair/cm07_deletion_recalled",
+    "Measured wall clock matches trace: repair/cm07_deletion_deleted_retained",
+    "Measured wall clock matches trace: repair/cm07_deletion_deleted_fresh",
+    "Measured wall clock matches trace: repair/cm07_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: repair/cm07_deletion_restart_retained",
+    "Measured wall clock matches trace: repair/cm07_deletion_restart_fresh",
+    "Measured wall clock matches trace: repair/cm07_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm07_expiry_before_retained",
+    "Measured wall clock matches trace: repair/cm07_expiry_before_fresh",
+    "Measured wall clock matches trace: repair/cm07_expiry_at_retained",
+    "Measured wall clock matches trace: repair/cm07_expiry_at_fresh",
+    "Measured wall clock matches trace: repair/cm07_expiry_after_retained",
+    "Measured wall clock matches trace: repair/cm07_expiry_restart_retained",
+    "Measured wall clock matches trace: repair/cm07_expiry_restart_fresh",
+    "Measured wall clock matches trace: repair/cm09_correction_prestore",
+    "Measured wall clock matches trace: repair/cm09_correction_recalled",
+    "Measured wall clock matches trace: repair/cm09_correction_corrected_retained",
+    "Measured wall clock matches trace: repair/cm09_correction_corrected_fresh",
+    "Measured wall clock matches trace: repair/cm09_correction_historical_retained",
+    "Measured wall clock matches trace: repair/cm09_correction_historical_fresh",
+    "Measured wall clock matches trace: repair/cm09_correction_restart_retained",
+    "Measured wall clock matches trace: repair/cm09_correction_restart_fresh",
+    "Measured wall clock matches trace: repair/cm09_correction_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm09_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: repair/cm09_deletion_recalled",
+    "Measured wall clock matches trace: repair/cm09_deletion_deleted_retained",
+    "Measured wall clock matches trace: repair/cm09_deletion_deleted_fresh",
+    "Measured wall clock matches trace: repair/cm09_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: repair/cm09_deletion_restart_retained",
+    "Measured wall clock matches trace: repair/cm09_deletion_restart_fresh",
+    "Measured wall clock matches trace: repair/cm09_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm09_expiry_before_retained",
+    "Measured wall clock matches trace: repair/cm09_expiry_before_fresh",
+    "Measured wall clock matches trace: repair/cm09_expiry_at_retained",
+    "Measured wall clock matches trace: repair/cm09_expiry_at_fresh",
+    "Measured wall clock matches trace: repair/cm09_expiry_after_retained",
+    "Measured wall clock matches trace: repair/cm09_expiry_restart_retained",
+    "Measured wall clock matches trace: repair/cm09_expiry_restart_fresh",
+    "Measured latency quantiles recomputed: all_attempts",
+    "Measured wall clock matches trace: baseline/cm01_correction_prestore",
+    "Measured wall clock matches trace: baseline/cm01_correction_recalled",
+    "Measured wall clock matches trace: baseline/cm01_correction_corrected_retained",
+    "Measured wall clock matches trace: baseline/cm01_correction_corrected_fresh",
+    "Measured wall clock matches trace: baseline/cm01_correction_historical_retained",
+    "Measured wall clock matches trace: baseline/cm01_correction_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm01_correction_restart_retained",
+    "Measured wall clock matches trace: baseline/cm01_correction_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm01_correction_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm01_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm01_deletion_recalled",
+    "Measured wall clock matches trace: baseline/cm01_deletion_deleted_retained",
+    "Measured wall clock matches trace: baseline/cm01_deletion_deleted_fresh",
+    "Measured wall clock matches trace: baseline/cm01_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: baseline/cm01_deletion_restart_retained",
+    "Measured wall clock matches trace: baseline/cm01_deletion_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm01_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm01_expiry_before_retained",
+    "Measured wall clock matches trace: baseline/cm01_expiry_before_fresh",
+    "Measured wall clock matches trace: baseline/cm01_expiry_at_retained",
+    "Measured wall clock matches trace: baseline/cm01_expiry_at_fresh",
+    "Measured wall clock matches trace: baseline/cm01_expiry_after_retained",
+    "Measured wall clock matches trace: baseline/cm01_expiry_restart_retained",
+    "Measured wall clock matches trace: baseline/cm01_expiry_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm04_correction_prestore",
+    "Measured wall clock matches trace: baseline/cm04_correction_recalled",
+    "Measured wall clock matches trace: baseline/cm04_correction_corrected_retained",
+    "Measured wall clock matches trace: baseline/cm04_correction_corrected_fresh",
+    "Measured wall clock matches trace: baseline/cm04_correction_historical_retained",
+    "Measured wall clock matches trace: baseline/cm04_correction_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm04_correction_restart_retained",
+    "Measured wall clock matches trace: baseline/cm04_correction_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm04_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm04_deletion_recalled",
+    "Measured wall clock matches trace: baseline/cm04_deletion_deleted_retained",
+    "Measured wall clock matches trace: baseline/cm04_deletion_deleted_fresh",
+    "Measured wall clock matches trace: baseline/cm04_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: baseline/cm04_deletion_restart_retained",
+    "Measured wall clock matches trace: baseline/cm04_deletion_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm04_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm04_expiry_before_retained",
+    "Measured wall clock matches trace: baseline/cm04_expiry_before_fresh",
+    "Measured wall clock matches trace: baseline/cm04_expiry_at_retained",
+    "Measured wall clock matches trace: baseline/cm04_expiry_at_fresh",
+    "Measured wall clock matches trace: baseline/cm04_expiry_after_retained",
+    "Measured wall clock matches trace: baseline/cm04_expiry_restart_retained",
+    "Measured wall clock matches trace: baseline/cm04_expiry_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm07_correction_prestore",
+    "Measured wall clock matches trace: baseline/cm07_correction_recalled",
+    "Measured wall clock matches trace: baseline/cm07_correction_corrected_retained",
+    "Measured wall clock matches trace: baseline/cm07_correction_corrected_fresh",
+    "Measured wall clock matches trace: baseline/cm07_correction_historical_retained",
+    "Measured wall clock matches trace: baseline/cm07_correction_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm07_correction_restart_retained",
+    "Measured wall clock matches trace: baseline/cm07_correction_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm07_correction_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm07_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm07_deletion_recalled",
+    "Measured wall clock matches trace: baseline/cm07_deletion_deleted_retained",
+    "Measured wall clock matches trace: baseline/cm07_deletion_deleted_fresh",
+    "Measured wall clock matches trace: baseline/cm07_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: baseline/cm07_deletion_restart_retained",
+    "Measured wall clock matches trace: baseline/cm07_deletion_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm07_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm07_expiry_before_retained",
+    "Measured wall clock matches trace: baseline/cm07_expiry_before_fresh",
+    "Measured wall clock matches trace: baseline/cm07_expiry_at_retained",
+    "Measured wall clock matches trace: baseline/cm07_expiry_at_fresh",
+    "Measured wall clock matches trace: baseline/cm07_expiry_after_retained",
+    "Measured wall clock matches trace: baseline/cm07_expiry_restart_retained",
+    "Measured wall clock matches trace: baseline/cm07_expiry_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm09_correction_prestore",
+    "Measured wall clock matches trace: baseline/cm09_correction_recalled",
+    "Measured wall clock matches trace: baseline/cm09_correction_corrected_retained",
+    "Measured wall clock matches trace: baseline/cm09_correction_historical_retained",
+    "Measured wall clock matches trace: baseline/cm09_correction_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm09_correction_restart_retained",
+    "Measured wall clock matches trace: baseline/cm09_correction_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm09_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: baseline/cm09_deletion_recalled",
+    "Measured wall clock matches trace: baseline/cm09_deletion_deleted_retained",
+    "Measured wall clock matches trace: baseline/cm09_deletion_deleted_fresh",
+    "Measured wall clock matches trace: baseline/cm09_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: baseline/cm09_deletion_restart_retained",
+    "Measured wall clock matches trace: baseline/cm09_deletion_restart_fresh",
+    "Measured wall clock matches trace: baseline/cm09_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: baseline/cm09_expiry_before_retained",
+    "Measured wall clock matches trace: baseline/cm09_expiry_before_fresh",
+    "Measured wall clock matches trace: baseline/cm09_expiry_at_retained",
+    "Measured wall clock matches trace: baseline/cm09_expiry_at_fresh",
+    "Measured wall clock matches trace: baseline/cm09_expiry_after_retained",
+    "Measured wall clock matches trace: baseline/cm09_expiry_restart_retained",
+    "Measured wall clock matches trace: baseline/cm09_expiry_restart_fresh",
+    "Measured wall clock matches trace: repair/cm01_correction_prestore",
+    "Measured wall clock matches trace: repair/cm01_correction_recalled",
+    "Measured wall clock matches trace: repair/cm01_correction_corrected_retained",
+    "Measured wall clock matches trace: repair/cm01_correction_corrected_fresh",
+    "Measured wall clock matches trace: repair/cm01_correction_historical_retained",
+    "Measured wall clock matches trace: repair/cm01_correction_historical_fresh",
+    "Measured wall clock matches trace: repair/cm01_correction_restart_retained",
+    "Measured wall clock matches trace: repair/cm01_correction_restart_fresh",
+    "Measured wall clock matches trace: repair/cm01_correction_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm01_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: repair/cm01_deletion_recalled",
+    "Measured wall clock matches trace: repair/cm01_deletion_deleted_retained",
+    "Measured wall clock matches trace: repair/cm01_deletion_deleted_fresh",
+    "Measured wall clock matches trace: repair/cm01_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: repair/cm01_deletion_restart_retained",
+    "Measured wall clock matches trace: repair/cm01_deletion_restart_fresh",
+    "Measured wall clock matches trace: repair/cm01_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm01_expiry_before_retained",
+    "Measured wall clock matches trace: repair/cm01_expiry_before_fresh",
+    "Measured wall clock matches trace: repair/cm01_expiry_at_retained",
+    "Measured wall clock matches trace: repair/cm01_expiry_at_fresh",
+    "Measured wall clock matches trace: repair/cm01_expiry_after_retained",
+    "Measured wall clock matches trace: repair/cm01_expiry_restart_retained",
+    "Measured wall clock matches trace: repair/cm01_expiry_restart_fresh",
+    "Measured wall clock matches trace: repair/cm04_correction_prestore",
+    "Measured wall clock matches trace: repair/cm04_correction_recalled",
+    "Measured wall clock matches trace: repair/cm04_correction_corrected_retained",
+    "Measured wall clock matches trace: repair/cm04_correction_corrected_fresh",
+    "Measured wall clock matches trace: repair/cm04_correction_historical_retained",
+    "Measured wall clock matches trace: repair/cm04_correction_historical_fresh",
+    "Measured wall clock matches trace: repair/cm04_correction_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm04_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: repair/cm04_deletion_recalled",
+    "Measured wall clock matches trace: repair/cm04_deletion_deleted_retained",
+    "Measured wall clock matches trace: repair/cm04_deletion_deleted_fresh",
+    "Measured wall clock matches trace: repair/cm04_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: repair/cm04_deletion_restart_retained",
+    "Measured wall clock matches trace: repair/cm04_deletion_restart_fresh",
+    "Measured wall clock matches trace: repair/cm04_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm04_expiry_before_retained",
+    "Measured wall clock matches trace: repair/cm04_expiry_before_fresh",
+    "Measured wall clock matches trace: repair/cm04_expiry_at_retained",
+    "Measured wall clock matches trace: repair/cm04_expiry_at_fresh",
+    "Measured wall clock matches trace: repair/cm04_expiry_after_retained",
+    "Measured wall clock matches trace: repair/cm04_expiry_restart_retained",
+    "Measured wall clock matches trace: repair/cm04_expiry_restart_fresh",
+    "Measured wall clock matches trace: repair/cm07_correction_prestore",
+    "Measured wall clock matches trace: repair/cm07_correction_recalled",
+    "Measured wall clock matches trace: repair/cm07_correction_corrected_retained",
+    "Measured wall clock matches trace: repair/cm07_correction_corrected_fresh",
+    "Measured wall clock matches trace: repair/cm07_correction_historical_retained",
+    "Measured wall clock matches trace: repair/cm07_correction_historical_fresh",
+    "Measured wall clock matches trace: repair/cm07_correction_restart_retained",
+    "Measured wall clock matches trace: repair/cm07_correction_restart_fresh",
+    "Measured wall clock matches trace: repair/cm07_correction_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm07_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: repair/cm07_deletion_recalled",
+    "Measured wall clock matches trace: repair/cm07_deletion_deleted_retained",
+    "Measured wall clock matches trace: repair/cm07_deletion_deleted_fresh",
+    "Measured wall clock matches trace: repair/cm07_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: repair/cm07_deletion_restart_retained",
+    "Measured wall clock matches trace: repair/cm07_deletion_restart_fresh",
+    "Measured wall clock matches trace: repair/cm07_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm07_expiry_before_retained",
+    "Measured wall clock matches trace: repair/cm07_expiry_before_fresh",
+    "Measured wall clock matches trace: repair/cm07_expiry_at_retained",
+    "Measured wall clock matches trace: repair/cm07_expiry_at_fresh",
+    "Measured wall clock matches trace: repair/cm07_expiry_after_retained",
+    "Measured wall clock matches trace: repair/cm07_expiry_restart_retained",
+    "Measured wall clock matches trace: repair/cm07_expiry_restart_fresh",
+    "Measured wall clock matches trace: repair/cm09_correction_prestore",
+    "Measured wall clock matches trace: repair/cm09_correction_recalled",
+    "Measured wall clock matches trace: repair/cm09_correction_corrected_retained",
+    "Measured wall clock matches trace: repair/cm09_correction_corrected_fresh",
+    "Measured wall clock matches trace: repair/cm09_correction_historical_retained",
+    "Measured wall clock matches trace: repair/cm09_correction_historical_fresh",
+    "Measured wall clock matches trace: repair/cm09_correction_restart_retained",
+    "Measured wall clock matches trace: repair/cm09_correction_restart_fresh",
+    "Measured wall clock matches trace: repair/cm09_correction_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm09_correction_restart_historical_fresh",
+    "Measured wall clock matches trace: repair/cm09_deletion_recalled",
+    "Measured wall clock matches trace: repair/cm09_deletion_deleted_retained",
+    "Measured wall clock matches trace: repair/cm09_deletion_deleted_fresh",
+    "Measured wall clock matches trace: repair/cm09_deletion_deleted_historical_retained",
+    "Measured wall clock matches trace: repair/cm09_deletion_restart_retained",
+    "Measured wall clock matches trace: repair/cm09_deletion_restart_fresh",
+    "Measured wall clock matches trace: repair/cm09_deletion_restart_historical_retained",
+    "Measured wall clock matches trace: repair/cm09_expiry_before_retained",
+    "Measured wall clock matches trace: repair/cm09_expiry_before_fresh",
+    "Measured wall clock matches trace: repair/cm09_expiry_at_retained",
+    "Measured wall clock matches trace: repair/cm09_expiry_at_fresh",
+    "Measured wall clock matches trace: repair/cm09_expiry_after_retained",
+    "Measured wall clock matches trace: repair/cm09_expiry_restart_retained",
+    "Measured wall clock matches trace: repair/cm09_expiry_restart_fresh",
+    "Measured latency quantiles recomputed: delivered_only",
+    "Actual generator counts recomputed",
+    "Recorded answer constraint counts recomputed",
+    "Full collection audit passed 10,541 checks",
+    "Collection findings preserve audit counts",
+    "All 48 known-fact checkpoints had stored, retrieved and supplied evidence"
+  ],
+  "overall": {
+    "planned": 96,
+    "delivered": 94,
+    "useful_correct": 92,
+    "forbidden_disclosure": 0,
+    "withheld": 2,
+    "interrupted": 0,
+    "missing": 0,
+    "classification": {
+      "appropriate_uncertainty": 48,
+      "correct_recall": 44,
+      "partial": 2,
+      "no_delivered_answer": 2
+    }
+  },
+  "matched_baseline": {
+    "planned": 96,
+    "delivered": 93,
+    "useful_correct": 39,
+    "forbidden_disclosure": 30,
+    "withheld": 3,
+    "interrupted": 0,
+    "missing": 0,
+    "classification": {
+      "appropriate_uncertainty": 24,
+      "correct_recall": 15,
+      "incorrect": 30,
+      "partial": 18,
+      "no_delivered_answer": 3,
+      "inappropriate_uncertainty": 6
+    }
+  },
+  "improvement": {
+    "additional_useful": 53,
+    "useful_percentage_baseline": 40.625,
+    "useful_percentage_repair": 95.83333333333333,
+    "frozen_comparison_usefulness_transitions": {
+      "both_unsuccessful": 4,
+      "gained_usefulness": 53,
+      "both_useful": 39
+    },
+    "frozen_comparison_disclosure_transitions": {
+      "neither_discloses": 66,
+      "disclosure_eliminated": 30
+    }
+  },
+  "by_dimension": {
+    "branch": {
+      "correction": {
+        "planned": 40,
+        "delivered": 38,
+        "useful_correct": 36,
+        "forbidden_disclosure": 0,
+        "withheld": 2,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "appropriate_uncertainty": 4,
+          "correct_recall": 32,
+          "partial": 2,
+          "no_delivered_answer": 2
+        }
+      },
+      "deletion": {
+        "planned": 28,
+        "delivered": 28,
+        "useful_correct": 28,
+        "forbidden_disclosure": 0,
+        "withheld": 0,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "correct_recall": 4,
+          "appropriate_uncertainty": 24
+        }
+      },
+      "expiry": {
+        "planned": 28,
+        "delivered": 28,
+        "useful_correct": 28,
+        "forbidden_disclosure": 0,
+        "withheld": 0,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "correct_recall": 8,
+          "appropriate_uncertainty": 20
+        }
+      }
+    },
+    "scenario_id": {
+      "cm01": {
+        "planned": 24,
+        "delivered": 24,
+        "useful_correct": 22,
+        "forbidden_disclosure": 0,
+        "withheld": 0,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "appropriate_uncertainty": 12,
+          "correct_recall": 10,
+          "partial": 2
+        }
+      },
+      "cm04": {
+        "planned": 24,
+        "delivered": 22,
+        "useful_correct": 22,
+        "forbidden_disclosure": 0,
+        "withheld": 2,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "appropriate_uncertainty": 12,
+          "correct_recall": 10,
+          "no_delivered_answer": 2
+        }
+      },
+      "cm07": {
+        "planned": 24,
+        "delivered": 24,
+        "useful_correct": 24,
+        "forbidden_disclosure": 0,
+        "withheld": 0,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "appropriate_uncertainty": 12,
+          "correct_recall": 12
+        }
+      },
+      "cm09": {
+        "planned": 24,
+        "delivered": 24,
+        "useful_correct": 24,
+        "forbidden_disclosure": 0,
+        "withheld": 0,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "appropriate_uncertainty": 12,
+          "correct_recall": 12
+        }
+      }
+    },
+    "expected_kind": {
+      "historical_control": {
+        "planned": 16,
+        "delivered": 16,
+        "useful_correct": 16,
+        "forbidden_disclosure": 0,
+        "withheld": 0,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "correct_recall": 16
+        }
+      },
+      "original": {
+        "planned": 16,
+        "delivered": 16,
+        "useful_correct": 16,
+        "forbidden_disclosure": 0,
+        "withheld": 0,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "correct_recall": 16
+        }
+      },
+      "replacement": {
+        "planned": 16,
+        "delivered": 14,
+        "useful_correct": 12,
+        "forbidden_disclosure": 0,
+        "withheld": 2,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "partial": 2,
+          "correct_recall": 12,
+          "no_delivered_answer": 2
+        }
+      },
+      "uncertainty": {
+        "planned": 48,
+        "delivered": 48,
+        "useful_correct": 48,
+        "forbidden_disclosure": 0,
+        "withheld": 0,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "appropriate_uncertainty": 48
+        }
+      }
+    },
+    "history_mode": {
+      "fresh": {
+        "planned": 36,
+        "delivered": 35,
+        "useful_correct": 34,
+        "forbidden_disclosure": 0,
+        "withheld": 1,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "partial": 1,
+          "correct_recall": 18,
+          "appropriate_uncertainty": 16,
+          "no_delivered_answer": 1
+        }
+      },
+      "retained": {
+        "planned": 60,
+        "delivered": 59,
+        "useful_correct": 58,
+        "forbidden_disclosure": 0,
+        "withheld": 1,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "appropriate_uncertainty": 32,
+          "correct_recall": 26,
+          "partial": 1,
+          "no_delivered_answer": 1
+        }
+      }
+    },
+    "after_restart": {
+      "False": {
+        "planned": 60,
+        "delivered": 60,
+        "useful_correct": 58,
+        "forbidden_disclosure": 0,
+        "withheld": 0,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "appropriate_uncertainty": 28,
+          "correct_recall": 30,
+          "partial": 2
+        }
+      },
+      "True": {
+        "planned": 36,
+        "delivered": 34,
+        "useful_correct": 34,
+        "forbidden_disclosure": 0,
+        "withheld": 2,
+        "interrupted": 0,
+        "missing": 0,
+        "classification": {
+          "correct_recall": 14,
+          "appropriate_uncertainty": 20,
+          "no_delivered_answer": 2
+        }
+      }
+    }
+  },
+  "specific_scopes": {
+    "prestore_uncertainty": {
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    "deleted_current_value": {
+      "planned": 16,
+      "delivered": 16,
+      "useful_correct": 16,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 16
+      }
+    },
+    "deleted_former_statement": {
+      "planned": 8,
+      "delivered": 8,
+      "useful_correct": 8,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 8
+      }
+    },
+    "at_expiry": {
+      "planned": 8,
+      "delivered": 8,
+      "useful_correct": 8,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 8
+      }
+    },
+    "after_expiry": {
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    "before_expiry": {
+      "planned": 8,
+      "delivered": 8,
+      "useful_correct": 8,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 8
+      }
+    },
+    "post_restart_replacement": {
+      "planned": 8,
+      "delivered": 6,
+      "useful_correct": 6,
+      "forbidden_disclosure": 0,
+      "withheld": 2,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 6,
+        "no_delivered_answer": 2
+      }
+    },
+    "post_restart_unavailable": {
+      "planned": 20,
+      "delivered": 20,
+      "useful_correct": 20,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 20
+      }
+    }
+  },
+  "stage_history": [
+    {
+      "branch": "correction",
+      "stage": "corrected",
+      "history": "fresh",
+      "restart_phase": "before",
+      "expected_kind": "replacement",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 3,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "partial": 1,
+        "correct_recall": 3
+      }
+    },
+    {
+      "branch": "correction",
+      "stage": "corrected",
+      "history": "retained",
+      "restart_phase": "before",
+      "expected_kind": "replacement",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 3,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "partial": 1,
+        "correct_recall": 3
+      }
+    },
+    {
+      "branch": "correction",
+      "stage": "historical",
+      "history": "fresh",
+      "restart_phase": "before",
+      "expected_kind": "historical_control",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 4
+      }
+    },
+    {
+      "branch": "correction",
+      "stage": "historical",
+      "history": "retained",
+      "restart_phase": "before",
+      "expected_kind": "historical_control",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 4
+      }
+    },
+    {
+      "branch": "correction",
+      "stage": "prestore",
+      "history": "retained",
+      "restart_phase": "before",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "correction",
+      "stage": "recalled",
+      "history": "retained",
+      "restart_phase": "before",
+      "expected_kind": "original",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 4
+      }
+    },
+    {
+      "branch": "correction",
+      "stage": "restart",
+      "history": "fresh",
+      "restart_phase": "after",
+      "expected_kind": "replacement",
+      "planned": 4,
+      "delivered": 3,
+      "useful_correct": 3,
+      "forbidden_disclosure": 0,
+      "withheld": 1,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 3,
+        "no_delivered_answer": 1
+      }
+    },
+    {
+      "branch": "correction",
+      "stage": "restart",
+      "history": "retained",
+      "restart_phase": "after",
+      "expected_kind": "replacement",
+      "planned": 4,
+      "delivered": 3,
+      "useful_correct": 3,
+      "forbidden_disclosure": 0,
+      "withheld": 1,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 3,
+        "no_delivered_answer": 1
+      }
+    },
+    {
+      "branch": "correction",
+      "stage": "restart_historical",
+      "history": "fresh",
+      "restart_phase": "after",
+      "expected_kind": "historical_control",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 4
+      }
+    },
+    {
+      "branch": "correction",
+      "stage": "restart_historical",
+      "history": "retained",
+      "restart_phase": "after",
+      "expected_kind": "historical_control",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 4
+      }
+    },
+    {
+      "branch": "deletion",
+      "stage": "deleted",
+      "history": "fresh",
+      "restart_phase": "before",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "deletion",
+      "stage": "deleted",
+      "history": "retained",
+      "restart_phase": "before",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "deletion",
+      "stage": "deleted_historical",
+      "history": "retained",
+      "restart_phase": "before",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "deletion",
+      "stage": "recalled",
+      "history": "retained",
+      "restart_phase": "before",
+      "expected_kind": "original",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 4
+      }
+    },
+    {
+      "branch": "deletion",
+      "stage": "restart",
+      "history": "fresh",
+      "restart_phase": "after",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "deletion",
+      "stage": "restart",
+      "history": "retained",
+      "restart_phase": "after",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "deletion",
+      "stage": "restart_historical",
+      "history": "retained",
+      "restart_phase": "after",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "expiry",
+      "stage": "after",
+      "history": "retained",
+      "restart_phase": "before",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "expiry",
+      "stage": "at",
+      "history": "fresh",
+      "restart_phase": "before",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "expiry",
+      "stage": "at",
+      "history": "retained",
+      "restart_phase": "before",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "expiry",
+      "stage": "before",
+      "history": "fresh",
+      "restart_phase": "before",
+      "expected_kind": "original",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 4
+      }
+    },
+    {
+      "branch": "expiry",
+      "stage": "before",
+      "history": "retained",
+      "restart_phase": "before",
+      "expected_kind": "original",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "correct_recall": 4
+      }
+    },
+    {
+      "branch": "expiry",
+      "stage": "restart",
+      "history": "fresh",
+      "restart_phase": "after",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    },
+    {
+      "branch": "expiry",
+      "stage": "restart",
+      "history": "retained",
+      "restart_phase": "after",
+      "expected_kind": "uncertainty",
+      "planned": 4,
+      "delivered": 4,
+      "useful_correct": 4,
+      "forbidden_disclosure": 0,
+      "withheld": 0,
+      "interrupted": 0,
+      "missing": 0,
+      "classification": {
+        "appropriate_uncertainty": 4
+      }
+    }
+  ],
+  "history_pairs": {
+    "planned": 36,
+    "both_useful": 34,
+    "retained_only_useful": 0,
+    "fresh_only_useful": 0,
+    "neither_useful": 2,
+    "both_modes_success_denominator": 36
+  },
+  "blinded_review": {
+    "groups": 47,
+    "agreements": 47,
+    "disagreements": 0,
+    "adjudication_required": false,
+    "votes_frozen_before_diagnostics": true,
+    "human_validation": "pending"
+  },
+  "wall_latency": [
+    {
+      "scope": "all_attempts",
+      "baseline": {
+        "eligible_attempts": 96,
+        "timed_attempts": 96,
+        "missing_timing": 0,
+        "median_seconds": 3.1104075585000004,
+        "p95_seconds": 48.32670764
+      },
+      "repair": {
+        "eligible_attempts": 96,
+        "timed_attempts": 96,
+        "missing_timing": 0,
+        "median_seconds": 2.938967221,
+        "p95_seconds": 36.484219227
+      }
+    },
+    {
+      "scope": "delivered_only",
+      "baseline": {
+        "eligible_attempts": 93,
+        "timed_attempts": 93,
+        "missing_timing": 0,
+        "median_seconds": 3.00499913,
+        "p95_seconds": 44.210858004
+      },
+      "repair": {
+        "eligible_attempts": 94,
+        "timed_attempts": 94,
+        "missing_timing": 0,
+        "median_seconds": 2.938967221,
+        "p95_seconds": 36.484219227
+      }
+    }
+  ],
+  "wall_latency_semantics": "Seconds per complete conversation checkpoint. Median and nearest-rank p95. All-attempt includes withholding; delivered-only membership differs between systems. Admission/cooling/setup excluded; descriptive, not causal or spoken latency.",
+  "actual_generators": {
+    "baseline_matched": {
+      "qwen3:0.6b": 85,
+      "qwen3:1.7b": 11
+    },
+    "repair_matched": {
+      "qwen3:0.6b": 89,
+      "qwen3:1.7b": 7
+    }
+  },
+  "all_scored_model_requests": {
+    "qwen3:0.6b": 281,
+    "qwen3:1.7b": 7
+  },
+  "all_scored_and_setup_model_requests_by_purpose": [
+    {
+      "purpose": "compute_selector",
+      "model": "qwen3:0.6b",
+      "count": 108
+    },
+    {
+      "purpose": "generation",
+      "model": "qwen3:0.6b",
+      "count": 101
+    },
+    {
+      "purpose": "generation",
+      "model": "qwen3:1.7b",
+      "count": 7
+    },
+    {
+      "purpose": "memory_selector",
+      "model": "qwen3:0.6b",
+      "count": 108
+    }
+  ],
+  "nominal_routes": [
+    {
+      "memory_required": true,
+      "model_size": "large",
+      "count": 7
+    },
+    {
+      "memory_required": true,
+      "model_size": "small",
+      "count": 89
+    }
+  ],
+  "recorded_constraints": {
+    "None": 66,
+    "verified_location": 24,
+    "verified_user_relationship": 6
+  },
+  "generation_policy": {
+    "None": 96
+  },
+  "constraint_limit": "24 verified_location and 6 verified_user_relationship answers are application-constrained generation, not unconstrained model reasoning. Null policy is recorded, not inferred.",
+  "known_fact_evidence": {
+    "planned_known_fact_checkpoints": 48,
+    "required_evidence_in_store": 48,
+    "required_evidence_retrieved": 48,
+    "required_evidence_supplied": 48
+  },
+  "failures": [
+    {
+      "checkpoint_id": "cm01_correction_corrected_retained",
+      "expected_value": "jasmine",
+      "frozen_judgment": {
+        "blind_id": "b_08e36043a2cb0333253223b9",
+        "classification": "partial",
+        "disclosed_forbidden_values": [],
+        "forbidden_disclosure": false,
+        "reason": "Supplies the correct jasmine preference but immediately contradicts the recall by saying it does not know the preference.",
+        "useful_correct": false
+      },
+      "delivered_answer": "Your preferred tea is jasmine tea. I don't know which tea you prefer.",
+      "status": "delivered",
+      "raw_model_answers": [
+        "{\n  \"speech\": \"Your preferred tea is jasmine tea. I don't know which tea you prefer.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": [\n    \"memory_ref_1\"\n  ]\n}"
+      ],
+      "validation_decision": "accepted",
+      "recorded_error": null,
+      "findings": [
+        "delivered_semantic_failure_with_sufficient_evidence"
+      ],
+      "required_evidence_supplied": true
+    },
+    {
+      "checkpoint_id": "cm01_correction_corrected_fresh",
+      "expected_value": "jasmine",
+      "frozen_judgment": {
+        "blind_id": "b_08e36043a2cb0333253223b9",
+        "classification": "partial",
+        "disclosed_forbidden_values": [],
+        "forbidden_disclosure": false,
+        "reason": "Supplies the correct jasmine preference but immediately contradicts the recall by saying it does not know the preference.",
+        "useful_correct": false
+      },
+      "delivered_answer": "Your preferred tea is jasmine tea. I don't know which tea you prefer.",
+      "status": "delivered",
+      "raw_model_answers": [
+        "{\n  \"speech\": \"Your preferred tea is jasmine tea. I don't know which tea you prefer.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": [\n    \"memory_ref_1\"\n  ]\n}"
+      ],
+      "validation_decision": "accepted",
+      "recorded_error": null,
+      "findings": [
+        "delivered_semantic_failure_with_sufficient_evidence"
+      ],
+      "required_evidence_supplied": true
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_retained",
+      "expected_value": "Niko Fern",
+      "frozen_judgment": {
+        "blind_id": "b_a392cffcf19324f2cbb55ac6",
+        "classification": "no_delivered_answer",
+        "disclosed_forbidden_values": [],
+        "forbidden_disclosure": false,
+        "reason": "No delivered answer is present.",
+        "useful_correct": false
+      },
+      "delivered_answer": null,
+      "status": "withheld",
+      "raw_model_answers": [
+        "{\n  \"speech\": \"Your current walking partner is Niko Fern.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": [\n    \"memory_ref_1\"\n  ]\n}"
+      ],
+      "validation_decision": "rejected_or_pipeline_failure",
+      "recorded_error": "robot response lacks evidence for the requested collaborator",
+      "findings": [
+        "validation_rejection"
+      ],
+      "required_evidence_supplied": true
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_fresh",
+      "expected_value": "Niko Fern",
+      "frozen_judgment": {
+        "blind_id": "b_a392cffcf19324f2cbb55ac6",
+        "classification": "no_delivered_answer",
+        "disclosed_forbidden_values": [],
+        "forbidden_disclosure": false,
+        "reason": "No delivered answer is present.",
+        "useful_correct": false
+      },
+      "delivered_answer": null,
+      "status": "withheld",
+      "raw_model_answers": [
+        "{\n  \"speech\": \"Your current walking partner is Niko Fern.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": [\n    \"memory_ref_1\"\n  ]\n}"
+      ],
+      "validation_decision": "rejected_or_pipeline_failure",
+      "recorded_error": "robot response lacks evidence for the requested collaborator",
+      "findings": [
+        "validation_rejection"
+      ],
+      "required_evidence_supplied": true
+    }
+  ],
+  "failure_interpretation": "Two cm01 immediate-correction answers contain jasmine plus contradictory ignorance; frozen reviewers mark partial. Two cm04 restart answers are withheld after the collaborator-evidence validator despite supported raw partner content; raw assessment is unblinded diagnosis, not changed no-answer votes. These four first-run failures remain unchanged.",
+  "collection": {
+    "integrity_checks": 10541,
+    "integrity_kinds": 82,
+    "violations": 0,
+    "counts": {
+      "chat_http_requests": 324,
+      "answer_rows": 108,
+      "answer_status_delivered": 106,
+      "retained_history_expected": 56,
+      "retained_history_with_original_disclosure": 56,
+      "operations_started": 184,
+      "operations_finished": 184,
+      "mutation_remember": 24,
+      "mutation_correct": 4,
+      "zero_operation_worker_admission_rejections": 1,
+      "mutation_forget": 4,
+      "purged_record_ids": 8,
+      "answer_status_withheld": 2,
+      "planned_checkpoints": 96,
+      "unique_observed_checkpoints": 96,
+      "scheduled_segments": 24,
+      "process_fragments": 25,
+      "extra_continuation_fragments": 1,
+      "independent_databases": 12,
+      "distinct_processes": 24
+    },
+    "workload": {
+      "planned_checkpoints": 96,
+      "scenario_ids": [
+        "cm01",
+        "cm04",
+        "cm07",
+        "cm09"
+      ],
+      "scenario_count": 4,
+      "independent_databases": 12,
+      "scheduled_restarts": 12,
+      "scheduled_segments": 24,
+      "disclosures": 12,
+      "history_pairs": 36,
+      "stage_history_groups": 24,
+      "post_restart_checkpoints": 36
+    },
+    "authored_probes": [
+      {
+        "operation": "cache_probe",
+        "snapshot_current": true,
+        "count": 12
+      },
+      {
+        "operation": "snapshot_probe",
+        "snapshot_current": false,
+        "count": 28
+      },
+      {
+        "operation": "snapshot_probe",
+        "snapshot_current": true,
+        "count": 4
+      }
+    ],
+    "answer_snapshot_checks": {
+      "True": 96
+    },
+    "history_exposure": {
+      "all_scored_checkpoints": {
+        "checkpoints": 96,
+        "checkpoints_with_generation_call": 96,
+        "exact_original_statement_present": 56,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 56,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "history_mode=retained": {
+        "checkpoints": 60,
+        "checkpoints_with_generation_call": 60,
+        "exact_original_statement_present": 56,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 56,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "branch=correction": {
+        "checkpoints": 40,
+        "checkpoints_with_generation_call": 40,
+        "exact_original_statement_present": 20,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 20,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "history_mode=fresh": {
+        "checkpoints": 36,
+        "checkpoints_with_generation_call": 36,
+        "exact_original_statement_present": 0,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 0,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "after_restart": {
+        "checkpoints": 36,
+        "checkpoints_with_generation_call": 36,
+        "exact_original_statement_present": 20,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 20,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "branch=deletion": {
+        "checkpoints": 28,
+        "checkpoints_with_generation_call": 28,
+        "exact_original_statement_present": 20,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 20,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "branch=expiry": {
+        "checkpoints": 28,
+        "checkpoints_with_generation_call": 28,
+        "exact_original_statement_present": 16,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 16,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      }
+    },
+    "history_exposure_limit": "Literal old-value matching is a case-insensitive substring lower bound on exposure, not evidence of semantic absence, memory authorization, or answer correctness. Equivalent times, names, paraphrases and alternate formatting may not match. Forwarding witnesses intersect actual generation messages with history_before by exact role/content; system messages, the final current-request message and personal-memory evidence envelopes are excluded. Matching duplicate history indices identify equivalent candidate occurrences, not the unique originating turn.",
+    "resources": {
+      "fragments": 25,
+      "telemetry_samples": 1722,
+      "max_sampled_temperature_c": 57.437,
+      "max_sampled_ram_used_mb": 6593,
+      "ram_total_mb": [
+        7620
+      ],
+      "max_sampled_swap_used_mb": 750,
+      "runtime_guard_or_cleanup_observations": [],
+      "limits": "Sampled RAM use is not MemAvailable. Resource checks do not prove unobserved instantaneous values."
+    },
+    "system_observations": [
+      {
+        "stage": "admission",
+        "code": "preserved_zero_inference_worker_rejection",
+        "where": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_deletion/restart",
+        "launch_pid": 40304,
+        "error": {
+          "message": "revised startup temperature must be below 55 C",
+          "type": "SafetyGateError"
+        }
+      },
+      {
+        "stage": "validation_or_pipeline",
+        "code": "withheld_or_interrupted_answer",
+        "where": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm04_correction/restart/cm04_correction_restart_retained",
+        "status": "withheld",
+        "error": "ResponseValidationError",
+        "message": "robot response lacks evidence for the requested collaborator"
+      },
+      {
+        "stage": "validation_or_pipeline",
+        "code": "withheld_or_interrupted_answer",
+        "where": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm04_correction/restart/cm04_correction_restart_fresh",
+        "status": "withheld",
+        "error": "ResponseValidationError",
+        "message": "robot response lacks evidence for the requested collaborator"
+      }
+    ]
+  },
+  "claims_not_supported": [
+    "Universal lifecycle reliability",
+    "Held-out generalization",
+    "Power-loss recovery",
+    "OS/Ollama restart recovery",
+    "Spoken performance",
+    "Absence of all semantic stale-state channels"
+  ],
+  "human_validation": "pending"
+}

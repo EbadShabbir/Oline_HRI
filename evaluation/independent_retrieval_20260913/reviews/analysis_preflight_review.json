@@ -1,0 +1,37 @@
+{
+  "approved": true,
+  "created_at": "2026-09-13T16:26:30.637756+00:00",
+  "human_validation": "pending",
+  "primary_outputs_seen": false,
+  "prospective_findings_resolved": [
+    "Complete active authorized profile truth background is shared across blinded authorized packets; denied background empty; original task rubrics unchanged.",
+    "General-task abstention cannot count as success, and both abstention labels require abstained flag.",
+    "A true personal claim prohibited by the task is forbidden disclosure, not necessarily unsupported.",
+    "Per-request mean metric keys use union across paired repetitions.",
+    "Failed classifiers are reported unresolved, not silently negative; realized retrieval sensitivity retains all authorized tasks.",
+    "Subsequent request residency is compared with preceding actual state; every successful after-state is sole-model resident.",
+    "All inspected IDs must be currently active and correctly profiled; all top-three results must have been inspected."
+  ],
+  "remaining_limits": [
+    "Only eight shared scenario clusters, so percentile intervals are descriptive.",
+    "Semantic support against common truth references differs from runtime-evidence grounding.",
+    "Analyzer grouping preserves every attempt; zero or missing attempts are not imputed as successes."
+  ],
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Offline analyzer, blinded packets, paired scenario analysis; does not approve execution source or claim reviewed model quality.",
+  "sha256": {
+    "evaluation/independent_retrieval_20260913/reviews/analysis_audit_preliminary.md": "19d4b0f43f3dadddd1535354ab3795446213328be2625b43c1973f8f39cf88bb",
+    "evaluation/independent_retrieval_20260913/reviews/offline_analysis_review_validation.txt": "fb0ea52b179e9d8c051b5dda5a9b60fc5e5c350ab35334ab4bb92cae48a7167f",
+    "scripts/analyze_independent_retrieval.py": "eecf557cf10b72191a851008670f12d6740fdf778a3978f651f5a8d69cf22ddd",
+    "tests/test_retrieval_experiment_analysis.py": "f51f92845bb52a6437881f2cc3cca54217341ca4b71d627cfb67f09a060a1287"
+  },
+  "source_authored_by_reviewer": false,
+  "validation": {
+    "errors": 0,
+    "failures": 0,
+    "live_inference": false,
+    "passed": 9,
+    "seconds": 0.045,
+    "tests": 9
+  }
+}

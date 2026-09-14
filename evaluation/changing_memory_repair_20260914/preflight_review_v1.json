@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "reviewer": "independent production reviewer assistant /root/lifecycle_fix_validation_plan",
+  "created_at": "2026-09-14T13:49:56.201365+00:00",
+  "approved": true,
+  "review_kind": "Pre-inference independent production code/harness review and exact baseline schedule/state/rubric subset verification",
+  "authoring_role_disclosure": "Reviewer selected four regression scenarios after baseline diagnostics and authored count-generalized schedule/analysis copies. Reviewer made no production code changes. Original state/rubric objects were prepared and independently reviewed before baseline inference by other assistants; all 96 objects and 12 branch schedules remain exact JSON values.",
+  "no_live_model_inference_performed_by_reviewer": true,
+  "repaired_delivered_answers_inspected": false,
+  "baseline_delivered_answers_and_diagnostics_inspected": true,
+  "study_scope": "Targeted matched regression selected after baseline failures; not held-out validation. Original 288-checkpoint baseline remains immutable.",
+  "human_validation": "pending",
+  "sha256": {
+    "runtime.json": "75f6f79fdc27a625ba38e730ac4e12c2d049148d688a8d5d0b6eb9c75131e51d",
+    "expected_ledger.json": "c0366f98363989e4b6786740260283d7918ceba8aa9cf97b91f8ea44998231ed",
+    "protocol.md": "00007dc56ab40221836bf54196f8fea1e0499e24c403d06f33ef37142d5491c8"
+  },
+  "source_sha256": {
+    "config/default.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+    "scripts/complete_system_device_guard.py": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+    "scripts/post_memory_device_guard.py": "10463685afd110895b8aad15cde2f97cb414253ea40ed9e37097f9872b695ea0",
+    "scripts/run_arc_capability.py": "2d55342123aa853952a44b6496285b338b322ec65f32f83bbf106e5c606885a0",
+    "scripts/run_changing_memory.py": "4b8102177858572e1a5244d443c798d53bf48b34743d93858412c2418972d893",
+    "scripts/run_complete_system.py": "888daae7b84126744cfdd54aa56cf220f0482f81b7d0b167a2ad3107849f4dcb",
+    "scripts/run_independent_retrieval.py": "62feb1069c7cf1cddf79ece56a3044a4526352252f79391459e67631dda81c9a",
+    "scripts/run_pair_remediation_validation.py": "5e9ce447e2591c17b741781638140a1cec06d3b99603f29fd335639591cbbb13",
+    "scripts/run_post_memory_comparison.py": "fbdffadfbc16306b37e6034cc9bce9bca87eba701ad882928e9bd57c991428bb",
+    "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+    "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+    "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+    "src/oline_hri/cli.py": "90f6a1e6de50bfb47a7b37b47a6cca73fe381ee510b88c7002c08240117e450e",
+    "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+    "src/oline_hri/conversation.py": "0717344dbf1ae1f8cfa33914a1c2e471513bc71cdf6308fa0aebd9f3c18dabe6",
+    "src/oline_hri/default_config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+    "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+    "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+    "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+    "src/oline_hri/evaluation_experiment.py": "d5d286d1dff60b2a85acc9be524dd75f07f8dde363c002094b505c0734431739",
+    "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+    "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+    "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+    "src/oline_hri/evaluation_runner.py": "2a7d3ec2dcd4f10c75eac7ce4703f31a2fbdfe039270f50407e0b8a65ad0161f",
+    "src/oline_hri/evaluation_scoring.py": "f73f7f01b89a5a3d83ac2543fdb585a120c19bccf94062e8c38bf498a8ca6a09",
+    "src/oline_hri/evaluation_systems.py": "77437ef8a579d2de531a4770fc2bda2a2088d3310cad4d3db3be536e4203f66a",
+    "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+    "src/oline_hri/grounded_composition.py": "52e458baa35b59aa7bc00736daf7a2e8b98b38a0fae1ce77b872fcf40eff7507",
+    "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+    "src/oline_hri/memory.py": "4f2d261de00fd1df2018ebeba2778cedc236ef077697c8e1319302b61f9a78cb",
+    "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+    "src/oline_hri/memory_evidence.py": "c0b1b0744f022fd593501e7a7310040309b4d198ba56435643ba14f2645d22e7",
+    "src/oline_hri/ollama.py": "7a82fe0a71461c7bd02faee3fbd739b32e4d4388e5f42ec146ab685e208a43d1",
+    "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+    "src/oline_hri/relationships.py": "759d2a6c671581ffd5db2b07e14a89b81d90fc58ed5fd3625bcf6ec9860b80f6",
+    "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+    "src/oline_hri/retrieval.py": "40364d1fb06aa68bae9bd3d31a583421f74883d9a0fe9815f72e9958eb8cea84",
+    "src/oline_hri/routing.py": "2604cc1a386a7f4e40f9528794423f46a4976501394c8e17d3479145e83f8bd1",
+    "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0",
+    "src/oline_hri/timing.py": "23c1c126c26d65e03833dc1c107ffa14670843fefd3755fd42ecd0969af1a445",
+    "tests/test_changing_memory.py": "2c1717af83ed553cdd2426acf15bdeaa57a340d36d9c808a1ece5a65c78fd730"
+  },
+  "source_count": 41,
+  "changed_from_baseline": [
+    "src/oline_hri/conversation.py",
+    "src/oline_hri/evaluation_scoring.py",
+    "src/oline_hri/grounded_composition.py",
+    "src/oline_hri/memory_evidence.py",
+    "src/oline_hri/relationships.py",
+    "src/oline_hri/routing.py"
+  ],
+  "planned": {
+    "scenarios": [
+      "cm01",
+      "cm04",
+      "cm07",
+      "cm09"
+    ],
+    "independent_databases": 12,
+    "scheduled_real_process_restarts": 12,
+    "checkpoints": 96,
+    "disclosure_turns": 12,
+    "retained_checkpoints": 60,
+    "fresh_checkpoints": 36,
+    "history_pairs": 36,
+    "post_restart_checkpoints": 36
+  },
+  "checks_passed": [
+    "Final candidate source and offline-test receipts match all 41 current runtime hashes and9 test source hashes.",
+    "Candidate source and offline validation seals independently verified.",
+    "Original schedule and expected-state/rubric JSON values match all 12 branches and 96 checkpoints exactly.",
+    "All 96 authored query/history combinations require memory in an offline policy-only check.",
+    "Six production changes inspected; independent review specifically includes routing authored by another code reviewer.",
+    "No fixture IDs or ledger/expected answers are used by runtime generation, routing or retrieval inputs.",
+    "Real memory APIs, independent new DBs, shared evaluation clock, strict expiry boundary, stale snapshot probes and distinct worker restart paths unchanged.",
+    "Resource guards, all inference leases, durable tracing and untouched-suffix continuation unchanged.",
+    "Original unfavorable baseline remains sealed; new answers require two fresh blinded assistant reviews before diagnostics.",
+    "Separate count-derived analysis preserves vote, diagnostic and aggregation functions with AST guards and full 288 / subset 96 offline pipelines."
+  ],
+  "offline_validation": {
+    "receipt": "offline_validation_v1/receipt.json",
+    "receipt_sha256": "3443a1414e2975db659351775eda0086c45be90e484fb2ca964a83f3b2a6cb45",
+    "seal_sha256": "79defeab462a80b7ad80ec82af2fbd6fc6e4c066717b855287a54402f99f9ea1",
+    "full_suite": {
+      "tests": 1093,
+      "skipped": 26,
+      "exit_code": 0,
+      "scope": "Before one-entry evaluation constraint registration; final focused suite covers that last change."
+    },
+    "final_source_focused_suite": {
+      "tests": 226,
+      "skipped": 0,
+      "exit_code": 0
+    },
+    "analysis_tool_tests": 15,
+    "analysis_tool_receipt_sha256": "58664ef28564d8ae3f28db9c34979faf0b8cea808e7ec6d3ed32751f65d8000c"
+  },
+  "review_artifact_sha256": {
+    "candidate_source_v2/manifest.json": "dfdd9f119c2c7efa34b09fa19997752cc68be1d1e781044628db823f59492b29",
+    "candidate_source_v2/seal.json": "768fddb925a53234d4c088abefe053e490f4570427d823f7f2f039fc3a795af7",
+    "code_review_v1.json": "dbd221d07ffce06cfb3ae3190f7c55a8c24915c5010e1e7ef55fa8ed94870a4a",
+    "code_review_addendum_v2.json": "403562285d54e86b2019f42a7681fb985ebad5fab7a18e47b47b1d81f0b9c46a",
+    "preflight_review_notes_v1.md": "301d8e8b74c5867865be76ed0d96f4fb4c4757e90c6de04c94db43b3b7b85ffc",
+    "authoring_validation_v1.json": "7ccca056b553de092c5eab0cda6fe48141a5186f881e1a72cc11208909de4488"
+  },
+  "remaining_blocking_findings": [],
+  "limits": [
+    "Bounded English routing and subject grammars do not establish universal lifecycle query handling.",
+    "Pronoun-only requests may safely abstain when history supplies no authorized subject.",
+    "This selected development regression does not establish held-out generalization.",
+    "Scope is text, real worker process restart and controlled logical expiry; not OS/Ollama restart, power-loss recovery or spoken performance."
+  ]
+}

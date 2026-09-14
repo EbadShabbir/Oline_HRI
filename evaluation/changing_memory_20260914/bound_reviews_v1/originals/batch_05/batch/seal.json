@@ -1,0 +1,12 @@
+{
+  "sha256": {
+    "private/mapping.json": "17fda139d7173d05f9ac672ef90f88c7b9013d442a0970b8e5d964d338d98487",
+    "private/process_audit.json": "84c524d18b4e3fdd5088cd7e2e4d2a9be51473fe93d49abe59e5fdc38f7714a9",
+    "private/provenance.json": "3621bc7c1452f787d4d159eedc670af69143a946d53f9c63f141f392b097dd74",
+    "public/instructions.md": "074349fe9cf7e891bb030f9c45b732056b4f8dc9c5ac4ebc7e10348f7b363f89",
+    "public/packets.jsonl": "eb08e6be68da6e3bd3c07712e62b528d004c1d9f406c5fcfd2c82a57858fcf2f",
+    "public/review_schema.json": "9016dc5601ceae85d09d1f3b903312037c2306da2db1636a46e4b5e7b32a49c1"
+  },
+  "created_at": "2026-09-14T12:54:48.428207+00:00",
+  "immutability": "exclusive creation, SHA256 manifest, read-only permissions; not privileged WORM"
+}

@@ -1,0 +1,89 @@
+{
+  "small": {
+    "attempts": 40,
+    "correct": 16,
+    "delivered": 35,
+    "all_latency_seconds": {
+      "n": 40,
+      "mean": 2.55389681905,
+      "p50": 2.2160890895,
+      "p95": 3.518933553699999,
+      "min": 1.430540653,
+      "max": 11.959882015,
+      "sum": 102.155872762
+    },
+    "delivered_latency_seconds": {
+      "n": 35,
+      "mean": 2.5071883450285712,
+      "p50": 2.044408176,
+      "p95": 3.5168122613999984,
+      "min": 1.430540653,
+      "max": 11.959882015,
+      "sum": 87.751592076
+    },
+    "stratum_counts": {
+      "personal_recall": 10,
+      "general_multiconstraint": 10,
+      "routine_general": 10,
+      "personal_temporal_synthesis": 10
+    }
+  },
+  "large": {
+    "attempts": 40,
+    "correct": 21,
+    "delivered": 39,
+    "all_latency_seconds": {
+      "n": 40,
+      "mean": 21.739710870025,
+      "p50": 19.698848787499998,
+      "p95": 40.315198004699994,
+      "min": 6.021735209,
+      "max": 50.03513124,
+      "sum": 869.588434801
+    },
+    "delivered_latency_seconds": {
+      "n": 39,
+      "mean": 21.67130112276923,
+      "p50": 19.656109888,
+      "p95": 40.4473596814,
+      "min": 6.021735209,
+      "max": 50.03513124,
+      "sum": 845.180743788
+    },
+    "stratum_counts": {
+      "personal_recall": 10,
+      "general_multiconstraint": 10,
+      "routine_general": 10,
+      "personal_temporal_synthesis": 10
+    }
+  },
+  "cascade": {
+    "attempts": 40,
+    "correct": 19,
+    "delivered": 34,
+    "all_latency_seconds": {
+      "n": 40,
+      "mean": 19.9594230003,
+      "p50": 12.1354800015,
+      "p95": 53.77317914439999,
+      "min": 1.942031259,
+      "max": 61.090652996,
+      "sum": 798.376920012
+    },
+    "delivered_latency_seconds": {
+      "n": 34,
+      "mean": 21.013369474411764,
+      "p50": 11.8261885515,
+      "p95": 54.4570818748,
+      "min": 1.942031259,
+      "max": 61.090652996,
+      "sum": 714.45456213
+    },
+    "stratum_counts": {
+      "personal_recall": 10,
+      "general_multiconstraint": 10,
+      "routine_general": 10,
+      "personal_temporal_synthesis": 10
+    }
+  }
+}

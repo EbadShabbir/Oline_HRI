@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evaluation/changing_memory_20260914/audit_collection.py",
+    "--freeze",
+    "evaluation/changing_memory_20260914/frozen_v1",
+    "--run",
+    "evaluation/changing_memory_20260914/run_v2",
+    "--output",
+    "evaluation/changing_memory_20260914/collection_audit_v1.json"
+  ],
+  "cwd": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI",
+  "started_at": "2026-09-14T13:15:31.056945+00:00",
+  "finished_at": "2026-09-14T13:15:33.442495+00:00",
+  "returncode": 0,
+  "auditor_source_sha256": "5808d204cfc6b10ea5b8a7f15139d66c72fe52d875a0fcdd80a0bf996bab9ef5",
+  "input_sha256": {
+    "evaluation/changing_memory_20260914/frozen_v1/seal.json": "390e3d2079f8be8edeed7130cb11600e1aa2c58269947b81ffbc21dfc6e503b3",
+    "evaluation/changing_memory_20260914/run_v2/seal.json": "80dc632bfdb44fe30f5a6fd81693dfa4bc71a2e8269416e673974b3d47dd339b"
+  },
+  "log_sha256": "a326b5e517b0368778d2116beae4b932415114271838fe85fe0c0b3649d8373d",
+  "output_sha256": "e754a02b39adb3f3b2a8a5cd5bf41e6008dbbb9bc2cc111e82f33f7ff0f7de49",
+  "scope": "Full sealed all-288 collection integrity audit; no inference or semantic answer scoring"
+}

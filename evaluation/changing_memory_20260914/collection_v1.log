@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/run_changing_memory.py", line 595, in <module>
+    raise SystemExit(main())
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/run_changing_memory.py", line 591, in main
+    return globals()[args.command](args)
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/run_changing_memory.py", line 557, in collect
+    return _collect(args)
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/run_changing_memory.py", line 474, in _collect
+    frozen = verify_frozen(args.freeze)
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/run_changing_memory.py", line 319, in verify_frozen
+    raise ValueError('runtime source/configuration differs from freeze')
+ValueError: runtime source/configuration differs from freeze

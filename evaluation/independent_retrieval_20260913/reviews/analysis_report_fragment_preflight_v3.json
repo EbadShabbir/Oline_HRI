@@ -1,0 +1,63 @@
+{
+  "approved": true,
+  "created_at": "2026-09-13T17:08:44.475592+00:00",
+  "findings_resolved": [
+    "Physical fragment local index, scheduled index and unique logical observation identity remain distinct.",
+    "Cold first request is every fragment local index1; paired repetitions retain interrupted observations once.",
+    "Physical fragment timing/load tables group by unique physical ID and do not double-count shared logical slots.",
+    "New overhead uses physical-directory events; absent original fatal overhead stays null and old slot events cannot transfer to a suffix.",
+    "Inherited/new zero-attempt admission counts and continuation/ledger seals remain traceable.",
+    "Supervisor wall excludes parent final manifest/sealing/exit while including child cleanup/exit/sealing.",
+    "Boundary gaps and energy have explicit scopes; energy never bridges physical fragments.",
+    "A valid complete864-attempt/18-slot prefix remains reportable if the final request caused an interrupted terminal status; that status is disclosed and the final failure retained.",
+    "Frozen semantic rubric, blinded packets, aggregate scoring and dependent paired-bootstrap functions are AST-identical to the prior approved implementation."
+  ],
+  "human_validation": "pending",
+  "preserved_prior_approvals": [
+    "reviews/analysis_preflight_review_v2.json",
+    "reviews/report_preflight_review_v1.json"
+  ],
+  "preserved_prior_sources": [
+    "analysis_preflight_v2_source",
+    "report_preflight_v1_source"
+  ],
+  "primary_answer_text_semantically_reviewed": false,
+  "primary_metadata_seen": "Only the separately sealed157-attempt prefix metadata audit; no live continuation outputs read.",
+  "remaining_limits": [
+    "This approval does not certify final measured arithmetic; independent numeric execution awaits sealed final collection and resolved external judgments.",
+    "Fragmentation changes the observed residency/cold-start pattern and limits steady-session timing claims.",
+    "Eight fictional scenario clusters support descriptive intervals only; assistant review still awaits human validation."
+  ],
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Independent source audit of fragment-aware numeric analysis and reporting; final collected results and semantic judgments have not been evaluated.",
+  "sha256": {
+    "evaluation/independent_retrieval_20260913/reviews/fragment_analysis_report_validation_v2.txt": "1e41aaddf8cb792e25d5f9fc7f23169a7af32ca025b70099f7cd9700d04d0156",
+    "evaluation/independent_retrieval_20260913/reviews/fragment_analysis_synthetic_audit.py": "3823d7c3ec4b5a6ce618496c84d7aad36101adaaa734ef1d02ad434d5725d4bc",
+    "evaluation/independent_retrieval_20260913/reviews/fragment_report_terminal_coverage_validation_v1.json": "b0c1b04e26c87390d1e3876c2c8f37301e9114993110910e23953793fed8fd65",
+    "evaluation/independent_retrieval_20260913/reviews/report_renderer_synthetic_audit.py": "b71c477bd165d0974fd77e2811297bae3fa5015dff7db1d81bf02ccbb82bb996",
+    "scripts/analyze_independent_retrieval.py": "6891c98a0853f29a0bfec7186a087321d50d867d660275bc5ecc8eba40d3ed70",
+    "scripts/report_independent_retrieval.py": "959e27fce25c0ce2693b751b73fd76df10b8af0af5b841a1b8555993a13130cb",
+    "tests/test_retrieval_experiment_analysis.py": "89e4ad2cc08bee3d83efe6b0e4cbd90e6693d9ea7c8afcf7ad90aeca8a40f2e9"
+  },
+  "source_authored_by_reviewer": false,
+  "validation": {
+    "errors": 0,
+    "failures": 0,
+    "full_analyzer_imported_during_inference": false,
+    "independent_stdlib_checks": 14,
+    "methods": [
+      "Three analyzer helper functions compiled from AST alone into a stdlib-only test namespace.",
+      "Six independent renderer checks for scoring/caution, denominators, interval direction and null/unfavorable findings.",
+      "Five sealed synthetic terminal-coverage cases reject missing coverage and verification failure while retaining fully attempted final interruption."
+    ],
+    "passed": 14,
+    "unchanged_ast_from_preflight_v2": {
+      "audit_row": true,
+      "blind_packets": true,
+      "grouped_summary": true,
+      "load_judgments": true,
+      "paired_analysis": true,
+      "summarize": true
+    }
+  }
+}

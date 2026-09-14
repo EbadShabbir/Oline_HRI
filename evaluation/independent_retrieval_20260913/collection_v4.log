@@ -1,0 +1,125 @@
+SESSION 5/18 qwen3:1.7b ALWAYS suffix26–48 admission1
+[0;93m2026-09-13 21:22:23.754586052 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+slot 05 qwen3:1.7b ALWAYS r1 1/23 ir_08_03 ok 43.041s
+slot 05 qwen3:1.7b ALWAYS r1 2/23 ir_03_05 ok 5.228s
+slot 05 qwen3:1.7b ALWAYS r1 3/23 ir_06_01 ok 12.761s
+slot 05 qwen3:1.7b ALWAYS r1 4/23 ir_04_06 ok 11.465s
+slot 05 qwen3:1.7b ALWAYS r1 5/23 ir_08_01 ok 10.524s
+slot 05 qwen3:1.7b ALWAYS r1 6/23 ir_05_03 ok 12.964s
+slot 05 qwen3:1.7b ALWAYS r1 7/23 ir_02_05 ok 9.346s
+slot 05 qwen3:1.7b ALWAYS r1 8/23 ir_07_06 ok 10.896s
+slot 05 qwen3:1.7b ALWAYS r1 9/23 ir_01_06 ok 14.683s
+slot 05 qwen3:1.7b ALWAYS r1 10/23 ir_01_04 ok 7.072s
+slot 05 qwen3:1.7b ALWAYS r1 11/23 ir_06_03 ok 10.822s
+slot 05 qwen3:1.7b ALWAYS r1 12/23 ir_05_05 ok 6.119s
+slot 05 qwen3:1.7b ALWAYS r1 13/23 ir_07_03 ok 12.635s
+slot 05 qwen3:1.7b ALWAYS r1 14/23 ir_02_03 ok 16.245s
+slot 05 qwen3:1.7b ALWAYS r1 15/23 ir_03_02 ok 11.307s
+slot 05 qwen3:1.7b ALWAYS r1 16/23 ir_05_02 ok 5.949s
+slot 05 qwen3:1.7b ALWAYS r1 17/23 ir_08_05 ok 8.739s
+slot 05 qwen3:1.7b ALWAYS r1 18/23 ir_03_06 ok 21.259s
+slot 05 qwen3:1.7b ALWAYS r1 19/23 ir_04_01 ok 8.115s
+slot 05 qwen3:1.7b ALWAYS r1 20/23 ir_04_03 ok 12.871s
+slot 05 qwen3:1.7b ALWAYS r1 21/23 ir_07_01 ok 7.885s
+slot 05 qwen3:1.7b ALWAYS r1 22/23 ir_06_05 ok 9.150s
+slot 05 qwen3:1.7b ALWAYS r1 23/23 ir_08_06 ok 14.400s
+SESSION 6/18 qwen3:1.7b OFF suffix1–48 admission1
+WAIT 6: revised startup temperature must be below 55 C
+SESSION 6/18 qwen3:1.7b OFF suffix1–48 admission2
+slot 06 qwen3:1.7b OFF r1 1/48 ir_07_02 ok 30.694s
+slot 06 qwen3:1.7b OFF r1 2/48 ir_05_01 ok 5.545s
+slot 06 qwen3:1.7b OFF r1 3/48 ir_03_03 ok 9.555s
+slot 06 qwen3:1.7b OFF r1 4/48 ir_05_04 ok 2.383s
+slot 06 qwen3:1.7b OFF r1 5/48 ir_07_05 ok 3.420s
+slot 06 qwen3:1.7b OFF r1 6/48 ir_06_06 ok 4.343s
+slot 06 qwen3:1.7b OFF r1 7/48 ir_07_04 ok 3.843s
+slot 06 qwen3:1.7b OFF r1 8/48 ir_08_02 ok 3.980s
+slot 06 qwen3:1.7b OFF r1 9/48 ir_03_04 ok 6.367s
+slot 06 qwen3:1.7b OFF r1 10/48 ir_04_02 ok 4.383s
+slot 06 qwen3:1.7b OFF r1 11/48 ir_08_04 ok 5.721s
+slot 06 qwen3:1.7b OFF r1 12/48 ir_01_01 ok 6.025s
+slot 06 qwen3:1.7b OFF r1 13/48 ir_01_03 ok 8.722s
+slot 06 qwen3:1.7b OFF r1 14/48 ir_04_04 ok 5.373s
+slot 06 qwen3:1.7b OFF r1 15/48 ir_06_04 ok 4.383s
+slot 06 qwen3:1.7b OFF r1 16/48 ir_05_06 ok 8.230s
+slot 06 qwen3:1.7b OFF r1 17/48 ir_03_01 ok 5.450s
+slot 06 qwen3:1.7b OFF r1 18/48 ir_02_01 ok 7.940s
+slot 06 qwen3:1.7b OFF r1 19/48 ir_02_02 ok 9.432s
+slot 06 qwen3:1.7b OFF r1 20/48 ir_06_02 ok 3.525s
+slot 06 qwen3:1.7b OFF r1 21/48 ir_04_05 ok 6.419s
+slot 06 qwen3:1.7b OFF r1 22/48 ir_01_02 ok 3.300s
+slot 06 qwen3:1.7b OFF r1 23/48 ir_01_05 ok 4.933s
+slot 06 qwen3:1.7b OFF r1 24/48 ir_02_04 ok 5.397s
+slot 06 qwen3:1.7b OFF r1 25/48 ir_02_06 ok 5.969s
+slot 06 qwen3:1.7b OFF r1 26/48 ir_08_03 ok 6.612s
+slot 06 qwen3:1.7b OFF r1 27/48 ir_03_05 ok 6.255s
+slot 06 qwen3:1.7b OFF r1 28/48 ir_06_01 ok 4.359s
+slot 06 qwen3:1.7b OFF r1 29/48 ir_04_06 ok 4.184s
+slot 06 qwen3:1.7b OFF r1 30/48 ir_08_01 ok 4.196s
+slot 06 qwen3:1.7b OFF r1 31/48 ir_05_03 ok 4.928s
+slot 06 qwen3:1.7b OFF r1 32/48 ir_02_05 ok 4.342s
+slot 06 qwen3:1.7b OFF r1 33/48 ir_07_06 ok 3.352s
+slot 06 qwen3:1.7b OFF r1 34/48 ir_01_06 ok 6.952s
+slot 06 qwen3:1.7b OFF r1 35/48 ir_01_04 ok 6.100s
+slot 06 qwen3:1.7b OFF r1 36/48 ir_06_03 ok 5.469s
+slot 06 qwen3:1.7b OFF r1 37/48 ir_05_05 ok 8.961s
+slot 06 qwen3:1.7b OFF r1 38/48 ir_07_03 ok 8.437s
+slot 06 qwen3:1.7b OFF r1 39/48 ir_02_03 ok 12.252s
+slot 06 qwen3:1.7b OFF r1 40/48 ir_03_02 ok 5.323s
+slot 06 qwen3:1.7b OFF r1 41/48 ir_05_02 ok 7.112s
+slot 06 qwen3:1.7b OFF r1 42/48 ir_08_05 ok 4.882s
+slot 06 qwen3:1.7b OFF r1 43/48 ir_03_06 ok 4.939s
+slot 06 qwen3:1.7b OFF r1 44/48 ir_04_01 ok 7.044s
+slot 06 qwen3:1.7b OFF r1 45/48 ir_04_03 ok 8.287s
+slot 06 qwen3:1.7b OFF r1 46/48 ir_07_01 ok 3.108s
+slot 06 qwen3:1.7b OFF r1 47/48 ir_06_05 ok 2.561s
+slot 06 qwen3:1.7b OFF r1 48/48 ir_08_06 ok 3.292s
+SESSION 7/18 qwen3:1.7b ALWAYS suffix1–48 admission1
+WAIT 7: revised startup temperature must be below 55 C
+SESSION 7/18 qwen3:1.7b ALWAYS suffix1–48 admission2
+WAIT 7: revised startup temperature must be below 55 C
+SESSION 7/18 qwen3:1.7b ALWAYS suffix1–48 admission3
+WAIT 7: revised startup temperature must be below 55 C
+SESSION 7/18 qwen3:1.7b ALWAYS suffix1–48 admission4
+[0;93m2026-09-13 21:34:08.730855966 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+slot 07 qwen3:1.7b ALWAYS r2 1/48 ir_08_01 ok 43.880s
+slot 07 qwen3:1.7b ALWAYS r2 2/48 ir_02_06 ok 11.689s
+slot 07 qwen3:1.7b ALWAYS r2 3/48 ir_06_06 ok 9.048s
+slot 07 qwen3:1.7b ALWAYS r2 4/48 ir_07_03 ok 15.964s
+slot 07 qwen3:1.7b ALWAYS r2 5/48 ir_05_06 ok 13.861s
+slot 07 qwen3:1.7b ALWAYS r2 6/48 ir_07_01 ok 6.399s
+slot 07 qwen3:1.7b ALWAYS r2 7/48 ir_03_05 ok 7.150s
+slot 07 qwen3:1.7b ALWAYS r2 8/48 ir_06_05 ok 6.772s
+slot 07 qwen3:1.7b ALWAYS r2 9/48 ir_06_03 ok 10.939s
+slot 07 qwen3:1.7b ALWAYS r2 10/48 ir_07_05 ok 12.165s
+slot 07 qwen3:1.7b ALWAYS r2 11/48 ir_05_02 ok 9.017s
+slot 07 qwen3:1.7b ALWAYS r2 12/48 ir_03_06 ok 17.911s
+slot 07 qwen3:1.7b ALWAYS r2 13/48 ir_04_04 ok 10.509s
+slot 07 qwen3:1.7b ALWAYS r2 14/48 ir_01_04 ok 13.080s
+slot 07 qwen3:1.7b ALWAYS r2 15/48 ir_02_03 ok 16.181s
+slot 07 qwen3:1.7b ALWAYS r2 16/48 ir_04_05 ok 9.264s
+slot 07 qwen3:1.7b ALWAYS r2 17/48 ir_08_02 ok 9.687s
+slot 07 qwen3:1.7b ALWAYS r2 18/48 ir_03_04 ok 17.834s
+slot 07 qwen3:1.7b ALWAYS r2 19/48 ir_07_06 ok 12.306s
+slot 07 qwen3:1.7b ALWAYS r2 20/48 ir_01_05 ok 13.199s
+slot 07 qwen3:1.7b ALWAYS r2 21/48 ir_03_03 ok 16.031s
+slot 07 qwen3:1.7b ALWAYS r2 22/48 ir_03_02 ok 14.618s
+slot 07 qwen3:1.7b ALWAYS r2 23/48 ir_01_01 ok 9.069s
+slot 07 qwen3:1.7b ALWAYS r2 24/48 ir_05_03 ok 12.652s
+slot 07 qwen3:1.7b ALWAYS r2 25/48 ir_06_02 ok 9.270s
+slot 07 qwen3:1.7b ALWAYS r2 26/48 ir_04_01 ok 9.482s
+slot 07 qwen3:1.7b ALWAYS r2 27/48 ir_05_01 ok 8.052s
+slot 07 qwen3:1.7b ALWAYS r2 28/48 ir_08_03 ok 15.438s
+slot 07 qwen3:1.7b ALWAYS r2 29/48 ir_02_01 ok 9.528s
+slot 07 qwen3:1.7b ALWAYS r2 30/48 ir_07_02 ok 17.190s
+slot 07 qwen3:1.7b ALWAYS r2 31/48 ir_04_02 ok 11.400s
+slot 07 qwen3:1.7b ALWAYS r2 32/48 ir_01_03 ok 12.090s
+slot 07 qwen3:1.7b ALWAYS r2 33/48 ir_04_06 ok 14.763s
+slot 07 qwen3:1.7b ALWAYS r2 34/48 ir_08_05 ok 6.820s
+slot 07 qwen3:1.7b ALWAYS r2 35/48 ir_01_02 ok 17.578s
+slot 07 qwen3:1.7b ALWAYS r2 36/48 ir_06_04 ok 8.576s
+slot 07 qwen3:1.7b ALWAYS r2 37/48 ir_03_01 ok 6.695s
+slot 07 qwen3:1.7b ALWAYS r2 38/48 ir_05_05 ok 11.421s
+slot 07 qwen3:1.7b ALWAYS r2 39/48 ir_02_04 ok 13.501s
+slot 07 qwen3:1.7b ALWAYS r2 40/48 ir_04_03 interrupted 15.119s
+BATCH interrupted /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4

@@ -1,0 +1,9 @@
+{"branch": "cm04_correction", "segment": "initial", "fragment": 1, "returncode": 0}
+{"branch": "cm04_correction", "segment": "restart", "fragment": 1, "returncode": 0}
+admission waiting cm04_deletion/initial: revised startup temperature must be below 55 C
+{"branch": "cm04_deletion", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm04_deletion/restart: revised startup temperature must be below 55 C
+{"branch": "cm04_deletion", "segment": "restart", "fragment": 1, "returncode": 0}
+{"branch": "cm04_expiry", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm04_expiry/restart: revised startup temperature must be below 55 C
+{"branch": "cm04_expiry", "segment": "restart", "fragment": 1, "returncode": 0}

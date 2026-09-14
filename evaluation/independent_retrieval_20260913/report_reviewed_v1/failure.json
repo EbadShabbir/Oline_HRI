@@ -1,0 +1,8 @@
+{
+  "analysis": "analysis_reviewed_v1",
+  "error": "UnboundLocalError: audit referenced before assignment in helper-rewrite disclosure paragraph",
+  "line": 510,
+  "raw_observations_or_judgments_changed": false,
+  "status": "renderer_failed_before_report_written",
+  "successor": "report_reviewed_v2"
+}

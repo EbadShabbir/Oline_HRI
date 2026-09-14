@@ -1,0 +1,90 @@
+{
+  "recorded_at": "2026-09-12T12:47:28.818550+00:00",
+  "supersedes_analysis_only": "large_r1_record_v2.json used an analyzer check that still expected v1 swap ceilings; raw data and runtime are unchanged",
+  "summary": {
+    "arm": "large",
+    "attempted": 48,
+    "delivered": 47,
+    "first_case_seconds": 50.311104559,
+    "latency_seconds": {
+      "max": 50.311104559,
+      "mean": 17.44839186516667,
+      "min": 5.430741387,
+      "n": 48,
+      "p50": 15.485777558,
+      "p95": 29.6204910954
+    },
+    "planned": 48,
+    "profile_id": "post_memory_comparison_v1",
+    "repetition": 1,
+    "status": "complete_with_errors"
+  },
+  "audit": {
+    "valid": true,
+    "complete": true,
+    "status": "complete_with_errors",
+    "errors": [],
+    "artifact_sha256": {
+      "manifest.json": "662956e7bb7f562f8d339891ae1447f03576638e830af1dcbd7010010707edad",
+      "workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+      "start.json": "73e867d38f1cf6b8f27eff46c24faa9ec2a0a71cbd21f963f9b669a5e181ecd9",
+      "finish.json": "c12112b01e0c2d0fc9674cb9f4d8f82ecf0814388f56f1025c33096a9d283de7",
+      "memory_setup.json": "cbf1a76f167ab6a1d44953391d445ab724fe0616223b9b2723c503e254433bb7",
+      "observations.jsonl": "780db8bee003d8813be8aa43b51fbb4342619ffca7b65fd31c32472bbe2df5de",
+      "telemetry.jsonl": "3edb5796917f38ad91d24a57c7f3e39e4d7d98b076751c5b062bca9279230254",
+      "summary.json": "fffc94affa08c52b93d8315bcbae1f779f7c89e6993a403f3d8552b8679a23fc",
+      "http_calls.jsonl": "86abeb73dc3d08a8a8cb3acb598147e0aa058a6d73d96e7f166a479059f3d425"
+    },
+    "first_request_seconds": 50.311104559,
+    "memory_setup_seconds": 2.46994891,
+    "telemetry": {
+      "sample_count": 1650,
+      "duration_seconds": 841.134342463,
+      "whole_interval_energy_joules": 8057.81687018636,
+      "peak_ram_used_mb": 6367,
+      "peak_swap_used_mb": 1621,
+      "peak_temperature_c": 58.437,
+      "gpu_activity_percent": {
+        "n": 1650,
+        "mean": 59.15090909090909,
+        "p50": 55.0,
+        "p95": 99.0,
+        "min": 12,
+        "max": 99,
+        "sum": 97599.0
+      },
+      "scope": "whole device including setup and cleanup; no idle subtraction; onboard VDD_IN estimate",
+      "request_intervals_energy_joules": 8023.545455207875,
+      "request_interval_covered_seconds": 837.104457881,
+      "request_interval_requested_seconds": 837.522809528,
+      "request_energy_scope": "whole-device energy during covered request intervals, not model-only energy"
+    },
+    "analysis_compatibility_correction": {
+      "schema_version": 1,
+      "kind": "post_collection_analyzer_compatibility_correction",
+      "reason": "Frozen analyzer retained older swap comparison constants while the pre-inference v2 freeze and runtime guard used the documented amended limits.",
+      "adapter_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/analyze_v2_recorded.py",
+      "adapter_sha256": "c254d3c9c44e8d1fffaf08454cc3081a8206296ec9510601ba360f2a28016fae",
+      "adapter_archive": "analysis_compatibility_adapter.py",
+      "known_freeze_sha256": "6497504cb7a3fd29c2b3b3740aa26f1a77dad8d626cbf0fedcabed997bfc7783",
+      "protocol_sha256": "1a2b9ea17e413308fb5aae7f5af065cb5427451c328d7a91c9ba23c833264dc5",
+      "changed_binding": "analyze_complete_system.EXPECTED_LIMITS (two dictionary entries only)",
+      "old_swap_limits_kib": {
+        "max_start_swap_used_kib": 786432,
+        "max_runtime_swap_used_kib": 1048576
+      },
+      "recorded_swap_limits_kib": {
+        "max_start_swap_used_kib": 3639464,
+        "max_runtime_swap_used_kib": 3639464
+      },
+      "non_swap_limits_unchanged": true,
+      "other_artifact_and_telemetry_audits_retained": true,
+      "runtime_or_generation_changes": false,
+      "scoring_changes": false,
+      "raw_artifacts_modified": false,
+      "module_bindings_restored_after_analysis": true,
+      "scope": "Compatibility with the exact existing recorded experiment, not a new resource-policy decision or feasibility result"
+    }
+  },
+  "semantic_quality": "pending blind review"
+}

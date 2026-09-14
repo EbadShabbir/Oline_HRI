@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/verify_final_analysis_v2.py", line 201, in <module>
+    main()
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/verify_final_analysis_v2.py", line 161, in main
+    'boundary_mem_available_kib_min': min(s['memory']['mem_available_kib'] for s in starts + [f['snapshot'] for f in finishes]),
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/verify_final_analysis_v2.py", line 161, in <listcomp>
+    'boundary_mem_available_kib_min': min(s['memory']['mem_available_kib'] for s in starts + [f['snapshot'] for f in finishes]),
+KeyError: 'snapshot'

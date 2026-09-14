@@ -1,0 +1,6 @@
+{"output": "/tmp/clara-memory-repair-analysis-reproduction-v1/analysis_v1", "planned": 96, "attempted": 96, "useful_correct": 92, "disagreements": 0}
+{"output": "/tmp/clara-memory-repair-analysis-reproduction-v1/tables", "tables": 16, "checkpoints": 96, "pairs": 36}
+{"output": "/tmp/clara-memory-repair-analysis-reproduction-v1/matched_comparison", "matched": 96, "baseline": {"planned": 96, "delivered": 93, "useful_correct": 39, "forbidden_disclosure": 30, "revoked_original_disclosure": 28, "unstored_replacement_disclosure": 2, "withheld": 3, "interrupted": 0, "missing": 0}, "repair": {"planned": 96, "delivered": 94, "useful_correct": 92, "forbidden_disclosure": 0, "revoked_original_disclosure": 0, "unstored_replacement_disclosure": 0, "withheld": 2, "interrupted": 0, "missing": 0}}
+/usr/local/lib/python3.10/dist-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+{"output": "/tmp/clara-memory-repair-analysis-reproduction-v1/figures", "cells": 96, "matplotlib": "3.10.9"}

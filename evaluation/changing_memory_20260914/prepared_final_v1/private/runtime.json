@@ -1,0 +1,4667 @@
+{
+  "schema_version": 1,
+  "experiment": "changing_memory_20260914",
+  "logical_clock": {
+    "base_time": "2026-10-01T12:00:00+00:00",
+    "retention_days": 7,
+    "advance_only_between_operations": true
+  },
+  "branches": [
+    {
+      "branch_id": "cm01_correction",
+      "scenario_id": "cm01",
+      "category": "preference",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm01_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm01_correction_prestore",
+          "question": "What is my preferred tea?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm01_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My preferred tea is rooibos tea."
+        },
+        {
+          "op": "remember",
+          "id": "cm01_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your preferred tea is rooibos tea.",
+          "kind": "preference",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm01_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-03T14:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm01_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What is my preferred tea?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm01_correction_recalled",
+          "question": "What is my preferred tea?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm01_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your preferred tea is jasmine tea.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm01_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm01_correction_corrected_retained",
+          "question": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm01_correction_corrected_fresh",
+          "question": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm01_correction_historical_retained",
+          "question": "Where was my Larkspur picnic on 2026-09-03?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm01_correction_historical_fresh",
+          "question": "Where was my Larkspur picnic on 2026-09-03?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm01_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm01_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm01_correction_restart_retained",
+          "question": "Returning to my earlier tea preference, what is my current preferred tea?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm01_correction_restart_fresh",
+          "question": "Returning to my earlier tea preference, what is my current preferred tea?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm01_correction_restart_historical_retained",
+          "question": "Where was my Larkspur picnic on 2026-09-03?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm01_correction_restart_historical_fresh",
+          "question": "Where was my Larkspur picnic on 2026-09-03?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm01_deletion",
+      "scenario_id": "cm01",
+      "category": "preference",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm01_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My preferred tea is rooibos tea."
+        },
+        {
+          "op": "remember",
+          "id": "cm01_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your preferred tea is rooibos tea.",
+          "kind": "preference",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm01_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-03T14:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm01_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What is my preferred tea?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm01_deletion_recalled",
+          "question": "What is my preferred tea?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm01_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm01_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm01_deletion_deleted_retained",
+          "question": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm01_deletion_deleted_fresh",
+          "question": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm01_deletion_deleted_historical_retained",
+          "question": "What tea preference did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm01_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm01_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm01_deletion_restart_retained",
+          "question": "Returning to my earlier tea preference, what is my current preferred tea?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm01_deletion_restart_fresh",
+          "question": "Returning to my earlier tea preference, what is my current preferred tea?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm01_deletion_restart_historical_retained",
+          "question": "What tea preference did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm01_expiry",
+      "scenario_id": "cm01",
+      "category": "preference",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm01_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My preferred tea is rooibos tea."
+        },
+        {
+          "op": "remember",
+          "id": "cm01_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your preferred tea is rooibos tea.",
+          "kind": "preference",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm01_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-03T14:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm01_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What is my preferred tea?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm01_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm01_expiry_before_retained",
+          "question": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm01_expiry_before_fresh",
+          "question": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm01_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm01_expiry_at_retained",
+          "question": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm01_expiry_at_fresh",
+          "question": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm01_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm01_expiry_after_retained",
+          "question": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm01_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm01_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm01_expiry_restart_retained",
+          "question": "Returning to my earlier tea preference, what is my current preferred tea?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm01_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm01_expiry_restart_fresh",
+          "question": "Returning to my earlier tea preference, what is my current preferred tea?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm02_correction",
+      "scenario_id": "cm02",
+      "category": "preference",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm02_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm02_correction_prestore",
+          "question": "What is my preferred music?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm02_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My preferred music is bluegrass music."
+        },
+        {
+          "op": "remember",
+          "id": "cm02_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your preferred music is bluegrass music.",
+          "kind": "preference",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm02_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Amber craft fair was at Willow Hall on 2026-09-04 at 10:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-04T10:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm02_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What is my preferred music?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm02_correction_recalled",
+          "question": "What is my preferred music?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm02_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your preferred music is bossa nova music.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm02_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm02_correction_corrected_retained",
+          "question": "Earlier I told you about my music preference. Which music do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm02_correction_corrected_fresh",
+          "question": "Earlier I told you about my music preference. Which music do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm02_correction_historical_retained",
+          "question": "Where was my Amber craft fair on 2026-09-04?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm02_correction_historical_fresh",
+          "question": "Where was my Amber craft fair on 2026-09-04?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm02_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm02_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm02_correction_restart_retained",
+          "question": "Returning to my earlier music preference, what is my current preferred music?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm02_correction_restart_fresh",
+          "question": "Returning to my earlier music preference, what is my current preferred music?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm02_correction_restart_historical_retained",
+          "question": "Where was my Amber craft fair on 2026-09-04?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm02_correction_restart_historical_fresh",
+          "question": "Where was my Amber craft fair on 2026-09-04?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm02_deletion",
+      "scenario_id": "cm02",
+      "category": "preference",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm02_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My preferred music is bluegrass music."
+        },
+        {
+          "op": "remember",
+          "id": "cm02_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your preferred music is bluegrass music.",
+          "kind": "preference",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm02_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Amber craft fair was at Willow Hall on 2026-09-04 at 10:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-04T10:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm02_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What is my preferred music?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm02_deletion_recalled",
+          "question": "What is my preferred music?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm02_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm02_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm02_deletion_deleted_retained",
+          "question": "Earlier I told you about my music preference. Which music do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm02_deletion_deleted_fresh",
+          "question": "Earlier I told you about my music preference. Which music do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm02_deletion_deleted_historical_retained",
+          "question": "What music preference did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm02_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm02_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm02_deletion_restart_retained",
+          "question": "Returning to my earlier music preference, what is my current preferred music?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm02_deletion_restart_fresh",
+          "question": "Returning to my earlier music preference, what is my current preferred music?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm02_deletion_restart_historical_retained",
+          "question": "What music preference did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm02_expiry",
+      "scenario_id": "cm02",
+      "category": "preference",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm02_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My preferred music is bluegrass music."
+        },
+        {
+          "op": "remember",
+          "id": "cm02_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your preferred music is bluegrass music.",
+          "kind": "preference",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm02_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Amber craft fair was at Willow Hall on 2026-09-04 at 10:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-04T10:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm02_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What is my preferred music?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm02_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm02_expiry_before_retained",
+          "question": "Earlier I told you about my music preference. Which music do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm02_expiry_before_fresh",
+          "question": "Earlier I told you about my music preference. Which music do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm02_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm02_expiry_at_retained",
+          "question": "Earlier I told you about my music preference. Which music do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm02_expiry_at_fresh",
+          "question": "Earlier I told you about my music preference. Which music do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm02_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm02_expiry_after_retained",
+          "question": "Earlier I told you about my music preference. Which music do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm02_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm02_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm02_expiry_restart_retained",
+          "question": "Returning to my earlier music preference, what is my current preferred music?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm02_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm02_expiry_restart_fresh",
+          "question": "Returning to my earlier music preference, what is my current preferred music?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm03_correction",
+      "scenario_id": "cm03",
+      "category": "preference",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm03_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm03_correction_prestore",
+          "question": "What is my preferred notebook color?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm03_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My preferred notebook color is turquoise."
+        },
+        {
+          "op": "remember",
+          "id": "cm03_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your preferred notebook color is turquoise.",
+          "kind": "preference",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm03_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-05T11:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm03_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What is my preferred notebook color?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm03_correction_recalled",
+          "question": "What is my preferred notebook color?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm03_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your preferred notebook color is burgundy.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm03_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm03_correction_corrected_retained",
+          "question": "Earlier I told you about my notebook color preference. Which notebook color do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm03_correction_corrected_fresh",
+          "question": "Earlier I told you about my notebook color preference. Which notebook color do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm03_correction_historical_retained",
+          "question": "Where was my Juniper reading festival on 2026-09-05?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm03_correction_historical_fresh",
+          "question": "Where was my Juniper reading festival on 2026-09-05?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm03_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm03_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm03_correction_restart_retained",
+          "question": "Returning to my earlier notebook color preference, what is my current preferred notebook color?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm03_correction_restart_fresh",
+          "question": "Returning to my earlier notebook color preference, what is my current preferred notebook color?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm03_correction_restart_historical_retained",
+          "question": "Where was my Juniper reading festival on 2026-09-05?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm03_correction_restart_historical_fresh",
+          "question": "Where was my Juniper reading festival on 2026-09-05?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm03_deletion",
+      "scenario_id": "cm03",
+      "category": "preference",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm03_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My preferred notebook color is turquoise."
+        },
+        {
+          "op": "remember",
+          "id": "cm03_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your preferred notebook color is turquoise.",
+          "kind": "preference",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm03_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-05T11:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm03_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What is my preferred notebook color?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm03_deletion_recalled",
+          "question": "What is my preferred notebook color?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm03_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm03_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm03_deletion_deleted_retained",
+          "question": "Earlier I told you about my notebook color preference. Which notebook color do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm03_deletion_deleted_fresh",
+          "question": "Earlier I told you about my notebook color preference. Which notebook color do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm03_deletion_deleted_historical_retained",
+          "question": "What notebook color preference did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm03_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm03_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm03_deletion_restart_retained",
+          "question": "Returning to my earlier notebook color preference, what is my current preferred notebook color?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm03_deletion_restart_fresh",
+          "question": "Returning to my earlier notebook color preference, what is my current preferred notebook color?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm03_deletion_restart_historical_retained",
+          "question": "What notebook color preference did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm03_expiry",
+      "scenario_id": "cm03",
+      "category": "preference",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm03_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My preferred notebook color is turquoise."
+        },
+        {
+          "op": "remember",
+          "id": "cm03_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your preferred notebook color is turquoise.",
+          "kind": "preference",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm03_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-05T11:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm03_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What is my preferred notebook color?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm03_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm03_expiry_before_retained",
+          "question": "Earlier I told you about my notebook color preference. Which notebook color do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm03_expiry_before_fresh",
+          "question": "Earlier I told you about my notebook color preference. Which notebook color do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm03_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm03_expiry_at_retained",
+          "question": "Earlier I told you about my notebook color preference. Which notebook color do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm03_expiry_at_fresh",
+          "question": "Earlier I told you about my notebook color preference. Which notebook color do I prefer now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm03_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm03_expiry_after_retained",
+          "question": "Earlier I told you about my notebook color preference. Which notebook color do I prefer now?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm03_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm03_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm03_expiry_restart_retained",
+          "question": "Returning to my earlier notebook color preference, what is my current preferred notebook color?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm03_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm03_expiry_restart_fresh",
+          "question": "Returning to my earlier notebook color preference, what is my current preferred notebook color?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm04_correction",
+      "scenario_id": "cm04",
+      "category": "relationship",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm04_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm04_correction_prestore",
+          "question": "Who is my walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm04_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My walking partner is Elora Vale."
+        },
+        {
+          "op": "remember",
+          "id": "cm04_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your walking partner is Elora Vale.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm04_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-06T09:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm04_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Who is my walking partner?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm04_correction_recalled",
+          "question": "Who is my walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm04_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your walking partner is Niko Fern.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm04_correction_corrected_retained",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm04_correction_corrected_fresh",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm04_correction_historical_retained",
+          "question": "Where was my Marigold garden tour on 2026-09-06?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm04_correction_historical_fresh",
+          "question": "Where was my Marigold garden tour on 2026-09-06?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm04_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm04_correction_restart_retained",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm04_correction_restart_fresh",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm04_correction_restart_historical_retained",
+          "question": "Where was my Marigold garden tour on 2026-09-06?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm04_correction_restart_historical_fresh",
+          "question": "Where was my Marigold garden tour on 2026-09-06?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm04_deletion",
+      "scenario_id": "cm04",
+      "category": "relationship",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm04_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My walking partner is Elora Vale."
+        },
+        {
+          "op": "remember",
+          "id": "cm04_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your walking partner is Elora Vale.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm04_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-06T09:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm04_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Who is my walking partner?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm04_deletion_recalled",
+          "question": "Who is my walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm04_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm04_deletion_deleted_retained",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm04_deletion_deleted_fresh",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm04_deletion_deleted_historical_retained",
+          "question": "Which walking partner did I name earlier, before I asked you to forget that information?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm04_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm04_deletion_restart_retained",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm04_deletion_restart_fresh",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm04_deletion_restart_historical_retained",
+          "question": "Which walking partner did I name earlier, before I asked you to forget that information?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm04_expiry",
+      "scenario_id": "cm04",
+      "category": "relationship",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm04_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My walking partner is Elora Vale."
+        },
+        {
+          "op": "remember",
+          "id": "cm04_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your walking partner is Elora Vale.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm04_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-06T09:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm04_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Who is my walking partner?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm04_expiry_before_retained",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm04_expiry_before_fresh",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm04_expiry_at_retained",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm04_expiry_at_fresh",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm04_expiry_after_retained",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm04_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm04_expiry_restart_retained",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm04_expiry_restart_fresh",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm05_correction",
+      "scenario_id": "cm05",
+      "category": "relationship",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm05_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm05_correction_prestore",
+          "question": "Who is my book club contact?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm05_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My book club contact is Tessa Brook."
+        },
+        {
+          "op": "remember",
+          "id": "cm05_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your book club contact is Tessa Brook.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm05_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-07T16:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm05_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Who is my book club contact?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm05_correction_recalled",
+          "question": "Who is my book club contact?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm05_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your book club contact is Orin Moss.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm05_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm05_correction_corrected_retained",
+          "question": "Earlier I told you about my book club contact. Who is my book club contact now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm05_correction_corrected_fresh",
+          "question": "Earlier I told you about my book club contact. Who is my book club contact now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm05_correction_historical_retained",
+          "question": "Where was my Saffron painting class on 2026-09-07?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm05_correction_historical_fresh",
+          "question": "Where was my Saffron painting class on 2026-09-07?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm05_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm05_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm05_correction_restart_retained",
+          "question": "Returning to my earlier book club information, who is my current book club contact?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm05_correction_restart_fresh",
+          "question": "Returning to my earlier book club information, who is my current book club contact?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm05_correction_restart_historical_retained",
+          "question": "Where was my Saffron painting class on 2026-09-07?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm05_correction_restart_historical_fresh",
+          "question": "Where was my Saffron painting class on 2026-09-07?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm05_deletion",
+      "scenario_id": "cm05",
+      "category": "relationship",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm05_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My book club contact is Tessa Brook."
+        },
+        {
+          "op": "remember",
+          "id": "cm05_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your book club contact is Tessa Brook.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm05_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-07T16:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm05_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Who is my book club contact?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm05_deletion_recalled",
+          "question": "Who is my book club contact?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm05_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm05_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm05_deletion_deleted_retained",
+          "question": "Earlier I told you about my book club contact. Who is my book club contact now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm05_deletion_deleted_fresh",
+          "question": "Earlier I told you about my book club contact. Who is my book club contact now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm05_deletion_deleted_historical_retained",
+          "question": "Which book club contact did I name earlier, before I asked you to forget that information?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm05_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm05_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm05_deletion_restart_retained",
+          "question": "Returning to my earlier book club information, who is my current book club contact?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm05_deletion_restart_fresh",
+          "question": "Returning to my earlier book club information, who is my current book club contact?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm05_deletion_restart_historical_retained",
+          "question": "Which book club contact did I name earlier, before I asked you to forget that information?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm05_expiry",
+      "scenario_id": "cm05",
+      "category": "relationship",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm05_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My book club contact is Tessa Brook."
+        },
+        {
+          "op": "remember",
+          "id": "cm05_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your book club contact is Tessa Brook.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm05_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-07T16:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm05_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Who is my book club contact?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm05_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm05_expiry_before_retained",
+          "question": "Earlier I told you about my book club contact. Who is my book club contact now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm05_expiry_before_fresh",
+          "question": "Earlier I told you about my book club contact. Who is my book club contact now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm05_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm05_expiry_at_retained",
+          "question": "Earlier I told you about my book club contact. Who is my book club contact now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm05_expiry_at_fresh",
+          "question": "Earlier I told you about my book club contact. Who is my book club contact now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm05_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm05_expiry_after_retained",
+          "question": "Earlier I told you about my book club contact. Who is my book club contact now?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm05_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm05_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm05_expiry_restart_retained",
+          "question": "Returning to my earlier book club information, who is my current book club contact?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm05_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm05_expiry_restart_fresh",
+          "question": "Returning to my earlier book club information, who is my current book club contact?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm06_correction",
+      "scenario_id": "cm06",
+      "category": "object_location",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm06_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm06_correction_prestore",
+          "question": "Where is my sketchbook?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm06_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My sketchbook is in the wicker basket."
+        },
+        {
+          "op": "remember",
+          "id": "cm06_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your sketchbook is in the wicker basket.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm06_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-08T13:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm06_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where is my sketchbook?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm06_correction_recalled",
+          "question": "Where is my sketchbook?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm06_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your sketchbook is in the walnut drawer.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm06_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm06_correction_corrected_retained",
+          "question": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm06_correction_corrected_fresh",
+          "question": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm06_correction_historical_retained",
+          "question": "Where was my Moonbeam kite festival on 2026-09-08?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm06_correction_historical_fresh",
+          "question": "Where was my Moonbeam kite festival on 2026-09-08?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm06_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm06_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm06_correction_restart_retained",
+          "question": "Returning to my earlier sketchbook information, where should I find my sketchbook now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm06_correction_restart_fresh",
+          "question": "Returning to my earlier sketchbook information, where should I find my sketchbook now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm06_correction_restart_historical_retained",
+          "question": "Where was my Moonbeam kite festival on 2026-09-08?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm06_correction_restart_historical_fresh",
+          "question": "Where was my Moonbeam kite festival on 2026-09-08?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm06_deletion",
+      "scenario_id": "cm06",
+      "category": "object_location",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm06_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My sketchbook is in the wicker basket."
+        },
+        {
+          "op": "remember",
+          "id": "cm06_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your sketchbook is in the wicker basket.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm06_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-08T13:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm06_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where is my sketchbook?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm06_deletion_recalled",
+          "question": "Where is my sketchbook?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm06_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm06_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm06_deletion_deleted_retained",
+          "question": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm06_deletion_deleted_fresh",
+          "question": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm06_deletion_deleted_historical_retained",
+          "question": "What sketchbook location did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm06_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm06_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm06_deletion_restart_retained",
+          "question": "Returning to my earlier sketchbook information, where should I find my sketchbook now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm06_deletion_restart_fresh",
+          "question": "Returning to my earlier sketchbook information, where should I find my sketchbook now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm06_deletion_restart_historical_retained",
+          "question": "What sketchbook location did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm06_expiry",
+      "scenario_id": "cm06",
+      "category": "object_location",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm06_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My sketchbook is in the wicker basket."
+        },
+        {
+          "op": "remember",
+          "id": "cm06_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your sketchbook is in the wicker basket.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm06_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-08T13:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm06_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where is my sketchbook?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm06_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm06_expiry_before_retained",
+          "question": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm06_expiry_before_fresh",
+          "question": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm06_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm06_expiry_at_retained",
+          "question": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm06_expiry_at_fresh",
+          "question": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm06_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm06_expiry_after_retained",
+          "question": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm06_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm06_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm06_expiry_restart_retained",
+          "question": "Returning to my earlier sketchbook information, where should I find my sketchbook now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm06_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm06_expiry_restart_fresh",
+          "question": "Returning to my earlier sketchbook information, where should I find my sketchbook now?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm07_correction",
+      "scenario_id": "cm07",
+      "category": "object_location",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm07_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm07_correction_prestore",
+          "question": "Where are my binoculars?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm07_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My binoculars are in the canvas tote."
+        },
+        {
+          "op": "remember",
+          "id": "cm07_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your binoculars are in the canvas tote.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm07_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-09T15:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm07_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where are my binoculars?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm07_correction_recalled",
+          "question": "Where are my binoculars?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm07_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your binoculars are in the cedar cabinet.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm07_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm07_correction_corrected_retained",
+          "question": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm07_correction_corrected_fresh",
+          "question": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm07_correction_historical_retained",
+          "question": "Where was my Rosewood puzzle afternoon on 2026-09-09?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm07_correction_historical_fresh",
+          "question": "Where was my Rosewood puzzle afternoon on 2026-09-09?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm07_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm07_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm07_correction_restart_retained",
+          "question": "Returning to my earlier binoculars information, where should I find my binoculars now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm07_correction_restart_fresh",
+          "question": "Returning to my earlier binoculars information, where should I find my binoculars now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm07_correction_restart_historical_retained",
+          "question": "Where was my Rosewood puzzle afternoon on 2026-09-09?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm07_correction_restart_historical_fresh",
+          "question": "Where was my Rosewood puzzle afternoon on 2026-09-09?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm07_deletion",
+      "scenario_id": "cm07",
+      "category": "object_location",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm07_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My binoculars are in the canvas tote."
+        },
+        {
+          "op": "remember",
+          "id": "cm07_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your binoculars are in the canvas tote.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm07_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-09T15:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm07_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where are my binoculars?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm07_deletion_recalled",
+          "question": "Where are my binoculars?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm07_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm07_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm07_deletion_deleted_retained",
+          "question": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm07_deletion_deleted_fresh",
+          "question": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm07_deletion_deleted_historical_retained",
+          "question": "What binoculars location did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm07_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm07_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm07_deletion_restart_retained",
+          "question": "Returning to my earlier binoculars information, where should I find my binoculars now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm07_deletion_restart_fresh",
+          "question": "Returning to my earlier binoculars information, where should I find my binoculars now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm07_deletion_restart_historical_retained",
+          "question": "What binoculars location did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm07_expiry",
+      "scenario_id": "cm07",
+      "category": "object_location",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm07_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My binoculars are in the canvas tote."
+        },
+        {
+          "op": "remember",
+          "id": "cm07_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your binoculars are in the canvas tote.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm07_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-09T15:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm07_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where are my binoculars?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm07_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm07_expiry_before_retained",
+          "question": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm07_expiry_before_fresh",
+          "question": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm07_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm07_expiry_at_retained",
+          "question": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm07_expiry_at_fresh",
+          "question": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm07_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm07_expiry_after_retained",
+          "question": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm07_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm07_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm07_expiry_restart_retained",
+          "question": "Returning to my earlier binoculars information, where should I find my binoculars now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm07_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm07_expiry_restart_fresh",
+          "question": "Returning to my earlier binoculars information, where should I find my binoculars now?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm08_correction",
+      "scenario_id": "cm08",
+      "category": "object_location",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm08_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm08_correction_prestore",
+          "question": "Where is my sewing kit?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm08_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My sewing kit is in the striped tin."
+        },
+        {
+          "op": "remember",
+          "id": "cm08_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your sewing kit is in the striped tin.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm08_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-10T18:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm08_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where is my sewing kit?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm08_correction_recalled",
+          "question": "Where is my sewing kit?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm08_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your sewing kit is in the velvet pouch.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm08_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm08_correction_corrected_retained",
+          "question": "Earlier I told you where my sewing kit is. Where is my sewing kit located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm08_correction_corrected_fresh",
+          "question": "Earlier I told you where my sewing kit is. Where is my sewing kit located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm08_correction_historical_retained",
+          "question": "Where was my Hawthorn lantern walk on 2026-09-10?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm08_correction_historical_fresh",
+          "question": "Where was my Hawthorn lantern walk on 2026-09-10?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm08_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm08_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm08_correction_restart_retained",
+          "question": "Returning to my earlier sewing kit information, where should I find my sewing kit now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm08_correction_restart_fresh",
+          "question": "Returning to my earlier sewing kit information, where should I find my sewing kit now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm08_correction_restart_historical_retained",
+          "question": "Where was my Hawthorn lantern walk on 2026-09-10?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm08_correction_restart_historical_fresh",
+          "question": "Where was my Hawthorn lantern walk on 2026-09-10?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm08_deletion",
+      "scenario_id": "cm08",
+      "category": "object_location",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm08_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My sewing kit is in the striped tin."
+        },
+        {
+          "op": "remember",
+          "id": "cm08_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your sewing kit is in the striped tin.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm08_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-10T18:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm08_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where is my sewing kit?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm08_deletion_recalled",
+          "question": "Where is my sewing kit?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm08_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm08_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm08_deletion_deleted_retained",
+          "question": "Earlier I told you where my sewing kit is. Where is my sewing kit located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm08_deletion_deleted_fresh",
+          "question": "Earlier I told you where my sewing kit is. Where is my sewing kit located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm08_deletion_deleted_historical_retained",
+          "question": "What sewing kit location did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm08_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm08_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm08_deletion_restart_retained",
+          "question": "Returning to my earlier sewing kit information, where should I find my sewing kit now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm08_deletion_restart_fresh",
+          "question": "Returning to my earlier sewing kit information, where should I find my sewing kit now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm08_deletion_restart_historical_retained",
+          "question": "What sewing kit location did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm08_expiry",
+      "scenario_id": "cm08",
+      "category": "object_location",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm08_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My sewing kit is in the striped tin."
+        },
+        {
+          "op": "remember",
+          "id": "cm08_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your sewing kit is in the striped tin.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm08_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-10T18:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm08_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where is my sewing kit?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm08_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm08_expiry_before_retained",
+          "question": "Earlier I told you where my sewing kit is. Where is my sewing kit located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm08_expiry_before_fresh",
+          "question": "Earlier I told you where my sewing kit is. Where is my sewing kit located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm08_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm08_expiry_at_retained",
+          "question": "Earlier I told you where my sewing kit is. Where is my sewing kit located now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm08_expiry_at_fresh",
+          "question": "Earlier I told you where my sewing kit is. Where is my sewing kit located now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm08_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm08_expiry_after_retained",
+          "question": "Earlier I told you where my sewing kit is. Where is my sewing kit located now?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm08_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm08_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm08_expiry_restart_retained",
+          "question": "Returning to my earlier sewing kit information, where should I find my sewing kit now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm08_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm08_expiry_restart_fresh",
+          "question": "Returning to my earlier sewing kit information, where should I find my sewing kit now?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm09_correction",
+      "scenario_id": "cm09",
+      "category": "appointment",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm09_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm09_correction_prestore",
+          "question": "What time is my pottery appointment on 2026-10-03?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm09_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My pottery appointment is on 2026-10-03 at 09:00."
+        },
+        {
+          "op": "remember",
+          "id": "cm09_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your pottery appointment is on 2026-10-03 at 09:00.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm09_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-11T17:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm09_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What time is my pottery appointment on 2026-10-03?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm09_correction_recalled",
+          "question": "What time is my pottery appointment on 2026-10-03?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm09_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your pottery appointment is on 2026-10-03 at 11:30.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm09_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm09_correction_corrected_retained",
+          "question": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm09_correction_corrected_fresh",
+          "question": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm09_correction_historical_retained",
+          "question": "Where was my Silverleaf choir rehearsal on 2026-09-11?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm09_correction_historical_fresh",
+          "question": "Where was my Silverleaf choir rehearsal on 2026-09-11?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm09_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm09_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm09_correction_restart_retained",
+          "question": "Returning to my earlier pottery appointment, what is its recorded start time on 2026-10-03 now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm09_correction_restart_fresh",
+          "question": "Returning to my earlier pottery appointment, what is its recorded start time on 2026-10-03 now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm09_correction_restart_historical_retained",
+          "question": "Where was my Silverleaf choir rehearsal on 2026-09-11?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm09_correction_restart_historical_fresh",
+          "question": "Where was my Silverleaf choir rehearsal on 2026-09-11?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm09_deletion",
+      "scenario_id": "cm09",
+      "category": "appointment",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm09_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My pottery appointment is on 2026-10-03 at 09:00."
+        },
+        {
+          "op": "remember",
+          "id": "cm09_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your pottery appointment is on 2026-10-03 at 09:00.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm09_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-11T17:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm09_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What time is my pottery appointment on 2026-10-03?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm09_deletion_recalled",
+          "question": "What time is my pottery appointment on 2026-10-03?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm09_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm09_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm09_deletion_deleted_retained",
+          "question": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm09_deletion_deleted_fresh",
+          "question": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm09_deletion_deleted_historical_retained",
+          "question": "What pottery appointment start time did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm09_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm09_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm09_deletion_restart_retained",
+          "question": "Returning to my earlier pottery appointment, what is its recorded start time on 2026-10-03 now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm09_deletion_restart_fresh",
+          "question": "Returning to my earlier pottery appointment, what is its recorded start time on 2026-10-03 now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm09_deletion_restart_historical_retained",
+          "question": "What pottery appointment start time did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm09_expiry",
+      "scenario_id": "cm09",
+      "category": "appointment",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm09_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My pottery appointment is on 2026-10-03 at 09:00."
+        },
+        {
+          "op": "remember",
+          "id": "cm09_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your pottery appointment is on 2026-10-03 at 09:00.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm09_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-11T17:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm09_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What time is my pottery appointment on 2026-10-03?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm09_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm09_expiry_before_retained",
+          "question": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm09_expiry_before_fresh",
+          "question": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm09_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm09_expiry_at_retained",
+          "question": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm09_expiry_at_fresh",
+          "question": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm09_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm09_expiry_after_retained",
+          "question": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm09_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm09_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm09_expiry_restart_retained",
+          "question": "Returning to my earlier pottery appointment, what is its recorded start time on 2026-10-03 now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm09_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm09_expiry_restart_fresh",
+          "question": "Returning to my earlier pottery appointment, what is its recorded start time on 2026-10-03 now?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm10_correction",
+      "scenario_id": "cm10",
+      "category": "appointment",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm10_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm10_correction_prestore",
+          "question": "What time is my bicycle fitting appointment on 2026-10-04?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm10_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My bicycle fitting appointment is on 2026-10-04 at 14:15."
+        },
+        {
+          "op": "remember",
+          "id": "cm10_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your bicycle fitting appointment is on 2026-10-04 at 14:15.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm10_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-12T19:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm10_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What time is my bicycle fitting appointment on 2026-10-04?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm10_correction_recalled",
+          "question": "What time is my bicycle fitting appointment on 2026-10-04?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm10_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your bicycle fitting appointment is on 2026-10-04 at 16:45.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm10_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm10_correction_corrected_retained",
+          "question": "Earlier I told you about my bicycle fitting appointment on 2026-10-04. What start time is currently recorded?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm10_correction_corrected_fresh",
+          "question": "Earlier I told you about my bicycle fitting appointment on 2026-10-04. What start time is currently recorded?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm10_correction_historical_retained",
+          "question": "Where was my Foxglove chess evening on 2026-09-12?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm10_correction_historical_fresh",
+          "question": "Where was my Foxglove chess evening on 2026-09-12?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm10_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm10_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm10_correction_restart_retained",
+          "question": "Returning to my earlier bicycle fitting appointment, what is its recorded start time on 2026-10-04 now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm10_correction_restart_fresh",
+          "question": "Returning to my earlier bicycle fitting appointment, what is its recorded start time on 2026-10-04 now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm10_correction_restart_historical_retained",
+          "question": "Where was my Foxglove chess evening on 2026-09-12?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm10_correction_restart_historical_fresh",
+          "question": "Where was my Foxglove chess evening on 2026-09-12?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm10_deletion",
+      "scenario_id": "cm10",
+      "category": "appointment",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm10_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My bicycle fitting appointment is on 2026-10-04 at 14:15."
+        },
+        {
+          "op": "remember",
+          "id": "cm10_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your bicycle fitting appointment is on 2026-10-04 at 14:15.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm10_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-12T19:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm10_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What time is my bicycle fitting appointment on 2026-10-04?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm10_deletion_recalled",
+          "question": "What time is my bicycle fitting appointment on 2026-10-04?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm10_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm10_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm10_deletion_deleted_retained",
+          "question": "Earlier I told you about my bicycle fitting appointment on 2026-10-04. What start time is currently recorded?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm10_deletion_deleted_fresh",
+          "question": "Earlier I told you about my bicycle fitting appointment on 2026-10-04. What start time is currently recorded?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm10_deletion_deleted_historical_retained",
+          "question": "What bicycle fitting appointment start time did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm10_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm10_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm10_deletion_restart_retained",
+          "question": "Returning to my earlier bicycle fitting appointment, what is its recorded start time on 2026-10-04 now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm10_deletion_restart_fresh",
+          "question": "Returning to my earlier bicycle fitting appointment, what is its recorded start time on 2026-10-04 now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm10_deletion_restart_historical_retained",
+          "question": "What bicycle fitting appointment start time did I tell you earlier, before I asked you to forget it?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm10_expiry",
+      "scenario_id": "cm10",
+      "category": "appointment",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm10_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My bicycle fitting appointment is on 2026-10-04 at 14:15."
+        },
+        {
+          "op": "remember",
+          "id": "cm10_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your bicycle fitting appointment is on 2026-10-04 at 14:15.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm10_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-12T19:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm10_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "What time is my bicycle fitting appointment on 2026-10-04?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm10_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm10_expiry_before_retained",
+          "question": "Earlier I told you about my bicycle fitting appointment on 2026-10-04. What start time is currently recorded?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm10_expiry_before_fresh",
+          "question": "Earlier I told you about my bicycle fitting appointment on 2026-10-04. What start time is currently recorded?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm10_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm10_expiry_at_retained",
+          "question": "Earlier I told you about my bicycle fitting appointment on 2026-10-04. What start time is currently recorded?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm10_expiry_at_fresh",
+          "question": "Earlier I told you about my bicycle fitting appointment on 2026-10-04. What start time is currently recorded?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm10_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm10_expiry_after_retained",
+          "question": "Earlier I told you about my bicycle fitting appointment on 2026-10-04. What start time is currently recorded?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm10_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm10_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm10_expiry_restart_retained",
+          "question": "Returning to my earlier bicycle fitting appointment, what is its recorded start time on 2026-10-04 now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm10_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm10_expiry_restart_fresh",
+          "question": "Returning to my earlier bicycle fitting appointment, what is its recorded start time on 2026-10-04 now?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm11_correction",
+      "scenario_id": "cm11",
+      "category": "dated_event",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm11_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm11_correction_prestore",
+          "question": "Where was my Seaglass workshop on 2026-09-20?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm11_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00."
+        },
+        {
+          "op": "remember",
+          "id": "cm11_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm11_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-13T12:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm11_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where was my Seaglass workshop on 2026-09-20?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm11_correction_recalled",
+          "question": "Where was my Seaglass workshop on 2026-09-20?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm11_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your Seaglass workshop was at Orchid Hall on 2026-09-20 at 10:00.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm11_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm11_correction_corrected_retained",
+          "question": "Earlier I told you about my Seaglass workshop on 2026-09-20. Which venue is in the current record?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm11_correction_corrected_fresh",
+          "question": "Earlier I told you about my Seaglass workshop on 2026-09-20. Which venue is in the current record?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm11_correction_historical_retained",
+          "question": "Where was my Bluebell poetry lunch on 2026-09-13?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm11_correction_historical_fresh",
+          "question": "Where was my Bluebell poetry lunch on 2026-09-13?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm11_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm11_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm11_correction_restart_retained",
+          "question": "Returning to my earlier Seaglass workshop, what venue is now recorded for that event on 2026-09-20?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm11_correction_restart_fresh",
+          "question": "Returning to my earlier Seaglass workshop, what venue is now recorded for that event on 2026-09-20?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm11_correction_restart_historical_retained",
+          "question": "Where was my Bluebell poetry lunch on 2026-09-13?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm11_correction_restart_historical_fresh",
+          "question": "Where was my Bluebell poetry lunch on 2026-09-13?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm11_deletion",
+      "scenario_id": "cm11",
+      "category": "dated_event",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm11_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00."
+        },
+        {
+          "op": "remember",
+          "id": "cm11_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm11_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-13T12:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm11_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where was my Seaglass workshop on 2026-09-20?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm11_deletion_recalled",
+          "question": "Where was my Seaglass workshop on 2026-09-20?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm11_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm11_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm11_deletion_deleted_retained",
+          "question": "Earlier I told you about my Seaglass workshop on 2026-09-20. Which venue is in the current record?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm11_deletion_deleted_fresh",
+          "question": "Earlier I told you about my Seaglass workshop on 2026-09-20. Which venue is in the current record?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm11_deletion_deleted_historical_retained",
+          "question": "Which venue did I originally name for my Seaglass workshop, before I asked you to forget that information?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm11_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm11_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm11_deletion_restart_retained",
+          "question": "Returning to my earlier Seaglass workshop, what venue is now recorded for that event on 2026-09-20?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm11_deletion_restart_fresh",
+          "question": "Returning to my earlier Seaglass workshop, what venue is now recorded for that event on 2026-09-20?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm11_deletion_restart_historical_retained",
+          "question": "Which venue did I originally name for my Seaglass workshop, before I asked you to forget that information?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm11_expiry",
+      "scenario_id": "cm11",
+      "category": "dated_event",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm11_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00."
+        },
+        {
+          "op": "remember",
+          "id": "cm11_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm11_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-13T12:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm11_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where was my Seaglass workshop on 2026-09-20?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm11_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm11_expiry_before_retained",
+          "question": "Earlier I told you about my Seaglass workshop on 2026-09-20. Which venue is in the current record?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm11_expiry_before_fresh",
+          "question": "Earlier I told you about my Seaglass workshop on 2026-09-20. Which venue is in the current record?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm11_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm11_expiry_at_retained",
+          "question": "Earlier I told you about my Seaglass workshop on 2026-09-20. Which venue is in the current record?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm11_expiry_at_fresh",
+          "question": "Earlier I told you about my Seaglass workshop on 2026-09-20. Which venue is in the current record?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm11_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm11_expiry_after_retained",
+          "question": "Earlier I told you about my Seaglass workshop on 2026-09-20. Which venue is in the current record?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm11_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm11_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm11_expiry_restart_retained",
+          "question": "Returning to my earlier Seaglass workshop, what venue is now recorded for that event on 2026-09-20?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm11_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm11_expiry_restart_fresh",
+          "question": "Returning to my earlier Seaglass workshop, what venue is now recorded for that event on 2026-09-20?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm12_correction",
+      "scenario_id": "cm12",
+      "category": "dated_event",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm12_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm12_correction_prestore",
+          "question": "Where was my Sunstone exhibition visit on 2026-09-22?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm12_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00."
+        },
+        {
+          "op": "remember",
+          "id": "cm12_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm12_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-14T20:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm12_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where was my Sunstone exhibition visit on 2026-09-22?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm12_correction_recalled",
+          "question": "Where was my Sunstone exhibition visit on 2026-09-22?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm12_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your Sunstone exhibition visit was at Iris Gallery on 2026-09-22 at 15:00.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm12_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm12_correction_corrected_retained",
+          "question": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22. Which venue is in the current record?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm12_correction_corrected_fresh",
+          "question": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22. Which venue is in the current record?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm12_correction_historical_retained",
+          "question": "Where was my Meadowlark storytelling night on 2026-09-14?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm12_correction_historical_fresh",
+          "question": "Where was my Meadowlark storytelling night on 2026-09-14?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm12_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm12_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm12_correction_restart_retained",
+          "question": "Returning to my earlier Sunstone exhibition visit, what venue is now recorded for that event on 2026-09-22?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm12_correction_restart_fresh",
+          "question": "Returning to my earlier Sunstone exhibition visit, what venue is now recorded for that event on 2026-09-22?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm12_correction_restart_historical_retained",
+          "question": "Where was my Meadowlark storytelling night on 2026-09-14?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm12_correction_restart_historical_fresh",
+          "question": "Where was my Meadowlark storytelling night on 2026-09-14?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm12_deletion",
+      "scenario_id": "cm12",
+      "category": "dated_event",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm12_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00."
+        },
+        {
+          "op": "remember",
+          "id": "cm12_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm12_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-14T20:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm12_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where was my Sunstone exhibition visit on 2026-09-22?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm12_deletion_recalled",
+          "question": "Where was my Sunstone exhibition visit on 2026-09-22?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm12_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm12_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm12_deletion_deleted_retained",
+          "question": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22. Which venue is in the current record?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm12_deletion_deleted_fresh",
+          "question": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22. Which venue is in the current record?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm12_deletion_deleted_historical_retained",
+          "question": "Which venue did I originally name for my Sunstone exhibition visit, before I asked you to forget that information?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm12_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm12_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm12_deletion_restart_retained",
+          "question": "Returning to my earlier Sunstone exhibition visit, what venue is now recorded for that event on 2026-09-22?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm12_deletion_restart_fresh",
+          "question": "Returning to my earlier Sunstone exhibition visit, what venue is now recorded for that event on 2026-09-22?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm12_deletion_restart_historical_retained",
+          "question": "Which venue did I originally name for my Sunstone exhibition visit, before I asked you to forget that information?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm12_expiry",
+      "scenario_id": "cm12",
+      "category": "dated_event",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm12_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00."
+        },
+        {
+          "op": "remember",
+          "id": "cm12_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00.",
+          "kind": "event",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm12_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-14T20:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm12_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Where was my Sunstone exhibition visit on 2026-09-22?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm12_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm12_expiry_before_retained",
+          "question": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22. Which venue is in the current record?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm12_expiry_before_fresh",
+          "question": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22. Which venue is in the current record?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm12_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm12_expiry_at_retained",
+          "question": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22. Which venue is in the current record?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm12_expiry_at_fresh",
+          "question": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22. Which venue is in the current record?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm12_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm12_expiry_after_retained",
+          "question": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22. Which venue is in the current record?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm12_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm12_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm12_expiry_restart_retained",
+          "question": "Returning to my earlier Sunstone exhibition visit, what venue is now recorded for that event on 2026-09-22?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm12_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm12_expiry_restart_fresh",
+          "question": "Returning to my earlier Sunstone exhibition visit, what venue is now recorded for that event on 2026-09-22?",
+          "history": "fresh"
+        }
+      ]
+    }
+  ]
+}

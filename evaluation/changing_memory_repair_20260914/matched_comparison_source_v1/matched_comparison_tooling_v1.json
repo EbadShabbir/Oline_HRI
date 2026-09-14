@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-09-14T13:56:58.208353+00:00",
+  "status": "passed",
+  "no_inference": true,
+  "active_partial_answers_read": false,
+  "synthetic_tests": {
+    "final_tests": 10,
+    "exit_code": 0,
+    "command": ".venv/bin/python evaluation/changing_memory_repair_20260914/test_matched_comparison.py -v",
+    "log": "matched_comparison_tests_v2.log",
+    "initial_eight_test_log_preserved": "matched_comparison_tests_v1.log"
+  },
+  "checks": [
+    "Exact full expected-object equality binds question, authorized state, forbidden values, rubric, history, clock and restart.",
+    "Matched denominator defaults to 96; complete 24-checkpoint scenarios and 10/7/7 branch split required.",
+    "Sealed final reviews frozen before diagnostics are required; duplicate, missing, mismatched, partial and vote-tampered inputs rejected.",
+    "Usefulness, disclosure, withholding and category transitions use existing frozen votes only.",
+    "Diagnostic constraint and routing/generation-policy fields are copied only from recorded repaired-system metadata.",
+    "Measured latency requires actual trace wall_ns and matching diagnostic wall_seconds; absent timing remains missing.",
+    "Median and nearest-rank p95 show all-attempt and independently delivered-only scopes and counts.",
+    "Actual generator tag counts distinguish multiple returned calls, empty returns and missing metadata without route inference.",
+    "Figure mapping function AST, 24 stage positions and colors match original; synthetic 96 and 288 loads preserve coverage; duplicate/missing/misbound stages rejected."
+  ],
+  "source_sha256": {
+    "compare_matched.py": "b09a24ffc5901753bee59c1fb76f6332430f630f30b92dfb55b1cfed431bdbc7",
+    "test_matched_comparison.py": "7c00dc03fb852e5296ea3f197b7fcad4bfbd310baf12cf8546631f8782ae662a",
+    "matched_comparison_tests_v1.log": "1a7dfbe5ad5b3f0194993b4fcddf0cd64051a5c6eb32b9a8bf1b94e7b5469a43",
+    "matched_comparison_tests_v2.log": "b3741489898fc8d42049066e404d3d0b1577ce99da24344226b17d261fd42818"
+  },
+  "figure_review": {
+    "reviewer": "independent assistant /root/lifecycle_fix_validation_plan",
+    "status": "passed",
+    "render_repair_figure_sha256": "3942940119c5ae2e86849fa82051371c82660a6aed14662058f1279057b824e0",
+    "original_renderer_sha256": "daeb61d0b24f92d302d01f2706ddf36d8fb1a6c3e9ccf1f57e1a24f482f24ff6",
+    "score_mapping_unchanged": true,
+    "all24stages_and_colors_unchanged": true,
+    "scope": "Source/count/mapping review with synthetic fixtures; root owns visual rendering verification.",
+    "nonblocking_note": "PDF Creator metadata retains original renderer filename; actual source hash and command remain correctly recorded."
+  },
+  "human_validation": "pending"
+}

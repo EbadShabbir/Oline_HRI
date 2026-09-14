@@ -1,0 +1,149 @@
+{
+  "resource_peaks": {
+    "temperature_c": 57.343,
+    "swap_mib": 2485,
+    "ram_used_mib": 6633,
+    "minimum_recorded_free_ram_mib": 987,
+    "maximum_telemetry_gap_seconds": 1.947303507,
+    "telemetry_samples": 15856
+  },
+  "scheduler_waits": [
+    {
+      "version": "v1",
+      "wait_records": 85,
+      "reason_counts": {
+        "scheduler cooling target below 54 C": 63,
+        "revised startup temperature must be below 55 C": 22
+      },
+      "nominal_sleep_seconds": 850,
+      "observed_wait_to_next_snapshot_seconds": 851.5266159999999
+    },
+    {
+      "version": "v2",
+      "wait_records": 223,
+      "reason_counts": {
+        "scheduler cooling target below 54 C": 152,
+        "revised startup temperature must be below 55 C": 71
+      },
+      "nominal_sleep_seconds": 2230,
+      "observed_wait_to_next_snapshot_seconds": 2234.466436
+    }
+  ],
+  "arms": {
+    "small": {
+      "sequences": 36,
+      "turns": 144,
+      "statuses": {
+        "ok": 135,
+        "error": 9
+      },
+      "actual_generators": {
+        "qwen3:0.6b": 144
+      },
+      "request_total_seconds": 616.192352487,
+      "sequence_total_seconds": 724.145429237,
+      "startup_total_seconds": 101.52538504,
+      "sequence_gaps_total_seconds": 6.42769171,
+      "backend_load_seconds_by_purpose": {
+        "memory_selector": 111.01266144899999,
+        "generation": 219.14638280499994
+      },
+      "classifier_calls": {
+        "memory_selector": 93
+      },
+      "unload_request_spans_within_requests": 0,
+      "verified_eviction_seconds_within_requests": 0.0,
+      "actual_generator_transitions": {
+        "qwen3:0.6b->qwen3:0.6b": 108
+      }
+    },
+    "large": {
+      "sequences": 36,
+      "turns": 144,
+      "statuses": {
+        "ok": 139,
+        "interrupted": 1,
+        "error": 4
+      },
+      "actual_generators": {
+        "qwen3:1.7b": 144
+      },
+      "request_total_seconds": 2723.852395821,
+      "sequence_total_seconds": 2824.347315318,
+      "startup_total_seconds": 93.852817439,
+      "sequence_gaps_total_seconds": 6.642102058,
+      "backend_load_seconds_by_purpose": {
+        "memory_selector": 288.27500515699984,
+        "generation": 569.3934628010002
+      },
+      "classifier_calls": {
+        "memory_selector": 93
+      },
+      "unload_request_spans_within_requests": 0,
+      "verified_eviction_seconds_within_requests": 0.0,
+      "actual_generator_transitions": {
+        "qwen3:1.7b->qwen3:1.7b": 108
+      }
+    },
+    "adaptive": {
+      "sequences": 36,
+      "turns": 144,
+      "statuses": {
+        "ok": 136,
+        "error": 8
+      },
+      "actual_generators": {
+        "qwen3:0.6b": 54,
+        "qwen3:1.7b": 90
+      },
+      "request_total_seconds": 2254.427184066,
+      "sequence_total_seconds": 2364.998183793,
+      "startup_total_seconds": 104.066749828,
+      "sequence_gaps_total_seconds": 6.504249899,
+      "backend_load_seconds_by_purpose": {
+        "memory_selector": 202.0653995060001,
+        "generation": 706.659514953
+      },
+      "classifier_calls": {
+        "memory_selector": 93
+      },
+      "unload_request_spans_within_requests": 54,
+      "verified_eviction_seconds_within_requests": 3.184603313,
+      "actual_generator_transitions": {
+        "qwen3:0.6b->qwen3:0.6b": 27,
+        "qwen3:1.7b->qwen3:1.7b": 63,
+        "qwen3:0.6b->qwen3:1.7b": 9,
+        "qwen3:1.7b->qwen3:0.6b": 9
+      }
+    },
+    "replay": {
+      "sequences": 36,
+      "turns": 144,
+      "statuses": {
+        "ok": 136,
+        "error": 8
+      },
+      "actual_generators": {
+        "qwen3:0.6b": 54,
+        "qwen3:1.7b": 90
+      },
+      "request_total_seconds": 1963.610834079,
+      "sequence_total_seconds": 2067.617446472,
+      "startup_total_seconds": 97.693957318,
+      "sequence_gaps_total_seconds": 6.312655075,
+      "backend_load_seconds_by_purpose": {
+        "generation": 886.6458582930001
+      },
+      "classifier_calls": {},
+      "unload_request_spans_within_requests": 56,
+      "verified_eviction_seconds_within_requests": 3.072701907,
+      "actual_generator_transitions": {
+        "qwen3:0.6b->qwen3:0.6b": 27,
+        "qwen3:1.7b->qwen3:1.7b": 63,
+        "qwen3:0.6b->qwen3:1.7b": 9,
+        "qwen3:1.7b->qwen3:0.6b": 9
+      }
+    }
+  },
+  "interpretation": "Backend load times overlap enclosing wall spans. Wait intervals use saved UTC timestamps and include the next safety snapshot overhead. Generator transitions are between observed adjacent answers, including failed deliveries with successful backend generations."
+}

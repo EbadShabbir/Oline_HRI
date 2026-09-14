@@ -1,0 +1,339 @@
+{
+  "compatibility": {
+    "unchanged_fields": [
+      "profile_id",
+      "workload_sha256",
+      "models",
+      "ollama_version",
+      "config",
+      "generation",
+      "generation_seed",
+      "embedding_asset_sha256",
+      "packages",
+      "python",
+      "device_policy",
+      "arm_orders",
+      "diagnostic_replay_order",
+      "sequences",
+      "turns_per_sequence",
+      "repetitions",
+      "main_attempts",
+      "diagnostic_attempts"
+    ],
+    "changed_source_files": [
+      "scripts/run_routing_overhead.py",
+      "tests/test_routing_overhead_runner.py"
+    ],
+    "added_source_files": [
+      "evaluation/routing_overhead_20260912/analyze_continued.py",
+      "evaluation/routing_overhead_20260912/continue_collection.py"
+    ],
+    "previous_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+    "current_freeze_sha256": "9b82e4beaab276ad686615f176979a944b5125a48374b6efc6bc8d4daf1c334a"
+  },
+  "session_origins": [
+    {
+      "slot": "ro_dddd_1_r1_adaptive",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_1_r1_adaptive",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_1_r1_adaptive",
+      "observations_sha256": "4fdac38c199f0dfad6df5bd76ca46b33fbb89c698c0c555550b6d63adb77cb6d"
+    },
+    {
+      "slot": "ro_dddd_1_r1_large",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_1_r1_large",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_1_r1_large",
+      "observations_sha256": "2fe49ba2884058a8f1ac33b332955407a137a7ce57ff6c9a2006526182ade134"
+    },
+    {
+      "slot": "ro_dddd_1_r1_replay",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_1_r1_replay",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_1_r1_replay",
+      "observations_sha256": "644e6366cfe61ef2d1e48ff2a7eba5eb476a6b84346c0b78ffa60486744b4585"
+    },
+    {
+      "slot": "ro_dddd_1_r1_small",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_1_r1_small",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_1_r1_small",
+      "observations_sha256": "71e79c77106b008a09dd2ff2cb49592495bb9ed02df9dd3a05fd2891d4e14204"
+    },
+    {
+      "slot": "ro_dddd_2_r1_adaptive",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_2_r1_adaptive",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_2_r1_adaptive",
+      "observations_sha256": "d4b0e6d0b2ea7236742c5d745cf8ff51fc6b9186cf05f5c37a7f83c12301d06f"
+    },
+    {
+      "slot": "ro_dddd_2_r1_large",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_2_r1_large",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_2_r1_large",
+      "observations_sha256": "8510201368fa53477269f2ec5c467940f17fbeb22734ffe6332001903ae73dd5"
+    },
+    {
+      "slot": "ro_dddd_2_r1_replay",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_2_r1_replay",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_2_r1_replay",
+      "observations_sha256": "67c40cf7503b38116bb08ce8a7fd870e77c5e5d81a045984b8b226701d2de155"
+    },
+    {
+      "slot": "ro_dddd_2_r1_small",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_2_r1_small",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_2_r1_small",
+      "observations_sha256": "38b231fde11001f1e2cc19e97926340a851b6ff4738afb727ba966c8faed737e"
+    },
+    {
+      "slot": "ro_dddd_3_r1_large",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_3_r1_large",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_3_r1_large",
+      "observations_sha256": "d8f3980cc21ba97534a3213ce1587a73250a6cf77066d121a293cac430234050"
+    },
+    {
+      "slot": "ro_dddd_3_r1_small",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_3_r1_small",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_dddd_3_r1_small",
+      "observations_sha256": "f9da55d12ada85f2e6ee0de5ba0aeb70976f270b32b6404d2ac9e6939b80eb89"
+    },
+    {
+      "slot": "ro_eeee_1_r1_adaptive",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_adaptive",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_adaptive",
+      "observations_sha256": "f0ac61b08f6fe1c34cd2428979a67579e777b8e9bc1a7968bb6ab3e9c9b43919"
+    },
+    {
+      "slot": "ro_eeee_1_r1_large",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_large",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_large",
+      "observations_sha256": "7171c2842531c64e4dbc14a5eedef28362a7bce98502dfa0ac3f24cb6adc20e1"
+    },
+    {
+      "slot": "ro_eeee_1_r1_replay",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_replay",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_replay",
+      "observations_sha256": "0059373d46b412715b1ee437028a301a1fb4c6bb7d11e6065d25bdcd039a7c0f"
+    },
+    {
+      "slot": "ro_eeee_1_r1_small",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_small",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_small",
+      "observations_sha256": "873c9733890d0552184ff3f95b29992729bb9c764798876bf58f5a5b2ad44974"
+    },
+    {
+      "slot": "ro_eeee_2_r1_adaptive",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_2_r1_adaptive",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_2_r1_adaptive",
+      "observations_sha256": "6ad174e430573f43ae97b0b844553b40fdc905755bdc779d8d14206fbe46a2d5"
+    },
+    {
+      "slot": "ro_eeee_2_r1_large",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_2_r1_large",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_2_r1_large",
+      "observations_sha256": "7519b17e74a113a4c95f81d17463637ebec621d0c473380d76a5b3fb357cd1a2"
+    },
+    {
+      "slot": "ro_eeee_2_r1_replay",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_2_r1_replay",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_2_r1_replay",
+      "observations_sha256": "6c86e817b55b355dcc7fe46ad1919a3d2a4aae24611334e4dc19354ea6a338c2"
+    },
+    {
+      "slot": "ro_eeee_2_r1_small",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_2_r1_small",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_2_r1_small",
+      "observations_sha256": "53beba5e9b1c330f99bb4610939551f30533123bdea23e8b6332ee597c305ccf"
+    },
+    {
+      "slot": "ro_eeee_3_r1_adaptive",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_3_r1_adaptive",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_3_r1_adaptive",
+      "observations_sha256": "c8205a9ec0984704fc8857f71f1495f9cd623620fab2bed4bbfb0a611622a8f7"
+    },
+    {
+      "slot": "ro_eeee_3_r1_large",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_3_r1_large",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_3_r1_large",
+      "observations_sha256": "d878b93b0454baf743c243d31cb28b95d9ae534e2948cd985625982044e17271"
+    },
+    {
+      "slot": "ro_eeee_3_r1_replay",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_3_r1_replay",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_3_r1_replay",
+      "observations_sha256": "3011587d2492348e5db0478bacb9c719a5b68eaf4a613cfba7016bbccd97bf34"
+    },
+    {
+      "slot": "ro_eeee_3_r1_small",
+      "origin_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+      "original_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_3_r1_small",
+      "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1/ro_eeee_3_r1_small",
+      "observations_sha256": "97c21de2ddfbaef22a4583fd8de631582812e4e148f86c1ec2914525f68586da"
+    }
+  ],
+  "original_sessions": 22,
+  "new_sessions": 0,
+  "eligibility_normalization": {
+    "slot": "ro_dddd_3_r1_large",
+    "original_status": "interrupted",
+    "eligibility": "four_turns_observed_with_error",
+    "raw_turn_statuses": [
+      "ok",
+      "ok",
+      "ok",
+      "interrupted"
+    ],
+    "failed_turn_remains_in_quality_denominator": true,
+    "exact_artifact_sha256": {
+      "finish.json": "9b527a43ab884738613661974e03e1bf62536a09e2167f2fcc54a925bd25f935",
+      "observations.jsonl": "d8f3980cc21ba97534a3213ce1587a73250a6cf77066d121a293cac430234050",
+      "manifest.json": "29a17855abf96e364f2c1c651240b8b2d159850b8d60774ae859fdce46710f4e",
+      "events.jsonl": "6811809d2665868b82357cb8a2dbde5df8b86ff61b229fa15d6f4409b5a4a027",
+      "startup.json": "dc3fdab5958c39cd7d9e195d5f57a6e409bb922029d9b93d3d91f7cce123751e"
+    }
+  },
+  "original_raw_statuses_modified": false,
+  "original_raw_artifacts_modified": false,
+  "previous_run_root": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1",
+  "previous_freeze": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/frozen_v1/freeze.json",
+  "current_freeze": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/frozen_v2/freeze.json",
+  "diagnostic_replay_input_checks": [
+    {
+      "slot": "ro_dddd_1_r1_replay",
+      "id": "ro_dddd_1_t1",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_dddd_1_r1_replay",
+      "id": "ro_dddd_1_t2",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_dddd_1_r1_replay",
+      "id": "ro_dddd_1_t3",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_dddd_1_r1_replay",
+      "id": "ro_dddd_1_t4",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_dddd_2_r1_replay",
+      "id": "ro_dddd_2_t1",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_dddd_2_r1_replay",
+      "id": "ro_dddd_2_t2",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_dddd_2_r1_replay",
+      "id": "ro_dddd_2_t3",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_dddd_2_r1_replay",
+      "id": "ro_dddd_2_t4",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_1_r1_replay",
+      "id": "ro_eeee_1_t1",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_1_r1_replay",
+      "id": "ro_eeee_1_t2",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_1_r1_replay",
+      "id": "ro_eeee_1_t3",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_1_r1_replay",
+      "id": "ro_eeee_1_t4",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_2_r1_replay",
+      "id": "ro_eeee_2_t1",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_2_r1_replay",
+      "id": "ro_eeee_2_t2",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_2_r1_replay",
+      "id": "ro_eeee_2_t3",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_2_r1_replay",
+      "id": "ro_eeee_2_t4",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_3_r1_replay",
+      "id": "ro_eeee_3_t1",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_3_r1_replay",
+      "id": "ro_eeee_3_t2",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_3_r1_replay",
+      "id": "ro_eeee_3_t3",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    },
+    {
+      "slot": "ro_eeee_3_r1_replay",
+      "id": "ro_eeee_3_t4",
+      "status": "exact_requests_verified",
+      "raw_delivery_status": "ok"
+    }
+  ],
+  "adapter_sha256": "bdb1d2735fd173d16cb5000c8314b47c4d69b38e5afff47d1d044cea5359acb3"
+}

@@ -1,0 +1,15 @@
+test_call_link_handles_real_request_pseudonyms_and_prevents_reused_http_evidence (__main__.CollectionAuditTests) ... ok
+test_exact_received_bytes_reassemble_and_link_without_model_or_http_calls (__main__.CollectionAuditTests) ... ok
+test_expiry_boundary_uses_exclusive_logical_time_and_record_status (__main__.CollectionAuditTests) ... ok
+test_history_exposure_excludes_system_current_request_and_evidence_tail (__main__.CollectionAuditTests) ... ok
+test_history_exposure_keeps_assistant_echo_after_original_statement_is_pruned (__main__.CollectionAuditTests) ... ok
+test_history_literal_matches_are_only_a_lower_bound_and_require_history_intersection (__main__.CollectionAuditTests) ... ok
+test_modified_parsed_answer_and_missing_chunk_are_detected (__main__.CollectionAuditTests) ... ok
+test_pre_inference_admission_does_not_require_unstarted_telemetry (__main__.CollectionAuditTests) ... ok
+test_readonly_seal_detects_byte_tampering_without_trusting_frozen_code (__main__.CollectionAuditTests) ... ok
+test_withholding_is_an_observation_not_invented_success_or_integrity_failure (__main__.CollectionAuditTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.025s
+
+OK

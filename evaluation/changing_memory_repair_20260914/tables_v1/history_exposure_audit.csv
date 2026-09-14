@@ -1,0 +1,8 @@
+group,checkpoints,checkpoints_with_generation_call,exact_original_statement_forwarded,exact_original_statement_present,literal_original_value_forwarded,literal_original_value_present,literal_value_forwarded_without_exact_statement,literal_value_present_without_exact_statement
+after_restart,36,36,0,20,0,20,0,0
+all_scored_checkpoints,96,96,0,56,0,56,0,0
+branch=correction,40,40,0,20,0,20,0,0
+branch=deletion,28,28,0,20,0,20,0,0
+branch=expiry,28,28,0,16,0,16,0,0
+history_mode=fresh,36,36,0,0,0,0,0,0
+history_mode=retained,60,60,0,56,0,56,0,0

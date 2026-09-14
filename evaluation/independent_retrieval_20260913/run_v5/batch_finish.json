@@ -1,0 +1,352 @@
+{
+  "failure": {
+    "message": "session 16 interrupted; another explicit continuation is required",
+    "type": "RuntimeError"
+  },
+  "finish": {
+    "snapshot": {
+      "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+      "captured_at": "2026-09-13T18:22:26.835734+00:00",
+      "fan_pwm": 100,
+      "memory": {
+        "mem_available_kib": 891288,
+        "mem_total_kib": 7803236,
+        "swap_free_kib": 1125364,
+        "swap_total_kib": 3901608,
+        "swap_used_kib": 2776244
+      },
+      "power_mode": "NV Power Mode: 15W\n0",
+      "reset_reason": "SYS_RESET_N",
+      "resident_models": [],
+      "temperatures_c": {
+        "cpu-thermal": 57.031,
+        "gpu-thermal": 57.343,
+        "soc0-thermal": 55.531,
+        "soc1-thermal": 55.5,
+        "soc2-thermal": 56.156,
+        "tj-thermal": 57.156
+      },
+      "thermal_trip_events": {
+        "cpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "gpu": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    }
+  },
+  "parent_os_thread_count": 1,
+  "parent_peak_rss_kib": 44192,
+  "rejected_sessions": [
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02",
+      "exit_code": 1,
+      "slot": 2
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_01",
+      "exit_code": 1,
+      "slot": 2
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_02",
+      "exit_code": 1,
+      "slot": 2
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03",
+      "exit_code": 1,
+      "slot": 3
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_01",
+      "exit_code": 1,
+      "slot": 3
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_02",
+      "exit_code": 1,
+      "slot": 3
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_03",
+      "exit_code": 1,
+      "slot": 3
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04",
+      "exit_code": 1,
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_01",
+      "exit_code": 1,
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_02",
+      "exit_code": 1,
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_03",
+      "exit_code": 1,
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_05_from_01",
+      "exit_code": 1,
+      "seal_sha256": "240c322e9c2757ef835f83f54b878b0840c2db4311a26497125c2cb30f078529",
+      "slot": 5
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_06_from_01",
+      "exit_code": 1,
+      "seal_sha256": "c911da3caf6f40df44af6de2fa939164e82cb00df22d5f67b01f745fbcd326c7",
+      "slot": 6
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01",
+      "exit_code": 1,
+      "seal_sha256": "cd10e2277b40e704ff1d02086991ea1e3807f5a886847425b857dd2419dab61c",
+      "slot": 7
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_01",
+      "exit_code": 1,
+      "seal_sha256": "834a34b8f035e89df832f167e124e8ebfd77c370869c778ee89273f0fc19fc34",
+      "slot": 7
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_02",
+      "exit_code": 1,
+      "seal_sha256": "8ae50493d4956c065304025bb2e94bad4b643f004cda7123f4db5d42febc7622",
+      "slot": 7
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_09_from_01",
+      "exit_code": 1,
+      "seal_sha256": "f028cf956bd8f5a348accb429dacc21289d38711411f3ea5344ddc23f9b22c5b",
+      "slot": 9
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_09_from_01_admission_retry_01",
+      "exit_code": 1,
+      "seal_sha256": "34b4b7b5d700a31b57685eb21839e0ecc656778d9fe04fc8ef84ca1554bdc586",
+      "slot": 9
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_10_from_01",
+      "exit_code": 1,
+      "seal_sha256": "97ac80bce536f29cff531bd97b35f06bce3870b156a5c3cbd0d7fd55b7a6bb99",
+      "slot": 10
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_11_from_01",
+      "exit_code": 1,
+      "seal_sha256": "ff17e7051ca1e8f4e91750048a206483569feb86f082b120ef4ead0a2e9f88c1",
+      "slot": 11
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_11_from_01_admission_retry_01",
+      "exit_code": 1,
+      "seal_sha256": "cb96f843b57a39815f5525a910f89199476ef832f168e200f6fbf2fa23786743",
+      "slot": 11
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_12_from_01",
+      "exit_code": 1,
+      "seal_sha256": "a2d2e55bf17dc4f277414ad01ac57848ad000a3d661f8518a940ce909aecb8f4",
+      "slot": 12
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_12_from_01_admission_retry_01",
+      "exit_code": 1,
+      "seal_sha256": "d392b1f0daf1d1148fcee5c6f636df27f33130a77e6b95118c32803b00397330",
+      "slot": 12
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_13_from_01",
+      "exit_code": 1,
+      "seal_sha256": "1d551d512755caac3936a60e9f72b6575835365791817ac2c539c141f35d7a4f",
+      "slot": 13
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_13_from_01_admission_retry_01",
+      "exit_code": 1,
+      "seal_sha256": "0b42f72ee97bc23fc9d58c68813a18285fa278d04c75017f01b1a63baf71cfba",
+      "slot": 13
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_14_from_01",
+      "exit_code": 1,
+      "seal_sha256": "e8c79fa15314d111b51f7f0455dd1c4f802f0122227ae68517d775a58d92e55b",
+      "slot": 14
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_14_from_01_admission_retry_01",
+      "exit_code": 1,
+      "seal_sha256": "3f8b12f44b659a8fae9f50878690ed36bd87d83c2d629f195ac2a705621b9c04",
+      "slot": 14
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_15_from_01",
+      "exit_code": 1,
+      "seal_sha256": "d814a7b57e88657c0677739fc48f3ed89f837a523917c84b8b4bd75aa47b9d6a",
+      "slot": 15
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_15_from_01_admission_retry_01",
+      "exit_code": 1,
+      "seal_sha256": "01c80f69df97e2b2e394a8de40d3db66ac58b8162a86bdce1b111a3c3b85396d",
+      "slot": 15
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01",
+      "exit_code": 1,
+      "seal_sha256": "02b9ba58534e45419515a3ee470939fac3a3a1f3b86ebab0fd1d9bb6cfb38964",
+      "slot": 16
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01_admission_retry_01",
+      "exit_code": 1,
+      "seal_sha256": "4856075f8ac0fbd999f4ab288191aebd265e46ead5528c35b51e7a1986024088",
+      "slot": 16
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01_admission_retry_02",
+      "exit_code": 1,
+      "seal_sha256": "926d3d6f94937c3b1ceaa4c8d4adc32d808746b62cbdec6d85de4e52eac04186",
+      "slot": 16
+    }
+  ],
+  "sessions": [
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01",
+      "exit_code": 0,
+      "seal_sha256": "db3525fe2d2563ba0d042dcc42a2d3b95f88d99217e2b0dd61709f2ad08fa13e",
+      "slot": 1
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03",
+      "exit_code": 0,
+      "seal_sha256": "cd0b060dd6d8f34e39f3ba345c7d6c9649d454851fe275096fc2bd1725b02b8e",
+      "slot": 2
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04",
+      "exit_code": 0,
+      "seal_sha256": "7893fc42e187861ce33c7302e4848eac670e180ca6f1a96a1f956334245ccebb",
+      "slot": 3
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04",
+      "exit_code": 1,
+      "seal_sha256": "d3217b69d9a860d1b566f5984e03e4da01f61094286e5c158d4e8cc475f08b12",
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2/session_04_from_14",
+      "exit_code": 1,
+      "seal_sha256": "cc50e94b94f344b5c8009b100a5ae5336776a7f1baf2ae296b1799ed4eb15bba",
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_04_from_41",
+      "exit_code": 0,
+      "seal_sha256": "dea4862189961224639a4199268fcd8e71a7298083a1326397cda4c383455a4d",
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_05_from_01_admission_retry_01",
+      "exit_code": 1,
+      "seal_sha256": "9397e6c0d2e84758f82e028ff52a7d80cac34fa3f1c40f4c2061cbabed835871",
+      "slot": 5
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_05_from_26",
+      "exit_code": 0,
+      "seal_sha256": "42bb5d2a3e12c271466678636cf23dab95eef4b464c0262783e34c55fe5d8607",
+      "slot": 5
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_06_from_01_admission_retry_01",
+      "exit_code": 0,
+      "seal_sha256": "35f94b951af71c835e5795807a376c04864d64ec211d43457d1954c201552ca1",
+      "slot": 6
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_03",
+      "exit_code": 1,
+      "seal_sha256": "3a5629d37b5f64fec7a7edb587b4f3702e2e49f0a137034bd3199792edaeec53",
+      "slot": 7
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_07_from_41",
+      "exit_code": 0,
+      "seal_sha256": "ac064b64e59bdfb7323ce73c8815a39440d230755aabc8d8191cb457f512d20a",
+      "slot": 7
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_08_from_01",
+      "exit_code": 0,
+      "seal_sha256": "857eae012c6bf5208924bc3378e1451dae88724ac5ff74e067130be977ac3fa1",
+      "slot": 8
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_09_from_01_admission_retry_02",
+      "exit_code": 0,
+      "seal_sha256": "41b49976af3a0b1516764f23a442e43c661f9ac65a73d37112b42c35fff7b0e8",
+      "slot": 9
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_10_from_01_admission_retry_01",
+      "exit_code": 0,
+      "seal_sha256": "00bf8f83245f36fee00ef90cbfaee7d5153729b7b07adb99f3c7de93383ac4d4",
+      "slot": 10
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_11_from_01_admission_retry_02",
+      "exit_code": 0,
+      "seal_sha256": "6f7d9178960ab7a7db08f29de7848e902ebd400a0999a3f60a6f968c2d11d09f",
+      "slot": 11
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_12_from_01_admission_retry_02",
+      "exit_code": 0,
+      "seal_sha256": "625df4a96456838c685e92dd6bcd5f2775d4ffbcf2620246c2468854f4f949bc",
+      "slot": 12
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_13_from_01_admission_retry_02",
+      "exit_code": 0,
+      "seal_sha256": "930458f4bf8100ddd0517d55d08e29db78312a36f63f2fc219c1ff8f4301cb45",
+      "slot": 13
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_14_from_01_admission_retry_02",
+      "exit_code": 0,
+      "seal_sha256": "d8622baef828354eb938839010ef484c4ed2f776ae0d3dbfdb77118bcd950f8a",
+      "slot": 14
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_15_from_01_admission_retry_02",
+      "exit_code": 0,
+      "seal_sha256": "3ff55437dad01b144b271883697b24d6dbcdf61fb4b6c18ef186ccff51175c5f",
+      "slot": 15
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_16_from_01_admission_retry_03",
+      "exit_code": 1,
+      "seal_sha256": "bf082303c5416fa632be1a53f18ad3bead7f2f5afccc1a9120b6df61eba83dc5",
+      "slot": 16
+    }
+  ],
+  "source_unchanged": true,
+  "status": "interrupted",
+  "supervisor_wall_ns": 2220233259939,
+  "supplemental_source_unchanged": true
+}

@@ -1,0 +1,2051 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "workload_id": "clara_complete_text_system_pilot_20260911_v1",
+    "created_on": "2026-09-11",
+    "status": "authored_before_pilot_inference",
+    "annotation_status": "author_gold_pending_independent_review",
+    "scope": "text_request_complete_pipeline_static_memory_lifecycle_snapshot",
+    "fictional_data": true,
+    "public_benchmark": false,
+    "provenance": "New synthetic prompts, facts, names and dates authored for this pilot; no model outputs used in selection.",
+    "execution_order": "stratified_shuffle_one_per_stratum_per_four_case_block",
+    "order_seed": 20260911,
+    "counts_by_stratum": {
+      "routine_general": 12,
+      "general_multiconstraint": 12,
+      "personal_recall": 12,
+      "personal_temporal_synthesis": 12
+    },
+    "planned_repetitions": 3,
+    "counterbalanced_arm_orders": [
+      [
+        "small",
+        "large",
+        "cascade"
+      ],
+      [
+        "large",
+        "cascade",
+        "small"
+      ],
+      [
+        "cascade",
+        "small",
+        "large"
+      ]
+    ],
+    "planned_total_attempts": 432,
+    "conversation_history": "fresh_conversation_per_request",
+    "model_residency": "natural_serial_residency_within_each_48_request_session",
+    "quality_unit": "distinct_request_item_with_shared_scenario_and_profile_clustering",
+    "scoring": "Complete semantic rubric review required; regexes are auxiliary lexical signals only.",
+    "execution_gold_boundary": "Only execution_cases.prompt enters the user-message path; rubrics, stratum, scenario_id and expected_state are excluded from model input.",
+    "predefined_pass_thresholds": null,
+    "threshold_note": "No user-approved quality or responsiveness cutoff; report continuous measures and actual tradeoffs."
+  },
+  "memory_seed": {
+    "profile_id": "fictional_solstice_stage2_v1",
+    "evaluation_at": "2026-09-20T18:00:00.000000Z",
+    "retention_days": 7,
+    "clock_basis": "UTC; all stored and queried event times use one timezone with no timezone conversion.",
+    "confirmation": "All remember and correct events are explicitly confirmed synthetic setup operations.",
+    "events": [
+      {
+        "id": "s2_seed_project",
+        "at": "2026-09-14T09:00:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002001",
+        "canonical_text": "Your community lantern project is named Solstice.",
+        "kind": "fact"
+      },
+      {
+        "id": "s2_seed_partner",
+        "at": "2026-09-14T09:01:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002002",
+        "canonical_text": "Your community lantern project partner is Idris.",
+        "kind": "relationship"
+      },
+      {
+        "id": "s2_seed_window",
+        "at": "2026-09-14T09:02:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002003",
+        "canonical_text": "You prefer community lantern project meetings between 15:00 and 17:00.",
+        "kind": "routine"
+      },
+      {
+        "id": "s2_seed_brevity",
+        "at": "2026-09-14T09:03:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002004",
+        "canonical_text": "You prefer project answers in at most three sentences unless you request detail.",
+        "kind": "preference"
+      },
+      {
+        "id": "s2_seed_kit",
+        "at": "2026-09-14T09:04:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002005",
+        "canonical_text": "Your embroidery kit is stored in a violet tin.",
+        "kind": "fact"
+      },
+      {
+        "id": "s2_seed_old_lunch",
+        "at": "2026-09-14T09:05:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002006",
+        "canonical_text": "You prefer couscous for workshop lunch.",
+        "kind": "preference"
+      },
+      {
+        "id": "s2_seed_banner",
+        "at": "2026-09-14T09:06:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002007",
+        "canonical_text": "Your display banner is at the west counter.",
+        "kind": "fact",
+        "valid_until": "2026-09-16T18:00:00.000000Z"
+      },
+      {
+        "id": "s2_seed_pencilcase",
+        "at": "2026-09-14T09:07:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002008",
+        "canonical_text": "Your spare pencilcase is stored in the attic drawer.",
+        "kind": "fact"
+      },
+      {
+        "id": "s2_seed_room_cedar",
+        "at": "2026-09-14T09:08:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002009",
+        "canonical_text": "Your pottery demonstration on 26 September 2026 is in Cedar Hall.",
+        "kind": "fact"
+      },
+      {
+        "id": "s2_seed_room_juniper",
+        "at": "2026-09-14T09:09:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000200a",
+        "canonical_text": "Your pottery demonstration on 26 September 2026 is in Juniper Hall.",
+        "kind": "fact"
+      },
+      {
+        "id": "s2_seed_collection",
+        "at": "2026-09-14T09:12:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000200d",
+        "canonical_text": "Your materials collection is on 21 September 2026 at 09:30 at the east depot.",
+        "kind": "event",
+        "event_time": "2026-09-21T09:30:00.000000Z"
+      },
+      {
+        "id": "s2_seed_rehearsal",
+        "at": "2026-09-14T09:13:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000200e",
+        "canonical_text": "Your dress rehearsal is on 22 September 2026 at 16:00 in Studio 4.",
+        "kind": "event",
+        "event_time": "2026-09-22T16:00:00.000000Z"
+      },
+      {
+        "id": "s2_seed_duration",
+        "at": "2026-09-14T09:14:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000200f",
+        "canonical_text": "Your community lantern project meetings last 30 minutes.",
+        "kind": "routine"
+      },
+      {
+        "id": "s2_seed_availability",
+        "at": "2026-09-14T09:15:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002010",
+        "canonical_text": "Idris is available for community lantern project meetings between 15:30 and 16:30.",
+        "kind": "routine"
+      },
+      {
+        "id": "s2_seed_budget",
+        "at": "2026-09-14T09:16:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002011",
+        "canonical_text": "Your materials shopping budget is 24 credits.",
+        "kind": "fact"
+      },
+      {
+        "id": "s2_seed_cards",
+        "at": "2026-09-14T09:17:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002012",
+        "canonical_text": "You have six blank cards available for table labels and badges.",
+        "kind": "fact"
+      },
+      {
+        "id": "s2_seed_cords",
+        "at": "2026-09-14T09:18:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002013",
+        "canonical_text": "Your craft kit contains three red cords and five blue cords.",
+        "kind": "fact"
+      },
+      {
+        "id": "s2_seed_walking",
+        "at": "2026-09-14T09:19:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002014",
+        "canonical_text": "You prefer walking for journeys that take less than 20 minutes on foot.",
+        "kind": "preference"
+      },
+      {
+        "id": "s2_seed_exhibit",
+        "at": "2026-09-14T09:20:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002015",
+        "canonical_text": "Your exhibit visit is on 24 September 2026 at 11:00.",
+        "kind": "event",
+        "event_time": "2026-09-24T11:00:00.000000Z"
+      },
+      {
+        "id": "s2_seed_finish_limit",
+        "at": "2026-09-14T09:22:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002017",
+        "canonical_text": "Your next lantern workshop must finish by 17:00.",
+        "kind": "fact"
+      },
+      {
+        "id": "s2_seed_badges",
+        "at": "2026-09-14T09:23:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002018",
+        "canonical_text": "You want only first names on the workshop badges.",
+        "kind": "preference"
+      },
+      {
+        "id": "s2_seed_folder",
+        "at": "2026-09-14T09:24:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002019",
+        "canonical_text": "Your sketch folder is named Drift.",
+        "kind": "fact"
+      },
+      {
+        "id": "s2_seed_frame",
+        "at": "2026-09-14T10:05:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000200b",
+        "canonical_text": "You completed the paper-frame trial on 14 September 2026 at 10:00.",
+        "kind": "event",
+        "event_time": "2026-09-14T10:00:00.000000Z"
+      },
+      {
+        "id": "s2_seed_form",
+        "at": "2026-09-16T12:05:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000002016",
+        "canonical_text": "You submitted the volunteer form on 16 September 2026 at 12:00.",
+        "kind": "event",
+        "event_time": "2026-09-16T12:00:00.000000Z"
+      },
+      {
+        "id": "s2_seed_correct_lunch",
+        "at": "2026-09-17T11:00:00.000000Z",
+        "operation": "correct",
+        "target_id": "mem_00000000000000000000000000002006",
+        "memory_id": "mem_0000000000000000000000000000201a",
+        "canonical_text": "You now prefer bulgur for workshop lunch."
+      },
+      {
+        "id": "s2_seed_shade",
+        "at": "2026-09-18T14:05:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000200c",
+        "canonical_text": "You completed the lampshade trial on 18 September 2026 at 14:00.",
+        "kind": "event",
+        "event_time": "2026-09-18T14:00:00.000000Z"
+      },
+      {
+        "id": "s2_seed_forget_pencilcase",
+        "at": "2026-09-19T11:00:00.000000Z",
+        "operation": "forget",
+        "target_id": "mem_00000000000000000000000000002008"
+      }
+    ],
+    "expected_state": {
+      "eligible_current_memory_ids": [
+        "mem_00000000000000000000000000002001",
+        "mem_00000000000000000000000000002002",
+        "mem_00000000000000000000000000002003",
+        "mem_00000000000000000000000000002004",
+        "mem_00000000000000000000000000002005",
+        "mem_00000000000000000000000000002009",
+        "mem_0000000000000000000000000000200a",
+        "mem_0000000000000000000000000000200b",
+        "mem_0000000000000000000000000000200c",
+        "mem_0000000000000000000000000000200d",
+        "mem_0000000000000000000000000000200e",
+        "mem_0000000000000000000000000000200f",
+        "mem_00000000000000000000000000002010",
+        "mem_00000000000000000000000000002011",
+        "mem_00000000000000000000000000002012",
+        "mem_00000000000000000000000000002013",
+        "mem_00000000000000000000000000002014",
+        "mem_00000000000000000000000000002015",
+        "mem_00000000000000000000000000002016",
+        "mem_00000000000000000000000000002017",
+        "mem_00000000000000000000000000002018",
+        "mem_00000000000000000000000000002019",
+        "mem_0000000000000000000000000000201a"
+      ],
+      "superseded_memory_ids": [
+        "mem_00000000000000000000000000002006"
+      ],
+      "forgotten_memory_ids": [
+        "mem_00000000000000000000000000002008"
+      ],
+      "expired_memory_ids": [
+        "mem_00000000000000000000000000002007"
+      ],
+      "unknown_fields": [
+        "favourite train station"
+      ],
+      "unresolved_conflict_groups": [
+        [
+          "mem_00000000000000000000000000002009",
+          "mem_0000000000000000000000000000200a"
+        ]
+      ],
+      "memory_id_labels": {
+        "project": "mem_00000000000000000000000000002001",
+        "partner": "mem_00000000000000000000000000002002",
+        "window": "mem_00000000000000000000000000002003",
+        "brevity": "mem_00000000000000000000000000002004",
+        "kit": "mem_00000000000000000000000000002005",
+        "old_lunch": "mem_00000000000000000000000000002006",
+        "banner": "mem_00000000000000000000000000002007",
+        "pencilcase": "mem_00000000000000000000000000002008",
+        "room_cedar": "mem_00000000000000000000000000002009",
+        "room_juniper": "mem_0000000000000000000000000000200a",
+        "frame": "mem_0000000000000000000000000000200b",
+        "shade": "mem_0000000000000000000000000000200c",
+        "collection": "mem_0000000000000000000000000000200d",
+        "rehearsal": "mem_0000000000000000000000000000200e",
+        "duration": "mem_0000000000000000000000000000200f",
+        "availability": "mem_00000000000000000000000000002010",
+        "budget": "mem_00000000000000000000000000002011",
+        "cards": "mem_00000000000000000000000000002012",
+        "cords": "mem_00000000000000000000000000002013",
+        "walking": "mem_00000000000000000000000000002014",
+        "exhibit": "mem_00000000000000000000000000002015",
+        "form": "mem_00000000000000000000000000002016",
+        "finish_limit": "mem_00000000000000000000000000002017",
+        "badges": "mem_00000000000000000000000000002018",
+        "folder": "mem_00000000000000000000000000002019",
+        "current_lunch": "mem_0000000000000000000000000000201a"
+      },
+      "notes": "Eligible means confirmed, current and retained at evaluation_at, not guaranteed to be among any query's top three. Expired rows may persist physically. Forgetting removes its content from usable memory. The hall records are separate conflicting active assertions, not a correction chain."
+    }
+  },
+  "execution_cases": [
+    {
+      "id": "s2_p09",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_craft_storage",
+      "prompt": "What container holds my embroidery kit?"
+    },
+    {
+      "id": "s2_c09",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_dependencies",
+      "prompt": "Four tasks must each happen once: pack, test, inspect, charge. Inspect must finish before charge; charge before test; test before pack. No tasks overlap. Give the valid task order."
+    },
+    {
+      "id": "s2_r12",
+      "stratum": "routine_general",
+      "scenario_id": "general_portions",
+      "prompt": "A recipe uses 2 cups of flour for 3 portions. With the same proportions, how many cups are needed for 6 portions?"
+    },
+    {
+      "id": "s2_t02",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_trial_chronology",
+      "prompt": "How many hours passed between my volunteer-form submission and my completed lampshade trial? Use the stored event times and show the two times."
+    },
+    {
+      "id": "s2_p06",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_forgotten_pencilcase",
+      "prompt": "Where did I put my spare pencilcase?"
+    },
+    {
+      "id": "s2_t11",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_known_and_expired",
+      "prompt": "Before the workshop, tell me my current lunch-grain preference and my display banner's current location. If either is not known, identify which one."
+    },
+    {
+      "id": "s2_r03",
+      "stratum": "routine_general",
+      "scenario_id": "general_grid",
+      "prompt": "A rectangular grid has 7 rows with 8 squares in every row. How many squares are there?"
+    },
+    {
+      "id": "s2_c08",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_positions",
+      "prompt": "Place three cards in a row. The red card must be left of the green card, and the green card must be left of the blue card. Each colour occurs once. Give their left-to-right order."
+    },
+    {
+      "id": "s2_c11",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_recipe",
+      "prompt": "A recipe needs 3 cups of flour for 6 portions. Keep the same proportions but make 4 portions. There are exactly 2 cups available. State the flour needed, whether there is enough, and how much is left."
+    },
+    {
+      "id": "s2_t06",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_materials_budget",
+      "prompt": "Using my stored materials budget, can I buy three cord packs at 4 credits each and two paper packs at 5 credits each? Give the total and the credits left, with no other purchases."
+    },
+    {
+      "id": "s2_r07",
+      "stratum": "routine_general",
+      "scenario_id": "general_clips",
+      "prompt": "There are five packets containing four clips each. How many clips is that altogether?"
+    },
+    {
+      "id": "s2_p12",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_cord_inventory",
+      "prompt": "How many red cords and blue cords are in my craft kit?"
+    },
+    {
+      "id": "s2_r04",
+      "stratum": "routine_general",
+      "scenario_id": "general_minutes",
+      "prompt": "Use 60 minutes per hour. Convert 2 hours and 15 minutes to minutes."
+    },
+    {
+      "id": "s2_c06",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_bag",
+      "prompt": "A bag can carry at most 5 kg. A 2 kg camera and 1 kg snack pack are mandatory. A 3 kg tripod is optional, and items cannot be split. Which items can go in the bag while meeting the requirements, and what is their total mass?"
+    },
+    {
+      "id": "s2_p11",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_folder",
+      "prompt": "What did I name my sketch folder?"
+    },
+    {
+      "id": "s2_t07",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_card_badges",
+      "prompt": "Each table label and each badge uses one blank card. I need four table labels and three badges. Using my stored card supply and badge preference, how many extra cards must I obtain, and what names should go on the badges?"
+    },
+    {
+      "id": "s2_t08",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_upcoming_schedule",
+      "prompt": "The walk to my materials-collection location takes 18 minutes. Using my stored short-journey travel preference and collection time, how should I travel and what is the latest departure time to arrive exactly on time? Assume no delay or buffer."
+    },
+    {
+      "id": "s2_c01",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_drying",
+      "prompt": "Rinse for 5 minutes, then dry for 10 minutes, then fold for 5 minutes. The steps cannot overlap. Starting at 13:10, give the step order and finish time."
+    },
+    {
+      "id": "s2_r05",
+      "stratum": "routine_general",
+      "scenario_id": "general_volume",
+      "prompt": "A jug contains 750 mL of water. Pour out 280 mL. How many mL remain?"
+    },
+    {
+      "id": "s2_p04",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_corrected_lunch",
+      "prompt": "Which grain do I currently prefer for workshop lunch?"
+    },
+    {
+      "id": "s2_c07",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_labels",
+      "prompt": "First print all 12 labels at 4 labels per minute. Only after all printing is finished, fold them at 3 labels per minute. There is no setup time. Give the printing time, folding time, and total time."
+    },
+    {
+      "id": "s2_r09",
+      "stratum": "routine_general",
+      "scenario_id": "general_crate",
+      "prompt": "Read only this description: the orange crate holds brushes, and the purple crate holds towels. Which crate holds the towels?"
+    },
+    {
+      "id": "s2_t05",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_lunch_and_kit",
+      "prompt": "Remind me of both my current workshop-lunch grain preference and the container holding my embroidery kit."
+    },
+    {
+      "id": "s2_p05",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_expired_banner",
+      "prompt": "Where is my display banner currently located?"
+    },
+    {
+      "id": "s2_p02",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_lantern_identity",
+      "prompt": "Who is my community lantern project partner?"
+    },
+    {
+      "id": "s2_c04",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_train",
+      "prompt": "Three people each need one ticket. Train A arrives at 09:00 and costs 9 credits per ticket. Train B arrives at 09:25 and costs 7 credits per ticket. Everyone must arrive by 09:10, with a total budget of 30 credits. Select a train and give the total fare."
+    },
+    {
+      "id": "s2_r11",
+      "stratum": "routine_general",
+      "scenario_id": "general_classification",
+      "prompt": "In this task, a minute measures time and a metre measures length. Which of those units should label a duration?"
+    },
+    {
+      "id": "s2_t01",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_trial_chronology",
+      "prompt": "Which did I complete later, the paper-frame trial or the lampshade trial? Give the dates supporting the answer."
+    },
+    {
+      "id": "s2_t12",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_trial_chronology",
+      "prompt": "Put my completed paper-frame trial, volunteer-form submission, and completed lampshade trial in chronological order, giving each stored date and time."
+    },
+    {
+      "id": "s2_r02",
+      "stratum": "routine_general",
+      "scenario_id": "general_stickers",
+      "prompt": "There are 85 stickers. Use 29. How many stickers remain?"
+    },
+    {
+      "id": "s2_p10",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_badge_preference",
+      "prompt": "What name format do I want on the workshop badges?"
+    },
+    {
+      "id": "s2_c02",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_demo",
+      "prompt": "A room is available from 09:00 to 09:50. Preparation takes 15 minutes, the demonstration takes 20, and cleanup takes 10, in that order with no overlap. Start at 09:00. When is cleanup finished, and how much room time remains?"
+    },
+    {
+      "id": "s2_p03",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_meeting_constraints",
+      "prompt": "What time window do I prefer for community lantern project meetings?"
+    },
+    {
+      "id": "s2_c12",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_room",
+      "prompt": "A room is free from 10:00 to 11:00. Task B takes 20 minutes and must finish before task A, which takes 30 minutes. Start at 10:00 with no overlap or gaps. Give both task intervals and the unused room time."
+    },
+    {
+      "id": "s2_r08",
+      "stratum": "routine_general",
+      "scenario_id": "general_clock",
+      "prompt": "A timer starts at 10:35 and runs for 20 minutes. At what time does it finish?"
+    },
+    {
+      "id": "s2_t03",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_upcoming_schedule",
+      "prompt": "Which comes first, my materials collection or my dress rehearsal? Give their dates and times, and the interval between them."
+    },
+    {
+      "id": "s2_r01",
+      "stratum": "routine_general",
+      "scenario_id": "general_tokens",
+      "prompt": "A tray has 18 tokens. Add 27 tokens. How many tokens are there now?"
+    },
+    {
+      "id": "s2_c10",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_battery",
+      "prompt": "Use this ideal arithmetic model: a battery stores 10 Wh and can supply at most 10 W at once. A required lamp draws 4 W; an optional display draws 8 W. Runtime in hours equals Wh divided by total W. Which devices can run while respecting the power limit, and for how long?"
+    },
+    {
+      "id": "s2_p07",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_unknown_station",
+      "prompt": "Which train station is my favourite?"
+    },
+    {
+      "id": "s2_t10",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_conflicting_room",
+      "prompt": "For my pottery demonstration on 26 September 2026, name the room where I should direct visitors. If the stored information does not support one definite room, explain what needs confirming."
+    },
+    {
+      "id": "s2_r06",
+      "stratum": "routine_general",
+      "scenario_id": "general_length",
+      "prompt": "Use 100 centimetres per metre. How many centimetres are in 1.6 metres?"
+    },
+    {
+      "id": "s2_c03",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_supplier",
+      "prompt": "Choose one supplier. Alpha costs 12 credits and delivers Tuesday; Beta costs 10 and delivers Thursday; Gamma costs 15 and delivers Monday. Delivery must be no later than Tuesday, and the budget is 13 credits. Which supplier meets both requirements, and why?"
+    },
+    {
+      "id": "s2_t04",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_meeting_constraints",
+      "prompt": "Find the earliest complete community lantern project meeting slot that fits my preferred time window, Idris's availability, and our usual meeting length. Give its start and end times."
+    },
+    {
+      "id": "s2_p01",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_lantern_identity",
+      "prompt": "What is the name of my community lantern project?"
+    },
+    {
+      "id": "s2_t09",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_upcoming_schedule",
+      "prompt": "Suppose my dress rehearsal lasts 45 minutes from its stored start time. Would that finish before the stored finish-by time for my next lantern workshop? Give the finish time and remaining margin."
+    },
+    {
+      "id": "s2_r10",
+      "stratum": "routine_general",
+      "scenario_id": "general_sort",
+      "prompt": "Put these three numbers in ascending order: 12, 3, 8."
+    },
+    {
+      "id": "s2_p08",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_conflicting_room",
+      "prompt": "Which room is booked for my pottery demonstration on 26 September 2026?"
+    },
+    {
+      "id": "s2_c05",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_agenda",
+      "prompt": "Start an agenda at 10:20. In order, introduction takes 5 minutes, inspection 10, discussion 15, and closing 5. There are no gaps or overlaps. Give the start time for each activity and the final finish time."
+    }
+  ],
+  "rubrics": {
+    "s2_r01": {
+      "mode": "supported",
+      "reference_answer": "45 tokens.",
+      "required_claims": [
+        "The total is 45 tokens."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The total is 45 tokens.",
+            "any": [
+              "\\b45\\b",
+              "\\bforty[- ]five\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r02": {
+      "mode": "supported",
+      "reference_answer": "56 stickers.",
+      "required_claims": [
+        "56 stickers remain."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "56 stickers remain.",
+            "any": [
+              "\\b56\\b",
+              "\\bfifty[- ]six\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r03": {
+      "mode": "supported",
+      "reference_answer": "56 squares.",
+      "required_claims": [
+        "The grid contains 56 squares."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The grid contains 56 squares.",
+            "any": [
+              "\\b56\\b",
+              "\\bfifty[- ]six\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r04": {
+      "mode": "supported",
+      "reference_answer": "135 minutes.",
+      "required_claims": [
+        "The total is 135 minutes."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The total is 135 minutes.",
+            "any": [
+              "\\b135\\b",
+              "\\bone hundred (and )?thirty[- ]five\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r05": {
+      "mode": "supported",
+      "reference_answer": "470 mL.",
+      "required_claims": [
+        "470 mL remain."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "470 mL remain.",
+            "any": [
+              "\\b470\\b",
+              "\\bfour hundred (and )?seventy\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r06": {
+      "mode": "supported",
+      "reference_answer": "160 centimetres.",
+      "required_claims": [
+        "The length is 160 centimetres."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The length is 160 centimetres.",
+            "any": [
+              "\\b160\\b",
+              "\\bone hundred (and )?sixty\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r07": {
+      "mode": "supported",
+      "reference_answer": "20 clips.",
+      "required_claims": [
+        "The total is 20 clips."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The total is 20 clips.",
+            "any": [
+              "\\b20\\b",
+              "\\btwenty\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r08": {
+      "mode": "supported",
+      "reference_answer": "10:55.",
+      "required_claims": [
+        "The timer finishes at 10:55."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The timer finishes at 10:55.",
+            "any": [
+              "\\b10[:.]55\\b",
+              "\\bten fifty[- ]five\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r09": {
+      "mode": "supported",
+      "reference_answer": "The purple crate.",
+      "required_claims": [
+        "The purple crate holds the towels."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The purple crate holds the towels.",
+            "any": [
+              "\\bpurple\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r10": {
+      "mode": "supported",
+      "reference_answer": "3, 8, 12.",
+      "required_claims": [
+        "The order is 3, then 8, then 12."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The order is 3, then 8, then 12.",
+            "any": [
+              "\\b3\\D+8\\D+12\\b",
+              "\\bthree\\W+(?:then\\W+)?eight\\W+(?:then\\W+)?twelve\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r11": {
+      "mode": "supported",
+      "reference_answer": "A minute.",
+      "required_claims": [
+        "Minute is the unit for the duration."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Minute is the unit for the duration.",
+            "any": [
+              "\\bminute"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_r12": {
+      "mode": "supported",
+      "reference_answer": "4 cups.",
+      "required_claims": [
+        "Four cups are needed."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Four cups are needed.",
+            "any": [
+              "\\b4\\b",
+              "\\bfour\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c01": {
+      "mode": "supported",
+      "reference_answer": "Rinse, dry, then fold; finish at 13:30.",
+      "required_claims": [
+        "The order is rinse, dry, fold.",
+        "The finish time is 13:30."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The order is rinse, dry, fold.",
+            "any": [
+              "\\brinse\\b[\\s\\S]*\\bdry\\b[\\s\\S]*\\bfold\\b"
+            ]
+          },
+          {
+            "claim": "The finish time is 13:30.",
+            "any": [
+              "\\b13[:.]30\\b",
+              "\\b1[:.]30\\s*(?:p\\.?m\\.?)?"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c02": {
+      "mode": "supported",
+      "reference_answer": "Cleanup finishes at 09:45, leaving 5 minutes.",
+      "required_claims": [
+        "Cleanup finishes at 09:45.",
+        "Five minutes remain before 09:50."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Cleanup finishes at 09:45.",
+            "any": [
+              "\\b0?9[:.]45\\b"
+            ]
+          },
+          {
+            "claim": "Five minutes remain before 09:50.",
+            "any": [
+              "\\b5\\s*(?:minutes?|mins?)\\b",
+              "\\bfive minutes\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c03": {
+      "mode": "supported",
+      "reference_answer": "Alpha: 12 credits is within 13, and Tuesday meets the deadline.",
+      "required_claims": [
+        "Select Alpha.",
+        "Its cost of 12 is within the budget of 13.",
+        "Its Tuesday delivery meets the Tuesday deadline."
+      ],
+      "forbidden_claims": [
+        "Do not select Beta or Gamma as meeting both requirements."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Select Alpha.",
+            "any": [
+              "\\bAlpha\\b"
+            ]
+          },
+          {
+            "claim": "Its cost of 12 is within the budget of 13.",
+            "any": [
+              "\\b12\\b",
+              "\\btwelve\\b"
+            ]
+          },
+          {
+            "claim": "Its Tuesday delivery meets the Tuesday deadline.",
+            "any": [
+              "\\bTuesday\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c04": {
+      "mode": "supported",
+      "reference_answer": "Train A, total fare 27 credits.",
+      "required_claims": [
+        "Choose train A, which meets the arrival deadline.",
+        "The total fare is 27 credits, within the budget."
+      ],
+      "forbidden_claims": [
+        "Do not choose train B as meeting the deadline."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Choose train A, which meets the arrival deadline.",
+            "any": [
+              "\\b(?:train\\s+)?A\\b"
+            ]
+          },
+          {
+            "claim": "The total fare is 27 credits, within the budget.",
+            "any": [
+              "\\b27\\b",
+              "\\btwenty[- ]seven\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c05": {
+      "mode": "supported",
+      "reference_answer": "Introduction 10:20; inspection 10:25; discussion 10:35; closing 10:50; finish 10:55.",
+      "required_claims": [
+        "Introduction starts 10:20 and inspection 10:25.",
+        "Discussion starts 10:35 and closing 10:50.",
+        "The agenda finishes at 10:55."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Introduction starts 10:20 and inspection 10:25.",
+            "any": [
+              "\\b10[:.]20\\b[\\s\\S]*\\b10[:.]25\\b"
+            ]
+          },
+          {
+            "claim": "Discussion starts 10:35 and closing 10:50.",
+            "any": [
+              "\\b10[:.]35\\b[\\s\\S]*\\b10[:.]50\\b"
+            ]
+          },
+          {
+            "claim": "The agenda finishes at 10:55.",
+            "any": [
+              "\\b10[:.]55\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c06": {
+      "mode": "supported",
+      "reference_answer": "Take the camera and snack pack, totaling 3 kg; leave the tripod out.",
+      "required_claims": [
+        "Include the camera and snack pack.",
+        "Exclude the tripod because all three items exceed capacity.",
+        "The chosen total mass is 3 kg."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Include the camera and snack pack.",
+            "any": [
+              "\\bcamera\\b[\\s\\S]*\\bsnack"
+            ]
+          },
+          {
+            "claim": "Exclude the tripod because all three items exceed capacity.",
+            "any": [
+              "\\btripod\\b"
+            ]
+          },
+          {
+            "claim": "The chosen total mass is 3 kg.",
+            "any": [
+              "\\b3\\s*(?:kg|kilograms?)\\b",
+              "\\bthree kilograms\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c07": {
+      "mode": "supported",
+      "reference_answer": "Printing takes 3 minutes, folding 4 minutes, totaling 7 minutes.",
+      "required_claims": [
+        "Printing takes 3 minutes.",
+        "Folding takes 4 minutes.",
+        "The sequential total is 7 minutes."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Printing takes 3 minutes.",
+            "any": [
+              "\\b3\\s*(?:minutes?|mins?)\\b",
+              "\\bthree minutes\\b"
+            ]
+          },
+          {
+            "claim": "Folding takes 4 minutes.",
+            "any": [
+              "\\b4\\s*(?:minutes?|mins?)\\b",
+              "\\bfour minutes\\b"
+            ]
+          },
+          {
+            "claim": "The sequential total is 7 minutes.",
+            "any": [
+              "\\b7\\s*(?:minutes?|mins?)\\b",
+              "\\bseven minutes\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c08": {
+      "mode": "supported",
+      "reference_answer": "Red, green, blue.",
+      "required_claims": [
+        "The left-to-right order is red, green, blue."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The left-to-right order is red, green, blue.",
+            "any": [
+              "\\bred\\b[\\s\\S]*\\bgreen\\b[\\s\\S]*\\bblue\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c09": {
+      "mode": "supported",
+      "reference_answer": "Inspect, charge, test, pack.",
+      "required_claims": [
+        "The order is inspect, charge, test, pack."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The order is inspect, charge, test, pack.",
+            "any": [
+              "\\binspect\\b[\\s\\S]*\\bcharge\\b[\\s\\S]*\\btest\\b[\\s\\S]*\\bpack\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c10": {
+      "mode": "supported",
+      "reference_answer": "Run only the required lamp: 4 W is within the limit and 10/4 = 2.5 hours. Both devices would draw 12 W, so exclude the display.",
+      "required_claims": [
+        "Run the lamp and exclude the display.",
+        "The lamp alone runs for 2.5 hours."
+      ],
+      "forbidden_claims": [
+        "Do not say both devices can run together within the 10 W limit."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Run the lamp and exclude the display.",
+            "any": [
+              "\\blamp\\b[\\s\\S]*\\bdisplay\\b",
+              "\\bdisplay\\b[\\s\\S]*\\blamp\\b"
+            ]
+          },
+          {
+            "claim": "The lamp alone runs for 2.5 hours.",
+            "any": [
+              "\\b2\\.5\\s*(?:hours?|h)\\b",
+              "\\b2\\s*(?:hours?|h)\\s*(?:and\\s*)?30\\b",
+              "\\btwo (?:and a half|hours and thirty minutes)\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c11": {
+      "mode": "supported",
+      "reference_answer": "Two cups are needed; there is exactly enough, with zero cups left.",
+      "required_claims": [
+        "Two cups are needed.",
+        "There is exactly enough flour.",
+        "Zero cups remain."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Two cups are needed.",
+            "any": [
+              "\\b2\\s*cups?\\b",
+              "\\btwo cups\\b"
+            ]
+          },
+          {
+            "claim": "There is exactly enough flour.",
+            "any": [
+              "\\b(?:enough|sufficient|exactly)\\b"
+            ]
+          },
+          {
+            "claim": "Zero cups remain.",
+            "any": [
+              "\\b(?:0|zero|none|nothing|no flour)\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_c12": {
+      "mode": "supported",
+      "reference_answer": "B runs 10:00–10:20; A runs 10:20–10:50; 10 minutes remain.",
+      "required_claims": [
+        "B runs from 10:00 to 10:20.",
+        "A runs from 10:20 to 10:50.",
+        "Ten minutes of room time remain."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "B runs from 10:00 to 10:20.",
+            "any": [
+              "\\b10[:.]00\\b[\\s\\S]*\\b10[:.]20\\b"
+            ]
+          },
+          {
+            "claim": "A runs from 10:20 to 10:50.",
+            "any": [
+              "\\b10[:.]20\\b[\\s\\S]*\\b10[:.]50\\b"
+            ]
+          },
+          {
+            "claim": "Ten minutes of room time remain.",
+            "any": [
+              "\\b10\\s*(?:minutes?|mins?)\\b",
+              "\\bten minutes\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_p01": {
+      "mode": "supported",
+      "reference_answer": "Your community lantern project is named Solstice.",
+      "required_claims": [
+        "The project name is Solstice."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002001"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The project name is Solstice.",
+            "any": [
+              "\\bSolstice\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_p02": {
+      "mode": "supported",
+      "reference_answer": "Your project partner is Idris.",
+      "required_claims": [
+        "The partner is Idris."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002002"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The partner is Idris.",
+            "any": [
+              "\\bIdris\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_p03": {
+      "mode": "supported",
+      "reference_answer": "You prefer 15:00–17:00.",
+      "required_claims": [
+        "The preferred window is 15:00 to 17:00."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002003"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The preferred window is 15:00 to 17:00.",
+            "any": [
+              "\\b15[:.]00\\b[\\s\\S]*\\b17[:.]00\\b",
+              "\\b3\\s*(?:p\\.?m\\.?)?\\s*(?:to|[-–])\\s*5\\s*p\\.?m\\.?"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_p04": {
+      "mode": "supported",
+      "reference_answer": "You currently prefer bulgur.",
+      "required_claims": [
+        "The current grain preference is bulgur."
+      ],
+      "forbidden_claims": [
+        "Do not present couscous as the current preference."
+      ],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000201a"
+      ],
+      "forbidden_memory_ids": [
+        "mem_00000000000000000000000000002006"
+      ],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The current grain preference is bulgur.",
+            "any": [
+              "\\bbulgur\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": [
+          "\\bcouscous\\b"
+        ]
+      }
+    },
+    "s2_p05": {
+      "mode": "abstain",
+      "reference_answer": "I do not have a current location for your display banner.",
+      "required_claims": [
+        "Acknowledge that the current banner location is unknown."
+      ],
+      "forbidden_claims": [
+        "Do not give the expired west-counter location as current.",
+        "Do not invent another current location."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [
+        "mem_00000000000000000000000000002007"
+      ],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": [
+          "\\bwest counter\\b"
+        ]
+      }
+    },
+    "s2_p06": {
+      "mode": "abstain",
+      "reference_answer": "I do not have that location recorded.",
+      "required_claims": [
+        "Acknowledge that the pencilcase location is unavailable."
+      ],
+      "forbidden_claims": [
+        "Do not disclose the forgotten attic-drawer location.",
+        "Do not invent a replacement location."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [
+        "mem_00000000000000000000000000002008"
+      ],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": [
+          "\\battic\\b"
+        ]
+      }
+    },
+    "s2_p07": {
+      "mode": "abstain",
+      "reference_answer": "I do not have a favourite train station recorded for you.",
+      "required_claims": [
+        "Acknowledge that no favourite station is known."
+      ],
+      "forbidden_claims": [
+        "Do not name a station as a known personal preference."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_p08": {
+      "mode": "uncertain",
+      "reference_answer": "The records conflict: one says Cedar Hall and another says Juniper Hall. Please confirm the room.",
+      "required_claims": [
+        "Identify the unresolved Cedar Hall versus Juniper Hall conflict.",
+        "Express uncertainty rather than choosing one room; asking for confirmation is acceptable."
+      ],
+      "forbidden_claims": [
+        "Do not assert that either hall is definitively the booked room."
+      ],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002009",
+        "mem_0000000000000000000000000000200a"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Identify the unresolved Cedar Hall versus Juniper Hall conflict.",
+            "any": [
+              "\\bCedar\\b[\\s\\S]*\\bJuniper\\b",
+              "\\bJuniper\\b[\\s\\S]*\\bCedar\\b"
+            ]
+          },
+          {
+            "claim": "Express uncertainty rather than choosing one room; asking for confirmation is acceptable.",
+            "any": [
+              "\\b(?:conflict|unclear|uncertain|confirm|which|cannot|can.t)\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_p09": {
+      "mode": "supported",
+      "reference_answer": "Your embroidery kit is in a violet tin.",
+      "required_claims": [
+        "The container is a violet tin."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002005"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The container is a violet tin.",
+            "any": [
+              "\\bviolet tin\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_p10": {
+      "mode": "supported",
+      "reference_answer": "You want first names only.",
+      "required_claims": [
+        "Use first names only."
+      ],
+      "forbidden_claims": [
+        "Do not add surnames or full names as the preferred format."
+      ],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002018"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Use first names only.",
+            "any": [
+              "\\bfirst names?\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_p11": {
+      "mode": "supported",
+      "reference_answer": "Your sketch folder is named Drift.",
+      "required_claims": [
+        "The folder name is Drift."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002019"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The folder name is Drift.",
+            "any": [
+              "\\bDrift\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_p12": {
+      "mode": "supported",
+      "reference_answer": "Your kit has three red cords and five blue cords.",
+      "required_claims": [
+        "There are three red cords and five blue cords."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002013"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "There are three red cords and five blue cords.",
+            "any": [
+              "\\b(?:3|three)\\s+red\\b[\\s\\S]*\\b(?:5|five)\\s+blue\\b",
+              "\\bred\\b[\\s\\S]*\\b(?:3|three)\\b[\\s\\S]*\\bblue\\b[\\s\\S]*\\b(?:5|five)\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_t01": {
+      "mode": "supported",
+      "reference_answer": "The lampshade trial was later, on 18 September 2026; the paper-frame trial was on 14 September 2026.",
+      "required_claims": [
+        "The lampshade trial happened later.",
+        "The lampshade date is 18 September and the paper-frame date is 14 September 2026."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000200b",
+        "mem_0000000000000000000000000000200c"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The lampshade trial happened later.",
+            "any": [
+              "\\blampshade\\b"
+            ]
+          },
+          {
+            "claim": "The lampshade date is 18 September and the paper-frame date is 14 September 2026.",
+            "any": [
+              "\\b18\\b[\\s\\S]*\\b14\\b",
+              "\\b14\\b[\\s\\S]*\\b18\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_t02": {
+      "mode": "supported",
+      "reference_answer": "From 16 September 2026 at 12:00 to 18 September 2026 at 14:00 is 50 hours.",
+      "required_claims": [
+        "The form was submitted on 16 September at 12:00.",
+        "The lampshade trial was completed on 18 September at 14:00.",
+        "The elapsed time is 50 hours."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002016",
+        "mem_0000000000000000000000000000200c"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The form was submitted on 16 September at 12:00.",
+            "any": [
+              "\\b16\\b[\\s\\S]*\\b12[:.]00\\b"
+            ]
+          },
+          {
+            "claim": "The lampshade trial was completed on 18 September at 14:00.",
+            "any": [
+              "\\b18\\b[\\s\\S]*\\b14[:.]00\\b"
+            ]
+          },
+          {
+            "claim": "The elapsed time is 50 hours.",
+            "any": [
+              "\\b50\\s*(?:hours?|h)\\b",
+              "\\bfifty hours\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_t03": {
+      "mode": "supported",
+      "reference_answer": "Materials collection comes first: 21 September 2026 at 09:30. Rehearsal is 22 September at 16:00, 30 hours 30 minutes later.",
+      "required_claims": [
+        "Collection is first, on 21 September at 09:30.",
+        "Rehearsal is on 22 September at 16:00.",
+        "The interval is 30 hours 30 minutes (30.5 hours)."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000200d",
+        "mem_0000000000000000000000000000200e"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Collection is first, on 21 September at 09:30.",
+            "any": [
+              "\\b21\\b[\\s\\S]*\\b0?9[:.]30\\b"
+            ]
+          },
+          {
+            "claim": "Rehearsal is on 22 September at 16:00.",
+            "any": [
+              "\\b22\\b[\\s\\S]*\\b16[:.]00\\b"
+            ]
+          },
+          {
+            "claim": "The interval is 30 hours 30 minutes (30.5 hours).",
+            "any": [
+              "\\b30\\s*(?:hours?|h)\\s*(?:and\\s*)?30\\s*(?:minutes?|mins?)\\b",
+              "\\b30\\.5\\s*(?:hours?|h)\\b",
+              "\\b1\\s*day\\s*(?:and\\s*)?6\\s*hours?\\s*(?:and\\s*)?30\\s*minutes?\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_t04": {
+      "mode": "supported",
+      "reference_answer": "15:30–16:00 is the earliest 30-minute slot within your 15:00–17:00 preference and Idris's 15:30–16:30 availability.",
+      "required_claims": [
+        "The earliest start is 15:30.",
+        "The meeting ends at 16:00, after the usual 30 minutes.",
+        "The slot fits both availability windows."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002003",
+        "mem_00000000000000000000000000002010",
+        "mem_0000000000000000000000000000200f"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The earliest start is 15:30.",
+            "any": [
+              "\\b15[:.]30\\b",
+              "\\b3[:.]30\\s*p\\.?m\\.?"
+            ]
+          },
+          {
+            "claim": "The meeting ends at 16:00, after the usual 30 minutes.",
+            "any": [
+              "\\b16[:.]00\\b",
+              "\\b4[:.]00\\s*p\\.?m\\.?"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_t05": {
+      "mode": "supported",
+      "reference_answer": "You currently prefer bulgur for lunch, and your embroidery kit is in a violet tin.",
+      "required_claims": [
+        "The current lunch grain is bulgur.",
+        "The embroidery kit is in a violet tin."
+      ],
+      "forbidden_claims": [
+        "Do not present couscous as the current preference."
+      ],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000201a",
+        "mem_00000000000000000000000000002005"
+      ],
+      "forbidden_memory_ids": [
+        "mem_00000000000000000000000000002006"
+      ],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The current lunch grain is bulgur.",
+            "any": [
+              "\\bbulgur\\b"
+            ]
+          },
+          {
+            "claim": "The embroidery kit is in a violet tin.",
+            "any": [
+              "\\bviolet tin\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": [
+          "\\bcouscous\\b"
+        ]
+      }
+    },
+    "s2_t06": {
+      "mode": "supported",
+      "reference_answer": "Yes. The total is 3×4 + 2×5 = 22 credits, leaving 2 from your 24-credit budget.",
+      "required_claims": [
+        "The stored budget is 24 credits.",
+        "The purchase total is 22 credits and is affordable.",
+        "Two credits remain."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002011"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The stored budget is 24 credits.",
+            "any": [
+              "\\b24\\b",
+              "\\btwenty[- ]four\\b"
+            ]
+          },
+          {
+            "claim": "The purchase total is 22 credits and is affordable.",
+            "any": [
+              "\\b22\\b",
+              "\\btwenty[- ]two\\b"
+            ]
+          },
+          {
+            "claim": "Two credits remain.",
+            "any": [
+              "\\b2\\s*(?:credits?\\s*)?(?:left|remain|to spare)",
+              "\\b(?:leav\\w*|remain\\w*)\\s*(?:you\\s*)?(?:with\\s*)?(?:2|two)\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_t07": {
+      "mode": "supported",
+      "reference_answer": "You need seven cards but have six, so obtain one extra card. Put first names only on the badges.",
+      "required_claims": [
+        "One extra card is needed because seven are required and six are available.",
+        "Badge text uses first names only."
+      ],
+      "forbidden_claims": [
+        "Do not recommend surnames on the badges."
+      ],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002012",
+        "mem_00000000000000000000000000002018"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "One extra card is needed because seven are required and six are available.",
+            "any": [
+              "\\b(?:1|one)\\s+(?:extra|additional|more)\\s+card\\b",
+              "\\b(?:extra|additional)\\s+card\\b",
+              "\\bshort\\s+(?:by\\s*)?(?:1|one)\\b"
+            ]
+          },
+          {
+            "claim": "Badge text uses first names only.",
+            "any": [
+              "\\bfirst names?\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_t08": {
+      "mode": "supported",
+      "reference_answer": "Walk, leaving at 09:12 on 21 September 2026 to reach the east depot for 09:30.",
+      "required_claims": [
+        "Walking matches the stored preference for journeys under 20 minutes.",
+        "The latest departure is 09:12 on the collection day, 21 September 2026."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002014",
+        "mem_0000000000000000000000000000200d"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Walking matches the stored preference for journeys under 20 minutes.",
+            "any": [
+              "\\bwalk\\w*\\b"
+            ]
+          },
+          {
+            "claim": "The latest departure is 09:12 on the collection day, 21 September 2026.",
+            "any": [
+              "\\b0?9[:.]12\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_t09": {
+      "mode": "supported",
+      "reference_answer": "Yes. Starting at 16:00, rehearsal finishes at 16:45, 15 minutes before the 17:00 cutoff.",
+      "required_claims": [
+        "The hypothetical rehearsal finishes at 16:45.",
+        "That is 15 minutes before the stored 17:00 limit."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000200e",
+        "mem_00000000000000000000000000002017"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The hypothetical rehearsal finishes at 16:45.",
+            "any": [
+              "\\b16[:.]45\\b",
+              "\\b4[:.]45\\s*p\\.?m\\.?"
+            ]
+          },
+          {
+            "claim": "That is 15 minutes before the stored 17:00 limit.",
+            "any": [
+              "\\b15\\s*(?:minutes?|mins?)\\b",
+              "\\bfifteen minutes\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_t10": {
+      "mode": "uncertain",
+      "reference_answer": "Please confirm whether it is Cedar Hall or Juniper Hall; the two stored records conflict, so I cannot choose a definite room for visitors.",
+      "required_claims": [
+        "Name the unresolved Cedar Hall versus Juniper Hall conflict.",
+        "Ask for room confirmation or clearly state that no definite choice is supported."
+      ],
+      "forbidden_claims": [
+        "Do not direct visitors to either hall as if its booking were established."
+      ],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000002009",
+        "mem_0000000000000000000000000000200a"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Name the unresolved Cedar Hall versus Juniper Hall conflict.",
+            "any": [
+              "\\bCedar\\b[\\s\\S]*\\bJuniper\\b",
+              "\\bJuniper\\b[\\s\\S]*\\bCedar\\b"
+            ]
+          },
+          {
+            "claim": "Ask for room confirmation or clearly state that no definite choice is supported.",
+            "any": [
+              "\\b(?:conflict|unclear|uncertain|confirm|cannot|can.t)\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s2_t11": {
+      "mode": "supported",
+      "reference_answer": "Your current lunch preference is bulgur. I do not have a current location for the display banner.",
+      "required_claims": [
+        "The known current lunch preference is bulgur.",
+        "The current banner location is explicitly unknown."
+      ],
+      "forbidden_claims": [
+        "Do not present couscous as current.",
+        "Do not present the expired west-counter banner location as current.",
+        "Do not invent a new banner location."
+      ],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000201a"
+      ],
+      "forbidden_memory_ids": [
+        "mem_00000000000000000000000000002006",
+        "mem_00000000000000000000000000002007"
+      ],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "The known current lunch preference is bulgur.",
+            "any": [
+              "\\bbulgur\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": [
+          "\\bcouscous\\b",
+          "\\bwest counter\\b"
+        ]
+      }
+    },
+    "s2_t12": {
+      "mode": "supported",
+      "reference_answer": "Paper-frame trial: 14 September 2026, 10:00; volunteer form: 16 September, 12:00; lampshade trial: 18 September, 14:00.",
+      "required_claims": [
+        "First: paper-frame trial on 14 September 2026 at 10:00.",
+        "Second: volunteer form on 16 September at 12:00.",
+        "Third: lampshade trial on 18 September at 14:00."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000200b",
+        "mem_00000000000000000000000000002016",
+        "mem_0000000000000000000000000000200c"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "First: paper-frame trial on 14 September 2026 at 10:00.",
+            "any": [
+              "\\b14\\b[\\s\\S]*\\b10[:.]00\\b"
+            ]
+          },
+          {
+            "claim": "Second: volunteer form on 16 September at 12:00.",
+            "any": [
+              "\\b16\\b[\\s\\S]*\\b12[:.]00\\b"
+            ]
+          },
+          {
+            "claim": "Third: lampshade trial on 18 September at 14:00.",
+            "any": [
+              "\\b18\\b[\\s\\S]*\\b14[:.]00\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    }
+  }
+}

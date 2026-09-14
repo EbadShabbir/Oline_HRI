@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-09-14T14:24:29.751610+00:00",
+  "first_repair_freeze_sha256": "a9ff77731e30559c04173e4e3fc2d72cca5efd98d9ba35a29c44f5e84c677749",
+  "followup_freeze_sha256": "b4d1d2dc71b5b7ec7373e6c0640970d139306723a386b42e8cdedd0bc83709e0",
+  "unchanged_runtime_conditions": {
+    "config": true,
+    "models": true,
+    "embedding_assets": true,
+    "packages": true,
+    "python": true,
+    "generation_seed": true,
+    "device_policy": true,
+    "routing_policy": true,
+    "retain_large_model": true,
+    "ollama_version": true,
+    "logical_clock": true
+  },
+  "changed_source_files": [
+    "src/oline_hri/conversation.py",
+    "src/oline_hri/relationships.py"
+  ],
+  "source_count": 41,
+  "freeze_command_exit_code": 0,
+  "scope": "Separate24 checkpoint current relationship repair; no pooled results."
+}

@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-09-13T17:08:20.087116+00:00",
+  "approved": true,
+  "reviewer": "independent assistant /root/prepare_dataset",
+  "source_authored_by_reviewer": false,
+  "scope": "Blinded partial-cohort export, individual original review freeze, exact public-content per-reviewer remapping, and complete review assembly; not model-answer quality review",
+  "source_sha256": {
+    "scripts/batch_independent_retrieval_reviews.py": "578d8078ce563cf399400ce3d5d4abea34dcf2d218800874276ece34222bbeed",
+    "tests/test_retrieval_review_batches.py": "d9bc5815baf7a60a929ba19c9360f24ae96fbff56b45e6d0c0560df55350c5f7",
+    "scripts/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+    "scripts/analyze_independent_retrieval.py": "6891c98a0853f29a0bfec7186a087321d50d867d660275bc5ecc8eba40d3ed70"
+  },
+  "primary_semantic_outputs_seen": false,
+  "live_inference_invoked": false,
+  "review_kind": "independent assistant source and synthetic artifact review",
+  "human_validation": "pending",
+  "validation": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_retrieval_review_batches.py -v",
+    "tests": 12,
+    "passed": 12,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 6.657,
+    "inputs": "Synthetic temporary fixtures only, including fake sealed157-attempt prefix; no collected observations read"
+  },
+  "findings": [
+    "Packet builder exactly matches analyzer grouping, seeded opaque identities, common fields and second-reviewer shuffle through AST-extracted independent parity test.",
+    "All authorized packets receive the same full authoritative currently eligible23-record truth context; denied packets receive none; expired, superseded and wrong-profile records are excluded.",
+    "Undelivered raw text never appears as a delivered answer; model, condition, timing, repetition and observation maps are excluded from public packets.",
+    "Individual original packet, instruction and review bytes are copied exactly and sealed before matching or comparison.",
+    "Remapping uses exact canonical public content excluding only review_id, and permits only explicit same-reviewer identity/aliases and identical instruction bytes.",
+    "Conflicting label/five-flag vectors or any changed public content require a fresh missing-packet judgment; no heuristic or semantic labels are generated.",
+    "Assembly independently recomputes content joins, score agreement, chosen original rationale, missing groups and mapping from every archived sealed original; a tampered-and-resealed reused sheet is rejected.",
+    "Coverage requires every target packet group exactly once, and all remap/original/missing artifacts and source/input hashes remain sealed.",
+    "Final full analyzer integrity and864-attempt coverage verification remain required; partial export is explicitly scoped as a reviewed cohort."
+  ],
+  "use_constraints": [
+    "Export only a sealed cumulative run during a no-model interval; this operational requirement is documented and is not an OS interlock.",
+    "Give each reviewer only their assigned public packet and unchanged instructions; keep mappings, provenance and other reviewer sheets inaccessible in review context.",
+    "Reviewer identity aliases are caller attestations, not proof of independent cognition; fresh independent review contexts and third-context adjudication remain required."
+  ]
+}

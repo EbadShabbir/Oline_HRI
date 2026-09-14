@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-09-14T12:06:35.792817+00:00",
+  "command": ".venv/bin/python evaluation/changing_memory_20260914/audit_collection_tests.py -v",
+  "exit_code": 0,
+  "tests": 10,
+  "passed": 10,
+  "elapsed_seconds": 0.086,
+  "source_sha256": {
+    "evaluation/changing_memory_20260914/audit_collection.py": "5808d204cfc6b10ea5b8a7f15139d66c72fe52d875a0fcdd80a0bf996bab9ef5",
+    "evaluation/changing_memory_20260914/audit_collection_tests.py": "55dc5e99741b4eb7524b1ce9990fe59342796ee5c1b0c8d26b04ea0314574eff"
+  },
+  "frozen_runtime_files_unchanged": 41,
+  "approved_analyzer_and_tests_unchanged": true,
+  "live_collection_read": false,
+  "change": "Separate exact original statement versus literal original-value history presence/forwarding, with per-checkpoint witnesses and grouped counts. Literal matching is explicitly a lower bound, not semantic absence or correctness."
+}

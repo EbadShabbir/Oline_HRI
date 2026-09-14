@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-09-14T12:19:54.107513+00:00",
+  "sha256": {
+    "README.md": "2bf750f9aa9d2a98cef10e19984fd875a229f138bd720a1298ae90d433875b4c",
+    "analyzer_v1.py": "60709a1002f7537f8cfd8ea57e8c89052f7ba2e608ca4b36e275a0fc79c95215",
+    "analyzer_v2.py": "65181ee60ac1064ac00fd27d956236d92bac343829cb0f56263bd2dd55297e00",
+    "attempt_01.json": "e765afc3c5413dc18f1a555ea5816542f6f3f59c4baaeb04149de29ef1a31428",
+    "attempt_02.json": "a0beb9d6a849dedf76d298cd767a980c573242e5d9ed1d1326be1741e355896d",
+    "attempt_02.log": "b0577af321def546b0c868e54980e3fa576b47045831d5c295f51c044121e4b7",
+    "provenance.json": "10746d283c251aa71747d8c0a10dbba85f8c209d356520a66d807bc23230fa6c",
+    "sealed_cm01_cm04_parser_check.json": "eb220b3615364cbfe48db651e8bd5a68353587dba982d12ca655a5ad3ae4bf42",
+    "test_analysis_memory_evidence_v2.py": "e66fbf539e4a19e61191cb56c924f7cc3e1d97a5de6fb8523b4fbbf08ace2b6a"
+  },
+  "immutability": "exclusive creation, SHA256 manifest, read-only permissions; not privileged WORM"
+}

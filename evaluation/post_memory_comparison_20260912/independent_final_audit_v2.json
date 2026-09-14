@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-09-12T13:47:55.554154+00:00",
+  "valid": true,
+  "audit_script_sha256": "22afe1ce0100336939df84bc1125826a7b15b08123fa485ba348348b6fa3cfb0",
+  "scope": "Independent saved-artifact arithmetic/grouping/hash audit; no model calls, no semantic regrading, no existing files changed",
+  "input_sha256": {
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/analysis.json": "6ab197dda150e4001edebd380bd96b62a717bd6f8a7aaccf3720eaa7cd696549",
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/row_metrics.jsonl": "a5859d64d6b8b4d42a12be71bc6b842971e252ca904b27c691870be0b4bfd2b7",
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/blinded_mapping.jsonl": "8684ec25d436cb719a80d6d3769ef3d72f92cbcd4d58bc53a4efa5f02510fb0a",
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/blinded_review.jsonl": "bc41f9615712db33bf6d6dd29af72422ad30e11cd4516933a71ea45119b0c2cc",
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/review_manifest.json": "9d95f5109944b31c515b0f8b08cfa7d4bee0b40cef10972410734e0d24880732",
+    "evaluation/post_memory_comparison_20260912/frozen_v2/freeze.json": "6497504cb7a3fd29c2b3b3740aa26f1a77dad8d626cbf0fedcabed997bfc7783",
+    "evaluation/post_memory_comparison_20260912/report_v2/provenance.json": "f7baf5a3d18328810bce0f681dc292dda6340e9e8f08837a30567aa3733a72eb",
+    "evaluation/post_memory_comparison_20260912/report_v2/tables.md": "aa0049688295dfed03967b9f39da403944d815df85c5c25b38e836c1c8b9c948",
+    "evaluation/post_memory_comparison_20260912/final_state_v2.json": "217b7324746bb256e04c5abfce2822b50ba1908ea5c3503e0ae23c4cf55827f4",
+    "evaluation/post_memory_comparison_20260912/reviews_v2/review_agreement_v2.json": "684f047534cec9d7923813d6ddf9f4262f47da1dd35ac40e8f288e013824378f"
+  },
+  "observed_attempts": 432,
+  "review_groups": 145,
+  "initial_reviewer_agreement": {
+    "agreed": 142,
+    "total": 145
+  },
+  "frozen_source_files_checked": 41,
+  "arms": {
+    "small": {
+      "attempts": 144,
+      "correct": 42,
+      "delivered": 135,
+      "failed": 9,
+      "correct_by_round": [
+        14,
+        14,
+        14
+      ],
+      "mean_s": 2.314023619111111,
+      "p50_s": 2.090270982,
+      "p95_s": 3.2704601302,
+      "actual_generator_calls": {
+        "qwen3:0.6b": 144
+      },
+      "backend_loading_s": 28.362586547
+    },
+    "large": {
+      "attempts": 144,
+      "correct": 44,
+      "delivered": 139,
+      "failed": 5,
+      "correct_by_round": [
+        13,
+        15,
+        16
+      ],
+      "mean_s": 11.254598364909722,
+      "p50_s": 8.9550528155,
+      "p95_s": 25.429903025049995,
+      "actual_generator_calls": {
+        "qwen3:1.7b": 144
+      },
+      "backend_loading_s": 72.820889528
+    },
+    "cascade": {
+      "attempts": 144,
+      "correct": 46,
+      "delivered": 140,
+      "failed": 4,
+      "correct_by_round": [
+        14,
+        16,
+        16
+      ],
+      "mean_s": 8.915559775631944,
+      "p50_s": 7.749336847,
+      "p95_s": 18.772002493949994,
+      "actual_generator_calls": {
+        "qwen3:1.7b": 141,
+        "qwen3:0.6b": 3
+      },
+      "backend_loading_s": 166.54945484
+    }
+  },
+  "checks": {
+    "raw_observation_uniqueness": true,
+    "review_group_hmac_and_evidence_identity": true,
+    "all_attempt_review_coverage": true,
+    "quality_and_stratum_counts": true,
+    "latency_quantiles_and_loading": true,
+    "sole_model_controls": true,
+    "deadline_curve_counts": true,
+    "raw_and_rendered_hashes": true,
+    "frozen_sources_and_final_model_metadata": true,
+    "final_cleanup_and_host_state": true,
+    "resume_correction_proofs": true,
+    "initial_reviewer_agreement": true
+  },
+  "interpretation": [
+    "All numbers agree with the reviewed report.",
+    "The cascade's pooled latency advantage over large-only reverses in rounds 2 and 3 and does not isolate a causal routing gain.",
+    "Cascade made 141 large and 3 small generator calls; observed loading cost exceeded large-only.",
+    "Assistant-only judgments on 48 requests repeated three times do not establish independent human validation or 144 independent samples."
+  ]
+}

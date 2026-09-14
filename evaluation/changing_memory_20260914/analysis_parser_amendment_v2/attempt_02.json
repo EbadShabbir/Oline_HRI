@@ -1,0 +1,22 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_analysis_memory_evidence_v2",
+    "tests.test_analysis_changing_memory",
+    "-v"
+  ],
+  "cwd": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI",
+  "started_at": "2026-09-14T12:18:19.944341+00:00",
+  "finished_at": "2026-09-14T12:18:22.176047+00:00",
+  "returncode": 0,
+  "scope": "offline synthetic inference only; no live checkpoints",
+  "source_sha256": {
+    "scripts/analyze_changing_memory.py": "60709a1002f7537f8cfd8ea57e8c89052f7ba2e608ca4b36e275a0fc79c95215",
+    "scripts/analyze_changing_memory_v2.py": "65181ee60ac1064ac00fd27d956236d92bac343829cb0f56263bd2dd55297e00",
+    "tests/test_analysis_changing_memory.py": "be052c3e692ea477fdc89dd7703900599a5aa276dad284babb6389e6923592ab",
+    "tests/test_analysis_memory_evidence_v2.py": "e66fbf539e4a19e61191cb56c924f7cc3e1d97a5de6fb8523b4fbbf08ace2b6a"
+  },
+  "log_sha256": "b0577af321def546b0c868e54980e3fa576b47045831d5c295f51c044121e4b7"
+}

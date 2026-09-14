@@ -1,0 +1,24 @@
+{
+  "batches": [
+    {
+      "batch_index": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_b_cohort_v1",
+      "identity_aliases": [
+        "/root/prepare_dataset/blinded_reviewer_b"
+      ],
+      "reviewer": "/root/prepare_dataset/blinded_reviewer_b",
+      "seal_sha256": "607b29fb307f25e17625b29cbd7ad2f534d7672413b1d691874ca77633ed0c37"
+    }
+  ],
+  "conflict_rule": "conflicting prior score vectors require an explicit new missing-packet judgment",
+  "groups": 115,
+  "identity_aliases": [
+    "/root/prepare_dataset/blinded_reviewer_b"
+  ],
+  "matching_rule": "exact canonical public packet content excluding only review_id; no observation/model/condition mapping",
+  "missing_groups": 12,
+  "private_mapping_read": false,
+  "rationale_rule": "equal label and five flags allow reuse of first exact original rationale; all originals retained",
+  "reused_groups": 103,
+  "reviewer": "/root/prepare_dataset/blinded_reviewer_b"
+}

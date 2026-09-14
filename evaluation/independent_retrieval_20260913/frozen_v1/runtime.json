@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "dataset_id": "clara_independent_retrieval_20260913_v1",
+    "fictional_data": true,
+    "created_on": "2026-09-13",
+    "status": "draft_pending_independent_pre_inference_review",
+    "execution_input_boundary": "Only each prompt and authorization/profile controls enter runtime request handling. Memory records are accessed exclusively through authorized retrieval. No scoring references are loaded by inference.",
+    "fresh_history_each_request": true,
+    "planned_repetitions": 3,
+    "planned_attempts": 864,
+    "condition_orders": [
+      [
+        "small_off",
+        "small_always",
+        "small_selective",
+        "large_selective",
+        "large_always",
+        "large_off"
+      ],
+      [
+        "large_always",
+        "large_off",
+        "large_selective",
+        "small_selective",
+        "small_off",
+        "small_always"
+      ],
+      [
+        "small_always",
+        "small_selective",
+        "small_off",
+        "large_off",
+        "large_selective",
+        "large_always"
+      ]
+    ],
+    "execution_case_order_seeds": [
+      2026091301,
+      2026091302,
+      2026091303
+    ],
+    "execution_case_order_rule": "Python random.Random(seed).shuffle on execution_cases in their stored base order; identical request order across all six conditions within a repetition."
+  },
+  "memory_seed": {
+    "profile_id": "fictional_reedharbor_v1",
+    "evaluation_at": "2026-11-06T12:00:00.000000Z",
+    "retention_days": 30,
+    "clock_basis": "All synthetic lifecycle and freshness checks use this fixed UTC evaluation clock.",
+    "confirmation": "Every remember/correct operation is a confirmed fictional fixture operation; no automatic capture occurs.",
+    "events": [
+      {
+        "id": "ir_seed_5101",
+        "at": "2026-11-03T08:00:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005101",
+        "canonical_text": "You call your pressed-leaf album Fernwake.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5102",
+        "at": "2026-11-03T08:01:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005102",
+        "canonical_text": "You mount leaves for your pressed-leaf album on cream card.",
+        "kind": "preference"
+      },
+      {
+        "id": "ir_seed_5201",
+        "at": "2026-11-03T08:02:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005201",
+        "canonical_text": "You keep your kite-repair tools in the wicker crate.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5202",
+        "at": "2026-11-03T08:03:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005202",
+        "canonical_text": "You prefer silver ripstop tape for patching your kite.",
+        "kind": "preference"
+      },
+      {
+        "id": "ir_seed_5301",
+        "at": "2026-11-03T08:04:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005301",
+        "canonical_text": "Your mural-painting partner is Neri.",
+        "kind": "relationship"
+      },
+      {
+        "id": "ir_seed_5302",
+        "at": "2026-11-03T08:05:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005302",
+        "canonical_text": "You wear an indigo apron when painting the neighbourhood mural.",
+        "kind": "routine"
+      },
+      {
+        "id": "ir_seed_5401",
+        "at": "2026-11-03T08:06:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005401",
+        "canonical_text": "You record backyard birds on Thursday mornings.",
+        "kind": "routine"
+      },
+      {
+        "id": "ir_seed_5402",
+        "at": "2026-11-03T08:07:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005402",
+        "canonical_text": "You keep your bird-recording microphone on the linen shelf.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5501",
+        "at": "2026-11-03T08:08:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005501",
+        "canonical_text": "You prefer amber paper for folding origami cranes.",
+        "kind": "preference"
+      },
+      {
+        "id": "ir_seed_5502",
+        "at": "2026-11-03T08:09:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005502",
+        "canonical_text": "You keep finished origami cranes in a round hatbox.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5601",
+        "at": "2026-11-03T08:10:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005601",
+        "canonical_text": "Your biscuit tin has a hexagonal shape.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5602",
+        "at": "2026-11-03T08:11:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005602",
+        "canonical_text": "You keep your biscuit cutters in the top kitchen drawer.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5701",
+        "at": "2026-11-03T08:12:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005701",
+        "canonical_text": "You use a folding trolley to carry parcels home.",
+        "kind": "routine"
+      },
+      {
+        "id": "ir_seed_5702",
+        "at": "2026-11-03T08:13:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005702",
+        "canonical_text": "You tie your parcel labels with green string.",
+        "kind": "routine"
+      },
+      {
+        "id": "ir_seed_5801",
+        "at": "2026-11-03T08:14:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005801",
+        "canonical_text": "You call your telescope-observation notebook Lark Atlas.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5802",
+        "at": "2026-11-03T08:15:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005802",
+        "canonical_text": "You record telescope observations with a violet pencil.",
+        "kind": "preference"
+      },
+      {
+        "id": "ir_seed_5703",
+        "at": "2026-11-03T08:16:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005703",
+        "canonical_text": "Your current preferred parcel collection point is the west kiosk.",
+        "kind": "preference"
+      },
+      {
+        "id": "ir_seed_5704",
+        "at": "2026-11-03T08:17:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005704",
+        "canonical_text": "Your current preferred parcel collection point is the south counter.",
+        "kind": "preference"
+      },
+      {
+        "id": "ir_seed_5803",
+        "at": "2026-11-03T08:18:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005803",
+        "canonical_text": "Your current telescope lens-cleaning cloth is amber.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5804",
+        "at": "2026-11-03T08:19:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005804",
+        "canonical_text": "Your current telescope lens-cleaning cloth is teal.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5103",
+        "at": "2026-11-03T08:20:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005103",
+        "canonical_text": "You keep your pressed-leaf labels in the striped wallet.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5203",
+        "at": "2026-11-03T08:21:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005203",
+        "canonical_text": "You keep your kite-patch box on the high shelf.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5303",
+        "at": "2026-11-03T08:22:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005303",
+        "canonical_text": "You keep your mural sponge in the red bucket.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5403",
+        "at": "2026-11-03T08:23:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005403",
+        "canonical_text": "You keep your spare microphone windscreen in the orange case.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5705",
+        "at": "2026-11-03T08:24:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005705",
+        "canonical_text": "You store your parcel trolley behind the porch screen.",
+        "kind": "fact"
+      },
+      {
+        "id": "ir_seed_5503",
+        "at": "2026-11-03T08:25:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000005503",
+        "canonical_text": "Your temporary origami-workshop room is room 24.",
+        "kind": "fact",
+        "valid_until": "2026-11-05T12:00:00.000000Z"
+      },
+      {
+        "id": "ir_correct_5104",
+        "at": "2026-11-05T09:00:00.000000Z",
+        "operation": "correct",
+        "target_id": "mem_00000000000000000000000000005103",
+        "memory_id": "mem_00000000000000000000000000005104",
+        "canonical_text": "You keep your pressed-leaf labels in the plain pouch."
+      },
+      {
+        "id": "ir_correct_5204",
+        "at": "2026-11-05T09:00:00.000000Z",
+        "operation": "correct",
+        "target_id": "mem_00000000000000000000000000005203",
+        "memory_id": "mem_00000000000000000000000000005204",
+        "canonical_text": "You keep your kite-patch box in the bottom drawer."
+      },
+      {
+        "id": "ir_forget_5303",
+        "at": "2026-11-05T10:00:00.000000Z",
+        "operation": "forget",
+        "target_id": "mem_00000000000000000000000000005303"
+      },
+      {
+        "id": "ir_forget_5403",
+        "at": "2026-11-05T10:00:00.000000Z",
+        "operation": "forget",
+        "target_id": "mem_00000000000000000000000000005403"
+      }
+    ],
+    "other_profile_seeds": [
+      {
+        "profile_id": "fictional_reedharbor_neighbor_v1",
+        "events": [
+          {
+            "id": "ir_other_profile_5603",
+            "at": "2026-11-03T10:00:00.000000Z",
+            "operation": "remember",
+            "memory_id": "mem_00000000000000000000000000005603",
+            "canonical_text": "Your biscuit-cutter supplier is Bracken Tools.",
+            "kind": "fact"
+          }
+        ]
+      }
+    ]
+  },
+  "execution_cases": [
+    {
+      "id": "ir_01_01",
+      "prompt": "What do I call my pressed-leaf album?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_02_02",
+      "prompt": "Where should I look for the equipment I use to mend a kite?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_03_03",
+      "prompt": "Who is my mural-painting partner, and what colour apron do I wear for the mural?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_04_04",
+      "prompt": "What is a windscreen used for on a microphone?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_05_05",
+      "prompt": "How many origami cranes have I finished in total?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_06_06",
+      "prompt": "Who is my biscuit-cutter supplier?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_07_01",
+      "prompt": "What do I use to carry parcels home?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_08_02",
+      "prompt": "Remind me of the title I gave the book where I write down what I see through my telescope.",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_01_02",
+      "prompt": "Remind me of the name I chose for the collection of flattened leaves.",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_02_03",
+      "prompt": "Where are my kite-repair tools, and which tape do I prefer for patching the kite?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_03_04",
+      "prompt": "Explain why masking tape is useful for making straight paint edges.",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_04_05",
+      "prompt": "What model is my bird recorder?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_05_06",
+      "prompt": "Which room am I currently assigned for the origami workshop?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_06_01",
+      "prompt": "What shape is my biscuit tin?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_07_02",
+      "prompt": "How do I usually bring my packages back home?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_08_03",
+      "prompt": "What is my telescope-observation notebook called, and what colour pencil do I use in it?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_01_03",
+      "prompt": "What is my pressed-leaf album called, and which colour card do I mount its leaves on?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_02_04",
+      "prompt": "How can I repair a small tear in a paper kite using tape? Give one simple step.",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_03_05",
+      "prompt": "In which month did I start painting the neighbourhood mural?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_04_06",
+      "prompt": "Where is my spare microphone windscreen stored?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_05_01",
+      "prompt": "What colour paper do I prefer for folding origami cranes?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_06_02",
+      "prompt": "What outline does the container I use for biscuits have?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_07_03",
+      "prompt": "What do I use to carry parcels home, and what colour string do I use for their labels?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_08_04",
+      "prompt": "Why does a notebook help an observer compare telescope observations across nights?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_01_04",
+      "prompt": "What is the purpose of pressing a leaf between sheets of absorbent paper?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_02_05",
+      "prompt": "How long is my kite string?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_03_06",
+      "prompt": "Where do I keep my mural sponge?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_04_01",
+      "prompt": "When do I record backyard birds?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_05_02",
+      "prompt": "Which shade of sheet do I usually pick when I fold paper cranes?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_06_03",
+      "prompt": "What shape is my biscuit tin, and where do I keep my biscuit cutters?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_07_04",
+      "prompt": "A parcel weighs 2 kilograms and another weighs 3 kilograms. What is their combined weight?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_08_05",
+      "prompt": "What colour is my current telescope lens-cleaning cloth?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_01_05",
+      "prompt": "What material is the cover of my pressed-leaf album made from?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_02_06",
+      "prompt": "Where is my kite-patch box kept now?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_03_01",
+      "prompt": "Who is my mural-painting partner?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_04_02",
+      "prompt": "Which day and part of the day did I choose for recording birds in the yard?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_05_03",
+      "prompt": "What colour paper do I prefer for origami cranes, and where do I keep the finished cranes?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_06_04",
+      "prompt": "Give one reason to let baked biscuits cool before putting them in a closed tin.",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_07_05",
+      "prompt": "What is my current preferred parcel collection point?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_08_06",
+      "prompt": "What is my account password for the telescope club?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_01_06",
+      "prompt": "Where do I keep my pressed-leaf labels now?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_02_01",
+      "prompt": "Where do I keep my kite-repair tools?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_03_02",
+      "prompt": "Who teams up with me to paint our community wall?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_04_03",
+      "prompt": "When do I record backyard birds, and where do I keep the microphone for that?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_05_04",
+      "prompt": "I have a square sheet. How many corners does it have?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_06_05",
+      "prompt": "On what date was my biscuit tin given to me?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    },
+    {
+      "id": "ir_07_06",
+      "prompt": "Where do I store my parcel trolley?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": false
+    },
+    {
+      "id": "ir_08_01",
+      "prompt": "What do I call my telescope-observation notebook?",
+      "profile_id": "fictional_reedharbor_v1",
+      "consent_authorized": true
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "all_original_and_supplemental_runtime_sources_unchanged": true,
+  "approved": true,
+  "created_at": "2026-09-13T18:59:13.491381+00:00",
+  "frozen_v1_seal_sha256": "fda698a52067906e3a071c36dee68d3abb579f5b9c199533cd731708a717a9fd",
+  "human_validation": "pending",
+  "limits": [
+    "These exact helper rewrites are evidence-dependent and are not proved semantically neutral.",
+    "This control correction does not assert answer quality or change task-success labels, reference data, grouping, bootstrap or timing arithmetic.",
+    "Independent measured numeric verification remains pending final reviewed analysis."
+  ],
+  "preserved_analysis_blind_v1_seal_sha256": "615980c5397585056f8f94b6e93b650293eefc86a836beea549e528c41045010",
+  "preserved_run_v9_seal_sha256": "51daaaf925bbdd16af2b37768be54f6ca31633056fd6df8cfddd4baa7b438f2e",
+  "private_review_mapping_inspected": false,
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Audit-only exact frozen current-request normalizer correction and explicit report disclosure; no semantic regrading or changed runtime inputs.",
+  "semantic_packet_or_judgment_content_inspected": false,
+  "source_sha256": {
+    "evaluation/independent_retrieval_20260913/analysis_audit_correction_v1.md": "161174063ce1bac634b55ba70a4d9f3d85f943350115f131aa1e6430836fe885",
+    "evaluation/independent_retrieval_20260913/reviews/audit_prompt_shape_diagnostic_v1.json": "f60d197e41cd6dde9b3da028b46dd5395a1f92e4ccd05f25ff61f59ec1c1dba9",
+    "scripts/analyze_independent_retrieval.py": "532b4127c316d1365c825e0327d665f5109fe05cd5ed52beb81e499e3c7dd912",
+    "scripts/report_independent_retrieval.py": "4a870e2bd887d06679772e9879d8e6e2275a506d2297439084e6f47d859183bc",
+    "tests/test_retrieval_experiment_analysis.py": "d7d59ef374cf6d86dfa009033399c97640cc7613cd4b9a42155fe4eaefab26bb"
+  },
+  "validation": {
+    "actual_generation_requests_passed": 864,
+    "actual_helper_rewrites": 24,
+    "additional_independent_prompt_checks": [
+      "exact frozen evidence helper accepted",
+      "arbitrary changed current request rejected",
+      "no evidence normalized plain request rejected",
+      "no evidence normalized memory envelope rejected",
+      "prior assistant history rejected",
+      "prior user history rejected",
+      "wrong frozen helper digest rejected",
+      "substring-only general request rejected"
+    ],
+    "all_existing_assignments_and_constants_AST_identical": true,
+    "all_other_existing_functions_AST_identical": true,
+    "author_analysis_test_failures": 0,
+    "author_analysis_tests_independently_rerun": 24,
+    "independent_report_test_failures": 0,
+    "independent_report_tests": 6,
+    "old_analysis_all_sealed_file_hashes_and_file_set_verified": true,
+    "old_and_new_analyzer_changed_existing_functions": [
+      "audit_row",
+      "collect"
+    ],
+    "report_change_only_one_disclosure_paragraph": true
+  }
+}

@@ -1,0 +1,5 @@
+# collection audit
+
+| integrity_pass | integrity_violations | chat_http_requests | answer_rows | answer_status_delivered | retained_history_expected | retained_history_with_original_disclosure | operations_started | operations_finished | mutation_remember | mutation_correct | mutation_forget | purged_record_ids | planned_checkpoints | unique_observed_checkpoints | scheduled_segments | process_fragments | extra_continuation_fragments | independent_databases | distinct_processes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| True | 0 | 81 | 27 | 27 | 14 | 14 | 46 | 46 | 6 | 1 | 1 | 2 | 24 | 24 | 6 | 6 | 0 | 3 | 6 |

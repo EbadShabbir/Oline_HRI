@@ -1,0 +1,134 @@
+[
+  {
+    "id": "coverage",
+    "criterion": "144 unique sequence/system/repetition slots, 432 main and 144 replay turn slots, or explicit completed/interrupted/unattempted counts; no silently missing slot.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "whole_sequence_reuse",
+    "criterion": "22 original whole sequences and 88 attempts appear exactly once; all linked files match original hashes; exceptional final failure remains a failure.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "source_and_freeze",
+    "criterion": "Source, workload, protocol, settings, packages, model digests and embedding hashes validate; v1/v2 differences satisfy exact documented continuation compatibility.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "settings_and_fixed_models",
+    "criterion": "All chat bodies use ctx2048, cap192, temperature0, seed42, thinkfalse and keep_alive -1; small/large arms only call their sole model.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "workload_and_history",
+    "criterion": "Case order and prompts match frozen workload; each main sequence begins with empty conversation history and retains its normal bounded history; no forced outcome.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "memory_snapshot",
+    "criterion": "Materialized canonical snapshot, deterministic IDs, setup operations and eligible evidence agree across systems; CPU embedder/settings unchanged.",
+    "status": "fail",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "cold_admission",
+    "criterion": "No initial resident LLM, new process/embedder, empty cache hint; first backend load included and reported; residual RAM/swap and OS-cache limitation documented.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "counterbalance",
+    "criterion": "Each sequence follows three frozen main-order rotations; replay remains last and pause/cooldown chronology is disclosed.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "durable_attempts",
+    "criterion": "Every started request and span has a terminal record or explicit unfinished status; technical failures stay in latency and quality denominators.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "span_accounting",
+    "criterion": "All completed spans are nonnegative, within request/parent intervals, no unrelated overlapping inference spans; exclusive components plus residual equal complete request duration.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "sequence_accounting",
+    "criterion": "sequence_end-start equals sequence_total and equals startup + request sum + sequence_gaps; cleanup and scheduler waits are separately scoped.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "nested_loads",
+    "criterion": "Backend total/load/prefill/decode are reported separately from enclosing wall spans; cold classifier loading can move to generation in replay.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "eviction_and_residency",
+    "criterion": "Unload request and verified absence are separate; pre/post turn and per-call residency identify real model, digest and allocation; selected vs renderer identities remain distinguishable.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "hysteresis",
+    "criterion": "For each adaptive DDEE sequence/repetition show actual decisions, residency and easy-streak sources on turns3/4; list any deviation rather than forcing expected large/large/large/small.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "following_turns",
+    "criterion": "Report first-easy-large and second-easy-small costs; associate available next turns with previous transition; mark last-turn switches as having no later observation.",
+    "status": "not_audited_here",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "replay_fidelity",
+    "criterion": "Every replay turn maps to its adaptive source; highlevel messages/model/schema, full HTTP bodies and history match; zero new selector calls; reused classifier metadata never counted as inference.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "resource_integrity",
+    "criterion": "No unexplained competing experiment, guard violation, telemetry loss, model overlap, boot/power/trip change or swap-topology change; every sequence cleanup verified.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "placement_and_output_length",
+    "criterion": "Report allocation size/size_vram, backend token counts, decode length/rate and timing by sequence/repetition; distinguish allocation ratio from exact compute placement.",
+    "status": "not_audited_here",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "paired_dependent_analysis",
+    "criterion": "Paired differences against both fixed systems and replay use matched sequence/repetition; show all patterns/repetitions; average repeats within sequence before descriptive resampling; no independent-turn sample claim.",
+    "status": "not_audited_here",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "semantic_review",
+    "criterion": "Frozen rubric and actual evidence used; failures receive technical_failure; blinded mapping covers every attempt; reviewer type, rationale, agreement and adjudication retained.",
+    "status": "not_audited_here",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "failure_preserving_quality",
+    "criterion": "Full-rubric success is distinct from JSON validity/delivery; fast failures and known-answer abstentions are not gains; social subset limitations stated.",
+    "status": "not_audited_here",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  },
+  {
+    "id": "artifacts_and_conclusion",
+    "criterion": "Raw traces, input/source hashes, CSV/JSON tables, figures, commands and original failures preserved; state cost recovery separately against each fixed system, which patterns benefited and remaining uncertainty.",
+    "status": "pass",
+    "scope": "Integrity evidence only; report presentation and answer correctness require separate review."
+  }
+]

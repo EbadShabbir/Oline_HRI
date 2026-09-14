@@ -1,0 +1,26 @@
+{
+  "result": "evaluation/changing_memory_20260914/final_analysis_verification_v3.json",
+  "sha256": "61af91a605a45047423a8c8ba704feccff801a47d4b8e84bd2d9c88191e4c38b",
+  "equal_non_diagnostic_rows": 288,
+  "changed_diagnostic_rows": 5,
+  "exact_failure_speech_pairs": 131,
+  "actual_selection_misses": 4,
+  "fixed_abstention_changes": 58,
+  "resource_summary": {
+    "telemetry_samples": 6450,
+    "sampled_temperature_max_c": 58.281,
+    "sampled_ram_used_mb_min": 4294,
+    "sampled_ram_used_mb_max": 6668,
+    "sampled_ram_total_mb": [
+      7620
+    ],
+    "sampled_swap_used_mb_min": 8,
+    "sampled_swap_used_mb_max": 448,
+    "start_capture_count": 85,
+    "finish_capture_count": 85,
+    "runtime_guard_violations": [],
+    "cleanup_errors": [],
+    "boundary_mem_available_kib_min": 1469760,
+    "limitations": "Telemetry RAM used is not Linux MemAvailable. Boundary captures and recorded runtime-guard outcomes do not prove unobserved instantaneous resource values. Ollama cached token counts show cache activity, not a source of answer content."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "created_at": "2026-09-14T13:43:48.788966+00:00",
+  "status": "passed",
+  "no_inference": true,
+  "scope": "Separate diagnostic matched repair tooling; frozen baseline unchanged; human validation pending.",
+  "new_analysis_tests": 5,
+  "original_auditor_tests": 10,
+  "commands": [
+    ".venv/bin/python evaluation/changing_memory_repair_20260914/test_repair_analysis_tools.py -v",
+    ".venv/bin/python evaluation/changing_memory_repair_20260914/test_repair_audit.py -v"
+  ],
+  "checks": [
+    "derive288and96fromschedule",
+    "rejecttruncationduplicatesandidentityclockrestartdrift",
+    "fulland96offlinepreparefrozenvotesresolvetables",
+    "packetblindingunchanged",
+    "ASTdiagnosticvoteaggregationandauditorfunctionsunchanged",
+    "incorrectauditcountandsealsrejected"
+  ],
+  "sha256": {
+    "analyze_repair.py": "7013efb9a06860d676b0d0922494ad65795841923dcebc5ae4e73519356b4cb8",
+    "audit_repair_collection.py": "9fa45da1bf11cbad582693c74dd12fc24be2254a309e3f13ae566a5c7b59d56f",
+    "render_repair_tables.py": "7e3150df11d1a7fead22c110d2dda20fe9a71310b9853d99dafe70e9f5e33318",
+    "test_repair_analysis_tools.py": "e3cc9e3cf66382695c85b9f35b6509cbb6e062740b1e3aed3a0e8e18ac18aa46",
+    "test_repair_audit.py": "f35e6ee4c49202300d9a9709ebdced5c251d1c6cb9e2da0f54fc1e84f2c4d970",
+    "analysis_tools_tests_v1.log": "eb4d16b5640570110887fff8b750637d36c6dfa8990eb463fcd500ab392899af",
+    "audit_tools_tests_v1.log": "909d8407b1d66a90dba22426ad5775490b86d3bf396d8e35b162727950c7589e"
+  },
+  "original_source_sha256": {
+    "scripts/analyze_changing_memory_v2.py": "65181ee60ac1064ac00fd27d956236d92bac343829cb0f56263bd2dd55297e00",
+    "evaluation/changing_memory_20260914/audit_collection.py": "5808d204cfc6b10ea5b8a7f15139d66c72fe52d875a0fcdd80a0bf996bab9ef5",
+    "evaluation/changing_memory_20260914/render_report_tables.py": "400ee2674fd411eef3f25cdd3f7f6864c047c81d0a710a046c8a0895475414c4",
+    "evaluation/changing_memory_20260914/audit_collection_tests.py": "55dc5e99741b4eb7524b1ce9990fe59342796ee5c1b0c8d26b04ea0314574eff"
+  }
+}

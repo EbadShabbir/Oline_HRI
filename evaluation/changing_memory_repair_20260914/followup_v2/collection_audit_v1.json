@@ -1,0 +1,1598 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-14T14:30:12.753560+00:00",
+  "scope": "Targeted matched regression integrity and coverage audit; not held-out. Answer correctness requires separate blinded review.",
+  "workload": {
+    "planned_checkpoints": 24,
+    "scenario_ids": [
+      "cm04"
+    ],
+    "scenario_count": 1,
+    "independent_databases": 3,
+    "scheduled_restarts": 3,
+    "scheduled_segments": 6,
+    "disclosures": 3,
+    "history_pairs": 9,
+    "stage_history_groups": 24,
+    "post_restart_checkpoints": 9
+  },
+  "limitations": "Process restart and controlled logical expiry only; no power-loss or spoken-performance claims.",
+  "auditor_script_sha256": "9fa45da1bf11cbad582693c74dd12fc24be2254a309e3f13ae566a5c7b59d56f",
+  "freeze_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/frozen_v1",
+  "run_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1",
+  "freeze_seal_sha256": "32c78a7b18264300899502ecad534379655816d266c8f834e8cb16da3b3bb069",
+  "run_seal_sha256": "eb12e1f02112920d96ccc6350695b7bb3382b03918e411ff631888461a6d2ac0",
+  "integrity_pass": true,
+  "integrity_checks": {
+    "sealed_directory": 11,
+    "seal_file_set": 11,
+    "seal_file_hash": 425,
+    "sealed_directory_readonly": 11,
+    "sealed_artifact_readonly": 471,
+    "planned_unique_checkpoints": 1,
+    "planned_scenarios_independent_branches": 1,
+    "independent_branch_types": 1,
+    "equivalent_initial_subject_fact": 1,
+    "frozen_source_hash": 41,
+    "current_source_hash": 41,
+    "reviewed_artifact_hash": 3,
+    "frozen_generation_options": 1,
+    "frozen_adaptive_policy": 1,
+    "frozen_installed_model_pair": 1,
+    "persistent_branch_database": 3,
+    "independent_database_inode": 3,
+    "scheduled_segment_exists": 6,
+    "resource_captures_present": 6,
+    "artifact_exists": 24,
+    "fresh_worker_process_identity": 6,
+    "launched_actual_worker_pid": 6,
+    "continuation_offset_no_replay": 6,
+    "serialized_http_start": 93,
+    "bytes_have_request": 93,
+    "byte_chunk_offset": 93,
+    "http_completion_has_start": 93,
+    "http_start_completion_match": 93,
+    "received_bytes_match_parsed_response": 93,
+    "actual_chat_options": 81,
+    "actual_chat_nonstream_no_thinking": 81,
+    "requested_installed_model": 81,
+    "no_oracle_fields_in_model_input": 81,
+    "returned_requested_model": 81,
+    "http_request_completion_preserved": 6,
+    "checkpoint_is_planned": 24,
+    "validation_delivery_link": 27,
+    "final_delivered_answer_link": 27,
+    "raw_answer_call_link": 27,
+    "delivered_generation_link": 27,
+    "model_call_has_http_request": 81,
+    "call_raw_payload_byte_link": 81,
+    "raw_generation_received_content": 81,
+    "checkpoint_expected_clock": 24,
+    "checkpoint_authored_question": 24,
+    "shared_retrieval_clock": 24,
+    "answer_process_identity": 27,
+    "same_database_inode_all_checkpoints": 27,
+    "recorded_history_presence_truthful": 27,
+    "shared_validation_clock": 24,
+    "fresh_history_is_empty": 9,
+    "http_chat_assigned_to_answer_attempt": 81,
+    "authored_operation_sequence": 6,
+    "shared_operation_clock": 46,
+    "scheduled_segment_operation_coverage": 6,
+    "restored_history_event": 3,
+    "exact_history_across_processes": 3,
+    "restored_ids": 3,
+    "restored_history": 3,
+    "restored_logical_time": 3,
+    "restored_saved_snapshot": 3,
+    "real_scheduled_process_restart": 3,
+    "complete_independent_branch_schedule": 3,
+    "all_operations_have_terminal_records": 3,
+    "actual_mutation_acknowledgement": 8,
+    "explicit_authored_mutation_authorization": 8,
+    "new_branch_initial_database_empty": 3,
+    "new_branch_initial_audit_empty": 3,
+    "independent_generated_memory_ids": 3,
+    "expiry_has_no_authored_forgetting": 1,
+    "expiry_has_no_real_forgetting": 1,
+    "all_planned_checkpoints_present": 1,
+    "unique_checkpoint_attempts": 1,
+    "all_scheduled_segments": 1,
+    "all_independent_databases": 1,
+    "collection_finish_record_exists": 1,
+    "collection_completed_status": 1,
+    "supervisor_fragment_count_matches_artifacts": 1
+  },
+  "integrity_violations": [],
+  "observed_system_failures": [],
+  "counts": {
+    "chat_http_requests": 81,
+    "answer_rows": 27,
+    "answer_status_delivered": 27,
+    "retained_history_expected": 14,
+    "retained_history_with_original_disclosure": 14,
+    "operations_started": 46,
+    "operations_finished": 46,
+    "mutation_remember": 6,
+    "mutation_correct": 1,
+    "mutation_forget": 1,
+    "purged_record_ids": 2,
+    "planned_checkpoints": 24,
+    "unique_observed_checkpoints": 24,
+    "scheduled_segments": 6,
+    "process_fragments": 6,
+    "extra_continuation_fragments": 0,
+    "independent_databases": 3,
+    "distinct_processes": 6
+  },
+  "branches": [
+    {
+      "branch_id": "cm04_correction",
+      "process_pids": [
+        47350,
+        47557
+      ],
+      "database_inode": [
+        45825,
+        3286986
+      ],
+      "checkpoints": 10,
+      "operation_count": 17,
+      "final_record_count": 3,
+      "final_audit_count": 3,
+      "mutation_counts": {
+        "remember": 2,
+        "correct": 1
+      }
+    },
+    {
+      "branch_id": "cm04_deletion",
+      "process_pids": [
+        47749,
+        47913
+      ],
+      "database_inode": [
+        45825,
+        3287034
+      ],
+      "checkpoints": 7,
+      "operation_count": 14,
+      "final_record_count": 1,
+      "final_audit_count": 3,
+      "mutation_counts": {
+        "remember": 2,
+        "forget": 1
+      }
+    },
+    {
+      "branch_id": "cm04_expiry",
+      "process_pids": [
+        47970,
+        48260
+      ],
+      "database_inode": [
+        45825,
+        3287081
+      ],
+      "checkpoints": 7,
+      "operation_count": 15,
+      "final_record_count": 0,
+      "final_audit_count": 2,
+      "mutation_counts": {
+        "remember": 2
+      }
+    }
+  ],
+  "history_exposure": {
+    "interpretation": "Literal old-value matching is a case-insensitive substring lower bound on exposure, not evidence of semantic absence, memory authorization, or answer correctness. Equivalent times, names, paraphrases and alternate formatting may not match. Forwarding witnesses intersect actual generation messages with history_before by exact role/content; system messages, the final current-request message and personal-memory evidence envelopes are excluded. Matching duplicate history indices identify equivalent candidate occurrences, not the unique originating turn.",
+    "counts": {
+      "all_scored_checkpoints": {
+        "checkpoints": 24,
+        "checkpoints_with_generation_call": 24,
+        "exact_original_statement_present": 14,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 14,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "history_mode=retained": {
+        "checkpoints": 15,
+        "checkpoints_with_generation_call": 15,
+        "exact_original_statement_present": 14,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 14,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "branch=correction": {
+        "checkpoints": 10,
+        "checkpoints_with_generation_call": 10,
+        "exact_original_statement_present": 5,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 5,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "history_mode=fresh": {
+        "checkpoints": 9,
+        "checkpoints_with_generation_call": 9,
+        "exact_original_statement_present": 0,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 0,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "after_restart": {
+        "checkpoints": 9,
+        "checkpoints_with_generation_call": 9,
+        "exact_original_statement_present": 5,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 5,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "branch=deletion": {
+        "checkpoints": 7,
+        "checkpoints_with_generation_call": 7,
+        "exact_original_statement_present": 5,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 5,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "branch=expiry": {
+        "checkpoints": 7,
+        "checkpoints_with_generation_call": 7,
+        "exact_original_statement_present": 4,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 4,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      }
+    },
+    "checkpoint_witnesses": [
+      {
+        "checkpoint_id": "cm04_correction_prestore",
+        "branch_id": "cm04_correction",
+        "history_mode": "retained",
+        "after_restart": false,
+        "exact_original_statement_present": false,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": false,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_correction_recalled",
+        "branch_id": "cm04_correction",
+        "history_mode": "retained",
+        "after_restart": false,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_correction_corrected_retained",
+        "branch_id": "cm04_correction",
+        "history_mode": "retained",
+        "after_restart": false,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_correction_corrected_fresh",
+        "branch_id": "cm04_correction",
+        "history_mode": "fresh",
+        "after_restart": false,
+        "exact_original_statement_present": false,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": false,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_correction_historical_retained",
+        "branch_id": "cm04_correction",
+        "history_mode": "retained",
+        "after_restart": false,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_correction_historical_fresh",
+        "branch_id": "cm04_correction",
+        "history_mode": "fresh",
+        "after_restart": false,
+        "exact_original_statement_present": false,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": false,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_correction_restart_retained",
+        "branch_id": "cm04_correction",
+        "history_mode": "retained",
+        "after_restart": true,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_correction_restart_fresh",
+        "branch_id": "cm04_correction",
+        "history_mode": "fresh",
+        "after_restart": true,
+        "exact_original_statement_present": false,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": false,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_correction_restart_historical_retained",
+        "branch_id": "cm04_correction",
+        "history_mode": "retained",
+        "after_restart": true,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_correction_restart_historical_fresh",
+        "branch_id": "cm04_correction",
+        "history_mode": "fresh",
+        "after_restart": true,
+        "exact_original_statement_present": false,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": false,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_deletion_recalled",
+        "branch_id": "cm04_deletion",
+        "history_mode": "retained",
+        "after_restart": false,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_deletion_deleted_retained",
+        "branch_id": "cm04_deletion",
+        "history_mode": "retained",
+        "after_restart": false,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_deletion_deleted_fresh",
+        "branch_id": "cm04_deletion",
+        "history_mode": "fresh",
+        "after_restart": false,
+        "exact_original_statement_present": false,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": false,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_deletion_deleted_historical_retained",
+        "branch_id": "cm04_deletion",
+        "history_mode": "retained",
+        "after_restart": false,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_deletion_restart_retained",
+        "branch_id": "cm04_deletion",
+        "history_mode": "retained",
+        "after_restart": true,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_deletion_restart_fresh",
+        "branch_id": "cm04_deletion",
+        "history_mode": "fresh",
+        "after_restart": true,
+        "exact_original_statement_present": false,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": false,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_deletion_restart_historical_retained",
+        "branch_id": "cm04_deletion",
+        "history_mode": "retained",
+        "after_restart": true,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_expiry_before_retained",
+        "branch_id": "cm04_expiry",
+        "history_mode": "retained",
+        "after_restart": false,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_expiry_before_fresh",
+        "branch_id": "cm04_expiry",
+        "history_mode": "fresh",
+        "after_restart": false,
+        "exact_original_statement_present": false,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": false,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_expiry_at_retained",
+        "branch_id": "cm04_expiry",
+        "history_mode": "retained",
+        "after_restart": false,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_expiry_at_fresh",
+        "branch_id": "cm04_expiry",
+        "history_mode": "fresh",
+        "after_restart": false,
+        "exact_original_statement_present": false,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": false,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_expiry_after_retained",
+        "branch_id": "cm04_expiry",
+        "history_mode": "retained",
+        "after_restart": false,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_expiry_restart_retained",
+        "branch_id": "cm04_expiry",
+        "history_mode": "retained",
+        "after_restart": true,
+        "exact_original_statement_present": true,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": true,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [
+          {
+            "history_before_index": 1,
+            "role": "user",
+            "content": "My walking partner is Elora Vale.",
+            "exact_original_statement": true,
+            "literal_original_value": true
+          },
+          {
+            "history_before_index": 2,
+            "role": "assistant",
+            "content": "{\"speech\":\"I don't have personal memories or information about Elora Vale.\",\"gesture_id\":\"NO_ACTION\",\"memory_used\":[]}",
+            "exact_original_statement": false,
+            "literal_original_value": true
+          }
+        ],
+        "forwarded_history_witnesses": []
+      },
+      {
+        "checkpoint_id": "cm04_expiry_restart_fresh",
+        "branch_id": "cm04_expiry",
+        "history_mode": "fresh",
+        "after_restart": true,
+        "exact_original_statement_present": false,
+        "exact_original_statement_forwarded": false,
+        "literal_original_value_present": false,
+        "literal_original_value_forwarded": false,
+        "literal_value_present_without_exact_statement": false,
+        "literal_value_forwarded_without_exact_statement": false,
+        "generation_call_indices": [
+          2
+        ],
+        "history_witnesses": [],
+        "forwarded_history_witnesses": []
+      }
+    ]
+  },
+  "actual_model_requests": [
+    {
+      "purpose": "compute_selector",
+      "model": "qwen3:0.6b",
+      "count": 27
+    },
+    {
+      "purpose": "generation",
+      "model": "qwen3:0.6b",
+      "count": 27
+    },
+    {
+      "purpose": "memory_selector",
+      "model": "qwen3:0.6b",
+      "count": 27
+    }
+  ],
+  "resource_fragments": [
+    {
+      "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial",
+      "status": "complete",
+      "cleanup_errors": [],
+      "samples": 65,
+      "maximum_temperature_c": 56.031,
+      "admission_only": false
+    },
+    {
+      "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart",
+      "status": "complete",
+      "cleanup_errors": [],
+      "samples": 48,
+      "maximum_temperature_c": 56.375,
+      "admission_only": false
+    },
+    {
+      "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial",
+      "status": "complete",
+      "cleanup_errors": [],
+      "samples": 48,
+      "maximum_temperature_c": 56.468,
+      "admission_only": false
+    },
+    {
+      "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart",
+      "status": "complete",
+      "cleanup_errors": [],
+      "samples": 39,
+      "maximum_temperature_c": 55.906,
+      "admission_only": false
+    },
+    {
+      "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial",
+      "status": "complete",
+      "cleanup_errors": [],
+      "samples": 55,
+      "maximum_temperature_c": 56.906,
+      "admission_only": false
+    },
+    {
+      "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/restart",
+      "status": "complete",
+      "cleanup_errors": [],
+      "samples": 30,
+      "maximum_temperature_c": 56.906,
+      "admission_only": false
+    }
+  ],
+  "received_bytes_call_links": [
+    {
+      "checkpoint_id": "cm04_correction_prestore",
+      "operation_id": "cm04_correction_op01",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:6",
+      "bytes_sha256": "befaaff4177edc9b1fbcb56eb7f5ef51f0b6e2ed8f102a3910481d0e376f3c60",
+      "received_bytes": 380
+    },
+    {
+      "checkpoint_id": "cm04_correction_prestore",
+      "operation_id": "cm04_correction_op01",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:9",
+      "bytes_sha256": "208ce3cfdfbd385d0fae8c1baa05d4651fbed0915161b732f33ca435bcc2043d",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm04_correction_prestore",
+      "operation_id": "cm04_correction_op01",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:12",
+      "bytes_sha256": "1af2b6faf1e5ec44ed8a3c442c72ab466dc465886243725f70471556828e8401",
+      "received_bytes": 497
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm04_correction_op02",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:15",
+      "bytes_sha256": "ae18c8af3c2f73c2266d81bfb409633eade6ec34480c12469402f69fabdbf999",
+      "received_bytes": 378
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm04_correction_op02",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:18",
+      "bytes_sha256": "1d89f4d7a832ef5bb8f2ef265a56e20385a2dab76ca854780d66d645637d86b3",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm04_correction_op02",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:21",
+      "bytes_sha256": "160414738af6cfe495f18d56f9b01c5cb475eb5d3b8e4bb9e49ec665ad694f7c",
+      "received_bytes": 472
+    },
+    {
+      "checkpoint_id": "cm04_correction_recalled",
+      "operation_id": "cm04_correction_op06",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:24",
+      "bytes_sha256": "3ca1a8d94005c4ec3006fdeb06edf4fb3b663b395366b5d284fdac6cfff88339",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm04_correction_recalled",
+      "operation_id": "cm04_correction_op06",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:27",
+      "bytes_sha256": "a977dd6db3352b4bf0e25f398fe58bb4d15b97a1893260dbe9e376011ab7aa24",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_correction_recalled",
+      "operation_id": "cm04_correction_op06",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:30",
+      "bytes_sha256": "3e23f3926ebe6936061f8c223068712d66b8865f9d46391b3bdf537088965d77",
+      "received_bytes": 446
+    },
+    {
+      "checkpoint_id": "cm04_correction_corrected_retained",
+      "operation_id": "cm04_correction_op09",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:33",
+      "bytes_sha256": "0f3d4e3600d744c02ffdf07b4c2f5dfbc41357069b7420d4193decdf9c201337",
+      "received_bytes": 383
+    },
+    {
+      "checkpoint_id": "cm04_correction_corrected_retained",
+      "operation_id": "cm04_correction_op09",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:36",
+      "bytes_sha256": "ee1bb328ab30b80533c63660e874e4103f45554ddbb896f65a647df62c9f7ed8",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_correction_corrected_retained",
+      "operation_id": "cm04_correction_op09",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:39",
+      "bytes_sha256": "1c53ce9d9900efe0cb7990f08cd1a73058499f6413ead895b03010923b9a4257",
+      "received_bytes": 470
+    },
+    {
+      "checkpoint_id": "cm04_correction_corrected_fresh",
+      "operation_id": "cm04_correction_op10",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:42",
+      "bytes_sha256": "5898866df1a22c48dd12c4c9f272e62f6934960eb4f18a9b4c433b35db65a6f9",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm04_correction_corrected_fresh",
+      "operation_id": "cm04_correction_op10",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:45",
+      "bytes_sha256": "05d3f6fc14449d87902c85bf79cecbf3ec006b0a2455844a7d415cff5b04c08d",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_correction_corrected_fresh",
+      "operation_id": "cm04_correction_op10",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:48",
+      "bytes_sha256": "53d5193f467ec5f2f167ad4473b3c58a9fcca30ec7970d75b127d3a7303d21d2",
+      "received_bytes": 469
+    },
+    {
+      "checkpoint_id": "cm04_correction_historical_retained",
+      "operation_id": "cm04_correction_op11",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:51",
+      "bytes_sha256": "b84a57ac01a9201574d8b9b4d386a1a6eb4ae8617f4a3db22e789ecda5565511",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm04_correction_historical_retained",
+      "operation_id": "cm04_correction_op11",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:54",
+      "bytes_sha256": "8be274206bb8656ad1b6a65dcb1e5e8a1d9246edbac1965d9a31585f43834326",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_correction_historical_retained",
+      "operation_id": "cm04_correction_op11",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:57",
+      "bytes_sha256": "de7c89e76c126d5cc3e64acec50c77fe292638a140ec9fa9d5a978d681e9c492",
+      "received_bytes": 480
+    },
+    {
+      "checkpoint_id": "cm04_correction_historical_fresh",
+      "operation_id": "cm04_correction_op12",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:60",
+      "bytes_sha256": "bc908433e6da4b5f7f32982fd4f08145b8e654f98598fb906e7c5a264287fe33",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm04_correction_historical_fresh",
+      "operation_id": "cm04_correction_op12",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:63",
+      "bytes_sha256": "c5ac78b1e951eb89c25a04c59e4b42580b6ef8fccf126ae3fb274e681b169389",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_correction_historical_fresh",
+      "operation_id": "cm04_correction_op12",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/http.jsonl:66",
+      "bytes_sha256": "d08d81d23468d3ead34f7793b79d6151bf5cd25979a1933d35ada320a386ee8f",
+      "received_bytes": 480
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_retained",
+      "operation_id": "cm04_correction_op15",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:6",
+      "bytes_sha256": "ec1519654e06ec8266bc73ae8eda9856053527da116d111ca9225a7ce559daab",
+      "received_bytes": 389
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_retained",
+      "operation_id": "cm04_correction_op15",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:9",
+      "bytes_sha256": "67ae8a3b47c4e301a232c3dde624edb65c5c9fa796f71432b348acc5f2f39dbd",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_retained",
+      "operation_id": "cm04_correction_op15",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:12",
+      "bytes_sha256": "e26315d620d5a2ad6baa18037467cfdb93bef1b23df939302acd6b654c1b370c",
+      "received_bytes": 468
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_fresh",
+      "operation_id": "cm04_correction_op16",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:15",
+      "bytes_sha256": "de26d240cd121aedd8c0d09b1635f3dd7b45f34bf17e5aff74e62f1baee971b8",
+      "received_bytes": 375
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_fresh",
+      "operation_id": "cm04_correction_op16",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:18",
+      "bytes_sha256": "228c9915f03051621d041438956b58eb99961973ac0c130ba5d2f16a343e1688",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_fresh",
+      "operation_id": "cm04_correction_op16",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:21",
+      "bytes_sha256": "12ec72f55160028de6fc9dc336dd38f1f91a628df0b89b39ddef9bb7e9002550",
+      "received_bytes": 469
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_historical_retained",
+      "operation_id": "cm04_correction_op17",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:24",
+      "bytes_sha256": "fa6e8d2b905003608889a6d2ddc5b6afc252e5344a5168b20b5f63f6c0fe7a8e",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_historical_retained",
+      "operation_id": "cm04_correction_op17",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:27",
+      "bytes_sha256": "e8eb72ee582d20fb05a1e1977567452aecf77d4fb7a8a005b020543c12ccaaab",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_historical_retained",
+      "operation_id": "cm04_correction_op17",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:30",
+      "bytes_sha256": "2595e31c6474af977e252d8e53413ed0ef0ac3e7fc8821e49dfb6dc7dffac51c",
+      "received_bytes": 481
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_historical_fresh",
+      "operation_id": "cm04_correction_op18",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:33",
+      "bytes_sha256": "386a649e1d07a060fa1ddc990d9856c0fc90971e3db497441e2ca3d474d9ebab",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_historical_fresh",
+      "operation_id": "cm04_correction_op18",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:36",
+      "bytes_sha256": "4d8a46645900942a85a2c553e70754080990024977dbbcf67a4a30a05178286f",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_correction_restart_historical_fresh",
+      "operation_id": "cm04_correction_op18",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/http.jsonl:39",
+      "bytes_sha256": "fa5ed7bd75206465ba07326da9cdd9e00d41387ae2b016cbb14d2cfcc9251747",
+      "received_bytes": 479
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm04_deletion_op01",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:6",
+      "bytes_sha256": "2293e97ece052ad65f12995884c3d9506a0f3b699117d798ea8814e3d45b6041",
+      "received_bytes": 382
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm04_deletion_op01",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:9",
+      "bytes_sha256": "aced4de3975a4fe39c4f90b00a58043bfc066c97976373e6747e08e28d6e4192",
+      "received_bytes": 349
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm04_deletion_op01",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:12",
+      "bytes_sha256": "dc73c220980dc1fb5b1a8cc4b8b1fd6adc2a6b3720072396406a21423b60f3ab",
+      "received_bytes": 471
+    },
+    {
+      "checkpoint_id": "cm04_deletion_recalled",
+      "operation_id": "cm04_deletion_op05",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:15",
+      "bytes_sha256": "49f4396d328fe9b2e9bdd717afc023a4dc1e30f5b9c21f25d837d7ff180d4057",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm04_deletion_recalled",
+      "operation_id": "cm04_deletion_op05",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:18",
+      "bytes_sha256": "af46b0251182e015f29f9eb89ef44e0a5e768f42c8090dc6c7e2711cd0369d7b",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_deletion_recalled",
+      "operation_id": "cm04_deletion_op05",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:21",
+      "bytes_sha256": "e1f7b783ed7214e6ac2735be8a470e5a693336950b9cc6dd75a71749ca26152b",
+      "received_bytes": 446
+    },
+    {
+      "checkpoint_id": "cm04_deletion_deleted_retained",
+      "operation_id": "cm04_deletion_op08",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:24",
+      "bytes_sha256": "76ddbae3d4e6709d49366be8470ea7e4753b781cca7e6eb2cf6bbcf771715e48",
+      "received_bytes": 382
+    },
+    {
+      "checkpoint_id": "cm04_deletion_deleted_retained",
+      "operation_id": "cm04_deletion_op08",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:27",
+      "bytes_sha256": "99b4419c09505ccaf4285d976ec0c2bb28b20b8a1e6bc08c2a169ea938cc64e3",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_deletion_deleted_retained",
+      "operation_id": "cm04_deletion_op08",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:30",
+      "bytes_sha256": "9b81e5c6f32156638262b15b7e92246590c1e9bf339b3847510f77fe0c646e98",
+      "received_bytes": 458
+    },
+    {
+      "checkpoint_id": "cm04_deletion_deleted_fresh",
+      "operation_id": "cm04_deletion_op09",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:33",
+      "bytes_sha256": "dc16dd64cdf810b83137e471da1814d3ea214ca1cdba5116ab519877d6e4d29f",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm04_deletion_deleted_fresh",
+      "operation_id": "cm04_deletion_op09",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:36",
+      "bytes_sha256": "f400b4d07d41b7d3169df638b3e6171e1c77c1ea48cb5985248a2ee8410d2e85",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_deletion_deleted_fresh",
+      "operation_id": "cm04_deletion_op09",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:39",
+      "bytes_sha256": "878a06fe5e1d138b01d0eaf55a480f32e388867aca28cdf21db8b18af155bbd9",
+      "received_bytes": 458
+    },
+    {
+      "checkpoint_id": "cm04_deletion_deleted_historical_retained",
+      "operation_id": "cm04_deletion_op10",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:42",
+      "bytes_sha256": "d5c97e8c2702975b6086a08c2bfe1af97a8edf172ee6d1c9e7e486641306e887",
+      "received_bytes": 384
+    },
+    {
+      "checkpoint_id": "cm04_deletion_deleted_historical_retained",
+      "operation_id": "cm04_deletion_op10",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:45",
+      "bytes_sha256": "940643d372e093afaf497a68439878a5c5640f88c2bbe19e800a1213d3b80b72",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_deletion_deleted_historical_retained",
+      "operation_id": "cm04_deletion_op10",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/http.jsonl:48",
+      "bytes_sha256": "703c6f3e45bd34332ee9d456c98482f976a301140bd25ef2596e07a9a24865e3",
+      "received_bytes": 420
+    },
+    {
+      "checkpoint_id": "cm04_deletion_restart_retained",
+      "operation_id": "cm04_deletion_op13",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/http.jsonl:6",
+      "bytes_sha256": "2bf662bf96fe78ac83e5f5d5f689de9bebba450e724d2e440ea7ae8d4f93d05f",
+      "received_bytes": 387
+    },
+    {
+      "checkpoint_id": "cm04_deletion_restart_retained",
+      "operation_id": "cm04_deletion_op13",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/http.jsonl:9",
+      "bytes_sha256": "ba53da328a79abe640c5058846bbd8a383113dcf225a388a1f9169182bd42cb4",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm04_deletion_restart_retained",
+      "operation_id": "cm04_deletion_op13",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/http.jsonl:12",
+      "bytes_sha256": "0dd76a73909a08d2981488e8fc9a14aa104ccfefc14a2d839d36d60de311aad1",
+      "received_bytes": 459
+    },
+    {
+      "checkpoint_id": "cm04_deletion_restart_fresh",
+      "operation_id": "cm04_deletion_op14",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/http.jsonl:15",
+      "bytes_sha256": "95381162a6e47ddacbc0ab40f6aa3446cb9c9a85ac4d6ea0274258974498d291",
+      "received_bytes": 375
+    },
+    {
+      "checkpoint_id": "cm04_deletion_restart_fresh",
+      "operation_id": "cm04_deletion_op14",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/http.jsonl:18",
+      "bytes_sha256": "c6c04310f73ee180a02db916375844d6889d73dd39270247e446f31dc81c4344",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_deletion_restart_fresh",
+      "operation_id": "cm04_deletion_op14",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/http.jsonl:21",
+      "bytes_sha256": "c588390b8fa2471e15054c3c1e2c47b546da7ab7f7439de323af7d5beb392aa1",
+      "received_bytes": 460
+    },
+    {
+      "checkpoint_id": "cm04_deletion_restart_historical_retained",
+      "operation_id": "cm04_deletion_op15",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/http.jsonl:24",
+      "bytes_sha256": "69be5059540fa2afe4def12aaab17d8926c40e4579fa51526f5d80fb7cf35128",
+      "received_bytes": 384
+    },
+    {
+      "checkpoint_id": "cm04_deletion_restart_historical_retained",
+      "operation_id": "cm04_deletion_op15",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/http.jsonl:27",
+      "bytes_sha256": "ce39f65f8f8a7d626de26ad632641e3e52c2d3e88841a6f3c6aac150e4f0ddb3",
+      "received_bytes": 352
+    },
+    {
+      "checkpoint_id": "cm04_deletion_restart_historical_retained",
+      "operation_id": "cm04_deletion_op15",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/http.jsonl:30",
+      "bytes_sha256": "608dd1126b886c465d6d179840b72b60bb4c8bbe38feb30e497a6880c1764392",
+      "received_bytes": 420
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm04_expiry_op01",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:6",
+      "bytes_sha256": "e032ef89e922fa3c835d27aed84e2f411590d359c8a1d236300d76577d449b30",
+      "received_bytes": 382
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm04_expiry_op01",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:9",
+      "bytes_sha256": "1e84e94d680ba632ef779e54bf22f8b5cf522601af5b99e173e55a8daf37e7ff",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm04_expiry_op01",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:12",
+      "bytes_sha256": "c93151e87b864c4575e13c2798c03359f501c2ce9d3e00319bbb11435f7479ef",
+      "received_bytes": 470
+    },
+    {
+      "checkpoint_id": "cm04_expiry_before_retained",
+      "operation_id": "cm04_expiry_op06",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:15",
+      "bytes_sha256": "0d18c3da732aef77f28ac51e3e1a78cf09af3747a00332ad154c5d1d7f159e27",
+      "received_bytes": 383
+    },
+    {
+      "checkpoint_id": "cm04_expiry_before_retained",
+      "operation_id": "cm04_expiry_op06",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:18",
+      "bytes_sha256": "f70d22b44e09b675db73f7a1b0114ea3d71f2152ca1bfa8a87c9a4410141cc9a",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_expiry_before_retained",
+      "operation_id": "cm04_expiry_op06",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:21",
+      "bytes_sha256": "a7a57d5919e2682cba61f665ae9eeedbb8a0fd7a76ac32ead6aa0785850743dd",
+      "received_bytes": 469
+    },
+    {
+      "checkpoint_id": "cm04_expiry_before_fresh",
+      "operation_id": "cm04_expiry_op07",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:24",
+      "bytes_sha256": "6ff63477f3c1113f1a0dd3e7f65135b7c0ee259b1dffbabb4f7d0e6118afaa8e",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm04_expiry_before_fresh",
+      "operation_id": "cm04_expiry_op07",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:27",
+      "bytes_sha256": "22069e351e1d58307e3e713aa45979f1a9afe277e42ecde1b0e27444760f26d4",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_expiry_before_fresh",
+      "operation_id": "cm04_expiry_op07",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:30",
+      "bytes_sha256": "9359bad679266fc14d88caa02faa88b6cea4f22db42589927765d4876fa0fd91",
+      "received_bytes": 470
+    },
+    {
+      "checkpoint_id": "cm04_expiry_at_retained",
+      "operation_id": "cm04_expiry_op09",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:33",
+      "bytes_sha256": "0b9b323bbf89fb340e574e997f3a856403a31afa865de9257a3d8816eedabe7d",
+      "received_bytes": 384
+    },
+    {
+      "checkpoint_id": "cm04_expiry_at_retained",
+      "operation_id": "cm04_expiry_op09",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:36",
+      "bytes_sha256": "b86b054e7a810fac56036b8f3d125165e7d3d9a8459c5854d0a1ba0e16640170",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_expiry_at_retained",
+      "operation_id": "cm04_expiry_op09",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:39",
+      "bytes_sha256": "d1a089c4712a52c7fd699d8b1dc91acc3962e54ff3437b57cd134629aa76b5c9",
+      "received_bytes": 457
+    },
+    {
+      "checkpoint_id": "cm04_expiry_at_fresh",
+      "operation_id": "cm04_expiry_op10",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:42",
+      "bytes_sha256": "0965eadbe132895b9277de5dc4ceec04079e90a1acedf1509963787b920d2e4d",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm04_expiry_at_fresh",
+      "operation_id": "cm04_expiry_op10",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:45",
+      "bytes_sha256": "00ca4c1a427cba862c726426acd9f6a50c958c79f1e9c819391a135c61f3832b",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_expiry_at_fresh",
+      "operation_id": "cm04_expiry_op10",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:48",
+      "bytes_sha256": "0d12eb56ddaca0f9b6ac5253e53e74f8922191cb03064a7225f5fcc9509e44d7",
+      "received_bytes": 457
+    },
+    {
+      "checkpoint_id": "cm04_expiry_after_retained",
+      "operation_id": "cm04_expiry_op12",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:51",
+      "bytes_sha256": "3aa81105657f537795761207e4623ccc2a9d761345f81b26bce682644a22bf5b",
+      "received_bytes": 384
+    },
+    {
+      "checkpoint_id": "cm04_expiry_after_retained",
+      "operation_id": "cm04_expiry_op12",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:54",
+      "bytes_sha256": "491810e8f99cdf7e715c5880afbf2830cad3a76fc02916bf026e1d994fd60863",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_expiry_after_retained",
+      "operation_id": "cm04_expiry_op12",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/http.jsonl:57",
+      "bytes_sha256": "975b06c66fd1990b80740f11b93c768ac47286ebb254dd6ed4e1763f631aeebf",
+      "received_bytes": 458
+    },
+    {
+      "checkpoint_id": "cm04_expiry_restart_retained",
+      "operation_id": "cm04_expiry_op15",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/restart/http.jsonl:6",
+      "bytes_sha256": "1dee25221d00d4d47d664ef2354a960ac97c9318f01fb9faa1b81757cf51184d",
+      "received_bytes": 387
+    },
+    {
+      "checkpoint_id": "cm04_expiry_restart_retained",
+      "operation_id": "cm04_expiry_op15",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/restart/http.jsonl:9",
+      "bytes_sha256": "142e78e3e1002d256957d9b6e3270bd9b4c0d37f1e91d55c72824b1f7666937a",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm04_expiry_restart_retained",
+      "operation_id": "cm04_expiry_op15",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/restart/http.jsonl:12",
+      "bytes_sha256": "3500caf4b7286187009df3dcbd77d8f7714376fcee98bb04d99827edcea757e7",
+      "received_bytes": 459
+    },
+    {
+      "checkpoint_id": "cm04_expiry_restart_fresh",
+      "operation_id": "cm04_expiry_op16",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/restart/http.jsonl:15",
+      "bytes_sha256": "f561d5e40d89cf1cbb506315ded102649963b0c8c950308368a5abd88e4468dd",
+      "received_bytes": 375
+    },
+    {
+      "checkpoint_id": "cm04_expiry_restart_fresh",
+      "operation_id": "cm04_expiry_op16",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/restart/http.jsonl:18",
+      "bytes_sha256": "e838ecf0c4c7a0d7fff48b223606eb35098d6352b6ab75722da8691553093a3f",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm04_expiry_restart_fresh",
+      "operation_id": "cm04_expiry_op16",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/restart/http.jsonl:21",
+      "bytes_sha256": "0be6e035c47a7d8aa157f04063d927d15f1201681b76d160d81a48be1f6d3eff",
+      "received_bytes": 459
+    }
+  ]
+}

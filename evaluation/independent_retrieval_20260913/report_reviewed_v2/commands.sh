@@ -1,0 +1,2 @@
+# Offline renderer only. Use a new output directory.
+/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/bin/python /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/report_independent_retrieval.py --analysis /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/analysis_reviewed_v1 --output /absolute/path/to/a/new/report-directory --review-provenance /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/reviews_verified_v1/review_agreement.json

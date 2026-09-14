@@ -1,0 +1,32 @@
+{
+  "created_at": "2026-09-12T12:09:48.389028+00:00",
+  "scope": "User-requested separate large-only first repetition; no other arms or repeated small session launched",
+  "arm": "large",
+  "repetition": 1,
+  "planned_attempts": 48,
+  "session_directory": "02_large_r1",
+  "frozen_source_files_verified": 40,
+  "freeze_sha256": "3711cb8a8c51e28aa956f74275c651c7da4ba44cd58c73c1cfeccff6ce710c2d",
+  "workload_sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+  "device_policy": {
+    "fan_required": true,
+    "max_runtime_swap_used_kib": 1048576,
+    "max_runtime_temperature_c_exclusive": 68.0,
+    "max_start_swap_used_kib": 786432,
+    "max_start_temperature_c_exclusive": 55.0,
+    "maximum_resident_models": 1,
+    "min_runtime_available_kib": 786432,
+    "min_start_available_kib": 2097152,
+    "persistent_system_changes": false,
+    "policy_id": "complete_system_stage2_common_device_limits_v1",
+    "power_mode": "15W mode 0",
+    "prior_arc_limits_reused": false,
+    "scope": "all three Stage 2 arms; embeddings through final cleanup",
+    "telemetry_interval_ms": 500,
+    "telemetry_stall_ceiling_seconds": 5,
+    "unchanged_boot_and_thermal_trip_counters": true
+  },
+  "prior_small_session": "../run_v1/01_small_r1",
+  "interpretation": "A separately started session, not completion or resumption of the interrupted originalbatch. The original small result is preserved; actual device placement/state will accompany any comparison.",
+  "failure_policy": "The unchanged single-session runner checks startup before inference and preserves any interruption; no threshold relaxation, system configuration changes or tail stitching."
+}

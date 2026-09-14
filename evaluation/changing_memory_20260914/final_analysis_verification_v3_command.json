@@ -1,0 +1,28 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evaluation/changing_memory_20260914/verify_final_analysis_v3.py",
+    "--experiment",
+    "evaluation/changing_memory_20260914",
+    "--output",
+    "evaluation/changing_memory_20260914/final_analysis_verification_v3.json"
+  ],
+  "cwd": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI",
+  "started_at": "2026-09-14T13:21:17.780091+00:00",
+  "finished_at": "2026-09-14T13:21:18.859730+00:00",
+  "returncode": 0,
+  "sha256": {
+    "evaluation/changing_memory_20260914/verify_final_analysis_v3.py": "af8db44a05a9448cdd98b60f0ee34f1efba3bc802d8e751c1e9d9579a0c7901f",
+    "evaluation/changing_memory_20260914/final_analysis_verification_v3.log": "e5418f7e3c9dc3fe20da0c3676344792f24c88fd0fc0f2433d3a039793bb1650",
+    "evaluation/changing_memory_20260914/final_analysis_verification_v3.json": "61af91a605a45047423a8c8ba704feccff801a47d4b8e84bd2d9c88191e4c38b"
+  },
+  "prior_failed_wrappers": [
+    "evaluation/changing_memory_20260914/final_analysis_verification_v1.log",
+    "evaluation/changing_memory_20260914/final_analysis_verification_v2.log"
+  ],
+  "wrapper_corrections": [
+    "Removed byte-equality requirement for answers.md because that rendering includes intentionally amended diagnostics.",
+    "Restricted resource start/finish captures to the85 audited worker fragments; the previous recursive glob also included the collection-level finish.json with a different schema."
+  ],
+  "analysis_runtime_or_judgment_changes": false
+}

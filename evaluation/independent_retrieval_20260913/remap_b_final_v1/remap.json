@@ -1,0 +1,51 @@
+{
+  "batches": [
+    {
+      "batch_index": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_b_cohort_v1",
+      "identity_aliases": [
+        "/root/prepare_dataset/blinded_reviewer_b"
+      ],
+      "reviewer": "/root/prepare_dataset/blinded_reviewer_b",
+      "seal_sha256": "607b29fb307f25e17625b29cbd7ad2f534d7672413b1d691874ca77633ed0c37"
+    },
+    {
+      "batch_index": 1,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_b_cohort_v2_additional",
+      "identity_aliases": [
+        "/root/prepare_dataset/blinded_reviewer_b"
+      ],
+      "reviewer": "/root/prepare_dataset/blinded_reviewer_b",
+      "seal_sha256": "fe9ef1df641dcec381568988e1c7e3b12f3f68df6c27b94f0fdfca3a94309556"
+    },
+    {
+      "batch_index": 2,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_b_cohort_v3_additional",
+      "identity_aliases": [
+        "/root/prepare_dataset/blinded_reviewer_b"
+      ],
+      "reviewer": "/root/prepare_dataset/blinded_reviewer_b",
+      "seal_sha256": "524a529e2578d17da50c7276bf76fdb6abde1e69444a099b6a5b695586168f7a"
+    },
+    {
+      "batch_index": 3,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_b_cohort_v4_additional",
+      "identity_aliases": [
+        "/root/prepare_dataset/blinded_reviewer_b"
+      ],
+      "reviewer": "/root/prepare_dataset/blinded_reviewer_b",
+      "seal_sha256": "1e4e0f23f4a4ca81340b6d481964ed963abc670a73ba6918e946bd10aaeb2e3b"
+    }
+  ],
+  "conflict_rule": "conflicting prior score vectors require an explicit new missing-packet judgment",
+  "groups": 159,
+  "identity_aliases": [
+    "/root/prepare_dataset/blinded_reviewer_b"
+  ],
+  "matching_rule": "exact canonical public packet content excluding only review_id; no observation/model/condition mapping",
+  "missing_groups": 9,
+  "private_mapping_read": false,
+  "rationale_rule": "equal label and five flags allow reuse of first exact original rationale; all originals retained",
+  "reused_groups": 150,
+  "reviewer": "/root/prepare_dataset/blinded_reviewer_b"
+}

@@ -1,0 +1,42 @@
+{
+  "adjudicated_count": 12,
+  "agreement_count": 147,
+  "agreement_fields": [
+    "label",
+    "unsupported_claim",
+    "unsupported_personal_claim",
+    "abstained",
+    "explicit_conflict",
+    "forbidden_disclosure"
+  ],
+  "agreement_fraction": 0.9245283018867925,
+  "comparison_seal_sha256": "9b062aba17ff83555ff39afa17a521cbdd54617d8b9cb9659d009547c40eb72b",
+  "disagreement_count": 12,
+  "human_validation": "pending",
+  "mapping_coverage_complete": null,
+  "mapping_coverage_status": "not checked; judgments frozen before private mapping access",
+  "mapping_read": false,
+  "rationale_only_difference_counts_as_disagreement": false,
+  "resolution_rule": "Agreements retain first review's exact judgment, including rationale; both exact original sheets retained. Disagreements use only the third assistant's supplied judgment.",
+  "resolved_groups": 159,
+  "resolved_reviews_sha256": "97c06a405564e4d2243370e6df473432fff0bc8d3caa371c5caf725248f823f9",
+  "review_kind": "independent blinded assistant review",
+  "reviewer_provenance": {
+    "adjudicator": {
+      "identity": "/root/audit_design/blind_adjudicator",
+      "sheet": "original_adjudication.jsonl"
+    },
+    "identity_and_independence": "caller-provided; separate assistant contexts required by workflow",
+    "reviewers": [
+      {
+        "identity": "/root/inspect_harness/blinded_reviewer_a",
+        "sheet": "original_review_a.jsonl"
+      },
+      {
+        "identity": "/root/prepare_dataset/blinded_reviewer_b",
+        "sheet": "original_review_b.jsonl"
+      }
+    ]
+  },
+  "total_groups": 159
+}

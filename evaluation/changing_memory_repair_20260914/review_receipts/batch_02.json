@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-09-14T14:16:33.606856+00:00",
+  "packet_sha256": "d8efa60c57ef9ff32d2abc7f60010370062e3c8e840e9ead58508278b33ddd7d",
+  "groups": 25,
+  "checkpoints": 48,
+  "original_review_source_paths": {
+    "a": "/tmp/clara-answer-reader-a-20260914b/judgments/batch_02.json",
+    "b": "/tmp/clara-answer-reader-b-20260914b/judgments/batch_02.json"
+  },
+  "review_sha256": {
+    "a": "51d49a7fef0006e699bcc57d996ceb2ccc6e5a301d59193e8c03b376a8ef912b",
+    "b": "bf32e8f22476518f008fd8b8029fe60f1ad4ab4adbc6770312cdd52d4a58ce71"
+  },
+  "semantic_disagreements": [],
+  "original_judgments_frozen_before_diagnostics": true,
+  "human_validation": "pending"
+}

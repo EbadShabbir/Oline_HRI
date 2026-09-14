@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-09-12T15:52:08.693296+00:00",
+  "observed_attempts": 20,
+  "all_unique_groups": 12,
+  "new_groups": 12,
+  "adapter_sha256": "fdd38372fdbd51f6e00f010bb1e5f344eb4c34bb0254b94578c6d203072b1cfd",
+  "workload_sha256": "d8e2cd9a03accbdfb2a81a79045dba92485a8f6a94a4c3ddec095cd7c2fddd8b",
+  "previous_packet_sha256": {},
+  "grouping": "exact frozen question, history, rubric, prepared and supplied evidence, citations, delivered answer, delivery status and helper constraint",
+  "scope": "offline blinded review only; no timing/source/settings changes"
+}

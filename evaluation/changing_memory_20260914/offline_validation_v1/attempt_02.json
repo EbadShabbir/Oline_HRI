@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_changing_memory",
+    "-v"
+  ],
+  "cwd": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI",
+  "started_at": "2026-09-14T11:43:09.909720+00:00",
+  "scope": "offline synthetic inference only; not experimental live observations",
+  "source_sha256": {
+    "scripts/run_changing_memory.py": "4b8102177858572e1a5244d443c798d53bf48b34743d93858412c2418972d893",
+    "tests/test_changing_memory.py": "2c1717af83ed553cdd2426acf15bdeaa57a340d36d9c808a1ece5a65c78fd730"
+  },
+  "returncode": 0,
+  "finished_at": "2026-09-14T11:43:30.726875+00:00",
+  "log_sha256": "fe92ad539f58dd673dd8732712ce42d9eec5f14e5c682e77f84a1f6468aa0ef2"
+}

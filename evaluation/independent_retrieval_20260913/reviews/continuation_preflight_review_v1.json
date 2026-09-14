@@ -1,0 +1,107 @@
+{
+  "approved": true,
+  "authorized_run_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2",
+  "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v1",
+  "created_at": "2026-09-13T17:03:13.512279+00:00",
+  "human_validation": "pending",
+  "new_authorized_attempts": 707,
+  "next_attempt": {
+    "case_id": "ir_04_04",
+    "scheduled_index": 14,
+    "slot": 4
+  },
+  "original_execution_sources_unchanged": 44,
+  "original_freeze_seal_sha256": "fda698a52067906e3a071c36dee68d3abb579f5b9c199533cd731708a717a9fd",
+  "primary_answer_text_semantically_reviewed": false,
+  "primary_metadata_seen": true,
+  "prior_run_seal_sha256": "e2e0afa7c8a645bfd8cd5060dcc1d825058f8db4acee28e615b798d692b08a9c",
+  "protocol_sha256": "541a588a35c8ece2b2341e84e312d03923f049ee2381b73070266bbc3bb4d208",
+  "reporting_conditions": [
+    "Preserve the interrupted attempt as failure; it is never replaced by a later successful attempt.",
+    "Report18 planned logical condition blocks and at least19 physical fragments, with physical cold-first status distinct from original schedule position.",
+    "Retain interrupted time and additional cold loading in primary request-time denominators; aggregate fragment setup/cleanup/loading costs separately.",
+    "Original fatal-fragment supervisor overhead remains unavailable where no exact observation exists; do not impute zero.",
+    "Keep inter-run/request-boundary gaps distinct from bounded admission waiting and request latency; do not integrate energy across gaps.",
+    "All repeated-attempt pairing and frozen success rubrics remain unchanged; human validation remains pending."
+  ],
+  "resolved_findings": [
+    "Independent approval, continuation plan and per-admission ledger each bind exact one-use output directories; stale plans/ledgers cannot move to a new output to replay attempted requests.",
+    "Worker baseline path must be the sealed original baseline and actual guard controls stay unchanged.",
+    "Actual prepared SQLite, setup hash, prior controls, all request-start/observation pairs and strict global frozen prefix are verified.",
+    "Cross-fragment request chronology and exact nonnegative request spans are checked.",
+    "Continuation ancestry, source archives, copied independent reviews, protocols, ledger provenance and retained rejection references are verified; cycles and altered prior prefixes are rejected.",
+    "Sealed positive157-to192 chain authorizes only the next slot5 suffix; a genuine one-attempt fatal fragment cannot serve as zero-attempt retry proof.",
+    "Original run_cases, adapter, backend/client, sole model, decoding, helpers, fresh history, cleanup and durable interruption behavior run unchanged.",
+    "Every nonzero-attempt fatal fragment stops this collection and requires a newly reviewed immutable continuation for any remaining requests."
+  ],
+  "retained_attempts": 157,
+  "retained_delivered": 156,
+  "retained_interrupted_failures": 1,
+  "retained_zero_request_admission_rejections": 11,
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Prospective suffix-continuation orchestration approval after a preserved resource interruption; this does not alter original questions, memory, references, inference implementation, models, settings, policies, rubrics or guards.",
+  "source_authored_by_reviewer": false,
+  "source_sha256": {
+    "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+    "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+    "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+    "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+  },
+  "validation": {
+    "command": "PYTHONPATH=src:scripts:tests .venv/bin/python -m unittest -v tests.test_retrieval_continuation tests.test_retrieval_fragment_worker",
+    "errors": 0,
+    "failures": 0,
+    "independent_actual_prefix_metadata_audit": {
+      "auditor_sha256": "12b4f1442dd5816d23da98019eabed6e236ebdbe438d22e37c8ac6d21578b339",
+      "created_at": "2026-09-13T17:02:38.317953+00:00",
+      "fragments": [
+        {
+          "attempted": 48,
+          "slot": 1,
+          "status": "complete"
+        },
+        {
+          "attempted": 48,
+          "slot": 2,
+          "status": "complete"
+        },
+        {
+          "attempted": 48,
+          "slot": 3,
+          "status": "complete"
+        },
+        {
+          "attempted": 13,
+          "slot": 4,
+          "status": "interrupted"
+        }
+      ],
+      "freeze_seal_sha256": "fda698a52067906e3a071c36dee68d3abb579f5b9c199533cd731708a717a9fd",
+      "human_validation": "pending",
+      "next_case_id": "ir_04_04",
+      "next_scheduled_index": 14,
+      "next_slot": 4,
+      "observed_attempts": 157,
+      "original_sources_unchanged": 44,
+      "passed": true,
+      "preserved_rejected_admissions": 11,
+      "prior_run_seal_sha256": "e2e0afa7c8a645bfd8cd5060dcc1d825058f8db4acee28e615b798d692b08a9c",
+      "remaining_attempts": 707,
+      "reviewer": "independent assistant /root/audit_design",
+      "scope": "Independent metadata arithmetic and seals; no answer text printed or semantically judged.",
+      "status_counts": {
+        "interrupted": 1,
+        "ok": 156
+      }
+    },
+    "inference": "Fake HTTP and fake embeddings only; no new model inference.",
+    "passed": 17,
+    "seconds": 9.384,
+    "tests": 17
+  },
+  "validation_sha256": {
+    "evaluation/independent_retrieval_20260913/reviews/continuation_prefix_metadata_v1.json": "bae221688876a803da5df2754668d5cf1eed6abe85f0ed2857d910363e8f41de",
+    "evaluation/independent_retrieval_20260913/reviews/continuation_validation_v1.txt": "29a09f316c86fe4729289c81e8ca03c2ff1a07279b94d0fc906f9844a4ad6535",
+    "evaluation/independent_retrieval_20260913/reviews/independent_continuation_prefix_audit.py": "12b4f1442dd5816d23da98019eabed6e236ebdbe438d22e37c8ac6d21578b339"
+  }
+}

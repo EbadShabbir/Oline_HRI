@@ -1,0 +1,3 @@
+{"answer_id": "bf72f62886577662bd383d8d", "label": "incorrect", "unsupported_claim": true, "unsupported_personal_claim": false, "rationale": "Includes 21, 31, and 32 as valid despite their descending digits; the answer must contain exactly 12, 13, and 23."}
+{"answer_id": "6fb1aca7476f5dabe4f15b73", "label": "incorrect", "unsupported_claim": true, "unsupported_personal_claim": false, "rationale": "Falsely calls all six permutations valid; 21, 31, and 32 violate the first-digit-smaller constraint."}
+{"answer_id": "a67012678a16dc5225c3402b", "label": "incorrect", "unsupported_claim": true, "unsupported_personal_claim": false, "rationale": "Falsely totals A as 22 minutes and selects it by three minutes; A totals 26, so B at 25 is faster by one minute."}

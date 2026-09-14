@@ -1,0 +1,5432 @@
+{
+  "schema_version": "dependency_corpus_v1",
+  "scope": "Expanded synthetic development corpus plus 35 observed regression rows deliberately assigned to training. Calibration fits margins and compares six declared settings; it is not a release estimate. The independent release corpus remains untouched.",
+  "sources": {
+    "dependency_training_v1.json": "266850cfd685140b8282d1d3a0f502d10858785bf8676f6792c2832971d14bd3",
+    "dependency_training_expansion_v2.json": "96c624f001f92d970ecfe9b8d3185b93375f0d749facbf1de5eb747c289c68ba",
+    "dependency_observed_regressions_v2.json": "da5afa1c23ef26c2ca0bee8c48b32581c58b19c3110cbb703dbc0aabe65bc2c0"
+  },
+  "cases": [
+    {
+      "id": "pottery_glaze_none",
+      "group": "pottery_glaze",
+      "domain": "creative_hobbies",
+      "split": "train",
+      "text": "I have a white bowl and blue and green glaze. Suggest a simple two-color pattern.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "pottery_glaze_optional",
+      "group": "pottery_glaze",
+      "domain": "creative_hobbies",
+      "split": "train",
+      "text": "Suggest a glaze pattern; use any saved color preference if one is available, otherwise choose a simple combination.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "pottery_glaze_required",
+      "group": "pottery_glaze",
+      "domain": "creative_hobbies",
+      "split": "train",
+      "text": "Which glaze color did I choose for the bowl in our previous conversation?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "pottery_glaze_clarify",
+      "group": "pottery_glaze",
+      "domain": "creative_hobbies",
+      "split": "train",
+      "text": "The glaze one, could you make it more like the other?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "windowsill_herbs_none",
+      "group": "windowsill_herbs",
+      "domain": "gardening",
+      "split": "train",
+      "text": "My windowsill gets four hours of sun and I can water twice a week. Compare growing mint and parsley there.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "windowsill_herbs_optional",
+      "group": "windowsill_herbs",
+      "domain": "gardening",
+      "split": "train",
+      "text": "Recommend a windowsill herb. If you remember a cooking preference, you may use it, but a general recommendation is fine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "windowsill_herbs_required",
+      "group": "windowsill_herbs",
+      "domain": "gardening",
+      "split": "train",
+      "text": "Make an herb-care plan that follows the sunlight and watering limits I already gave you.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "windowsill_herbs_clarify",
+      "group": "windowsill_herbs",
+      "domain": "gardening",
+      "split": "train",
+      "text": "Should I put that there or leave it where it was?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "rail_trip_none",
+      "group": "rail_trip",
+      "domain": "travel",
+      "split": "train",
+      "text": "The train leaves at 10:40 and boarding closes ten minutes before that. What is the boarding deadline?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "rail_trip_optional",
+      "group": "rail_trip",
+      "domain": "travel",
+      "split": "train",
+      "text": "Suggest things to do on a train journey. Feel free to tailor them to saved interests, but do not wait for those details.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "rail_trip_required",
+      "group": "rail_trip",
+      "domain": "travel",
+      "split": "train",
+      "text": "What departure time is on the train booking I told you about? Explain what a platform number means.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain what a platform number means."
+    },
+    {
+      "id": "rail_trip_clarify",
+      "group": "rail_trip",
+      "domain": "travel",
+      "split": "train",
+      "text": "Can you check whether the later one is the right one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "desk_setup_none",
+      "group": "desk_setup",
+      "domain": "household",
+      "split": "train",
+      "text": "I am rearranging a desk that is 120 centimeters wide. The screen takes 50 and the lamp takes 20. How much width remains?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare using one large desk surface with two small work surfaces."
+        },
+        {
+          "role": "assistant",
+          "content": "One large surface keeps equipment together; two surfaces separate activities."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "desk_setup_optional",
+      "group": "desk_setup",
+      "domain": "household",
+      "split": "train",
+      "text": "Give me general desk-organization ideas, with suggestions based on my usual work habits only if those are available.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare using one large desk surface with two small work surfaces."
+        },
+        {
+          "role": "assistant",
+          "content": "One large surface keeps equipment together; two surfaces separate activities."
+        }
+      ],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "desk_setup_required",
+      "group": "desk_setup",
+      "domain": "household",
+      "split": "train",
+      "text": "Arrange the desk around the equipment measurements I previously saved.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare using one large desk surface with two small work surfaces."
+        },
+        {
+          "role": "assistant",
+          "content": "One large surface keeps equipment together; two surfaces separate activities."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "desk_setup_clarify",
+      "group": "desk_setup",
+      "domain": "household",
+      "split": "train",
+      "text": "Move the thing on the left a little over.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare using one large desk surface with two small work surfaces."
+        },
+        {
+          "role": "assistant",
+          "content": "One large surface keeps equipment together; two surfaces separate activities."
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "picnic_food_none",
+      "group": "picnic_food",
+      "domain": "food",
+      "split": "calibration",
+      "text": "Plan a picnic for three people using six rolls, apples, and a container of hummus. All ingredients and headcounts are here.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare a seated picnic with a walking snack break."
+        },
+        {
+          "role": "assistant",
+          "content": "A seated picnic suits a full meal; a walking break suits compact snacks."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "picnic_food_optional",
+      "group": "picnic_food",
+      "domain": "food",
+      "split": "calibration",
+      "text": "Suggest a picnic menu; a remembered preference can help, but use a general menu if you have none.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare a seated picnic with a walking snack break."
+        },
+        {
+          "role": "assistant",
+          "content": "A seated picnic suits a full meal; a walking break suits compact snacks."
+        }
+      ],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "picnic_food_required",
+      "group": "picnic_food",
+      "domain": "food",
+      "split": "calibration",
+      "text": "Plan a picnic that strictly respects the dietary restrictions I gave you earlier.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare a seated picnic with a walking snack break."
+        },
+        {
+          "role": "assistant",
+          "content": "A seated picnic suits a full meal; a walking break suits compact snacks."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "picnic_food_clarify",
+      "group": "picnic_food",
+      "domain": "food",
+      "split": "calibration",
+      "text": "For the picnic, the second bit, um, that.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare a seated picnic with a walking snack break."
+        },
+        {
+          "role": "assistant",
+          "content": "A seated picnic suits a full meal; a walking break suits compact snacks."
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "bread_baking_none",
+      "group": "bread_baking",
+      "domain": "food",
+      "split": "train",
+      "text": "Explain why dough rises in a warm place.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "bread_baking_optional",
+      "group": "bread_baking",
+      "domain": "food",
+      "split": "train",
+      "text": "Suggest a beginner bread recipe, optionally adapting it to any saved equipment preferences.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "bread_baking_required",
+      "group": "bread_baking",
+      "domain": "food",
+      "split": "train",
+      "text": "Which flour brand did I say worked best in the loaf I baked last month?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "bread_baking_clarify",
+      "group": "bread_baking",
+      "domain": "food",
+      "split": "train",
+      "text": "Is the amount supposed to be that much?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "library_loans_none",
+      "group": "library_loans",
+      "domain": "reading",
+      "split": "train",
+      "text": "A book is due on the 18th and today is the 12th. How many days remain until it is due?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "library_loans_optional",
+      "group": "library_loans",
+      "domain": "reading",
+      "split": "train",
+      "text": "Recommend a book to borrow. You can use any saved reading interests, or simply choose an accessible novel.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "library_loans_required",
+      "group": "library_loans",
+      "domain": "reading",
+      "split": "train",
+      "text": "Which library book did I say I had already renewed?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Help me keep track of borrowed books."
+        },
+        {
+          "role": "assistant",
+          "content": "We can organize a loan list and renewal reminders."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "library_loans_clarify",
+      "group": "library_loans",
+      "domain": "reading",
+      "split": "train",
+      "text": "Can you sort out that book thing for me?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "running_routes_none",
+      "group": "running_routes",
+      "domain": "recreation",
+      "split": "train",
+      "text": "Compare a flat two-kilometer loop with a hilly four-kilometer loop for a beginner who wants an easy outing.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "running_routes_optional",
+      "group": "running_routes",
+      "domain": "recreation",
+      "split": "train",
+      "text": "Suggest a running route style. Consider saved preferences if available; otherwise describe a general beginner option.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "running_routes_required",
+      "group": "running_routes",
+      "domain": "recreation",
+      "split": "train",
+      "text": "Which route did I tell you I completed on my last run?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "running_routes_clarify",
+      "group": "running_routes",
+      "domain": "recreation",
+      "split": "train",
+      "text": "The route goes past that place, right, so which way?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "electricity_bill_none",
+      "group": "electricity_bill",
+      "domain": "household",
+      "split": "train",
+      "text": "My electricity bill seems larger this month. Explain how to check the units and rates using the bill in front of me.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "electricity_bill_optional",
+      "group": "electricity_bill",
+      "domain": "household",
+      "split": "train",
+      "text": "Offer practical electricity-saving ideas; you may personalize them using known routines, but general tips are enough.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "electricity_bill_required",
+      "group": "electricity_bill",
+      "domain": "household",
+      "split": "train",
+      "text": "Compare the last two electricity totals I shared and tell me whether my usage increased.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "electricity_bill_clarify",
+      "group": "electricity_bill",
+      "domain": "household",
+      "split": "train",
+      "text": "What does the number beside that line mean?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "language_practice_none",
+      "group": "language_practice",
+      "domain": "learning",
+      "split": "calibration",
+      "text": "Turn that exercise into three shorter questions.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Create one exercise about ordering a sandwich in Spanish."
+        },
+        {
+          "role": "assistant",
+          "content": "Describe the sandwich, ask its price, and request it politely in Spanish."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "language_practice_optional",
+      "group": "language_practice",
+      "domain": "learning",
+      "split": "calibration",
+      "text": "Choose a language-practice activity, using a saved skill level if available and a beginner exercise if not.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "language_practice_required",
+      "group": "language_practice",
+      "domain": "learning",
+      "split": "calibration",
+      "text": "Continue from the exact vocabulary list I asked you to remember last session.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "language_practice_clarify",
+      "group": "language_practice",
+      "domain": "learning",
+      "split": "calibration",
+      "text": "Could you change the sound in that word?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "concert_tickets_none",
+      "group": "concert_tickets",
+      "domain": "events",
+      "split": "train",
+      "text": "Tickets cost 24 credits each and I need three. What is the total before any fees?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "concert_tickets_optional",
+      "group": "concert_tickets",
+      "domain": "events",
+      "split": "train",
+      "text": "Suggest how to choose a concert seat. A saved seating preference is welcome, but explain the general tradeoffs if it is unknown.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "concert_tickets_required",
+      "group": "concert_tickets",
+      "domain": "events",
+      "split": "train",
+      "text": "Which section and row did I tell you I booked for the concert?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Help me organize the concert outing."
+        },
+        {
+          "role": "assistant",
+          "content": "The plan will need the booking details and arrival arrangements."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "concert_tickets_clarify",
+      "group": "concert_tickets",
+      "domain": "events",
+      "split": "train",
+      "text": "Do you mean the one up there or the next section?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "wash_cycle_none",
+      "group": "wash_cycle",
+      "domain": "household",
+      "split": "train",
+      "text": "Explain the purpose of a rinse cycle in a washing machine.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "wash_cycle_optional",
+      "group": "wash_cycle",
+      "domain": "household",
+      "split": "train",
+      "text": "Suggest a laundry-sorting routine; use any saved household preferences if convenient, or give a general routine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "wash_cycle_required",
+      "group": "wash_cycle",
+      "domain": "household",
+      "split": "train",
+      "text": "Which wash setting did I ask you to remember for the linen curtains? Explain what a spin cycle does.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain what a spin cycle does."
+    },
+    {
+      "id": "wash_cycle_clarify",
+      "group": "wash_cycle",
+      "domain": "household",
+      "split": "train",
+      "text": "It keeps doing that during the washing bit, what now?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "bookshelf_build_none",
+      "group": "bookshelf_build",
+      "domain": "crafts",
+      "split": "train",
+      "text": "I just finished assembling a small bookshelf.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "bookshelf_build_optional",
+      "group": "bookshelf_build",
+      "domain": "crafts",
+      "split": "train",
+      "text": "Suggest ways to style a bookshelf. Use a remembered decorative style if you have one; otherwise offer a neutral arrangement.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "bookshelf_build_required",
+      "group": "bookshelf_build",
+      "domain": "crafts",
+      "split": "train",
+      "text": "What shelf spacing did I settle on when we planned this bookshelf?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "bookshelf_build_clarify",
+      "group": "bookshelf_build",
+      "domain": "crafts",
+      "split": "train",
+      "text": "Make the top part match the thing we discussed.",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "pet_grooming_none",
+      "group": "pet_grooming",
+      "domain": "pet_care",
+      "split": "train",
+      "text": "Explain how a grooming brush differs from a comb.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "pet_grooming_optional",
+      "group": "pet_grooming",
+      "domain": "pet_care",
+      "split": "train",
+      "text": "Suggest a general pet-grooming checklist; include saved grooming preferences only if they are known.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "pet_grooming_required",
+      "group": "pet_grooming",
+      "domain": "pet_care",
+      "split": "train",
+      "text": "When was the grooming appointment I asked you to keep track of?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "pet_grooming_clarify",
+      "group": "pet_grooming",
+      "domain": "pet_care",
+      "split": "train",
+      "text": "The brush is, um, the one with those bits.",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "meteor_watch_none",
+      "group": "meteor_watch",
+      "domain": "science_hobbies",
+      "split": "calibration",
+      "text": "Explain the difference between a meteor and a meteorite.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Suggest two activities for an astronomy evening."
+        },
+        {
+          "role": "assistant",
+          "content": "A sky-map exercise and a short observation session are two possibilities."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "meteor_watch_optional",
+      "group": "meteor_watch",
+      "domain": "science_hobbies",
+      "split": "calibration",
+      "text": "Suggest an activity for an astronomy evening. Known interests may guide it, but a general activity is fine.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Suggest two activities for an astronomy evening."
+        },
+        {
+          "role": "assistant",
+          "content": "A sky-map exercise and a short observation session are two possibilities."
+        }
+      ],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "meteor_watch_required",
+      "group": "meteor_watch",
+      "domain": "science_hobbies",
+      "split": "calibration",
+      "text": "What observation location did I save for our meteor-watching evening?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Suggest two activities for an astronomy evening."
+        },
+        {
+          "role": "assistant",
+          "content": "A sky-map exercise and a short observation session are two possibilities."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "meteor_watch_clarify",
+      "group": "meteor_watch",
+      "domain": "science_hobbies",
+      "split": "calibration",
+      "text": "Will we be able to see that from the other spot?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Suggest two activities for an astronomy evening."
+        },
+        {
+          "role": "assistant",
+          "content": "A sky-map exercise and a short observation session are two possibilities."
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "parcel_label_none",
+      "group": "parcel_label",
+      "domain": "practical_tasks",
+      "split": "train",
+      "text": "Shorten that checklist to two steps.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Give a checklist for packing a fragile mug."
+        },
+        {
+          "role": "assistant",
+          "content": "Wrap the mug, cushion it in a box, close the box, and attach a label."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "parcel_label_optional",
+      "group": "parcel_label",
+      "domain": "practical_tasks",
+      "split": "train",
+      "text": "Give a parcel-packing checklist, tailoring it to saved packing preferences only if available.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "parcel_label_required",
+      "group": "parcel_label",
+      "domain": "practical_tasks",
+      "split": "train",
+      "text": "Use the recipient address I saved earlier to prepare the shipping label.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Help me prepare a parcel label."
+        },
+        {
+          "role": "assistant",
+          "content": "A label needs a recipient and a shipping address."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "parcel_label_clarify",
+      "group": "parcel_label",
+      "domain": "practical_tasks",
+      "split": "train",
+      "text": "Put the address in the right place on that.",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "savings_tracker_none",
+      "group": "savings_tracker",
+      "domain": "personal_organization",
+      "split": "train",
+      "text": "I put aside 15 credits each week for four weeks. Calculate the total saved.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "savings_tracker_optional",
+      "group": "savings_tracker",
+      "domain": "personal_organization",
+      "split": "train",
+      "text": "Suggest a simple savings-tracking layout. If my preferred format is stored, use it; otherwise choose a basic table.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "savings_tracker_required",
+      "group": "savings_tracker",
+      "domain": "personal_organization",
+      "split": "train",
+      "text": "How much was the savings target I told you to remember?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "savings_tracker_clarify",
+      "group": "savings_tracker",
+      "domain": "personal_organization",
+      "split": "train",
+      "text": "Does that amount go before or after the other amount?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "presentation_timing_none",
+      "group": "presentation_timing",
+      "domain": "work",
+      "split": "train",
+      "text": "A presentation has a two-minute introduction, seven minutes of content, and one minute of questions. What is its total length?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "presentation_timing_optional",
+      "group": "presentation_timing",
+      "domain": "work",
+      "split": "train",
+      "text": "Suggest a presentation outline; a saved speaking preference can inform it, but a generic structure is sufficient.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "presentation_timing_required",
+      "group": "presentation_timing",
+      "domain": "work",
+      "split": "train",
+      "text": "How much speaking time did the organizer allocate to me in the note I shared? Explain what an opening hook is.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Help me prepare the presentation."
+        },
+        {
+          "role": "assistant",
+          "content": "We can organize the opening, main content, and questions."
+        }
+      ],
+      "mode": "required",
+      "general_request": "Explain what an opening hook is."
+    },
+    {
+      "id": "presentation_timing_clarify",
+      "group": "presentation_timing",
+      "domain": "work",
+      "split": "train",
+      "text": "Could you make the middle part fit into that?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "gift_wrapping_none",
+      "group": "gift_wrapping",
+      "domain": "creative_tasks",
+      "split": "train",
+      "text": "I have brown paper and white string. Suggest an attractive way to wrap a rectangular gift.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare plain wrapping with patterned wrapping."
+        },
+        {
+          "role": "assistant",
+          "content": "Plain paper emphasizes the ribbon, while patterned paper supplies most of the decoration."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "gift_wrapping_optional",
+      "group": "gift_wrapping",
+      "domain": "creative_tasks",
+      "split": "train",
+      "text": "Propose a wrapping style. Use any known color preference if possible, or pick a simple design.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare plain wrapping with patterned wrapping."
+        },
+        {
+          "role": "assistant",
+          "content": "Plain paper emphasizes the ribbon, while patterned paper supplies most of the decoration."
+        }
+      ],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "gift_wrapping_required",
+      "group": "gift_wrapping",
+      "domain": "creative_tasks",
+      "split": "train",
+      "text": "What ribbon width did I choose for the gifts when we discussed them before?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare plain wrapping with patterned wrapping."
+        },
+        {
+          "role": "assistant",
+          "content": "Plain paper emphasizes the ribbon, while patterned paper supplies most of the decoration."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "gift_wrapping_clarify",
+      "group": "gift_wrapping",
+      "domain": "creative_tasks",
+      "split": "train",
+      "text": "It should look like the other side, can you do that?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare plain wrapping with patterned wrapping."
+        },
+        {
+          "role": "assistant",
+          "content": "Plain paper emphasizes the ribbon, while patterned paper supplies most of the decoration."
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "chess_practice_none",
+      "group": "chess_practice",
+      "domain": "games",
+      "split": "calibration",
+      "text": "Explain it with a small board example.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "What is a fork in chess?"
+        },
+        {
+          "role": "assistant",
+          "content": "A fork is one move that attacks two or more opposing pieces."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "chess_practice_optional",
+      "group": "chess_practice",
+      "domain": "games",
+      "split": "calibration",
+      "text": "Choose a chess-practice exercise; use my saved skill level if it exists, otherwise give a beginner one.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "chess_practice_required",
+      "group": "chess_practice",
+      "domain": "games",
+      "split": "calibration",
+      "text": "Which opening did I tell you I wanted to practice this week?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Help me organize a chess practice session."
+        },
+        {
+          "role": "assistant",
+          "content": "We can focus the session on a chosen opening."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "chess_practice_clarify",
+      "group": "chess_practice",
+      "domain": "games",
+      "split": "calibration",
+      "text": "Should I move this here or take that?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "choir_rehearsal_none",
+      "group": "choir_rehearsal",
+      "domain": "music",
+      "split": "train",
+      "text": "The rehearsal starts at 18:10 and lasts 50 minutes. At what time does it finish?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "choir_rehearsal_optional",
+      "group": "choir_rehearsal",
+      "domain": "music",
+      "split": "train",
+      "text": "Suggest a rehearsal warm-up. If a saved musical preference helps, use it, but a general warm-up plan is acceptable.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "choir_rehearsal_required",
+      "group": "choir_rehearsal",
+      "domain": "music",
+      "split": "train",
+      "text": "Which song did I say the choir selected for the closing number?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "choir_rehearsal_clarify",
+      "group": "choir_rehearsal",
+      "domain": "music",
+      "split": "train",
+      "text": "Could you start from the place after that part?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "balcony_watering_none",
+      "group": "balcony_watering",
+      "domain": "gardening",
+      "split": "train",
+      "text": "I forgot to water the balcony pots today. Give general steps for checking whether the plants need water now.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "balcony_watering_optional",
+      "group": "balcony_watering",
+      "domain": "gardening",
+      "split": "train",
+      "text": "Give general advice for organizing watering reminders; use a remembered routine if convenient.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "balcony_watering_required",
+      "group": "balcony_watering",
+      "domain": "gardening",
+      "split": "train",
+      "text": "Set out a watering schedule that follows the travel dates and plant list I previously supplied.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "balcony_watering_clarify",
+      "group": "balcony_watering",
+      "domain": "gardening",
+      "split": "train",
+      "text": "Should that one get the same as the others?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "document_folders_none",
+      "group": "document_folders",
+      "domain": "personal_organization",
+      "split": "train",
+      "text": "Explain the difference between grouping documents by date and grouping them by topic.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "document_folders_optional",
+      "group": "document_folders",
+      "domain": "personal_organization",
+      "split": "train",
+      "text": "Suggest a folder layout. Use my saved organization style if available, or choose a straightforward general layout.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "document_folders_required",
+      "group": "document_folders",
+      "domain": "personal_organization",
+      "split": "train",
+      "text": "Which folder did I say contains the scanned travel documents?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "document_folders_clarify",
+      "group": "document_folders",
+      "domain": "personal_organization",
+      "split": "train",
+      "text": "Put it in the folder with the stuff from before.",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "bicycle_tyre_none",
+      "group": "bicycle_tyre",
+      "domain": "transport",
+      "split": "train",
+      "text": "Explain the difference between an inner tube and a tyre.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "bicycle_tyre_optional",
+      "group": "bicycle_tyre",
+      "domain": "transport",
+      "split": "train",
+      "text": "Suggest a bicycle-maintenance checklist, using saved riding preferences if known and a general checklist otherwise.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "bicycle_tyre_required",
+      "group": "bicycle_tyre",
+      "domain": "transport",
+      "split": "train",
+      "text": "What tyre pressure range did I save from the sidewall markings? Explain what a tyre valve does.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain what a tyre valve does."
+    },
+    {
+      "id": "bicycle_tyre_clarify",
+      "group": "bicycle_tyre",
+      "domain": "transport",
+      "split": "train",
+      "text": "The bit near the wheel is like that again.",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "robot_code_none",
+      "group": "robot_code",
+      "domain": "programming",
+      "split": "calibration",
+      "text": "Show the same example with a for loop instead.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Show how to print the numbers 1, 2, and 3 with a while loop."
+        },
+        {
+          "role": "assistant",
+          "content": "Start a counter at 1, print it, increment it, and repeat while it is at most 3."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "robot_code_optional",
+      "group": "robot_code",
+      "domain": "programming",
+      "split": "calibration",
+      "text": "Suggest a beginner robotics coding exercise. You can use saved interests, but any simple exercise will do.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "robot_code_required",
+      "group": "robot_code",
+      "domain": "programming",
+      "split": "calibration",
+      "text": "Use the pin assignments I stored earlier to write the sensor wiring table.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "robot_code_clarify",
+      "group": "robot_code",
+      "domain": "programming",
+      "split": "calibration",
+      "text": "Can you fix the part where it does the thing?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "sewing_fabric_none",
+      "group": "sewing_fabric",
+      "domain": "crafts",
+      "split": "train",
+      "text": "I keep tangling the thread while practicing basic stitches. Suggest a beginner-friendly way to organize my practice.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "sewing_fabric_optional",
+      "group": "sewing_fabric",
+      "domain": "crafts",
+      "split": "train",
+      "text": "Suggest a simple sewing project; use a remembered fabric preference if available, otherwise choose a beginner project.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "sewing_fabric_required",
+      "group": "sewing_fabric",
+      "domain": "crafts",
+      "split": "train",
+      "text": "What fabric composition did I tell you was printed on the roll label?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "sewing_fabric_clarify",
+      "group": "sewing_fabric",
+      "domain": "crafts",
+      "split": "train",
+      "text": "Would that fabric work for the thing I mean?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "museum_visit_none",
+      "group": "museum_visit",
+      "domain": "culture",
+      "split": "train",
+      "text": "Compare visiting one exhibition in detail with seeing several exhibitions briefly.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare exploring exhibits alone with joining a guided tour."
+        },
+        {
+          "role": "assistant",
+          "content": "Independent exploration offers flexibility; a tour offers a prepared explanation."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "museum_visit_optional",
+      "group": "museum_visit",
+      "domain": "culture",
+      "split": "train",
+      "text": "Suggest a museum itinerary, considering saved interests if possible but giving a general itinerary if not.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare exploring exhibits alone with joining a guided tour."
+        },
+        {
+          "role": "assistant",
+          "content": "Independent exploration offers flexibility; a tour offers a prepared explanation."
+        }
+      ],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "museum_visit_required",
+      "group": "museum_visit",
+      "domain": "culture",
+      "split": "train",
+      "text": "Build the museum itinerary around the access requirements and reservation time I shared earlier.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare exploring exhibits alone with joining a guided tour."
+        },
+        {
+          "role": "assistant",
+          "content": "Independent exploration offers flexibility; a tour offers a prepared explanation."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "museum_visit_clarify",
+      "group": "museum_visit",
+      "domain": "culture",
+      "split": "train",
+      "text": "Is that the entrance near the other building?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare exploring exhibits alone with joining a guided tour."
+        },
+        {
+          "role": "assistant",
+          "content": "Independent exploration offers flexibility; a tour offers a prepared explanation."
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "volunteer_shift_none",
+      "group": "volunteer_shift",
+      "domain": "community",
+      "split": "train",
+      "text": "I feel discouraged after an uneventful volunteer shift. Can you suggest a small motivating next step?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "volunteer_shift_optional",
+      "group": "volunteer_shift",
+      "domain": "community",
+      "split": "train",
+      "text": "Suggest a volunteering activity. My saved interests may help, but feel free to suggest a general option.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "volunteer_shift_required",
+      "group": "volunteer_shift",
+      "domain": "community",
+      "split": "train",
+      "text": "Which volunteer shift did I promise to cover according to the message I asked you to remember?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "volunteer_shift_clarify",
+      "group": "volunteer_shift",
+      "domain": "community",
+      "split": "train",
+      "text": "Can you tell them I can do the other time?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "browser_bookmarks_none",
+      "group": "browser_bookmarks",
+      "domain": "digital_organization",
+      "split": "train",
+      "text": "Turn those categories into a flat list.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Suggest bookmark categories for articles, tutorials, and reference manuals."
+        },
+        {
+          "role": "assistant",
+          "content": "Use Reading for articles, Learning for tutorials, and Reference for manuals."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "browser_bookmarks_optional",
+      "group": "browser_bookmarks",
+      "domain": "digital_organization",
+      "split": "train",
+      "text": "Suggest bookmark categories, using any remembered work interests if available, otherwise give generic categories.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "browser_bookmarks_required",
+      "group": "browser_bookmarks",
+      "domain": "digital_organization",
+      "split": "train",
+      "text": "What was the reference website I asked you to remember for the restoration project?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "browser_bookmarks_clarify",
+      "group": "browser_bookmarks",
+      "domain": "digital_organization",
+      "split": "train",
+      "text": "Open the saved thing from that tab.",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "music_playlist_none",
+      "group": "music_playlist",
+      "domain": "music",
+      "split": "calibration",
+      "text": "Explain how tempo differs from volume.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "music_playlist_optional",
+      "group": "music_playlist",
+      "domain": "music",
+      "split": "calibration",
+      "text": "Suggest a playlist theme. If a music preference is saved, take it into account; otherwise propose a broad theme.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "music_playlist_required",
+      "group": "music_playlist",
+      "domain": "music",
+      "split": "calibration",
+      "text": "Which artist did I say I wanted excluded from the celebration playlist?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "music_playlist_clarify",
+      "group": "music_playlist",
+      "domain": "music",
+      "split": "calibration",
+      "text": "Can you play something more like that one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "sketching_tools_none",
+      "group": "sketching_tools",
+      "domain": "creative_hobbies",
+      "split": "train",
+      "text": "I have an HB pencil and a soft charcoal stick. Explain when each is useful for a quick sketch.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare quick gesture sketches with careful contour drawings."
+        },
+        {
+          "role": "assistant",
+          "content": "Gesture sketches capture movement; contour drawings emphasize outlines."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "sketching_tools_optional",
+      "group": "sketching_tools",
+      "domain": "creative_hobbies",
+      "split": "train",
+      "text": "Recommend a sketching exercise, optionally drawing on any saved artistic interests.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare quick gesture sketches with careful contour drawings."
+        },
+        {
+          "role": "assistant",
+          "content": "Gesture sketches capture movement; contour drawings emphasize outlines."
+        }
+      ],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "sketching_tools_required",
+      "group": "sketching_tools",
+      "domain": "creative_hobbies",
+      "split": "train",
+      "text": "Which pencil grade did I choose for the portrait class? Explain what cross-hatching means.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare quick gesture sketches with careful contour drawings."
+        },
+        {
+          "role": "assistant",
+          "content": "Gesture sketches capture movement; contour drawings emphasize outlines."
+        }
+      ],
+      "mode": "required",
+      "general_request": "Explain what cross-hatching means."
+    },
+    {
+      "id": "sketching_tools_clarify",
+      "group": "sketching_tools",
+      "domain": "creative_hobbies",
+      "split": "train",
+      "text": "The lines need to be more, you know, like those.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare quick gesture sketches with careful contour drawings."
+        },
+        {
+          "role": "assistant",
+          "content": "Gesture sketches capture movement; contour drawings emphasize outlines."
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "board_game_night_none",
+      "group": "board_game_night",
+      "domain": "games",
+      "split": "train",
+      "text": "There are six players, and each table seats three. How many tables are needed?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare cooperative and competitive board games."
+        },
+        {
+          "role": "assistant",
+          "content": "Cooperative games share a goal; competitive games assign separate goals to players."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "board_game_night_optional",
+      "group": "board_game_night",
+      "domain": "games",
+      "split": "train",
+      "text": "Suggest a game-night format; use known game preferences if you have them, otherwise give a general plan.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare cooperative and competitive board games."
+        },
+        {
+          "role": "assistant",
+          "content": "Cooperative games share a goal; competitive games assign separate goals to players."
+        }
+      ],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "board_game_night_required",
+      "group": "board_game_night",
+      "domain": "games",
+      "split": "train",
+      "text": "Choose games that meet every accessibility constraint the group asked me to save.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare cooperative and competitive board games."
+        },
+        {
+          "role": "assistant",
+          "content": "Cooperative games share a goal; competitive games assign separate goals to players."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "board_game_night_clarify",
+      "group": "board_game_night",
+      "domain": "games",
+      "split": "train",
+      "text": "Is the next person supposed to do that now?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare cooperative and competitive board games."
+        },
+        {
+          "role": "assistant",
+          "content": "Cooperative games share a goal; competitive games assign separate goals to players."
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "walking_commute_none",
+      "group": "walking_commute",
+      "domain": "transport",
+      "split": "train",
+      "text": "I feel tense after a crowded bus ride. Suggest a simple way to unwind when I get home.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "walking_commute_optional",
+      "group": "walking_commute",
+      "domain": "transport",
+      "split": "train",
+      "text": "Suggest ways to make a walking commute pleasant. Saved preferences are optional; general ideas are enough.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "walking_commute_required",
+      "group": "walking_commute",
+      "domain": "transport",
+      "split": "train",
+      "text": "Which crossing did I say I avoid on the route to work?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "walking_commute_clarify",
+      "group": "walking_commute",
+      "domain": "transport",
+      "split": "train",
+      "text": "Is it further if I go around that way?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "work_bag_none",
+      "group": "work_bag",
+      "domain": "practical_tasks",
+      "split": "train",
+      "text": "Make that packing list more concise.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Create a work-bag checklist for a notebook, charger, water bottle, and lunch."
+        },
+        {
+          "role": "assistant",
+          "content": "Pack the notebook and charger, fill the bottle, and add the packed lunch."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "work_bag_optional",
+      "group": "work_bag",
+      "domain": "practical_tasks",
+      "split": "train",
+      "text": "Suggest a general work-bag checklist and tailor it only if you already have relevant saved preferences.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "work_bag_required",
+      "group": "work_bag",
+      "domain": "practical_tasks",
+      "split": "train",
+      "text": "What item did I say was missing from the work bag yesterday?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "work_bag_clarify",
+      "group": "work_bag",
+      "domain": "practical_tasks",
+      "split": "train",
+      "text": "Put the smaller one in with the rest.",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "soup_recipe_none",
+      "group": "soup_recipe",
+      "domain": "food",
+      "split": "calibration",
+      "text": "A soup needs 300 milliliters of stock per serving. How much stock is needed for four servings?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Explain smooth and chunky soup textures."
+        },
+        {
+          "role": "assistant",
+          "content": "A smooth soup is blended, while a chunky soup keeps pieces of ingredients intact."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "soup_recipe_optional",
+      "group": "soup_recipe",
+      "domain": "food",
+      "split": "calibration",
+      "text": "Suggest a soup recipe, using a saved flavor preference if one exists and a simple default if it does not.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Explain smooth and chunky soup textures."
+        },
+        {
+          "role": "assistant",
+          "content": "A smooth soup is blended, while a chunky soup keeps pieces of ingredients intact."
+        }
+      ],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "soup_recipe_required",
+      "group": "soup_recipe",
+      "domain": "food",
+      "split": "calibration",
+      "text": "Which soup ingredient did I previously ask you to leave out of all meal plans?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Explain smooth and chunky soup textures."
+        },
+        {
+          "role": "assistant",
+          "content": "A smooth soup is blended, while a chunky soup keeps pieces of ingredients intact."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "soup_recipe_clarify",
+      "group": "soup_recipe",
+      "domain": "food",
+      "split": "calibration",
+      "text": "Could you make it less of that taste?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Explain smooth and chunky soup textures."
+        },
+        {
+          "role": "assistant",
+          "content": "A smooth soup is blended, while a chunky soup keeps pieces of ingredients intact."
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "tutoring_session_none",
+      "group": "tutoring_session",
+      "domain": "learning",
+      "split": "train",
+      "text": "Explain the same idea using counters instead of numbers.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Explain adding two groups of three."
+        },
+        {
+          "role": "assistant",
+          "content": "Three plus three combines the groups into a total of six."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "tutoring_session_optional",
+      "group": "tutoring_session",
+      "domain": "learning",
+      "split": "train",
+      "text": "Suggest a tutoring activity; a saved learning preference may help, but use a general beginner activity if none is known.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "tutoring_session_required",
+      "group": "tutoring_session",
+      "domain": "learning",
+      "split": "train",
+      "text": "Continue the tutoring plan from the exact exercise number I recorded last time.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "tutoring_session_clarify",
+      "group": "tutoring_session",
+      "domain": "learning",
+      "split": "train",
+      "text": "Should we do that question or the one beside it?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "plant_repotting_none",
+      "group": "plant_repotting",
+      "domain": "gardening",
+      "split": "train",
+      "text": "Explain why a plant pot usually needs drainage holes.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "plant_repotting_optional",
+      "group": "plant_repotting",
+      "domain": "gardening",
+      "split": "train",
+      "text": "Suggest a repotting checklist. If I have a saved preferred potting style, consider it; otherwise give a standard checklist.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "plant_repotting_required",
+      "group": "plant_repotting",
+      "domain": "gardening",
+      "split": "train",
+      "text": "What pot diameter did I save for the rubber plant? Explain what root-bound means.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain what root-bound means."
+    },
+    {
+      "id": "plant_repotting_clarify",
+      "group": "plant_repotting",
+      "domain": "gardening",
+      "split": "train",
+      "text": "Does the plant go in the one we talked about?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "project_priorities_none",
+      "group": "project_priorities",
+      "domain": "work",
+      "split": "train",
+      "text": "Task A takes two hours and is due today; task B takes one hour and is due next week. Suggest an order for doing them.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "project_priorities_optional",
+      "group": "project_priorities",
+      "domain": "work",
+      "split": "train",
+      "text": "Suggest a task-prioritization method. You may use known work preferences, but a general method is fine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "project_priorities_required",
+      "group": "project_priorities",
+      "domain": "work",
+      "split": "train",
+      "text": "Prioritize the project tasks using the deadlines and commitments I previously stored.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Help me organize my project work."
+        },
+        {
+          "role": "assistant",
+          "content": "A task list can separate deadlines and dependencies."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "project_priorities_clarify",
+      "group": "project_priorities",
+      "domain": "work",
+      "split": "train",
+      "text": "Move that above the other one in the list.",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "wall_painting_none",
+      "group": "wall_painting",
+      "domain": "home_improvement",
+      "split": "train",
+      "text": "I painted the hallway a pale gray yesterday.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "wall_painting_optional",
+      "group": "wall_painting",
+      "domain": "home_improvement",
+      "split": "train",
+      "text": "Suggest a wall color, using a saved decorating preference if possible and a neutral option if nothing is saved.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "wall_painting_required",
+      "group": "wall_painting",
+      "domain": "home_improvement",
+      "split": "train",
+      "text": "Which paint finish did I select for the hallway in the earlier plan?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "wall_painting_clarify",
+      "group": "wall_painting",
+      "domain": "home_improvement",
+      "split": "train",
+      "text": "Should the wall be more like that shade?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "crossword_practice_none",
+      "group": "crossword_practice",
+      "domain": "games",
+      "split": "calibration",
+      "text": "Give a shorter explanation of that clue type.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Explain what an anagram clue asks a crossword solver to do."
+        },
+        {
+          "role": "assistant",
+          "content": "It asks the solver to rearrange letters to form the answer."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "crossword_practice_optional",
+      "group": "crossword_practice",
+      "domain": "games",
+      "split": "calibration",
+      "text": "Recommend a word-puzzle activity. Use my saved difficulty preference if available, or choose an easy one.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "crossword_practice_required",
+      "group": "crossword_practice",
+      "domain": "games",
+      "split": "calibration",
+      "text": "What puzzle difficulty did I ask you to use in future practice sessions?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "crossword_practice_clarify",
+      "group": "crossword_practice",
+      "domain": "games",
+      "split": "calibration",
+      "text": "Would that word fit in those spaces?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "luggage_packing_none",
+      "group": "luggage_packing",
+      "domain": "travel",
+      "split": "train",
+      "text": "The bag weighs 2 kilograms empty and the packed items weigh 5.5 kilograms. Find the total weight.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "luggage_packing_optional",
+      "group": "luggage_packing",
+      "domain": "travel",
+      "split": "train",
+      "text": "Suggest a weekend packing checklist. Saved travel preferences are welcome but not necessary.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "luggage_packing_required",
+      "group": "luggage_packing",
+      "domain": "travel",
+      "split": "train",
+      "text": "Pack for the trip using the baggage limit and destination weather details I told you to remember.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Help me get ready for the trip."
+        },
+        {
+          "role": "assistant",
+          "content": "A packing plan depends on the trip requirements."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "luggage_packing_clarify",
+      "group": "luggage_packing",
+      "domain": "travel",
+      "split": "train",
+      "text": "Does the big one count as that type of bag?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "community_festival_none",
+      "group": "community_festival",
+      "domain": "events",
+      "split": "train",
+      "text": "A festival has four stalls with five volunteers each. How many volunteer places are there?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "community_festival_optional",
+      "group": "community_festival",
+      "domain": "events",
+      "split": "train",
+      "text": "Suggest a festival activity; you can tailor it using remembered interests, otherwise choose something broadly accessible.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "community_festival_required",
+      "group": "community_festival",
+      "domain": "events",
+      "split": "train",
+      "text": "Which stall did I agree to supervise at the community festival?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "community_festival_clarify",
+      "group": "community_festival",
+      "domain": "events",
+      "split": "train",
+      "text": "Can we swap the one near that place?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "weekly_cleaning_none",
+      "group": "weekly_cleaning",
+      "domain": "household",
+      "split": "train",
+      "text": "I cleared the kitchen counter this afternoon.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "weekly_cleaning_optional",
+      "group": "weekly_cleaning",
+      "domain": "household",
+      "split": "train",
+      "text": "Give a weekly cleaning checklist. Use any saved routine if available, but a generic checklist will work.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "weekly_cleaning_required",
+      "group": "weekly_cleaning",
+      "domain": "household",
+      "split": "train",
+      "text": "Which chore did I assign to Saturday in the schedule I saved? Explain how to divide a large chore into short steps.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain how to divide a large chore into short steps."
+    },
+    {
+      "id": "weekly_cleaning_clarify",
+      "group": "weekly_cleaning",
+      "domain": "household",
+      "split": "train",
+      "text": "The cleaning thing from before, can we change it?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "database_learning_none",
+      "group": "database_learning",
+      "domain": "programming",
+      "split": "train",
+      "text": "Give an example with three rows.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Explain a table with columns for item name and quantity."
+        },
+        {
+          "role": "assistant",
+          "content": "Each row is one item, with its name in one column and its count in another."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "database_learning_optional",
+      "group": "database_learning",
+      "domain": "programming",
+      "split": "train",
+      "text": "Suggest a database practice project, taking saved interests into account if convenient, or choosing a basic example.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "database_learning_required",
+      "group": "database_learning",
+      "domain": "programming",
+      "split": "train",
+      "text": "What database name and table name did I ask you to remember for the inventory exercise?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "database_learning_clarify",
+      "group": "database_learning",
+      "domain": "programming",
+      "split": "train",
+      "text": "Can you join that to the other thing?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "speech_practice_none",
+      "group": "speech_practice",
+      "domain": "communication",
+      "split": "calibration",
+      "text": "I practiced reading the announcement aloud three times today.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Suggest two ways to practice reading aloud."
+        },
+        {
+          "role": "assistant",
+          "content": "Try a slow reading for clarity and another reading focused on expressive pauses."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "speech_practice_optional",
+      "group": "speech_practice",
+      "domain": "communication",
+      "split": "calibration",
+      "text": "Suggest a speaking-practice exercise. A saved style preference may guide it, but a general exercise is enough.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Suggest two ways to practice reading aloud."
+        },
+        {
+          "role": "assistant",
+          "content": "Try a slow reading for clarity and another reading focused on expressive pauses."
+        }
+      ],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "speech_practice_required",
+      "group": "speech_practice",
+      "domain": "communication",
+      "split": "calibration",
+      "text": "What speaking pace did my coach recommend in the feedback I saved? Explain what a pause can do in a speech.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Suggest two ways to practice reading aloud."
+        },
+        {
+          "role": "assistant",
+          "content": "Try a slow reading for clarity and another reading focused on expressive pauses."
+        }
+      ],
+      "mode": "required",
+      "general_request": "Explain what a pause can do in a speech."
+    },
+    {
+      "id": "speech_practice_clarify",
+      "group": "speech_practice",
+      "domain": "communication",
+      "split": "calibration",
+      "text": "Can you make the sound at that bit different?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Suggest two ways to practice reading aloud."
+        },
+        {
+          "role": "assistant",
+          "content": "Try a slow reading for clarity and another reading focused on expressive pauses."
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "fridge_inventory_none",
+      "group": "fridge_inventory",
+      "domain": "household",
+      "split": "train",
+      "text": "I have two peppers, a zucchini, rice, and lentils. Suggest a meal using only these ingredients.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "fridge_inventory_optional",
+      "group": "fridge_inventory",
+      "domain": "household",
+      "split": "train",
+      "text": "Suggest a meal and optionally use any saved food preferences; otherwise make a general suggestion.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "fridge_inventory_required",
+      "group": "fridge_inventory",
+      "domain": "household",
+      "split": "train",
+      "text": "What vegetables did I record as remaining in the refrigerator after yesterday's shopping?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "fridge_inventory_clarify",
+      "group": "fridge_inventory",
+      "domain": "household",
+      "split": "train",
+      "text": "Can I use the thing behind that container?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "puzzle_box_none",
+      "group": "puzzle_box",
+      "domain": "creative_tasks",
+      "split": "train",
+      "text": "Rewrite the hint so it is less direct.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Write a fictional hint for a puzzle box that opens when three stars line up."
+        },
+        {
+          "role": "assistant",
+          "content": "Align the three stars to open the hidden latch."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "puzzle_box_optional",
+      "group": "puzzle_box",
+      "domain": "creative_tasks",
+      "split": "train",
+      "text": "Suggest a puzzle-box theme, drawing on saved interests if you know them and choosing a general theme otherwise.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "puzzle_box_required",
+      "group": "puzzle_box",
+      "domain": "creative_tasks",
+      "split": "train",
+      "text": "What sequence did I ask you to remember for opening the puzzle box?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "puzzle_box_clarify",
+      "group": "puzzle_box",
+      "domain": "creative_tasks",
+      "split": "train",
+      "text": "Do I push this after moving that?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "celebration_seating_none",
+      "group": "celebration_seating",
+      "domain": "events",
+      "split": "train",
+      "text": "There are eight guests and two tables of four. Suggest a seating layout when there are no other constraints.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "celebration_seating_optional",
+      "group": "celebration_seating",
+      "domain": "events",
+      "split": "train",
+      "text": "Suggest a celebration seating style. You can use saved preferences if available, but general arrangements are fine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "celebration_seating_required",
+      "group": "celebration_seating",
+      "domain": "events",
+      "split": "train",
+      "text": "Create the seating plan using the guest relationships and separation requests I gave you earlier.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "celebration_seating_clarify",
+      "group": "celebration_seating",
+      "domain": "events",
+      "split": "train",
+      "text": "Should those two go beside the other person?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "home_insulation_none",
+      "group": "home_insulation",
+      "domain": "home_improvement",
+      "split": "train",
+      "text": "Explain the purpose of a draught excluder at the bottom of a door.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare a door draught excluder with a thick curtain."
+        },
+        {
+          "role": "assistant",
+          "content": "A draught excluder covers a door gap, while a curtain covers a larger surface."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "home_insulation_optional",
+      "group": "home_insulation",
+      "domain": "home_improvement",
+      "split": "train",
+      "text": "Suggest a small home-comfort project, using saved preferences if available or giving a general beginner option.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare a door draught excluder with a thick curtain."
+        },
+        {
+          "role": "assistant",
+          "content": "A draught excluder covers a door gap, while a curtain covers a larger surface."
+        }
+      ],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "home_insulation_required",
+      "group": "home_insulation",
+      "domain": "home_improvement",
+      "split": "train",
+      "text": "Which room did I identify as the coldest when we made the home-improvement notes?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare a door draught excluder with a thick curtain."
+        },
+        {
+          "role": "assistant",
+          "content": "A draught excluder covers a door gap, while a curtain covers a larger surface."
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "home_insulation_clarify",
+      "group": "home_insulation",
+      "domain": "home_improvement",
+      "split": "train",
+      "text": "Is that gap meant to be open like this?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Compare a door draught excluder with a thick curtain."
+        },
+        {
+          "role": "assistant",
+          "content": "A draught excluder covers a door gap, while a curtain covers a larger surface."
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "journal_writing_none",
+      "group": "journal_writing",
+      "domain": "writing",
+      "split": "calibration",
+      "text": "Make that paragraph sound warmer.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Draft a fictional journal paragraph from the viewpoint of a lighthouse keeper."
+        },
+        {
+          "role": "assistant",
+          "content": "I watched the light cross the dark water and counted each returning beam."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "journal_writing_optional",
+      "group": "journal_writing",
+      "domain": "writing",
+      "split": "calibration",
+      "text": "Suggest a journal prompt, using a known writing preference if available and a general prompt otherwise.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "journal_writing_required",
+      "group": "journal_writing",
+      "domain": "writing",
+      "split": "calibration",
+      "text": "What title did I choose for the journal project in our last planning session? Describe one way to start a reflective paragraph.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Help me organize a journal project."
+        },
+        {
+          "role": "assistant",
+          "content": "A title can give the project a clear theme."
+        }
+      ],
+      "mode": "required",
+      "general_request": "Describe one way to start a reflective paragraph."
+    },
+    {
+      "id": "journal_writing_clarify",
+      "group": "journal_writing",
+      "domain": "writing",
+      "split": "calibration",
+      "text": "Could you put more of that feeling in the part after it?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_gravity_none",
+      "group": "exp2_gravity",
+      "domain": "science",
+      "split": "train",
+      "text": "Why do things fall?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_gravity_optional",
+      "group": "exp2_gravity",
+      "domain": "science",
+      "split": "train",
+      "text": "Give me a gravity demonstration; a familiar hobby could make the example nicer, but any example works.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_gravity_required",
+      "group": "exp2_gravity",
+      "domain": "science",
+      "split": "train",
+      "text": "Which gravity experiment did I pick for my class? Explain why objects fall at the same rate without air resistance.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain why objects fall at the same rate without air resistance."
+    },
+    {
+      "id": "exp2_gravity_clarify",
+      "group": "exp2_gravity",
+      "domain": "science",
+      "split": "train",
+      "text": "Could you do the falling thing with that?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_ocean_none",
+      "group": "exp2_ocean",
+      "domain": "science",
+      "split": "train",
+      "text": "How salty is seawater?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_ocean_optional",
+      "group": "exp2_ocean",
+      "domain": "science",
+      "split": "train",
+      "text": "Suggest a seaside activity that might suit me; a general suggestion is welcome too.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_ocean_required",
+      "group": "exp2_ocean",
+      "domain": "science",
+      "split": "train",
+      "text": "What was the name of the beach I stayed at?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_ocean_clarify",
+      "group": "exp2_ocean",
+      "domain": "science",
+      "split": "train",
+      "text": "The sea one, was it the same?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_sleep_none",
+      "group": "exp2_sleep",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "I slept badly and feel tired. Any simple ideas for getting through today?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_sleep_optional",
+      "group": "exp2_sleep",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "Suggest a bedtime routine, adapting it to any sleep preferences you have if useful.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_sleep_required",
+      "group": "exp2_sleep",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "Build tomorrow morning around my usual wake-up time.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_sleep_clarify",
+      "group": "exp2_sleep",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "About sleeping, should I change that one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_itch_none",
+      "group": "exp2_itch",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "My arm feels itchy. What are some common reasons?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_itch_optional",
+      "group": "exp2_itch",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "Suggest a way to unwind, perhaps drawing on my interests if you have them.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_itch_required",
+      "group": "exp2_itch",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "Which skin cream do I normally use?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_itch_clarify",
+      "group": "exp2_itch",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "It keeps doing that on this side.",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_back_tension_none",
+      "group": "exp2_back_tension",
+      "domain": "everyday_support",
+      "split": "calibration",
+      "text": "My back feels stiff after sitting. What could I try?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_back_tension_optional",
+      "group": "exp2_back_tension",
+      "domain": "everyday_support",
+      "split": "calibration",
+      "text": "Recommend a gentle activity; matching a known activity preference would be a bonus.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_back_tension_required",
+      "group": "exp2_back_tension",
+      "domain": "everyday_support",
+      "split": "calibration",
+      "text": "Adjust the exercise schedule to the restriction my physiotherapist gave me.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_back_tension_clarify",
+      "group": "exp2_back_tension",
+      "domain": "everyday_support",
+      "split": "calibration",
+      "text": "Can I do the other movement instead?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_discouraged_none",
+      "group": "exp2_discouraged",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "I feel discouraged after a difficult week. Help me choose one small next step.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_discouraged_optional",
+      "group": "exp2_discouraged",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "Any cheering-up ideas? Feel free to use an interest of mine, or just give ordinary ideas.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_discouraged_required",
+      "group": "exp2_discouraged",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "Who do I usually call when I need encouragement?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_discouraged_clarify",
+      "group": "exp2_discouraged",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "I mean the thing that happened, can you sort it?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_identity_none",
+      "group": "exp2_assistant_identity",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "What kind of assistant are you?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_identity_optional",
+      "group": "exp2_assistant_identity",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "Pick an example of something you can help with; knowing my interests is optional.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_identity_required",
+      "group": "exp2_assistant_identity",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "What nickname did I give you?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_identity_clarify",
+      "group": "exp2_assistant_identity",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "Are you the other kind or this kind?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_software_none",
+      "group": "exp2_assistant_software",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "What software powers this chat?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_software_optional",
+      "group": "exp2_assistant_software",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "Show a sample task you can handle, using my interests if convenient.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_software_required",
+      "group": "exp2_assistant_software",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "Which chat model did I choose for my own project, and explain what a language model does.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "explain what a language model does."
+    },
+    {
+      "id": "exp2_assistant_software_clarify",
+      "group": "exp2_assistant_software",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "Which version is that one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_speech_none",
+      "group": "exp2_assistant_speech",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "How do you turn spoken words into text?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_speech_optional",
+      "group": "exp2_assistant_speech",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "Suggest a voice practice exercise; customize it from my preferences only if they are available.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_speech_required",
+      "group": "exp2_assistant_speech",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "What microphone did I buy for my recording setup?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_speech_clarify",
+      "group": "exp2_assistant_speech",
+      "domain": "robot_system",
+      "split": "train",
+      "text": "Can you change the voice thing from there?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_limits_none",
+      "group": "exp2_assistant_limits",
+      "domain": "robot_system",
+      "split": "calibration",
+      "text": "Can you explain what you can and cannot do?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_limits_optional",
+      "group": "exp2_assistant_limits",
+      "domain": "robot_system",
+      "split": "calibration",
+      "text": "Suggest a useful task for us to try; personal context would be nice but is not needed.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_limits_required",
+      "group": "exp2_assistant_limits",
+      "domain": "robot_system",
+      "split": "calibration",
+      "text": "What command did I assign to my robot yesterday?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_assistant_limits_clarify",
+      "group": "exp2_assistant_limits",
+      "domain": "robot_system",
+      "split": "calibration",
+      "text": "Could you handle it like the other robot did?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_ram_basics_none",
+      "group": "exp2_ram_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "What does RAM do?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_ram_basics_optional",
+      "group": "exp2_ram_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "Suggest a starter computing topic, perhaps one related to an interest of mine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_ram_basics_required",
+      "group": "exp2_ram_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "How much memory is installed in my desktop?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_ram_basics_clarify",
+      "group": "exp2_ram_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "How much of the computer thing is there?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_cpu_basics_none",
+      "group": "exp2_cpu_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "What is the difference between a CPU and a GPU?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_cpu_basics_optional",
+      "group": "exp2_cpu_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "Choose a computer analogy I might like, or use a standard one.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_cpu_basics_required",
+      "group": "exp2_cpu_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "Which processor does my laptop have? Explain how a CPU differs from a GPU.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain how a CPU differs from a GPU."
+    },
+    {
+      "id": "exp2_cpu_basics_clarify",
+      "group": "exp2_cpu_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "Is that faster than the one I mean?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_cache_basics_none",
+      "group": "exp2_cache_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "Why do programs use a cache?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_cache_basics_optional",
+      "group": "exp2_cache_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "Recommend a short computing lesson; a known learning preference could help but is optional.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_cache_basics_required",
+      "group": "exp2_cache_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "What cache size did I configure in my service?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_cache_basics_clarify",
+      "group": "exp2_cache_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "Can you clear that for the same one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_wifi_basics_none",
+      "group": "exp2_wifi_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "Why can a Wi-Fi signal be weak?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_wifi_basics_optional",
+      "group": "exp2_wifi_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "Offer a network project idea, tailored to any known interests if possible.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_wifi_basics_required",
+      "group": "exp2_wifi_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "What is the network name of my home router? Also explain why thick walls weaken Wi-Fi.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Also explain why thick walls weaken Wi-Fi."
+    },
+    {
+      "id": "exp2_wifi_basics_clarify",
+      "group": "exp2_wifi_basics",
+      "domain": "computing",
+      "split": "train",
+      "text": "It disconnected again. Which one should I select?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_git_basics_none",
+      "group": "exp2_git_basics",
+      "domain": "computing",
+      "split": "calibration",
+      "text": "How do I undo an uncommitted change in Git?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_git_basics_optional",
+      "group": "exp2_git_basics",
+      "domain": "computing",
+      "split": "calibration",
+      "text": "Suggest a practice Git exercise; use a relevant hobby if you know one.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_git_basics_required",
+      "group": "exp2_git_basics",
+      "domain": "computing",
+      "split": "calibration",
+      "text": "Which branch am I using for my private project?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_git_basics_clarify",
+      "group": "exp2_git_basics",
+      "domain": "computing",
+      "split": "calibration",
+      "text": "Can you undo that change in the other place?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_python_loop_none",
+      "group": "exp2_python_loop",
+      "domain": "computing",
+      "split": "train",
+      "text": "Show me a tiny Python for loop.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_python_loop_optional",
+      "group": "exp2_python_loop",
+      "domain": "computing",
+      "split": "train",
+      "text": "Give me a Python exercise I might enjoy; a generic exercise is fine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_python_loop_required",
+      "group": "exp2_python_loop",
+      "domain": "computing",
+      "split": "train",
+      "text": "What did I name the script that processes my invoices?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_python_loop_clarify",
+      "group": "exp2_python_loop",
+      "domain": "computing",
+      "split": "train",
+      "text": "Can you fix the loop in it?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_fraction_none",
+      "group": "exp2_fraction",
+      "domain": "mathematics",
+      "split": "train",
+      "text": "What is three quarters plus one eighth?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_fraction_optional",
+      "group": "exp2_fraction",
+      "domain": "mathematics",
+      "split": "train",
+      "text": "Suggest a fraction exercise, perhaps using a hobby I like.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_fraction_required",
+      "group": "exp2_fraction",
+      "domain": "mathematics",
+      "split": "train",
+      "text": "What score did I get on my last fraction quiz?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_fraction_clarify",
+      "group": "exp2_fraction",
+      "domain": "mathematics",
+      "split": "train",
+      "text": "Is it three of those or four of these?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_probability_none",
+      "group": "exp2_probability",
+      "domain": "mathematics",
+      "split": "train",
+      "text": "If I toss a fair coin twice, what is the chance of two heads?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_probability_optional",
+      "group": "exp2_probability",
+      "domain": "mathematics",
+      "split": "train",
+      "text": "Give a probability example; personalize the setting only if you have useful context.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_probability_required",
+      "group": "exp2_probability",
+      "domain": "mathematics",
+      "split": "train",
+      "text": "What probability did I estimate in my own experiment?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_probability_clarify",
+      "group": "exp2_probability",
+      "domain": "mathematics",
+      "split": "train",
+      "text": "What are the chances of that one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_solar_none",
+      "group": "exp2_solar",
+      "domain": "energy",
+      "split": "train",
+      "text": "How does a solar panel generate electricity?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_solar_optional",
+      "group": "exp2_solar",
+      "domain": "energy",
+      "split": "train",
+      "text": "Suggest an energy-saving habit; fit it to a known routine if available.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_solar_required",
+      "group": "exp2_solar",
+      "domain": "energy",
+      "split": "train",
+      "text": "How many panels are on my roof; explain how sunlight becomes electricity.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "explain how sunlight becomes electricity."
+    },
+    {
+      "id": "exp2_solar_clarify",
+      "group": "exp2_solar",
+      "domain": "energy",
+      "split": "train",
+      "text": "Will this one produce enough for it?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_compost_none",
+      "group": "exp2_compost",
+      "domain": "gardening",
+      "split": "calibration",
+      "text": "Can vegetable peels go in compost?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_compost_optional",
+      "group": "exp2_compost",
+      "domain": "gardening",
+      "split": "calibration",
+      "text": "Suggest a small gardening project that could fit my interests, or a common beginner project.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_compost_required",
+      "group": "exp2_compost",
+      "domain": "gardening",
+      "split": "calibration",
+      "text": "Where did I put my compost bin?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_compost_clarify",
+      "group": "exp2_compost",
+      "domain": "gardening",
+      "split": "calibration",
+      "text": "Does that go in the green one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_fabric_care_none",
+      "group": "exp2_fabric_care",
+      "domain": "household",
+      "split": "train",
+      "text": "What does the crossed-out tumble-dryer symbol mean?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_fabric_care_optional",
+      "group": "exp2_fabric_care",
+      "domain": "household",
+      "split": "train",
+      "text": "Suggest a household skill to practice; my preferences could guide it but are not necessary.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_fabric_care_required",
+      "group": "exp2_fabric_care",
+      "domain": "household",
+      "split": "train",
+      "text": "Which setting do I use for my wool blanket, and explain why wool can shrink.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "explain why wool can shrink."
+    },
+    {
+      "id": "exp2_fabric_care_clarify",
+      "group": "exp2_fabric_care",
+      "domain": "household",
+      "split": "train",
+      "text": "Should I put it on that setting again?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_rice_none",
+      "group": "exp2_rice",
+      "domain": "cooking",
+      "split": "train",
+      "text": "How can I stop rice sticking to the pan?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_rice_optional",
+      "group": "exp2_rice",
+      "domain": "cooking",
+      "split": "train",
+      "text": "Any lunch ideas? You may use a known food preference, but feel free to pick a general option.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_rice_required",
+      "group": "exp2_rice",
+      "domain": "cooking",
+      "split": "train",
+      "text": "Make the shopping list using the rice variety I usually buy.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_rice_clarify",
+      "group": "exp2_rice",
+      "domain": "cooking",
+      "split": "train",
+      "text": "How much of that goes with this?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_dance_none",
+      "group": "exp2_dance",
+      "domain": "movement",
+      "split": "train",
+      "text": "How do I count a basic waltz rhythm?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_dance_optional",
+      "group": "exp2_dance",
+      "domain": "movement",
+      "split": "train",
+      "text": "Recommend a dance style to try, drawing on any musical tastes you know if helpful.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_dance_required",
+      "group": "exp2_dance",
+      "domain": "movement",
+      "split": "train",
+      "text": "Plan practice around my dance class timetable.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_dance_clarify",
+      "group": "exp2_dance",
+      "domain": "movement",
+      "split": "train",
+      "text": "Should I start on the other side for that?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_watercolor_none",
+      "group": "exp2_watercolor",
+      "domain": "art",
+      "split": "train",
+      "text": "How do watercolor paints differ from acrylics?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_watercolor_optional",
+      "group": "exp2_watercolor",
+      "domain": "art",
+      "split": "train",
+      "text": "Suggest a painting subject I might enjoy; a generic subject is welcome.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_watercolor_required",
+      "group": "exp2_watercolor",
+      "domain": "art",
+      "split": "train",
+      "text": "What paint color did I choose for my latest picture? Give a general tip for cleaning a brush.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Give a general tip for cleaning a brush."
+    },
+    {
+      "id": "exp2_watercolor_clarify",
+      "group": "exp2_watercolor",
+      "domain": "art",
+      "split": "train",
+      "text": "Can you make that part like the first one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_night_photo_none",
+      "group": "exp2_night_photo",
+      "domain": "photography",
+      "split": "calibration",
+      "text": "Why are my night photos blurry when the shutter is slow?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_night_photo_optional",
+      "group": "exp2_night_photo",
+      "domain": "photography",
+      "split": "calibration",
+      "text": "Give me a photography project, optionally inspired by an interest of mine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_night_photo_required",
+      "group": "exp2_night_photo",
+      "domain": "photography",
+      "split": "calibration",
+      "text": "Which lens did I take on my trip?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_night_photo_clarify",
+      "group": "exp2_night_photo",
+      "domain": "photography",
+      "split": "calibration",
+      "text": "Should the number be higher for this?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_aquarium_none",
+      "group": "exp2_aquarium",
+      "domain": "animal_care",
+      "split": "train",
+      "text": "Why does an aquarium need a filter?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_aquarium_optional",
+      "group": "exp2_aquarium",
+      "domain": "animal_care",
+      "split": "train",
+      "text": "Suggest an animal-themed hobby project; any known preference can be a starting point.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_aquarium_required",
+      "group": "exp2_aquarium",
+      "domain": "animal_care",
+      "split": "train",
+      "text": "What species of fish are in my tank?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_aquarium_clarify",
+      "group": "exp2_aquarium",
+      "domain": "animal_care",
+      "split": "train",
+      "text": "Is it safe to put the other one in there?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_small_pet_none",
+      "group": "exp2_small_pet",
+      "domain": "animal_care",
+      "split": "train",
+      "text": "What does a hamster need in its enclosure?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_small_pet_optional",
+      "group": "exp2_small_pet",
+      "domain": "animal_care",
+      "split": "train",
+      "text": "Pick a small creative activity for me; use known animal interests only if you have them.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_small_pet_required",
+      "group": "exp2_small_pet",
+      "domain": "animal_care",
+      "split": "train",
+      "text": "Use my hamster's name in a label for its enclosure.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_small_pet_clarify",
+      "group": "exp2_small_pet",
+      "domain": "animal_care",
+      "split": "train",
+      "text": "Does the little one need that too?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_account_settings_none",
+      "group": "exp2_account_settings",
+      "domain": "software",
+      "split": "train",
+      "text": "What is two-factor authentication?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_account_settings_optional",
+      "group": "exp2_account_settings",
+      "domain": "software",
+      "split": "train",
+      "text": "Suggest a technology topic that might interest me, or a broadly useful one.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_account_settings_required",
+      "group": "exp2_account_settings",
+      "domain": "software",
+      "split": "train",
+      "text": "Which email address do I use for my account?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_account_settings_clarify",
+      "group": "exp2_account_settings",
+      "domain": "software",
+      "split": "train",
+      "text": "Can you switch the account to the one I meant?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_payments_none",
+      "group": "exp2_payments",
+      "domain": "everyday_knowledge",
+      "split": "train",
+      "text": "What is the difference between a debit card and a credit card?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_payments_optional",
+      "group": "exp2_payments",
+      "domain": "everyday_knowledge",
+      "split": "train",
+      "text": "Suggest a simple money-tracking routine; optionally adapt it to a known preference.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_payments_required",
+      "group": "exp2_payments",
+      "domain": "everyday_knowledge",
+      "split": "train",
+      "text": "What day does my rent payment go out? Explain what a recurring payment is.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain what a recurring payment is."
+    },
+    {
+      "id": "exp2_payments_clarify",
+      "group": "exp2_payments",
+      "domain": "everyday_knowledge",
+      "split": "train",
+      "text": "Is that the amount for the other payment?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_stovetop_none",
+      "group": "exp2_stovetop",
+      "domain": "cooking",
+      "split": "calibration",
+      "text": "Why does milk boil over?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_stovetop_optional",
+      "group": "exp2_stovetop",
+      "domain": "cooking",
+      "split": "calibration",
+      "text": "Suggest a quick snack; a saved food preference could help, but any simple snack is fine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_stovetop_required",
+      "group": "exp2_stovetop",
+      "domain": "cooking",
+      "split": "calibration",
+      "text": "Which burner on my cooker is faulty?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_stovetop_clarify",
+      "group": "exp2_stovetop",
+      "domain": "cooking",
+      "split": "calibration",
+      "text": "Should I turn that one down or this one up?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_interview_none",
+      "group": "exp2_interview",
+      "domain": "work",
+      "split": "train",
+      "text": "I am nervous about an interview. Give me a practice question.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_interview_optional",
+      "group": "exp2_interview",
+      "domain": "work",
+      "split": "train",
+      "text": "Recommend an interview practice format, optionally using a known learning preference.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_interview_required",
+      "group": "exp2_interview",
+      "domain": "work",
+      "split": "train",
+      "text": "Which company is interviewing me next week, and give a general example of an interview question.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "give a general example of an interview question."
+    },
+    {
+      "id": "exp2_interview_clarify",
+      "group": "exp2_interview",
+      "domain": "work",
+      "split": "train",
+      "text": "Can you answer it the way they wanted?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_resume_none",
+      "group": "exp2_resume",
+      "domain": "work",
+      "split": "train",
+      "text": "How can I make a resume bullet more specific?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_resume_optional",
+      "group": "exp2_resume",
+      "domain": "work",
+      "split": "train",
+      "text": "Suggest a resume layout I might like; a conventional layout is okay too.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_resume_required",
+      "group": "exp2_resume",
+      "domain": "work",
+      "split": "train",
+      "text": "What was the title of my last job?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_resume_clarify",
+      "group": "exp2_resume",
+      "domain": "work",
+      "split": "train",
+      "text": "Could you add that role to the other section?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_saving_plan_none",
+      "group": "exp2_saving_plan",
+      "domain": "planning",
+      "split": "train",
+      "text": "I want to save 120 units in six weeks. How much per week?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_saving_plan_optional",
+      "group": "exp2_saving_plan",
+      "domain": "planning",
+      "split": "train",
+      "text": "Suggest a way to track savings; a familiar routine could help but is optional.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_saving_plan_required",
+      "group": "exp2_saving_plan",
+      "domain": "planning",
+      "split": "train",
+      "text": "Work out my weekly saving amount from the target I already set.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_saving_plan_clarify",
+      "group": "exp2_saving_plan",
+      "domain": "planning",
+      "split": "train",
+      "text": "Is that enough to reach the one I picked?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_bus_pass_none",
+      "group": "exp2_bus_pass",
+      "domain": "transport",
+      "split": "train",
+      "text": "What is a monthly bus pass?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_bus_pass_optional",
+      "group": "exp2_bus_pass",
+      "domain": "transport",
+      "split": "train",
+      "text": "Suggest an easy outing; you can use known interests or choose a general destination type.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_bus_pass_required",
+      "group": "exp2_bus_pass",
+      "domain": "transport",
+      "split": "train",
+      "text": "When does my bus pass expire?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_bus_pass_clarify",
+      "group": "exp2_bus_pass",
+      "domain": "transport",
+      "split": "train",
+      "text": "Do I need that pass for this one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_rail_platform_none",
+      "group": "exp2_rail_platform",
+      "domain": "transport",
+      "split": "calibration",
+      "text": "Why do railway platforms have tactile paving?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_rail_platform_optional",
+      "group": "exp2_rail_platform",
+      "domain": "transport",
+      "split": "calibration",
+      "text": "Recommend a travel-themed book; known tastes are useful but not required.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_rail_platform_required",
+      "group": "exp2_rail_platform",
+      "domain": "transport",
+      "split": "calibration",
+      "text": "What platform is printed on my ticket?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_rail_platform_clarify",
+      "group": "exp2_rail_platform",
+      "domain": "transport",
+      "split": "calibration",
+      "text": "Is this the right platform for the other train?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_weather_clouds_none",
+      "group": "exp2_weather_clouds",
+      "domain": "science",
+      "split": "train",
+      "text": "Why do clouds look gray before rain?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_weather_clouds_optional",
+      "group": "exp2_weather_clouds",
+      "domain": "science",
+      "split": "train",
+      "text": "Give me an indoor activity suggestion, optionally using a hobby of mine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_weather_clouds_required",
+      "group": "exp2_weather_clouds",
+      "domain": "science",
+      "split": "train",
+      "text": "What town am I visiting on Saturday?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_weather_clouds_clarify",
+      "group": "exp2_weather_clouds",
+      "domain": "science",
+      "split": "train",
+      "text": "Will it be like that when I get there?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_film_none",
+      "group": "exp2_film",
+      "domain": "entertainment",
+      "split": "train",
+      "text": "What makes a film a documentary?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_film_optional",
+      "group": "exp2_film",
+      "domain": "entertainment",
+      "split": "train",
+      "text": "Any film recommendations? A known genre preference can guide you, but surprise me if needed.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_film_required",
+      "group": "exp2_film",
+      "domain": "entertainment",
+      "split": "train",
+      "text": "What is my favorite film? Explain what a documentary is.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain what a documentary is."
+    },
+    {
+      "id": "exp2_film_clarify",
+      "group": "exp2_film",
+      "domain": "entertainment",
+      "split": "train",
+      "text": "Is the second one the one you mean?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_piano_none",
+      "group": "exp2_piano",
+      "domain": "music",
+      "split": "train",
+      "text": "What is a chord?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_piano_optional",
+      "group": "exp2_piano",
+      "domain": "music",
+      "split": "train",
+      "text": "Suggest something to practice on piano; tailor it to known tastes if possible.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_piano_required",
+      "group": "exp2_piano",
+      "domain": "music",
+      "split": "train",
+      "text": "Who is my piano teacher?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_piano_clarify",
+      "group": "exp2_piano",
+      "domain": "music",
+      "split": "train",
+      "text": "Could you play the other chord after that?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_knitting_none",
+      "group": "exp2_knitting",
+      "domain": "craft",
+      "split": "train",
+      "text": "What is the difference between knitting and crochet?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_knitting_optional",
+      "group": "exp2_knitting",
+      "domain": "craft",
+      "split": "train",
+      "text": "Suggest a craft project, using any known preferences if they help.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_knitting_required",
+      "group": "exp2_knitting",
+      "domain": "craft",
+      "split": "train",
+      "text": "What needle size did I choose for my scarf?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_knitting_clarify",
+      "group": "exp2_knitting",
+      "domain": "craft",
+      "split": "train",
+      "text": "Does that stitch go the same way here?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_calm_breathing_none",
+      "group": "exp2_calm_breathing",
+      "domain": "everyday_support",
+      "split": "calibration",
+      "text": "I feel tense. Talk me through a short calming exercise.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_calm_breathing_optional",
+      "group": "exp2_calm_breathing",
+      "domain": "everyday_support",
+      "split": "calibration",
+      "text": "Suggest a calming activity I might like; ordinary suggestions are fine without personal context.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_calm_breathing_required",
+      "group": "exp2_calm_breathing",
+      "domain": "everyday_support",
+      "split": "calibration",
+      "text": "Lead me through my usual relaxation exercise.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_calm_breathing_clarify",
+      "group": "exp2_calm_breathing",
+      "domain": "everyday_support",
+      "split": "calibration",
+      "text": "Could we do the same thing but without that bit?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_outdoor_walk_none",
+      "group": "exp2_outdoor_walk",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "I have been indoors all day and feel restless. Give me a simple idea.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_outdoor_walk_optional",
+      "group": "exp2_outdoor_walk",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "Suggest an outdoor activity; use a known interest if you can, otherwise choose freely.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_outdoor_walk_required",
+      "group": "exp2_outdoor_walk",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "Plan a short walk starting from my home address.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_outdoor_walk_clarify",
+      "group": "exp2_outdoor_walk",
+      "domain": "everyday_support",
+      "split": "train",
+      "text": "Would that route work from this place?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_chores_none",
+      "group": "exp2_chores",
+      "domain": "household",
+      "split": "train",
+      "text": "I have ten minutes and a messy kitchen. Where should I start?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_chores_optional",
+      "group": "exp2_chores",
+      "domain": "household",
+      "split": "train",
+      "text": "Suggest a tidying routine, perhaps adapted to any known work habits.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_chores_required",
+      "group": "exp2_chores",
+      "domain": "household",
+      "split": "train",
+      "text": "Which chores are assigned to me this week?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_chores_clarify",
+      "group": "exp2_chores",
+      "domain": "household",
+      "split": "train",
+      "text": "Should I do that before the other job?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_birthday_none",
+      "group": "exp2_birthday",
+      "domain": "relationships",
+      "split": "train",
+      "text": "Help me write a cheerful generic birthday greeting.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_birthday_optional",
+      "group": "exp2_birthday",
+      "domain": "relationships",
+      "split": "train",
+      "text": "Suggest a birthday gift idea; a known interest could improve it, but a general idea is okay.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_birthday_required",
+      "group": "exp2_birthday",
+      "domain": "relationships",
+      "split": "train",
+      "text": "Make a reminder using my uncle's birthday.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_birthday_clarify",
+      "group": "exp2_birthday",
+      "domain": "relationships",
+      "split": "train",
+      "text": "Is it their birthday or the other occasion?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_anniversary_none",
+      "group": "exp2_anniversary",
+      "domain": "relationships",
+      "split": "train",
+      "text": "What does a silver wedding anniversary mean?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_anniversary_optional",
+      "group": "exp2_anniversary",
+      "domain": "relationships",
+      "split": "train",
+      "text": "Suggest an anniversary celebration, optionally guided by preferences you have for me.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_anniversary_required",
+      "group": "exp2_anniversary",
+      "domain": "relationships",
+      "split": "train",
+      "text": "What date is my wedding anniversary?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_anniversary_clarify",
+      "group": "exp2_anniversary",
+      "domain": "relationships",
+      "split": "train",
+      "text": "Would that be suitable for the one coming up?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_accessibility_none",
+      "group": "exp2_accessibility",
+      "domain": "design",
+      "split": "calibration",
+      "text": "Why should buttons have text labels as well as color?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_accessibility_optional",
+      "group": "exp2_accessibility",
+      "domain": "design",
+      "split": "calibration",
+      "text": "Suggest an accessible app project; a known interest might help choose the theme.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_accessibility_required",
+      "group": "exp2_accessibility",
+      "domain": "design",
+      "split": "calibration",
+      "text": "What accessibility setting do I prefer on my phone? Explain why captions help viewers.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain why captions help viewers."
+    },
+    {
+      "id": "exp2_accessibility_clarify",
+      "group": "exp2_accessibility",
+      "domain": "design",
+      "split": "calibration",
+      "text": "Can you make it easier in the way I meant?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_reservation_none",
+      "group": "exp2_reservation",
+      "domain": "planning",
+      "split": "train",
+      "text": "What information is normally needed to reserve a table?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_reservation_optional",
+      "group": "exp2_reservation",
+      "domain": "planning",
+      "split": "train",
+      "text": "Recommend a place to eat by type; use known tastes if available, otherwise pick a common option.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_reservation_required",
+      "group": "exp2_reservation",
+      "domain": "planning",
+      "split": "train",
+      "text": "Fit a short walk around the time of my table reservation.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_reservation_clarify",
+      "group": "exp2_reservation",
+      "domain": "planning",
+      "split": "train",
+      "text": "Is that booking for all of them?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_groceries_none",
+      "group": "exp2_groceries",
+      "domain": "planning",
+      "split": "train",
+      "text": "I have oats and a banana. Suggest a simple breakfast.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_groceries_optional",
+      "group": "exp2_groceries",
+      "domain": "planning",
+      "split": "train",
+      "text": "What could I cook? If a food preference is handy, use it, otherwise offer a simple dish.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_groceries_required",
+      "group": "exp2_groceries",
+      "domain": "planning",
+      "split": "train",
+      "text": "Which grocery items did I say were missing? Explain how to store dry oats.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain how to store dry oats."
+    },
+    {
+      "id": "exp2_groceries_clarify",
+      "group": "exp2_groceries",
+      "domain": "planning",
+      "split": "train",
+      "text": "Do I need more of that or enough of these?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_volunteering_none",
+      "group": "exp2_volunteering",
+      "domain": "community",
+      "split": "train",
+      "text": "How can someone find a local volunteering opportunity?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_volunteering_optional",
+      "group": "exp2_volunteering",
+      "domain": "community",
+      "split": "train",
+      "text": "Suggest a volunteer activity I might enjoy; a known interest is a bonus.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_volunteering_required",
+      "group": "exp2_volunteering",
+      "domain": "community",
+      "split": "train",
+      "text": "Address the note to the coordinator of my volunteer group.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_volunteering_clarify",
+      "group": "exp2_volunteering",
+      "domain": "community",
+      "split": "train",
+      "text": "Should I contact that person about the other day?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_apology_draft_none",
+      "group": "exp2_apology_draft",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Make it sound less formal.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Draft a brief fictional apology for missing a game."
+        },
+        {
+          "role": "assistant",
+          "content": "I apologize for missing the game. I hope to join you next time."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_apology_draft_optional",
+      "group": "exp2_apology_draft",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Draft an apology message; a known tone preference may guide it, but use a friendly default if needed.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_apology_draft_required",
+      "group": "exp2_apology_draft",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Who was I supposed to apologize to?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_apology_draft_clarify",
+      "group": "exp2_apology_draft",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Could you make it less like that?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_poem_edit_none",
+      "group": "exp2_poem_edit",
+      "domain": "drafting",
+      "split": "calibration",
+      "text": "Add one more line.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Write two lines of a poem about a mountain."
+        },
+        {
+          "role": "assistant",
+          "content": "Clouds drift over stone. The quiet summit waits."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_poem_edit_optional",
+      "group": "exp2_poem_edit",
+      "domain": "drafting",
+      "split": "calibration",
+      "text": "Write a short poem for me; use a known favorite subject if convenient, or choose your own.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_poem_edit_required",
+      "group": "exp2_poem_edit",
+      "domain": "drafting",
+      "split": "calibration",
+      "text": "Which poem did I select for the recital, and explain what a rhyme is.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "explain what a rhyme is."
+    },
+    {
+      "id": "exp2_poem_edit_clarify",
+      "group": "exp2_poem_edit",
+      "domain": "drafting",
+      "split": "calibration",
+      "text": "Can you add it to the other one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_story_edit_none",
+      "group": "exp2_story_edit",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Give the character a happier ending.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Write a fictional scene about a sailor losing a race."
+        },
+        {
+          "role": "assistant",
+          "content": "The sailor crossed the finish line last and sat alone beside the harbor."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_story_edit_optional",
+      "group": "exp2_story_edit",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Suggest a story idea I might enjoy, drawing on any genre preference you know.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_story_edit_required",
+      "group": "exp2_story_edit",
+      "domain": "drafting",
+      "split": "train",
+      "text": "What name did I give the main character in my novel?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_story_edit_clarify",
+      "group": "exp2_story_edit",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Could that happen before the other part?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_translation_edit_none",
+      "group": "exp2_translation_edit",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Translate that greeting into Spanish.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Write a simple morning greeting."
+        },
+        {
+          "role": "assistant",
+          "content": "Good morning! I hope your day goes well."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_translation_edit_optional",
+      "group": "exp2_translation_edit",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Write a friendly greeting; you can match a known style preference or use an ordinary tone.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_translation_edit_required",
+      "group": "exp2_translation_edit",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Which language am I studying?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_translation_edit_clarify",
+      "group": "exp2_translation_edit",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Can you translate it into the other one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_brief_explanation_none",
+      "group": "exp2_brief_explanation",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Explain that more simply.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Explain evaporation."
+        },
+        {
+          "role": "assistant",
+          "content": "Evaporation happens when liquid molecules escape into the air as gas."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_brief_explanation_optional",
+      "group": "exp2_brief_explanation",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Pick a science topic to explain, optionally matching an interest of mine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_brief_explanation_required",
+      "group": "exp2_brief_explanation",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Which topic did I choose for my science talk?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_brief_explanation_clarify",
+      "group": "exp2_brief_explanation",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Can you simplify the thing from somewhere else?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_analogy_edit_none",
+      "group": "exp2_analogy_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Give me a different analogy.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Explain electric current with an analogy."
+        },
+        {
+          "role": "assistant",
+          "content": "Electric current is like water flowing through a pipe."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_analogy_edit_optional",
+      "group": "exp2_analogy_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Explain a concept through a hobby I enjoy if you know one; a standard analogy is fine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_analogy_edit_required",
+      "group": "exp2_analogy_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Which analogy did I use in my presentation?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_analogy_edit_clarify",
+      "group": "exp2_analogy_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Could you compare that with the other thing?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_step_edit_none",
+      "group": "exp2_step_edit",
+      "domain": "general_followup",
+      "split": "calibration",
+      "text": "Turn that into three numbered steps.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Explain how to plant a bean in a pot."
+        },
+        {
+          "role": "assistant",
+          "content": "Fill the pot with soil, place the bean just below the surface, then water it gently."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_step_edit_optional",
+      "group": "exp2_step_edit",
+      "domain": "general_followup",
+      "split": "calibration",
+      "text": "Give me a short practice plan, using my learning preferences if they are available.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_step_edit_required",
+      "group": "exp2_step_edit",
+      "domain": "general_followup",
+      "split": "calibration",
+      "text": "How many steps were in the plan I agreed to?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_step_edit_clarify",
+      "group": "exp2_step_edit",
+      "domain": "general_followup",
+      "split": "calibration",
+      "text": "Should that step go there or earlier?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_code_edit_none",
+      "group": "exp2_code_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Now make the loop count backward.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Show a Python loop printing the numbers one through three."
+        },
+        {
+          "role": "assistant",
+          "content": "for number in range(1, 4): print(number)"
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_code_edit_optional",
+      "group": "exp2_code_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Suggest a programming exercise for me; known interests can guide its theme, but any theme works.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_code_edit_required",
+      "group": "exp2_code_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "What variable name did I choose for my sensor reading? Explain what a variable represents.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain what a variable represents."
+    },
+    {
+      "id": "exp2_code_edit_clarify",
+      "group": "exp2_code_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Can you change its value in the other one?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_math_edit_none",
+      "group": "exp2_math_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Can you show the calculation?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "What is fifteen percent of eighty?"
+        },
+        {
+          "role": "assistant",
+          "content": "Fifteen percent of eighty is twelve."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_math_edit_optional",
+      "group": "exp2_math_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Give me a math puzzle, optionally based on a hobby of mine.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_math_edit_required",
+      "group": "exp2_math_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "What answer did I write on question six?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_math_edit_clarify",
+      "group": "exp2_math_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "How did it end up at that number?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_list_edit_none",
+      "group": "exp2_list_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Sort those words alphabetically.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Give three words for types of weather."
+        },
+        {
+          "role": "assistant",
+          "content": "Rain, sunshine, and fog."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_list_edit_optional",
+      "group": "exp2_list_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Suggest a few vocabulary words to learn, using a known interest if useful.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_list_edit_required",
+      "group": "exp2_list_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Which words did I put on my revision list?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_list_edit_clarify",
+      "group": "exp2_list_edit",
+      "domain": "general_followup",
+      "split": "train",
+      "text": "Can you move that ahead of the other entry?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_speech_style_none",
+      "group": "exp2_speech_style",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Make the opening more welcoming.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Draft a fictional welcome for visitors to a school fair."
+        },
+        {
+          "role": "assistant",
+          "content": "We are gathered at the fair today. Thank you for attending."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_speech_style_optional",
+      "group": "exp2_speech_style",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Draft a short welcome; a known tone preference is optional, so a warm standard version works.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_speech_style_required",
+      "group": "exp2_speech_style",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Include the names of the guests I am welcoming tomorrow.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_speech_style_clarify",
+      "group": "exp2_speech_style",
+      "domain": "drafting",
+      "split": "train",
+      "text": "Can you change that bit so it fits the others?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_email_signoff_none",
+      "group": "exp2_email_signoff",
+      "domain": "drafting",
+      "split": "calibration",
+      "text": "Replace the last sentence with a polite sign-off.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Draft a fictional email confirming receipt of a document."
+        },
+        {
+          "role": "assistant",
+          "content": "I have received the document. I will review it soon. That is all for now."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_email_signoff_optional",
+      "group": "exp2_email_signoff",
+      "domain": "drafting",
+      "split": "calibration",
+      "text": "Suggest an email sign-off I might like, or use a broadly suitable one.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "exp2_email_signoff_required",
+      "group": "exp2_email_signoff",
+      "domain": "drafting",
+      "split": "calibration",
+      "text": "What email signature do I normally use? Explain what makes a sign-off polite.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain what makes a sign-off polite."
+    },
+    {
+      "id": "exp2_email_signoff_clarify",
+      "group": "exp2_email_signoff",
+      "domain": "drafting",
+      "split": "calibration",
+      "text": "Could you put the same ending on it?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_01",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "My Python script prints a list with brackets. How can I print the items one per line?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_02",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Why does a microphone pick up a loud squeal when it is close to a speaker?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_03",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Help me remember the difference between RAM and storage with a simple analogy.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_04",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What is a practical way to stop a fitted sheet coming off the mattress?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_05",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "How can someone politely decline an invitation without giving a long excuse?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_06",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "I have twenty minutes, a frying pan, rice, peas, and two eggs. Suggest a simple dinner using those ingredients.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_07",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "I rent a small room and cannot drill holes. How could I organize books and cables cheaply?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_08",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "I am new to public speaking and have to give a three-minute introduction to six coworkers tomorrow. Give me a practice plan.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_09",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Why might a mobile robot use both a camera and a depth sensor to avoid obstacles?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_10",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Can a social robot tell that someone is joking just from their words?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_11",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Make the second one warmer and less formal.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Give me two short ways to thank a neighbor for watering my plants."
+        },
+        {
+          "role": "assistant",
+          "content": "1. Thanks for watering my plants while I was away! 2. I appreciate your assistance in keeping my plants watered."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_12",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Could you explain that again with an example from a kitchen?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "What is the difference between doing tasks sequentially and concurrently?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sequential tasks happen one after another. Concurrent tasks can make progress during overlapping periods of time."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_01",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What was the name of the pottery class I told you I signed up for last month?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_02",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Remind me which laptop I decided to buy after we compared them last week.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_03",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Which part of my presentation did I say I was least confident about?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_04",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What is the nickname I use for my houseplant?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_05",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Plan a reading week around my usual work shifts, using the schedule I gave you before.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_06",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Suggest a birthday present for my brother based on the hobbies I told you he has.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_07",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Use the balcony measurements I shared yesterday to work out where the two chairs could fit.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_08",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Go with the same budget limit I gave you in our last conversation and outline a weekend craft project.",
+      "prior_turns": [
+        {
+          "role": "assistant",
+          "content": "How much would you like to spend on the craft project?"
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_review_01",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Would that work for me?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "observed_review_02",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What did I say about coffee last time, and how is cold brew made?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "how is cold brew made?"
+    },
+    {
+      "id": "observed_review_03",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "You know what I like. Pick a movie for tonight.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "observed_review_04",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Give me the usual version, but make it shorter.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "I need an opening line for a team meeting."
+        },
+        {
+          "role": "assistant",
+          "content": "Would you like an upbeat greeting or a concise agenda introduction?"
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "observed_reported_headache",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Yesterday I had a really bad day. I have headache. What should I do?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_headache_followup",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Can you suggest me something that I can do, I have headache.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_robot_specs",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What are your specifications, robot?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_preferred_tea",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What is my preferred tea?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_optional_weekend",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Suggest a weekend activity; use my interests if you know them, otherwise give general ideas.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "observed_required_camera",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Where is my camera?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_unfinished_speech",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "It's like a... it's like a...",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "observed_mixed_camera",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Where is my camera? Explain how batteries work.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain how batteries work."
+    },
+    {
+      "id": "observed_fragment_0",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "how is cold brew made?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_fragment_1",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What did I say about coffee last time?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_fragment_2",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Explain how batteries work.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    }
+  ]
+}

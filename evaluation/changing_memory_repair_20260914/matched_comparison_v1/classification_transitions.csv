@@ -1,0 +1,12 @@
+baseline_classification,repair_classification,checkpoints,classification_changed
+appropriate_uncertainty,appropriate_uncertainty,24,False
+correct_recall,correct_recall,15,False
+inappropriate_uncertainty,correct_recall,6,True
+incorrect,appropriate_uncertainty,24,True
+incorrect,correct_recall,4,True
+incorrect,no_delivered_answer,1,True
+incorrect,partial,1,True
+no_delivered_answer,correct_recall,2,True
+no_delivered_answer,no_delivered_answer,1,False
+partial,correct_recall,17,True
+partial,partial,1,False

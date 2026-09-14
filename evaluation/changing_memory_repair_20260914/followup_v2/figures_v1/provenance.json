@@ -1,0 +1,148 @@
+{
+  "analysis": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/analysis_v1",
+  "analysis_seal_sha256": "ac757ec863121726700aa4d65e790f8bdb2612d11fa96ec08333bcb31e85d60f",
+  "reviewed_answers_sha256": "e064ee663757af4ac24cf4b598c9e05a4f56dec24df9a6b1b3481195bdee560f",
+  "script_sha256": "3942940119c5ae2e86849fa82051371c82660a6aed14662058f1279057b824e0",
+  "command": [
+    "evaluation/changing_memory_repair_20260914/render_repair_figure.py",
+    "--analysis",
+    "evaluation/changing_memory_repair_20260914/followup_v2/analysis_v1",
+    "--output",
+    "evaluation/changing_memory_repair_20260914/followup_v2/figures_v1"
+  ],
+  "python": "3.10.12 (main, Jun 22 2026, 18:55:27) [GCC 11.4.0]",
+  "matplotlib": "3.10.9",
+  "cell_count": 24,
+  "category_counts": {
+    "R": 12,
+    "U": 12,
+    "D": 0,
+    "F": 0,
+    "W": 0,
+    "M": 0
+  },
+  "score_origin": "Existing sealed assistant judgments only; no answer-text scoring or score inference.",
+  "human_validation": "pending",
+  "frozen_stages": [
+    [
+      "correction",
+      "prestore",
+      "Before storing\nretained"
+    ],
+    [
+      "correction",
+      "recalled",
+      "Original recall\nretained"
+    ],
+    [
+      "correction",
+      "corrected_retained",
+      "After correction\nretained"
+    ],
+    [
+      "correction",
+      "corrected_fresh",
+      "After correction\nfresh"
+    ],
+    [
+      "correction",
+      "historical_retained",
+      "Historical control\nretained"
+    ],
+    [
+      "correction",
+      "historical_fresh",
+      "Historical control\nfresh"
+    ],
+    [
+      "correction",
+      "restart_retained",
+      "After restart\nretained"
+    ],
+    [
+      "correction",
+      "restart_fresh",
+      "After restart\nfresh"
+    ],
+    [
+      "correction",
+      "restart_historical_retained",
+      "Restart historical\nretained"
+    ],
+    [
+      "correction",
+      "restart_historical_fresh",
+      "Restart historical\nfresh"
+    ],
+    [
+      "deletion",
+      "recalled",
+      "Original recall\nretained"
+    ],
+    [
+      "deletion",
+      "deleted_retained",
+      "After deletion\nretained"
+    ],
+    [
+      "deletion",
+      "deleted_fresh",
+      "After deletion\nfresh"
+    ],
+    [
+      "deletion",
+      "deleted_historical_retained",
+      "Forgotten past\nretained"
+    ],
+    [
+      "deletion",
+      "restart_retained",
+      "After restart\nretained"
+    ],
+    [
+      "deletion",
+      "restart_fresh",
+      "After restart\nfresh"
+    ],
+    [
+      "deletion",
+      "restart_historical_retained",
+      "Restart forgotten past\nretained"
+    ],
+    [
+      "expiry",
+      "before_retained",
+      "Before expiry\nretained"
+    ],
+    [
+      "expiry",
+      "before_fresh",
+      "Before expiry\nfresh"
+    ],
+    [
+      "expiry",
+      "at_retained",
+      "At expiry\nretained"
+    ],
+    [
+      "expiry",
+      "at_fresh",
+      "At expiry\nfresh"
+    ],
+    [
+      "expiry",
+      "after_retained",
+      "After expiry\nretained"
+    ],
+    [
+      "expiry",
+      "restart_retained",
+      "After restart\nretained"
+    ],
+    [
+      "expiry",
+      "restart_fresh",
+      "After restart\nfresh"
+    ]
+  ]
+}

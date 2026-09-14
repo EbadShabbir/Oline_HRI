@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-09-12T15:12:24.980252+00:00",
+  "immutability": "exclusive audit directory, SHA256 manifest and read-only files/directories; not privileged WORM",
+  "sha256": {
+    "check_frozen_results.py": "f02532de1b1ddd77835a2e9b7fdb3f37823cb7f5ceed991a8625cc35f4bf7c65",
+    "independently_joined_answers.jsonl": "69d46cf11df522246f9126bb6dec1664125996481672617671285408e92c168c",
+    "numeric_agreement.json": "688e57908d874d5cd8de7b56b0510d5e2009f58357b3d2c9031db3b37a67cc98",
+    "numeric_agreement.md": "7f001787aa30517b085dbf423eea73d6a174536a94b1d5dc7f50cf6bf7cd0be5",
+    "spot_check_notes.md": "08b95dc0a9d79557627c72e94c441f0b20c786642171f14e21b08ef0cd3f57f3"
+  }
+}

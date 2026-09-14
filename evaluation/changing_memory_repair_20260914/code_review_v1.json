@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "created_utc": "2026-09-14T13:46:51.144641+00:00",
+  "reviewer": "assistant /root/lifecycle_routing_fix",
+  "review_type": "independent assistant code review of parent-authored conversation/composition and sibling-authored evidence/validation changes; no answer scoring",
+  "status": "passed_with_scope_limits",
+  "human_code_validation": "pending",
+  "independence": {
+    "independently_reviewed": [
+      "src/oline_hri/conversation.py",
+      "src/oline_hri/grounded_composition.py",
+      "src/oline_hri/memory_evidence.py",
+      "src/oline_hri/relationships.py"
+    ],
+    "reviewer_authored_not_independently_reviewed": [
+      "src/oline_hri/routing.py",
+      "tests/test_routing_lifecycle_revalidation.py"
+    ],
+    "diagnostics_blinded": false,
+    "experimental_answers_scored": false
+  },
+  "source_sha256": {
+    "src/oline_hri/conversation.py": "0717344dbf1ae1f8cfa33914a1c2e471513bc71cdf6308fa0aebd9f3c18dabe6",
+    "src/oline_hri/grounded_composition.py": "52e458baa35b59aa7bc00736daf7a2e8b98b38a0fae1ce77b872fcf40eff7507",
+    "src/oline_hri/memory_evidence.py": "c0b1b0744f022fd593501e7a7310040309b4d198ba56435643ba14f2645d22e7",
+    "src/oline_hri/relationships.py": "759d2a6c671581ffd5db2b07e14a89b81d90fc58ed5fd3625bcf6ec9860b80f6",
+    "src/oline_hri/routing.py": "2604cc1a386a7f4e40f9528794423f46a4976501394c8e17d3479145e83f8bd1",
+    "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+    "tests/test_lifecycle_history_repair.py": "2ec5523efaca0dfa310303cbdcf3a00f46d4731b47d88c7f9ce14502b82db5ba",
+    "tests/test_memory_lifecycle_validation.py": "d22b48a23278bf4500588d7f96dc1b02363114815e96fd16898539428e11912f",
+    "tests/test_routing_lifecycle_revalidation.py": "92f2c13819d03eb1e1ed5ee8559b2fe0fb47d15f2791ae6740ea56f78f515182",
+    "tests/test_routing.py": "354c394cef9a0b3e4f2a7dc7d5ba0818604f5ff1c874fdb32b881799008feb9a",
+    "tests/test_memory_intent_regressions.py": "9fdc3b50d8f152002dff43001da1ec0daf1a98fec85f46cadabdbbd5b3f73de6",
+    "tests/test_lightweight_routing.py": "71b69e2e349904dc56e32ed578d9ff0e1f978c6967129ec97c89e4d9c19ce120",
+    "tests/test_pair_remediation.py": "32be3dfd654a35fc3b14395c69e394af4b1a48f0b268a8ba40ee31041376fbc3"
+  },
+  "source_hashes_stable_during_tests": true,
+  "validation": {
+    "command": "PYTHONPATH=src:tests .venv/bin/python -m unittest test_routing_lifecycle_revalidation test_lifecycle_history_repair test_memory_lifecycle_validation test_routing test_memory_intent_regressions test_lightweight_routing test_pair_remediation -v",
+    "exit_code": 0,
+    "tests_passed": 96,
+    "log": "code_review_tests_v1.log",
+    "log_sha256": "bb8efe97e3addb49f2bed1f683271c2338c93968fbb84337fa7f8211f60ab52b",
+    "additional_independent_assertions_passed": 28,
+    "additional_assertions_description": "Temporal-only locations rejected (5 x evidence/composition); named venues retained (3 x evidence/composition); correction-metadata false positives rejected (4); genuine correction-time requests retained (3); dated/current or conditional location shortcuts rejected (4); conflicting canonical/event metadata composition rejected (1).",
+    "live_inference": false,
+    "model_quality_claim": false
+  },
+  "findings": [
+    {
+      "id": "CR1",
+      "finding": "Location composition removed a dated historical qualifier for a current-location question.",
+      "resolution": "Question and source tense must agree; a date is omitted only when the question explicitly supplies the event date.",
+      "status": "resolved"
+    },
+    {
+      "id": "CR2",
+      "finding": "The new location early return bypassed canonical/event_time date consistency checks.",
+      "resolution": "Location composition now follows the existing canonical and metadata date coherence check.",
+      "status": "resolved"
+    },
+    {
+      "id": "CR3",
+      "finding": "Conditional locations entered the verified-location shortcut despite the bounded composition contract.",
+      "resolution": "Conditional suffixes including unless and except now decline extractive composition.",
+      "status": "resolved"
+    },
+    {
+      "id": "CR4",
+      "finding": "Temporal-only on Monday, at noon, in June and ISO-date values could be treated as locations.",
+      "resolution": "The shared evidence slot rejects wholly temporal values while preserving named venues such as Monday Hall, June Room and Room 12.",
+      "status": "resolved"
+    },
+    {
+      "id": "CR5",
+      "finding": "Event-time questions mentioning a prior change could request correction metadata even without asking when the change occurred.",
+      "resolution": "Correction-time detection now requires a question predicate targeting change, an explicit time-of-correction request, or an explicit chronology about when the change happened. Four adversarial event-time counterexamples now remain false.",
+      "status": "resolved"
+    },
+    {
+      "id": "CR6",
+      "finding": "Self-review of the new routing followup heuristic found generic assistant phrases containing your or you have could trigger personal routing.",
+      "resolution": "The heuristic now requires an initial personal fact assertion and excludes generic question/example/code subjects. Three general-topic counterexamples pass.",
+      "status": "resolved",
+      "independent_review": false
+    }
+  ],
+  "positive_checks": [
+    "All personal-memory generation omits retained factual history while retaining the session for routing.",
+    "Memory retrieval snapshots remain checked before generation and before delivery.",
+    "General followups retain conversation context.",
+    "Generation prompts no longer contain concrete fictional preference/person/time examples.",
+    "Real raw router outputs remain recorded independently of deterministic memory-policy overrides."
+  ],
+  "limits": [
+    "Routing still uses bounded English heuristics and model classification for unsupported paraphrases; this is not universal non-disclosure assurance.",
+    "Prior conversation lacks per-record provenance; unresolved pronoun-only recall may abstain after safe revalidation.",
+    "The metadata consistency check declines the extractive shortcut; this code review does not claim all possible contradictory source data is automatically corrected.",
+    "Offline fake transports test control flow and validation, not live generation quality.",
+    "The reviewer implemented routing changes and therefore does not provide independent authorship separation for that file."
+  ]
+}

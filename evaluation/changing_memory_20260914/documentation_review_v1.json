@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-14T13:29:26.825637+00:00",
+  "reviewer_id": "independent_blinded_assistant_b",
+  "review_type": "separate_unblinded_documentation_verification",
+  "status": "pass",
+  "scope": "Only new changing-memory top sections and latest links in results.md and developments.MD, checked against final README, sealed analysis_v2 metrics, report tables and independent audits. Historical document bodies checked solely for preservation.",
+  "original_votes_frozen_before_unblinding": true,
+  "original_votes_unchanged": true,
+  "blinding_transition": "All six original reviewer-B batch files were written exclusively and chmod0400 before this separate unblinded task. Parent confirmed all 214 original A/B packet votes frozen and agreed before authorizing documentation review. No vote files were edited or rescored.",
+  "human_validation": "pending",
+  "inference_performed": false,
+  "rescoring_performed": false,
+  "source_edits_performed": false,
+  "reviewer_document_edits_performed": false,
+  "reviewed_document_sha256": {
+    "results.md": "68ef5cdc26c38a44ef88273d6871a3557e5ec88594c5bfc5f285f3d32b4134f1",
+    "developments.MD": "91abb90453251175b9d7741d5ffceb0d84474936dc89626e84b2616ee1055890",
+    "evaluation/changing_memory_20260914/README.md": "2b6c865128c3a3f17b56c6f7d1f1dbbb0fe67c6b9ddf94bed9ec57589cb71890"
+  },
+  "evidence_sha256": {
+    "evaluation/changing_memory_20260914/README.md": "2b6c865128c3a3f17b56c6f7d1f1dbbb0fe67c6b9ddf94bed9ec57589cb71890",
+    "evaluation/changing_memory_20260914/analysis_v2/metrics.json": "f6ef4d0f68012d09fc2296be93891eb163df2f71f7185f160db75fa86fe4ec9f",
+    "evaluation/changing_memory_20260914/analysis_v2/seal.json": "e46dfd0701457675845e9caf034e29f2126bdc950d1ba75838177326b97d9a47",
+    "evaluation/changing_memory_20260914/analysis_v2/review_agreement.json": "9300485cbe20c9f2e8c75f204fa1b0ee55b36a32cc875fae64195385188c330d",
+    "evaluation/changing_memory_20260914/tables_v1/README.md": "9df93e429b610fc10fb7fd79ebe5cfdbeb394f5d2605646f6ce2f7611be0bee7",
+    "evaluation/changing_memory_20260914/tables_v1/overall.csv": "34d590f245da374c477661c5b79b1ce6310c3c492fc0f8e6f281426a01199948",
+    "evaluation/changing_memory_20260914/tables_v1/expected_kind_history.csv": "f2a40267a6535a13657de9f37e0007ab5380effad56205a8bebfe0ae2d558d3f",
+    "evaluation/changing_memory_20260914/tables_v1/branch_restart_history.csv": "5616fc97dd2420c86ad9995640a4289822946b9c41408da01d19229918e93144",
+    "evaluation/changing_memory_20260914/tables_v1/disclosure_scopes.csv": "3a7e24b7870ac96da6899d2b6a11c8e9c3e2df9033afa52b34cfe85fae9ce384",
+    "evaluation/changing_memory_20260914/tables_v1/history_pair_aggregates.csv": "7c48399706fab5f2a6d9461359767f051bd821e4f323fc29d602a85ed04fbabb",
+    "evaluation/changing_memory_20260914/tables_v1/collection_audit.csv": "ff2e360f594c431d1aec7d1fbb79aeb97b6dbcc39a07c1c9c3d099e88ba8c2f7",
+    "evaluation/changing_memory_20260914/collection_audit_v1.json": "e754a02b39adb3f3b2a8a5cd5bf41e6008dbbb9bc2cc111e82f33f7ff0f7de49",
+    "evaluation/changing_memory_20260914/final_analysis_verification_v3.json": "61af91a605a45047423a8c8ba704feccff801a47d4b8e84bd2d9c88191e4c38b",
+    "evaluation/changing_memory_20260914/final_integrity_and_diagnosis_notes_v1.md": "d8a8d3e37a51fea777f3f9527235d1d9dfec30445e7ca7de76cc6f3ceb3b991e"
+  },
+  "checks": [
+    {
+      "name": "completed_coverage",
+      "status": "pass",
+      "evidence": "288/288 planned checkpoints; 283 delivered, five withheld, zero missing; 12 fictional scenarios and 36 isolated branches."
+    },
+    {
+      "name": "primary_scores",
+      "status": "pass",
+      "evidence": "118/288 = 41.0% rounded; original 36/48, replacement 13/48, pre-store 12/12, appropriate uncertainty 67/144, historical controls 2/48 with 46 partial judgments."
+    },
+    {
+      "name": "replacement_history_split",
+      "status": "pass",
+      "evidence": "Retained 0/24 useful replacements and fresh 13/24, with five fresh withheld responses included in planned denominators."
+    },
+    {
+      "name": "revoked_original_disclosure",
+      "status": "pass",
+      "evidence": "Correction current-value 21/48 (retained 21/24, fresh 0/24); deleted 39/72 (39/48, 0/24); expired 27/60 (27/36, 0/24). All 87 revoked-original disclosures are retained-history cases."
+    },
+    {
+      "name": "restart_disclosure",
+      "status": "pass",
+      "evidence": "After restart: corrected 11/24, deleted 21/36, expired 9/24. These are task-specific planned denominators."
+    },
+    {
+      "name": "history_pairs",
+      "status": "pass",
+      "evidence": "108 matched pairs: 13 both useful, three retained only, 53 fresh only, 39 neither."
+    },
+    {
+      "name": "raw_versus_delivered",
+      "status": "pass",
+      "evidence": "Five supported raw replacements remain five failed delivered recalls. Support assessment is explicitly a separate unblinded diagnostic review; no raw answer is promoted into delivered success."
+    },
+    {
+      "name": "unsupported_jasmine",
+      "status": "pass",
+      "evidence": "Two fresh post-restart answers match a never-stored jasmine preference present in generator prompt examples. They remain unsupported forbidden claims, distinct from 87 revoked-original disclosures; total forbidden disclosures are 89. Revised prose avoids claiming prompt-example causality or cache contamination."
+    },
+    {
+      "name": "integrity_counts",
+      "status": "pass",
+      "evidence": "Collection audit passes 31,342 checks with zero violations: 36 databases, 36 real scheduled restarts, 72 confirmed writes, 12 corrections, 12 forgetting operations, 24 purged IDs, and 13 zero-inference startup admission failures. README/audit describe all 96 expected snapshot probes."
+    },
+    {
+      "name": "actual_generator_models",
+      "status": "pass",
+      "evidence": "Scored generation selected 0.6B 254 times and 1.7B 34 times; these counts are distinct from router/classifier calls and setup generations."
+    },
+    {
+      "name": "config_scope",
+      "status": "pass",
+      "evidence": "New development block explicitly states resolved schema-7 output cap 192, context 2048, temperature 0, seed 42, no thinking, CLI-default LLM router and BGE ONNX CPU embeddings. Older 128-token decision is explicitly historical."
+    },
+    {
+      "name": "diagnostic_amendment",
+      "status": "pass",
+      "evidence": "Independent final analysis verification preserves all 288 non-diagnostic rows and frozen votes. Only five withheld-row evidence diagnoses change; four genuine evidence-selection omissions remain."
+    },
+    {
+      "name": "review_scope_and_limits",
+      "status": "pass",
+      "evidence": "214 distinct blinded packets have complete original A/B agreement; human validation remains pending. Both new summaries limit findings to text, process restart with evaluation history restoration, and controlled logical-time expiry; they claim no power-loss or spoken validation or successful repair."
+    },
+    {
+      "name": "old_documentation_preservation",
+      "status": "pass",
+      "evidence": "New blocks precede old headings, and both entire older-body suffixes match the frozen pre-collection preparation document baselines byte-for-byte."
+    },
+    {
+      "name": "latest_links",
+      "status": "pass",
+      "evidence": "Every local link in the two new top blocks resolves, including the latest report, reviewed answers, tables, corrected figure, command history and separate prior experiment."
+    }
+  ],
+  "corrections_requested_and_verified": [
+    {
+      "issue": "Prompt-example matching and fresh-history observations were phrased causally.",
+      "resolution": "Parent changed copied/from to matched/present in, prevented to showed no, and latest summary through retained history to with retained history. Verified final document hashes and wording."
+    }
+  ],
+  "required_corrections_remaining": [],
+  "preservation": [
+    {
+      "document": "results.md",
+      "prior_heading": "## Matched-evidence generator capability, 12 September 2026",
+      "current_heading_line": 59,
+      "baseline_path": "evaluation/changing_memory_20260914/frozen_v1/preparation/results.md",
+      "baseline_document_sha256": "316e989397d3b3a830b22dfce79a9acfc54461b076b9c993016784ade1088ac3",
+      "current_and_baseline_suffix_sha256": "8620779a2ad71e05ada774b5b31a7693bcf8b5a26e36dc70b0ee3e72f5860aa3",
+      "preserved_suffix_bytes": 69871,
+      "byte_for_byte_equal": true
+    },
+    {
+      "document": "developments.MD",
+      "prior_heading": "## Superseding deployment decision — 2026-09-09",
+      "current_heading_line": 52,
+      "baseline_path": "evaluation/changing_memory_20260914/frozen_v1/preparation/developments.MD",
+      "baseline_document_sha256": "59df88b5359e6173d3e4b1ceb046304472949a9a9c07ba1e039603314f43486b",
+      "current_and_baseline_suffix_sha256": "bd3cc9b64fe7cd0ef744d2abd487dde824266069263d6a94760c8b66973963a4",
+      "preserved_suffix_bytes": 71554,
+      "byte_for_byte_equal": true
+    }
+  ],
+  "new_top_links": [
+    {
+      "document": "results.md",
+      "target": "evaluation/changing_memory_20260914/README.md",
+      "exists": true
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/changing_memory_20260914/README.md",
+      "exists": true
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/changing_memory_20260914/analysis_v2/answers.md",
+      "exists": true
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/changing_memory_20260914/tables_v1/README.md",
+      "exists": true
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/changing_memory_20260914/figures_v2/checkpoint_heatmap.pdf",
+      "exists": true
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/changing_memory_20260914/commands.sh",
+      "exists": true
+    },
+    {
+      "document": "results.md",
+      "target": "evaluation/independent_retrieval_20260913/README.md",
+      "exists": true
+    },
+    {
+      "document": "developments.MD",
+      "target": "evaluation/changing_memory_20260914/README.md",
+      "exists": true
+    },
+    {
+      "document": "developments.MD",
+      "target": "evaluation/changing_memory_20260914/README.md",
+      "exists": true
+    }
+  ],
+  "verification_limits": [
+    "This review validates documentation against existing frozen analysis and independent audits; it does not independently repeat collection, runtime-source auditing, raw-response semantic diagnosis, or human answer validation.",
+    "Initial git HEAD attempts could not provide a results.md baseline; preservation was instead established using the actual frozen_v1/preparation documentation snapshots."
+  ]
+}

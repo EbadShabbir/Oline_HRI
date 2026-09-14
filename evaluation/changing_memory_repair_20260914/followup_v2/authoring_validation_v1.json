@@ -1,0 +1,78 @@
+{
+  "created_at": "2026-09-14T14:10:45.434483+00:00",
+  "status": "passed",
+  "inference": false,
+  "active_partial_answers_read": false,
+  "author": "assistant /root/lifecycle_fix_validation_plan",
+  "checks": {
+    "original_baseline": {
+      "identical_branch_schedules": 3,
+      "identical_expected_state_rubric_objects": 24
+    },
+    "first_repair_authored": {
+      "identical_branch_schedules": 3,
+      "identical_expected_state_rubric_objects": 24
+    },
+    "analyze_repair.py": {
+      "planned_checkpoints": 24,
+      "scenario_ids": [
+        "cm04"
+      ],
+      "scenario_count": 1,
+      "independent_databases": 3,
+      "scheduled_restarts": 3,
+      "scheduled_segments": 6,
+      "disclosures": 3,
+      "history_pairs": 9,
+      "stage_history_groups": 24,
+      "post_restart_checkpoints": 9
+    },
+    "audit_repair_collection.py": {
+      "planned_checkpoints": 24,
+      "scenario_ids": [
+        "cm04"
+      ],
+      "scenario_count": 1,
+      "independent_databases": 3,
+      "scheduled_restarts": 3,
+      "scheduled_segments": 6,
+      "disclosures": 3,
+      "history_pairs": 9,
+      "stage_history_groups": 24,
+      "post_restart_checkpoints": 9
+    },
+    "render_repair_tables.py": {
+      "planned_checkpoints": 24,
+      "scenario_ids": [
+        "cm04"
+      ],
+      "scenario_count": 1,
+      "independent_databases": 3,
+      "scheduled_restarts": 3,
+      "scheduled_segments": 6,
+      "disclosures": 3,
+      "history_pairs": 9,
+      "stage_history_groups": 24,
+      "post_restart_checkpoints": 9
+    }
+  },
+  "expected_kind_counts": {
+    "uncertainty": 12,
+    "original": 4,
+    "replacement": 4,
+    "historical_control": 4
+  },
+  "history_counts": {
+    "retained": 15,
+    "fresh": 9
+  },
+  "sha256": {
+    "scenarios.json": "acfd23ad25b1e6e74e3d15758069d5fea5a63ab3f4704bf6ea60e35c2ee77cc9",
+    "author_ledger.py": "ffc65aff2a5197977d524a40d7861aa858b2634a0bb19fc785ed3ca2dc3065b1",
+    "protocol_v1.md": "e68c864db4fd558607f4fa32cc5d6605193c37c7cde6c5d021486c91c50ef930",
+    "authored_v1/runtime.json": "09d60f82aa0edcf173aba9eaefca48e66b76208b00159a4d98f85bf0bc3673e5",
+    "authored_v1/expected_ledger.json": "71761d87911d6f4182e20dbd8bba46532ca860f544117315cb99ab13a48fc7c5",
+    "authored_v1/protocol.md": "e68c864db4fd558607f4fa32cc5d6605193c37c7cde6c5d021486c91c50ef930"
+  },
+  "human_validation": "pending"
+}

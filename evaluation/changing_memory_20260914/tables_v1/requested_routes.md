@@ -1,0 +1,8 @@
+# requested routes
+
+| recorded_route_policy | memory_required | nominal_model_size | checkpoints |
+| --- | --- | --- | --- |
+| legacy | False | large | 10 |
+| legacy | False | small | 119 |
+| legacy | True | large | 24 |
+| legacy | True | small | 135 |

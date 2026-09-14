@@ -1,0 +1,1025 @@
+{
+  "arms": {
+    "cascade": {
+      "attempts": 144,
+      "by_repetition": {
+        "1": {
+          "attempts": 48,
+          "correct": 14,
+          "correct_fraction": 0.2916666666666667,
+          "deadline_correct_counts": {
+            "10": 14,
+            "15": 14,
+            "30": 14,
+            "5": 9
+          },
+          "delivered": 46,
+          "mean_latency_all_attempts_seconds": 7.2881542703125
+        },
+        "2": {
+          "attempts": 48,
+          "correct": 16,
+          "correct_fraction": 0.3333333333333333,
+          "deadline_correct_counts": {
+            "10": 13,
+            "15": 16,
+            "30": 16,
+            "5": 5
+          },
+          "delivered": 47,
+          "mean_latency_all_attempts_seconds": 10.371968608979167
+        },
+        "3": {
+          "attempts": 48,
+          "correct": 16,
+          "correct_fraction": 0.3333333333333333,
+          "deadline_correct_counts": {
+            "10": 16,
+            "15": 16,
+            "30": 16,
+            "5": 6
+          },
+          "delivered": 47,
+          "mean_latency_all_attempts_seconds": 9.086556447604167
+        }
+      },
+      "correct": 46,
+      "correct_fraction": 0.3194444444444444,
+      "deadline_counts": {
+        "10": {
+          "correct_delivered": 43,
+          "fraction_of_attempts": 0.2986111111111111
+        },
+        "15": {
+          "correct_delivered": 46,
+          "fraction_of_attempts": 0.3194444444444444
+        },
+        "30": {
+          "correct_delivered": 46,
+          "fraction_of_attempts": 0.3194444444444444
+        },
+        "5": {
+          "correct_delivered": 20,
+          "fraction_of_attempts": 0.1388888888888889
+        }
+      },
+      "delivered": 140,
+      "mean_latency_all_attempts_seconds": 8.915559775631944,
+      "whole_device_energy": {
+        "mean_whole_device_power_in_covered_request_intervals_watts": 11.039714748730878,
+        "request_energy_joules_per_attempt": 98.39823388724307,
+        "request_interval_coverage_fraction": 0.9997256510435252,
+        "session_count": 3,
+        "sessions": [
+          {
+            "duration_seconds": 353.887268989,
+            "repetition": 1,
+            "request_interval_covered_seconds": 349.552119008,
+            "request_interval_requested_seconds": 349.831404975,
+            "request_intervals_energy_joules": 4175.587517883447,
+            "whole_interval_energy_joules": 4215.4563783661615
+          },
+          {
+            "duration_seconds": 501.753556844,
+            "repetition": 2,
+            "request_interval_covered_seconds": 497.800338658,
+            "request_interval_requested_seconds": 497.854493231,
+            "request_intervals_energy_joules": 5364.7086122773435,
+            "whole_interval_energy_joules": 5400.748973941928
+          },
+          {
+            "duration_seconds": 441.767765406,
+            "repetition": 3,
+            "request_interval_covered_seconds": 436.135929694,
+            "request_interval_requested_seconds": 436.154709485,
+            "request_intervals_energy_joules": 4629.049549602212,
+            "whole_interval_energy_joules": 4674.700520907871
+          }
+        ],
+        "totals_exact_decimal_from_source": {
+          "duration_seconds": "1297.408591239",
+          "request_interval_covered_seconds": "1283.488387360",
+          "request_interval_requested_seconds": "1283.840607691",
+          "request_intervals_energy_joules": "14169.3456797630025",
+          "whole_interval_energy_joules": "14290.9058732159605"
+        },
+        "whole_session_energy_joules_per_attempt": 99.24240189733305
+      }
+    },
+    "large": {
+      "attempts": 144,
+      "by_repetition": {
+        "1": {
+          "attempts": 48,
+          "correct": 13,
+          "correct_fraction": 0.2708333333333333,
+          "deadline_correct_counts": {
+            "10": 3,
+            "15": 8,
+            "30": 13,
+            "5": 0
+          },
+          "delivered": 47,
+          "mean_latency_all_attempts_seconds": 17.448391865166666
+        },
+        "2": {
+          "attempts": 48,
+          "correct": 15,
+          "correct_fraction": 0.3125,
+          "deadline_correct_counts": {
+            "10": 15,
+            "15": 15,
+            "30": 15,
+            "5": 8
+          },
+          "delivered": 45,
+          "mean_latency_all_attempts_seconds": 7.956569410708333
+        },
+        "3": {
+          "attempts": 48,
+          "correct": 16,
+          "correct_fraction": 0.3333333333333333,
+          "deadline_correct_counts": {
+            "10": 14,
+            "15": 16,
+            "30": 16,
+            "5": 3
+          },
+          "delivered": 47,
+          "mean_latency_all_attempts_seconds": 8.358833818854167
+        }
+      },
+      "correct": 44,
+      "correct_fraction": 0.3055555555555556,
+      "deadline_counts": {
+        "10": {
+          "correct_delivered": 32,
+          "fraction_of_attempts": 0.2222222222222222
+        },
+        "15": {
+          "correct_delivered": 39,
+          "fraction_of_attempts": 0.2708333333333333
+        },
+        "30": {
+          "correct_delivered": 44,
+          "fraction_of_attempts": 0.3055555555555556
+        },
+        "5": {
+          "correct_delivered": 11,
+          "fraction_of_attempts": 0.0763888888888889
+        }
+      },
+      "delivered": 139,
+      "mean_latency_all_attempts_seconds": 11.254598364909722,
+      "whole_device_energy": {
+        "mean_whole_device_power_in_covered_request_intervals_watts": 10.266517059556932,
+        "request_energy_joules_per_attempt": 115.48048629605205,
+        "request_interval_coverage_fraction": 0.9994371065852241,
+        "session_count": 3,
+        "sessions": [
+          {
+            "duration_seconds": 841.134342463,
+            "repetition": 1,
+            "request_interval_covered_seconds": 837.104457881,
+            "request_interval_requested_seconds": 837.522809528,
+            "request_intervals_energy_joules": 8023.545455207875,
+            "whole_interval_energy_joules": 8057.81687018636
+          },
+          {
+            "duration_seconds": 385.84610085,
+            "repetition": 2,
+            "request_interval_covered_seconds": 381.87868478,
+            "request_interval_requested_seconds": 381.915331714,
+            "request_intervals_energy_joules": 4237.574785171188,
+            "whole_interval_energy_joules": 4273.840912742639
+          },
+          {
+            "duration_seconds": 404.892609175,
+            "repetition": 3,
+            "request_interval_covered_seconds": 400.766761826,
+            "request_interval_requested_seconds": 401.224023305,
+            "request_intervals_energy_joules": 4368.069786252433,
+            "whole_interval_energy_joules": 4404.262751381883
+          }
+        ],
+        "totals_exact_decimal_from_source": {
+          "duration_seconds": "1631.873052488",
+          "request_interval_covered_seconds": "1619.749904487",
+          "request_interval_requested_seconds": "1620.662164547",
+          "request_intervals_energy_joules": "16629.190026631496",
+          "whole_interval_energy_joules": "16735.920534310882"
+        },
+        "whole_session_energy_joules_per_attempt": 116.2216703771589
+      }
+    },
+    "small": {
+      "attempts": 144,
+      "by_repetition": {
+        "1": {
+          "attempts": 48,
+          "correct": 14,
+          "correct_fraction": 0.2916666666666667,
+          "deadline_correct_counts": {
+            "10": 14,
+            "15": 14,
+            "30": 14,
+            "5": 14
+          },
+          "delivered": 45,
+          "mean_latency_all_attempts_seconds": 2.3351208031041666
+        },
+        "2": {
+          "attempts": 48,
+          "correct": 14,
+          "correct_fraction": 0.2916666666666667,
+          "deadline_correct_counts": {
+            "10": 14,
+            "15": 14,
+            "30": 14,
+            "5": 14
+          },
+          "delivered": 45,
+          "mean_latency_all_attempts_seconds": 2.3361545930833336
+        },
+        "3": {
+          "attempts": 48,
+          "correct": 14,
+          "correct_fraction": 0.2916666666666667,
+          "deadline_correct_counts": {
+            "10": 14,
+            "15": 14,
+            "30": 14,
+            "5": 14
+          },
+          "delivered": 45,
+          "mean_latency_all_attempts_seconds": 2.2707954611458336
+        }
+      },
+      "correct": 42,
+      "correct_fraction": 0.2916666666666667,
+      "deadline_counts": {
+        "10": {
+          "correct_delivered": 42,
+          "fraction_of_attempts": 0.2916666666666667
+        },
+        "15": {
+          "correct_delivered": 42,
+          "fraction_of_attempts": 0.2916666666666667
+        },
+        "30": {
+          "correct_delivered": 42,
+          "fraction_of_attempts": 0.2916666666666667
+        },
+        "5": {
+          "correct_delivered": 42,
+          "fraction_of_attempts": 0.2916666666666667
+        }
+      },
+      "delivered": 135,
+      "mean_latency_all_attempts_seconds": 2.314023619111111,
+      "whole_device_energy": {
+        "mean_whole_device_power_in_covered_request_intervals_watts": 13.632951059203025,
+        "request_energy_joules_per_attempt": 31.46539149022837,
+        "request_interval_coverage_fraction": 0.9974140382732188,
+        "session_count": 3,
+        "sessions": [
+          {
+            "duration_seconds": 116.213447614,
+            "repetition": 1,
+            "request_interval_covered_seconds": 112.036285208,
+            "request_interval_requested_seconds": 112.085798549,
+            "request_intervals_energy_joules": 1544.154675071158,
+            "whole_interval_energy_joules": 1585.5507176142755
+          },
+          {
+            "duration_seconds": 116.697675661,
+            "repetition": 2,
+            "request_interval_covered_seconds": 111.714460064,
+            "request_interval_requested_seconds": 112.135420468,
+            "request_intervals_energy_joules": 1538.6656922677134,
+            "whole_interval_energy_joules": 1586.1803020872226
+          },
+          {
+            "duration_seconds": 112.962587596,
+            "repetition": 3,
+            "request_interval_covered_seconds": 108.606963262,
+            "request_interval_requested_seconds": 108.998182135,
+            "request_intervals_energy_joules": 1448.1960072540141,
+            "whole_interval_energy_joules": 1489.8439304050855
+          }
+        ],
+        "totals_exact_decimal_from_source": {
+          "duration_seconds": "345.873710871",
+          "request_interval_covered_seconds": "332.357708534",
+          "request_interval_requested_seconds": "333.219401152",
+          "request_intervals_energy_joules": "4531.0163745928855",
+          "whole_interval_energy_joules": "4661.5749501065836"
+        },
+        "whole_session_energy_joules_per_attempt": 32.37204826462905
+      }
+    }
+  },
+  "audit_passed": true,
+  "caveats": [
+    "The 144 attempts per arm are 48 items repeated three times, not 144 independent quality samples.",
+    "Scoring is assistant-only; complete and appropriate abstention can count as rubric success.",
+    "Deadlines are descriptive reporting points, not acceptance thresholds.",
+    "Quality and speed rankings describe this workload and recorded schedule; no significance or causal routing claim follows.",
+    "Energy uses onboard VDD_IN whole-device estimates, includes idle energy, and is not model-only or marginal energy.",
+    "Whole-session energy includes setup/cleanup; request energy covers only the telemetered part of request intervals.",
+    "No counterfactual policy latency or energy has been estimated."
+  ],
+  "correctness_method": "Map existing resolved assistant judgments through blinded_mapping directly to each arm/repetition/case; independently recompute deadline curves, per-repetition totals, and paired patterns. Mapping and worksheet hashes verified against review_manifest without disclosing its private seed.",
+  "deadline_convention": "success if delivered and fully correct and request wall_seconds <= t",
+  "denominator_per_arm": 144,
+  "distinct_items": 48,
+  "distinct_scenarios": 41,
+  "human_validation_complete": false,
+  "paired_patterns": [
+    {
+      "by_repetition": {
+        "1": {
+          "case_ids": {
+            "both_correct": [
+              "s3_c09",
+              "s3_p02",
+              "s3_p03",
+              "s3_p04",
+              "s3_p06",
+              "s3_p07",
+              "s3_p10",
+              "s3_r01",
+              "s3_r06"
+            ],
+            "left_only_correct": [
+              "s3_p05",
+              "s3_p09",
+              "s3_p11",
+              "s3_r07",
+              "s3_r11"
+            ],
+            "neither_correct": [
+              "s3_c02",
+              "s3_c03",
+              "s3_c04",
+              "s3_c05",
+              "s3_c06",
+              "s3_c07",
+              "s3_c08",
+              "s3_c10",
+              "s3_c11",
+              "s3_c12",
+              "s3_p01",
+              "s3_p08",
+              "s3_p12",
+              "s3_r04",
+              "s3_r05",
+              "s3_r08",
+              "s3_r10",
+              "s3_r12",
+              "s3_t01",
+              "s3_t02",
+              "s3_t03",
+              "s3_t04",
+              "s3_t05",
+              "s3_t06",
+              "s3_t07",
+              "s3_t08",
+              "s3_t09",
+              "s3_t10",
+              "s3_t11",
+              "s3_t12"
+            ],
+            "right_only_correct": [
+              "s3_c01",
+              "s3_r02",
+              "s3_r03",
+              "s3_r09"
+            ]
+          },
+          "counts": {
+            "both_correct": 9,
+            "left_only_correct": 5,
+            "neither_correct": 30,
+            "right_only_correct": 4
+          },
+          "paired_latency_counts": {
+            "equal_latency": 0,
+            "left_faster": 48,
+            "right_faster": 0
+          }
+        },
+        "2": {
+          "case_ids": {
+            "both_correct": [
+              "s3_c09",
+              "s3_p02",
+              "s3_p04",
+              "s3_p06",
+              "s3_p07",
+              "s3_p10",
+              "s3_r01",
+              "s3_r06",
+              "s3_r07"
+            ],
+            "left_only_correct": [
+              "s3_p03",
+              "s3_p05",
+              "s3_p09",
+              "s3_p11",
+              "s3_r11"
+            ],
+            "neither_correct": [
+              "s3_c02",
+              "s3_c03",
+              "s3_c04",
+              "s3_c05",
+              "s3_c06",
+              "s3_c07",
+              "s3_c08",
+              "s3_c10",
+              "s3_c11",
+              "s3_c12",
+              "s3_p01",
+              "s3_p08",
+              "s3_p12",
+              "s3_r04",
+              "s3_r05",
+              "s3_r12",
+              "s3_t01",
+              "s3_t02",
+              "s3_t03",
+              "s3_t04",
+              "s3_t05",
+              "s3_t06",
+              "s3_t07",
+              "s3_t08",
+              "s3_t09",
+              "s3_t10",
+              "s3_t11",
+              "s3_t12"
+            ],
+            "right_only_correct": [
+              "s3_c01",
+              "s3_r02",
+              "s3_r03",
+              "s3_r08",
+              "s3_r09",
+              "s3_r10"
+            ]
+          },
+          "counts": {
+            "both_correct": 9,
+            "left_only_correct": 5,
+            "neither_correct": 28,
+            "right_only_correct": 6
+          },
+          "paired_latency_counts": {
+            "equal_latency": 0,
+            "left_faster": 48,
+            "right_faster": 0
+          }
+        },
+        "3": {
+          "case_ids": {
+            "both_correct": [
+              "s3_c09",
+              "s3_p02",
+              "s3_p03",
+              "s3_p04",
+              "s3_p06",
+              "s3_p07",
+              "s3_p10",
+              "s3_r01",
+              "s3_r06"
+            ],
+            "left_only_correct": [
+              "s3_p05",
+              "s3_p09",
+              "s3_p11",
+              "s3_r07",
+              "s3_r11"
+            ],
+            "neither_correct": [
+              "s3_c02",
+              "s3_c03",
+              "s3_c04",
+              "s3_c05",
+              "s3_c06",
+              "s3_c08",
+              "s3_c10",
+              "s3_c12",
+              "s3_p01",
+              "s3_p08",
+              "s3_p12",
+              "s3_r04",
+              "s3_r05",
+              "s3_r08",
+              "s3_r12",
+              "s3_t01",
+              "s3_t02",
+              "s3_t03",
+              "s3_t04",
+              "s3_t05",
+              "s3_t06",
+              "s3_t07",
+              "s3_t08",
+              "s3_t09",
+              "s3_t10",
+              "s3_t11",
+              "s3_t12"
+            ],
+            "right_only_correct": [
+              "s3_c01",
+              "s3_c07",
+              "s3_c11",
+              "s3_r02",
+              "s3_r03",
+              "s3_r09",
+              "s3_r10"
+            ]
+          },
+          "counts": {
+            "both_correct": 9,
+            "left_only_correct": 5,
+            "neither_correct": 27,
+            "right_only_correct": 7
+          },
+          "paired_latency_counts": {
+            "equal_latency": 0,
+            "left_faster": 48,
+            "right_faster": 0
+          }
+        }
+      },
+      "left": "small",
+      "pooled_attempt_counts_descriptive_only": {
+        "both_correct": 27,
+        "left_only_correct": 15,
+        "neither_correct": 85,
+        "right_only_correct": 17
+      },
+      "right": "large"
+    },
+    {
+      "by_repetition": {
+        "1": {
+          "case_ids": {
+            "both_correct": [
+              "s3_c09",
+              "s3_p02",
+              "s3_p04",
+              "s3_p06",
+              "s3_p07",
+              "s3_p10",
+              "s3_r01",
+              "s3_r06"
+            ],
+            "left_only_correct": [
+              "s3_p03",
+              "s3_p05",
+              "s3_p09",
+              "s3_p11",
+              "s3_r07",
+              "s3_r11"
+            ],
+            "neither_correct": [
+              "s3_c02",
+              "s3_c03",
+              "s3_c04",
+              "s3_c05",
+              "s3_c06",
+              "s3_c07",
+              "s3_c08",
+              "s3_c10",
+              "s3_c12",
+              "s3_p01",
+              "s3_p08",
+              "s3_p12",
+              "s3_r04",
+              "s3_r05",
+              "s3_r10",
+              "s3_r12",
+              "s3_t01",
+              "s3_t02",
+              "s3_t03",
+              "s3_t04",
+              "s3_t05",
+              "s3_t06",
+              "s3_t07",
+              "s3_t08",
+              "s3_t09",
+              "s3_t10",
+              "s3_t11",
+              "s3_t12"
+            ],
+            "right_only_correct": [
+              "s3_c01",
+              "s3_c11",
+              "s3_r02",
+              "s3_r03",
+              "s3_r08",
+              "s3_r09"
+            ]
+          },
+          "counts": {
+            "both_correct": 8,
+            "left_only_correct": 6,
+            "neither_correct": 28,
+            "right_only_correct": 6
+          },
+          "paired_latency_counts": {
+            "equal_latency": 0,
+            "left_faster": 48,
+            "right_faster": 0
+          }
+        },
+        "2": {
+          "case_ids": {
+            "both_correct": [
+              "s3_c09",
+              "s3_p02",
+              "s3_p03",
+              "s3_p04",
+              "s3_p06",
+              "s3_p07",
+              "s3_p10",
+              "s3_r01",
+              "s3_r06"
+            ],
+            "left_only_correct": [
+              "s3_p05",
+              "s3_p09",
+              "s3_p11",
+              "s3_r07",
+              "s3_r11"
+            ],
+            "neither_correct": [
+              "s3_c02",
+              "s3_c03",
+              "s3_c04",
+              "s3_c05",
+              "s3_c06",
+              "s3_c08",
+              "s3_c10",
+              "s3_c12",
+              "s3_p01",
+              "s3_p08",
+              "s3_p12",
+              "s3_r04",
+              "s3_r05",
+              "s3_r08",
+              "s3_r12",
+              "s3_t01",
+              "s3_t02",
+              "s3_t03",
+              "s3_t04",
+              "s3_t05",
+              "s3_t06",
+              "s3_t07",
+              "s3_t08",
+              "s3_t09",
+              "s3_t10",
+              "s3_t11",
+              "s3_t12"
+            ],
+            "right_only_correct": [
+              "s3_c01",
+              "s3_c07",
+              "s3_c11",
+              "s3_r02",
+              "s3_r03",
+              "s3_r09",
+              "s3_r10"
+            ]
+          },
+          "counts": {
+            "both_correct": 9,
+            "left_only_correct": 5,
+            "neither_correct": 27,
+            "right_only_correct": 7
+          },
+          "paired_latency_counts": {
+            "equal_latency": 0,
+            "left_faster": 48,
+            "right_faster": 0
+          }
+        },
+        "3": {
+          "case_ids": {
+            "both_correct": [
+              "s3_c09",
+              "s3_p02",
+              "s3_p03",
+              "s3_p04",
+              "s3_p06",
+              "s3_p07",
+              "s3_p10",
+              "s3_r01",
+              "s3_r06"
+            ],
+            "left_only_correct": [
+              "s3_p05",
+              "s3_p09",
+              "s3_p11",
+              "s3_r07",
+              "s3_r11"
+            ],
+            "neither_correct": [
+              "s3_c02",
+              "s3_c03",
+              "s3_c04",
+              "s3_c05",
+              "s3_c06",
+              "s3_c08",
+              "s3_c10",
+              "s3_c12",
+              "s3_p01",
+              "s3_p08",
+              "s3_p12",
+              "s3_r04",
+              "s3_r05",
+              "s3_r08",
+              "s3_r12",
+              "s3_t01",
+              "s3_t02",
+              "s3_t03",
+              "s3_t04",
+              "s3_t05",
+              "s3_t06",
+              "s3_t07",
+              "s3_t08",
+              "s3_t09",
+              "s3_t10",
+              "s3_t11",
+              "s3_t12"
+            ],
+            "right_only_correct": [
+              "s3_c01",
+              "s3_c07",
+              "s3_c11",
+              "s3_r02",
+              "s3_r03",
+              "s3_r09",
+              "s3_r10"
+            ]
+          },
+          "counts": {
+            "both_correct": 9,
+            "left_only_correct": 5,
+            "neither_correct": 27,
+            "right_only_correct": 7
+          },
+          "paired_latency_counts": {
+            "equal_latency": 0,
+            "left_faster": 48,
+            "right_faster": 0
+          }
+        }
+      },
+      "left": "small",
+      "pooled_attempt_counts_descriptive_only": {
+        "both_correct": 26,
+        "left_only_correct": 16,
+        "neither_correct": 82,
+        "right_only_correct": 20
+      },
+      "right": "cascade"
+    },
+    {
+      "by_repetition": {
+        "1": {
+          "case_ids": {
+            "both_correct": [
+              "s3_c01",
+              "s3_c09",
+              "s3_p02",
+              "s3_p04",
+              "s3_p06",
+              "s3_p07",
+              "s3_p10",
+              "s3_r01",
+              "s3_r02",
+              "s3_r03",
+              "s3_r06",
+              "s3_r09"
+            ],
+            "left_only_correct": [
+              "s3_p03"
+            ],
+            "neither_correct": [
+              "s3_c02",
+              "s3_c03",
+              "s3_c04",
+              "s3_c05",
+              "s3_c06",
+              "s3_c07",
+              "s3_c08",
+              "s3_c10",
+              "s3_c12",
+              "s3_p01",
+              "s3_p05",
+              "s3_p08",
+              "s3_p09",
+              "s3_p11",
+              "s3_p12",
+              "s3_r04",
+              "s3_r05",
+              "s3_r07",
+              "s3_r10",
+              "s3_r11",
+              "s3_r12",
+              "s3_t01",
+              "s3_t02",
+              "s3_t03",
+              "s3_t04",
+              "s3_t05",
+              "s3_t06",
+              "s3_t07",
+              "s3_t08",
+              "s3_t09",
+              "s3_t10",
+              "s3_t11",
+              "s3_t12"
+            ],
+            "right_only_correct": [
+              "s3_c11",
+              "s3_r08"
+            ]
+          },
+          "counts": {
+            "both_correct": 12,
+            "left_only_correct": 1,
+            "neither_correct": 33,
+            "right_only_correct": 2
+          },
+          "paired_latency_counts": {
+            "equal_latency": 0,
+            "left_faster": 1,
+            "right_faster": 47
+          }
+        },
+        "2": {
+          "case_ids": {
+            "both_correct": [
+              "s3_c01",
+              "s3_c09",
+              "s3_p02",
+              "s3_p04",
+              "s3_p06",
+              "s3_p07",
+              "s3_p10",
+              "s3_r01",
+              "s3_r02",
+              "s3_r03",
+              "s3_r06",
+              "s3_r09",
+              "s3_r10"
+            ],
+            "left_only_correct": [
+              "s3_r07",
+              "s3_r08"
+            ],
+            "neither_correct": [
+              "s3_c02",
+              "s3_c03",
+              "s3_c04",
+              "s3_c05",
+              "s3_c06",
+              "s3_c08",
+              "s3_c10",
+              "s3_c12",
+              "s3_p01",
+              "s3_p05",
+              "s3_p08",
+              "s3_p09",
+              "s3_p11",
+              "s3_p12",
+              "s3_r04",
+              "s3_r05",
+              "s3_r11",
+              "s3_r12",
+              "s3_t01",
+              "s3_t02",
+              "s3_t03",
+              "s3_t04",
+              "s3_t05",
+              "s3_t06",
+              "s3_t07",
+              "s3_t08",
+              "s3_t09",
+              "s3_t10",
+              "s3_t11",
+              "s3_t12"
+            ],
+            "right_only_correct": [
+              "s3_c07",
+              "s3_c11",
+              "s3_p03"
+            ]
+          },
+          "counts": {
+            "both_correct": 13,
+            "left_only_correct": 2,
+            "neither_correct": 30,
+            "right_only_correct": 3
+          },
+          "paired_latency_counts": {
+            "equal_latency": 0,
+            "left_faster": 36,
+            "right_faster": 12
+          }
+        },
+        "3": {
+          "case_ids": {
+            "both_correct": [
+              "s3_c01",
+              "s3_c07",
+              "s3_c09",
+              "s3_c11",
+              "s3_p02",
+              "s3_p03",
+              "s3_p04",
+              "s3_p06",
+              "s3_p07",
+              "s3_p10",
+              "s3_r01",
+              "s3_r02",
+              "s3_r03",
+              "s3_r06",
+              "s3_r09",
+              "s3_r10"
+            ],
+            "left_only_correct": [],
+            "neither_correct": [
+              "s3_c02",
+              "s3_c03",
+              "s3_c04",
+              "s3_c05",
+              "s3_c06",
+              "s3_c08",
+              "s3_c10",
+              "s3_c12",
+              "s3_p01",
+              "s3_p05",
+              "s3_p08",
+              "s3_p09",
+              "s3_p11",
+              "s3_p12",
+              "s3_r04",
+              "s3_r05",
+              "s3_r07",
+              "s3_r08",
+              "s3_r11",
+              "s3_r12",
+              "s3_t01",
+              "s3_t02",
+              "s3_t03",
+              "s3_t04",
+              "s3_t05",
+              "s3_t06",
+              "s3_t07",
+              "s3_t08",
+              "s3_t09",
+              "s3_t10",
+              "s3_t11",
+              "s3_t12"
+            ],
+            "right_only_correct": []
+          },
+          "counts": {
+            "both_correct": 16,
+            "left_only_correct": 0,
+            "neither_correct": 32,
+            "right_only_correct": 0
+          },
+          "paired_latency_counts": {
+            "equal_latency": 0,
+            "left_faster": 24,
+            "right_faster": 24
+          }
+        }
+      },
+      "left": "large",
+      "pooled_attempt_counts_descriptive_only": {
+        "both_correct": 41,
+        "left_only_correct": 3,
+        "neither_correct": 95,
+        "right_only_correct": 5
+      },
+      "right": "cascade"
+    }
+  ],
+  "repetitions": 3,
+  "row_metrics_quality_caveat": "Saved row_metrics semantic_quality fields still say pending_blinded_review; quality comes from resolved semantic_review judgments, not that stale field.",
+  "source_sha256": {
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/analysis.json": "6ab197dda150e4001edebd380bd96b62a717bd6f8a7aaccf3720eaa7cd696549",
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/blinded_mapping.jsonl": "8684ec25d436cb719a80d6d3769ef3d72f92cbcd4d58bc53a4efa5f02510fb0a",
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/blinded_review.jsonl": "bc41f9615712db33bf6d6dd29af72422ad30e11cd4516933a71ea45119b0c2cc",
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/deadline_quality_curve.json": "1c689675b910ae7dac76163d064a3b677d80cd87794e4995a700a37aa435244d",
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/review_manifest.json": "9d95f5109944b31c515b0f8b08cfa7d4bee0b40cef10972410734e0d24880732",
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/row_metrics.jsonl": "a5859d64d6b8b4d42a12be71bc6b842971e252ca904b27c691870be0b4bfd2b7",
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/semantic_review.json": "7bca49d3dc61e6962537c720f4215c4d95d99042ec88b4d204ccbe5e4fb9968f",
+    "evaluation/post_memory_comparison_20260912/report_v2/summary.json": "7f8b69b0b08b4e427d2c19f46769d640ea0f4b2f70a1599c63642f0762eedd45"
+  }
+}

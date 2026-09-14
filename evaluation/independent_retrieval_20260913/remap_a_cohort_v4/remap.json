@@ -1,0 +1,42 @@
+{
+  "batches": [
+    {
+      "batch_index": 0,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_a_cohort_v1",
+      "identity_aliases": [
+        "/root/inspect_harness/blinded_reviewer_a"
+      ],
+      "reviewer": "/root/inspect_harness/blinded_reviewer_a",
+      "seal_sha256": "0fab7bce1364b61b4b25d521cc5bee407a06187aa8c631ea38c9c93f9778fc63"
+    },
+    {
+      "batch_index": 1,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_a_cohort_v2_additional",
+      "identity_aliases": [
+        "/root/inspect_harness/blinded_reviewer_a"
+      ],
+      "reviewer": "/root/inspect_harness/blinded_reviewer_a",
+      "seal_sha256": "5bf65cbc9cf2b9835022d63daea05b36986d7cd55f540f2e5a90427932106464"
+    },
+    {
+      "batch_index": 2,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_a_cohort_v3_additional",
+      "identity_aliases": [
+        "/root/inspect_harness/blinded_reviewer_a"
+      ],
+      "reviewer": "/root/inspect_harness/blinded_reviewer_a",
+      "seal_sha256": "5965a97a8974950ed66ceef0e0fb7765964be713255c69ce61a599471117c4cd"
+    }
+  ],
+  "conflict_rule": "conflicting prior score vectors require an explicit new missing-packet judgment",
+  "groups": 150,
+  "identity_aliases": [
+    "/root/inspect_harness/blinded_reviewer_a"
+  ],
+  "matching_rule": "exact canonical public packet content excluding only review_id; no observation/model/condition mapping",
+  "missing_groups": 24,
+  "private_mapping_read": false,
+  "rationale_rule": "equal label and five flags allow reuse of first exact original rationale; all originals retained",
+  "reused_groups": 126,
+  "reviewer": "/root/inspect_harness/blinded_reviewer_a"
+}

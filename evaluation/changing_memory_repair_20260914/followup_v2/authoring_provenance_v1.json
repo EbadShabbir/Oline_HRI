@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-09-14T14:09:38.557149+00:00",
+  "status": "authored before followup inference",
+  "scenario_ids": [
+    "cm04"
+  ],
+  "checkpoints": 24,
+  "independent_branches": 3,
+  "scheduled_real_process_restarts": 3,
+  "source_sha256": {
+    "evaluation/changing_memory_repair_20260914/author_ledger.py": "9eb6765c7d34881cd6049565f57f235a28d2fd7e936e253e47306903def78c83",
+    "evaluation/changing_memory_repair_20260914/scenarios.json": "5636fd0db7091199839167ab7848b14822ef48ad779c8a45074b8011e0f540f1",
+    "evaluation/changing_memory_repair_20260914/authored_v1/runtime.json": "75f6f79fdc27a625ba38e730ac4e12c2d049148d688a8d5d0b6eb9c75131e51d",
+    "evaluation/changing_memory_repair_20260914/authored_v1/expected_ledger.json": "c0366f98363989e4b6786740260283d7918ceba8aa9cf97b91f8ea44998231ed"
+  },
+  "role": "Authoring assistant has inspected baseline diagnostics; followup selection is informed by root-reported first repair validation withholds. No active partial answers read by this author.",
+  "human_validation": "pending"
+}

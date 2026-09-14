@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "scope": "final descriptive tradeoff analysis and figures; not new memory/spoken experiments",
+  "432_attempts_mapped_to_145_resolved_groups": true,
+  "deadline_mean_repetition_and_energy_match_independent_recalculation": true,
+  "all_input_and_output_hashes_match": true,
+  "original_41_frozen_runtime_sources_unchanged": true,
+  "local_document_links_resolve": true,
+  "both_png_figures_visually_checked": true,
+  "plots_formats": [
+    "png",
+    "pdf",
+    "svg"
+  ],
+  "inference_calls": 0,
+  "human_review": "pending",
+  "acceptance_thresholds_selected": false,
+  "git_diff_check_exit_code": 0,
+  "audit_script_sha256": "b09f0422992aef315370ce4c6651a20b255d458e9dac08052ac066fb6e650bd4",
+  "artifacts_provenance_sha256": "00bde6c0c9df6fd9d49cab2296eddef1e416c5c0079096b4c96fdbddca0fdbea",
+  "independent_metrics_sha256": "349564093e2b4e0ba8bf0e76464b3589dc3319c46309e26a6f35819577f20f07",
+  "document_sha256": {
+    "results.md": "d7797293735416ba5fcf184127baefec77f8ad5314f23f5ebefd3283b3774391",
+    "developments.MD": "6793e20c0d0c6742e5e9bd7559634bf8e99fff6b8517a7b5e6a1c062760e0a2e",
+    "paper_improv.md": "55757622c274230e513f5bf892b8a53695a9dee2139093f418c4b19cf604f9a4",
+    "evaluation/final_tradeoff_analysis_20260912/README.md": "114c5511dc7983d818b9db0258b97336a1de2fdd1af6b2018e5c43359066488f"
+  }
+}

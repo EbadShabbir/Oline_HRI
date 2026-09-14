@@ -1,0 +1,10 @@
+{
+  "reason": "Match the actual monotonic sequence/startup boundary in the frozen runner",
+  "before_sha256": "2c3814e313d9cc74a9475b9428de5545d2237ee7e2674556ed4a13a59b70e043",
+  "after_sha256": "d5af0a28da188d986dba5f8768e20f269906724c29fca9b90e14ec3c2d07d733",
+  "script_sha256": "f36c894539d8843a2f790095b935f3ad7ae291872c7041ab30e40c1f5a5fba03",
+  "original": "Startup includes prepared-memory/client setup and is added once to the four request intervals.",
+  "corrected": "Startup begins at embedding initialization and includes prepared-memory and router/Conversation setup; it is added once to the four request intervals. Client/monitor/admission setup precedes this interval and belongs to the separately recorded process envelope.",
+  "numerical_data_changed": false,
+  "frozen_analyzer_changed": false
+}

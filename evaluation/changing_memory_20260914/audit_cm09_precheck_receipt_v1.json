@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-09-14T12:43:50.015957+00:00",
+  "partial": true,
+  "scope": "cm09 sealed branches only; no semantic scoring or inference; final complete collection audit still required",
+  "final_precheck": "audit_cm09_precheck_v2.json",
+  "preserved_first_failure": "audit_cm09_precheck_v1.json",
+  "failure_reason": "New subset wrapper used Counter(mapping) instead of Counter(mapping.keys()); expected and observed IDs were identical. Corrected only wrapper in separately named v2.",
+  "collection_auditor_unchanged": true,
+  "auditor_sha256": "5808d204cfc6b10ea5b8a7f15139d66c72fe52d875a0fcdd80a0bf996bab9ef5",
+  "frozen_runtime_source_files_unchanged": 41,
+  "passed_checkpoints": 24,
+  "linked_chat_calls": 81,
+  "actual_large_generation_http_requests": 11,
+  "artifact_sha256": {
+    "audit_cm09_precheck_v1.py": "72e8779642b5cb494cf6016dbded86373b9047fdc3bf063deef11e5b5f5f3405",
+    "audit_cm09_precheck_v1.json": "574c1d09c3659804fe3a8942ace6492ababf00b23918bfc6610e064242948d05",
+    "audit_cm09_precheck_v2.py": "beb9e84609bdcac18c944b6390456d67f28074fac13edf80307880c5e3b5107c",
+    "audit_cm09_precheck_v2.json": "2f204f8fbdf5b45ed33ff274c884ae5fe769e056d3001ae52e323f8901df45f3"
+  }
+}

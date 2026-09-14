@@ -1,0 +1,92 @@
+{
+  "scope": "independent read-only actual-v2 freeze and continuation review",
+  "blocking_issues": [],
+  "compatibility": {
+    "unchanged_fields": [
+      "profile_id",
+      "workload_sha256",
+      "models",
+      "ollama_version",
+      "config",
+      "generation",
+      "generation_seed",
+      "embedding_asset_sha256",
+      "packages",
+      "python",
+      "device_policy",
+      "arm_orders",
+      "diagnostic_replay_order",
+      "sequences",
+      "turns_per_sequence",
+      "repetitions",
+      "main_attempts",
+      "diagnostic_attempts"
+    ],
+    "changed_source_files": [
+      "scripts/run_routing_overhead.py",
+      "tests/test_routing_overhead_runner.py"
+    ],
+    "added_source_files": [
+      "evaluation/routing_overhead_20260912/analyze_continued.py",
+      "evaluation/routing_overhead_20260912/continue_collection.py"
+    ],
+    "previous_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+    "current_freeze_sha256": "9b82e4beaab276ad686615f176979a944b5125a48374b6efc6bc8d4daf1c334a"
+  },
+  "freeze_archives": {
+    "v1": {
+      "source_files": 42,
+      "archive_hashes_match": true,
+      "workload_protocol_validation_hashes_match": true,
+      "validation_source_hashes_match": true,
+      "validation_tests": 945,
+      "validation_passed": 919,
+      "validation_skipped": 26
+    },
+    "v2": {
+      "source_files": 44,
+      "archive_hashes_match": true,
+      "workload_protocol_validation_hashes_match": true,
+      "validation_source_hashes_match": true,
+      "validation_tests": 946,
+      "validation_passed": 920,
+      "validation_skipped": 26
+    }
+  },
+  "current_execution_source_matches_v2": true,
+  "metadata_fields_changed": [
+    "created_at",
+    "process_audit",
+    "protocol_sha256",
+    "server_configuration",
+    "snapshot",
+    "source_sha256",
+    "validation_sha256"
+  ],
+  "generation_knobs_model_digests_device_policy_order_workload_identical": true,
+  "runtime_source_change": "Two exception-classification lines plus inclusion of two prospective continuation/analysis files in source provenance. No application, model, generation, routing, retrieval, validation or timing-boundary changes.",
+  "runner_source_diff": "--- frozen_v1\n+++ frozen_v2\n@@ -58,6 +58,8 @@\n     )]\n     paths += list((ROOT / \"tests\").glob(\"test_routing_overhead*.py\"))\n     paths.append(ROOT / \"tests/test_routing_timing.py\")\n+    paths += [ROOT / \"evaluation/routing_overhead_20260912\" / name for name in\n+              (\"continue_collection.py\", \"analyze_continued.py\")]\n     paths.append(ROOT / \"config/default.json\")\n     return {str(p.relative_to(ROOT)): sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}\n \n@@ -261,10 +263,10 @@\n                           response_transform=reply.response_transform, reference_ids=list(reply.reference_ids),\n                           fallback_from_model=reply.fallback_from_model)\n             if replay is not None and (backend.expected_requests or backend.client.expected_bodies):\n-                raise ValueError(\"diagnostic replay did not consume every adaptive generation request\")\n+                raise SafetyGateError(\"diagnostic replay did not consume every adaptive generation request\")\n         except BaseException as error:\n             record.update(error=type(error).__name__, message=str(error), status=\"error\")\n-            if isinstance(error, (KeyboardInterrupt, SystemExit, SafetyGateError, ValueError)):\n+            if isinstance(error, (KeyboardInterrupt, SystemExit, SafetyGateError)):\n                 fatal = error\n             elif backend.transport_error is not None:\n                 fatal = backend.transport_error\n",
+  "continuation": {
+    "original_observed_slots_are_exact_planned_prefix": true,
+    "retained_whole_sequences": 22,
+    "retained_attempts": 88,
+    "next_unattempted_slot": "ro_dddd_3_r1_adaptive",
+    "remaining_sequences": 122,
+    "remaining_attempts": 488,
+    "failed_turn_retained": "ro_dddd_3_r1_large turn4 stays interrupted and technical_failure",
+    "reuse_proof": "v1_reuse_audit.json",
+    "cold_admission_required_again": true
+  },
+  "freeze_hashes": {
+    "v1": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+    "v2": "9b82e4beaab276ad686615f176979a944b5125a48374b6efc6bc8d4daf1c334a"
+  },
+  "raw_and_frozen_files_modified": false,
+  "inference_performed": false,
+  "server_configuration_review": {
+    "selected_environment_identical": true,
+    "service_queries_succeeded": true,
+    "swap_devices_types_capacities_priorities_identical": true,
+    "only_swap_used_column_differs": "Dynamic residual logical zram occupancy, not a changed swap configuration."
+  }
+}

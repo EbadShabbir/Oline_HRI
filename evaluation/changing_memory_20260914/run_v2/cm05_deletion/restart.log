@@ -1,0 +1,4 @@
+cm05_deletion cm05_deletion_restart_retained: delivered 12.14s
+[0;93m2026-09-14 16:06:32.726036003 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+cm05_deletion cm05_deletion_restart_fresh: delivered 3.36s
+cm05_deletion cm05_deletion_restart_historical_retained: delivered 2.25s

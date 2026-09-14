@@ -1,0 +1,113 @@
+{
+  "approved": true,
+  "authorized_run_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5",
+  "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v4",
+  "created_at": "2026-09-13T17:44:45.209200+00:00",
+  "human_validation": "pending",
+  "new_authorized_attempts": 536,
+  "next_attempt": {
+    "case_id": "ir_06_01",
+    "scheduled_index": 41,
+    "slot": 7
+  },
+  "original_execution_sources_unchanged": 44,
+  "original_freeze_seal_sha256": "fda698a52067906e3a071c36dee68d3abb579f5b9c199533cd731708a717a9fd",
+  "primary_answer_text_semantically_reviewed": false,
+  "primary_metadata_seen": true,
+  "prior_run_seal_sha256": "94b0a9e9157910b066a61c5811ce542bc31e916fa5b0fe51a27970cd23940ddb",
+  "protocol_sha256": "c11774ab76dc55b3da86d625ffd2f173a5b7a0ec28882bf1d6e4e388220cab4c",
+  "reporting_conditions": [
+    "Preserve all four interrupted attempts as failures; no attempted request can be replayed or replaced.",
+    "Only slot7 positions41\u201348 plus unchanged slots8\u201318 are authorized:8+528=536.",
+    "Any further fatal fragment stops and seals; another continuation needs a new independently reviewed immutable plan.",
+    "Report at least22 physical fragments for18 logical condition blocks, interrupted durations, extra cold loads and boundary gaps.",
+    "Repeated memory-floor failures remain observed outcomes; the cause of RAM growth is not identified by this metadata audit."
+  ],
+  "retained_attempts": 328,
+  "retained_delivered": 324,
+  "retained_interrupted_failures": 4,
+  "retained_zero_request_admission_rejections": 16,
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Fourth prospective metadata-only continuation approval; execution implementation and17-test validation are unchanged. No semantic review or RAM-growth cause inference.",
+  "source_authored_by_reviewer": false,
+  "source_sha256": {
+    "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+    "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+    "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+    "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+  },
+  "validation": {
+    "independent_prefix_arithmetic": "Separately reconstructed328 unique chronological slot/case identities, durable request-start correspondence, exact suffix offsets and324ok+4interrupted statuses from sealed records.",
+    "live_inference": false,
+    "physical_fragments": [
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 1,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 2,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 3,
+        "status": "complete"
+      },
+      {
+        "attempted": 13,
+        "offset": 0,
+        "slot": 4,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 27,
+        "offset": 13,
+        "slot": 4,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 8,
+        "offset": 40,
+        "slot": 4,
+        "status": "complete"
+      },
+      {
+        "attempted": 25,
+        "offset": 0,
+        "slot": 5,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 23,
+        "offset": 25,
+        "slot": 5,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 6,
+        "status": "complete"
+      },
+      {
+        "attempted": 40,
+        "offset": 0,
+        "slot": 7,
+        "status": "interrupted"
+      }
+    ],
+    "prior_execution_preflight": {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/reviews/continuation_preflight_review_v1.json",
+      "reason": "All four approved supplemental source/test hashes are unchanged.",
+      "sha256": "e4bc2240f4d9cd1d93194fd63683687f06b2b8e85b7aa9a85b8620f7a47ba50b",
+      "tests_previously_passed": 17,
+      "tests_rerun": false
+    },
+    "sealed_collection_chain_validation": "Passed ancestry, review/ledger/source seals, exact global prefix, actual prepared snapshot/setup hashes, clean final states and original device baseline."
+  }
+}

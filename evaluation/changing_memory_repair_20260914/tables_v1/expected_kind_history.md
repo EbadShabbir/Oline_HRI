@@ -1,0 +1,12 @@
+# expected kind history
+
+| expected_kind | history_mode | planned | attempted | delivered | useful_correct | forbidden_disclosure | withheld | interrupted | missing |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| historical_control | fresh | 8 | 8 | 8 | 8 | 0 | 0 | 0 | 0 |
+| historical_control | retained | 8 | 8 | 8 | 8 | 0 | 0 | 0 | 0 |
+| original | fresh | 4 | 4 | 4 | 4 | 0 | 0 | 0 | 0 |
+| original | retained | 12 | 12 | 12 | 12 | 0 | 0 | 0 | 0 |
+| replacement | fresh | 8 | 8 | 7 | 6 | 0 | 1 | 0 | 0 |
+| replacement | retained | 8 | 8 | 7 | 6 | 0 | 1 | 0 | 0 |
+| uncertainty | fresh | 16 | 16 | 16 | 16 | 0 | 0 | 0 | 0 |
+| uncertainty | retained | 32 | 32 | 32 | 32 | 0 | 0 | 0 | 0 |

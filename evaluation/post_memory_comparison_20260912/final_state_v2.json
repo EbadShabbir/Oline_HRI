@@ -1,0 +1,512 @@
+{
+  "audit_script_sha256": "7380aaee873359570b12361b0fa9be6823ec89746d6b9345c07a3c3f86751464",
+  "batch_finish": {
+    "failure": null,
+    "sessions": [
+      {
+        "arm": "large",
+        "exit_code": 0,
+        "path": "evaluation/post_memory_comparison_20260912/run_v2/01_large_r1",
+        "repetition": 1,
+        "retained_complete": true
+      },
+      {
+        "arm": "cascade",
+        "exit_code": 0,
+        "path": "evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1",
+        "repetition": 1,
+        "retained_complete": true
+      },
+      {
+        "arm": "small",
+        "exit_code": 0,
+        "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1",
+        "repetition": 1,
+        "started_at": "2026-09-12T12:53:33.958305+00:00"
+      },
+      {
+        "arm": "cascade",
+        "exit_code": 0,
+        "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2",
+        "repetition": 2,
+        "started_at": "2026-09-12T12:57:51.832439+00:00"
+      },
+      {
+        "arm": "small",
+        "exit_code": 0,
+        "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2",
+        "repetition": 2,
+        "started_at": "2026-09-12T13:08:55.557506+00:00"
+      },
+      {
+        "arm": "large",
+        "exit_code": 0,
+        "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2",
+        "repetition": 2,
+        "started_at": "2026-09-12T13:13:14.355437+00:00"
+      },
+      {
+        "arm": "small",
+        "exit_code": 0,
+        "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3",
+        "repetition": 3,
+        "started_at": "2026-09-12T13:21:22.221877+00:00"
+      },
+      {
+        "arm": "large",
+        "exit_code": 0,
+        "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3",
+        "repetition": 3,
+        "started_at": "2026-09-12T13:25:17.136735+00:00"
+      },
+      {
+        "arm": "cascade",
+        "exit_code": 0,
+        "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3",
+        "repetition": 3,
+        "started_at": "2026-09-12T13:33:24.233435+00:00"
+      }
+    ],
+    "snapshot": {
+      "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+      "captured_at": "2026-09-12T13:40:47.775998+00:00",
+      "fan_pwm": 104,
+      "memory": {
+        "mem_available_kib": 2668456,
+        "mem_total_kib": 7803236,
+        "swap_free_kib": 2246824,
+        "swap_total_kib": 3901608,
+        "swap_used_kib": 1654784
+      },
+      "power_mode": "NV Power Mode: 15W\n0",
+      "reset_reason": "SYS_RESET_N",
+      "resident_models": [],
+      "temperatures_c": {
+        "cpu-thermal": 57.5,
+        "gpu-thermal": 57.968,
+        "soc0-thermal": 56.687,
+        "soc1-thermal": 56.5,
+        "soc2-thermal": 56.968,
+        "tj-thermal": 58.156
+      },
+      "thermal_trip_events": {
+        "cpu": 0,
+        "cv0": 0,
+        "cv1": 0,
+        "cv2": 0,
+        "gpu": 0,
+        "soc0": 0,
+        "soc1": 0,
+        "soc2": 0
+      }
+    },
+    "status": "complete"
+  },
+  "batch_finish_sha256": "5ef3d1d548d4cf3a39d26bdc7c2e2ce72298ae907d8840b25771ee680e0613e2",
+  "checks": {
+    "432_attempts": true,
+    "batch_completed_without_terminal_failure": true,
+    "boot_unchanged": true,
+    "fan_running": true,
+    "frozen_source_unchanged": true,
+    "model_metadata_unchanged": true,
+    "nine_complete_sessions": true,
+    "no_resident_models": true,
+    "ollama_version_unchanged": true,
+    "original_experiment_swap_limits_preserved": true,
+    "power_mode_unchanged": true,
+    "revised_guard_has_no_persistent_changes": true,
+    "swap_capacity_unchanged": true,
+    "swap_device_configuration_unchanged": true,
+    "thermal_trip_counters_unchanged": true,
+    "thermal_trip_counters_zero": true
+  },
+  "configuration_scope": "No OS swap, power, cooling, service or application settings were changed for v2. The revised ceilings were confined to separate experiment processes, which have exited.",
+  "freeze_sha256": "6497504cb7a3fd29c2b3b3740aa26f1a77dad8d626cbf0fedcabed997bfc7783",
+  "models": {
+    "qwen3:0.6b": {
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "details": {
+        "context_length": 40960,
+        "embedding_length": 1024,
+        "families": [
+          "qwen3"
+        ],
+        "family": "qwen3",
+        "format": "gguf",
+        "parameter_size": "751.63M",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M"
+      },
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "family": "qwen3",
+      "format": "gguf",
+      "name": "qwen3:0.6b",
+      "parameter_count": 751632384,
+      "parameter_size": "751.63M",
+      "quantization_level": "Q4_K_M",
+      "size": 522653767
+    },
+    "qwen3:1.7b": {
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "details": {
+        "context_length": 40960,
+        "embedding_length": 2048,
+        "families": [
+          "qwen3"
+        ],
+        "family": "qwen3",
+        "format": "gguf",
+        "parameter_size": "2.0B",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M"
+      },
+      "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "family": "qwen3",
+      "format": "gguf",
+      "name": "qwen3:1.7b",
+      "parameter_count": 2031739904,
+      "parameter_size": "2.0B",
+      "quantization_level": "Q4_K_M",
+      "size": 1359293444
+    }
+  },
+  "ollama_version": {
+    "version": "0.33.3"
+  },
+  "proc_swaps": "Filename\t\t\t\tType\t\tSize\t\tUsed\t\tPriority\n/dev/zram0                              partition\t650268\t\t273376\t\t5\n/dev/zram1                              partition\t650268\t\t274352\t\t5\n/dev/zram2                              partition\t650268\t\t275132\t\t5\n/dev/zram3                              partition\t650268\t\t277116\t\t5\n/dev/zram4                              partition\t650268\t\t277280\t\t5\n/dev/zram5                              partition\t650268\t\t277528\t\t5\n",
+  "recorded_at": "2026-09-12T13:41:13.879169+00:00",
+  "sessions": [
+    {
+      "finish_sha256": "c12112b01e0c2d0fc9674cb9f4d8f82ecf0814388f56f1025c33096a9d283de7",
+      "session": "01_large_r1",
+      "summary": {
+        "arm": "large",
+        "attempted": 48,
+        "delivered": 47,
+        "first_case_seconds": 50.311104559,
+        "latency_seconds": {
+          "max": 50.311104559,
+          "mean": 17.44839186516667,
+          "min": 5.430741387,
+          "n": 48,
+          "p50": 15.485777558,
+          "p95": 29.6204910954
+        },
+        "planned": 48,
+        "profile_id": "post_memory_comparison_v1",
+        "repetition": 1,
+        "status": "complete_with_errors"
+      },
+      "summary_sha256": "fffc94affa08c52b93d8315bcbae1f779f7c89e6993a403f3d8552b8679a23fc"
+    },
+    {
+      "finish_sha256": "8c8bbe3f7baa41b3a70dbecf2ace5a33f7110d5ca9eab79856a8acb909f96b6d",
+      "session": "02_cascade_r1",
+      "summary": {
+        "arm": "cascade",
+        "attempted": 48,
+        "delivered": 46,
+        "first_case_seconds": 29.928474276,
+        "latency_seconds": {
+          "max": 30.01601883,
+          "mean": 7.288154270312499,
+          "min": 2.943032642,
+          "n": 48,
+          "p50": 6.361941702999999,
+          "p95": 11.146197280300001
+        },
+        "planned": 48,
+        "profile_id": "post_memory_comparison_v1",
+        "repetition": 1,
+        "status": "complete_with_errors"
+      },
+      "summary_sha256": "8897e727945711e5e78628ef6d7516f3704a421b9f581450d631e321c7516e83"
+    },
+    {
+      "finish_sha256": "05eaf1420cb8e3153073ed3dc066d8b7fe0790033b1ebdad430d9c5d27611c50",
+      "session": "03_small_r1",
+      "summary": {
+        "arm": "small",
+        "attempted": 48,
+        "delivered": 45,
+        "first_case_seconds": 11.058392387,
+        "latency_seconds": {
+          "max": 11.058392387,
+          "mean": 2.3351208031041666,
+          "min": 1.025874303,
+          "n": 48,
+          "p50": 2.1173656095,
+          "p95": 3.2981427674
+        },
+        "planned": 48,
+        "profile_id": "post_memory_comparison_v1",
+        "repetition": 1,
+        "status": "complete_with_errors"
+      },
+      "summary_sha256": "1abf5baf1eb1a8ffb0ddb046937281a6d77e7806f817cb9d7c553baab2134534"
+    },
+    {
+      "finish_sha256": "4066aaedfdda2c2ffdcc75245e27d4d565311d43ede259b4f567b1a9b10910c4",
+      "session": "04_cascade_r2",
+      "summary": {
+        "arm": "cascade",
+        "attempted": 48,
+        "delivered": 47,
+        "first_case_seconds": 28.029266228,
+        "latency_seconds": {
+          "max": 32.601532012,
+          "mean": 10.371968608979165,
+          "min": 3.515062358,
+          "n": 48,
+          "p50": 9.4546173815,
+          "p95": 16.804430997549996
+        },
+        "planned": 48,
+        "profile_id": "post_memory_comparison_v1",
+        "repetition": 2,
+        "status": "complete_with_errors"
+      },
+      "summary_sha256": "7854f8a21f83e783a595088bfce7aac660cc50b879ef1b4ab91b0a74196347f6"
+    },
+    {
+      "finish_sha256": "f64d318cea758d4f471e8e48ecbadc3a473a1305dbaa6aff431491a0f933633d",
+      "session": "05_small_r2",
+      "summary": {
+        "arm": "small",
+        "attempted": 48,
+        "delivered": 45,
+        "first_case_seconds": 11.055301053,
+        "latency_seconds": {
+          "max": 11.055301053,
+          "mean": 2.3361545930833336,
+          "min": 1.0714508,
+          "n": 48,
+          "p50": 2.1450460035,
+          "p95": 3.2659103203999997
+        },
+        "planned": 48,
+        "profile_id": "post_memory_comparison_v1",
+        "repetition": 2,
+        "status": "complete_with_errors"
+      },
+      "summary_sha256": "ffcbc5f6aeef6eada413476211a97a3011e7f52d34d33a2cc94466f31c44b9fe"
+    },
+    {
+      "finish_sha256": "759277c9a789d6a29dca583eb1a384cf3cfe48ff658f3f58b4f64d515d0fb0c5",
+      "session": "06_large_r2",
+      "summary": {
+        "arm": "large",
+        "attempted": 48,
+        "delivered": 45,
+        "first_case_seconds": 29.227627297,
+        "latency_seconds": {
+          "max": 29.227627297,
+          "mean": 7.956569410708336,
+          "min": 3.034148079,
+          "n": 48,
+          "p50": 7.1014826895,
+          "p95": 16.31248075205
+        },
+        "planned": 48,
+        "profile_id": "post_memory_comparison_v1",
+        "repetition": 2,
+        "status": "complete_with_errors"
+      },
+      "summary_sha256": "7b79009207d2892b7de15306e09635f162041c94e19963023cbe9517ee3de660"
+    },
+    {
+      "finish_sha256": "ce88fc9011b687ca20116eb4aded31b754b131c9f4dbf7a80cb39598fd800d3f",
+      "session": "07_small_r3",
+      "summary": {
+        "arm": "small",
+        "attempted": 48,
+        "delivered": 45,
+        "first_case_seconds": 11.671658036,
+        "latency_seconds": {
+          "max": 11.671658036,
+          "mean": 2.2707954611458336,
+          "min": 1.014101612,
+          "n": 48,
+          "p50": 2.0213043004999998,
+          "p95": 3.1776882350499998
+        },
+        "planned": 48,
+        "profile_id": "post_memory_comparison_v1",
+        "repetition": 3,
+        "status": "complete_with_errors"
+      },
+      "summary_sha256": "ace4ab6213aba8085f1b1a114f82ff54398db455ca86bcb9912aaa939bf9e855"
+    },
+    {
+      "finish_sha256": "d785cc7394f7317506b8030d601734616d7c210391f5a1b482231b56581d689d",
+      "session": "08_large_r3",
+      "summary": {
+        "arm": "large",
+        "attempted": 48,
+        "delivered": 47,
+        "first_case_seconds": 30.244361995,
+        "latency_seconds": {
+          "max": 30.244361995,
+          "mean": 8.358833818854167,
+          "min": 3.606836074,
+          "n": 48,
+          "p50": 7.47772988,
+          "p95": 14.376871321249995
+        },
+        "planned": 48,
+        "profile_id": "post_memory_comparison_v1",
+        "repetition": 3,
+        "status": "complete_with_errors"
+      },
+      "summary_sha256": "0d8ee8f68f2535b70b300afdb49aa245673a2e90a453e353b7af560414ebd8c6"
+    },
+    {
+      "finish_sha256": "35ed8436c31c6e8cde79d6bf9796dec368eca8d874cb922ff191ae3afb5fe027",
+      "session": "09_cascade_r3",
+      "summary": {
+        "arm": "cascade",
+        "attempted": 48,
+        "delivered": 47,
+        "first_case_seconds": 32.20247174,
+        "latency_seconds": {
+          "max": 38.312603441,
+          "mean": 9.086556447604169,
+          "min": 2.797452393,
+          "n": 48,
+          "p50": 7.1668969985,
+          "p95": 20.186725071099996
+        },
+        "planned": 48,
+        "profile_id": "post_memory_comparison_v1",
+        "repetition": 3,
+        "status": "complete_with_errors"
+      },
+      "summary_sha256": "a11622c63c26a3e241372e64ae85a2f949849d982fcc86a2c831766101f7ffae"
+    }
+  ],
+  "snapshot": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-12T13:41:13.846405+00:00",
+    "fan_pwm": 96,
+    "memory": {
+      "mem_available_kib": 2628464,
+      "mem_total_kib": 7803236,
+      "swap_free_kib": 2246824,
+      "swap_total_kib": 3901608,
+      "swap_used_kib": 1654784
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 55.562,
+      "gpu-thermal": 56.0,
+      "soc0-thermal": 54.843,
+      "soc1-thermal": 55.0,
+      "soc2-thermal": 54.937,
+      "tj-thermal": 56.0
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "gpu": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "source_sha256": {
+    "config/default.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+    "scripts/analyze_arc_capability.py": "1c7e9df385ead79067c5597e0ee30bc18ffc7039907b9d5c0a9f0cb65a8fabc7",
+    "scripts/analyze_complete_system.py": "90dafa789ee553bf861a2307435d4901c8c2286d15a900bef90228cd56d6927b",
+    "scripts/analyze_post_memory_comparison.py": "049fdd4da814d29a7f801252030f9b10567de98c2d01177c0cc1771f3c14d214",
+    "scripts/complete_system_device_guard.py": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+    "scripts/freeze_post_memory_comparison.py": "3e65d83ca62daa692284063501cadcfd960b9c961e8b225cec3b229c4a190566",
+    "scripts/post_memory_device_guard.py": "10463685afd110895b8aad15cde2f97cb414253ea40ed9e37097f9872b695ea0",
+    "scripts/run_arc_capability.py": "2d55342123aa853952a44b6496285b338b322ec65f32f83bbf106e5c606885a0",
+    "scripts/run_complete_system.py": "888daae7b84126744cfdd54aa56cf220f0482f81b7d0b167a2ad3107849f4dcb",
+    "scripts/run_pair_remediation_validation.py": "5e9ce447e2591c17b741781638140a1cec06d3b99603f29fd335639591cbbb13",
+    "scripts/run_post_memory_batch.py": "ecb9c82b1758b6a173ad7204d5d9129861db757d85aba1084b4d3cf73034c1f7",
+    "scripts/run_post_memory_comparison.py": "fbdffadfbc16306b37e6034cc9bce9bca87eba701ad882928e9bd57c991428bb",
+    "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+    "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+    "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+    "src/oline_hri/cli.py": "90f6a1e6de50bfb47a7b37b47a6cca73fe381ee510b88c7002c08240117e450e",
+    "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+    "src/oline_hri/conversation.py": "6591e2d254840da6d616eb4e4311524c3ea9d710c19f58f3dc8d5ae54fb6ecd4",
+    "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+    "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+    "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+    "src/oline_hri/evaluation_experiment.py": "d5d286d1dff60b2a85acc9be524dd75f07f8dde363c002094b505c0734431739",
+    "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+    "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+    "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+    "src/oline_hri/evaluation_runner.py": "2a7d3ec2dcd4f10c75eac7ce4703f31a2fbdfe039270f50407e0b8a65ad0161f",
+    "src/oline_hri/evaluation_scoring.py": "cd94c9d04452130b0cd1113ed128e1d2a3a28e33cfd5e89cde4ae006baff4d3e",
+    "src/oline_hri/evaluation_systems.py": "ee340f9f0dc64267d326a88683edb4fb0843a2c6b8f8ec1570dba72ff6d1b717",
+    "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+    "src/oline_hri/grounded_composition.py": "310f0758dbef225fa84f41517fbe1faa53afbbe5065a2e0bdb72d8d32da73d6a",
+    "src/oline_hri/lightweight_routing.py": "65616524217cc89c235278d7b3e1e68f7525ed48761f05456a0579225a9ee595",
+    "src/oline_hri/memory.py": "4f2d261de00fd1df2018ebeba2778cedc236ef077697c8e1319302b61f9a78cb",
+    "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+    "src/oline_hri/memory_evidence.py": "04b38d066ff3b7e71f35a29a667f757e812cf1a6db741a22b19c9356a2d5ea74",
+    "src/oline_hri/ollama.py": "8fc6f58e9c838ef76166d4ae274a21b17e663ac179e5f10f2d9adbe0048cc091",
+    "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+    "src/oline_hri/relationships.py": "9ceee92ed123e988047c8722c20e872b77acdc9060dddb52ed38d08c1199a823",
+    "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+    "src/oline_hri/retrieval.py": "40364d1fb06aa68bae9bd3d31a583421f74883d9a0fe9815f72e9958eb8cea84",
+    "src/oline_hri/routing.py": "02647ab8abe53d226d7c29974228a106dde505175fdd522ed201eb5b628266a9",
+    "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0"
+  },
+  "swap_topology": [
+    {
+      "device": "/dev/zram0",
+      "priority": 5,
+      "size_kib": 650268,
+      "type": "partition"
+    },
+    {
+      "device": "/dev/zram1",
+      "priority": 5,
+      "size_kib": 650268,
+      "type": "partition"
+    },
+    {
+      "device": "/dev/zram2",
+      "priority": 5,
+      "size_kib": 650268,
+      "type": "partition"
+    },
+    {
+      "device": "/dev/zram3",
+      "priority": 5,
+      "size_kib": 650268,
+      "type": "partition"
+    },
+    {
+      "device": "/dev/zram4",
+      "priority": 5,
+      "size_kib": 650268,
+      "type": "partition"
+    },
+    {
+      "device": "/dev/zram5",
+      "priority": 5,
+      "size_kib": 650268,
+      "type": "partition"
+    }
+  ],
+  "usage_scope": "Swap used and available RAM are live usage measurements and need not return to their starting values. Logical zram swap occupancy is not additional physical RAM and does not establish active swapping.",
+  "valid": true
+}

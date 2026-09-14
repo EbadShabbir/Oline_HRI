@@ -1,0 +1,156 @@
+{
+  "branches": [
+    {
+      "branch_id": "cm05_correction",
+      "database_identities": [
+        [
+          "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_correction/memory.sqlite3",
+          45825,
+          3284176
+        ]
+      ],
+      "initial_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          20752,
+          "516308"
+        ]
+      ],
+      "restart_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          20900,
+          "521427"
+        ]
+      ],
+      "scheduled_restart_evidence_complete": true
+    },
+    {
+      "branch_id": "cm05_deletion",
+      "database_identities": [
+        [
+          "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_deletion/memory.sqlite3",
+          45825,
+          3284236
+        ]
+      ],
+      "initial_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          21054,
+          "525881"
+        ]
+      ],
+      "restart_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          21191,
+          "530399"
+        ]
+      ],
+      "scheduled_restart_evidence_complete": true
+    },
+    {
+      "branch_id": "cm05_expiry",
+      "database_identities": [
+        [
+          "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_expiry/memory.sqlite3",
+          45825,
+          3284283
+        ]
+      ],
+      "initial_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          21345,
+          "534343"
+        ]
+      ],
+      "restart_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          21573,
+          "540917"
+        ]
+      ],
+      "scheduled_restart_evidence_complete": true
+    },
+    {
+      "branch_id": "cm06_correction",
+      "database_identities": [
+        [
+          "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_correction/memory.sqlite3",
+          45825,
+          3284332
+        ]
+      ],
+      "initial_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          21737,
+          "544481"
+        ]
+      ],
+      "restart_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          22004,
+          "551688"
+        ]
+      ],
+      "scheduled_restart_evidence_complete": true
+    },
+    {
+      "branch_id": "cm06_deletion",
+      "database_identities": [
+        [
+          "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_deletion/memory.sqlite3",
+          45825,
+          3284387
+        ]
+      ],
+      "initial_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          22126,
+          "556051"
+        ]
+      ],
+      "restart_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          22257,
+          "560514"
+        ]
+      ],
+      "scheduled_restart_evidence_complete": true
+    },
+    {
+      "branch_id": "cm06_expiry",
+      "database_identities": [
+        [
+          "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_expiry/memory.sqlite3",
+          45825,
+          3284433
+        ]
+      ],
+      "initial_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          22577,
+          "568083"
+        ]
+      ],
+      "restart_processes": [
+        [
+          "a43a68f5-892c-497c-86ac-d8556a656d19",
+          22873,
+          "576805"
+        ]
+      ],
+      "scheduled_restart_evidence_complete": true
+    }
+  ],
+  "failures": [],
+  "branches_with_restart_evidence": 6
+}

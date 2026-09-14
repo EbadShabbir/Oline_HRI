@@ -1,0 +1,883 @@
+{
+  "created_at": "2026-09-14T12:43:33.042358+00:00",
+  "partial": true,
+  "prior_attempt": "audit_cm09_precheck_v1.json preserved; wrapper Counter(mapping) misuse corrected to count keys only; collection auditor unchanged.",
+  "scope": "Subset precheck of sealed cm09 correction/deletion/expiry only; final all-288 collection audit remains required.",
+  "semantic_scoring_performed": false,
+  "inference_performed": false,
+  "blinded_review_status": "Original cm09 blinded review pending; no diagnostic information sent to reviewers.",
+  "human_validation": "pending",
+  "command": [
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/bin/python",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/audit_cm09_precheck_v2.py"
+  ],
+  "precheck_source_sha256": "beb9e84609bdcac18c944b6390456d67f28074fac13edf80307880c5e3b5107c",
+  "auditor_source_sha256": "5808d204cfc6b10ea5b8a7f15139d66c72fe52d875a0fcdd80a0bf996bab9ef5",
+  "input_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/frozen_v1/seal.json": "390e3d2079f8be8edeed7130cb11600e1aa2c58269947b81ffbc21dfc6e503b3",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/seal.json": "4c29a34c961e0d7964a45f4c28285751cf4f8b71045a25cee05e19e928c50ae3",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/seal.json": "2c27ff8ff36f6ea2cb7125398066b960ada29b6ebf2627f1470b82c3df6293f0",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/seal.json": "b1f9f902de93ffee6ae3596efede93d60df779fc6d4c87d1794ca6db425f987e"
+  },
+  "subset_integrity_pass": true,
+  "exception": null,
+  "integrity_checks": {
+    "sealed_directory": 10,
+    "seal_file_set": 10,
+    "seal_file_hash": 292,
+    "sealed_directory_readonly": 10,
+    "sealed_artifact_readonly": 321,
+    "resource_captures_present": 6,
+    "artifact_exists": 18,
+    "serialized_http_start": 102,
+    "bytes_have_request": 102,
+    "byte_chunk_offset": 102,
+    "http_completion_has_start": 102,
+    "http_start_completion_match": 102,
+    "received_bytes_match_parsed_response": 102,
+    "actual_chat_options": 81,
+    "actual_chat_nonstream_no_thinking": 81,
+    "requested_installed_model": 81,
+    "no_oracle_fields_in_model_input": 81,
+    "returned_requested_model": 81,
+    "http_request_completion_preserved": 6,
+    "precheck_cm09_checkpoint_only": 24,
+    "validation_delivery_link": 27,
+    "final_delivered_answer_link": 25,
+    "raw_answer_call_link": 27,
+    "delivered_generation_link": 25,
+    "model_call_has_http_request": 81,
+    "call_raw_payload_byte_link": 81,
+    "raw_generation_received_content": 81,
+    "checkpoint_expected_clock": 24,
+    "checkpoint_authored_question": 24,
+    "shared_retrieval_clock": 14,
+    "shared_validation_clock": 18,
+    "withheld_has_no_delivered_answer": 2,
+    "precheck_every_chat_links_to_call": 81,
+    "precheck_all_24_unique_cm09_checkpoints": 1,
+    "precheck_actual_large_model_http_exercised": 1
+  },
+  "integrity_violations": [],
+  "counts": {
+    "chat_http_requests": 81,
+    "answer_rows": 27,
+    "answer_status_delivered": 25,
+    "answer_status_withheld": 2,
+    "subset_planned_checkpoints": 24,
+    "subset_unique_observed_checkpoints": 24,
+    "subset_fragments": 6
+  },
+  "observed_system_events": [
+    {
+      "stage": "validation_or_pipeline",
+      "code": "withheld_or_interrupted_answer",
+      "where": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/cm09_correction_corrected_fresh",
+      "status": "withheld",
+      "error": "ResponseValidationError",
+      "message": "robot response omits requested temporal memory detail"
+    },
+    {
+      "stage": "validation_or_pipeline",
+      "code": "withheld_or_interrupted_answer",
+      "where": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/cm09_correction_restart_fresh",
+      "status": "withheld",
+      "error": "ResponseValidationError",
+      "message": "robot response omits requested temporal memory detail"
+    }
+  ],
+  "fragments": [
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial",
+      "admission_only": false,
+      "status": "complete"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart",
+      "admission_only": false,
+      "status": "complete"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial",
+      "admission_only": false,
+      "status": "complete"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart",
+      "admission_only": false,
+      "status": "complete"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial",
+      "admission_only": false,
+      "status": "complete"
+    },
+    {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/restart",
+      "admission_only": false,
+      "status": "complete"
+    }
+  ],
+  "actual_model_requests": [
+    {
+      "purpose": "compute_selector",
+      "model": "qwen3:0.6b",
+      "count": 27
+    },
+    {
+      "purpose": "generation",
+      "model": "qwen3:0.6b",
+      "count": 16
+    },
+    {
+      "purpose": "generation",
+      "model": "qwen3:1.7b",
+      "count": 11
+    },
+    {
+      "purpose": "memory_selector",
+      "model": "qwen3:0.6b",
+      "count": 27
+    }
+  ],
+  "large_model_http_links": [
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:51",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "a42e97c3972961ec393ed29dc5f1da0e26782f8ec5cd04997ca87abefa6b81c6",
+      "received_bytes": 465,
+      "status": "ok"
+    },
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:15",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "c6c393587ff098aa4a4f4dad5b5f677b9e12203bf5452504d10531b97b645e6c",
+      "received_bytes": 481,
+      "status": "ok"
+    },
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:27",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "bb4319d2c500b94af89f51c851015e89643b25fcd9eb4db2997b2a58e54380a2",
+      "received_bytes": 465,
+      "status": "ok"
+    },
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:42",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "f541d386454c81399f7e3da1f8af390b1cf2b5b0744df983eef07483d7e3c53b",
+      "received_bytes": 519,
+      "status": "ok"
+    },
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:15",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "a6490b823165168cb6f297e613d9750d64b660ffbd415a0978c8e2cc8c8a845b",
+      "received_bytes": 473,
+      "status": "ok"
+    },
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:27",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "4f8f194f8b5906ece1b4b2a33ccb0b63795c6c7d23b41e2ead971964edfa1356",
+      "received_bytes": 553,
+      "status": "ok"
+    },
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:33",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "e16d884182727158b43d2848ea7f02e0b6725b7bda6a523aab65c2c3d50add5c",
+      "received_bytes": 464,
+      "status": "ok"
+    },
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:45",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "057e3972a677a34bfc55040bfb4213d6c2fc7c5773192de57ce210a2bcd6f2df",
+      "received_bytes": 465,
+      "status": "ok"
+    },
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:57",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "033a1e50f64d38079be04011b32356cb983877700a275dde3f27cd45fbec9fd0",
+      "received_bytes": 519,
+      "status": "ok"
+    },
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:69",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "4bc2a09c41bb8e3196c3bb2a6a9a2b8a5bfdc82db7376c74a064d315e842b4df",
+      "received_bytes": 467,
+      "status": "ok"
+    },
+    {
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/restart/http.jsonl:24",
+      "purpose": "generation",
+      "linked_to_recorded_call": true,
+      "bytes_sha256": "c8910ba7d40775665ba2a6a9e487c935974174966b2bda975609341dd2878ec4",
+      "received_bytes": 545,
+      "status": "ok"
+    }
+  ],
+  "received_bytes_call_links": [
+    {
+      "checkpoint_id": "cm09_correction_prestore",
+      "operation_id": "cm09_correction_op01",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:6",
+      "bytes_sha256": "959e84511ed1ba096f4c5666c351c2f8dde66f26fc832c01faf82e555652e74b",
+      "received_bytes": 379
+    },
+    {
+      "checkpoint_id": "cm09_correction_prestore",
+      "operation_id": "cm09_correction_op01",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:9",
+      "bytes_sha256": "ad112e2a72f2334130f3f2d9a16f9ee654cf1827f440c433f77b4eb1250126e7",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_correction_prestore",
+      "operation_id": "cm09_correction_op01",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:12",
+      "bytes_sha256": "ed1c2ff0e4a8d4e8363acc7052b2e7f719ca7605b90094a5162f4f3f24e8f13e",
+      "received_bytes": 528
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm09_correction_op02",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:15",
+      "bytes_sha256": "488459939cbf0bfcba6d822cbb0da186f14b28e3fc94d996cf0323f1748e4ef1",
+      "received_bytes": 378
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm09_correction_op02",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:18",
+      "bytes_sha256": "f63f8370ce3b37f8596f72af1b2911fbf965d7074693db2a86aca8f7d0df9630",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm09_correction_op02",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:21",
+      "bytes_sha256": "c129ab1724e0a78a4ea84bf62552aeff7bc1d1f6a1884b8c764be293aab41e05",
+      "received_bytes": 494
+    },
+    {
+      "checkpoint_id": "cm09_correction_recalled",
+      "operation_id": "cm09_correction_op06",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:24",
+      "bytes_sha256": "a600e662a0bdcf1b5beeb098af8f982df6dcffbb0669fa9a598f0ee5fff17158",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm09_correction_recalled",
+      "operation_id": "cm09_correction_op06",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:27",
+      "bytes_sha256": "6684ad62b9f0ced77f487bc50f36a8649a4e5e06096a4066e29619de5a1da897",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm09_correction_recalled",
+      "operation_id": "cm09_correction_op06",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:30",
+      "bytes_sha256": "22a566251db6ca2c5b7601ff6cd38104d164117588a3ac6b15eb77d38d762453",
+      "received_bytes": 495
+    },
+    {
+      "checkpoint_id": "cm09_correction_corrected_retained",
+      "operation_id": "cm09_correction_op09",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:33",
+      "bytes_sha256": "bf61f92bc7b37e14dfb2d842ee24cb636271219deb980f1a671938c38d53454d",
+      "received_bytes": 384
+    },
+    {
+      "checkpoint_id": "cm09_correction_corrected_retained",
+      "operation_id": "cm09_correction_op09",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:36",
+      "bytes_sha256": "0793896340fb1b5960ac7c1b1dc66348770e9164e751e38d215bcbf73927c7e9",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm09_correction_corrected_retained",
+      "operation_id": "cm09_correction_op09",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:39",
+      "bytes_sha256": "9b0529a5c499da029371f49676b43cff3199b4b59c7f9ebd32017a3e29f2c4e9",
+      "received_bytes": 482
+    },
+    {
+      "checkpoint_id": "cm09_correction_corrected_fresh",
+      "operation_id": "cm09_correction_op10",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:42",
+      "bytes_sha256": "1baeb824d99d36246a42bf34bdd6f4ad9c2c7f8243736572b0c2f23f1480f04b",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm09_correction_corrected_fresh",
+      "operation_id": "cm09_correction_op10",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:45",
+      "bytes_sha256": "1d8cda40df4402273ca4cffc7e0a879e540d33b41e4caacf9f39b560d31d36b5",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm09_correction_corrected_fresh",
+      "operation_id": "cm09_correction_op10",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:51",
+      "bytes_sha256": "a42e97c3972961ec393ed29dc5f1da0e26782f8ec5cd04997ca87abefa6b81c6",
+      "received_bytes": 465
+    },
+    {
+      "checkpoint_id": "cm09_correction_historical_retained",
+      "operation_id": "cm09_correction_op11",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:54",
+      "bytes_sha256": "7a011af6cf0b81d0dbcfac316feba2cd2b556892fe342206c682e4ec778f1bb1",
+      "received_bytes": 380
+    },
+    {
+      "checkpoint_id": "cm09_correction_historical_retained",
+      "operation_id": "cm09_correction_op11",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:57",
+      "bytes_sha256": "82028dc6a3de76137c357fe0a6c02c5b839c2f5baa4aa8c4cb4c5fb24d0e9386",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_correction_historical_retained",
+      "operation_id": "cm09_correction_op11",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:60",
+      "bytes_sha256": "b87c4b85aa1c9fde27012805b864d3bb69ca91fd875da904675ac607f0844db1",
+      "received_bytes": 513
+    },
+    {
+      "checkpoint_id": "cm09_correction_historical_fresh",
+      "operation_id": "cm09_correction_op12",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:63",
+      "bytes_sha256": "cfd9b8a204a3bdf1d2ec72ebb9670f5ccb3486f3b78b9dd6f7beb3fa82aabe7a",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm09_correction_historical_fresh",
+      "operation_id": "cm09_correction_op12",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:66",
+      "bytes_sha256": "bb7e41ec485558af781cdc9d486ba659745ae53810142a61374f9244f8d95eb8",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm09_correction_historical_fresh",
+      "operation_id": "cm09_correction_op12",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/http.jsonl:69",
+      "bytes_sha256": "eb0861da01773f6a05c6559befca13812515570bde4e0fc3fe1e55564bab8584",
+      "received_bytes": 514
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_retained",
+      "operation_id": "cm09_correction_op15",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:6",
+      "bytes_sha256": "4cb684ace41c342a864a32960620f7f803e315b06cf115e7923ec234f61c4af4",
+      "received_bytes": 388
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_retained",
+      "operation_id": "cm09_correction_op15",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:9",
+      "bytes_sha256": "5014363f12e0a5d5ca258caf394717b70e174fd053656ed033eb790c735a0090",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_retained",
+      "operation_id": "cm09_correction_op15",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:15",
+      "bytes_sha256": "c6c393587ff098aa4a4f4dad5b5f677b9e12203bf5452504d10531b97b645e6c",
+      "received_bytes": 481
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_fresh",
+      "operation_id": "cm09_correction_op16",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:18",
+      "bytes_sha256": "9f0b540e4805795b8cf9d27c02a814142e24174f047ef54bf95cd827fd2da142",
+      "received_bytes": 379
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_fresh",
+      "operation_id": "cm09_correction_op16",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:21",
+      "bytes_sha256": "8fe76fd90d4881ecdbf09f73d32f2440b55080c6d7d4de6620026273fa3b6b56",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_fresh",
+      "operation_id": "cm09_correction_op16",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:27",
+      "bytes_sha256": "bb4319d2c500b94af89f51c851015e89643b25fcd9eb4db2997b2a58e54380a2",
+      "received_bytes": 465
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_historical_retained",
+      "operation_id": "cm09_correction_op17",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:30",
+      "bytes_sha256": "f42c274222565c48239e795c53f59cfaf983f46b261611b9470a05926837a5d1",
+      "received_bytes": 380
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_historical_retained",
+      "operation_id": "cm09_correction_op17",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:33",
+      "bytes_sha256": "acadf4b3a3e108fd13876ba16ed110f0bc520986b8f9d44cfe52b411b60a2a70",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_historical_retained",
+      "operation_id": "cm09_correction_op17",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:36",
+      "bytes_sha256": "aa953d0fe2d87bac4ec4cd56c9da283c93462ef3acbde49d97bf267811f82dd1",
+      "received_bytes": 513
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_historical_fresh",
+      "operation_id": "cm09_correction_op18",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:39",
+      "bytes_sha256": "10ac541b84e51c461802125cb0133c98c5ac6889d1c8bc0000deaafce40e811d",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_historical_fresh",
+      "operation_id": "cm09_correction_op18",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:42",
+      "bytes_sha256": "5b5c5a7167cad774433f1fc7028656a375bebf0d1f9f574fef6f903ebb45bc24",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm09_correction_restart_historical_fresh",
+      "operation_id": "cm09_correction_op18",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/http.jsonl:45",
+      "bytes_sha256": "aff25f7ccb497f6a20dbd89a24bb7a7187dc66e4e8fe255856ebe384f2aa9c41",
+      "received_bytes": 514
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm09_deletion_op01",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:6",
+      "bytes_sha256": "f851b351eeb701290a9cc501b7eb06f5022e76d69c0ff6736dc9279289efc9b4",
+      "received_bytes": 382
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm09_deletion_op01",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:9",
+      "bytes_sha256": "5c8d6eb4d91ac706125c735c7b00d9e569815625ed2223483539c5caab263568",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm09_deletion_op01",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:12",
+      "bytes_sha256": "9403a3b16777ab49c8ca91e33aed808425e6221c1506da2aa6d9fcd51c624acb",
+      "received_bytes": 470
+    },
+    {
+      "checkpoint_id": "cm09_deletion_recalled",
+      "operation_id": "cm09_deletion_op05",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:15",
+      "bytes_sha256": "5a2fda28ff5bf7371a5c34e5cec297787ee57bf8ced287a6b4282486e30e5bcf",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm09_deletion_recalled",
+      "operation_id": "cm09_deletion_op05",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:18",
+      "bytes_sha256": "c25461901a7caf4b586ff2a235e69778bb0bd74b2806ed632f31e0b69dc493ad",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm09_deletion_recalled",
+      "operation_id": "cm09_deletion_op05",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:21",
+      "bytes_sha256": "55171a952894e2fdd0f85c490f854870a0983a9cf3cef8490b35097ec49afc70",
+      "received_bytes": 495
+    },
+    {
+      "checkpoint_id": "cm09_deletion_deleted_retained",
+      "operation_id": "cm09_deletion_op08",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:24",
+      "bytes_sha256": "05ee973814ed40c7b542d97ae7c2638aa200808db2c8c6f780cd19d096cacbe7",
+      "received_bytes": 384
+    },
+    {
+      "checkpoint_id": "cm09_deletion_deleted_retained",
+      "operation_id": "cm09_deletion_op08",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:27",
+      "bytes_sha256": "4529e953fc333a61cb474d0ec119bb552153a407cfa06b06a49ea5eb9ae8ba86",
+      "received_bytes": 352
+    },
+    {
+      "checkpoint_id": "cm09_deletion_deleted_retained",
+      "operation_id": "cm09_deletion_op08",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:30",
+      "bytes_sha256": "33084c79580c6d3f10b3b75619d41b420575069f42062eb1366209b23a9f5fa0",
+      "received_bytes": 482
+    },
+    {
+      "checkpoint_id": "cm09_deletion_deleted_fresh",
+      "operation_id": "cm09_deletion_op09",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:33",
+      "bytes_sha256": "56750857e1d3afda933ac11e99dd3871748d6a73dcd0bf9f19e32d713cc776a1",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm09_deletion_deleted_fresh",
+      "operation_id": "cm09_deletion_op09",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:36",
+      "bytes_sha256": "2651b1ddae8b29a8a34bf7d644ea91fd9c1ab3b7ae57433dbfefd1d3e83ea99d",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm09_deletion_deleted_fresh",
+      "operation_id": "cm09_deletion_op09",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:42",
+      "bytes_sha256": "f541d386454c81399f7e3da1f8af390b1cf2b5b0744df983eef07483d7e3c53b",
+      "received_bytes": 519
+    },
+    {
+      "checkpoint_id": "cm09_deletion_deleted_historical_retained",
+      "operation_id": "cm09_deletion_op10",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:45",
+      "bytes_sha256": "d3289298013034f8c4db14d3faf05b497f462b43446325665728df204939781f",
+      "received_bytes": 388
+    },
+    {
+      "checkpoint_id": "cm09_deletion_deleted_historical_retained",
+      "operation_id": "cm09_deletion_op10",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:48",
+      "bytes_sha256": "6d38a1a184c584b78882c7173f57b082861df429cdb25603edc0dc986095b40f",
+      "received_bytes": 349
+    },
+    {
+      "checkpoint_id": "cm09_deletion_deleted_historical_retained",
+      "operation_id": "cm09_deletion_op10",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/http.jsonl:51",
+      "bytes_sha256": "69d622105405c9d491471e63afbb7a98879377de65b7bc5c87a271ee9c200a82",
+      "received_bytes": 482
+    },
+    {
+      "checkpoint_id": "cm09_deletion_restart_retained",
+      "operation_id": "cm09_deletion_op13",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:6",
+      "bytes_sha256": "ffbf93ea3c34667ab43ddecd2fa7a6a76a0bbd4f774f9426d5f276bcf75bc152",
+      "received_bytes": 388
+    },
+    {
+      "checkpoint_id": "cm09_deletion_restart_retained",
+      "operation_id": "cm09_deletion_op13",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:9",
+      "bytes_sha256": "e28c3a4c934dc4e92e78d779996476e09029654a33e0b797ab2ce2fb9692238a",
+      "received_bytes": 349
+    },
+    {
+      "checkpoint_id": "cm09_deletion_restart_retained",
+      "operation_id": "cm09_deletion_op13",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:15",
+      "bytes_sha256": "a6490b823165168cb6f297e613d9750d64b660ffbd415a0978c8e2cc8c8a845b",
+      "received_bytes": 473
+    },
+    {
+      "checkpoint_id": "cm09_deletion_restart_fresh",
+      "operation_id": "cm09_deletion_op14",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:18",
+      "bytes_sha256": "81748ee891ecf396e8df6a34ee0a923b899338aa8f305cea1f785c0d87046e64",
+      "received_bytes": 380
+    },
+    {
+      "checkpoint_id": "cm09_deletion_restart_fresh",
+      "operation_id": "cm09_deletion_op14",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:21",
+      "bytes_sha256": "eef854599e7ee6374ffb535188218716ca8656d3a363a91424403bd4bd701025",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_deletion_restart_fresh",
+      "operation_id": "cm09_deletion_op14",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:27",
+      "bytes_sha256": "4f8f194f8b5906ece1b4b2a33ccb0b63795c6c7d23b41e2ead971964edfa1356",
+      "received_bytes": 553
+    },
+    {
+      "checkpoint_id": "cm09_deletion_restart_historical_retained",
+      "operation_id": "cm09_deletion_op15",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:30",
+      "bytes_sha256": "b783715284fb352a96c9626b42205afba5d8bf58caeae74f304b141dbb6abb3f",
+      "received_bytes": 388
+    },
+    {
+      "checkpoint_id": "cm09_deletion_restart_historical_retained",
+      "operation_id": "cm09_deletion_op15",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:33",
+      "bytes_sha256": "7f61eafa08da21920a0185835d1101f90662c00c78124a0c6ffbc16d2eb40837",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_deletion_restart_historical_retained",
+      "operation_id": "cm09_deletion_op15",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/http.jsonl:36",
+      "bytes_sha256": "5e539f1299d0d75b5cd7c38094ee05c9fede72265518659b6585ec8052a2bf94",
+      "received_bytes": 482
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm09_expiry_op01",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:6",
+      "bytes_sha256": "d6467ec316870d198074312becf3d52c3829b1e9f3be052bf409f4b4073ed290",
+      "received_bytes": 382
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm09_expiry_op01",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:9",
+      "bytes_sha256": "a88db9e0fdc6b6305d989f95f9233be92f836f01006e056466017bb499675d45",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": null,
+      "operation_id": "cm09_expiry_op01",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:12",
+      "bytes_sha256": "2a38dcaf10d91cb2e36eb6baaf9e8fde96ab124035e8509b0cfeb7e6735f9fb9",
+      "received_bytes": 470
+    },
+    {
+      "checkpoint_id": "cm09_expiry_before_retained",
+      "operation_id": "cm09_expiry_op06",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:15",
+      "bytes_sha256": "91b5bea4d8bb8316a8d594ecb4a688cc6369e7bfbcbc8ff3f1bf4e31e4358c37",
+      "received_bytes": 384
+    },
+    {
+      "checkpoint_id": "cm09_expiry_before_retained",
+      "operation_id": "cm09_expiry_op06",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:18",
+      "bytes_sha256": "9e0774a443ceaa572f20458d3cc58e52fc5eb7541adfbdca5eaf528aa954f3a7",
+      "received_bytes": 352
+    },
+    {
+      "checkpoint_id": "cm09_expiry_before_retained",
+      "operation_id": "cm09_expiry_op06",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:21",
+      "bytes_sha256": "346ae1e1a276b62618cafd35d7911938ceda1785fe272f59c2f813e8684b8c51",
+      "received_bytes": 482
+    },
+    {
+      "checkpoint_id": "cm09_expiry_before_fresh",
+      "operation_id": "cm09_expiry_op07",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:24",
+      "bytes_sha256": "e048c7212b56edf89125e33fecc92785be56bd82a792d9402d69ae11eebc56cd",
+      "received_bytes": 376
+    },
+    {
+      "checkpoint_id": "cm09_expiry_before_fresh",
+      "operation_id": "cm09_expiry_op07",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:27",
+      "bytes_sha256": "4efb841848ae658a5834d5123691f88bd6c6a15c0995743b6f50faef8831a319",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm09_expiry_before_fresh",
+      "operation_id": "cm09_expiry_op07",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:33",
+      "bytes_sha256": "e16d884182727158b43d2848ea7f02e0b6725b7bda6a523aab65c2c3d50add5c",
+      "received_bytes": 464
+    },
+    {
+      "checkpoint_id": "cm09_expiry_at_retained",
+      "operation_id": "cm09_expiry_op09",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:36",
+      "bytes_sha256": "0350c35260079c16d5f4433ff1068137b70d86d6ab04538ae4db0e77462e1418",
+      "received_bytes": 388
+    },
+    {
+      "checkpoint_id": "cm09_expiry_at_retained",
+      "operation_id": "cm09_expiry_op09",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:39",
+      "bytes_sha256": "060ac822df2e6d8de11b8fa9585d22c3dc6846ecbfecf94b6d78cc949798c182",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_expiry_at_retained",
+      "operation_id": "cm09_expiry_op09",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:45",
+      "bytes_sha256": "057e3972a677a34bfc55040bfb4213d6c2fc7c5773192de57ce210a2bcd6f2df",
+      "received_bytes": 465
+    },
+    {
+      "checkpoint_id": "cm09_expiry_at_fresh",
+      "operation_id": "cm09_expiry_op10",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:48",
+      "bytes_sha256": "db652e6fb646cb8b12b8f917b9de7d111846d36b6ae10c99fb431c351946acfd",
+      "received_bytes": 380
+    },
+    {
+      "checkpoint_id": "cm09_expiry_at_fresh",
+      "operation_id": "cm09_expiry_op10",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:51",
+      "bytes_sha256": "4bfb648cdb38e825e42f58034ad98a42c4238cb21fa5017d0290342d56fc1a57",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_expiry_at_fresh",
+      "operation_id": "cm09_expiry_op10",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:57",
+      "bytes_sha256": "033a1e50f64d38079be04011b32356cb983877700a275dde3f27cd45fbec9fd0",
+      "received_bytes": 519
+    },
+    {
+      "checkpoint_id": "cm09_expiry_after_retained",
+      "operation_id": "cm09_expiry_op12",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:60",
+      "bytes_sha256": "8844e3c9350d9d3b43a5f03ada05724425c6d110cfedd1ef46d4d363e7ef7afd",
+      "received_bytes": 389
+    },
+    {
+      "checkpoint_id": "cm09_expiry_after_retained",
+      "operation_id": "cm09_expiry_op12",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:63",
+      "bytes_sha256": "661047ba51c5e3610a049b7a1b9d6e47c6d375445da7404d1d15d92488a690af",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_expiry_after_retained",
+      "operation_id": "cm09_expiry_op12",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/http.jsonl:69",
+      "bytes_sha256": "4bc2a09c41bb8e3196c3bb2a6a9a2b8a5bfdc82db7376c74a064d315e842b4df",
+      "received_bytes": 467
+    },
+    {
+      "checkpoint_id": "cm09_expiry_restart_retained",
+      "operation_id": "cm09_expiry_op15",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/restart/http.jsonl:6",
+      "bytes_sha256": "670ecd357048d04213508438c0ca590a15a4d1c03f51df024514c7aef40b3ca2",
+      "received_bytes": 388
+    },
+    {
+      "checkpoint_id": "cm09_expiry_restart_retained",
+      "operation_id": "cm09_expiry_op15",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/restart/http.jsonl:9",
+      "bytes_sha256": "a6eb48952f330ea8120a8a0637c49dedd872b2bc2cf2f279ce43f85a94baaaa8",
+      "received_bytes": 350
+    },
+    {
+      "checkpoint_id": "cm09_expiry_restart_retained",
+      "operation_id": "cm09_expiry_op15",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/restart/http.jsonl:12",
+      "bytes_sha256": "36cce5e9942e41d11a3f32c573ced0b62651fd19b4d6c46a0c51f36ae2c415b6",
+      "received_bytes": 483
+    },
+    {
+      "checkpoint_id": "cm09_expiry_restart_fresh",
+      "operation_id": "cm09_expiry_op16",
+      "purpose": "memory_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/restart/http.jsonl:15",
+      "bytes_sha256": "c210a1d849b917c57a6796eca9b8d35685e55e3355f4cfda6ed3e38221e011f3",
+      "received_bytes": 375
+    },
+    {
+      "checkpoint_id": "cm09_expiry_restart_fresh",
+      "operation_id": "cm09_expiry_op16",
+      "purpose": "compute_selector",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/restart/http.jsonl:18",
+      "bytes_sha256": "e69e6a6a3dc85ba651daeb2fe058aed433326c4927dc22d1c24f8eb3382344bf",
+      "received_bytes": 351
+    },
+    {
+      "checkpoint_id": "cm09_expiry_restart_fresh",
+      "operation_id": "cm09_expiry_op16",
+      "purpose": "generation",
+      "request": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/restart/http.jsonl:24",
+      "bytes_sha256": "c8910ba7d40775665ba2a6a9e487c935974174966b2bda975609341dd2878ec4",
+      "received_bytes": 545
+    }
+  ]
+}

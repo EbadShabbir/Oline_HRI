@@ -1,0 +1,18 @@
+{
+  "sha256": {
+    "private/acknowledgments.jsonl": "c19eb13ccfbc1155e81c7ea4aa0984be9b7545492d46fc0ca4338906f90ee007",
+    "private/audit_events.jsonl": "6a264918b83a9195eec2ab594308cd8a0d371916a01aa9bd8876b7df611fd87f",
+    "private/diagnostic_answers.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "private/expected_ledger.json": "f917809b143fee3e9684ff4200942e58ba3b37c73fef81dc47940946402c0226",
+    "private/mapping.json": "e41f667e649ad47ea8468ec59a9dad728e911d06eda901d21636396729d7bfe6",
+    "private/observations.jsonl": "62e245f182e80a394f05c7f6d90923c30856e1129c88140d1e6827e6e5b33360",
+    "private/process_audit.json": "deb7094eb5c96a3867211e8990ae73afeaa3ff06da235fc8f00e3c35092ed414",
+    "private/provenance.json": "edeca3eb07d12fc1dfb1e16a031465fa2838f6aa7f7511cec063388b8909b3bf",
+    "private/runtime.json": "0f60d2f5f85b69ca263ec05cdcd4920112ce1811445346dcb152c842d0ab683e",
+    "public/instructions.md": "cbbefe77d9f37ee9ea8cdfd467df2796f9a151e64b90378430c7216317bc1dae",
+    "public/packets.jsonl": "3a686dbf0564ba54fddcb977994595e5416c74cfd9c185588a9fc76723f0c238",
+    "public/review_schema.json": "dc3863e135839a9d5f11c82cb68b1b1f44f11c625d93c3d263c4d7e4dd19469b"
+  },
+  "created_at": "2026-09-14T13:15:12.359997+00:00",
+  "immutability": "exclusive creation, SHA256 manifest, read-only permissions; not privileged WORM"
+}

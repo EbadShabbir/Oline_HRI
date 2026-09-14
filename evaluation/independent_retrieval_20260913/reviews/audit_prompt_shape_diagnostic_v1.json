@@ -1,0 +1,519 @@
+{
+  "analysis_v1_audit_sha256": "7720da7cca13962095336efab2cf52c78a29dc3d797398c2c9e898e515fa41fd",
+  "attempts": 864,
+  "created_at": "2026-09-13T18:57:42.294001+00:00",
+  "diagnostic_source_sha256": "b04c1c51f60036f4003950d7fbeaf667acf31e3cca1e3dc7484f0fdabc3379b6",
+  "evidence_dependent_current_request_rewrites": [
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03/observations.jsonl",
+      "repetition": 1,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 2,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03/observations.jsonl",
+      "repetition": 1,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 2,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04/observations.jsonl",
+      "repetition": 1,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 3,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04/observations.jsonl",
+      "repetition": 1,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 3,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04/observations.jsonl",
+      "repetition": 1,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 4,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2/session_04_from_14/observations.jsonl",
+      "repetition": 1,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 4,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_05_from_01_admission_retry_01/observations.jsonl",
+      "repetition": 1,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 5,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3/session_05_from_01_admission_retry_01/observations.jsonl",
+      "repetition": 1,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 5,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_03/observations.jsonl",
+      "repetition": 2,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 7,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v4/session_07_from_01_admission_retry_03/observations.jsonl",
+      "repetition": 2,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 7,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_09_from_01_admission_retry_02/observations.jsonl",
+      "repetition": 2,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 9,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_09_from_01_admission_retry_02/observations.jsonl",
+      "repetition": 2,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 9,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_10_from_01_admission_retry_01/observations.jsonl",
+      "repetition": 2,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 10,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_10_from_01_admission_retry_01/observations.jsonl",
+      "repetition": 2,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 10,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_12_from_01_admission_retry_02/observations.jsonl",
+      "repetition": 2,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 12,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_12_from_01_admission_retry_02/observations.jsonl",
+      "repetition": 2,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 12,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_13_from_01_admission_retry_02/observations.jsonl",
+      "repetition": 3,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 13,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_13_from_01_admission_retry_02/observations.jsonl",
+      "repetition": 3,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 13,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_14_from_01_admission_retry_02/observations.jsonl",
+      "repetition": 3,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 14,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:0.6b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v5/session_14_from_01_admission_retry_02/observations.jsonl",
+      "repetition": 3,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 14,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6/session_17_from_01/observations.jsonl",
+      "repetition": 3,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 17,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "SELECTIVE",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v7/session_17_from_21/observations.jsonl",
+      "repetition": 3,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 17,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Mural-Painting Partner to me?",
+      "case_id": "ir_03_01",
+      "messages_sha256": "a6f4bc48471bba5dedce464332fc96889d69b47ab40de2b675fc9501437fcceb",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my mural-painting partner?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8/session_18_from_01/observations.jsonl",
+      "repetition": 3,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 18,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005301"
+      ]
+    },
+    {
+      "actual_current_request": "Who is My Biscuit-Cutter Supplier to me?",
+      "case_id": "ir_06_06",
+      "messages_sha256": "363bf46671d542c64307ecb91c05a130bef1a7c78337f019a9d05deac2b49b3c",
+      "model": "qwen3:1.7b",
+      "original_request": "Who is my biscuit-cutter supplier?",
+      "policy": "ALWAYS",
+      "raw_artifact": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v8/session_18_from_01/observations.jsonl",
+      "repetition": 3,
+      "roles": [
+        "system",
+        "user"
+      ],
+      "slot": 18,
+      "supplied_ids": [
+        "mem_00000000000000000000000000005602"
+      ]
+    }
+  ],
+  "exact_current_request_mismatches": [],
+  "final_run_seal_sha256": "51daaaf925bbdd16af2b37768be54f6ca31633056fd6df8cfddd4baa7b438f2e",
+  "finding": "All 24 reported prompt-shape errors are caused solely by the original-prompt substring predicate rejecting exact frozen evidence-dependent current-request normalization. No prior conversation roles or current-request mismatches were found.",
+  "frozen_adapter_sha256": "b38eb74bfa7fe0b48fb8e057ba75ad7202b3bf148734b32bb13d40faf4ff76a3",
+  "frozen_conversation_sha256": "d9a0499de2f6f76e290640097d2a9201d4fe988876516dee4020b29fd9806b90",
+  "frozen_source_basis": [
+    "independent_retrieval_adapter.py:269-285 constructs a fresh Conversation for each one-use adapter send.",
+    "independent_retrieval_adapter.py:287-289 rejects nonempty routing history.",
+    "conversation.py:1287-1291 builds CURRENT_USER_REQUEST from _memory_grounded_request(user_text) only when memory matches are supplied.",
+    "conversation.py:2026-2051 normalizes bounded relationship strings, including these two possessive noun phrases, by title casing and appending to me.",
+    "conversation.py:1380-1407 passes original user_text when no memory envelope exists."
+  ],
+  "generation_inputs": 864,
+  "generation_inputs_with_supplied_evidence": 342,
+  "http_verification_scope": "Exact messages after the frozen Ollama client request-local ordered memory_ref_N pseudonym substitution; all roles and remaining content unchanged.",
+  "limitations": "Validating an exact frozen helper transformation establishes provenance and fresh-history control; it does not establish that the transformation preserves question meaning. Answers, rubrics, review judgments and private review mappings were not evaluated by this diagnostic.",
+  "matching_actual_http_inputs": 864,
+  "message_role_counts": {
+    "system,system,user": 366,
+    "system,user": 498
+  },
+  "original_sources_unchanged": {
+    "config/default.json": true,
+    "scripts/complete_system_device_guard.py": true,
+    "scripts/independent_retrieval_adapter.py": true,
+    "scripts/independent_retrieval_supervisor.py": true,
+    "scripts/post_memory_device_guard.py": true,
+    "scripts/run_arc_capability.py": true,
+    "scripts/run_complete_system.py": true,
+    "scripts/run_independent_retrieval.py": true,
+    "scripts/run_pair_remediation_validation.py": true,
+    "scripts/run_post_memory_comparison.py": true,
+    "scripts/smoke_independent_retrieval.py": true,
+    "src/oline_hri/__init__.py": true,
+    "src/oline_hri/__main__.py": true,
+    "src/oline_hri/answer_guidance.py": true,
+    "src/oline_hri/cli.py": true,
+    "src/oline_hri/config.py": true,
+    "src/oline_hri/conversation.py": true,
+    "src/oline_hri/default_config.json": true,
+    "src/oline_hri/embedding.py": true,
+    "src/oline_hri/evaluation.py": true,
+    "src/oline_hri/evaluation_benchmark.py": true,
+    "src/oline_hri/evaluation_experiment.py": true,
+    "src/oline_hri/evaluation_merge.py": true,
+    "src/oline_hri/evaluation_model_pairs.py": true,
+    "src/oline_hri/evaluation_router.py": true,
+    "src/oline_hri/evaluation_runner.py": true,
+    "src/oline_hri/evaluation_scoring.py": true,
+    "src/oline_hri/evaluation_systems.py": true,
+    "src/oline_hri/evaluation_telemetry.py": true,
+    "src/oline_hri/grounded_composition.py": true,
+    "src/oline_hri/lightweight_routing.py": true,
+    "src/oline_hri/memory.py": true,
+    "src/oline_hri/memory_capture.py": true,
+    "src/oline_hri/memory_evidence.py": true,
+    "src/oline_hri/ollama.py": true,
+    "src/oline_hri/operational_planning.py": true,
+    "src/oline_hri/relationships.py": true,
+    "src/oline_hri/response.py": true,
+    "src/oline_hri/retrieval.py": true,
+    "src/oline_hri/routing.py": true,
+    "src/oline_hri/speech.py": true,
+    "src/oline_hri/timing.py": true,
+    "tests/test_independent_retrieval_adapter.py": true,
+    "tests/test_independent_retrieval_runner.py": true
+  },
+  "recommended_audit_correction": [
+    "Keep fresh-role checks strict and separate from current-request fidelity checks.",
+    "For supplied evidence, decode the single CURRENT_USER_REQUEST JSON string and require exact equality to the hash-verified frozen normalizer applied to the frozen prompt.",
+    "For no evidence, require exact frozen prompt in the plain request or decoded APPLICATION_REQUEST string; do not permit normalization.",
+    "Preserve analysis_blind_v1 and all runtime/collection artifacts. Regression-test unexpected roles, arbitrary changed current request, no-evidence rewrite, and frozen-source drift.",
+    "Report the 24 evidence-dependent prompt rewrites separately. Their effect on semantic task quality is not determined by this control audit."
+  ],
+  "request_format_counts": {
+    "memory_envelope": 342,
+    "plain_request": 522
+  },
+  "review_type": "independent assistant input/provenance audit; no semantic grading; human validation pending"
+}

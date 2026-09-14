@@ -1,0 +1,630 @@
+{
+  "created_at": "2026-09-14T14:16:37.996109+00:00",
+  "scope": "Full first-repair integrity/method findings; no semantic scoring or inference.",
+  "command": [
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/bin/python",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/collection_audit_findings_v1.py"
+  ],
+  "script_sha256": "411d8d15993b05a2fe871061731dfa95f23fbef0406537f67bb95861c52cc380",
+  "input_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/collection_audit_v1.json": "914786d716b005ce59eb83ae18e2aaa0912bd878a631c7546544d6075f26e860",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/collection_audit_v1_command.json": "52c809e45fb935c5b3fac06b30a1c8db43effe65c91aae33a2cd8d4a02716853",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/seal.json": "2ef6fc4978d1305f7a481aca6fa4cb587183fd57d9ea5904b761e3852e6de012",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/frozen_v2/seal.json": "0b9b8e04dda46462ef1dd2682065d731439885723b2ff7ec723c18b79cf7660b"
+  },
+  "source_certificate": {
+    "verified_at": "2026-09-14T14:15:10.108933+00:00",
+    "current_runtime_files_matched": 41,
+    "frozen_runtime_files_matched": 41,
+    "all_match_before_subsequent_source_change": true,
+    "frozen_source_sha256": {
+      "config/default.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "scripts/complete_system_device_guard.py": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+      "scripts/post_memory_device_guard.py": "10463685afd110895b8aad15cde2f97cb414253ea40ed9e37097f9872b695ea0",
+      "scripts/run_arc_capability.py": "2d55342123aa853952a44b6496285b338b322ec65f32f83bbf106e5c606885a0",
+      "scripts/run_changing_memory.py": "4b8102177858572e1a5244d443c798d53bf48b34743d93858412c2418972d893",
+      "scripts/run_complete_system.py": "888daae7b84126744cfdd54aa56cf220f0482f81b7d0b167a2ad3107849f4dcb",
+      "scripts/run_independent_retrieval.py": "62feb1069c7cf1cddf79ece56a3044a4526352252f79391459e67631dda81c9a",
+      "scripts/run_pair_remediation_validation.py": "5e9ce447e2591c17b741781638140a1cec06d3b99603f29fd335639591cbbb13",
+      "scripts/run_post_memory_comparison.py": "fbdffadfbc16306b37e6034cc9bce9bca87eba701ad882928e9bd57c991428bb",
+      "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+      "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+      "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+      "src/oline_hri/cli.py": "90f6a1e6de50bfb47a7b37b47a6cca73fe381ee510b88c7002c08240117e450e",
+      "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+      "src/oline_hri/conversation.py": "0717344dbf1ae1f8cfa33914a1c2e471513bc71cdf6308fa0aebd9f3c18dabe6",
+      "src/oline_hri/default_config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+      "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+      "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+      "src/oline_hri/evaluation_experiment.py": "d5d286d1dff60b2a85acc9be524dd75f07f8dde363c002094b505c0734431739",
+      "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+      "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+      "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+      "src/oline_hri/evaluation_runner.py": "2a7d3ec2dcd4f10c75eac7ce4703f31a2fbdfe039270f50407e0b8a65ad0161f",
+      "src/oline_hri/evaluation_scoring.py": "f73f7f01b89a5a3d83ac2543fdb585a120c19bccf94062e8c38bf498a8ca6a09",
+      "src/oline_hri/evaluation_systems.py": "77437ef8a579d2de531a4770fc2bda2a2088d3310cad4d3db3be536e4203f66a",
+      "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+      "src/oline_hri/grounded_composition.py": "52e458baa35b59aa7bc00736daf7a2e8b98b38a0fae1ce77b872fcf40eff7507",
+      "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+      "src/oline_hri/memory.py": "4f2d261de00fd1df2018ebeba2778cedc236ef077697c8e1319302b61f9a78cb",
+      "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+      "src/oline_hri/memory_evidence.py": "c0b1b0744f022fd593501e7a7310040309b4d198ba56435643ba14f2645d22e7",
+      "src/oline_hri/ollama.py": "7a82fe0a71461c7bd02faee3fbd739b32e4d4388e5f42ec146ab685e208a43d1",
+      "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+      "src/oline_hri/relationships.py": "759d2a6c671581ffd5db2b07e14a89b81d90fc58ed5fd3625bcf6ec9860b80f6",
+      "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+      "src/oline_hri/retrieval.py": "40364d1fb06aa68bae9bd3d31a583421f74883d9a0fe9815f72e9958eb8cea84",
+      "src/oline_hri/routing.py": "2604cc1a386a7f4e40f9528794423f46a4976501394c8e17d3479145e83f8bd1",
+      "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0",
+      "src/oline_hri/timing.py": "23c1c126c26d65e03833dc1c107ffa14670843fefd3755fd42ecd0969af1a445",
+      "tests/test_changing_memory.py": "2c1717af83ed553cdd2426acf15bdeaa57a340d36d9c808a1ece5a65c78fd730"
+    },
+    "note": "This certifies the completed audit time, before root was notified that a second repair could proceed. Later source changes do not alter this sealed first-run evidence."
+  },
+  "integrity_check_total": 10541,
+  "integrity_check_kinds": 82,
+  "integrity_violations": [],
+  "counts": {
+    "chat_http_requests": 324,
+    "answer_rows": 108,
+    "answer_status_delivered": 106,
+    "retained_history_expected": 56,
+    "retained_history_with_original_disclosure": 56,
+    "operations_started": 184,
+    "operations_finished": 184,
+    "mutation_remember": 24,
+    "mutation_correct": 4,
+    "zero_operation_worker_admission_rejections": 1,
+    "mutation_forget": 4,
+    "purged_record_ids": 8,
+    "answer_status_withheld": 2,
+    "planned_checkpoints": 96,
+    "unique_observed_checkpoints": 96,
+    "scheduled_segments": 24,
+    "process_fragments": 25,
+    "extra_continuation_fragments": 1,
+    "independent_databases": 12,
+    "distinct_processes": 24
+  },
+  "workload": {
+    "planned_checkpoints": 96,
+    "scenario_ids": [
+      "cm01",
+      "cm04",
+      "cm07",
+      "cm09"
+    ],
+    "scenario_count": 4,
+    "independent_databases": 12,
+    "scheduled_restarts": 12,
+    "scheduled_segments": 24,
+    "disclosures": 12,
+    "history_pairs": 36,
+    "stage_history_groups": 24,
+    "post_restart_checkpoints": 36
+  },
+  "branches": [
+    {
+      "branch_id": "cm01_correction",
+      "process_pids": [
+        39888,
+        40021
+      ],
+      "database_inode": [
+        45825,
+        3286027
+      ],
+      "checkpoints": 10,
+      "operation_count": 17,
+      "final_record_count": 3,
+      "final_audit_count": 3,
+      "mutation_counts": {
+        "remember": 2,
+        "correct": 1
+      }
+    },
+    {
+      "branch_id": "cm01_deletion",
+      "process_pids": [
+        40137,
+        40304,
+        40343
+      ],
+      "database_inode": [
+        45825,
+        3286078
+      ],
+      "checkpoints": 7,
+      "operation_count": 14,
+      "final_record_count": 1,
+      "final_audit_count": 3,
+      "mutation_counts": {
+        "remember": 2,
+        "forget": 1
+      }
+    },
+    {
+      "branch_id": "cm01_expiry",
+      "process_pids": [
+        40527,
+        40812
+      ],
+      "database_inode": [
+        45825,
+        3286135
+      ],
+      "checkpoints": 7,
+      "operation_count": 15,
+      "final_record_count": 0,
+      "final_audit_count": 2,
+      "mutation_counts": {
+        "remember": 2
+      }
+    },
+    {
+      "branch_id": "cm04_correction",
+      "process_pids": [
+        40997,
+        41255
+      ],
+      "database_inode": [
+        45825,
+        3286187
+      ],
+      "checkpoints": 10,
+      "operation_count": 17,
+      "final_record_count": 3,
+      "final_audit_count": 3,
+      "mutation_counts": {
+        "remember": 2,
+        "correct": 1
+      }
+    },
+    {
+      "branch_id": "cm04_deletion",
+      "process_pids": [
+        41344,
+        41428
+      ],
+      "database_inode": [
+        45825,
+        3286249
+      ],
+      "checkpoints": 7,
+      "operation_count": 14,
+      "final_record_count": 1,
+      "final_audit_count": 3,
+      "mutation_counts": {
+        "remember": 2,
+        "forget": 1
+      }
+    },
+    {
+      "branch_id": "cm04_expiry",
+      "process_pids": [
+        41519,
+        41619
+      ],
+      "database_inode": [
+        45825,
+        3286294
+      ],
+      "checkpoints": 7,
+      "operation_count": 15,
+      "final_record_count": 0,
+      "final_audit_count": 2,
+      "mutation_counts": {
+        "remember": 2
+      }
+    },
+    {
+      "branch_id": "cm07_correction",
+      "process_pids": [
+        41715,
+        41980
+      ],
+      "database_inode": [
+        45825,
+        3286356
+      ],
+      "checkpoints": 10,
+      "operation_count": 17,
+      "final_record_count": 3,
+      "final_audit_count": 3,
+      "mutation_counts": {
+        "remember": 2,
+        "correct": 1
+      }
+    },
+    {
+      "branch_id": "cm07_deletion",
+      "process_pids": [
+        42134,
+        42246
+      ],
+      "database_inode": [
+        45825,
+        3286408
+      ],
+      "checkpoints": 7,
+      "operation_count": 14,
+      "final_record_count": 1,
+      "final_audit_count": 3,
+      "mutation_counts": {
+        "remember": 2,
+        "forget": 1
+      }
+    },
+    {
+      "branch_id": "cm07_expiry",
+      "process_pids": [
+        42334,
+        42426
+      ],
+      "database_inode": [
+        45825,
+        3286459
+      ],
+      "checkpoints": 7,
+      "operation_count": 15,
+      "final_record_count": 0,
+      "final_audit_count": 2,
+      "mutation_counts": {
+        "remember": 2
+      }
+    },
+    {
+      "branch_id": "cm09_correction",
+      "process_pids": [
+        42546,
+        42806
+      ],
+      "database_inode": [
+        45825,
+        3286506
+      ],
+      "checkpoints": 10,
+      "operation_count": 17,
+      "final_record_count": 3,
+      "final_audit_count": 3,
+      "mutation_counts": {
+        "remember": 2,
+        "correct": 1
+      }
+    },
+    {
+      "branch_id": "cm09_deletion",
+      "process_pids": [
+        43298,
+        43633
+      ],
+      "database_inode": [
+        45825,
+        3286562
+      ],
+      "checkpoints": 7,
+      "operation_count": 14,
+      "final_record_count": 1,
+      "final_audit_count": 3,
+      "mutation_counts": {
+        "remember": 2,
+        "forget": 1
+      }
+    },
+    {
+      "branch_id": "cm09_expiry",
+      "process_pids": [
+        43985,
+        44376
+      ],
+      "database_inode": [
+        45825,
+        3286621
+      ],
+      "checkpoints": 7,
+      "operation_count": 15,
+      "final_record_count": 0,
+      "final_audit_count": 2,
+      "mutation_counts": {
+        "remember": 2
+      }
+    }
+  ],
+  "system_observations": [
+    {
+      "stage": "admission",
+      "code": "preserved_zero_inference_worker_rejection",
+      "where": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_deletion/restart",
+      "launch_pid": 40304,
+      "error": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      }
+    },
+    {
+      "stage": "validation_or_pipeline",
+      "code": "withheld_or_interrupted_answer",
+      "where": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm04_correction/restart/cm04_correction_restart_retained",
+      "status": "withheld",
+      "error": "ResponseValidationError",
+      "message": "robot response lacks evidence for the requested collaborator"
+    },
+    {
+      "stage": "validation_or_pipeline",
+      "code": "withheld_or_interrupted_answer",
+      "where": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm04_correction/restart/cm04_correction_restart_fresh",
+      "status": "withheld",
+      "error": "ResponseValidationError",
+      "message": "robot response lacks evidence for the requested collaborator"
+    }
+  ],
+  "answer_status_counts": [
+    {
+      "scope": "scored",
+      "status": "delivered",
+      "count": 94
+    },
+    {
+      "scope": "scored",
+      "status": "withheld",
+      "count": 2
+    },
+    {
+      "scope": "setup",
+      "status": "delivered",
+      "count": 12
+    }
+  ],
+  "actual_generation_counts": [
+    {
+      "scope": "scored",
+      "requested_model": "qwen3:0.6b",
+      "actual_model": "qwen3:0.6b",
+      "count": 89
+    },
+    {
+      "scope": "scored",
+      "requested_model": "qwen3:1.7b",
+      "actual_model": "qwen3:1.7b",
+      "count": 7
+    },
+    {
+      "scope": "setup",
+      "requested_model": "qwen3:0.6b",
+      "actual_model": "qwen3:0.6b",
+      "count": 12
+    }
+  ],
+  "scored_route_counts": [
+    {
+      "memory_required": true,
+      "model_size": "large",
+      "count": 7
+    },
+    {
+      "memory_required": true,
+      "model_size": "small",
+      "count": 89
+    }
+  ],
+  "recorded_answer_constraint_counts": {
+    "None": 66,
+    "verified_location": 24,
+    "verified_user_relationship": 6
+  },
+  "answer_snapshot_checks": {
+    "True": 96
+  },
+  "authored_probe_results": [
+    {
+      "operation": "cache_probe",
+      "snapshot_current": true,
+      "count": 12
+    },
+    {
+      "operation": "snapshot_probe",
+      "snapshot_current": false,
+      "count": 28
+    },
+    {
+      "operation": "snapshot_probe",
+      "snapshot_current": true,
+      "count": 4
+    }
+  ],
+  "cache_probes": [
+    {
+      "operation_id": "cm01_correction_op05",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm01_deletion_op04",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm01_expiry_op04",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm04_correction_op05",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm04_deletion_op04",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm04_expiry_op04",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm07_correction_op05",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm07_deletion_op04",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm07_expiry_op04",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm09_correction_op05",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm09_deletion_op04",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    },
+    {
+      "operation_id": "cm09_expiry_op04",
+      "recorded_cache_implementation": "none; production rebuilds matrix each search",
+      "first_second_results_equal": true,
+      "retained_snapshot_records": 1
+    }
+  ],
+  "backend_prompt_cache_activity": [
+    {
+      "purpose": "compute_selector",
+      "positive_cached_token_count": true,
+      "count": 108
+    },
+    {
+      "purpose": "generation",
+      "positive_cached_token_count": false,
+      "count": 7
+    },
+    {
+      "purpose": "generation",
+      "positive_cached_token_count": true,
+      "count": 101
+    },
+    {
+      "purpose": "memory_selector",
+      "positive_cached_token_count": false,
+      "count": 30
+    },
+    {
+      "purpose": "memory_selector",
+      "positive_cached_token_count": true,
+      "count": 78
+    }
+  ],
+  "history_exposure_counts": {
+    "all_scored_checkpoints": {
+      "checkpoints": 96,
+      "checkpoints_with_generation_call": 96,
+      "exact_original_statement_present": 56,
+      "exact_original_statement_forwarded": 0,
+      "literal_original_value_present": 56,
+      "literal_original_value_forwarded": 0,
+      "literal_value_present_without_exact_statement": 0,
+      "literal_value_forwarded_without_exact_statement": 0
+    },
+    "history_mode=retained": {
+      "checkpoints": 60,
+      "checkpoints_with_generation_call": 60,
+      "exact_original_statement_present": 56,
+      "exact_original_statement_forwarded": 0,
+      "literal_original_value_present": 56,
+      "literal_original_value_forwarded": 0,
+      "literal_value_present_without_exact_statement": 0,
+      "literal_value_forwarded_without_exact_statement": 0
+    },
+    "branch=correction": {
+      "checkpoints": 40,
+      "checkpoints_with_generation_call": 40,
+      "exact_original_statement_present": 20,
+      "exact_original_statement_forwarded": 0,
+      "literal_original_value_present": 20,
+      "literal_original_value_forwarded": 0,
+      "literal_value_present_without_exact_statement": 0,
+      "literal_value_forwarded_without_exact_statement": 0
+    },
+    "history_mode=fresh": {
+      "checkpoints": 36,
+      "checkpoints_with_generation_call": 36,
+      "exact_original_statement_present": 0,
+      "exact_original_statement_forwarded": 0,
+      "literal_original_value_present": 0,
+      "literal_original_value_forwarded": 0,
+      "literal_value_present_without_exact_statement": 0,
+      "literal_value_forwarded_without_exact_statement": 0
+    },
+    "after_restart": {
+      "checkpoints": 36,
+      "checkpoints_with_generation_call": 36,
+      "exact_original_statement_present": 20,
+      "exact_original_statement_forwarded": 0,
+      "literal_original_value_present": 20,
+      "literal_original_value_forwarded": 0,
+      "literal_value_present_without_exact_statement": 0,
+      "literal_value_forwarded_without_exact_statement": 0
+    },
+    "branch=deletion": {
+      "checkpoints": 28,
+      "checkpoints_with_generation_call": 28,
+      "exact_original_statement_present": 20,
+      "exact_original_statement_forwarded": 0,
+      "literal_original_value_present": 20,
+      "literal_original_value_forwarded": 0,
+      "literal_value_present_without_exact_statement": 0,
+      "literal_value_forwarded_without_exact_statement": 0
+    },
+    "branch=expiry": {
+      "checkpoints": 28,
+      "checkpoints_with_generation_call": 28,
+      "exact_original_statement_present": 16,
+      "exact_original_statement_forwarded": 0,
+      "literal_original_value_present": 16,
+      "literal_original_value_forwarded": 0,
+      "literal_value_present_without_exact_statement": 0,
+      "literal_value_forwarded_without_exact_statement": 0
+    }
+  },
+  "history_exposure_interpretation": "Literal old-value matching is a case-insensitive substring lower bound on exposure, not evidence of semantic absence, memory authorization, or answer correctness. Equivalent times, names, paraphrases and alternate formatting may not match. Forwarding witnesses intersect actual generation messages with history_before by exact role/content; system messages, the final current-request message and personal-memory evidence envelopes are excluded. Matching duplicate history indices identify equivalent candidate occurrences, not the unique originating turn.",
+  "resources": {
+    "fragments": 25,
+    "telemetry_samples": 1722,
+    "max_sampled_temperature_c": 57.437,
+    "max_sampled_ram_used_mb": 6593,
+    "ram_total_mb": [
+      7620
+    ],
+    "max_sampled_swap_used_mb": 750,
+    "runtime_guard_or_cleanup_observations": [],
+    "limits": "Sampled RAM use is not MemAvailable. Resource checks do not prove unobserved instantaneous values."
+  },
+  "limits": [
+    "Targeted four-scenario matched development regression, not held-out accuracy.",
+    "Snapshot freshness probes retain old results but do not inject them into production generation.",
+    "Production rebuilds retrieval matrices; no persistent vector cache exists. Backend cached-token counts show activity, not source causality.",
+    "Explicit location/relationship constraints remain distinct from unconstrained generation.",
+    "Process restart and controlled logical expiry; no OS/Ollama restart, power-loss, or spoken-performance claim.",
+    "Blinded answer judgment and human validation remain separate from integrity; no reviewer contacted."
+  ]
+}

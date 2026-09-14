@@ -1,0 +1,560 @@
+{
+  "captured_at": "2026-09-11T14:17:09.716074+00:00",
+  "source": "read-only journalctl -u ollama; selected model loading, placement, and buffer metadata only",
+  "model": "qwen2.5:3b-instruct-q3_K_S",
+  "model_blob_sha256": "b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b",
+  "filter_regex": "offload|n_gpu_layers|memory\\.(required|available|weights|graph)|layers\\.|model buffer|KV buffer|compute buffer|n_ctx\\s*=|n_batch\\s*=|n_ubatch\\s*=|b27e3829bb25|cudaMalloc|common_params_fit_impl|common_fit_params|msg=\"gpu memory\"",
+  "finding": "Original segment reports 37/37 layers offloaded to GPU; continuation reports 30/37. Both use context 2048 and batch/ubatch 512. Automatic fitting logs show original projected device use1531MiB versus2692MiBfree, leaving1160MiB above1024MiB target. Continuation had2337MiBfree and needed a218MiB device-memory reduction to meet that target. Placement changed automatically, so segment latency must remain separate. Logs establish the placement decision but do not isolate the amount of slowdown it caused versus other state differences.",
+  "segments": [
+    {
+      "segment": "original",
+      "source_command": [
+        "journalctl",
+        "-u",
+        "ollama",
+        "--since",
+        "2026-09-11 13:55:00 UTC",
+        "--until",
+        "2026-09-11 13:58:00 UTC",
+        "--no-pager",
+        "-o",
+        "json"
+      ],
+      "selected_record_count": 24,
+      "selected_records_sha256": "0fc3481630564dc77cff563cbf5ae35ebe8de165f12e639127836a1b1dbcc0f4",
+      "records": [
+        {
+          "timestamp_utc": "2026-09-11T13:55:58.874261+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=127e6;b=42c93f634b104ae4b73c1cdf4def0661;m=338c58fc9;t=65b3571adce95;x=f782bfeaf59ef7b0",
+          "message": "time=2026-09-11T17:55:58.874+04:00 level=INFO source=server.go:109 msg=\"using llama-server for model\" model=/usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:58.875105+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=127e7;b=42c93f634b104ae4b73c1cdf4def0661;m=338c59315;t=65b3571add1e1;x=ea666b792d43be6f",
+          "message": "time=2026-09-11T17:55:58.875+04:00 level=INFO source=llama_server.go:433 msg=\"starting llama-server\" cmd=\"/usr/local/lib/ollama/llama-server --model /usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b --port 34157 --host 127.0.0.1 --no-webui --offline -c 2048 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --load-mode dio --flash-attn auto -b 512 -ub 512 --context-shift --keep 4\""
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:58.877133+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=127e9;b=42c93f634b104ae4b73c1cdf4def0661;m=338c59b01;t=65b3571add9cd;x=c9e2cb8982a4a2bb",
+          "message": "time=2026-09-11T17:55:58.877+04:00 level=INFO source=sched.go:620 msg=\"gpu memory\" id=0 library=CUDA available=\"2.2 GiB\" free=\"2.6 GiB\" minimum=\"457.0 MiB\" overhead=\"0 B\""
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:58.877495+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=127ea;b=42c93f634b104ae4b73c1cdf4def0661;m=338c59c6b;t=65b3571addb37;x=f094ba12d3bb1bdd",
+          "message": "time=2026-09-11T17:55:58.877+04:00 level=INFO source=llama_server.go:1048 msg=\"loading model via llama-server\" model=/usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:59.049707+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=127fc;b=42c93f634b104ae4b73c1cdf4def0661;m=338c83d1f;t=65b3571b07beb;x=cdc6536060c02049",
+          "message": "srv    load_model: loading model '/usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b'"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:59.049707+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=127fd;b=42c93f634b104ae4b73c1cdf4def0661;m=338c83d1f;t=65b3571b07beb;x=2c2ef97c7e862d63",
+          "message": "srv    load_model: local path '/usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b'"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:59.049707+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12800;b=42c93f634b104ae4b73c1cdf4def0661;m=338c83d1f;t=65b3571b07beb;x=e1cb571960aa9552",
+          "message": "common_params_fit_impl: getting device memory data for initial parameters:"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:59.822365+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12805;b=42c93f634b104ae4b73c1cdf4def0661;m=338d40751;t=65b3571bc461d;x=b9eb97949e2d3b3e",
+          "message": "common_params_fit_impl: projected to use 1531 MiB of device memory vs. 2692 MiB of free device memory"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:59.822365+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12806;b=42c93f634b104ae4b73c1cdf4def0661;m=338d40751;t=65b3571bc461d;x=e195c0eeec758e0",
+          "message": "common_params_fit_impl: will leave 1160 >= 1024 MiB of free device memory, no changes needed"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:59.822365+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12807;b=42c93f634b104ae4b73c1cdf4def0661;m=338d40751;t=65b3571bc461d;x=a36712062678c3a9",
+          "message": "common_fit_params: successfully fit params to free device memory"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:59.822365+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12808;b=42c93f634b104ae4b73c1cdf4def0661;m=338d40751;t=65b3571bc461d;x=c0a1d62f9e707b0f",
+          "message": "common_fit_params: fitting params to free memory took 0.77 seconds"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:55:59.876471+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12809;b=42c93f634b104ae4b73c1cdf4def0661;m=338d4daab;t=65b3571bd1977;x=7fb9e2d6024013d2",
+          "message": "llama_model_loader: loaded meta data with 35 key-value pairs and 434 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b (version GGUF V3 (latest))"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:00.838408+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12881;b=42c93f634b104ae4b73c1cdf4def0661;m=338e3883c;t=65b3571cbc708;x=e8dc7e66d04c7a52",
+          "message": "load_tensors: offloading output layer to GPU"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:00.838408+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12882;b=42c93f634b104ae4b73c1cdf4def0661;m=338e3883c;t=65b3571cbc708;x=56d3c49e08c7a33a",
+          "message": "load_tensors: offloading 35 repeating layers to GPU"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:00.838408+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12883;b=42c93f634b104ae4b73c1cdf4def0661;m=338e3883c;t=65b3571cbc708;x=9046517e8fb3b231",
+          "message": "load_tensors: offloaded 37/37 layers to GPU"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:00.838408+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12884;b=42c93f634b104ae4b73c1cdf4def0661;m=338e3883c;t=65b3571cbc708;x=832204cc8c05fb21",
+          "message": "load_tensors:        CUDA0 model buffer size =  1381.31 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:00.838408+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12885;b=42c93f634b104ae4b73c1cdf4def0661;m=338e3883c;t=65b3571cbc708;x=915173307c35997",
+          "message": "load_tensors:    CUDA_Host model buffer size =   243.43 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:21.320430+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=1288e;b=42c93f634b104ae4b73c1cdf4def0661;m=33a1c1022;t=65b3573044eee;x=861675f6d6dd16e2",
+          "message": "llama_context: n_ctx                 = 2048"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:21.320430+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12890;b=42c93f634b104ae4b73c1cdf4def0661;m=33a1c1022;t=65b3573044eee;x=1bac7e902ce81608",
+          "message": "llama_context: n_batch               = 512"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:21.320430+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=12891;b=42c93f634b104ae4b73c1cdf4def0661;m=33a1c1022;t=65b3573044eee;x=1e865d497ad79fb8",
+          "message": "llama_context: n_ubatch              = 512"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:21.323987+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=1289c;b=42c93f634b104ae4b73c1cdf4def0661;m=33a1c1e08;t=65b3573045cd3;x=3383b3095aa309a7",
+          "message": "llama_kv_cache:      CUDA0 KV buffer size =    72.00 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:21.359274+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=128a6;b=42c93f634b104ae4b73c1cdf4def0661;m=33a1ca7de;t=65b357304e6aa;x=9276690484a04788",
+          "message": "sched_reserve:      CUDA0 compute buffer size =    78.51 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:21.359274+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=128a7;b=42c93f634b104ae4b73c1cdf4def0661;m=33a1ca7de;t=65b357304e6aa;x=20dc2359448ac3cc",
+          "message": "sched_reserve:  CUDA_Host compute buffer size =    10.01 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T13:56:21.887369+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=128af;b=42c93f634b104ae4b73c1cdf4def0661;m=33a24b6bd;t=65b35730cf589;x=fd3c1117a1fc2510",
+          "message": "slot   load_model: id  0 | task -1 | new slot, n_ctx = 2048"
+        }
+      ]
+    },
+    {
+      "segment": "continuation",
+      "source_command": [
+        "journalctl",
+        "-u",
+        "ollama",
+        "--since",
+        "2026-09-11 14:13:00 UTC",
+        "--until",
+        "2026-09-11 14:15:00 UTC",
+        "--no-pager",
+        "-o",
+        "json"
+      ],
+      "selected_record_count": 40,
+      "selected_records_sha256": "17e9f91a2da1d9191d0e8747b1d0292012a70eff106e8fa599b5fd7926330f6e",
+      "records": [
+        {
+          "timestamp_utc": "2026-09-11T14:13:40.884964+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dba;b=42c93f634b104ae4b73c1cdf4def0661;m=378128f18;t=65b35b0facde4;x=661a29ae90de06d",
+          "message": "time=2026-09-11T18:13:40.884+04:00 level=INFO source=server.go:109 msg=\"using llama-server for model\" model=/usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:40.886065+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dbb;b=42c93f634b104ae4b73c1cdf4def0661;m=378129365;t=65b35b0fad231;x=8d21f39a1b9cf845",
+          "message": "time=2026-09-11T18:13:40.885+04:00 level=INFO source=llama_server.go:433 msg=\"starting llama-server\" cmd=\"/usr/local/lib/ollama/llama-server --model /usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b --port 34485 --host 127.0.0.1 --no-webui --offline -c 2048 -np 1 --log-verbosity 4 --no-log-prefix --no-log-timestamps --no-jinja --chat-template chatml --load-mode dio --flash-attn auto -b 512 -ub 512 --context-shift --keep 4\""
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:40.886541+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dbd;b=42c93f634b104ae4b73c1cdf4def0661;m=378129541;t=65b35b0fad40d;x=f0da75db073cfc23",
+          "message": "time=2026-09-11T18:13:40.886+04:00 level=INFO source=sched.go:620 msg=\"gpu memory\" id=0 library=CUDA available=\"1.9 GiB\" free=\"2.3 GiB\" minimum=\"457.0 MiB\" overhead=\"0 B\""
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:40.886723+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dbe;b=42c93f634b104ae4b73c1cdf4def0661;m=3781295f7;t=65b35b0fad4c3;x=aeb46f1ab22832a3",
+          "message": "time=2026-09-11T18:13:40.886+04:00 level=INFO source=llama_server.go:1048 msg=\"loading model via llama-server\" model=/usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:41.047010+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dd0;b=42c93f634b104ae4b73c1cdf4def0661;m=378150816;t=65b35b0fd46e2;x=cdc6536060c02049",
+          "message": "srv    load_model: loading model '/usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b'"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:41.047010+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dd1;b=42c93f634b104ae4b73c1cdf4def0661;m=378150816;t=65b35b0fd46e2;x=2c2ef97c7e862d63",
+          "message": "srv    load_model: local path '/usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b'"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:41.047010+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dd4;b=42c93f634b104ae4b73c1cdf4def0661;m=378150816;t=65b35b0fd46e2;x=e1cb571960aa9552",
+          "message": "common_params_fit_impl: getting device memory data for initial parameters:"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:41.775096+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dd9;b=42c93f634b104ae4b73c1cdf4def0661;m=37820242c;t=65b35b10862f8;x=c710897cdcec75a9",
+          "message": "common_params_fit_impl: projected to use 1531 MiB of device memory vs. 2337 MiB of free device memory"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:41.775096+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dda;b=42c93f634b104ae4b73c1cdf4def0661;m=37820242c;t=65b35b10862f8;x=ded40b0cd2dec2dd",
+          "message": "common_params_fit_impl: cannot meet free memory target of 1024 MiB, need to reduce device memory by 218 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:41.775096+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13ddb;b=42c93f634b104ae4b73c1cdf4def0661;m=37820242c;t=65b35b10862f8;x=d7010efcd33eb284",
+          "message": "common_params_fit_impl: context size set by user to 2048 -> no change"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:41.792274+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13ddc;b=42c93f634b104ae4b73c1cdf4def0661;m=378206746;t=65b35b108a612;x=7b9c7eb55025cbe4",
+          "message": "common_params_fit_impl: id=0, target=1313 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:42.478949+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13de0;b=42c93f634b104ae4b73c1cdf4def0661;m=3782ae199;t=65b35b1132065;x=ea09f4df51283438",
+          "message": "common_params_fit_impl: memory for test allocation by device:"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:42.478949+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13de1;b=42c93f634b104ae4b73c1cdf4def0661;m=3782ae199;t=65b35b1132065;x=850d6de60745c852",
+          "message": "common_params_fit_impl: id=0, n_layer= 0, n_part= 0, overflow_type=4, mem=    89 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:42.478949+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13de2;b=42c93f634b104ae4b73c1cdf4def0661;m=3782ae199;t=65b35b1132065;x=41ea5e0cb6b1fe6d",
+          "message": "common_params_fit_impl: filling dense layers back-to-front:"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:43.151618+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13de6;b=42c93f634b104ae4b73c1cdf4def0661;m=378352536;t=65b35b11d6402;x=ea09f4df51283438",
+          "message": "common_params_fit_impl: memory for test allocation by device:"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:43.151618+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13de7;b=42c93f634b104ae4b73c1cdf4def0661;m=378352536;t=65b35b11d6402;x=9bf5289ca8c691f4",
+          "message": "common_params_fit_impl: id=0, n_layer=37, n_part= 0, overflow_type=4, mem=  1531 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:43.151618+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13de8;b=42c93f634b104ae4b73c1cdf4def0661;m=378352536;t=65b35b11d6402;x=37758fa0ed900592",
+          "message": "common_params_fit_impl: start filling device 0, delta=37"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:43.838464+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dec;b=42c93f634b104ae4b73c1cdf4def0661;m=3783fa034;t=65b35b127df00;x=ea09f4df51283438",
+          "message": "common_params_fit_impl: memory for test allocation by device:"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:43.838464+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13ded;b=42c93f634b104ae4b73c1cdf4def0661;m=3783fa034;t=65b35b127df00;x=f387af2e80ac83c2",
+          "message": "common_params_fit_impl: id=0, n_layer=31, n_part= 0, overflow_type=4, mem=  1341 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:43.838464+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13dee;b=42c93f634b104ae4b73c1cdf4def0661;m=3783fa034;t=65b35b127df00;x=32f21cc05ae9b2ca",
+          "message": "common_params_fit_impl: set ngl_per_device_high[0].n_layer=31"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:44.519302+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13df2;b=42c93f634b104ae4b73c1cdf4def0661;m=3784a03ba;t=65b35b1324286;x=ea09f4df51283438",
+          "message": "common_params_fit_impl: memory for test allocation by device:"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:44.519302+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13df3;b=42c93f634b104ae4b73c1cdf4def0661;m=3784a03ba;t=65b35b1324286;x=1c769f3b6e7f9028",
+          "message": "common_params_fit_impl: id=0, n_layer=30, n_part= 0, overflow_type=4, mem=  1307 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:44.519302+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13df4;b=42c93f634b104ae4b73c1cdf4def0661;m=3784a03ba;t=65b35b1324286;x=768d8a17e15b2b18",
+          "message": "common_params_fit_impl: set ngl_per_device[0].n_layer=30"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:44.519302+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13df5;b=42c93f634b104ae4b73c1cdf4def0661;m=3784a03ba;t=65b35b1324286;x=7e8411f084c4b269",
+          "message": "common_params_fit_impl:   - CUDA0 (Orin): 30 layers,   1307 MiB used,   1029 MiB free"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:44.519302+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13df6;b=42c93f634b104ae4b73c1cdf4def0661;m=3784a03ba;t=65b35b1324286;x=a36712062678c3a9",
+          "message": "common_fit_params: successfully fit params to free device memory"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:44.519302+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13df7;b=42c93f634b104ae4b73c1cdf4def0661;m=3784a03ba;t=65b35b1324286;x=9989ca94812c2219",
+          "message": "common_fit_params: fitting params to free memory took 3.47 seconds"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:44.574436+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13df8;b=42c93f634b104ae4b73c1cdf4def0661;m=3784adb18;t=65b35b13319e4;x=7fb9e2d6024013d2",
+          "message": "llama_model_loader: loaded meta data with 35 key-value pairs and 434 tensors from /usr/share/ollama/.ollama/models/blobs/sha256-b27e3829bb25b1c63acfa2e1ca5e839cf9fa3216603fd867dc03e49c794c286b (version GGUF V3 (latest))"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:45.372776+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e70;b=42c93f634b104ae4b73c1cdf4def0661;m=37857099c;t=65b35b13f4868;x=e8dc7e66d04c7a52",
+          "message": "load_tensors: offloading output layer to GPU"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:45.372776+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e71;b=42c93f634b104ae4b73c1cdf4def0661;m=37857099c;t=65b35b13f4868;x=3c2e806ecddcee7d",
+          "message": "load_tensors: offloading 29 repeating layers to GPU"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:45.372776+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e72;b=42c93f634b104ae4b73c1cdf4def0661;m=37857099c;t=65b35b13f4868;x=f444ced540915177",
+          "message": "load_tensors: offloaded 30/37 layers to GPU"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:45.372776+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e73;b=42c93f634b104ae4b73c1cdf4def0661;m=37857099c;t=65b35b13f4868;x=9ca7d95048294050",
+          "message": "load_tensors:        CUDA0 model buffer size =  1160.05 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:13:45.372776+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e74;b=42c93f634b104ae4b73c1cdf4def0661;m=37857099c;t=65b35b13f4868;x=2f887211f00aa2cc",
+          "message": "load_tensors:    CUDA_Host model buffer size =   464.68 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:14:05.568861+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e7d;b=42c93f634b104ae4b73c1cdf4def0661;m=3798b3491;t=65b35b273735d;x=861675f6d6dd16e2",
+          "message": "llama_context: n_ctx                 = 2048"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:14:05.568861+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e7f;b=42c93f634b104ae4b73c1cdf4def0661;m=3798b3491;t=65b35b273735d;x=1bac7e902ce81608",
+          "message": "llama_context: n_batch               = 512"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:14:05.568861+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e80;b=42c93f634b104ae4b73c1cdf4def0661;m=3798b3491;t=65b35b273735d;x=1e865d497ad79fb8",
+          "message": "llama_context: n_ubatch              = 512"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:14:05.569729+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e8b;b=42c93f634b104ae4b73c1cdf4def0661;m=3798b37f5;t=65b35b27376c1;x=476cec0074daa2f0",
+          "message": "llama_kv_cache:        CPU KV buffer size =    14.00 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:14:05.576321+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e8c;b=42c93f634b104ae4b73c1cdf4def0661;m=3798b51b5;t=65b35b2739081;x=c11eaa4b670485f1",
+          "message": "llama_kv_cache:      CUDA0 KV buffer size =    58.00 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:14:05.596466+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e96;b=42c93f634b104ae4b73c1cdf4def0661;m=3798ba066;t=65b35b273df32;x=d061b279eca70057",
+          "message": "sched_reserve:      CUDA0 compute buffer size =    89.75 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:14:05.596466+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e97;b=42c93f634b104ae4b73c1cdf4def0661;m=3798ba066;t=65b35b273df32;x=20dc2359448ac3cc",
+          "message": "sched_reserve:  CUDA_Host compute buffer size =    10.01 MiB"
+        },
+        {
+          "timestamp_utc": "2026-09-11T14:14:07.080323+00:00",
+          "boot_id": "42c93f634b104ae4b73c1cdf4def0661",
+          "pid": "6412",
+          "unit": "ollama.service",
+          "journal_cursor": "s=79e5e7e5b1f64d768f0ff7094c731b10;i=13e9f;b=42c93f634b104ae4b73c1cdf4def0661;m=379a244b7;t=65b35b28a8383;x=fd3c1117a1fc2510",
+          "message": "slot   load_model: id  0 | task -1 | new slot, n_ctx = 2048"
+        }
+      ]
+    }
+  ]
+}

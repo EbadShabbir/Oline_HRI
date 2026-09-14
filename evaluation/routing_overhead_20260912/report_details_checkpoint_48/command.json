@@ -1,0 +1,14 @@
+{
+  "script": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/report_details.py",
+  "arguments": {
+    "run_root": "/tmp/clara-routing-checkpoint48-view-wiy66x24",
+    "previous_root": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1",
+    "previous_freeze": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/frozen_v1/freeze.json",
+    "freeze": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/frozen_v2/freeze.json",
+    "workload": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/frozen_v2/workload.json",
+    "output_dir": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/report_details_checkpoint_48",
+    "blind_dir": null,
+    "reviews": []
+  },
+  "reproduction": "Use a new output directory; script depends on the unchanged sibling mixed-freeze adapter and frozen core analyzer."
+}

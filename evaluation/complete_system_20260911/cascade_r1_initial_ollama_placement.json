@@ -1,0 +1,1044 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-11T15:09:38.830695+00:00",
+  "scope": "Stage 2 v2 resumed, initial cascade r1 loads; observed placement, no intervention",
+  "session": "03_cascade_r1",
+  "source_unit": "ollama.service",
+  "journal_window": {
+    "since": "2026-09-11 15:06:57 UTC",
+    "until": "2026-09-11 15:09:38 UTC"
+  },
+  "journal_command": [
+    "journalctl",
+    "-u",
+    "ollama.service",
+    "--since",
+    "2026-09-11 15:06:57 UTC",
+    "--until",
+    "2026-09-11 15:09:38 UTC",
+    "--no-pager",
+    "-o",
+    "json"
+  ],
+  "selected_message_substrings": [
+    "offloaded",
+    "layers.requested",
+    "layers.model",
+    "memory.required",
+    "n_ctx                 =",
+    "n_ctx_seq             =",
+    "n_batch",
+    "n_ubatch",
+    "n_threads",
+    "buffer size",
+    "starting llama server",
+    "flash_attn",
+    "n_gpu_layers",
+    "n_slots =",
+    "model type",
+    "general.name",
+    "memory.available",
+    "layers.offload",
+    "params.",
+    "fit_params"
+  ],
+  "selected_records_sha256": "d669a65360436defce8babfd43914d135db415ac833ca7b3c83c854795b8d043",
+  "selected_records_hash_serialization": "UTF-8 JSON sort_keys=True,separators=(comma,colon),ensure_ascii=False; no trailing newline",
+  "session_artifact_hashes": {
+    "start.json": "76276628a5a3ba3f9c3019a8928861b1c01a356323fe86dfd8102077c32b7655",
+    "manifest.json": "1c73881336a38b777302cbb1680a388590416c02929b77c8b3fa9f3a3b949fc9",
+    "memory_setup.json": "bf0e83e6983184cb7558a05adffe8428bbe83765cbc006dc9efc4aff326f2cd4"
+  },
+  "session_start": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-11T15:06:55.842786+00:00",
+    "fan_pwm": 92,
+    "memory": {
+      "mem_available_kib": 2535248,
+      "mem_total_kib": 7803236,
+      "swap_free_kib": 3183272,
+      "swap_total_kib": 3901608,
+      "swap_used_kib": 718336
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 53.5,
+      "gpu-thermal": 53.687,
+      "soc0-thermal": 52.812,
+      "soc1-thermal": 52.656,
+      "soc2-thermal": 52.968,
+      "tj-thermal": 54.0
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "gpu": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "models": {
+    "qwen3:0.6b": {
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "details": {
+        "context_length": 40960,
+        "embedding_length": 1024,
+        "families": [
+          "qwen3"
+        ],
+        "family": "qwen3",
+        "format": "gguf",
+        "parameter_size": "751.63M",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M"
+      },
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "family": "qwen3",
+      "format": "gguf",
+      "name": "qwen3:0.6b",
+      "parameter_count": 751632384,
+      "parameter_size": "751.63M",
+      "quantization_level": "Q4_K_M",
+      "size": 522653767
+    },
+    "qwen3:1.7b": {
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "details": {
+        "context_length": 40960,
+        "embedding_length": 2048,
+        "families": [
+          "qwen3"
+        ],
+        "family": "qwen3",
+        "format": "gguf",
+        "parameter_size": "2.0B",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M"
+      },
+      "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "family": "qwen3",
+      "format": "gguf",
+      "name": "qwen3:1.7b",
+      "parameter_count": 2031739904,
+      "parameter_size": "2.0B",
+      "quantization_level": "Q4_K_M",
+      "size": 1359293444
+    }
+  },
+  "frozen_source_sha256": {
+    "config/default.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+    "scripts/complete_system_device_guard.py": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+    "scripts/run_arc_capability.py": "2d55342123aa853952a44b6496285b338b322ec65f32f83bbf106e5c606885a0",
+    "scripts/run_complete_system.py": "888daae7b84126744cfdd54aa56cf220f0482f81b7d0b167a2ad3107849f4dcb",
+    "scripts/run_complete_system_batch.py": "621dd19654bb290c0a07c652228e0d4b928e61b6eced7c9c3d9e709628be0014",
+    "scripts/run_pair_remediation_validation.py": "5e9ce447e2591c17b741781638140a1cec06d3b99603f29fd335639591cbbb13",
+    "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+    "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+    "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+    "src/oline_hri/cli.py": "ca1f8d307ebbe5028a5ac88e530da2b5062755ab0f5edbf73c85bdd1739efbb0",
+    "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+    "src/oline_hri/conversation.py": "3a1e371355a5c19b0b56f5e232252df21cfce526d859903bb881b4f006fcec4a",
+    "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+    "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+    "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+    "src/oline_hri/evaluation_experiment.py": "d5d286d1dff60b2a85acc9be524dd75f07f8dde363c002094b505c0734431739",
+    "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+    "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+    "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+    "src/oline_hri/evaluation_runner.py": "2a7d3ec2dcd4f10c75eac7ce4703f31a2fbdfe039270f50407e0b8a65ad0161f",
+    "src/oline_hri/evaluation_scoring.py": "e4e772a9a003e9ebf53d54cd9dae232dcfea23e896d8a783a6f6cce727ea9772",
+    "src/oline_hri/evaluation_systems.py": "93244d3ee2beb5469722f1cd2bd7eccc1fa3bf2139077a01cd196830ff6df014",
+    "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+    "src/oline_hri/grounded_composition.py": "b8a159c8412d444558e5a3832d8e40e8d33456fa4aa82953a54c2e3fe393e3ab",
+    "src/oline_hri/memory.py": "4f2d261de00fd1df2018ebeba2778cedc236ef077697c8e1319302b61f9a78cb",
+    "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+    "src/oline_hri/memory_evidence.py": "c2a0a9353eb1661dd5b37aab3fc0620f1ff74c0abafe5e8b4ef3da0e565f7802",
+    "src/oline_hri/ollama.py": "7ef373d808bb27ac25a3d813e36d82c2279baf6003242fe534b52d2f747029ba",
+    "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+    "src/oline_hri/relationships.py": "9ceee92ed123e988047c8722c20e872b77acdc9060dddb52ed38d08c1199a823",
+    "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+    "src/oline_hri/retrieval.py": "40364d1fb06aa68bae9bd3d31a583421f74883d9a0fe9815f72e9958eb8cea84",
+    "src/oline_hri/routing.py": "36263deb5fd317cd2881dff2270c407619697672ef82f094feeaec35e9767eff",
+    "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0"
+  },
+  "records": [
+    {
+      "__REALTIME_TIMESTAMP": "1789139222275291",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn  common_param: system_info: n_threads = 6 (n_threads_batch = 6) / 6 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | REPACK = 1 | CUDA : ARCHS = 870 | USE_GRAPHS = 1 |"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139222980853",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: successfully fit params to free device memory"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139222980853",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: fitting params to free memory took 0.70 seconds"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139223032911",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_model_loader: - kv   2:                               general.name str              = Qwen3 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139223500623",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: model type            = 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139223500623",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: general.name          = Qwen3 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139223527165",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors: offloaded 29/29 layers to GPU"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139223527165",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:        CUDA0 model buffer size =   409.29 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139223527165",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:    CUDA_Host model buffer size =    83.46 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229678141",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx                 = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229678141",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx_seq             = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229678141",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_batch               = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229678141",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ubatch              = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229678141",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: flash_attn            = auto"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229678968",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context:  CUDA_Host  output buffer size =     0.58 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229694932",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:      CUDA0 KV buffer size =   224.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229714222",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:      CUDA0 compute buffer size =    28.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229714222",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:  CUDA_Host compute buffer size =     6.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229714674",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn          init: llama threadpool init, n_threads = 6"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139229920624",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139235032443",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn  common_param: system_info: n_threads = 6 (n_threads_batch = 6) / 6 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | REPACK = 1 | CUDA : ARCHS = 870 | USE_GRAPHS = 1 |"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139238273967",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: successfully fit params to free device memory"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139238273967",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: fitting params to free memory took 3.24 seconds"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139238326001",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_model_loader: - kv   2:                               general.name str              = Qwen3 1.7B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139238786460",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: model type            = 1.7B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139238786460",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: general.name          = Qwen3 1.7B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139238984648",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors: offloaded 21/29 layers to GPU"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139238984648",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:        CUDA0 model buffer size =   872.21 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139238984648",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:    CUDA_Host model buffer size =   418.43 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255264328",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx                 = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255264328",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx_seq             = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255264328",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_batch               = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255264328",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ubatch              = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255264328",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: flash_attn            = auto"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255265500",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context:  CUDA_Host  output buffer size =     0.58 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255265777",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:        CPU KV buffer size =    64.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255295610",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:      CUDA0 KV buffer size =   160.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255320500",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:      CUDA0 compute buffer size =    56.75 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255320500",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:  CUDA_Host compute buffer size =    10.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139255320500",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn          init: llama threadpool init, n_threads = 6"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139258046788",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139269021694",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn  common_param: system_info: n_threads = 6 (n_threads_batch = 6) / 6 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | REPACK = 1 | CUDA : ARCHS = 870 | USE_GRAPHS = 1 |"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139269726595",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: successfully fit params to free device memory"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139269726595",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: fitting params to free memory took 0.70 seconds"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139269778625",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_model_loader: - kv   2:                               general.name str              = Qwen3 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139270268619",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: model type            = 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139270268619",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: general.name          = Qwen3 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139270293231",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors: offloaded 29/29 layers to GPU"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139270293231",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:        CUDA0 model buffer size =   409.29 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139270293231",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:    CUDA_Host model buffer size =    83.46 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276470841",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx                 = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276470841",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx_seq             = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276470841",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_batch               = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276470841",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ubatch              = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276470841",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: flash_attn            = auto"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276472101",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context:  CUDA_Host  output buffer size =     0.58 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276481552",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:      CUDA0 KV buffer size =   224.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276510548",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:      CUDA0 compute buffer size =    28.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276510548",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:  CUDA_Host compute buffer size =     6.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276510548",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn          init: llama threadpool init, n_threads = 6"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139276756541",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139279226719",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn  common_param: system_info: n_threads = 6 (n_threads_batch = 6) / 6 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | REPACK = 1 | CUDA : ARCHS = 870 | USE_GRAPHS = 1 |"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139282652636",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: successfully fit params to free device memory"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139282652636",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: fitting params to free memory took 3.42 seconds"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139282705103",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_model_loader: - kv   2:                               general.name str              = Qwen3 1.7B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139283193796",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: model type            = 1.7B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139283193796",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: general.name          = Qwen3 1.7B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139283423305",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors: offloaded 21/29 layers to GPU"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139283423305",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:        CUDA0 model buffer size =   872.21 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139283423305",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:    CUDA_Host model buffer size =   418.43 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299583710",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx                 = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299583710",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx_seq             = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299583710",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_batch               = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299583710",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ubatch              = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299583710",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: flash_attn            = auto"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299585080",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context:  CUDA_Host  output buffer size =     0.58 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299585323",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:        CPU KV buffer size =    64.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299626973",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:      CUDA0 KV buffer size =   160.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299640865",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:      CUDA0 compute buffer size =    56.75 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299640865",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:  CUDA_Host compute buffer size =    10.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139299640865",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn          init: llama threadpool init, n_threads = 6"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139300333417",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139312187101",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn  common_param: system_info: n_threads = 6 (n_threads_batch = 6) / 6 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | REPACK = 1 | CUDA : ARCHS = 870 | USE_GRAPHS = 1 |"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139312932245",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: successfully fit params to free device memory"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139312932245",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: fitting params to free memory took 0.74 seconds"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139312985057",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_model_loader: - kv   2:                               general.name str              = Qwen3 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139313517204",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: model type            = 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139313517204",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: general.name          = Qwen3 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139313545093",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors: offloaded 29/29 layers to GPU"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139313545093",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:        CUDA0 model buffer size =   409.29 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139313545093",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:    CUDA_Host model buffer size =    83.46 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319719869",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx                 = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319719869",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx_seq             = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319719869",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_batch               = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319719869",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ubatch              = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319719869",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: flash_attn            = auto"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319721427",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context:  CUDA_Host  output buffer size =     0.58 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319731174",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:      CUDA0 KV buffer size =   224.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319750588",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:      CUDA0 compute buffer size =    28.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319750588",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:  CUDA_Host compute buffer size =     6.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319750588",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn          init: llama threadpool init, n_threads = 6"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139319931238",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139334211030",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn  common_param: system_info: n_threads = 6 (n_threads_batch = 6) / 6 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | REPACK = 1 | CUDA : ARCHS = 870 | USE_GRAPHS = 1 |"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139338541498",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: successfully fit params to free device memory"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139338541498",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: fitting params to free memory took 4.33 seconds"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139338595983",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_model_loader: - kv   2:                               general.name str              = Qwen3 1.7B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139339115883",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: model type            = 1.7B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139339115883",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: general.name          = Qwen3 1.7B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139339319100",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors: offloaded 20/29 layers to GPU"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139339319100",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:        CUDA0 model buffer size =   839.22 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139339319100",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:    CUDA_Host model buffer size =   451.42 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355533555",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx                 = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355533555",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx_seq             = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355533555",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_batch               = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355533555",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ubatch              = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355533555",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: flash_attn            = auto"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355534632",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context:  CUDA_Host  output buffer size =     0.58 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355534632",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:        CPU KV buffer size =    72.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355574606",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:      CUDA0 KV buffer size =   152.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355598672",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:      CUDA0 compute buffer size =    56.75 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355598672",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:  CUDA_Host compute buffer size =    10.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139355598672",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn          init: llama threadpool init, n_threads = 6"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139357818059",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139367417486",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn  common_param: system_info: n_threads = 6 (n_threads_batch = 6) / 6 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | REPACK = 1 | CUDA : ARCHS = 870 | USE_GRAPHS = 1 |"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139368138990",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: successfully fit params to free device memory"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139368138990",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "common_fit_params: fitting params to free memory took 0.72 seconds"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139368191166",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_model_loader: - kv   2:                               general.name str              = Qwen3 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139368672778",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: model type            = 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139368672778",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "print_info: general.name          = Qwen3 0.6B"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139368700321",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors: offloaded 29/29 layers to GPU"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139368700321",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:        CUDA0 model buffer size =   409.29 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139368700321",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:    CUDA_Host model buffer size =    83.46 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375297794",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx                 = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375297794",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx_seq             = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375297984",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_batch               = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375297984",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ubatch              = 512"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375297984",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: flash_attn            = auto"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375298782",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context:  CUDA_Host  output buffer size =     0.58 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375315330",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:      CUDA0 KV buffer size =   224.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375340394",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:      CUDA0 compute buffer size =    28.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375340394",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:  CUDA_Host compute buffer size =     6.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375340394",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn          init: llama threadpool init, n_threads = 6"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139375584505",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789139377925999",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "cmn  common_param: system_info: n_threads = 6 (n_threads_batch = 6) / 6 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | DOTPROD = 1 | LLAMAFILE = 1 | REPACK = 1 | CUDA : ARCHS = 870 | USE_GRAPHS = 1 |"
+    }
+  ],
+  "limitation": "Only initial load settings in this bounded interval; later automatic reload placement and session finish are not covered."
+}

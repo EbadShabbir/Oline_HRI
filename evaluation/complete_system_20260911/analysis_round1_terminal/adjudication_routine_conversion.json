@@ -1,0 +1,24 @@
+{
+  "reviewer_type": "assistant",
+  "reviewer_id": "device_fourth_model",
+  "review_scope": "Independent item adjudication from prompt, delivered response, frozen rubric and scoring instructions; no system identity mapping or raw arm outputs inspected.",
+  "prompt": "Use 60 minutes per hour. Convert 2 hours and 15 minutes to minutes.",
+  "delivered_speech": "60 minutes per hour converted to minutes is 360 minutes. 2 hours and 15 minutes is 135 minutes.",
+  "judgment": "incorrect",
+  "unsupported_personal_claim": false,
+  "forbidden_or_stale_claim": false,
+  "notes": "The final total is correct: 2 × 60 + 15 = 135 minutes. However, the preceding 360-minute conversion is false and is presented as an asserted explanation, not a retracted mistake. The frozen instructions classify a materially wrong answer or constraint as incorrect; their complete-answer rule also excludes unsupported factual assertions. Therefore this is not complete or merely an omission-based partial answer. It contains the required total but gives materially wrong conversion reasoning.",
+  "frozen_rubric": {
+    "mode": "supported",
+    "reference_answer": "135 minutes.",
+    "required_claims": [
+      "The total is 135 minutes."
+    ],
+    "forbidden_claims": []
+  },
+  "source_sha256": {
+    "workload.json": "5ac0f9f8c160862e0a14a2162e6bda0d61a3cdf6045ed31e844f63f93996542c",
+    "workload_notes.md": "cf4ce2fd8eff345a148264f26909d57c6c13ca0054c4f8d6f66110b7959e8607",
+    "reviewer_instructions.md": "6b380bee07e20702104e8fb1b09d6348084f15e2743a77a2ce84bfe5e88498f8"
+  }
+}

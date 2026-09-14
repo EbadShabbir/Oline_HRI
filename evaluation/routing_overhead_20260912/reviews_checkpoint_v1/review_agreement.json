@@ -1,0 +1,42 @@
+{
+  "unique_groups": 52,
+  "observations": 88,
+  "initial_label_and_both_flags_agreement": 52,
+  "initial_disagreements": 0,
+  "adjudicated_or_audited": 0,
+  "pending_ids": [],
+  "reviewer_type": "two independent blinded assistant contexts",
+  "independent_human_review": "pending",
+  "input_sha256": {
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort01/packet.jsonl": "394dd72515316ec2675b07e3ccb1fd8154f1433501742cd17b3047a057af3676",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort01/reviewer_a.jsonl": "2df914b4e42b6864bc84e62707d96ff464ece1bd3f2f640cc888ab08efaae437",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort01/reviewer_b.jsonl": "20d95fb8365d78d7f4a5bfa62d90b3c4780ca8aed63bc7b3f31e55105deec9ce",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort02/packet.jsonl": "947121ac06c2dbf86a0fec3ad6315f59a6c6dc64b7580ca69cf466f6b586a503",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort02/reviewer_a.jsonl": "f8338247df8b5639a547f54cdeb29e2b671264863ace7f1f242e04857938cc93",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort02/reviewer_b.jsonl": "e3152d15e8cee244e700e26d72466e2ae5fe8eab040acd1f49fd429df5b2b7f2",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort03/packet.jsonl": "caa21574446e2de69728eed1b7c2f7ac3dd5f3e26e05d3c1323794e19787509b",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort03/reviewer_a.jsonl": "ea07ab4397e74b2c5ca046551ee46fceae928fc2df347be78ef0f030bce75665",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort03/reviewer_b.jsonl": "67a43c5c8eddf5d93000ecf756f9494d4286cafd7db8be1ff17060922dc59127",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort04/packet.jsonl": "a85607c686dfa34064c10f43b47ea694468a0db91ac10ba888af955581884193",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort04/reviewer_a.jsonl": "ba8c606acab0f4f58b0819584af3c4c66322000e1cbbc359585a64c0eb799374",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort04/reviewer_b.jsonl": "c720da7de989b112613a251473176097c450a031dd0cdcc85a3bc651936419cf",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort05/packet.jsonl": "c532b862abea2c39104e360093b06f6680e8f515efb7fe72740c3bc91f8df9d4",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort05/reviewer_a.jsonl": "79992938147f2c2a3943d162990696be55be26418c4714f57d8e6384f87df3bb",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort05/reviewer_b.jsonl": "184c9027b3f167b99ba24261176dd66d1554d8c506872aa10c253ee4d5f3975d",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort06/packet.jsonl": "b93be7b00a3ae2ed825773f4b9422cdd8b87140400555d77eeb57ef633062a28",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort06/reviewer_a.jsonl": "07478a060c595e36160a9cb465e97bf0ce35a1825a5fc8041490d2619d5949b7",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort06/reviewer_b.jsonl": "6dd511c402351fbe478257b08d80d064b628257c479f0039f9c0609b5308c536",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort07/packet.jsonl": "f3ee0aef1648d7fc0f865ee3c8e4fed7c123adb6e57fda5b596a7ff15f6b13ca",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort07/reviewer_a.jsonl": "67836797d388d861310fadccf1084bd7b7e7ba4fe5961e15ba54e9606cbb47f8",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort07/reviewer_b.jsonl": "f5d957bbdff99200743f404d9635f0395847de1fb41c16aefd08ddbb285c6843"
+  },
+  "group_content_evidence_citation_mapping_reconstruction": "passed",
+  "script_sha256": "bff2fde04dcb5721caf2d2a345c483822a500598e17f55d80423efd7a5b0be2f",
+  "resolved_labels": {
+    "complete": 30,
+    "incorrect": 17,
+    "inappropriate_abstention": 1,
+    "partial": 3,
+    "technical_failure": 1
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "output": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/audit_method_review_v1.json",
+  "partial": true,
+  "subset_integrity_pass": true,
+  "checks": 1983,
+  "violations": 0,
+  "exception": null,
+  "counts": {
+    "chat_http_requests": 57,
+    "answer_rows": 19,
+    "answer_status_delivered": 19,
+    "retained_history_expected": 10,
+    "retained_history_with_original_disclosure": 10,
+    "operations_started": 31,
+    "operations_finished": 31,
+    "mutation_remember": 4,
+    "mutation_correct": 1,
+    "zero_operation_worker_admission_rejections": 1,
+    "mutation_forget": 1,
+    "planned_checkpoints": 17,
+    "unique_observed_checkpoints": 17,
+    "scheduled_segments": 4,
+    "process_fragments": 5,
+    "extra_continuation_fragments": 1,
+    "independent_databases": 2,
+    "distinct_processes": 4
+  },
+  "system_observations": [
+    {
+      "stage": "admission",
+      "code": "preserved_zero_inference_worker_rejection",
+      "where": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_deletion/restart",
+      "launch_pid": 40304,
+      "error": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      }
+    }
+  ]
+}

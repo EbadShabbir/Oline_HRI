@@ -1,0 +1,2060 @@
+[
+  {
+    "final_review_id": "review_6243dd950aee342392623969089908d6",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_819134a6e6dcde69e39e67f444af997e"
+      }
+    ],
+    "public_content_sha256": "56ff074e5a5643558bd3125b401d6031a124f29349cf02e105746819afe0ccc9",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_819134a6e6dcde69e39e67f444af997e"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_83038dd64b46568f761cc2c64cc04893",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_0f21e98abfc64628769cdd1ba73890fa"
+      }
+    ],
+    "public_content_sha256": "de8256e78d094d64dbe3043dcfc988439425cbb31bcef0e711d043bbe3c0978a",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_0f21e98abfc64628769cdd1ba73890fa"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_2f2ce98f9815cbd28fe9ca81c0df455e",
+    "prior_candidates": [],
+    "public_content_sha256": "9d8ddc6a74a47c0725d162671b8194920828bab84760a472a8e1e91ccef69c7f",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_cbc8092530ab011312b43c4ceb2d1398",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_e6f682f0c239fd977bffe4ebf25d59c9"
+      }
+    ],
+    "public_content_sha256": "f850710d1835a42bb9ba831af84f8b3fef4478131a96da9f7c9a81db79cd4a63",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_e6f682f0c239fd977bffe4ebf25d59c9"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_809c962fa635c23ff34b2dbf9ca9aca3",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_e6b5bb36af128de12c2beabb1fd43981"
+      }
+    ],
+    "public_content_sha256": "a6e297e2728ce2cb76a0b8d1ccf658f7cca30791a976e3258251e364b0d6a5c2",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_e6b5bb36af128de12c2beabb1fd43981"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_e5b163ff19e090b027e12f7ada8e9f76",
+    "prior_candidates": [],
+    "public_content_sha256": "bd3dc57e0c377ced0e98c65039acc087c22bd81b84586f1672711b9768178c4d",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_b769583ead71f3dfeccd20009f38c151",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_bf2b80f837a590959f8993b26d13dc99"
+      }
+    ],
+    "public_content_sha256": "10c915cd6c7c807cce30655549ed0a820f93b46e61233989258cbf9bb815e7d2",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_bf2b80f837a590959f8993b26d13dc99"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_bf23f734c0bd0a1e18fa952e09d1cc82",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_ab0c89c922d3d030aeefce282e30664d"
+      }
+    ],
+    "public_content_sha256": "370ea6745b9582341600052f147db4f09139e52e202e2ad970379ca8d0fe3b40",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_ab0c89c922d3d030aeefce282e30664d"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_874afad4a8a4539295cd32475952ad7f",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_b96a96d201a85d31cbf6e10b2adbb433"
+      }
+    ],
+    "public_content_sha256": "4045197027e73f0d41059cf1df7e3c47c0f1f9b122d6371e01093bef8eefd24a",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_b96a96d201a85d31cbf6e10b2adbb433"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_6466a99f7b284749fb3552908ed7ce75",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_b1c89f4bb4c4563ae2c3a332d597eb1f"
+      }
+    ],
+    "public_content_sha256": "0203480cde9d4fb33f82456898dda980b44d85e51bc5d412f6355330251c3104",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_b1c89f4bb4c4563ae2c3a332d597eb1f"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_f24eb6a7d024ef8d612828373ae6b4ba",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_53242eecdd9025280fdd22ee740de78e"
+      }
+    ],
+    "public_content_sha256": "51cf3f20312767383e02871c16d507a1886f490dd8cb520345cdb851926a316d",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_53242eecdd9025280fdd22ee740de78e"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_e594c5e952cc170badea720e52c6b195",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_a8a5359ddf51560dc03a33392af5a727"
+      }
+    ],
+    "public_content_sha256": "5f3cb857ce89b0c75f1bb4d65e654b40aba00b70f6aa5224c5deef1eeb9667bf",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_a8a5359ddf51560dc03a33392af5a727"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_8e290591d720e5f51f7fc52be9d736d2",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_0d832fe66388c4809a3182127bf86aff"
+      }
+    ],
+    "public_content_sha256": "67ecad5bc1d09e5ec6e19a74d92f5a4ddf0456f6cf06807208f5ccfb5041fe2b",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_0d832fe66388c4809a3182127bf86aff"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_698f3399ed5b2cb21fd81cc16a32dfd7",
+    "prior_candidates": [],
+    "public_content_sha256": "36da83cfe4d2c43c09fc14fce31fc4dc02bf0421a2e67dc92147e88b66eddb23",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_6b89f01e2aff27ab1db2d38d8a3bcf0c",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_a95208ffd894a68f3d2d5e4a94c4aed2"
+      }
+    ],
+    "public_content_sha256": "cf90fb17402ea8ed0d8198f6b221329a40b7108584f69b28c5fcc81bb0eb93d3",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_a95208ffd894a68f3d2d5e4a94c4aed2"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_25bd5d4a857625413350df781dcc1940",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_c39eacda2477f8784378704662b511d6"
+      }
+    ],
+    "public_content_sha256": "4d08836f00571214801e597ad4e4ff0d6ec2d6ceeb7f2cc480f8f21188cdb270",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_c39eacda2477f8784378704662b511d6"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_465b7b05a1994aaa6d584124eaec3192",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_aeac2526205233590b7d51d3e81a8c1b"
+      }
+    ],
+    "public_content_sha256": "623b2f496e4247a8af96d2abe94ae037eca099ee4812de59e0f1c12c76d23181",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_aeac2526205233590b7d51d3e81a8c1b"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_574121e4159432f002d4f1568bab12a4",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_c76b6fb48aa582a5fa7736f14acc6abf"
+      }
+    ],
+    "public_content_sha256": "51630903ce984b112c92a6f9727e3d5cd89e1d0569a0366c66529ff3c22e482f",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_c76b6fb48aa582a5fa7736f14acc6abf"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_570587a542dd1206f169336628caf886",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_980fda52292d638e35d3a0a4a430762b"
+      }
+    ],
+    "public_content_sha256": "b96409cfde731810619b750ee5d74fb8414d294dcd9266553e489e34e07391dc",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_980fda52292d638e35d3a0a4a430762b"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_a411306944aef95c5f4c97f006901116",
+    "prior_candidates": [],
+    "public_content_sha256": "6f54d721045a6de1efaaca7427e8f84678f8ac2cf4a4a246acd769562ed00c0c",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_7331de950a2f01459c0990506e96e40f",
+    "prior_candidates": [],
+    "public_content_sha256": "5e14e7dcc511201b0b0306d836259d09a0e3908b0ebf2934e472fa48fb1b71a2",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_d90668ae976143da3284bb03c621ef10",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_215e2af88bee2ae4c1b0ccaa5a42f4dc"
+      }
+    ],
+    "public_content_sha256": "b5f1b13d6f29df69e5887fa8eca3b26bd415dc5da0652455194db91a4068eee2",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_215e2af88bee2ae4c1b0ccaa5a42f4dc"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_341f9218cba63f1ca1c5a9e34c513ed0",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_b39df70690b65d1f54b31d0777c3babc"
+      }
+    ],
+    "public_content_sha256": "ced38d4371f07bdd25c49134d48732a5ec0c854672b57b031e89e1053ceaaee7",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_b39df70690b65d1f54b31d0777c3babc"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_8aa2554dbe6351245e675161bcfc569e",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_4810fe98bc8324cd918b5c5324c47d29"
+      }
+    ],
+    "public_content_sha256": "c03c9507dce0b67a2c5d779acdec67421ed52910d0932760bdb05afe3a51dbe7",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_4810fe98bc8324cd918b5c5324c47d29"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_6c42e66ddef2f56f81b222398a15d23c",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_40ed3852b3f6c3eed684de9ad0a51202"
+      }
+    ],
+    "public_content_sha256": "a8bf1582fca9185c5beccbb8d714e701e15408ada3a31cdf2f298e0a279178a5",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_40ed3852b3f6c3eed684de9ad0a51202"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_22484eab4beaadab0613cebca4a21c87",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_15538ae7a1b422215819c6184a3339c7"
+      }
+    ],
+    "public_content_sha256": "8552e1c87500a947643cd1edbef0875ce72f07be10d27279a6d254f6568f2bb9",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_15538ae7a1b422215819c6184a3339c7"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_bbe2d8c5c07ea92a0b24a6ee41b642fd",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_1b0f0e023ca4c2c9ac5f62ed5f4964a3"
+      }
+    ],
+    "public_content_sha256": "3e724e6c86716a8f3b10c73bcdb41d041ce8e575a3cfdcf49edfc3efa073f26c",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_1b0f0e023ca4c2c9ac5f62ed5f4964a3"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_456e1628aff74b969ae8ba6cfb300a29",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_ad7edbb311a3eae958a384e841cdaefe"
+      }
+    ],
+    "public_content_sha256": "36d76f554294545f23af4c40f3d890bed848ff8ba0b3dba66bb3583013a39571",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_ad7edbb311a3eae958a384e841cdaefe"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_b91d648454b7247020760abe095a3d67",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_c1528a2a6eddde60c5f09658e2d51c91"
+      }
+    ],
+    "public_content_sha256": "aa7d4e885a31ee915257147cfd492578187328b06328e6c1a2205d90bbd415f3",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_c1528a2a6eddde60c5f09658e2d51c91"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_d9d56e6c4f896cfb335478aa407969a8",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_79ca0aa19010d606181188ad6aea8d16"
+      }
+    ],
+    "public_content_sha256": "f6b0cfaaecb2d7ad09538d2e9acd809b66ac4b0ec3fd2eb7e78b7083cd6de1b0",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_79ca0aa19010d606181188ad6aea8d16"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_7cd1fd720dc09edb367ae5ca29c4609c",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_aa3a438d5ecb6e44434e4fb4da9541d8"
+      }
+    ],
+    "public_content_sha256": "e7298488e68e0105a0bef607dbccc9034d5d3e7bf2c10d93fa0a5154f77af216",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_aa3a438d5ecb6e44434e4fb4da9541d8"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_37170a6ec70fc89acacf869ee69116fe",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_30fc9a6d964f2143e33b6eb219d9e756"
+      }
+    ],
+    "public_content_sha256": "9fadcf91b75dd0070f5d321704f279512705a5664f8fa4ef0f2364cfd9ddf44e",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_30fc9a6d964f2143e33b6eb219d9e756"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_3bf32922980905bb2418d4da6e108e3d",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_fda8252763c8257ec58eac9ba617b478"
+      }
+    ],
+    "public_content_sha256": "0a31005c437eae5b787b532c6dd4833613597b2adf68b2e07f7b79e09ba4138f",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_fda8252763c8257ec58eac9ba617b478"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_98263a301a45f7f2dc9727f23a7134b2",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_2c1a29791d23dd1723811f6ae02aa78b"
+      }
+    ],
+    "public_content_sha256": "9b82a02def70adce60b5a3a9fda687f030891ba91135379b2b8e55c569704f8e",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_2c1a29791d23dd1723811f6ae02aa78b"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_380f6204754e6fbcf2065e458a7ac9db",
+    "prior_candidates": [],
+    "public_content_sha256": "e1ce37d173176e1f1a4b7a057151b53c35dcd869a877be4ae6e86f5f72cf1465",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_2df41fe0c33be6ac8a72d1076ff3eb3f",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_090b3ccb8d198eeaa4fa9e53fa3aaf95"
+      }
+    ],
+    "public_content_sha256": "1c66efa11419986f619893c28b1a39366c21f52d8ca909a164ef9b89563c26fe",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_090b3ccb8d198eeaa4fa9e53fa3aaf95"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_43ab571ecfb529221ba4cd2cc170729b",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_eb0aa2585d0ac6b940bfbbe9b2051af2"
+      }
+    ],
+    "public_content_sha256": "32a790b0d2818c258e31178894909f42e51439da6c328b85723c933d43e402ec",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_eb0aa2585d0ac6b940bfbbe9b2051af2"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_fc8d9f02d77ed1134df67a4b86f4c92a",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_c90d1fb30344d766425308f3b5fdc9d4"
+      }
+    ],
+    "public_content_sha256": "7233291ecfa33fea0f2d72168ee6c03b54af51f5fbe03533eb6dbd853abdb609",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_c90d1fb30344d766425308f3b5fdc9d4"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_15ad76ab3ce4fa360c5c0fdba886b9e0",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_2c7b0830c7d2d0ed20af389ce813f27d"
+      }
+    ],
+    "public_content_sha256": "509f026943837d5b47fe8de4f30acad63fd522ea48469bcece67045171eb9db8",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_2c7b0830c7d2d0ed20af389ce813f27d"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_b72e3e1c9c8505a86bca4ea3c9f1dd40",
+    "prior_candidates": [],
+    "public_content_sha256": "553348ce80f4827da41855c195eb465644f5e95f5af36fa397b54e0577b4cfaa",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_65cabeb62077344aa3122b82f4081368",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_12b013c9ddb773587259330e0918534d"
+      }
+    ],
+    "public_content_sha256": "a4a2af4adcc63acbe2beeac9699d36cd6cde632cab5523cfacc0fffde1b7492a",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_12b013c9ddb773587259330e0918534d"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_557aaf796f4abda3079a1b84e9d089a9",
+    "prior_candidates": [],
+    "public_content_sha256": "a108228e7222a8fb744e29d20b2803b1076c67d4e67c0e61f651e8ffb32fa473",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_7a5b60e6e0d9c4a794c27e4af81b13fc",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_987954ee8b2cca4b5c5b34730b0b9660"
+      }
+    ],
+    "public_content_sha256": "604796cf0518b81e3662b7f229cb5e4660bf93904dc8b60cb9944c1f4cca09f4",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_987954ee8b2cca4b5c5b34730b0b9660"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_47f9e25bfdfb39ec991480524924e09b",
+    "prior_candidates": [],
+    "public_content_sha256": "78f9963ad5c2931902042d67ac7f7241c1b58ae196adc8af977a262b7b7de30e",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_0b5c90bed660c210dd79d4893f3dcbf5",
+    "prior_candidates": [],
+    "public_content_sha256": "2b62235ac5fd004df055084ef19539c590c37ff4eb3e897036d897d7f6db2b25",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_7ab0a7d044065118dc38c7bc8f711a23",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_5975aca5f5b045786440cc1fb3c36839"
+      }
+    ],
+    "public_content_sha256": "5bd5b97c5ab075d24367e2c17011f62db2f72b8b6da53788bfaf995f9a44af82",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_5975aca5f5b045786440cc1fb3c36839"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_887bd0987d65782a18af8f625c6f68ea",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_f28ca838167b7b9b1dcf3e3ae564a958"
+      }
+    ],
+    "public_content_sha256": "3f1a45d368d66eac778cf64b66d321bd57f6fea14600772b771eea4f283bcd37",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_f28ca838167b7b9b1dcf3e3ae564a958"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_516e4d2907e3aa875d65559fe178372c",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_8a0ab748fff39bf4f1e302c0ad4cbf74"
+      }
+    ],
+    "public_content_sha256": "0a06f8ff83e33b056c8ff0e63b3844100864dc36cd14ef8aa1aaa20a664c69cb",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_8a0ab748fff39bf4f1e302c0ad4cbf74"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_06e0eb07f6d07767c62718bbc667f7f9",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_078e3ca3a37253bb4206eec3680a7356"
+      }
+    ],
+    "public_content_sha256": "6c945b3b963f861fbe215fe2a7427c09bfb96d2a314393e943f0926472747a9c",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_078e3ca3a37253bb4206eec3680a7356"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_fda9fce5ae60885e407bc3b2595ca2c9",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_8a150a806b9a4112f98fc5f38ff31c85"
+      }
+    ],
+    "public_content_sha256": "e4ece6630d3f6d4b780aaa0fda258d4430679d4ff0ae9bd388853725c4df1607",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_8a150a806b9a4112f98fc5f38ff31c85"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_00edd66a3682c49db99ecf2ba6b0d7e3",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_5ec413f1c01403538dd6451b9c8d04f1"
+      }
+    ],
+    "public_content_sha256": "8faf634f38cb9c8a9220aeb6d6edad53a72494432954f0fe5845a42b994e0319",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_5ec413f1c01403538dd6451b9c8d04f1"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_5c642805bcf8283be4b647c5dce35f9c",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_aa3f7d1e6f89672975c13b6947083003"
+      }
+    ],
+    "public_content_sha256": "c53db30d01a40cc97a4a2f9f87c105935a2f7a2ce5872779d64751f36ed2a57a",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_aa3f7d1e6f89672975c13b6947083003"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_3249d9fe181ba75aa7825f03db9e129e",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_e2c84c1b3c2cd8ce346359948a134637"
+      }
+    ],
+    "public_content_sha256": "d679e6a47311e89015b8260df17bccebce79867cbe327799b06b977f37296200",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_e2c84c1b3c2cd8ce346359948a134637"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_7bee26a22954386a55f33587950123d2",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_32627cf6f08c557748364dbe1ee61fd7"
+      }
+    ],
+    "public_content_sha256": "024b5d6c999e30786f7353cc1d251533bd84ef50f0c37408144d44f458959101",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_32627cf6f08c557748364dbe1ee61fd7"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_e571654de335d183bb3fc50db0433107",
+    "prior_candidates": [],
+    "public_content_sha256": "d0230df62e14ec0b74aa6aec3a28e07c2b871e217424ef92320f3a63382cf165",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_ed2240532e58a2f3712b8e34cc80b4ab",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_d68f1fbdc30aea504b33696c65169826"
+      }
+    ],
+    "public_content_sha256": "eacdab265f69f5b114150b3585ac4b669f218b9fb20192a2d89833a9328731f1",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_d68f1fbdc30aea504b33696c65169826"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_71f850e91b96a85f232cd961114f3d0e",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_551e3768b19c86620f17203a396dffd0"
+      }
+    ],
+    "public_content_sha256": "6f8551ce0d65a29d510a31debc514e1f5118b20e2bf3ffc3d9790437f115b645",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_551e3768b19c86620f17203a396dffd0"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_8798cbf891aafad891d6007b3162a1cd",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_838caa53e62722e0f2b237a8db64ce2c"
+      }
+    ],
+    "public_content_sha256": "6282a57404636aaf5f5751139f420ba4e704b57166232e3a2f21d81ee1958e2f",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_838caa53e62722e0f2b237a8db64ce2c"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_6af289631f38ae3b00aa5ba894a68b40",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_0ea38d222dbbdaf1568d66ea97471c08"
+      }
+    ],
+    "public_content_sha256": "7aba762ceb35fe4c9be7b8526beeaa2cf2b976794e24017438835fbf9aa7d9a2",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_0ea38d222dbbdaf1568d66ea97471c08"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_363f6858d4e22c461aca5a351c77bf91",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_eaad1066b3aae338633db1450d8ce0b7"
+      }
+    ],
+    "public_content_sha256": "11147cca6841254a21f07ef8f4c6e6026baa942916be7badd0f50fb18d6286ca",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_eaad1066b3aae338633db1450d8ce0b7"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_e829020b29661cbc63ffef5c757b5f64",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_abd6a3ca154f88149c09ef16ce8ecb56"
+      }
+    ],
+    "public_content_sha256": "a8fbe3b21377698d5e8e99a5423e4b48fb4a3641897d4dd93c7e7a73b194aa28",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_abd6a3ca154f88149c09ef16ce8ecb56"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_672401e94f966d90a113d5d37b440d2d",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_73c23b50303e41acac6a8b5a42957edf"
+      }
+    ],
+    "public_content_sha256": "a7107e810932405bb4b89ca5224f37b76edce2e1cd94e0e0cc40c18a0a4adfa5",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_73c23b50303e41acac6a8b5a42957edf"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_071570607d2bf075b477e76a1fb76bbf",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_7853cb2e789bb5c7e7e8c316b4bfb12f"
+      }
+    ],
+    "public_content_sha256": "e3dfb47e084d2b13b609d233414df579f6e21fb3028ba537ab74171f87d10e6f",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_7853cb2e789bb5c7e7e8c316b4bfb12f"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_bba7831e4a88058d5910488bd03fd2e0",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_8bc148a9331752d5d29a3db8f61d7565"
+      }
+    ],
+    "public_content_sha256": "51b3fa9be38afd7c783d0ef73732453f218eb3a48eab4df0223506ff861c261b",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_8bc148a9331752d5d29a3db8f61d7565"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_6ea7a1d877f403059c9ba4ab8d26c457",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_94e213bdf9488ffb19b46ff6d2ae291d"
+      }
+    ],
+    "public_content_sha256": "b8300fcd147fabcd9676088325a7479fc43fefd48c5a06a937df5f14e5bdb40c",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_94e213bdf9488ffb19b46ff6d2ae291d"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_de173cab1d769ec91564ff11c3c3f654",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_3524b0307c32952cbe5547df7b00a559"
+      }
+    ],
+    "public_content_sha256": "467245d1cf022ce1e6aca504390935b42bc6276fd3d66ae2cc2a8d98bd039482",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_3524b0307c32952cbe5547df7b00a559"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_164e4b8d8b83ecbfc5c4ae72f2682d53",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_cf3c0d5423e147253397f3419183a80b"
+      }
+    ],
+    "public_content_sha256": "e3b3c9f54c4ff1b0f98c3b66aa01a3a5e3ab14cb3657a2ef7117b2f07993d6c7",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_cf3c0d5423e147253397f3419183a80b"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_efdf5d470b5d856faf87a164a039136d",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_b6b054024365299f1bf3305542fc3a51"
+      }
+    ],
+    "public_content_sha256": "6366eea25b49e90aeacff56bc9069880bf39b93a2d9fc15be069c2fc269c2a6a",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_b6b054024365299f1bf3305542fc3a51"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_0e93882b03df6b3bbb4bfa92d2bbffa8",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_7d7c0ba05633d1a1aa0857eb0b0bd662"
+      }
+    ],
+    "public_content_sha256": "37383d12891d2643d26257187be47dbaa8d949fbb3cc01225a747ce8e5a36635",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_7d7c0ba05633d1a1aa0857eb0b0bd662"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_9e19fa755ec826193f0979d050dbfc01",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_2da1c17fea2a96ae3279a3ea79ff5ff6"
+      }
+    ],
+    "public_content_sha256": "552dc404dc43f469b869570df606ae1693b16c3bd5d5b019099e1418589a8e0f",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_2da1c17fea2a96ae3279a3ea79ff5ff6"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_69903cd939620853cff7bd913e700be4",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_f31a8395328c0f16129162d59d389ccb"
+      }
+    ],
+    "public_content_sha256": "afe000b03145b739b9037deb4922bc8858979c9294202212724183b88e8d54a0",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_f31a8395328c0f16129162d59d389ccb"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_6c39031a7bcb3940535c8cbd0f041bfb",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_0ff5dd0c5c790c3bc5333c9dbb321b8b"
+      }
+    ],
+    "public_content_sha256": "2219c69a080fbfc6bce9446c15f98534740112e693f435152c367068a1e5ab70",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_0ff5dd0c5c790c3bc5333c9dbb321b8b"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_e0b549e44a79d7ca95d8aa21dabfe28c",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_73c827faa3f94847d5e77b0d16253d3d"
+      }
+    ],
+    "public_content_sha256": "151786ba38333c12f37d5ac9aad4721f2fdefd2a2f5d9fc415b4d521993ff9c1",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_73c827faa3f94847d5e77b0d16253d3d"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_718444f1715342c190a67eaa5b37427f",
+    "prior_candidates": [],
+    "public_content_sha256": "f22486462fbc45e10669f7ffc4dcda97c601b3e6606922396bf1da2531d27f16",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_d6e79a1f5926e9ca90a5497265e24883",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_c6ea365efaf9dffc64f7f2ec9be51379"
+      }
+    ],
+    "public_content_sha256": "64c1327c7be4fc50bf363bf1b58a71979f94f75bf3217ba3c00fed791a7389b9",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_c6ea365efaf9dffc64f7f2ec9be51379"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_3ce1c9533d53f9eb459310e9beae6f3f",
+    "prior_candidates": [],
+    "public_content_sha256": "1a23ddb9d61af9ff41099bc60bb923689db4d305b34718deb772d4e3ef9199b9",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_197ae853e77647d05d1a9e8505f5e4bc",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_e93fb1e26225df4244d83c5c80bd9c8e"
+      }
+    ],
+    "public_content_sha256": "2a7fee692e05a0644ff6df4b1be4f2f298a1cc9f5a3f76030ff6a9a0e766bbf3",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_e93fb1e26225df4244d83c5c80bd9c8e"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_29cb3411fc4a600e4065485ab0a6cd02",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_b6330406339728f40f31512e3b60dcd5"
+      }
+    ],
+    "public_content_sha256": "d48f7a966e5884844034d7f3c6f905dc74772b0f6b4416e56f51d763dffc5a0c",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_b6330406339728f40f31512e3b60dcd5"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_f48c84d6de2769b0267a337237ad2abe",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_9bfc597c33b3407542983b0f43b12a54"
+      }
+    ],
+    "public_content_sha256": "1dad7c6516e5ca15687f6b0a11183a8db28fc09b08689d77f689efe0d0a8de54",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_9bfc597c33b3407542983b0f43b12a54"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_2737ca83a412dfade6dc31960f8b30ab",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_2019d429b59cc9b5ec513a55e412d431"
+      }
+    ],
+    "public_content_sha256": "3bdc2f12647bf83d6dd541642dc6022ef195240fa4e9b0b900c78a865571ca45",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_2019d429b59cc9b5ec513a55e412d431"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_84498e84be69c98ead36c1ccacba2716",
+    "prior_candidates": [],
+    "public_content_sha256": "685d195455f5d4a47bce31742bfdd747055d94d264c50a24b131d6f6ae9b533f",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_53c1e74beb8655d65ec0b605e3e109ab",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_afe1a81a5f98ff0dc98adf42cabd99aa"
+      }
+    ],
+    "public_content_sha256": "5e2e30e06dbebc015753a949ac414787d8b74bbf549bbb138b022a6047f4242a",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_afe1a81a5f98ff0dc98adf42cabd99aa"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_72b53e516362b8e91a93542e26ce33c3",
+    "prior_candidates": [],
+    "public_content_sha256": "0bed7cedf4863132898e2d00638692eefc8a27e08273c10b59a5dad598e60793",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_ba7638ec8d85c66800ffe0500eddda43",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_eef18c2d400cc3c443154843a024e9ff"
+      }
+    ],
+    "public_content_sha256": "dbf30ed77f9bf5f8bf449e940754e75544a92dec972fe04317ea3c0d10f258da",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_eef18c2d400cc3c443154843a024e9ff"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_3f9f54592d5225359d8ac24fda4d2c1b",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_985b6dbbe524ed229939950cbc3e97d3"
+      }
+    ],
+    "public_content_sha256": "df82b5c028accc619bb7a012bd15630e91897958240676e0323ad554fd41ed71",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_985b6dbbe524ed229939950cbc3e97d3"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_058771678acbab4c5f8a65b224dfb844",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_7b77f3d52b25f611a93f5d5692cc186a"
+      }
+    ],
+    "public_content_sha256": "1bda9a2778bc3fd33470f3103fac01f27f4c0cdda2deca13e4e2ae9d8d02ae90",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_7b77f3d52b25f611a93f5d5692cc186a"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_734234b5c97f508f1a96839f0dcf0f40",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_d6e75c757517900ec1f9927e2827396d"
+      }
+    ],
+    "public_content_sha256": "ce79a661cd6051aec42e9db6f21d58b87c08ad93c7fc72e36a4894f0e0e91d50",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_d6e75c757517900ec1f9927e2827396d"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_1fe3e1284fddd9065cd0a4881f5ac1d6",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_8b0ac0ce426a90c1ea654577c259f908"
+      }
+    ],
+    "public_content_sha256": "9ebdad7e896f2e181edfb741a9ec9cfdcc1568c8efb7a657a0342eecbea3069f",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_8b0ac0ce426a90c1ea654577c259f908"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_e783610a4a9e6d9b671e49df8d82d0c6",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_a848de64b1b84767d861adabb687214a"
+      }
+    ],
+    "public_content_sha256": "c9d61c61f1e41633d8ed0655dfe228354968a2d6a8bbf5c3e3390800cb1556d6",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_a848de64b1b84767d861adabb687214a"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_93d8f45f66cd38773aafcb3b0f58a9f7",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_0036a1bf13d363cdbf4a56795408f21a"
+      }
+    ],
+    "public_content_sha256": "03700fb3da37909825c1693a96a2e7ce9c4d38ffb8dd7de6a23c6108b80dec73",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_0036a1bf13d363cdbf4a56795408f21a"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_e6a326d1649bbce516d93348e24e91d3",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_71d7001b38a28540882b1cfb999a4c47"
+      }
+    ],
+    "public_content_sha256": "a4e15827c9d32e6744b9aecd8a85f818e85c4ac6fa5c50b9835326730baf5ddf",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_71d7001b38a28540882b1cfb999a4c47"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_c0438299ff8c9b4378413067b50d2591",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_2483d1492a79fc19a601c9a8223debeb"
+      }
+    ],
+    "public_content_sha256": "dc0ce46534cf699dc9d6eb2d080a76b2c1495e36c0ba3eff3d583704de9e656d",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_2483d1492a79fc19a601c9a8223debeb"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_5b19e2d7e0f5357a09dd5f919c03185f",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_4224c648afc7726831f3cb6ee8eccf75"
+      }
+    ],
+    "public_content_sha256": "5ac81cdff0a8a5a89976ea0a961a19d5464a89d09c9dae79932155d36eb9ab7b",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_4224c648afc7726831f3cb6ee8eccf75"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_8cc2ec590c6f391b878d2e76bb331449",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_714ade3e5de941817e16c5bf22af2d1c"
+      }
+    ],
+    "public_content_sha256": "8fe9118bef00b2672764fa579602e647eeb202a0a3e105ec9f7903ab64e293ab",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_714ade3e5de941817e16c5bf22af2d1c"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_9a851a996b5583828426109b9c3c555a",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_0bb2e6a3ebd82ff1fb63e5f6dcb30f25"
+      }
+    ],
+    "public_content_sha256": "3a36f7b91f930851b1507c72844b10cd7209f4a70b0fbccee0c7800fd5bac58d",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_0bb2e6a3ebd82ff1fb63e5f6dcb30f25"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_8f3c7f64e01eabad864d3a66f59c07e7",
+    "prior_candidates": [],
+    "public_content_sha256": "f7d0b6bc1bf5467fd558e17d1c810d27b148b593821a6d0fb3d4f68be5dd3515",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_0077d04c7e421bfd2da1f21bc03336dc",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_f1298d74eef82a6c94d06e85aebd4bce"
+      }
+    ],
+    "public_content_sha256": "f127862254ad25de9363e051ddf153e506086dd1ee8c64113501e224b0cb07ab",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_f1298d74eef82a6c94d06e85aebd4bce"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_0b32fc9369d558874a013f81fa300204",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_ffc2ab0ac415e3ea9c42589b5458a555"
+      }
+    ],
+    "public_content_sha256": "898faf2aa1f86cb234da91b3c68744a52566d63d833151be7103181f54da30f0",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_ffc2ab0ac415e3ea9c42589b5458a555"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_268a99a4de4e3607bb92af1eeadcc311",
+    "prior_candidates": [],
+    "public_content_sha256": "5a98f93fa517b0e087caf6881ed52adc47070934090c7c133d4fcd5758515535",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_458ee4397c2c29d31d7fc0902e83ca1c",
+    "prior_candidates": [],
+    "public_content_sha256": "c09312ba575d505f7b504991f381e5c790a1f80995b9a1b16f65f9344ed45fd9",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_c953647bde5717eb0b2636e10d092ffc",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_01732af82b8e61a6b74a2e97c9d2b923"
+      }
+    ],
+    "public_content_sha256": "0bb39eab05879e85a74d6e803b58ddd77060e787bbec183737affea85cd65ffa",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_01732af82b8e61a6b74a2e97c9d2b923"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_81115122781c0c13b2dc7b751e684a52",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_dbdd8a81a0047be16df5d0ab5c8b429e"
+      }
+    ],
+    "public_content_sha256": "dbbcb097877bff58a03de7919b9bdfdcc48ac882e92d5c5b5406d3d894b0bd53",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_dbdd8a81a0047be16df5d0ab5c8b429e"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_47c3dd624dbc46d76d037a077ad90f4c",
+    "prior_candidates": [],
+    "public_content_sha256": "e960c1f995a9bdd64fba6b8da9a65b815189fa2db760e307466021207fe9d0b1",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_46dab379f642f075804205869fad7811",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_e95e0e35dd8bb3ff12b337e83ce7adf0"
+      }
+    ],
+    "public_content_sha256": "bb81a4d50dd53b948bf4dfb3f28b2c8df2989182bdebab693d92edba31140b19",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_e95e0e35dd8bb3ff12b337e83ce7adf0"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_ae9afeff5c88d1af6c1dcfeb3477e71b",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_612864b4b21fca47860f59d888e928dd"
+      }
+    ],
+    "public_content_sha256": "6d23ce3d3691e23314203edb0c7e1b457a64a9b073148a2c187dd800c71cdd86",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_612864b4b21fca47860f59d888e928dd"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_35eedeac05ee64440534ff7cbf292d17",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_f525b161827b547833c92e4c3d279902"
+      }
+    ],
+    "public_content_sha256": "44ed280423c5fa8c53885e12c56342664197a0d302d6f89cde78ec59b1814d1d",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_f525b161827b547833c92e4c3d279902"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_202fdab50f7ea56d2c445082b59db615",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_d6b521392258de040e0223bcb3a2cb05"
+      }
+    ],
+    "public_content_sha256": "fa35d96276ed5b5d5ec5207ea893c224e4d947f0a1002d4b27d57438cca3c9d1",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_d6b521392258de040e0223bcb3a2cb05"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_609431a0ad30d3e6f2df85d9afcfe117",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_fa8c04787016617a90a497b728970e68"
+      }
+    ],
+    "public_content_sha256": "4740707c2865fa7d4a87fd1cf1fcc94f851f0a213b15094f873c955ee85cd696",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_fa8c04787016617a90a497b728970e68"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_d3ba1f8e939f195addc699eddb147ad8",
+    "prior_candidates": [],
+    "public_content_sha256": "c60c2d163cd82133a00c72d9a1870fd0c596baa93ac285e106559b14e5cc25cc",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_fca32293a83a14f4cdee7e2c14d1ffe7",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_ae6fd7a57d1cf489a9d93f865c910ed4"
+      }
+    ],
+    "public_content_sha256": "c37cfb2f419d9ab48f1ecdc20d6e6c75f614c7aeb92f9d72dd606ab75f5583d3",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_ae6fd7a57d1cf489a9d93f865c910ed4"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_114e4de88918c8d684cfa8b44aa51c0e",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_ee6d3eb2f6d069b66b70931b60125a94"
+      }
+    ],
+    "public_content_sha256": "b9d62d8fe4c86049501162796179b4a94bc11f8e32164989c69db69c665e242e",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_ee6d3eb2f6d069b66b70931b60125a94"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_4b30a35d2f3af14c740b0706908d4b86",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_eb596e19fb4dd88ff616d8e3c3e2dbe5"
+      }
+    ],
+    "public_content_sha256": "bf0eb713dd34b927e4c3318ee854639a076edb3af42b5d8d83ab488228469a11",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_eb596e19fb4dd88ff616d8e3c3e2dbe5"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_7070463abd184337f9fecf78e85adc9a",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_5f38adb94ad49f22871419acf1a39922"
+      }
+    ],
+    "public_content_sha256": "1a6992a777f1dc69f2d337f8927125cc14d9801a0dafffc7da3538db923c0186",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_5f38adb94ad49f22871419acf1a39922"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_31e339377b3f0545495c4f6b7a019c8d",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_d448b111bf2983c3e0772e94219c6073"
+      }
+    ],
+    "public_content_sha256": "cfc920cab93f0d434ee9da5451cc4ede1a8be49b88593efcc9e7f3abcc26f952",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_d448b111bf2983c3e0772e94219c6073"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_81060e5971b57f491f48cc0f2afa68e1",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_0b7c9ea1922263169e095d8981732af6"
+      }
+    ],
+    "public_content_sha256": "417491b629885658f367ce38c9e36c56382536c4748b513b1a4a7fa581d04c3e",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_0b7c9ea1922263169e095d8981732af6"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_02e9ebe646dac9f227200c4df192de1b",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_bb7ee9df9cecaaf996c06e8381bef1eb"
+      }
+    ],
+    "public_content_sha256": "470820f83e3d690bdc490b7057ac8bf8c5d0d6999e4c8301a67a360837b0d30e",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_bb7ee9df9cecaaf996c06e8381bef1eb"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_b484ecd8c52f85996e0572df552a205b",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_46afa6765cfaad733e5cd74bdc97b8ca"
+      }
+    ],
+    "public_content_sha256": "5f3a60d71d56042b9fcd9f5959efbd24f162fdb482334cdb00cae9653b063e26",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_46afa6765cfaad733e5cd74bdc97b8ca"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_a1d2bd13a464b687342707a20471d384",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_91b50f886fe52bab76fc2258c13af7fc"
+      }
+    ],
+    "public_content_sha256": "db7053c1464a3f0c506af896bcefb958b52ea323d1d2d513bade3673e699c1be",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_91b50f886fe52bab76fc2258c13af7fc"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_102c519454f3730f113132348ed99465",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_761a33622d0d7264992dafad91cef4b9"
+      }
+    ],
+    "public_content_sha256": "ae7b13bda06e0df3f658a48df21c56fd905df870626c185b4014d23caa82c6fe",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_761a33622d0d7264992dafad91cef4b9"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_68eb790630c89bdd0baab3dfc704aac1",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_f42e7be8faa0aab4f60aa1ea23e54a2e"
+      }
+    ],
+    "public_content_sha256": "353baa2d840e31e9cae72cc59fce8a2f1688785cfe20f31e7fd7dfa7a6ac366c",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_f42e7be8faa0aab4f60aa1ea23e54a2e"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_91a67e7fe7370e2af8b1cf383309e112",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_3167be6ba566b7feb1099c46223f3d72"
+      }
+    ],
+    "public_content_sha256": "0059a130f8f9ebd0a1b3f0421ea14cf17e42bb818401c98f49bb8431e06d6252",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_3167be6ba566b7feb1099c46223f3d72"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_5e8ef3e43440e7753d2e9c267a3ad99a",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_f9f22111689a49900324b4900263479e"
+      }
+    ],
+    "public_content_sha256": "21e8d0e5ec5cdb8ae1ac28e2ba0861b0562f5db9778be0671d7c52d1362bfa2d",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_f9f22111689a49900324b4900263479e"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_a8f2fc7b510cd134abd05e4bf3c20e1b",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_5c1c67bd571f06445146e1093106cb5a"
+      }
+    ],
+    "public_content_sha256": "7f488e123a6a92b60d7353b87645e87af60deb56bbd959ca3b5c59b7716c3fdb",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_5c1c67bd571f06445146e1093106cb5a"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_431fd2f375766c68f25654c84deaa276",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_e11a6b0efd2b1b94ad4991d46ade6916"
+      }
+    ],
+    "public_content_sha256": "8cac56a0727de0b1a4f0deb5dfe1e89aface7f2daa1d51e35358e7c2a9b2a9d6",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_e11a6b0efd2b1b94ad4991d46ade6916"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_23338ad6a3092cd7c2f6909e6a21c72b",
+    "prior_candidates": [],
+    "public_content_sha256": "a8d0784bad3af51a702145bd734c778c0e9de1ac8e1bb8dcf801e93b839149f3",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_885cf91b947a1b1ca30a2d5b9080f2bd",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_948c7fb312171aa8502534425f11ad1f"
+      }
+    ],
+    "public_content_sha256": "eadc030e6164cfbce5dfca7da5bc5178b1e8128ebe50dd94961fcd832b68de1d",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_948c7fb312171aa8502534425f11ad1f"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_4443a2986fb5e0cbb184b0533050704a",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_64eb8534ad1dc8ba124898adb4cb4390"
+      }
+    ],
+    "public_content_sha256": "7f05aeb22939c0e340bb2ff313fdb7de825a8d83d6d66874881a879422cdac33",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_64eb8534ad1dc8ba124898adb4cb4390"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_a79564eef8cd5cc8de4a684dd94373de",
+    "prior_candidates": [],
+    "public_content_sha256": "4204ee8efa56ed46ea3c4a64ccbed9baa4cd308f44123a02df05abcb6ed28882",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_72ed97077601677de325a05bd18b309d",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_5c108fefc44ecc5920f7949b20e09864"
+      }
+    ],
+    "public_content_sha256": "c618687806053c6135e6fb64444e5d79a77828bfc5a76250517326d3704ed02a",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_5c108fefc44ecc5920f7949b20e09864"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_17aea5406e631f98e051ea55dcbade72",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_c710ab44ec1174db5b962d39c3f48db4"
+      }
+    ],
+    "public_content_sha256": "5ab4b35631f62868c595be119fcd202a6fdd74173383bb87c6a06298bd2475cd",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_c710ab44ec1174db5b962d39c3f48db4"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_7fbbd1a3a92784d1b95fbd6d96a967b2",
+    "prior_candidates": [],
+    "public_content_sha256": "09878e4c1b6df652ecee640cd8e479938557ddda298ebecbe3eb20026eb0fc93",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_bb4595897a27c128fb1f140dc9016ae2",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_15cecbb2ff6f93203f36df4579490067"
+      }
+    ],
+    "public_content_sha256": "46c60faed1f5cb4dd36d03e9cbac5f163174e783b901b6d2a17430a4a8bc0c0e",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_15cecbb2ff6f93203f36df4579490067"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_d53753cc380142596ce74ae435ad0adb",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_8f858f58a7b1dd5468ae5dcb903114c2"
+      }
+    ],
+    "public_content_sha256": "7c3d807bae1f7e2e3d45474fd2daafd58653e9244a9712ed073268dd232c5b6f",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_8f858f58a7b1dd5468ae5dcb903114c2"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_d768fb722be3c5f85e5abb01450ea875",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_4c474f4110a062099ed221eaedb91740"
+      }
+    ],
+    "public_content_sha256": "509a9a3061db543bac17deb3719a7f4d79bd23873bde4178227e1d595a001658",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_4c474f4110a062099ed221eaedb91740"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_445696ff9590e0131e69e1c81b3e6572",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_405b820e4f485cd52dfadcf34c3080c0"
+      }
+    ],
+    "public_content_sha256": "e73ba55f647127571bb2d667e47b44e8aa7affc7ea095b01513b4b1536cc0412",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_405b820e4f485cd52dfadcf34c3080c0"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_80d90fe21f47e7b1a448a839bf88c494",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_2f53dafc5fde8f04ec900772775c43c1"
+      }
+    ],
+    "public_content_sha256": "f227ca87f4121475ca56c3e8037e45970f71aed633fcafc443d8e1e3d47ff92c",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_2f53dafc5fde8f04ec900772775c43c1"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_b8dbad6f8acf9632eb7a172bbaa4c1a6",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_e4c9533e25ae00dad4cc44728e519577"
+      }
+    ],
+    "public_content_sha256": "d14e389b86c94923b6d8192f092d5beb2c662058ea1cea14f21f735ac0006af6",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_e4c9533e25ae00dad4cc44728e519577"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_607561d1ee6496dd547e5f9d31c09c28",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_cb2090fc65ba5291b8fc80c517866a79"
+      }
+    ],
+    "public_content_sha256": "248dc4c3e3ef0817ad0839dcf459b8e8b7eb66c51cb560dd80f9d89e52602d9d",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_cb2090fc65ba5291b8fc80c517866a79"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_237fa038e0e4639819f87045b38cf311",
+    "prior_candidates": [],
+    "public_content_sha256": "cf699055e80fdff58c90161c77316074f923ef2f149537fc6700231f4e7ebb47",
+    "selected_candidate": null,
+    "status": "unreviewed_public_content"
+  },
+  {
+    "final_review_id": "review_4bd3b4e222fc0709a46a71e49a4d3954",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_0ad319cd61c2e387e75c8cd69dbd15ec"
+      }
+    ],
+    "public_content_sha256": "09c7c305f8d265dea88be08010abe6d099808d7de1d783f87649a76b698d74db",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_0ad319cd61c2e387e75c8cd69dbd15ec"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_dcd931de815cd7245f5a49a451e5e18a",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_32c6088fce30d0e26e07c73d4e8b3cad"
+      }
+    ],
+    "public_content_sha256": "7f5a069fa5df5a3b31de2f2141dc5c5e4fc1e5b562d1e630c114da72adbe269f",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_32c6088fce30d0e26e07c73d4e8b3cad"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_b666829d5e252b19743a1ff95f8b034d",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_770604419ce1714c29add258921a94fb"
+      }
+    ],
+    "public_content_sha256": "d74d043433bf245a2b753ab0618ac419ac365321de1ad7e9c04e5e14461b0947",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_770604419ce1714c29add258921a94fb"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_f60a380c34b96a3806d892b47a25e20c",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_1caccd21be0f65d60b127dc0f640854e"
+      }
+    ],
+    "public_content_sha256": "fbc2568249b7374263c2a6cb29cfd01c5586b99ca6b8bd81970983ce175861c2",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_1caccd21be0f65d60b127dc0f640854e"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_efeed10b1d4e8b247fb032d4c280e442",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_50ef2405ad28d8961572fa0f4da783b3"
+      }
+    ],
+    "public_content_sha256": "f8c57c6ffe465d921b08ce1b42c9f6da54852faf0c1a68cde1b0e1c90e61530c",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_50ef2405ad28d8961572fa0f4da783b3"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_658e4eee9d37dacf0db04a133cf1684c",
+    "prior_candidates": [
+      {
+        "batch_index": 2,
+        "prior_review_id": "review_8e67a866ca0e8670646a2d628bf88dce"
+      }
+    ],
+    "public_content_sha256": "1658239badc73f73387e2e753edf7235720a6f0c24ee4c21402f5a14b9752a61",
+    "selected_candidate": {
+      "batch_index": 2,
+      "prior_review_id": "review_8e67a866ca0e8670646a2d628bf88dce"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_744d26e419a97204495edeb0a3846e6e",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_8ee1d54ea576ce119801342761edded8"
+      }
+    ],
+    "public_content_sha256": "66781e4f92eaf039a4846941fbabd2d6517431800b8e7725442b19997dd0d5fc",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_8ee1d54ea576ce119801342761edded8"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_b07fae74fbeef5f8f424e47360f52a7b",
+    "prior_candidates": [
+      {
+        "batch_index": 1,
+        "prior_review_id": "review_656f447742d9e841e8c2ed0131debe02"
+      }
+    ],
+    "public_content_sha256": "856f33e1400def74434010a4275e172590bb01fcfb4a1f90e6d143ae5047d12c",
+    "selected_candidate": {
+      "batch_index": 1,
+      "prior_review_id": "review_656f447742d9e841e8c2ed0131debe02"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_4d3301aefea40b644f636b8fd4acea99",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_c3a29b3db19a045486017ec1195ebc67"
+      }
+    ],
+    "public_content_sha256": "1665b492927c8aab74595c8accc6027d13227a3bb697e6392ecc3b01df827be6",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_c3a29b3db19a045486017ec1195ebc67"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_371c55dd0234287049ad4935f014bf34",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_6c268c562344789d840234b598ba7697"
+      }
+    ],
+    "public_content_sha256": "2ec145c0c052c5205e315b60479d58f890fc363bbe8006df5d5926a66b7b1d46",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_6c268c562344789d840234b598ba7697"
+    },
+    "status": "reused_exact_public_content"
+  },
+  {
+    "final_review_id": "review_5e2fe5d6793fc804c8ccf09e8991ce89",
+    "prior_candidates": [
+      {
+        "batch_index": 0,
+        "prior_review_id": "review_b0aed517acb1de36f6031c638504e392"
+      }
+    ],
+    "public_content_sha256": "e4ef482c8f46623b0cd4e36ce6cb761d5f9c451eac89cbb3d46c498e6936ea1b",
+    "selected_candidate": {
+      "batch_index": 0,
+      "prior_review_id": "review_b0aed517acb1de36f6031c638504e392"
+    },
+    "status": "reused_exact_public_content"
+  }
+]

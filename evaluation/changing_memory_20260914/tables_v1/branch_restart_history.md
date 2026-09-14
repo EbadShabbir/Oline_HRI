@@ -1,0 +1,16 @@
+# branch restart history
+
+| branch | restart_phase | history_mode | planned | attempted | delivered | useful_correct | forbidden_disclosure | withheld | interrupted | missing |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| correction | after | fresh | 24 | 24 | 21 | 6 | 0 | 3 | 0 | 0 |
+| correction | after | retained | 24 | 24 | 24 | 0 | 11 | 0 | 0 | 0 |
+| correction | before | fresh | 24 | 24 | 22 | 9 | 0 | 2 | 0 | 0 |
+| correction | before | retained | 48 | 48 | 48 | 21 | 10 | 0 | 0 | 0 |
+| deletion | after | fresh | 12 | 12 | 12 | 9 | 1 | 0 | 0 | 0 |
+| deletion | after | retained | 24 | 24 | 24 | 3 | 21 | 0 | 0 | 0 |
+| deletion | before | fresh | 12 | 12 | 12 | 12 | 0 | 0 | 0 | 0 |
+| deletion | before | retained | 36 | 36 | 36 | 13 | 18 | 0 | 0 | 0 |
+| expiry | after | fresh | 12 | 12 | 12 | 9 | 1 | 0 | 0 | 0 |
+| expiry | after | retained | 12 | 12 | 12 | 2 | 9 | 0 | 0 | 0 |
+| expiry | before | fresh | 24 | 24 | 24 | 21 | 0 | 0 | 0 | 0 |
+| expiry | before | retained | 36 | 36 | 36 | 13 | 18 | 0 | 0 | 0 |

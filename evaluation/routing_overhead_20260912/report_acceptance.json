@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "status": "prospective_final_report_checks_not_yet_executed",
+  "created_on": "2026-09-12",
+  "scope": "Integrity and reporting acceptance; no newly invented model quality or latency thresholds.",
+  "planned_slots": 144,
+  "planned_main_turns": 432,
+  "planned_replay_turns": 144,
+  "original_retained_sequences": 22,
+  "original_retained_attempts": 88,
+  "checks": [
+    {
+      "id": "coverage",
+      "title": "Every planned slot is accounted for",
+      "criterion": "144 unique sequence/system/repetition slots, 432 main and 144 replay turn slots, or explicit completed/interrupted/unattempted counts; no silently missing slot.",
+      "evidence_paths": [
+        "run_v2/batch_plan.json",
+        "run_v2/batch_finish.json",
+        "report/*"
+      ],
+      "on_failure": "Do not call collection complete if required slots remain unattempted.",
+      "status": "pending"
+    },
+    {
+      "id": "whole_sequence_reuse",
+      "title": "Original attempts remain unchanged",
+      "criterion": "22 original whole sequences and 88 attempts appear exactly once; all linked files match original hashes; exceptional final failure remains a failure.",
+      "evidence_paths": [
+        "run_v2/reuse_manifest.json",
+        "run_v1/batch_finish.json",
+        "report/continuation_provenance.json"
+      ],
+      "on_failure": "Reject pooled results if attempts are duplicated, omitted, overwritten or tail-spliced.",
+      "status": "pending"
+    },
+    {
+      "id": "source_and_freeze",
+      "title": "Every sequence matches its actual freeze",
+      "criterion": "Source, workload, protocol, settings, packages, model digests and embedding hashes validate; v1/v2 differences satisfy exact documented continuation compatibility.",
+      "evidence_paths": [
+        "frozen_v1/freeze.json",
+        "frozen_v2/freeze.json",
+        "freeze_v2_review.json",
+        "report/continuation_provenance.json"
+      ],
+      "on_failure": "Reject affected comparisons on unexplained source/settings drift.",
+      "status": "pending"
+    },
+    {
+      "id": "settings_and_fixed_models",
+      "title": "Actual HTTP calls obey the controlled systems",
+      "criterion": "All chat bodies use ctx2048, cap192, temperature0, seed42, thinkfalse and keep_alive -1; small/large arms only call their sole model.",
+      "evidence_paths": [
+        "run_v2/*/http_calls.jsonl",
+        "run_v2/*/observations.jsonl"
+      ],
+      "on_failure": "Reject model-control attribution on any hidden crossover or setting mismatch.",
+      "status": "pending"
+    },
+    {
+      "id": "workload_and_history",
+      "title": "Questions and normal main-system history match protocol",
+      "criterion": "Case order and prompts match frozen workload; each main sequence begins with empty conversation history and retains its normal bounded history; no forced outcome.",
+      "evidence_paths": [
+        "frozen_v2/workload.json",
+        "run_v2/*/observations.jsonl"
+      ],
+      "on_failure": "Explain missing coverage or protocol deviations before claiming matched control.",
+      "status": "pending"
+    },
+    {
+      "id": "memory_snapshot",
+      "title": "Prepared memory is matched",
+      "criterion": "Materialized canonical snapshot, deterministic IDs, setup operations and eligible evidence agree across systems; CPU embedder/settings unchanged.",
+      "evidence_paths": [
+        "run_v2/*/startup.json",
+        "frozen_v2/workload.json"
+      ],
+      "on_failure": "Reject uncontrolled memory differences; distinguish normal retrieval/classifier differences.",
+      "status": "pending"
+    },
+    {
+      "id": "cold_admission",
+      "title": "Every independent sequence starts model/process cold",
+      "criterion": "No initial resident LLM, new process/embedder, empty cache hint; first backend load included and reported; residual RAM/swap and OS-cache limitation documented.",
+      "evidence_paths": [
+        "run_v2/*/start.json",
+        "run_v2/*/manifest.json",
+        "run_v2/*/startup.json"
+      ],
+      "on_failure": "Do not describe resident starts as cold or remove initial loading from totals.",
+      "status": "pending"
+    },
+    {
+      "id": "counterbalance",
+      "title": "All main-system positions represented",
+      "criterion": "Each sequence follows three frozen main-order rotations; replay remains last and pause/cooldown chronology is disclosed.",
+      "evidence_paths": [
+        "run_v2/batch_plan.json",
+        "run_v2/scheduler.jsonl"
+      ],
+      "on_failure": "Limit order-independent attribution if required counterbalance is incomplete.",
+      "status": "pending"
+    },
+    {
+      "id": "durable_attempts",
+      "title": "Failures and interruptions survive accounting",
+      "criterion": "Every started request and span has a terminal record or explicit unfinished status; technical failures stay in latency and quality denominators.",
+      "evidence_paths": [
+        "run_v1/*/events.jsonl",
+        "run_v2/*/events.jsonl",
+        "run_v2/*/observations.jsonl"
+      ],
+      "on_failure": "Do not infer success from absent end markers or drop fast failures.",
+      "status": "pending"
+    },
+    {
+      "id": "span_accounting",
+      "title": "Monotonic timing partitions exactly",
+      "criterion": "All completed spans are nonnegative, within request/parent intervals, no unrelated overlapping inference spans; exclusive components plus residual equal complete request duration.",
+      "evidence_paths": [
+        "report/spans.csv",
+        "report/components.csv",
+        "run_v2/*/observations.jsonl"
+      ],
+      "on_failure": "Reject broken timing accounting before reporting component savings.",
+      "status": "pending"
+    },
+    {
+      "id": "sequence_accounting",
+      "title": "Startup-inclusive elapsed latency reconciles",
+      "criterion": "sequence_end-start equals sequence_total and equals startup + request sum + sequence_gaps; cleanup and scheduler waits are separately scoped.",
+      "evidence_paths": [
+        "run_v2/*/finish.json",
+        "run_v2/*/startup.json",
+        "run_v2/*/cleanup.json"
+      ],
+      "on_failure": "Do not label a sum missing startup/gaps as complete sequence latency.",
+      "status": "pending"
+    },
+    {
+      "id": "nested_loads",
+      "title": "Loading is never added twice",
+      "criterion": "Backend total/load/prefill/decode are reported separately from enclosing wall spans; cold classifier loading can move to generation in replay.",
+      "evidence_paths": [
+        "report/backend_calls.csv",
+        "report/components.csv"
+      ],
+      "on_failure": "Reject totals that add backend loading to already inclusive request times.",
+      "status": "pending"
+    },
+    {
+      "id": "eviction_and_residency",
+      "title": "Transitions use observed actual states",
+      "criterion": "Unload request and verified absence are separate; pre/post turn and per-call residency identify real model, digest and allocation; selected vs renderer identities remain distinguishable.",
+      "evidence_paths": [
+        "run_v2/*/events.jsonl",
+        "run_v2/*/observations.jsonl"
+      ],
+      "on_failure": "Do not treat acknowledgment or cached hint alone as verified eviction.",
+      "status": "pending"
+    },
+    {
+      "id": "hysteresis",
+      "title": "Actual DDEE rule exercise is demonstrated",
+      "criterion": "For each adaptive DDEE sequence/repetition show actual decisions, residency and easy-streak sources on turns3/4; list any deviation rather than forcing expected large/large/large/small.",
+      "evidence_paths": [
+        "report/transitions.csv",
+        "run_v2/*/observations.jsonl"
+      ],
+      "on_failure": "Do not claim measured two-easy behavior without actual transition evidence.",
+      "status": "pending"
+    },
+    {
+      "id": "following_turns",
+      "title": "Following-turn costs have observed support",
+      "criterion": "Report first-easy-large and second-easy-small costs; associate available next turns with previous transition; mark last-turn switches as having no later observation.",
+      "evidence_paths": [
+        "report/transitions.csv",
+        "report/following_turns.csv"
+      ],
+      "on_failure": "Do not extrapolate an unobserved next turn or hide return-to-small cost.",
+      "status": "pending"
+    },
+    {
+      "id": "replay_fidelity",
+      "title": "Replay exactly preserves adaptive generation requests",
+      "criterion": "Every replay turn maps to its adaptive source; highlevel messages/model/schema, full HTTP bodies and history match; zero new selector calls; reused classifier metadata never counted as inference.",
+      "evidence_paths": [
+        "report/continuation_provenance.json",
+        "run_v2/*/manifest.json",
+        "run_v2/*/observations.jsonl"
+      ],
+      "on_failure": "Reject selection-cost attribution for any nonmatching or unavailable replay; retain failure separately.",
+      "status": "pending"
+    },
+    {
+      "id": "resource_integrity",
+      "title": "Guards and serial inference remained active",
+      "criterion": "No unexplained competing experiment, guard violation, telemetry loss, model overlap, boot/power/trip change or swap-topology change; every sequence cleanup verified.",
+      "evidence_paths": [
+        "run_v2/scheduler.jsonl",
+        "run_v2/*/telemetry_summary.json",
+        "run_v2/*/finish.json",
+        "run_v2/batch_finish.json"
+      ],
+      "on_failure": "Report actual violations/uncertainty; do not claim all runs passed without final evidence.",
+      "status": "pending"
+    },
+    {
+      "id": "placement_and_output_length",
+      "title": "Attribution limits are quantified",
+      "criterion": "Report allocation size/size_vram, backend token counts, decode length/rate and timing by sequence/repetition; distinguish allocation ratio from exact compute placement.",
+      "evidence_paths": [
+        "report/backend_calls.csv",
+        "report/resources.csv",
+        "report/summary.json"
+      ],
+      "on_failure": "Qualify routing causality where placement, length or cache differences contribute.",
+      "status": "pending"
+    },
+    {
+      "id": "paired_dependent_analysis",
+      "title": "Comparisons respect pairing and dependence",
+      "criterion": "Paired differences against both fixed systems and replay use matched sequence/repetition; show all patterns/repetitions; average repeats within sequence before descriptive resampling; no independent-turn sample claim.",
+      "evidence_paths": [
+        "report/paired_sequences.csv",
+        "report/summary.json"
+      ],
+      "on_failure": "Do not pool unmatched observations or advertise 576 independent samples.",
+      "status": "pending"
+    },
+    {
+      "id": "semantic_review",
+      "title": "Every delivered answer has an auditable judgment",
+      "criterion": "Frozen rubric and actual evidence used; failures receive technical_failure; blinded mapping covers every attempt; reviewer type, rationale, agreement and adjudication retained.",
+      "evidence_paths": [
+        "reviews/*",
+        "report/summary.json"
+      ],
+      "on_failure": "No quality-latency improvement claim until correctness coverage is complete.",
+      "status": "pending"
+    },
+    {
+      "id": "failure_preserving_quality",
+      "title": "Useful answers and delivery are distinct",
+      "criterion": "Full-rubric success is distinct from JSON validity/delivery; fast failures and known-answer abstentions are not gains; social subset limitations stated.",
+      "evidence_paths": [
+        "reviews/*",
+        "report/tables.md"
+      ],
+      "on_failure": "Do not equate validated delivery or lower wall time with useful-answer improvement.",
+      "status": "pending"
+    },
+    {
+      "id": "artifacts_and_conclusion",
+      "title": "Report is reproducible and conclusions match evidence",
+      "criterion": "Raw traces, input/source hashes, CSV/JSON tables, figures, commands and original failures preserved; state cost recovery separately against each fixed system, which patterns benefited and remaining uncertainty.",
+      "evidence_paths": [
+        "README.md",
+        "report_methods.md",
+        "results.md",
+        "developments.MD"
+      ],
+      "on_failure": "Do not conclude superiority without comparator-specific measured support.",
+      "status": "pending"
+    }
+  ],
+  "notes": [
+    "Evidence filenames under report/ are intended roles; use actual analyzer output names when resolving checks.",
+    "A pending check is not a passed check.",
+    "This file does not require useful-answer superiority; null or unfavorable findings are valid.",
+    "Independent human review remains pending unless actually obtained."
+  ]
+}

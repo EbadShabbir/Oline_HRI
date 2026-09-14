@@ -1,0 +1,329 @@
+[
+  {
+    "id": "release_none_01",
+    "text": "I have 35 minutes, rice, frozen peas, an onion, and one saucepan. Suggest a simple dinner using those ingredients.",
+    "prior_turns": [],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_current_inputs",
+    "reason": "The ingredients, equipment, and time limit are supplied in this turn; a useful answer needs no saved personal facts."
+  },
+  {
+    "id": "release_none_02",
+    "text": "My budget is 84 credits. Four tickets cost 13 credits each and the booking fee is 6 credits. How much will I have left?",
+    "prior_turns": [],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_current_inputs",
+    "reason": "All arithmetic operands are current inputs; possessive and first-person wording does not create a historical dependency."
+  },
+  {
+    "id": "release_none_03",
+    "text": "Can you explain why a program might use a queue instead of a stack, with a small example?",
+    "prior_turns": [],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_technical",
+    "reason": "This asks for a general software explanation and does not request personal information."
+  },
+  {
+    "id": "release_none_04",
+    "text": "As a conversational robot, can you help me organize ideas and draft a checklist? Tell me what kinds of help you can offer.",
+    "prior_turns": [],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_robot_capabilities",
+    "reason": "A question about the assistant's capabilities is not a request for the user's stored personal facts."
+  },
+  {
+    "id": "release_none_05",
+    "text": "What factors should I consider when choosing a microphone for an offline conversational robot?",
+    "prior_turns": [],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_robot_design",
+    "reason": "The user asks for general design considerations, without asking the system to recall their equipment or preferences."
+  },
+  {
+    "id": "release_none_06",
+    "text": "I'm nervous about introducing myself at a community workshop. Give me two friendly opening sentences.",
+    "prior_turns": [],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_social_drafting",
+    "reason": "The current situation supports generic drafting; no earlier personal history is necessary."
+  },
+  {
+    "id": "release_none_07",
+    "text": "My train leaves at 18:20. The walk to the station takes 25 minutes, and I want to arrive 10 minutes early. When should I leave?",
+    "prior_turns": [],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_supplied_planning_constraints",
+    "reason": "The personal-sounding planning question provides every needed time and duration in the current message."
+  },
+  {
+    "id": "release_none_08",
+    "text": "Shorten this note without changing its meaning: 'Thank you for lending the projector. I will return it to reception on Friday morning.'",
+    "prior_turns": [],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_text_transformation",
+    "reason": "The quoted note is current transformation input, not a request to recover the user's past borrowing arrangements."
+  },
+  {
+    "id": "release_none_09",
+    "text": "My favourite colour is amber. Write a two-line invitation for a lantern-making evening using that colour as the theme.",
+    "prior_turns": [
+      {"role": "user", "content": "What is a binary search tree?"},
+      {"role": "assistant", "content": "It is a tree that orders values so searches can follow smaller or larger branches."}
+    ],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_current_personal_input",
+    "reason": "The preference and creative task are supplied together; 'that colour' has a local referent and the old technical topic is irrelevant."
+  },
+  {
+    "id": "release_none_10",
+    "text": "Could you explain that again using a library analogy?",
+    "prior_turns": [
+      {"role": "user", "content": "Explain what a computer cache does."},
+      {"role": "assistant", "content": "A cache keeps recently or frequently used data close to the processor so it can be accessed faster."}
+    ],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_explanation_followup",
+    "reason": "Prior dialogue resolves a general explanatory topic; it contains no personal fact requiring memory authorization."
+  },
+  {
+    "id": "release_none_11",
+    "text": "Make the second sentence less formal and keep the first sentence unchanged.",
+    "prior_turns": [
+      {"role": "user", "content": "Draft a two-sentence notice asking residents to keep a shared entrance clear."},
+      {"role": "assistant", "content": "Please keep the shared entrance clear. We would appreciate your cooperation in maintaining unobstructed access."}
+    ],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_drafting_followup",
+    "reason": "The followup edits a generated public notice, so dialogue context is sufficient without personal-memory retrieval."
+  },
+  {
+    "id": "release_none_12",
+    "text": "How can I check whether a CSV file has duplicate rows without opening a spreadsheet?",
+    "prior_turns": [
+      {"role": "user", "content": "My ceramic tools are in the willow cupboard."},
+      {"role": "assistant", "content": "You said the ceramic tools are in the willow cupboard."}
+    ],
+    "expected_modes": ["none"],
+    "expected_general_fragment": "",
+    "category": "general_unrelated_personal_history",
+    "reason": "A standalone technical question must remain general even when the recent dialogue contains unrelated personal facts."
+  },
+  {
+    "id": "release_optional_01",
+    "text": "Suggest a relaxing activity for a free afternoon. Use any leisure preferences you have saved for me if available; otherwise suggest a few varied options.",
+    "prior_turns": [],
+    "expected_modes": ["optional"],
+    "expected_general_fragment": "",
+    "category": "optional_leisure_personalization",
+    "reason": "The user explicitly invites remembered preferences but authorizes a complete generic answer when those preferences are unavailable."
+  },
+  {
+    "id": "release_optional_02",
+    "text": "Create a 30-minute desk-tidying plan. If you have a saved preference about how I organize tasks, adapt the steps to it; otherwise use a straightforward order.",
+    "prior_turns": [],
+    "expected_modes": ["optional"],
+    "expected_general_fragment": "",
+    "category": "optional_planning_personalization",
+    "reason": "The current task and time limit suffice for planning; stored organization preferences are useful but not necessary."
+  },
+  {
+    "id": "release_optional_03",
+    "text": "Draft a short thank-you note for someone who helped carry boxes. Match my remembered writing style if you have it; otherwise use a friendly neutral tone.",
+    "prior_turns": [],
+    "expected_modes": ["optional"],
+    "expected_general_fragment": "",
+    "category": "optional_writing_personalization",
+    "reason": "Remembered style is an explicitly optional enhancement, and the requested fallback can be drafted from current inputs."
+  },
+  {
+    "id": "release_optional_04",
+    "text": "Recommend a beginner craft project for a rainy afternoon. Use any currently saved craft interests if they are available, or give a general beginner suggestion if they are not.",
+    "prior_turns": [
+      {"role": "user", "content": "I enjoy paper marbling."},
+      {"role": "assistant", "content": "You enjoy paper marbling."},
+      {"role": "user", "content": "Please forget that craft preference."},
+      {"role": "assistant", "content": "That preference has been forgotten."}
+    ],
+    "expected_modes": ["optional"],
+    "expected_general_fragment": "",
+    "category": "optional_personalization_after_forgetting",
+    "reason": "The user permits a general fallback; the visible forgotten preference is not authority for personalization and must not be reused from dialogue."
+  },
+  {
+    "id": "release_optional_05",
+    "text": "Suggest three conversation starters for a neighbourhood gathering. You may draw on interests I have asked you to remember if any are still available; otherwise keep the topics general.",
+    "prior_turns": [],
+    "expected_modes": ["optional"],
+    "expected_general_fragment": "",
+    "category": "optional_social_personalization",
+    "reason": "Personal interests could tailor the response, but the user explicitly accepts generic conversation starters without them."
+  },
+  {
+    "id": "release_optional_06",
+    "text": "Give me a simple way to learn keyboard shortcuts. If a current saved learning preference is available, use it; otherwise describe a generally useful practice routine.",
+    "prior_turns": [
+      {"role": "user", "content": "I learn best from diagrams."},
+      {"role": "assistant", "content": "You prefer learning from diagrams."}
+    ],
+    "expected_modes": ["optional"],
+    "expected_general_fragment": "",
+    "category": "optional_learning_personalization",
+    "reason": "The requested generic routine is answerable without memory; the earlier learning preference can personalize it only if freshly authorized."
+  },
+  {
+    "id": "release_required_01",
+    "text": "Which fabric did I choose for the cushion covers?",
+    "prior_turns": [],
+    "expected_modes": ["required"],
+    "expected_general_fragment": "",
+    "category": "required_past_choice_recall",
+    "reason": "The requested answer is the user's specific earlier choice, which is not supplied in the current message."
+  },
+  {
+    "id": "release_required_02",
+    "text": "Where did I leave the small telescope case?",
+    "prior_turns": [],
+    "expected_modes": ["required"],
+    "expected_general_fragment": "",
+    "category": "required_personal_location",
+    "reason": "General knowledge cannot establish where this user left a particular possession."
+  },
+  {
+    "id": "release_required_03",
+    "text": "What format did I ask you to use for project updates?",
+    "prior_turns": [
+      {"role": "user", "content": "For project updates, I prefer three bullets followed by one next step."},
+      {"role": "assistant", "content": "You prefer three bullets and one next step for project updates."}
+    ],
+    "expected_modes": ["required"],
+    "expected_general_fragment": "",
+    "category": "required_personal_preference_in_history",
+    "reason": "The question recalls a personal preference; its visible earlier value requires current authorization rather than automatic reuse from dialogue."
+  },
+  {
+    "id": "release_required_04",
+    "text": "Arrange a rehearsal next week around the class schedule and travel-time limits I have saved with you.",
+    "prior_turns": [],
+    "expected_modes": ["required"],
+    "expected_general_fragment": "",
+    "category": "required_personalized_planning",
+    "reason": "The requested plan explicitly depends on missing saved schedule and travel constraints; an arbitrary generic plan would not satisfy it."
+  },
+  {
+    "id": "release_required_05",
+    "text": "Using the recorded times when I finished the frame and submitted the application, calculate the elapsed time between those events.",
+    "prior_turns": [],
+    "expected_modes": ["required"],
+    "expected_general_fragment": "",
+    "category": "required_personal_event_calculation",
+    "reason": "The operation is clear, but both operands are stored personal event times absent from the current message."
+  },
+  {
+    "id": "release_required_06",
+    "text": "Who is Neris in relation to me?",
+    "prior_turns": [],
+    "expected_modes": ["required"],
+    "expected_general_fragment": "",
+    "category": "required_personal_relationship",
+    "reason": "A named person's relationship to the user is a specific personal fact, not an invitation to infer a relationship from the name."
+  },
+  {
+    "id": "release_required_07",
+    "text": "What is the current start time for the weaving session after the correction?",
+    "prior_turns": [
+      {"role": "user", "content": "My weaving session begins at 15:40."},
+      {"role": "assistant", "content": "Your weaving session begins at 15:40."},
+      {"role": "user", "content": "I have corrected the saved time since then."},
+      {"role": "assistant", "content": "The current saved value should be checked before answering."}
+    ],
+    "expected_modes": ["required"],
+    "expected_general_fragment": "",
+    "category": "required_corrected_personal_fact",
+    "reason": "The user asks for the corrected authoritative value; the earlier visible time cannot substitute for retrieval."
+  },
+  {
+    "id": "release_required_08",
+    "text": "Which holiday destination did I ask you to forget?",
+    "prior_turns": [
+      {"role": "user", "content": "I would like to visit Port Lumen for a holiday."},
+      {"role": "assistant", "content": "You would like to visit Port Lumen."},
+      {"role": "user", "content": "Forget the holiday destination."},
+      {"role": "assistant", "content": "The holiday destination has been forgotten."}
+    ],
+    "expected_modes": ["required"],
+    "expected_general_fragment": "",
+    "category": "required_forgotten_personal_fact",
+    "reason": "This is a historical personal recall request; the visible forgotten value must not regain authorization through conversation history."
+  },
+  {
+    "id": "release_clarify_01",
+    "text": "What about the other one?",
+    "prior_turns": [],
+    "expected_modes": ["clarify"],
+    "expected_general_fragment": "",
+    "category": "clarify_unresolved_comparison",
+    "reason": "Neither the comparison set nor the intended alternative is available, so the task cannot be identified."
+  },
+  {
+    "id": "release_clarify_02",
+    "text": "Could you revise that part?",
+    "prior_turns": [],
+    "expected_modes": ["clarify"],
+    "expected_general_fragment": "",
+    "category": "clarify_missing_edit_target",
+    "reason": "The request names neither a document nor a passage, and there is no preceding draft to resolve the reference."
+  },
+  {
+    "id": "release_clarify_03",
+    "text": "Can you help me with the",
+    "prior_turns": [],
+    "expected_modes": ["clarify"],
+    "expected_general_fragment": "",
+    "category": "clarify_incomplete_speech",
+    "reason": "The utterance ends before specifying the object or task; inferring one would invent the user's intent."
+  },
+  {
+    "id": "release_clarify_04",
+    "text": "Yes, please do that.",
+    "prior_turns": [
+      {"role": "user", "content": "I need help preparing a public club announcement."},
+      {"role": "assistant", "content": "Would you like an outline, or would you like a finished draft?"}
+    ],
+    "expected_modes": ["clarify"],
+    "expected_general_fragment": "",
+    "category": "clarify_ambiguous_offered_tasks",
+    "reason": "The assistant offered two distinct tasks and the user's reply does not select either one."
+  },
+  {
+    "id": "release_mixed_01",
+    "text": "Which walking route did I save for weekends? Explain how contour lines on a map work.",
+    "prior_turns": [],
+    "expected_modes": ["required"],
+    "expected_general_fragment": "Explain how contour lines on a map work.",
+    "category": "mixed_required_recall_and_general_explanation",
+    "reason": "The saved route needs authorized personal evidence, while the independent map explanation remains answerable when that evidence is missing."
+  },
+  {
+    "id": "release_mixed_02",
+    "text": "Who did I name as my rehearsal partner? What is the difference between a metronome and a tuner?",
+    "prior_turns": [
+      {"role": "user", "content": "Aven is my rehearsal partner."},
+      {"role": "assistant", "content": "Aven is your rehearsal partner."}
+    ],
+    "expected_modes": ["required"],
+    "expected_general_fragment": "What is the difference between a metronome and a tuner?",
+    "category": "mixed_required_relationship_and_general_comparison",
+    "reason": "The relationship requires fresh authorization despite its presence in dialogue; the separate comparison can be answered from general knowledge."
+  }
+]

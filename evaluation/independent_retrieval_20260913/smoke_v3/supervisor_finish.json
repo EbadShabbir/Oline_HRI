@@ -1,0 +1,30 @@
+{
+  "failure": null,
+  "included_in_864_test_attempts": false,
+  "parent_native_dependencies_loaded": false,
+  "parent_os_thread_count": 1,
+  "parent_peak_rss_kib": 14872,
+  "sessions": [
+    {
+      "attempted": 6,
+      "child_exit_code": 0,
+      "errors": [],
+      "failure": null,
+      "included_in_final_test": false,
+      "model": "qwen3:0.6b",
+      "planned": 6,
+      "status": "complete"
+    },
+    {
+      "attempted": 6,
+      "child_exit_code": 0,
+      "errors": [],
+      "failure": null,
+      "included_in_final_test": false,
+      "model": "qwen3:1.7b",
+      "planned": 6,
+      "status": "complete"
+    }
+  ],
+  "status": "complete"
+}

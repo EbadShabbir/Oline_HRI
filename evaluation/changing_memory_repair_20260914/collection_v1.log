@@ -1,0 +1,50 @@
+{"branch": "cm01_correction", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm01_correction/restart: revised startup temperature must be below 55 C
+{"branch": "cm01_correction", "segment": "restart", "fragment": 1, "returncode": 0}
+admission waiting cm01_deletion/initial: revised startup temperature must be below 55 C
+{"branch": "cm01_deletion", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm01_deletion/restart: revised startup temperature must be below 55 C
+{"branch": "cm01_deletion", "segment": "restart", "fragment": 1, "returncode": 1}
+admission waiting cm01_deletion/restart_continuation_02: revised startup temperature must be below 55 C
+{"branch": "cm01_deletion", "segment": "restart", "fragment": 2, "returncode": 0}
+admission waiting cm01_expiry/initial: revised startup temperature must be below 55 C
+{"branch": "cm01_expiry", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm01_expiry/restart: revised startup temperature must be below 55 C
+admission waiting cm01_expiry/restart: revised startup temperature must be below 55 C
+{"branch": "cm01_expiry", "segment": "restart", "fragment": 1, "returncode": 0}
+admission waiting cm04_correction/initial: revised startup temperature must be below 55 C
+{"branch": "cm04_correction", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm04_correction/restart: revised startup temperature must be below 55 C
+admission waiting cm04_correction/restart: revised startup temperature must be below 55 C
+{"branch": "cm04_correction", "segment": "restart", "fragment": 1, "returncode": 0}
+admission waiting cm04_deletion/initial: revised startup temperature must be below 55 C
+{"branch": "cm04_deletion", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm04_deletion/restart: revised startup temperature must be below 55 C
+{"branch": "cm04_deletion", "segment": "restart", "fragment": 1, "returncode": 0}
+admission waiting cm04_expiry/initial: revised startup temperature must be below 55 C
+{"branch": "cm04_expiry", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm04_expiry/restart: revised startup temperature must be below 55 C
+admission waiting cm04_expiry/restart: revised startup temperature must be below 55 C
+{"branch": "cm04_expiry", "segment": "restart", "fragment": 1, "returncode": 0}
+admission waiting cm07_correction/initial: revised startup temperature must be below 55 C
+{"branch": "cm07_correction", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm07_correction/restart: revised startup temperature must be below 55 C
+{"branch": "cm07_correction", "segment": "restart", "fragment": 1, "returncode": 0}
+admission waiting cm07_deletion/initial: revised startup temperature must be below 55 C
+{"branch": "cm07_deletion", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm07_deletion/restart: revised startup temperature must be below 55 C
+{"branch": "cm07_deletion", "segment": "restart", "fragment": 1, "returncode": 0}
+admission waiting cm07_expiry/initial: revised startup temperature must be below 55 C
+{"branch": "cm07_expiry", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm07_expiry/restart: revised startup temperature must be below 55 C
+{"branch": "cm07_expiry", "segment": "restart", "fragment": 1, "returncode": 0}
+admission waiting cm09_correction/initial: revised startup temperature must be below 55 C
+{"branch": "cm09_correction", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm09_correction/restart: revised startup temperature must be below 55 C
+{"branch": "cm09_correction", "segment": "restart", "fragment": 1, "returncode": 0}
+admission waiting cm09_deletion/initial: revised startup temperature must be below 55 C
+{"branch": "cm09_deletion", "segment": "initial", "fragment": 1, "returncode": 0}
+admission waiting cm09_deletion/restart: revised startup temperature must be below 55 C
+{"branch": "cm09_deletion", "segment": "restart", "fragment": 1, "returncode": 0}
+{"branch": "cm09_expiry", "segment": "initial", "fragment": 1, "returncode": 0}
+{"branch": "cm09_expiry", "segment": "restart", "fragment": 1, "returncode": 0}

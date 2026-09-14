@@ -1,0 +1,11 @@
+{
+  "status": "failed_before_inference",
+  "failure_stage": "runtime freeze model inventory",
+  "error": "ModelPairEvaluationError: cannot reach local Ollama",
+  "underlying_probe": "URLError(PermissionError(1, Operation not permitted))",
+  "reason": "Sandbox denied localhost socket and host process access. Same reviewed sources retried with approved local-service access into frozen_v2.",
+  "models_invoked": 0,
+  "live_checkpoints_attempted": 0,
+  "command": "env PYTHONPATH=src:scripts .venv/bin/python scripts/run_changing_memory.py freeze --draft evaluation/changing_memory_repair_20260914/authored_v1 --review evaluation/changing_memory_repair_20260914/preflight_review_v1.json --output evaluation/changing_memory_repair_20260914/frozen_v1",
+  "created_at": "2026-09-14T13:51:39.234424+00:00"
+}

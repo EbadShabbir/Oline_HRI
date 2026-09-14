@@ -1,0 +1,9 @@
+{
+  "created_at": "2026-09-13T16:40:56.729935+00:00",
+  "author": "independent collection/numeric auditor /root/audit_design",
+  "source_sha256": "f60d7a22b2d785420ebfd4deb904afc198d813dfcc05e2b79e127b4d72f6ce41",
+  "validation": "AST syntax validation only; no primary observations or judgments read during preparation.",
+  "implementation": "Python standard library only; no analyzer/runtime imports or inference; independently reconstructs arithmetic from raw sessions and resolved external judgments.",
+  "execution_status": "Prepared, not executed against collection. Root will supply final sealed paths after collection/reviews.",
+  "planned_command": "python3 evaluation/independent_retrieval_20260913/independent_numeric_audit.py --freeze FROZEN_DIRECTORY --run SEALED_FINAL_RUN_DIRECTORY --analysis SEALED_REVIEWED_ANALYSIS_DIRECTORY --output NEW_AUDIT_DIRECTORY"
+}

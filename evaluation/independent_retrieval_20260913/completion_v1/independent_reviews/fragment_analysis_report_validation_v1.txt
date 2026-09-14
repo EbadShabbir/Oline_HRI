@@ -1,0 +1,22 @@
+['/home/b2jetson/miniconda3/bin/python3', 'evaluation/independent_retrieval_20260913/reviews/fragment_analysis_synthetic_audit.py']
+test_failed_attempt_remains_in_pair_identity_and_cannot_be_repeated (__main__.FragmentAnalysisChecks.test_failed_attempt_remains_in_pair_identity_and_cannot_be_repeated) ... ok
+test_fragment_overhead_is_directory_specific_and_missing_is_unknown (__main__.FragmentAnalysisChecks.test_fragment_overhead_is_directory_specific_and_missing_is_unknown) ... ok
+test_suffix_local_index_is_distinct_from_frozen_position (__main__.FragmentAnalysisChecks.test_suffix_local_index_is_distinct_from_frozen_position) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.001s
+
+OK
+
+['/home/b2jetson/miniconda3/bin/python3', 'evaluation/independent_retrieval_20260913/reviews/report_renderer_synthetic_audit.py']
+test_correct_without_runtime_evidence_remains_separate_diagnostic (__main__.IndependentReportChecks.test_correct_without_runtime_evidence_remains_separate_diagnostic) ... ok
+test_csv_booleans_zero_and_missing_values_remain_distinct (__main__.IndependentReportChecks.test_csv_booleans_zero_and_missing_values_remain_distinct) ... ok
+test_distinct_request_wins_do_not_count_repeats_as_independent (__main__.IndependentReportChecks.test_distinct_request_wins_do_not_count_repeats_as_independent) ... ok
+test_interval_sign_units_and_undefined (__main__.IndependentReportChecks.test_interval_sign_units_and_undefined) ... ok
+test_known_caution_is_not_success_and_forbidden_is_not_clean_caution (__main__.IndependentReportChecks.test_known_caution_is_not_success_and_forbidden_is_not_clean_caution) ... ok
+test_unfavorable_and_null_results_are_reported_directly (__main__.IndependentReportChecks.test_unfavorable_and_null_results_are_reported_directly) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.007s
+
+OK

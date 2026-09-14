@@ -1,0 +1,72 @@
+{
+  "task": "Complete live collection, blinded review/adjudication, independent audit, report and results.md/developments.MD updates",
+  "freeze": "frozen_v1",
+  "run": "run_v2",
+  "collection_session_id": 75938,
+  "runtime_source_frozen_do_not_edit": true,
+  "planned_checkpoints": 288,
+  "review_batches": {
+    "batch_01": [
+      "cm01",
+      "cm02"
+    ],
+    "batch_02": [
+      "cm03",
+      "cm04"
+    ],
+    "batch_03": [
+      "cm05",
+      "cm06"
+    ],
+    "batch_04": [
+      "cm07",
+      "cm08"
+    ],
+    "batch_05": [
+      "cm09",
+      "cm10"
+    ],
+    "batch_06": [
+      "cm11",
+      "cm12"
+    ]
+  },
+  "reviewer_a": "/root/blinded_reviewer_a",
+  "reviewer_b": "/root/blinded_reviewer_b",
+  "reviewed_batches": [
+    "batch_01",
+    "batch_02",
+    "batch_03",
+    "batch_04",
+    "batch_05",
+    "batch_06"
+  ],
+  "remaining": [],
+  "rejection": "collection_v1 zero inference added analysis test matched frozen source glob; identical file renamed outside glob, runtime41 hashes restored; invocation_rejection_v1 preserved",
+  "no_repairs_to_clara_runtime": true,
+  "human_validation": "pending",
+  "analysis_amendment": "Approved scripts/analyze_changing_memory_v2.py parses prefixed evidence from actual generation tails; same votes/scores. Preserve v1 resolve and v2 resolve, compare non-diagnostic equality. Artifacts analysis_parser_amendment_v2 sealed.",
+  "report": "README.md final independently fact-checked report; 288 live checkpoints, complete assistant review and analysis.",
+  "additional_artifacts": [
+    "collection_audit_v1.json",
+    "analysis_v2",
+    "tables_v1",
+    "figures_v2",
+    "report_review_v1.json",
+    "documentation_review_v1.json",
+    "documentation_snapshot_v1",
+    "final_tooling_snapshot_v1",
+    "reproduction_validation_v1.json"
+  ],
+  "status": "complete",
+  "completed_at": "2026-09-14T13:30:17.576433+00:00",
+  "recorded_checkpoints": 288,
+  "delivered_checkpoints": 283,
+  "withheld_checkpoints": 5,
+  "missing_checkpoints": 0,
+  "collection_supervisor_exit_code": 0,
+  "review_groups": 214,
+  "review_disagreements": 0,
+  "adjudication": "No disagreement required adjudication; all judgments were frozen before diagnostic access.",
+  "scope": "Text conversation, actual conversation worker process restart and controlled logical-time expiry; no power-loss recovery or spoken-performance claim."
+}

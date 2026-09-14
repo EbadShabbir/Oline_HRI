@@ -1,0 +1,9 @@
+{
+  "python": "3.13.13",
+  "packages": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.1",
+    "pillow": "12.3.0"
+  },
+  "scope": "Separate pre-existing plotting environment; never used for model inference"
+}

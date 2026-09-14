@@ -1,0 +1,9 @@
+{
+  "sha256": {
+    "analysis_preflight_review_v2.json": "700d91d2222bb2e4c0585c410cef3f430bdba3435cbd26598dd9dafcbcfcec62",
+    "evaluation/independent_retrieval_20260913/reviews/offline_analysis_review_validation_v2.txt": "eca661eebd5fde817a6b1f41344e7fb76527ebaec58d4266acd98a51791e5f08",
+    "scripts/analyze_independent_retrieval.py": "2d40084c72623568d9ce10961dfc47f5c10288fe3293570f082b9b3a2e1bbae3",
+    "tests/test_retrieval_experiment_analysis.py": "cfa3f956467b6dc44705be606207117d232c3c015f0f2210377564dde1675109"
+  },
+  "scope": "Exact approved offline analyzer and tests before physical-fragment compatibility amendment"
+}

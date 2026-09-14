@@ -1,0 +1,93 @@
+{
+  "unique_output_groups": 145,
+  "mapped_attempts": 432,
+  "initial_exact_label_and_flag_agreement": 142,
+  "initial_agreement_fraction": 0.9793103448275862,
+  "initial_disputed_ids": [
+    "review_50af498cee4ea207af72b127",
+    "review_b5c6bad050cfcf99eafdbb67",
+    "review_69e29851a6d0df444a3c270e"
+  ],
+  "comparison_fields": [
+    "judgment",
+    "unsupported_personal_claim",
+    "forbidden_or_stale_claim"
+  ],
+  "cohorts": [
+    {
+      "cohort": 1,
+      "unique_entries": 116,
+      "initial_agreements": 115,
+      "disputed_ids": [
+        "review_50af498cee4ea207af72b127"
+      ]
+    },
+    {
+      "cohort": 2,
+      "unique_entries": 15,
+      "initial_agreements": 14,
+      "disputed_ids": [
+        "review_b5c6bad050cfcf99eafdbb67"
+      ]
+    },
+    {
+      "cohort": 3,
+      "unique_entries": 11,
+      "initial_agreements": 11,
+      "disputed_ids": []
+    },
+    {
+      "cohort": 5,
+      "unique_entries": 2,
+      "initial_agreements": 2,
+      "disputed_ids": []
+    },
+    {
+      "cohort": 6,
+      "unique_entries": 1,
+      "initial_agreements": 0,
+      "disputed_ids": [
+        "review_69e29851a6d0df444a3c270e"
+      ]
+    }
+  ],
+  "additional_shared_interpretation_audit": {
+    "review_id": "review_a365cd7f3d2f9eea99eea28f",
+    "reason": "Both first reviewers credited an unqualified answer about a stored personal fan rule although no supporting personal evidence was supplied. Third blinded review changed complete to partial and flagged unsupported personal claim.",
+    "adjudication_file": "agreement_adjudication_cohort1.jsonl"
+  },
+  "resolved_unique_output_groups": 145,
+  "resolved_files": [
+    "resolved_cohort1_final.jsonl",
+    "resolved_cohort2.jsonl",
+    "resolved_cohort3.jsonl",
+    "resolved_cohort4.jsonl",
+    "resolved_cohort5.jsonl",
+    "resolved_cohort6.jsonl"
+  ],
+  "input_sha256": {
+    "reviewer_a_cohort1.jsonl": "1188d58e7ac73b121d2e6ef0289059e4bfb2c88f1afde7214f1eea261eab2026",
+    "reviewer_b_cohort1.jsonl": "d72ae669a0061fefc309212f0f5990382bde389c21a0551e7bd3e689fec6702e",
+    "reviewer_a_cohort2.jsonl": "2e4fb3062cfe11266e6c032831025286ef28d8cf9c772ceb93b92184200efa78",
+    "reviewer_b_cohort2.jsonl": "3865ab3c5978e4cbab898ab53e5f1f02b7acf1be8c041741c181baa085667d54",
+    "reviewer_a_cohort3.jsonl": "d402024874bde4fba3468a97ad86798de3dda9e680eb269b80e4bb2360cf020d",
+    "reviewer_b_cohort3.jsonl": "2440faca5b38f1b877e2e8b7917143c104a5ba3703cbaaf464b018d79b7dbecf",
+    "reviewer_a_cohort5.jsonl": "fbce961a462936a987fa4febb26fe1c4cbdbd79a1c817a3a7482bf2a6ad334b5",
+    "reviewer_b_cohort5.jsonl": "d82547d8bd32d9698201e9f320f1dd33f0096e6c1dd4357df0c339003e095b6a",
+    "reviewer_a_cohort6.jsonl": "df65e6a553cdd72d087d42d128047d09d0ff2dea6e21c4f1cc42a98228daa462",
+    "reviewer_b_cohort6.jsonl": "d88de943cc336c4bdd74813209658f4b2bed56a2cb570ac84cb755e0cc60e8ae",
+    "resolved_cohort1_final.jsonl": "160425545e6229a88e2d1cf62a69d80f396058ca885009c43c15c93c8e18ee84",
+    "resolved_cohort2.jsonl": "d5c9bd3e695f5c567c0cd6da402a986c4414d19bf2adc2a073cf1cdab9b69d31",
+    "resolved_cohort3.jsonl": "e637cc4307cbfde9f418cea18ec4156a1711e7df3a389d73de8051de8854cd3d",
+    "resolved_cohort4.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "resolved_cohort5.jsonl": "9f0437800862f13289051a3aa5fa03b687facd5f2ff2452df5e690e092ae39b1",
+    "resolved_cohort6.jsonl": "68826ff1b292e50d3d9ac7bf7a937503c8cd5d69b4ce3df6dd0f7b238f1224d5",
+    "adjudication_cohort1.jsonl": "3224debc8d1dd43a8369b0210090425834a79ae5a0f4ece75ca09471f9c37042",
+    "adjudication_cohort2.jsonl": "30b485499be3a10f5436985f97e74f2387c2436f2ea0a9c17412b7c64897b7c5",
+    "adjudication_cohort6.jsonl": "2e2bec3484d8bb68d5472f08598a9ee755eb5449773358548f49fc93a88d0b7a",
+    "agreement_adjudication_cohort1.jsonl": "7dc717271bfd2e5c58b1e7b68af59554081bfc3c1b57fafdb8b0640102eeeed3"
+  },
+  "grading_scope": "Two assistant reviewers worked separately with system labels, timing, repetition and frequency hidden. Three initial flag disagreements and one additional shared-interpretation issue were adjudicated by a third blinded assistant. Initial agreement is reported before adjudication. Repeated exact response/evidence groups reuse judgments.",
+  "independent_human_validation": "pending",
+  "limitations": "Assistant agreement is not independent human validation and can preserve shared interpretive errors."
+}

@@ -1,0 +1,24 @@
+{
+  "created_at": "2026-09-14T14:34:08.749103+00:00",
+  "reviewer": "root assistant",
+  "figures": [
+    {
+      "directory": "figures_v1",
+      "planned_cells": 96,
+      "png_sha256": "69b37bd545fe9c6642a19ebabb2361accb00932cfc15a0eff64d37496626adcb",
+      "pdf_sha256": "d4efc1037e1e4f1d40c40f30167d80792ae7beb7017b19b8b203e1f89b6f125d",
+      "csv_sha256": "86d0f3648682ae36c0b5f0caf3b00cbc1618d19e9e223363c16a90ce8b6bb9a3",
+      "visual_review": "Root inspected rendered PNG: labels, legends, stages, scenario rows, outcome colors and readable export; first96 exposes2partial+2withheld, followup24allrecall/uncertainty."
+    },
+    {
+      "directory": "followup_v2/figures_v1",
+      "planned_cells": 24,
+      "png_sha256": "b346e11e6832266aac3702cd5d2a7eab769d34797572bd64aaf85d5962f69723",
+      "pdf_sha256": "c30521443af9ceb0c5869e93f85a357e1be4b050c7d43ca80b2f762ffde1e174",
+      "csv_sha256": "e546dcb121dc85ed063a7a1f1a9e70e95280640fb2e50e319a6b9d5463e8152a",
+      "visual_review": "Root inspected rendered PNG: labels, legends, stages, scenario rows, outcome colors and readable export; first96 exposes2partial+2withheld, followup24allrecall/uncertainty."
+    }
+  ],
+  "render_warning": "Matplotlib Axes3D unavailable warning; both figures are2D and all PNG/PDF/source-data exports succeeded.",
+  "human_validation": "pending"
+}

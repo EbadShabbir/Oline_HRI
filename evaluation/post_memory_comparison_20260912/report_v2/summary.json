@@ -1,0 +1,2358 @@
+{
+  "comparison_profile": "post_memory_comparison_v1",
+  "complete": true,
+  "observed_attempts": 432,
+  "planned_attempts": 432,
+  "counterbalanced_arm_orders": [
+    [
+      "large",
+      "cascade",
+      "small"
+    ],
+    [
+      "cascade",
+      "small",
+      "large"
+    ],
+    [
+      "small",
+      "large",
+      "cascade"
+    ]
+  ],
+  "workload_sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+  "freeze_sha256": "6497504cb7a3fd29c2b3b3740aa26f1a77dad8d626cbf0fedcabed997bfc7783",
+  "arms": {
+    "cascade": {
+      "answer_constraints": {
+        "none": 144
+      },
+      "attempted": 144,
+      "calls_with_reported_duration_metadata": 243,
+      "delivered": 140,
+      "delivered_with_forbidden_citations": 3,
+      "delivered_with_forbidden_presence_signals": 0,
+      "delivered_with_lexical_missing_signals": 0,
+      "delivered_with_missing_required_citations": 42,
+      "distinct_observed_cases": 48,
+      "fallback_count": 0,
+      "generation_call_wall_seconds": {
+        "max": 37.333240934,
+        "mean": 7.122608663381944,
+        "min": 2.421506273,
+        "n": 144,
+        "p50": 6.0617831895,
+        "p95": 13.164938400549996,
+        "sum": 1025.655647527
+      },
+      "generation_models": {
+        "qwen3:0.6b": 3,
+        "qwen3:1.7b": 141
+      },
+      "generation_policies": {
+        "none": 144
+      },
+      "latency_all_seconds": {
+        "max": 38.312603441,
+        "mean": 8.915559775631944,
+        "min": 2.797452393,
+        "n": 144,
+        "p50": 7.749336847,
+        "p95": 18.772002493949994,
+        "sum": 1283.840607691
+      },
+      "latency_delivered_seconds": {
+        "max": 38.312603441,
+        "mean": 8.962048683664285,
+        "min": 2.797452393,
+        "n": 140,
+        "p50": 7.8273456495,
+        "p95": 19.05988578669997,
+        "sum": 1254.686815713
+      },
+      "latency_failed_seconds": {
+        "max": 9.844612613,
+        "mean": 7.2884479945,
+        "min": 5.910083257,
+        "n": 4,
+        "p50": 6.699548054,
+        "p95": 9.37384353875,
+        "sum": 29.153791978
+      },
+      "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+      "model_call_count": 243,
+      "observed_repetitions": [
+        1,
+        2,
+        3
+      ],
+      "ollama_decode_seconds": {
+        "max": 20.131286,
+        "mean": 7.075936618041666,
+        "min": 1.414863,
+        "n": 144,
+        "p50": 6.610754,
+        "p95": 14.148807999999999,
+        "sum": 1018.934872998
+      },
+      "ollama_load_seconds": {
+        "max": 26.177862137,
+        "mean": 1.156593436388889,
+        "min": 0.001395394,
+        "n": 144,
+        "p50": 0.0038356995,
+        "p95": 9.915147996499996,
+        "sum": 166.54945484
+      },
+      "ollama_prefill_seconds": {
+        "max": 2.256717,
+        "mean": 0.4565001041527778,
+        "min": 0.121241,
+        "n": 144,
+        "p50": 0.3738535,
+        "p95": 1.0663015999999992,
+        "sum": 65.736014998
+      },
+      "planned": 144,
+      "requests_supplied_forbidden_ids": 3,
+      "requests_with_unknown_supplied_evidence": 0,
+      "response_transforms": {
+        "none": 144
+      },
+      "retrieval_requests": 33,
+      "retrieval_seconds": {
+        "max": 0.113626042,
+        "mean": 0.01602458358333333,
+        "min": 0.0,
+        "n": 144,
+        "p50": 0.0,
+        "p95": 0.07547776974999998,
+        "sum": 2.307540036
+      },
+      "routing_seconds": {
+        "max": 28.481875073,
+        "mean": 1.7478203665694445,
+        "min": 0.000276166,
+        "n": 144,
+        "p50": 1.334050982,
+        "p95": 3.1829257506999995,
+        "sum": 251.686132786
+      },
+      "semantic_correctness_rate": null,
+      "semantic_quality": "pending_blinded_review",
+      "technical_failures": 4,
+      "unaccounted_wall_seconds": {
+        "max": 0.062132532,
+        "mean": 0.02910616209722222,
+        "min": 0.020643894,
+        "n": 144,
+        "p50": 0.0276650045,
+        "p95": 0.04008748025,
+        "sum": 4.191287342
+      },
+      "unattempted": 0
+    },
+    "large": {
+      "answer_constraints": {
+        "none": 144
+      },
+      "attempted": 144,
+      "calls_with_reported_duration_metadata": 243,
+      "delivered": 139,
+      "delivered_with_forbidden_citations": 3,
+      "delivered_with_forbidden_presence_signals": 0,
+      "delivered_with_lexical_missing_signals": 0,
+      "delivered_with_missing_required_citations": 40,
+      "distinct_observed_cases": 48,
+      "fallback_count": 0,
+      "generation_call_wall_seconds": {
+        "max": 31.729465124,
+        "mean": 8.901327842270833,
+        "min": 2.375139824,
+        "n": 144,
+        "p50": 7.1971629815,
+        "p95": 19.93118425665,
+        "sum": 1281.791209287
+      },
+      "generation_models": {
+        "qwen3:1.7b": 144
+      },
+      "generation_policies": {
+        "fixed_generator": 139,
+        "none": 5
+      },
+      "latency_all_seconds": {
+        "max": 50.311104559,
+        "mean": 11.254598364909722,
+        "min": 3.034148079,
+        "n": 144,
+        "p50": 8.9550528155,
+        "p95": 25.429903025049995,
+        "sum": 1620.662164547
+      },
+      "latency_delivered_seconds": {
+        "max": 50.311104559,
+        "mean": 11.242268680719425,
+        "min": 3.034148079,
+        "n": 139,
+        "p50": 8.984254228,
+        "p95": 25.835963429699987,
+        "sum": 1562.67534662
+      },
+      "latency_failed_seconds": {
+        "max": 23.306651127,
+        "mean": 11.5973635854,
+        "min": 3.960383051,
+        "n": 5,
+        "p50": 8.500620673,
+        "p95": 21.933042627,
+        "sum": 57.986817927
+      },
+      "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+      "model_call_count": 243,
+      "observed_repetitions": [
+        1,
+        2,
+        3
+      ],
+      "ollama_decode_seconds": {
+        "max": 36.395918,
+        "mean": 9.9659130346875,
+        "min": 2.285596,
+        "n": 144,
+        "p50": 8.089015,
+        "p95": 21.85365705,
+        "sum": 1435.091476995
+      },
+      "ollama_load_seconds": {
+        "max": 27.324570151,
+        "mean": 0.5057006217222222,
+        "min": 0.001417088,
+        "n": 144,
+        "p50": 0.0039582045,
+        "p95": 0.006015806449999999,
+        "sum": 72.820889528
+      },
+      "ollama_prefill_seconds": {
+        "max": 2.224393,
+        "mean": 0.5477573472083334,
+        "min": 0.128805,
+        "n": 144,
+        "p50": 0.5072479999999999,
+        "p95": 1.1421185999999992,
+        "sum": 78.877057998
+      },
+      "planned": 144,
+      "requests_supplied_forbidden_ids": 3,
+      "requests_with_unknown_supplied_evidence": 0,
+      "response_transforms": {
+        "none": 144
+      },
+      "retrieval_requests": 33,
+      "retrieval_seconds": {
+        "max": 0.115429891,
+        "mean": 0.016915025645833335,
+        "min": 0.0,
+        "n": 144,
+        "p50": 0.0,
+        "p95": 0.08211231494999999,
+        "sum": 2.435763693
+      },
+      "routing_seconds": {
+        "max": 36.073122432,
+        "mean": 2.3064633332777777,
+        "min": 0.000201349,
+        "n": 144,
+        "p50": 1.481356595,
+        "p95": 5.305209310099999,
+        "sum": 332.130719992
+      },
+      "semantic_correctness_rate": null,
+      "semantic_quality": "pending_blinded_review",
+      "technical_failures": 5,
+      "unaccounted_wall_seconds": {
+        "max": 0.048981814,
+        "mean": 0.029892163715277777,
+        "min": 0.021196439,
+        "n": 144,
+        "p50": 0.028609322,
+        "p95": 0.039009866399999996,
+        "sum": 4.304471575
+      },
+      "unattempted": 0
+    },
+    "small": {
+      "answer_constraints": {
+        "none": 144
+      },
+      "attempted": 144,
+      "calls_with_reported_duration_metadata": 243,
+      "delivered": 135,
+      "delivered_with_forbidden_citations": 3,
+      "delivered_with_forbidden_presence_signals": 0,
+      "delivered_with_lexical_missing_signals": 0,
+      "delivered_with_missing_required_citations": 27,
+      "distinct_observed_cases": 48,
+      "fallback_count": 0,
+      "generation_call_wall_seconds": {
+        "max": 4.70432182,
+        "mean": 1.7021964937986112,
+        "min": 0.691018806,
+        "n": 144,
+        "p50": 1.561030638,
+        "p95": 2.741873921,
+        "sum": 245.116295107
+      },
+      "generation_models": {
+        "qwen3:0.6b": 144
+      },
+      "generation_policies": {
+        "fixed_generator": 135,
+        "none": 9
+      },
+      "latency_all_seconds": {
+        "max": 11.671658036,
+        "mean": 2.314023619111111,
+        "min": 1.014101612,
+        "n": 144,
+        "p50": 2.090270982,
+        "p95": 3.2704601302,
+        "sum": 333.219401152
+      },
+      "latency_delivered_seconds": {
+        "max": 11.671658036,
+        "mean": 2.2759659365555556,
+        "min": 1.014101612,
+        "n": 135,
+        "p50": 2.02138746,
+        "p95": 3.2810350124,
+        "sum": 307.255401435
+      },
+      "latency_failed_seconds": {
+        "max": 3.270993466,
+        "mean": 2.8848888574444445,
+        "min": 2.61548358,
+        "n": 9,
+        "p50": 2.771038997,
+        "p95": 3.2678254388,
+        "sum": 25.963999717
+      },
+      "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+      "model_call_count": 243,
+      "observed_repetitions": [
+        1,
+        2,
+        3
+      ],
+      "ollama_decode_seconds": {
+        "max": 4.759911,
+        "mean": 1.7992745555416667,
+        "min": 0.822477,
+        "n": 144,
+        "p50": 1.7064664999999999,
+        "p95": 2.8389650499999997,
+        "sum": 259.095535998
+      },
+      "ollama_load_seconds": {
+        "max": 9.535938296,
+        "mean": 0.1969624065763889,
+        "min": 0.001334005,
+        "n": 144,
+        "p50": 0.003498756,
+        "p95": 0.005892715599999998,
+        "sum": 28.362586547
+      },
+      "ollama_prefill_seconds": {
+        "max": 0.825,
+        "mean": 0.11406336802777778,
+        "min": 0.029521,
+        "n": 144,
+        "p50": 0.0973325,
+        "p95": 0.23150364999999995,
+        "sum": 16.425124996
+      },
+      "planned": 144,
+      "requests_supplied_forbidden_ids": 3,
+      "requests_with_unknown_supplied_evidence": 0,
+      "response_transforms": {
+        "none": 144
+      },
+      "retrieval_requests": 57,
+      "retrieval_seconds": {
+        "max": 0.107842715,
+        "mean": 0.02750917322916667,
+        "min": 0.0,
+        "n": 144,
+        "p50": 0.0,
+        "p95": 0.08890988819999998,
+        "sum": 3.961320945
+      },
+      "routing_seconds": {
+        "max": 10.641828302,
+        "mean": 0.5560986466041666,
+        "min": 0.000196997,
+        "n": 144,
+        "p50": 0.4995644685,
+        "p95": 0.54755094445,
+        "sum": 80.078205111
+      },
+      "semantic_correctness_rate": null,
+      "semantic_quality": "pending_blinded_review",
+      "technical_failures": 9,
+      "unaccounted_wall_seconds": {
+        "max": 0.055576228,
+        "mean": 0.028219305479166665,
+        "min": 0.02049224,
+        "n": 144,
+        "p50": 0.026952754500000002,
+        "p95": 0.03779254519999999,
+        "sum": 4.063579989
+      },
+      "unattempted": 0
+    }
+  },
+  "by_stratum": {
+    "cascade": {
+      "general_multiconstraint": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 69,
+        "delivered": 36,
+        "delivered_with_forbidden_citations": 0,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 0,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 37.333240934,
+          "mean": 9.272783104194444,
+          "min": 2.918734778,
+          "n": 36,
+          "p50": 7.0539768585000004,
+          "p95": 29.85017241625,
+          "sum": 333.820191751
+        },
+        "generation_models": {
+          "qwen3:1.7b": 36
+        },
+        "generation_policies": {
+          "none": 36
+        },
+        "latency_all_seconds": {
+          "max": 38.312603441,
+          "mean": 10.787195234083335,
+          "min": 2.943032642,
+          "n": 36,
+          "p50": 8.695525136,
+          "p95": 30.6623971255,
+          "sum": 388.339028427
+        },
+        "latency_delivered_seconds": {
+          "max": 38.312603441,
+          "mean": 10.787195234083335,
+          "min": 2.943032642,
+          "n": 36,
+          "p50": 8.695525136,
+          "p95": 30.6623971255,
+          "sum": 388.339028427
+        },
+        "latency_failed_seconds": {
+          "max": null,
+          "mean": null,
+          "min": null,
+          "n": 0,
+          "p50": null,
+          "p95": null,
+          "sum": 0
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 69,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 18.170855,
+          "mean": 8.29648777775,
+          "min": 2.630262,
+          "n": 36,
+          "p50": 8.0120895,
+          "p95": 15.828778,
+          "sum": 298.673559999
+        },
+        "ollama_load_seconds": {
+          "max": 21.983386378,
+          "mean": 1.7948782080833334,
+          "min": 0.001528227,
+          "n": 36,
+          "p50": 0.004510308,
+          "p95": 21.11701568225,
+          "sum": 64.615615491
+        },
+        "ollama_prefill_seconds": {
+          "max": 1.228604,
+          "mean": 0.4505286110833333,
+          "min": 0.207373,
+          "n": 36,
+          "p50": 0.4095755,
+          "p95": 0.8505345,
+          "sum": 16.219029999
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 0,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 0,
+        "retrieval_seconds": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.0,
+          "p95": 0.0,
+          "sum": 0.0
+        },
+        "routing_seconds": {
+          "max": 5.137944432,
+          "mean": 1.4861527505833334,
+          "min": 0.000621423,
+          "n": 36,
+          "p50": 1.372627794,
+          "p95": 2.6930818765,
+          "sum": 53.501499021
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 0,
+        "unaccounted_wall_seconds": {
+          "max": 0.062132532,
+          "mean": 0.028259379305555554,
+          "min": 0.021599173,
+          "n": 36,
+          "p50": 0.026708816,
+          "p95": 0.03306608,
+          "sum": 1.017337655
+        },
+        "unattempted": 0
+      },
+      "personal_recall": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 51,
+        "delivered": 35,
+        "delivered_with_forbidden_citations": 3,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 12,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 11.16750309,
+          "mean": 4.910956956055555,
+          "min": 2.633835709,
+          "n": 36,
+          "p50": 3.9959124115,
+          "p95": 7.83669620275,
+          "sum": 176.794450418
+        },
+        "generation_models": {
+          "qwen3:1.7b": 36
+        },
+        "generation_policies": {
+          "none": 36
+        },
+        "latency_all_seconds": {
+          "max": 32.20247174,
+          "mean": 7.829518705833333,
+          "min": 2.797452393,
+          "n": 36,
+          "p50": 5.4889201409999995,
+          "p95": 28.504068240000002,
+          "sum": 281.86267341
+        },
+        "latency_delivered_seconds": {
+          "max": 32.20247174,
+          "mean": 7.861614894057142,
+          "min": 2.797452393,
+          "n": 35,
+          "p50": 5.486579186,
+          "p95": 28.599028642399993,
+          "sum": 275.156521292
+        },
+        "latency_failed_seconds": {
+          "max": 6.706152118,
+          "mean": 6.706152118,
+          "min": 6.706152118,
+          "n": 1,
+          "p50": 6.706152118,
+          "p95": 6.706152118,
+          "sum": 6.706152118
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 51,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 10.64151,
+          "mean": 5.0206488333333334,
+          "min": 2.17407,
+          "n": 36,
+          "p50": 4.6338185,
+          "p95": 8.330899500000001,
+          "sum": 180.743358
+        },
+        "ollama_load_seconds": {
+          "max": 26.177862137,
+          "mean": 1.9953795690277778,
+          "min": 0.001563455,
+          "n": 36,
+          "p50": 0.002721931,
+          "p95": 22.342472851750003,
+          "sum": 71.833664485
+        },
+        "ollama_prefill_seconds": {
+          "max": 2.256717,
+          "mean": 0.6090599722222222,
+          "min": 0.121241,
+          "n": 36,
+          "p50": 0.4609395,
+          "p95": 1.5525475,
+          "sum": 21.926159
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 3,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 21,
+        "retrieval_seconds": {
+          "max": 0.080821413,
+          "mean": 0.036586664916666664,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.053053257,
+          "p95": 0.07105307225,
+          "sum": 1.317119937
+        },
+        "routing_seconds": {
+          "max": 28.481875073,
+          "mean": 2.850872219666667,
+          "min": 0.000292967,
+          "n": 36,
+          "p50": 0.000514364,
+          "p95": 24.54455784,
+          "sum": 102.631399908
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 1,
+        "unaccounted_wall_seconds": {
+          "max": 0.04188207,
+          "mean": 0.031102865194444447,
+          "min": 0.022875377,
+          "n": 36,
+          "p50": 0.030885917,
+          "p95": 0.041188141,
+          "sum": 1.119703147
+        },
+        "unattempted": 0
+      },
+      "personal_temporal_synthesis": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 66,
+        "delivered": 33,
+        "delivered_with_forbidden_citations": 0,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 30,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 17.176567031,
+          "mean": 8.110584394333333,
+          "min": 4.111584049,
+          "n": 36,
+          "p50": 6.8468858465,
+          "p95": 13.75833908225,
+          "sum": 291.981038196
+        },
+        "generation_models": {
+          "qwen3:1.7b": 36
+        },
+        "generation_policies": {
+          "none": 36
+        },
+        "latency_all_seconds": {
+          "max": 20.844047987,
+          "mean": 9.864899367361112,
+          "min": 5.256151901,
+          "n": 36,
+          "p50": 9.2379840475,
+          "p95": 15.496461741000001,
+          "sum": 355.136377225
+        },
+        "latency_delivered_seconds": {
+          "max": 20.844047987,
+          "mean": 10.081476889848485,
+          "min": 5.256151901,
+          "n": 33,
+          "p50": 9.296196993,
+          "p95": 15.679271734199999,
+          "sum": 332.688737365
+        },
+        "latency_failed_seconds": {
+          "max": 9.844612613,
+          "mean": 7.482546620000001,
+          "min": 5.910083257,
+          "n": 3,
+          "p50": 6.69294399,
+          "p95": 9.5294457507,
+          "sum": 22.447639860000002
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 66,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 20.131286,
+          "mean": 9.138797638888889,
+          "min": 4.670786,
+          "n": 36,
+          "p50": 8.5406775,
+          "p95": 14.813471,
+          "sum": 328.996715
+        },
+        "ollama_load_seconds": {
+          "max": 0.012414634,
+          "mean": 0.004028636111111111,
+          "min": 0.001395394,
+          "n": 36,
+          "p50": 0.0037598015,
+          "p95": 0.006052501,
+          "sum": 0.1450309
+        },
+        "ollama_prefill_seconds": {
+          "max": 1.488505,
+          "mean": 0.46223713886111106,
+          "min": 0.252123,
+          "n": 36,
+          "p50": 0.393532,
+          "p95": 0.976712,
+          "sum": 16.640536999
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 0,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 6,
+        "retrieval_seconds": {
+          "max": 0.113626042,
+          "mean": 0.01681552125,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.0,
+          "p95": 0.10814529825,
+          "sum": 0.605358765
+        },
+        "routing_seconds": {
+          "max": 4.536969305,
+          "mean": 1.7074925685000002,
+          "min": 0.000481737,
+          "n": 36,
+          "p50": 1.5553903715,
+          "p95": 3.2568157104999997,
+          "sum": 61.469732466
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 3,
+        "unaccounted_wall_seconds": {
+          "max": 0.048649949,
+          "mean": 0.030006883277777778,
+          "min": 0.022090833,
+          "n": 36,
+          "p50": 0.0285058695,
+          "p95": 0.043763203,
+          "sum": 1.080247798
+        },
+        "unattempted": 0
+      },
+      "routine_general": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 57,
+        "delivered": 36,
+        "delivered_with_forbidden_citations": 0,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 0,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 14.536296586,
+          "mean": 6.196110198944444,
+          "min": 2.421506273,
+          "n": 36,
+          "p50": 5.7100854954999996,
+          "p95": 11.96105870825,
+          "sum": 223.059967162
+        },
+        "generation_models": {
+          "qwen3:0.6b": 3,
+          "qwen3:1.7b": 33
+        },
+        "generation_policies": {
+          "none": 36
+        },
+        "latency_all_seconds": {
+          "max": 14.570334045,
+          "mean": 7.180625795249999,
+          "min": 3.216418343,
+          "n": 36,
+          "p50": 6.9739430715,
+          "p95": 12.706411986,
+          "sum": 258.502528629
+        },
+        "latency_delivered_seconds": {
+          "max": 14.570334045,
+          "mean": 7.180625795249999,
+          "min": 3.216418343,
+          "n": 36,
+          "p50": 6.9739430715,
+          "p95": 12.706411986,
+          "sum": 258.502528629
+        },
+        "latency_failed_seconds": {
+          "max": null,
+          "mean": null,
+          "min": null,
+          "n": 0,
+          "p50": null,
+          "p95": null,
+          "sum": 0
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 57,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 14.204389,
+          "mean": 5.847812222194445,
+          "min": 1.414863,
+          "n": 36,
+          "p50": 4.808980999999999,
+          "p95": 11.91187275,
+          "sum": 210.52123999900002
+        },
+        "ollama_load_seconds": {
+          "max": 10.440560719,
+          "mean": 0.8320873323333333,
+          "min": 0.001552356,
+          "n": 36,
+          "p50": 0.004059151,
+          "p95": 9.5454320345,
+          "sum": 29.955143964
+        },
+        "ollama_prefill_seconds": {
+          "max": 0.572811,
+          "mean": 0.30417469444444445,
+          "min": 0.145318,
+          "n": 36,
+          "p50": 0.2859125,
+          "p95": 0.46417425,
+          "sum": 10.950289
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 0,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 6,
+        "retrieval_seconds": {
+          "max": 0.076013023,
+          "mean": 0.010696148166666666,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.0,
+          "p95": 0.06814294175,
+          "sum": 0.385061334
+        },
+        "routing_seconds": {
+          "max": 2.985117916,
+          "mean": 0.9467639275277777,
+          "min": 0.000276166,
+          "n": 36,
+          "p50": 1.1222673675000001,
+          "p95": 2.22443326375,
+          "sum": 34.083501391
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 0,
+        "unaccounted_wall_seconds": {
+          "max": 0.033612075,
+          "mean": 0.027055520611111113,
+          "min": 0.020643894,
+          "n": 36,
+          "p50": 0.026239337,
+          "p95": 0.032807562,
+          "sum": 0.973998742
+        },
+        "unattempted": 0
+      }
+    },
+    "large": {
+      "general_multiconstraint": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 69,
+        "delivered": 36,
+        "delivered_with_forbidden_citations": 0,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 0,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 23.725429142,
+          "mean": 9.894055762138889,
+          "min": 2.978199943,
+          "n": 36,
+          "p50": 8.3036732755,
+          "p95": 20.386227568,
+          "sum": 356.186007437
+        },
+        "generation_models": {
+          "qwen3:1.7b": 36
+        },
+        "generation_policies": {
+          "fixed_generator": 36
+        },
+        "latency_all_seconds": {
+          "max": 28.127150314,
+          "mean": 12.22818582,
+          "min": 4.606891685,
+          "n": 36,
+          "p50": 10.8327641905,
+          "p95": 24.693399153250002,
+          "sum": 440.21468952
+        },
+        "latency_delivered_seconds": {
+          "max": 28.127150314,
+          "mean": 12.22818582,
+          "min": 4.606891685,
+          "n": 36,
+          "p50": 10.8327641905,
+          "p95": 24.693399153250002,
+          "sum": 440.21468952
+        },
+        "latency_failed_seconds": {
+          "max": null,
+          "mean": null,
+          "min": null,
+          "n": 0,
+          "p50": null,
+          "p95": null,
+          "sum": 0
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 69,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 27.203036,
+          "mean": 11.440414944416666,
+          "min": 3.743306,
+          "n": 36,
+          "p50": 9.966299,
+          "p95": 23.78573325,
+          "sum": 411.854937999
+        },
+        "ollama_load_seconds": {
+          "max": 0.010889724,
+          "mean": 0.004279891972222222,
+          "min": 0.00192171,
+          "n": 36,
+          "p50": 0.004128721,
+          "p95": 0.0057763385,
+          "sum": 0.154076111
+        },
+        "ollama_prefill_seconds": {
+          "max": 0.654861,
+          "mean": 0.5233221111111112,
+          "min": 0.315584,
+          "n": 36,
+          "p50": 0.5301294999999999,
+          "p95": 0.6322615,
+          "sum": 18.839596
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 0,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 0,
+        "retrieval_seconds": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.0,
+          "p95": 0.0,
+          "sum": 0.0
+        },
+        "routing_seconds": {
+          "max": 7.448019461,
+          "mean": 2.30595703425,
+          "min": 0.000537164,
+          "n": 36,
+          "p50": 1.9607263719999999,
+          "p95": 4.386044953500001,
+          "sum": 83.014453233
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 0,
+        "unaccounted_wall_seconds": {
+          "max": 0.039096039,
+          "mean": 0.02817302361111111,
+          "min": 0.022337741,
+          "n": 36,
+          "p50": 0.026995775,
+          "p95": 0.033764333,
+          "sum": 1.01422885
+        },
+        "unattempted": 0
+      },
+      "personal_recall": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 51,
+        "delivered": 35,
+        "delivered_with_forbidden_citations": 3,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 12,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 22.030363983,
+          "mean": 7.42911072775,
+          "min": 3.069981857,
+          "n": 36,
+          "p50": 5.4842534545,
+          "p95": 17.2035187745,
+          "sum": 267.447986199
+        },
+        "generation_models": {
+          "qwen3:1.7b": 36
+        },
+        "generation_policies": {
+          "fixed_generator": 35,
+          "none": 1
+        },
+        "latency_all_seconds": {
+          "max": 50.311104559,
+          "mean": 10.923547221944444,
+          "min": 3.178139265,
+          "n": 36,
+          "p50": 7.110041252,
+          "p95": 29.4818109715,
+          "sum": 393.24769999
+        },
+        "latency_delivered_seconds": {
+          "max": 50.311104559,
+          "mean": 11.122494769685714,
+          "min": 3.178139265,
+          "n": 35,
+          "p50": 7.523390571,
+          "p95": 29.5326477064,
+          "sum": 389.287316939
+        },
+        "latency_failed_seconds": {
+          "max": 3.960383051,
+          "mean": 3.960383051,
+          "min": 3.960383051,
+          "n": 1,
+          "p50": 3.960383051,
+          "p95": 3.960383051,
+          "sum": 3.960383051
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 51,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 21.696073,
+          "mean": 7.996284249972222,
+          "min": 2.285596,
+          "n": 36,
+          "p50": 5.767127,
+          "p95": 20.700165249999998,
+          "sum": 287.866232999
+        },
+        "ollama_load_seconds": {
+          "max": 27.324570151,
+          "mean": 2.0101264086666664,
+          "min": 0.001417088,
+          "n": 36,
+          "p50": 0.0025680905,
+          "p95": 22.180594526,
+          "sum": 72.364550712
+        },
+        "ollama_prefill_seconds": {
+          "max": 2.224393,
+          "mean": 0.7143434999722222,
+          "min": 0.128805,
+          "n": 36,
+          "p50": 0.5042260000000001,
+          "p95": 1.80227775,
+          "sum": 25.716365999
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 3,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 21,
+        "retrieval_seconds": {
+          "max": 0.080624707,
+          "mean": 0.03790483125,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.054509153000000005,
+          "p95": 0.07643999325,
+          "sum": 1.364573925
+        },
+        "routing_seconds": {
+          "max": 36.073122432,
+          "mean": 3.4255109412222224,
+          "min": 0.000203301,
+          "n": 36,
+          "p50": 0.000484219,
+          "p95": 24.748929605500003,
+          "sum": 123.318393884
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 1,
+        "unaccounted_wall_seconds": {
+          "max": 0.048981814,
+          "mean": 0.031020721722222224,
+          "min": 0.021196439,
+          "n": 36,
+          "p50": 0.029075492,
+          "p95": 0.043344637,
+          "sum": 1.116745982
+        },
+        "unattempted": 0
+      },
+      "personal_temporal_synthesis": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 66,
+        "delivered": 32,
+        "delivered_with_forbidden_citations": 0,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 28,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 31.729465124,
+          "mean": 11.263600446027777,
+          "min": 4.345681129,
+          "n": 36,
+          "p50": 8.519994426499998,
+          "p95": 24.4754202955,
+          "sum": 405.489616057
+        },
+        "generation_models": {
+          "qwen3:1.7b": 36
+        },
+        "generation_policies": {
+          "fixed_generator": 32,
+          "none": 4
+        },
+        "latency_all_seconds": {
+          "max": 37.659707174,
+          "mean": 13.46804900775,
+          "min": 5.780554449,
+          "n": 36,
+          "p50": 10.110705357499999,
+          "p95": 28.4811794375,
+          "sum": 484.849764279
+        },
+        "latency_delivered_seconds": {
+          "max": 37.659707174,
+          "mean": 13.46322904384375,
+          "min": 5.979433854,
+          "n": 32,
+          "p50": 10.110705357499999,
+          "p95": 28.9994242995,
+          "sum": 430.823329403
+        },
+        "latency_failed_seconds": {
+          "max": 23.306651127,
+          "mean": 13.506608718999999,
+          "min": 5.780554449,
+          "n": 4,
+          "p50": 12.46961465,
+          "p95": 22.276444751999996,
+          "sum": 54.026434875999996
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 66,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 36.395918,
+          "mean": 12.650656555527778,
+          "min": 4.899149,
+          "n": 36,
+          "p50": 9.30687,
+          "p95": 27.652477750000003,
+          "sum": 455.423635999
+        },
+        "ollama_load_seconds": {
+          "max": 0.033088607,
+          "mean": 0.004902889861111111,
+          "min": 0.001720136,
+          "n": 36,
+          "p50": 0.0041929485,
+          "p95": 0.00604218375,
+          "sum": 0.176504035
+        },
+        "ollama_prefill_seconds": {
+          "max": 0.884922,
+          "mean": 0.5391128055277777,
+          "min": 0.34544,
+          "n": 36,
+          "p50": 0.524221,
+          "p95": 0.6780685000000001,
+          "sum": 19.408060999
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 0,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 8,
+        "retrieval_seconds": {
+          "max": 0.115429891,
+          "mean": 0.021704912972222223,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.0,
+          "p95": 0.1122946665,
+          "sum": 0.781376867
+        },
+        "routing_seconds": {
+          "max": 5.783344771,
+          "mean": 2.150539313388889,
+          "min": 0.00036036,
+          "n": 36,
+          "p50": 1.946035566,
+          "p95": 4.4587872475,
+          "sum": 77.419415282
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 4,
+        "unaccounted_wall_seconds": {
+          "max": 0.048869428,
+          "mean": 0.032204335361111114,
+          "min": 0.022398039,
+          "n": 36,
+          "p50": 0.032198544999999995,
+          "p95": 0.045996564,
+          "sum": 1.159356073
+        },
+        "unattempted": 0
+      },
+      "routine_general": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 57,
+        "delivered": 36,
+        "delivered_with_forbidden_citations": 0,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 0,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 18.67819507,
+          "mean": 7.018544433166666,
+          "min": 2.375139824,
+          "n": 36,
+          "p50": 5.861390773,
+          "p95": 13.49101586275,
+          "sum": 252.667599594
+        },
+        "generation_models": {
+          "qwen3:1.7b": 36
+        },
+        "generation_policies": {
+          "fixed_generator": 36
+        },
+        "latency_all_seconds": {
+          "max": 21.304779331,
+          "mean": 8.398611409944444,
+          "min": 3.034148079,
+          "n": 36,
+          "p50": 7.2147566055,
+          "p95": 15.65049122225,
+          "sum": 302.350010758
+        },
+        "latency_delivered_seconds": {
+          "max": 21.304779331,
+          "mean": 8.398611409944444,
+          "min": 3.034148079,
+          "n": 36,
+          "p50": 7.2147566055,
+          "p95": 15.65049122225,
+          "sum": 302.350010758
+        },
+        "latency_failed_seconds": {
+          "max": null,
+          "mean": null,
+          "min": null,
+          "n": 0,
+          "p50": null,
+          "p95": null,
+          "sum": 0
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 57,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 20.51343,
+          "mean": 7.776296388833334,
+          "min": 2.671807,
+          "n": 36,
+          "p50": 6.7204495,
+          "p95": 14.949914249999999,
+          "sum": 279.946669998
+        },
+        "ollama_load_seconds": {
+          "max": 0.005865347,
+          "mean": 0.0034932963888888884,
+          "min": 0.001546946,
+          "n": 36,
+          "p50": 0.0039432115,
+          "p95": 0.0054351015,
+          "sum": 0.12575867
+        },
+        "ollama_prefill_seconds": {
+          "max": 1.211644,
+          "mean": 0.41425097222222224,
+          "min": 0.203665,
+          "n": 36,
+          "p50": 0.368237,
+          "p95": 0.61732675,
+          "sum": 14.913035
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 0,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 4,
+        "retrieval_seconds": {
+          "max": 0.105963704,
+          "mean": 0.008050358361111112,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.0,
+          "p95": 0.06167241775,
+          "sum": 0.289812901
+        },
+        "routing_seconds": {
+          "max": 5.417462946,
+          "mean": 1.34384604425,
+          "min": 0.000201349,
+          "n": 36,
+          "p50": 1.1385859735000001,
+          "p95": 4.1365906827500005,
+          "sum": 48.378457593
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 0,
+        "unaccounted_wall_seconds": {
+          "max": 0.035031394,
+          "mean": 0.028170574166666667,
+          "min": 0.024626851,
+          "n": 36,
+          "p50": 0.0278101335,
+          "p95": 0.03421885075,
+          "sum": 1.01414067
+        },
+        "unattempted": 0
+      }
+    },
+    "small": {
+      "general_multiconstraint": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 69,
+        "delivered": 36,
+        "delivered_with_forbidden_citations": 0,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 0,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 2.622025434,
+          "mean": 1.8727188014444447,
+          "min": 1.264321982,
+          "n": 36,
+          "p50": 1.753907293,
+          "p95": 2.563301488,
+          "sum": 67.417876852
+        },
+        "generation_models": {
+          "qwen3:0.6b": 36
+        },
+        "generation_policies": {
+          "fixed_generator": 36
+        },
+        "latency_all_seconds": {
+          "max": 3.163803055,
+          "mean": 2.3740998971388887,
+          "min": 1.317387501,
+          "n": 36,
+          "p50": 2.2990054315,
+          "p95": 3.085526226,
+          "sum": 85.467596297
+        },
+        "latency_delivered_seconds": {
+          "max": 3.163803055,
+          "mean": 2.3740998971388887,
+          "min": 1.317387501,
+          "n": 36,
+          "p50": 2.2990054315,
+          "p95": 3.085526226,
+          "sum": 85.467596297
+        },
+        "latency_failed_seconds": {
+          "max": null,
+          "mean": null,
+          "min": null,
+          "n": 0,
+          "p50": null,
+          "p95": null,
+          "sum": 0
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 69,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 2.84365,
+          "mean": 2.060040388861111,
+          "min": 1.220744,
+          "n": 36,
+          "p50": 1.9771265,
+          "p95": 2.77022175,
+          "sum": 74.161453999
+        },
+        "ollama_load_seconds": {
+          "max": 0.008930217,
+          "mean": 0.004175397583333334,
+          "min": 0.001438368,
+          "n": 36,
+          "p50": 0.0040370695000000005,
+          "p95": 0.00615327025,
+          "sum": 0.150314313
+        },
+        "ollama_prefill_seconds": {
+          "max": 0.166534,
+          "mean": 0.10337888888888888,
+          "min": 0.040784,
+          "n": 36,
+          "p50": 0.104143,
+          "p95": 0.13917575,
+          "sum": 3.72164
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 0,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 0,
+        "retrieval_seconds": {
+          "max": 0.0,
+          "mean": 0.0,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.0,
+          "p95": 0.0,
+          "sum": 0.0
+        },
+        "routing_seconds": {
+          "max": 0.588532476,
+          "mean": 0.4753780035833333,
+          "min": 0.000471816,
+          "n": 36,
+          "p50": 0.515874209,
+          "p95": 0.54969973475,
+          "sum": 17.113608129
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 0,
+        "unaccounted_wall_seconds": {
+          "max": 0.032526657,
+          "mean": 0.026003092111111112,
+          "min": 0.021219007,
+          "n": 36,
+          "p50": 0.0253310675,
+          "p95": 0.03108291425,
+          "sum": 0.936111316
+        },
+        "unattempted": 0
+      },
+      "personal_recall": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 51,
+        "delivered": 33,
+        "delivered_with_forbidden_citations": 3,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 3,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 2.80736996,
+          "mean": 1.5812616653055556,
+          "min": 0.912173499,
+          "n": 36,
+          "p50": 1.5032402075,
+          "p95": 2.68738036925,
+          "sum": 56.925419951
+        },
+        "generation_models": {
+          "qwen3:0.6b": 36
+        },
+        "generation_policies": {
+          "fixed_generator": 33,
+          "none": 3
+        },
+        "latency_all_seconds": {
+          "max": 11.671658036,
+          "mean": 2.6902036408055556,
+          "min": 1.014101612,
+          "n": 36,
+          "p50": 1.771534521,
+          "p95": 11.0560738865,
+          "sum": 96.847331069
+        },
+        "latency_delivered_seconds": {
+          "max": 11.671658036,
+          "mean": 2.6834200062424243,
+          "min": 1.014101612,
+          "n": 33,
+          "p50": 1.650495118,
+          "p95": 11.056537586600001,
+          "sum": 88.552860206
+        },
+        "latency_failed_seconds": {
+          "max": 2.792593072,
+          "mean": 2.7648236209999997,
+          "min": 2.730838794,
+          "n": 3,
+          "p50": 2.771038997,
+          "p95": 2.7904376644999997,
+          "sum": 8.294470862999999
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 51,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 2.658092,
+          "mean": 1.5548431111111112,
+          "min": 0.822477,
+          "n": 36,
+          "p50": 1.388373,
+          "p95": 2.50494975,
+          "sum": 55.974352
+        },
+        "ollama_load_seconds": {
+          "max": 9.535938296,
+          "mean": 0.7769083603333333,
+          "min": 0.001334005,
+          "n": 36,
+          "p50": 0.002947575,
+          "p95": 9.164435802,
+          "sum": 27.968700972
+        },
+        "ollama_prefill_seconds": {
+          "max": 0.825,
+          "mean": 0.16007299994444446,
+          "min": 0.031371,
+          "n": 36,
+          "p50": 0.109926,
+          "p95": 0.5618645,
+          "sum": 5.762627998
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 3,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 33,
+        "retrieval_seconds": {
+          "max": 0.081994734,
+          "mean": 0.057074178499999996,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.060534219,
+          "p95": 0.074664486,
+          "sum": 2.054670426
+        },
+        "routing_seconds": {
+          "max": 10.641828302,
+          "mean": 1.0204874514722222,
+          "min": 0.000232292,
+          "n": 36,
+          "p50": 0.0004282815,
+          "p95": 10.0990532645,
+          "sum": 36.737548253
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 3,
+        "unaccounted_wall_seconds": {
+          "max": 0.0438532,
+          "mean": 0.03138034552777778,
+          "min": 0.021987192,
+          "n": 36,
+          "p50": 0.0312889555,
+          "p95": 0.03966792225,
+          "sum": 1.129692439
+        },
+        "unattempted": 0
+      },
+      "personal_temporal_synthesis": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 66,
+        "delivered": 33,
+        "delivered_with_forbidden_citations": 0,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 24,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 4.70432182,
+          "mean": 2.1130803599722223,
+          "min": 1.053921183,
+          "n": 36,
+          "p50": 1.861663045,
+          "p95": 4.59007374025,
+          "sum": 76.070892959
+        },
+        "generation_models": {
+          "qwen3:0.6b": 36
+        },
+        "generation_policies": {
+          "fixed_generator": 33,
+          "none": 3
+        },
+        "latency_all_seconds": {
+          "max": 5.394067256,
+          "mean": 2.6066009881388887,
+          "min": 1.563834157,
+          "n": 36,
+          "p50": 2.283929153,
+          "p95": 5.2493256187499995,
+          "sum": 93.837635573
+        },
+        "latency_delivered_seconds": {
+          "max": 5.394067256,
+          "mean": 2.5480905825454547,
+          "min": 1.563834157,
+          "n": 33,
+          "p50": 2.268570941,
+          "p95": 5.2554169728,
+          "sum": 84.086989224
+        },
+        "latency_failed_seconds": {
+          "max": 3.270993466,
+          "mean": 3.250215449666667,
+          "min": 3.216579485,
+          "n": 3,
+          "p50": 3.263073398,
+          "p95": 3.2702014592,
+          "sum": 9.750646349
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 66,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 4.759911,
+          "mean": 2.2478683888888886,
+          "min": 1.287195,
+          "n": 36,
+          "p50": 1.9803775,
+          "p95": 4.59008825,
+          "sum": 80.923262
+        },
+        "ollama_load_seconds": {
+          "max": 0.007130803,
+          "mean": 0.0035264027499999997,
+          "min": 0.001603289,
+          "n": 36,
+          "p50": 0.0034628595,
+          "p95": 0.0050330315,
+          "sum": 0.126950499
+        },
+        "ollama_prefill_seconds": {
+          "max": 0.379444,
+          "mean": 0.11942158330555556,
+          "min": 0.073675,
+          "n": 36,
+          "p50": 0.09718099999999999,
+          "p95": 0.28892525,
+          "sum": 4.299176999
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 0,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 12,
+        "retrieval_seconds": {
+          "max": 0.107842715,
+          "mean": 0.03131915408333333,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.0,
+          "p95": 0.10197829024999999,
+          "sum": 1.127489547
+        },
+        "routing_seconds": {
+          "max": 0.555125568,
+          "mean": 0.43252572794444444,
+          "min": 0.00035444,
+          "n": 36,
+          "p50": 0.5168244120000001,
+          "p95": 0.546055413,
+          "sum": 15.570926206
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 3,
+        "unaccounted_wall_seconds": {
+          "max": 0.055576228,
+          "mean": 0.02967574613888889,
+          "min": 0.02049224,
+          "n": 36,
+          "p50": 0.029437911999999997,
+          "p95": 0.046301634,
+          "sum": 1.068326861
+        },
+        "unattempted": 0
+      },
+      "routine_general": {
+        "answer_constraints": {
+          "none": 36
+        },
+        "attempted": 36,
+        "calls_with_reported_duration_metadata": 57,
+        "delivered": 33,
+        "delivered_with_forbidden_citations": 0,
+        "delivered_with_forbidden_presence_signals": 0,
+        "delivered_with_lexical_missing_signals": 0,
+        "delivered_with_missing_required_citations": 0,
+        "distinct_observed_cases": 12,
+        "fallback_count": 0,
+        "generation_call_wall_seconds": {
+          "max": 2.055510157,
+          "mean": 1.2417251484722223,
+          "min": 0.691018806,
+          "n": 36,
+          "p50": 1.1311409965,
+          "p95": 2.018912516,
+          "sum": 44.702105345
+        },
+        "generation_models": {
+          "qwen3:0.6b": 36
+        },
+        "generation_policies": {
+          "fixed_generator": 33,
+          "none": 3
+        },
+        "latency_all_seconds": {
+          "max": 2.652581715,
+          "mean": 1.585189950361111,
+          "min": 1.080466821,
+          "n": 36,
+          "p50": 1.5104149384999999,
+          "p95": 2.6243169875,
+          "sum": 57.066838213
+        },
+        "latency_delivered_seconds": {
+          "max": 2.210289957,
+          "mean": 1.489331991151515,
+          "min": 1.080466821,
+          "n": 33,
+          "p50": 1.492046371,
+          "p95": 2.1140404704,
+          "sum": 49.147955708
+        },
+        "latency_failed_seconds": {
+          "max": 2.652581715,
+          "mean": 2.639627501666667,
+          "min": 2.61548358,
+          "n": 3,
+          "p50": 2.65081721,
+          "p95": 2.6524052645,
+          "sum": 7.918882505
+        },
+        "lexical_signal_warning": "Pattern presence/absence is not semantic correctness, including negated mentions and paraphrases.",
+        "model_call_count": 57,
+        "observed_repetitions": [
+          1,
+          2,
+          3
+        ],
+        "ollama_decode_seconds": {
+          "max": 2.251697,
+          "mean": 1.3343463333055556,
+          "min": 0.92811,
+          "n": 36,
+          "p50": 1.2167375,
+          "p95": 2.1833315,
+          "sum": 48.036467999
+        },
+        "ollama_load_seconds": {
+          "max": 0.005950561,
+          "mean": 0.003239465638888889,
+          "min": 0.001530949,
+          "n": 36,
+          "p50": 0.0033625805,
+          "p95": 0.00499473075,
+          "sum": 0.116620763
+        },
+        "ollama_prefill_seconds": {
+          "max": 0.159875,
+          "mean": 0.07337999997222222,
+          "min": 0.029521,
+          "n": 36,
+          "p50": 0.07592499999999999,
+          "p95": 0.115965,
+          "sum": 2.641679999
+        },
+        "planned": 36,
+        "requests_supplied_forbidden_ids": 0,
+        "requests_with_unknown_supplied_evidence": 0,
+        "response_transforms": {
+          "none": 36
+        },
+        "retrieval_requests": 12,
+        "retrieval_seconds": {
+          "max": 0.086441083,
+          "mean": 0.021643360333333334,
+          "min": 0.0,
+          "n": 36,
+          "p50": 0.0,
+          "p95": 0.069535903,
+          "sum": 0.779160972
+        },
+        "routing_seconds": {
+          "max": 0.549737666,
+          "mean": 0.2960034034166667,
+          "min": 0.000196997,
+          "n": 36,
+          "p50": 0.48475353,
+          "p95": 0.541695706,
+          "sum": 10.656122523
+        },
+        "semantic_correctness_rate": null,
+        "semantic_quality": "pending_blinded_review",
+        "technical_failures": 3,
+        "unaccounted_wall_seconds": {
+          "max": 0.034732751,
+          "mean": 0.025818038138888888,
+          "min": 0.021820876,
+          "n": 36,
+          "p50": 0.0246122605,
+          "p95": 0.033604846,
+          "sum": 0.929449373
+        },
+        "unattempted": 0
+      }
+    }
+  },
+  "routing_contract": {
+    "cascade": "lightweight_v1: deterministic compute selection and zero/one resident/selected-model memory classifier",
+    "compute_classifier_calls": 0,
+    "counts_include_failed_attempts": true,
+    "fixed": "fixed_memory_v1: deterministic memory policy, otherwise own sole-model classifier",
+    "interrupted_without_post_request_residency_snapshot": [],
+    "observed_call_purposes": {
+      "generation": 432,
+      "memory_selector": 297
+    },
+    "residency_scope": "Actual recorded before/after snapshots; absent interrupted post-checks are unknown. Client hints are not server guarantees."
+  },
+  "review": {
+    "reviewer_types": [
+      "assistant"
+    ],
+    "human_validation_complete": false,
+    "observed_unique_outputs": 145,
+    "resolved_unique_outputs": 145,
+    "arms": {
+      "cascade": {
+        "by_repetition": {
+          "1": {
+            "conservative_correct_deliveries_per_planned": 0.2916666666666667,
+            "correct_reviewed": 14,
+            "correctness_rate": 0.2916666666666667,
+            "observed_attempts": 48,
+            "observed_correctness_rate": 0.2916666666666667,
+            "pending_observed_reviews": 0,
+            "pending_or_unattempted": 0,
+            "planned": 48,
+            "planned_attempt_coverage": 1.0,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed": 48,
+            "unattempted_planned_requests": 0
+          },
+          "2": {
+            "conservative_correct_deliveries_per_planned": 0.3333333333333333,
+            "correct_reviewed": 16,
+            "correctness_rate": 0.3333333333333333,
+            "observed_attempts": 48,
+            "observed_correctness_rate": 0.3333333333333333,
+            "pending_observed_reviews": 0,
+            "pending_or_unattempted": 0,
+            "planned": 48,
+            "planned_attempt_coverage": 1.0,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed": 48,
+            "unattempted_planned_requests": 0
+          },
+          "3": {
+            "conservative_correct_deliveries_per_planned": 0.3333333333333333,
+            "correct_reviewed": 16,
+            "correctness_rate": 0.3333333333333333,
+            "observed_attempts": 48,
+            "observed_correctness_rate": 0.3333333333333333,
+            "pending_observed_reviews": 0,
+            "pending_or_unattempted": 0,
+            "planned": 48,
+            "planned_attempt_coverage": 1.0,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed": 48,
+            "unattempted_planned_requests": 0
+          }
+        },
+        "by_stratum": {
+          "general_multiconstraint": {
+            "conservative_correct_deliveries_per_planned": 0.3055555555555556,
+            "correct_reviewed": 11,
+            "correctness_rate": 0.3055555555555556,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.3055555555555556,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          },
+          "personal_recall": {
+            "conservative_correct_deliveries_per_planned": 0.4722222222222222,
+            "correct_reviewed": 17,
+            "correctness_rate": 0.4722222222222222,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.4722222222222222,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          },
+          "personal_temporal_synthesis": {
+            "conservative_correct_deliveries_per_planned": 0.0,
+            "correct_reviewed": 0,
+            "correctness_rate": 0.0,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.0,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          },
+          "routine_general": {
+            "conservative_correct_deliveries_per_planned": 0.5,
+            "correct_reviewed": 18,
+            "correctness_rate": 0.5,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.5,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          }
+        },
+        "conservative_correct_deliveries_per_planned": 0.3194444444444444,
+        "correct_reviewed": 46,
+        "correctness_rate": 0.3194444444444444,
+        "distinct_observed_cases": 48,
+        "forbidden_or_stale_claim_attempts": 6,
+        "judgments": {
+          "appropriate_abstention": 6,
+          "complete": 40,
+          "inappropriate_abstention": 6,
+          "incorrect": 57,
+          "partial": 31,
+          "technical_failure": 4
+        },
+        "observed_attempts": 144,
+        "observed_correctness_rate": 0.3194444444444444,
+        "pending_observed_reviews": 0,
+        "pending_or_unattempted": 0,
+        "planned_attempt_coverage": 1.0,
+        "planned_attempts": 144,
+        "quality_unit_note": "144 planned attempts across 48 planned distinct cases; observed counts may be smaller. Shared scenario/profile dependencies remain; no 144-independent-observation interval.",
+        "review_status": "fully_graded_complete_coverage",
+        "reviewed_attempts": 144,
+        "unattempted_planned_requests": 0,
+        "unsupported_personal_claim_attempts": 38
+      },
+      "large": {
+        "by_repetition": {
+          "1": {
+            "conservative_correct_deliveries_per_planned": 0.2708333333333333,
+            "correct_reviewed": 13,
+            "correctness_rate": 0.2708333333333333,
+            "observed_attempts": 48,
+            "observed_correctness_rate": 0.2708333333333333,
+            "pending_observed_reviews": 0,
+            "pending_or_unattempted": 0,
+            "planned": 48,
+            "planned_attempt_coverage": 1.0,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed": 48,
+            "unattempted_planned_requests": 0
+          },
+          "2": {
+            "conservative_correct_deliveries_per_planned": 0.3125,
+            "correct_reviewed": 15,
+            "correctness_rate": 0.3125,
+            "observed_attempts": 48,
+            "observed_correctness_rate": 0.3125,
+            "pending_observed_reviews": 0,
+            "pending_or_unattempted": 0,
+            "planned": 48,
+            "planned_attempt_coverage": 1.0,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed": 48,
+            "unattempted_planned_requests": 0
+          },
+          "3": {
+            "conservative_correct_deliveries_per_planned": 0.3333333333333333,
+            "correct_reviewed": 16,
+            "correctness_rate": 0.3333333333333333,
+            "observed_attempts": 48,
+            "observed_correctness_rate": 0.3333333333333333,
+            "pending_observed_reviews": 0,
+            "pending_or_unattempted": 0,
+            "planned": 48,
+            "planned_attempt_coverage": 1.0,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed": 48,
+            "unattempted_planned_requests": 0
+          }
+        },
+        "by_stratum": {
+          "general_multiconstraint": {
+            "conservative_correct_deliveries_per_planned": 0.2222222222222222,
+            "correct_reviewed": 8,
+            "correctness_rate": 0.2222222222222222,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.2222222222222222,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          },
+          "personal_recall": {
+            "conservative_correct_deliveries_per_planned": 0.4722222222222222,
+            "correct_reviewed": 17,
+            "correctness_rate": 0.4722222222222222,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.4722222222222222,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          },
+          "personal_temporal_synthesis": {
+            "conservative_correct_deliveries_per_planned": 0.0,
+            "correct_reviewed": 0,
+            "correctness_rate": 0.0,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.0,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          },
+          "routine_general": {
+            "conservative_correct_deliveries_per_planned": 0.5277777777777778,
+            "correct_reviewed": 19,
+            "correctness_rate": 0.5277777777777778,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.5277777777777778,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          }
+        },
+        "conservative_correct_deliveries_per_planned": 0.3055555555555556,
+        "correct_reviewed": 44,
+        "correctness_rate": 0.3055555555555556,
+        "distinct_observed_cases": 48,
+        "forbidden_or_stale_claim_attempts": 6,
+        "judgments": {
+          "appropriate_abstention": 6,
+          "complete": 38,
+          "inappropriate_abstention": 6,
+          "incorrect": 56,
+          "partial": 33,
+          "technical_failure": 5
+        },
+        "observed_attempts": 144,
+        "observed_correctness_rate": 0.3055555555555556,
+        "pending_observed_reviews": 0,
+        "pending_or_unattempted": 0,
+        "planned_attempt_coverage": 1.0,
+        "planned_attempts": 144,
+        "quality_unit_note": "144 planned attempts across 48 planned distinct cases; observed counts may be smaller. Shared scenario/profile dependencies remain; no 144-independent-observation interval.",
+        "review_status": "fully_graded_complete_coverage",
+        "reviewed_attempts": 144,
+        "unattempted_planned_requests": 0,
+        "unsupported_personal_claim_attempts": 34
+      },
+      "small": {
+        "by_repetition": {
+          "1": {
+            "conservative_correct_deliveries_per_planned": 0.2916666666666667,
+            "correct_reviewed": 14,
+            "correctness_rate": 0.2916666666666667,
+            "observed_attempts": 48,
+            "observed_correctness_rate": 0.2916666666666667,
+            "pending_observed_reviews": 0,
+            "pending_or_unattempted": 0,
+            "planned": 48,
+            "planned_attempt_coverage": 1.0,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed": 48,
+            "unattempted_planned_requests": 0
+          },
+          "2": {
+            "conservative_correct_deliveries_per_planned": 0.2916666666666667,
+            "correct_reviewed": 14,
+            "correctness_rate": 0.2916666666666667,
+            "observed_attempts": 48,
+            "observed_correctness_rate": 0.2916666666666667,
+            "pending_observed_reviews": 0,
+            "pending_or_unattempted": 0,
+            "planned": 48,
+            "planned_attempt_coverage": 1.0,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed": 48,
+            "unattempted_planned_requests": 0
+          },
+          "3": {
+            "conservative_correct_deliveries_per_planned": 0.2916666666666667,
+            "correct_reviewed": 14,
+            "correctness_rate": 0.2916666666666667,
+            "observed_attempts": 48,
+            "observed_correctness_rate": 0.2916666666666667,
+            "pending_observed_reviews": 0,
+            "pending_or_unattempted": 0,
+            "planned": 48,
+            "planned_attempt_coverage": 1.0,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed": 48,
+            "unattempted_planned_requests": 0
+          }
+        },
+        "by_stratum": {
+          "general_multiconstraint": {
+            "conservative_correct_deliveries_per_planned": 0.08333333333333333,
+            "correct_reviewed": 3,
+            "correctness_rate": 0.08333333333333333,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.08333333333333333,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          },
+          "personal_recall": {
+            "conservative_correct_deliveries_per_planned": 0.75,
+            "correct_reviewed": 27,
+            "correctness_rate": 0.75,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.75,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          },
+          "personal_temporal_synthesis": {
+            "conservative_correct_deliveries_per_planned": 0.0,
+            "correct_reviewed": 0,
+            "correctness_rate": 0.0,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.0,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          },
+          "routine_general": {
+            "conservative_correct_deliveries_per_planned": 0.3333333333333333,
+            "correct_reviewed": 12,
+            "correctness_rate": 0.3333333333333333,
+            "observed_attempts": 36,
+            "observed_correctness_rate": 0.3333333333333333,
+            "pending_observed_reviews": 0,
+            "planned_attempt_coverage": 1.0,
+            "planned_attempts": 36,
+            "review_status": "fully_graded_complete_coverage",
+            "reviewed_attempts": 36,
+            "unattempted_planned_requests": 0
+          }
+        },
+        "conservative_correct_deliveries_per_planned": 0.2916666666666667,
+        "correct_reviewed": 42,
+        "correctness_rate": 0.2916666666666667,
+        "distinct_observed_cases": 48,
+        "forbidden_or_stale_claim_attempts": 6,
+        "judgments": {
+          "appropriate_abstention": 9,
+          "complete": 33,
+          "inappropriate_abstention": 9,
+          "incorrect": 72,
+          "partial": 12,
+          "technical_failure": 9
+        },
+        "observed_attempts": 144,
+        "observed_correctness_rate": 0.2916666666666667,
+        "pending_observed_reviews": 0,
+        "pending_or_unattempted": 0,
+        "planned_attempt_coverage": 1.0,
+        "planned_attempts": 144,
+        "quality_unit_note": "144 planned attempts across 48 planned distinct cases; observed counts may be smaller. Shared scenario/profile dependencies remain; no 144-independent-observation interval.",
+        "review_status": "fully_graded_complete_coverage",
+        "reviewed_attempts": 144,
+        "unattempted_planned_requests": 0,
+        "unsupported_personal_claim_attempts": 18
+      }
+    }
+  }
+}

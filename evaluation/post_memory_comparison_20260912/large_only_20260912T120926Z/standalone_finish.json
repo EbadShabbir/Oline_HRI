@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-09-12T12:11:21.387998+00:00",
+  "scope": "User-requested separate large-only session; startup rejection, zero inference; originalbatch unchanged",
+  "arm": "large",
+  "repetition": 1,
+  "session_directory": "02_large_r1",
+  "status": "blocked_preflight",
+  "planned_requests": 48,
+  "attempted_requests": 0,
+  "delivered_requests": 0,
+  "blocking_reason": {
+    "message": "swap use exceeds the Stage 2 768 MiB start gate",
+    "type": "SafetyGateError"
+  },
+  "start_available_ram_mib": 2391.01171875,
+  "start_swap_used_mib": 988.0,
+  "start_max_temperature_c": 51.281,
+  "startup_swap_limit_mib": 768.0,
+  "finished_without_resident_models": true,
+  "boot_power_and_thermal_trip_counters_unchanged": true,
+  "new_model_calls": 0,
+  "new_embedding_setup": false,
+  "new_quality_or_latency_result": false,
+  "runtime_source_files_verified": 40,
+  "artifact_sha256": {
+    "collection_plan.json": "238527d0b9a584f3eb2d6ee8860337bf97cdf65ca683d79399fa53cc50dfd07d",
+    "collection.log": "238cda2c10015e6400705947725cdc67e36b5fb4ea50dbcb6e3e41c59759d47a",
+    "02_large_r1/start.json": "cc698bbd20548a99faf1234252d803e1b7c8559301fe0b3edaed94555855b25a",
+    "02_large_r1/finish.json": "7657e9304afb7da5bcbb3e2564f6aa92baa4e660546af395cc7467214c9325bc",
+    "02_large_r1/summary.json": "8e9321df3ace346ad1ce1a86011d6a703e5fc503057a0068f4e078b9df130c06"
+  }
+}

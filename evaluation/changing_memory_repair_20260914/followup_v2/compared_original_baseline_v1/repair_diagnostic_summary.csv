@@ -1,0 +1,9 @@
+field,recorded_value,checkpoints
+answer_constraint,"""verified_location""",4
+answer_constraint,"""verified_user_relationship""",8
+answer_constraint,null,12
+generation_policy,null,24
+memory_required,true,24
+nominal_model_size,"""small""",24
+response_transform,null,24
+route_policy,"""legacy""",24

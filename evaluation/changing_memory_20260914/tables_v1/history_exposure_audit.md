@@ -1,0 +1,11 @@
+# history exposure audit
+
+| group | checkpoints | checkpoints_with_generation_call | exact_original_statement_forwarded | exact_original_statement_present | literal_original_value_forwarded | literal_original_value_present | literal_value_forwarded_without_exact_statement | literal_value_present_without_exact_statement |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| after_restart | 108 | 108 | 23 | 36 | 43 | 56 | 20 | 20 |
+| all_scored_checkpoints | 288 | 288 | 94 | 144 | 114 | 164 | 20 | 20 |
+| branch=correction | 120 | 120 | 24 | 60 | 24 | 60 | 0 | 0 |
+| branch=deletion | 84 | 84 | 35 | 48 | 46 | 59 | 11 | 11 |
+| branch=expiry | 84 | 84 | 35 | 36 | 44 | 45 | 9 | 9 |
+| history_mode=fresh | 108 | 108 | 0 | 0 | 0 | 0 | 0 | 0 |
+| history_mode=retained | 180 | 180 | 94 | 144 | 114 | 164 | 20 | 20 |

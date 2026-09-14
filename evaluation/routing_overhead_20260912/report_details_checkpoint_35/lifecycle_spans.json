@@ -1,0 +1,1057 @@
+[
+  {
+    "sequence": "ro_dddd_1_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107959396060341,
+      "id": 7,
+      "name": "unload_request",
+      "parent_id": 6,
+      "start_ns": 107959377072756,
+      "status": "ok",
+      "wall_ns": 18987585
+    }
+  },
+  {
+    "sequence": "ro_dddd_1_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 107959410053392
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107959410070353,
+      "id": 8,
+      "name": "eviction_verification",
+      "parent_id": 6,
+      "start_ns": 107959401671879,
+      "status": "ok",
+      "wall_ns": 8398474
+    }
+  },
+  {
+    "sequence": "ro_dddd_1_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 108108455802778,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 108108443794242,
+      "status": "ok",
+      "wall_ns": 12008536
+    }
+  },
+  {
+    "sequence": "ro_dddd_1_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 108108466108271
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 108108466119375,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 108108459967344,
+      "status": "ok",
+      "wall_ns": 6152031
+    }
+  },
+  {
+    "sequence": "ro_dddd_2_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 108562763155423,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 108562745961170,
+      "status": "ok",
+      "wall_ns": 17194253
+    }
+  },
+  {
+    "sequence": "ro_dddd_2_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 108562779419354
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 108562779433338,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 108562769233889,
+      "status": "ok",
+      "wall_ns": 10199449
+    }
+  },
+  {
+    "sequence": "ro_dddd_2_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 108751284794531,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 108751269714432,
+      "status": "ok",
+      "wall_ns": 15080099
+    }
+  },
+  {
+    "sequence": "ro_dddd_2_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 108751298206850
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 108751298220898,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 108751290922214,
+      "status": "ok",
+      "wall_ns": 7298684
+    }
+  },
+  {
+    "sequence": "ro_dddd_3_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 109743090720660,
+      "id": 8,
+      "name": "unload_request",
+      "parent_id": 7,
+      "start_ns": 109743077149589,
+      "status": "ok",
+      "wall_ns": 13571071
+    }
+  },
+  {
+    "sequence": "ro_dddd_3_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 109743103720166
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 109743103735110,
+      "id": 9,
+      "name": "eviction_verification",
+      "parent_id": 7,
+      "start_ns": 109743096122291,
+      "status": "ok",
+      "wall_ns": 7612819
+    }
+  },
+  {
+    "sequence": "ro_dddd_3_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 109878327133253,
+      "id": 7,
+      "name": "unload_request",
+      "parent_id": 6,
+      "start_ns": 109878311459704,
+      "status": "ok",
+      "wall_ns": 15673549
+    }
+  },
+  {
+    "sequence": "ro_dddd_3_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 109878340197589
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 109878340208277,
+      "id": 8,
+      "name": "eviction_verification",
+      "parent_id": 6,
+      "start_ns": 109878332511682,
+      "status": "ok",
+      "wall_ns": 7696595
+    }
+  },
+  {
+    "sequence": "ro_dddd_3_r1_replay",
+    "turn": 2,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 109924723055968,
+      "id": 7,
+      "name": "unload_request",
+      "parent_id": 6,
+      "start_ns": 109924710684417,
+      "status": "ok",
+      "wall_ns": 12371551
+    }
+  },
+  {
+    "sequence": "ro_dddd_3_r1_replay",
+    "turn": 2,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [
+                {
+                  "context_length": 2048,
+                  "details": {
+                    "families": [
+                      "qwen3"
+                    ],
+                    "family": "qwen3",
+                    "format": "gguf",
+                    "parameter_size": "2.0B",
+                    "parent_model": "",
+                    "quantization_level": "Q4_K_M"
+                  },
+                  "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+                  "expires_at": "2318-12-23T20:24:42.833695993+04:00",
+                  "model": "qwen3:1.7b",
+                  "name": "qwen3:1.7b",
+                  "size": 1658826259,
+                  "size_vram": 1019415101
+                }
+              ],
+              "monotonic_ns": 109924734797872
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 109924734813713,
+      "id": 8,
+      "name": "eviction_verification",
+      "parent_id": 6,
+      "start_ns": 109924727474534,
+      "status": "ok",
+      "wall_ns": 7339179
+    }
+  },
+  {
+    "sequence": "ro_eded_1_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110195848605652,
+      "id": 7,
+      "name": "unload_request",
+      "parent_id": 6,
+      "start_ns": 110195833625533,
+      "status": "ok",
+      "wall_ns": 14980119
+    }
+  },
+  {
+    "sequence": "ro_eded_1_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 110195859841173
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110195859857653,
+      "id": 8,
+      "name": "eviction_verification",
+      "parent_id": 6,
+      "start_ns": 110195853439810,
+      "status": "ok",
+      "wall_ns": 6417843
+    }
+  },
+  {
+    "sequence": "ro_eded_1_r1_adaptive",
+    "turn": 2,
+    "peer_present_before_turn": true,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110206755805358,
+      "id": 7,
+      "name": "unload_request",
+      "parent_id": 6,
+      "start_ns": 110206741093630,
+      "status": "ok",
+      "wall_ns": 14711728
+    }
+  },
+  {
+    "sequence": "ro_eded_1_r1_adaptive",
+    "turn": 2,
+    "peer_present_before_turn": true,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 110206885859312
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110206885885648,
+      "id": 8,
+      "name": "eviction_verification",
+      "parent_id": 6,
+      "start_ns": 110206761262507,
+      "status": "ok",
+      "wall_ns": 124623141
+    }
+  },
+  {
+    "sequence": "ro_eded_1_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110288304363397,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 110288291707684,
+      "status": "ok",
+      "wall_ns": 12655713
+    }
+  },
+  {
+    "sequence": "ro_eded_1_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 110288318551112
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110288318567625,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 110288310417103,
+      "status": "ok",
+      "wall_ns": 8150522
+    }
+  },
+  {
+    "sequence": "ro_eded_1_r1_replay",
+    "turn": 2,
+    "peer_present_before_turn": true,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110299175242506,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 110299162261890,
+      "status": "ok",
+      "wall_ns": 12980616
+    }
+  },
+  {
+    "sequence": "ro_eded_1_r1_replay",
+    "turn": 2,
+    "peer_present_before_turn": true,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 110299314236175
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110299314257679,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 110299179554924,
+      "status": "ok",
+      "wall_ns": 134702755
+    }
+  },
+  {
+    "sequence": "ro_eded_2_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110556905443074,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 110556891770348,
+      "status": "ok",
+      "wall_ns": 13672726
+    }
+  },
+  {
+    "sequence": "ro_eded_2_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 110556917610038
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110556917623286,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 110556909111317,
+      "status": "ok",
+      "wall_ns": 8511969
+    }
+  },
+  {
+    "sequence": "ro_eded_2_r1_adaptive",
+    "turn": 2,
+    "peer_present_before_turn": true,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110569605211384,
+      "id": 11,
+      "name": "unload_request",
+      "parent_id": 10,
+      "start_ns": 110569592728733,
+      "status": "ok",
+      "wall_ns": 12482651
+    }
+  },
+  {
+    "sequence": "ro_eded_2_r1_adaptive",
+    "turn": 2,
+    "peer_present_before_turn": true,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 110569729231317
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110569729252566,
+      "id": 12,
+      "name": "eviction_verification",
+      "parent_id": 10,
+      "start_ns": 110569609767551,
+      "status": "ok",
+      "wall_ns": 119485015
+    }
+  },
+  {
+    "sequence": "ro_eded_2_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110641501254789,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 110641486742461,
+      "status": "ok",
+      "wall_ns": 14512328
+    }
+  },
+  {
+    "sequence": "ro_eded_2_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 110641513084753
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110641513100754,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 110641505645065,
+      "status": "ok",
+      "wall_ns": 7455689
+    }
+  },
+  {
+    "sequence": "ro_eded_2_r1_replay",
+    "turn": 2,
+    "peer_present_before_turn": true,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110652754696625,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 110652740751829,
+      "status": "ok",
+      "wall_ns": 13944796
+    }
+  },
+  {
+    "sequence": "ro_eded_2_r1_replay",
+    "turn": 2,
+    "peer_present_before_turn": true,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 110652871509639
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110652871534215,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 110652759750947,
+      "status": "ok",
+      "wall_ns": 111783268
+    }
+  },
+  {
+    "sequence": "ro_eded_3_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110800392546188,
+      "id": 8,
+      "name": "unload_request",
+      "parent_id": 7,
+      "start_ns": 110800377979971,
+      "status": "ok",
+      "wall_ns": 14566217
+    }
+  },
+  {
+    "sequence": "ro_eded_3_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 110800406183009
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110800406196193,
+      "id": 9,
+      "name": "eviction_verification",
+      "parent_id": 7,
+      "start_ns": 110800398554612,
+      "status": "ok",
+      "wall_ns": 7641581
+    }
+  },
+  {
+    "sequence": "ro_eded_3_r1_adaptive",
+    "turn": 2,
+    "peer_present_before_turn": true,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110811929291722,
+      "id": 8,
+      "name": "unload_request",
+      "parent_id": 7,
+      "start_ns": 110811914675392,
+      "status": "ok",
+      "wall_ns": 14616330
+    }
+  },
+  {
+    "sequence": "ro_eded_3_r1_adaptive",
+    "turn": 2,
+    "peer_present_before_turn": true,
+    "event": {
+      "attributes": {
+        "model": "qwen3:0.6b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 110812041752728
+            }
+          ],
+          "verified_absent": "qwen3:0.6b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 110812041775833,
+      "id": 9,
+      "name": "eviction_verification",
+      "parent_id": 7,
+      "start_ns": 110811933357478,
+      "status": "ok",
+      "wall_ns": 108418355
+    }
+  },
+  {
+    "sequence": "ro_eeee_1_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107059254343109,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 107059239068347,
+      "status": "ok",
+      "wall_ns": 15274762
+    }
+  },
+  {
+    "sequence": "ro_eeee_1_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 107059268658466
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107059268678786,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 107059260276179,
+      "status": "ok",
+      "wall_ns": 8402607
+    }
+  },
+  {
+    "sequence": "ro_eeee_1_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107120745602292,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 107120729756947,
+      "status": "ok",
+      "wall_ns": 15845345
+    }
+  },
+  {
+    "sequence": "ro_eeee_1_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 107120760841548
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107120760860396,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 107120751238468,
+      "status": "ok",
+      "wall_ns": 9621928
+    }
+  },
+  {
+    "sequence": "ro_eeee_2_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107344418630910,
+      "id": 7,
+      "name": "unload_request",
+      "parent_id": 6,
+      "start_ns": 107344403746372,
+      "status": "ok",
+      "wall_ns": 14884538
+    }
+  },
+  {
+    "sequence": "ro_eeee_2_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 107344430586184
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107344430603144,
+      "id": 8,
+      "name": "eviction_verification",
+      "parent_id": 6,
+      "start_ns": 107344423112266,
+      "status": "ok",
+      "wall_ns": 7490878
+    }
+  },
+  {
+    "sequence": "ro_eeee_2_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107416553684165,
+      "id": 6,
+      "name": "unload_request",
+      "parent_id": 5,
+      "start_ns": 107416533962540,
+      "status": "ok",
+      "wall_ns": 19721625
+    }
+  },
+  {
+    "sequence": "ro_eeee_2_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 107416566627111
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107416566644648,
+      "id": 7,
+      "name": "eviction_verification",
+      "parent_id": 5,
+      "start_ns": 107416558461337,
+      "status": "ok",
+      "wall_ns": 8183311
+    }
+  },
+  {
+    "sequence": "ro_eeee_3_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107700731046801,
+      "id": 8,
+      "name": "unload_request",
+      "parent_id": 7,
+      "start_ns": 107700714516850,
+      "status": "ok",
+      "wall_ns": 16529951
+    }
+  },
+  {
+    "sequence": "ro_eeee_3_r1_adaptive",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 107700742837013
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107700742855029,
+      "id": 9,
+      "name": "eviction_verification",
+      "parent_id": 7,
+      "start_ns": 107700735364165,
+      "status": "ok",
+      "wall_ns": 7490864
+    }
+  },
+  {
+    "sequence": "ro_eeee_3_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b"
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107762521630990,
+      "id": 7,
+      "name": "unload_request",
+      "parent_id": 6,
+      "start_ns": 107762506255073,
+      "status": "ok",
+      "wall_ns": 15375917
+    }
+  },
+  {
+    "sequence": "ro_eeee_3_r1_replay",
+    "turn": 1,
+    "peer_present_before_turn": false,
+    "event": {
+      "attributes": {
+        "model": "qwen3:1.7b",
+        "residency_after": {
+          "polls": [
+            {
+              "models": [],
+              "monotonic_ns": 107762534311910
+            }
+          ],
+          "verified_absent": "qwen3:1.7b"
+        }
+      },
+      "clock": "monotonic_ns",
+      "end_ns": 107762534327718,
+      "id": 8,
+      "name": "eviction_verification",
+      "parent_id": 6,
+      "start_ns": 107762526911861,
+      "status": "ok",
+      "wall_ns": 7415857
+    }
+  }
+]

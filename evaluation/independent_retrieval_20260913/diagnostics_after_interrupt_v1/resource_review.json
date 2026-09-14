@@ -1,0 +1,2482 @@
+{
+  "scope": "read-only resource diagnosis; no semantic answers reviewed or retained in this diagnostic; no inference/embedding/system changes",
+  "current_host": "2026-09-13T16:53:12.875178+00:00",
+  "current_admission_checks_pass": true,
+  "sessions": [
+    {
+      "slot": 1,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01",
+      "attempted": 48,
+      "status": "complete",
+      "failure": null,
+      "start_available_mib": 2255.50390625,
+      "finish_available_mib": 1821.984375,
+      "start_swap_used_mib": 2337.25,
+      "finish_swap_used_mib": 2334.25,
+      "first_telemetry_ram_mib": 5161,
+      "last_telemetry_ram_mib": 5767,
+      "peak_telemetry_ram_mib": 5767,
+      "peak_temperature_c": 60.031,
+      "no_resident_models_at_finish": true,
+      "unchanged_boot_trips_power": true,
+      "observations_file_bytes": 922265,
+      "http_file_bytes": 273005,
+      "nonsemantic_request_metadata": [
+        {
+          "index": 1,
+          "status": "ok",
+          "wall_s": 11.235074872,
+          "nearest_finish_telemetry_ram_mib": 5515,
+          "nearest_finish_offset_s": -0.167382964,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "status": "ok",
+          "wall_s": 1.634879212,
+          "nearest_finish_telemetry_ram_mib": 5539,
+          "nearest_finish_offset_s": 0.198577495,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "status": "ok",
+          "wall_s": 1.407844244,
+          "nearest_finish_telemetry_ram_mib": 5539,
+          "nearest_finish_offset_s": -0.221267433,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "status": "ok",
+          "wall_s": 1.028002394,
+          "nearest_finish_telemetry_ram_mib": 5583,
+          "nearest_finish_offset_s": 0.238758345,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "status": "ok",
+          "wall_s": 1.162481927,
+          "nearest_finish_telemetry_ram_mib": 5582,
+          "nearest_finish_offset_s": 0.062415406,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "status": "ok",
+          "wall_s": 1.094974316,
+          "nearest_finish_telemetry_ram_mib": 5584,
+          "nearest_finish_offset_s": -0.045872731,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "status": "ok",
+          "wall_s": 0.979058363,
+          "nearest_finish_telemetry_ram_mib": 5579,
+          "nearest_finish_offset_s": -0.047014567,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "status": "ok",
+          "wall_s": 1.302171253,
+          "nearest_finish_telemetry_ram_mib": 5580,
+          "nearest_finish_offset_s": 0.139919511,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "status": "ok",
+          "wall_s": 1.580521637,
+          "nearest_finish_telemetry_ram_mib": 5587,
+          "nearest_finish_offset_s": 0.059260532,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "status": "ok",
+          "wall_s": 1.47884228,
+          "nearest_finish_telemetry_ram_mib": 5631,
+          "nearest_finish_offset_s": 0.074699879,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "status": "ok",
+          "wall_s": 1.648654995,
+          "nearest_finish_telemetry_ram_mib": 5634,
+          "nearest_finish_offset_s": -0.085437031,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "status": "ok",
+          "wall_s": 1.618021733,
+          "nearest_finish_telemetry_ram_mib": 5677,
+          "nearest_finish_offset_s": -0.210285405,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "status": "ok",
+          "wall_s": 1.40662705,
+          "nearest_finish_telemetry_ram_mib": 5677,
+          "nearest_finish_offset_s": -0.117967242,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "status": "ok",
+          "wall_s": 1.301874596,
+          "nearest_finish_telemetry_ram_mib": 5679,
+          "nearest_finish_offset_s": 0.066080174,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "status": "ok",
+          "wall_s": 1.640231684,
+          "nearest_finish_telemetry_ram_mib": 5679,
+          "nearest_finish_offset_s": -0.080095438,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "status": "ok",
+          "wall_s": 1.151589495,
+          "nearest_finish_telemetry_ram_mib": 5710,
+          "nearest_finish_offset_s": -0.244112353,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "status": "ok",
+          "wall_s": 1.44912331,
+          "nearest_finish_telemetry_ram_mib": 5688,
+          "nearest_finish_offset_s": -0.188452614,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "status": "ok",
+          "wall_s": 1.450398199,
+          "nearest_finish_telemetry_ram_mib": 5688,
+          "nearest_finish_offset_s": -0.138706241,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "status": "ok",
+          "wall_s": 1.290958196,
+          "nearest_finish_telemetry_ram_mib": 5693,
+          "nearest_finish_offset_s": 0.067519885,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "status": "ok",
+          "wall_s": 1.284027867,
+          "nearest_finish_telemetry_ram_mib": 5693,
+          "nearest_finish_offset_s": -0.240359649,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "status": "ok",
+          "wall_s": 1.098693269,
+          "nearest_finish_telemetry_ram_mib": 5693,
+          "nearest_finish_offset_s": 0.155318477,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "status": "ok",
+          "wall_s": 1.273161211,
+          "nearest_finish_telemetry_ram_mib": 5696,
+          "nearest_finish_offset_s": -0.141010604,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "status": "ok",
+          "wall_s": 1.429943103,
+          "nearest_finish_telemetry_ram_mib": 5709,
+          "nearest_finish_offset_s": -0.069579169,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "status": "ok",
+          "wall_s": 1.320920725,
+          "nearest_finish_telemetry_ram_mib": 5708,
+          "nearest_finish_offset_s": 0.091686687,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "status": "ok",
+          "wall_s": 1.285407194,
+          "nearest_finish_telemetry_ram_mib": 5740,
+          "nearest_finish_offset_s": -0.205733542,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "status": "ok",
+          "wall_s": 1.400556917,
+          "nearest_finish_telemetry_ram_mib": 5742,
+          "nearest_finish_offset_s": -0.095195488,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "status": "ok",
+          "wall_s": 1.654709993,
+          "nearest_finish_telemetry_ram_mib": 5745,
+          "nearest_finish_offset_s": 0.24868887,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "status": "ok",
+          "wall_s": 1.081532209,
+          "nearest_finish_telemetry_ram_mib": 5745,
+          "nearest_finish_offset_s": 0.148460883,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "status": "ok",
+          "wall_s": 1.109934499,
+          "nearest_finish_telemetry_ram_mib": 5743,
+          "nearest_finish_offset_s": 0.019171062,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "status": "ok",
+          "wall_s": 1.062617498,
+          "nearest_finish_telemetry_ram_mib": 5743,
+          "nearest_finish_offset_s": -0.057447546,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "status": "ok",
+          "wall_s": 2.063752658,
+          "nearest_finish_telemetry_ram_mib": 5746,
+          "nearest_finish_offset_s": -0.120014743,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "status": "ok",
+          "wall_s": 1.476161962,
+          "nearest_finish_telemetry_ram_mib": 5719,
+          "nearest_finish_offset_s": -0.091396129,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 33,
+          "status": "ok",
+          "wall_s": 1.451750466,
+          "nearest_finish_telemetry_ram_mib": 5722,
+          "nearest_finish_offset_s": -0.053900659,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 34,
+          "status": "ok",
+          "wall_s": 2.006336352,
+          "nearest_finish_telemetry_ram_mib": 5720,
+          "nearest_finish_offset_s": -0.058637226,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "status": "ok",
+          "wall_s": 1.669900718,
+          "nearest_finish_telemetry_ram_mib": 5718,
+          "nearest_finish_offset_s": -0.235829355,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 36,
+          "status": "ok",
+          "wall_s": 1.553749422,
+          "nearest_finish_telemetry_ram_mib": 5752,
+          "nearest_finish_offset_s": 0.210123501,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 37,
+          "status": "ok",
+          "wall_s": 1.228231641,
+          "nearest_finish_telemetry_ram_mib": 5752,
+          "nearest_finish_offset_s": -0.028523895,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 38,
+          "status": "ok",
+          "wall_s": 1.499345025,
+          "nearest_finish_telemetry_ram_mib": 5755,
+          "nearest_finish_offset_s": -0.038315745,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 39,
+          "status": "ok",
+          "wall_s": 1.515137272,
+          "nearest_finish_telemetry_ram_mib": 5744,
+          "nearest_finish_offset_s": -0.063060403,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 40,
+          "status": "ok",
+          "wall_s": 1.187605418,
+          "nearest_finish_telemetry_ram_mib": 5742,
+          "nearest_finish_offset_s": 0.234125653,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 41,
+          "status": "ok",
+          "wall_s": 1.267053283,
+          "nearest_finish_telemetry_ram_mib": 5742,
+          "nearest_finish_offset_s": -0.046975863,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 42,
+          "status": "ok",
+          "wall_s": 1.251059115,
+          "nearest_finish_telemetry_ram_mib": 5733,
+          "nearest_finish_offset_s": 0.190677736,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 43,
+          "status": "ok",
+          "wall_s": 2.108994093,
+          "nearest_finish_telemetry_ram_mib": 5730,
+          "nearest_finish_offset_s": 0.08786167,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 44,
+          "status": "ok",
+          "wall_s": 1.61231532,
+          "nearest_finish_telemetry_ram_mib": 5731,
+          "nearest_finish_offset_s": -0.025544059,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 45,
+          "status": "ok",
+          "wall_s": 1.356664054,
+          "nearest_finish_telemetry_ram_mib": 5731,
+          "nearest_finish_offset_s": 0.111252159,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 46,
+          "status": "ok",
+          "wall_s": 1.067568927,
+          "nearest_finish_telemetry_ram_mib": 5733,
+          "nearest_finish_offset_s": 0.030308946,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 47,
+          "status": "ok",
+          "wall_s": 1.358205551,
+          "nearest_finish_telemetry_ram_mib": 5761,
+          "nearest_finish_offset_s": 0.161106334,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 48,
+          "status": "ok",
+          "wall_s": 1.413652749,
+          "nearest_finish_telemetry_ram_mib": 5767,
+          "nearest_finish_offset_s": -0.258593512,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slot": 2,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03",
+      "attempted": 48,
+      "status": "complete",
+      "failure": null,
+      "start_available_mib": 2308.39453125,
+      "finish_available_mib": 1639.9375,
+      "start_swap_used_mib": 2333.0,
+      "finish_swap_used_mib": 2332.75,
+      "first_telemetry_ram_mib": 5095,
+      "last_telemetry_ram_mib": 5958,
+      "peak_telemetry_ram_mib": 5990,
+      "peak_temperature_c": 60.906,
+      "no_resident_models_at_finish": true,
+      "unchanged_boot_trips_power": true,
+      "observations_file_bytes": 1948067,
+      "http_file_bytes": 334455,
+      "nonsemantic_request_metadata": [
+        {
+          "index": 1,
+          "status": "ok",
+          "wall_s": 12.18870887,
+          "nearest_finish_telemetry_ram_mib": 5621,
+          "nearest_finish_offset_s": -0.109071767,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "status": "ok",
+          "wall_s": 1.746080503,
+          "nearest_finish_telemetry_ram_mib": 5686,
+          "nearest_finish_offset_s": 0.139254582,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "status": "ok",
+          "wall_s": 2.075354741,
+          "nearest_finish_telemetry_ram_mib": 5746,
+          "nearest_finish_offset_s": 0.058592005,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "status": "ok",
+          "wall_s": 1.126137214,
+          "nearest_finish_telemetry_ram_mib": 5770,
+          "nearest_finish_offset_s": -0.067094277,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "status": "ok",
+          "wall_s": 1.870506454,
+          "nearest_finish_telemetry_ram_mib": 5736,
+          "nearest_finish_offset_s": 0.059528499,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "status": "ok",
+          "wall_s": 1.933467711,
+          "nearest_finish_telemetry_ram_mib": 5766,
+          "nearest_finish_offset_s": 0.141228851,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "status": "ok",
+          "wall_s": 1.165569498,
+          "nearest_finish_telemetry_ram_mib": 5744,
+          "nearest_finish_offset_s": -0.048417162,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "status": "ok",
+          "wall_s": 2.124369151,
+          "nearest_finish_telemetry_ram_mib": 5725,
+          "nearest_finish_offset_s": -0.178045924,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "status": "ok",
+          "wall_s": 1.668168692,
+          "nearest_finish_telemetry_ram_mib": 5747,
+          "nearest_finish_offset_s": 0.153555343,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "status": "ok",
+          "wall_s": 1.503343859,
+          "nearest_finish_telemetry_ram_mib": 5736,
+          "nearest_finish_offset_s": 0.140189915,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "status": "ok",
+          "wall_s": 2.226563749,
+          "nearest_finish_telemetry_ram_mib": 5735,
+          "nearest_finish_offset_s": -0.092138861,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "status": "ok",
+          "wall_s": 1.575846556,
+          "nearest_finish_telemetry_ram_mib": 5792,
+          "nearest_finish_offset_s": -0.176807502,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "status": "ok",
+          "wall_s": 2.378741927,
+          "nearest_finish_telemetry_ram_mib": 5803,
+          "nearest_finish_offset_s": -0.053302668,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "status": "ok",
+          "wall_s": 1.371009347,
+          "nearest_finish_telemetry_ram_mib": 5798,
+          "nearest_finish_offset_s": 0.077251292,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "status": "ok",
+          "wall_s": 2.463556816,
+          "nearest_finish_telemetry_ram_mib": 5785,
+          "nearest_finish_offset_s": 0.124811385,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "status": "ok",
+          "wall_s": 1.26438207,
+          "nearest_finish_telemetry_ram_mib": 5810,
+          "nearest_finish_offset_s": -0.152534015,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "status": "ok",
+          "wall_s": 1.590655747,
+          "nearest_finish_telemetry_ram_mib": 5784,
+          "nearest_finish_offset_s": 0.247509769,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "status": "ok",
+          "wall_s": 1.660375955,
+          "nearest_finish_telemetry_ram_mib": 5784,
+          "nearest_finish_offset_s": 0.078539846,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "status": "ok",
+          "wall_s": 1.434166259,
+          "nearest_finish_telemetry_ram_mib": 5811,
+          "nearest_finish_offset_s": 0.13509659,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "status": "ok",
+          "wall_s": 1.349636779,
+          "nearest_finish_telemetry_ram_mib": 5812,
+          "nearest_finish_offset_s": -0.23472275,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "status": "ok",
+          "wall_s": 1.221408185,
+          "nearest_finish_telemetry_ram_mib": 5813,
+          "nearest_finish_offset_s": 0.031436252,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "status": "ok",
+          "wall_s": 1.347478972,
+          "nearest_finish_telemetry_ram_mib": 5815,
+          "nearest_finish_offset_s": 0.170826534,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "status": "ok",
+          "wall_s": 1.496384975,
+          "nearest_finish_telemetry_ram_mib": 5859,
+          "nearest_finish_offset_s": 0.166977393,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "status": "ok",
+          "wall_s": 2.059803656,
+          "nearest_finish_telemetry_ram_mib": 5817,
+          "nearest_finish_offset_s": 0.11223074,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "status": "ok",
+          "wall_s": 1.367407252,
+          "nearest_finish_telemetry_ram_mib": 5856,
+          "nearest_finish_offset_s": 0.233491565,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "status": "ok",
+          "wall_s": 2.102887282,
+          "nearest_finish_telemetry_ram_mib": 5820,
+          "nearest_finish_offset_s": 0.125514954,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "status": "ok",
+          "wall_s": 1.596529165,
+          "nearest_finish_telemetry_ram_mib": 5811,
+          "nearest_finish_offset_s": 0.019758465,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "status": "ok",
+          "wall_s": 1.613318195,
+          "nearest_finish_telemetry_ram_mib": 5808,
+          "nearest_finish_offset_s": -0.101488509,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "status": "ok",
+          "wall_s": 1.226840544,
+          "nearest_finish_telemetry_ram_mib": 5866,
+          "nearest_finish_offset_s": 0.156052345,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "status": "ok",
+          "wall_s": 1.841559106,
+          "nearest_finish_telemetry_ram_mib": 5819,
+          "nearest_finish_offset_s": -0.192405136,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "status": "ok",
+          "wall_s": 2.15507428,
+          "nearest_finish_telemetry_ram_mib": 5877,
+          "nearest_finish_offset_s": 0.176476791,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "status": "ok",
+          "wall_s": 1.700177747,
+          "nearest_finish_telemetry_ram_mib": 5865,
+          "nearest_finish_offset_s": -0.033855945,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 33,
+          "status": "ok",
+          "wall_s": 1.509787017,
+          "nearest_finish_telemetry_ram_mib": 5923,
+          "nearest_finish_offset_s": -0.093305202,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 34,
+          "status": "ok",
+          "wall_s": 1.966107667,
+          "nearest_finish_telemetry_ram_mib": 5870,
+          "nearest_finish_offset_s": -0.064729175,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "status": "ok",
+          "wall_s": 1.707300676,
+          "nearest_finish_telemetry_ram_mib": 5874,
+          "nearest_finish_offset_s": 0.225846576,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 36,
+          "status": "ok",
+          "wall_s": 2.205283519,
+          "nearest_finish_telemetry_ram_mib": 5876,
+          "nearest_finish_offset_s": 0.027561392,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 37,
+          "status": "ok",
+          "wall_s": 1.839581537,
+          "nearest_finish_telemetry_ram_mib": 5878,
+          "nearest_finish_offset_s": 0.182657874,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 38,
+          "status": "ok",
+          "wall_s": 2.109876997,
+          "nearest_finish_telemetry_ram_mib": 5940,
+          "nearest_finish_offset_s": 0.06092605,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 39,
+          "status": "ok",
+          "wall_s": 2.540708394,
+          "nearest_finish_telemetry_ram_mib": 5927,
+          "nearest_finish_offset_s": 0.03154689,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 40,
+          "status": "ok",
+          "wall_s": 1.36069232,
+          "nearest_finish_telemetry_ram_mib": 5957,
+          "nearest_finish_offset_s": 0.143542879,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 41,
+          "status": "ok",
+          "wall_s": 1.638527485,
+          "nearest_finish_telemetry_ram_mib": 5901,
+          "nearest_finish_offset_s": -0.003043053,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 42,
+          "status": "ok",
+          "wall_s": 1.631737129,
+          "nearest_finish_telemetry_ram_mib": 5903,
+          "nearest_finish_offset_s": -0.144230768,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 43,
+          "status": "ok",
+          "wall_s": 2.203669566,
+          "nearest_finish_telemetry_ram_mib": 5961,
+          "nearest_finish_offset_s": 0.163797776,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 44,
+          "status": "ok",
+          "wall_s": 1.71075577,
+          "nearest_finish_telemetry_ram_mib": 5944,
+          "nearest_finish_offset_s": -0.060657807,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 45,
+          "status": "ok",
+          "wall_s": 2.146110624,
+          "nearest_finish_telemetry_ram_mib": 5926,
+          "nearest_finish_offset_s": -0.196404652,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 46,
+          "status": "ok",
+          "wall_s": 1.666908625,
+          "nearest_finish_telemetry_ram_mib": 5924,
+          "nearest_finish_offset_s": 0.15777797,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 47,
+          "status": "ok",
+          "wall_s": 1.886904314,
+          "nearest_finish_telemetry_ram_mib": 5927,
+          "nearest_finish_offset_s": -0.247137264,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 48,
+          "status": "ok",
+          "wall_s": 1.305587563,
+          "nearest_finish_telemetry_ram_mib": 5958,
+          "nearest_finish_offset_s": -0.064033976,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slot": 3,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04",
+      "attempted": 48,
+      "status": "complete",
+      "failure": null,
+      "start_available_mib": 2112.390625,
+      "finish_available_mib": 1349.34375,
+      "start_swap_used_mib": 2331.25,
+      "finish_swap_used_mib": 2329.75,
+      "first_telemetry_ram_mib": 5278,
+      "last_telemetry_ram_mib": 6243,
+      "peak_telemetry_ram_mib": 6284,
+      "peak_temperature_c": 61.062,
+      "no_resident_models_at_finish": true,
+      "unchanged_boot_trips_power": true,
+      "observations_file_bytes": 1953766,
+      "http_file_bytes": 393872,
+      "nonsemantic_request_metadata": [
+        {
+          "index": 1,
+          "status": "ok",
+          "wall_s": 13.614922974,
+          "nearest_finish_telemetry_ram_mib": 5790,
+          "nearest_finish_offset_s": -0.014976519,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "status": "ok",
+          "wall_s": 1.718344355,
+          "nearest_finish_telemetry_ram_mib": 5854,
+          "nearest_finish_offset_s": -0.240363016,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "status": "ok",
+          "wall_s": 2.110177435,
+          "nearest_finish_telemetry_ram_mib": 5842,
+          "nearest_finish_offset_s": 0.159634537,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "status": "ok",
+          "wall_s": 1.997984557,
+          "nearest_finish_telemetry_ram_mib": 5940,
+          "nearest_finish_offset_s": 0.156181642,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "status": "ok",
+          "wall_s": 1.908877727,
+          "nearest_finish_telemetry_ram_mib": 5934,
+          "nearest_finish_offset_s": 0.238095409,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "status": "ok",
+          "wall_s": 1.969889762,
+          "nearest_finish_telemetry_ram_mib": 5939,
+          "nearest_finish_offset_s": -0.243801124,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "status": "ok",
+          "wall_s": 0.983497801,
+          "nearest_finish_telemetry_ram_mib": 5957,
+          "nearest_finish_offset_s": -0.246969404,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "status": "ok",
+          "wall_s": 1.962884838,
+          "nearest_finish_telemetry_ram_mib": 5963,
+          "nearest_finish_offset_s": -0.212888662,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "status": "ok",
+          "wall_s": 2.197094666,
+          "nearest_finish_telemetry_ram_mib": 5971,
+          "nearest_finish_offset_s": 0.087918094,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "status": "ok",
+          "wall_s": 1.481823749,
+          "nearest_finish_telemetry_ram_mib": 5963,
+          "nearest_finish_offset_s": 0.101601347,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "status": "ok",
+          "wall_s": 2.914271516,
+          "nearest_finish_telemetry_ram_mib": 5959,
+          "nearest_finish_offset_s": 0.189844295,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "status": "ok",
+          "wall_s": 1.643700957,
+          "nearest_finish_telemetry_ram_mib": 6018,
+          "nearest_finish_offset_s": 0.034971027,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "status": "ok",
+          "wall_s": 2.393397622,
+          "nearest_finish_telemetry_ram_mib": 6081,
+          "nearest_finish_offset_s": 0.161689199,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "status": "ok",
+          "wall_s": 1.365712538,
+          "nearest_finish_telemetry_ram_mib": 6097,
+          "nearest_finish_offset_s": -0.221206131,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "status": "ok",
+          "wall_s": 2.267516157,
+          "nearest_finish_telemetry_ram_mib": 6044,
+          "nearest_finish_offset_s": 0.023711761,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "status": "ok",
+          "wall_s": 1.225669868,
+          "nearest_finish_telemetry_ram_mib": 6088,
+          "nearest_finish_offset_s": -0.206110077,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 17,
+          "status": "ok",
+          "wall_s": 1.682768285,
+          "nearest_finish_telemetry_ram_mib": 6057,
+          "nearest_finish_offset_s": 0.121480889,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 18,
+          "status": "ok",
+          "wall_s": 1.670550086,
+          "nearest_finish_telemetry_ram_mib": 6059,
+          "nearest_finish_offset_s": -0.06061125,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "status": "ok",
+          "wall_s": 1.519827344,
+          "nearest_finish_telemetry_ram_mib": 6086,
+          "nearest_finish_offset_s": -0.095856287,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "status": "ok",
+          "wall_s": 1.398654489,
+          "nearest_finish_telemetry_ram_mib": 6086,
+          "nearest_finish_offset_s": -0.011243286,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "status": "ok",
+          "wall_s": 1.231910256,
+          "nearest_finish_telemetry_ram_mib": 6025,
+          "nearest_finish_offset_s": 0.241266979,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 22,
+          "status": "ok",
+          "wall_s": 1.868349897,
+          "nearest_finish_telemetry_ram_mib": 6041,
+          "nearest_finish_offset_s": -0.14133884,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 23,
+          "status": "ok",
+          "wall_s": 1.509070117,
+          "nearest_finish_telemetry_ram_mib": 6086,
+          "nearest_finish_offset_s": -0.15318813,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 24,
+          "status": "ok",
+          "wall_s": 1.367036378,
+          "nearest_finish_telemetry_ram_mib": 6086,
+          "nearest_finish_offset_s": -0.037430451,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 25,
+          "status": "ok",
+          "wall_s": 1.363912409,
+          "nearest_finish_telemetry_ram_mib": 6131,
+          "nearest_finish_offset_s": 0.088825758,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 26,
+          "status": "ok",
+          "wall_s": 2.128636464,
+          "nearest_finish_telemetry_ram_mib": 6093,
+          "nearest_finish_offset_s": -0.045789839,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 27,
+          "status": "ok",
+          "wall_s": 1.660182997,
+          "nearest_finish_telemetry_ram_mib": 6086,
+          "nearest_finish_offset_s": -0.223571155,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 28,
+          "status": "ok",
+          "wall_s": 1.657476259,
+          "nearest_finish_telemetry_ram_mib": 6133,
+          "nearest_finish_offset_s": 0.111135201,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 29,
+          "status": "ok",
+          "wall_s": 1.288835153,
+          "nearest_finish_telemetry_ram_mib": 6171,
+          "nearest_finish_offset_s": -0.190993411,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 30,
+          "status": "ok",
+          "wall_s": 1.858762808,
+          "nearest_finish_telemetry_ram_mib": 6123,
+          "nearest_finish_offset_s": -0.061002904,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 31,
+          "status": "ok",
+          "wall_s": 2.2168599,
+          "nearest_finish_telemetry_ram_mib": 6183,
+          "nearest_finish_offset_s": 0.211823788,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 32,
+          "status": "ok",
+          "wall_s": 1.673240936,
+          "nearest_finish_telemetry_ram_mib": 6177,
+          "nearest_finish_offset_s": 0.02287947,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 33,
+          "status": "ok",
+          "wall_s": 1.515039406,
+          "nearest_finish_telemetry_ram_mib": 6236,
+          "nearest_finish_offset_s": -0.000963824,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 34,
+          "status": "ok",
+          "wall_s": 1.9589626,
+          "nearest_finish_telemetry_ram_mib": 6180,
+          "nearest_finish_offset_s": 0.040259684,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 35,
+          "status": "ok",
+          "wall_s": 1.64402768,
+          "nearest_finish_telemetry_ram_mib": 6200,
+          "nearest_finish_offset_s": -0.119426599,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 36,
+          "status": "ok",
+          "wall_s": 2.228108936,
+          "nearest_finish_telemetry_ram_mib": 6186,
+          "nearest_finish_offset_s": 0.167655969,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 37,
+          "status": "ok",
+          "wall_s": 1.904839344,
+          "nearest_finish_telemetry_ram_mib": 6186,
+          "nearest_finish_offset_s": -0.251242956,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 38,
+          "status": "ok",
+          "wall_s": 2.103270359,
+          "nearest_finish_telemetry_ram_mib": 6253,
+          "nearest_finish_offset_s": 0.150113099,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 39,
+          "status": "ok",
+          "wall_s": 2.616183117,
+          "nearest_finish_telemetry_ram_mib": 6228,
+          "nearest_finish_offset_s": 0.041591031,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 40,
+          "status": "ok",
+          "wall_s": 1.355479495,
+          "nearest_finish_telemetry_ram_mib": 6282,
+          "nearest_finish_offset_s": 0.171132537,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 41,
+          "status": "ok",
+          "wall_s": 1.715109113,
+          "nearest_finish_telemetry_ram_mib": 6212,
+          "nearest_finish_offset_s": -0.067789716,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 42,
+          "status": "ok",
+          "wall_s": 1.688699963,
+          "nearest_finish_telemetry_ram_mib": 6214,
+          "nearest_finish_offset_s": 0.227057523,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 43,
+          "status": "ok",
+          "wall_s": 2.241226714,
+          "nearest_finish_telemetry_ram_mib": 6268,
+          "nearest_finish_offset_s": -0.017749954,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 44,
+          "status": "ok",
+          "wall_s": 1.767825013,
+          "nearest_finish_telemetry_ram_mib": 6234,
+          "nearest_finish_offset_s": 0.221650218,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 45,
+          "status": "ok",
+          "wall_s": 2.309036911,
+          "nearest_finish_telemetry_ram_mib": 6216,
+          "nearest_finish_offset_s": -0.089441563,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 46,
+          "status": "ok",
+          "wall_s": 1.715150321,
+          "nearest_finish_telemetry_ram_mib": 6250,
+          "nearest_finish_offset_s": 0.186536577,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 47,
+          "status": "ok",
+          "wall_s": 2.462625226,
+          "nearest_finish_telemetry_ram_mib": 6240,
+          "nearest_finish_offset_s": 0.230733163,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 48,
+          "status": "ok",
+          "wall_s": 1.307189196,
+          "nearest_finish_telemetry_ram_mib": 6243,
+          "nearest_finish_offset_s": -0.105299562,
+          "allocation_after": [
+            {
+              "name": "qwen3:0.6b",
+              "size": 693423308,
+              "size_vram": 693423308,
+              "context_length": 2048
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slot": 4,
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04",
+      "attempted": 13,
+      "status": "interrupted",
+      "failure": {
+        "message": "available memory crossed the runtime floor",
+        "type": "SafetyGateError"
+      },
+      "start_available_mib": 2277.1875,
+      "finish_available_mib": 955.125,
+      "start_swap_used_mib": 2329.5,
+      "finish_swap_used_mib": 2329.5,
+      "first_telemetry_ram_mib": 5116,
+      "last_telemetry_ram_mib": 6636,
+      "peak_telemetry_ram_mib": 6636,
+      "peak_temperature_c": 56.875,
+      "no_resident_models_at_finish": true,
+      "unchanged_boot_trips_power": true,
+      "observations_file_bytes": 556702,
+      "http_file_bytes": 129917,
+      "nonsemantic_request_metadata": [
+        {
+          "index": 1,
+          "status": "ok",
+          "wall_s": 53.955683662,
+          "nearest_finish_telemetry_ram_mib": 6359,
+          "nearest_finish_offset_s": -0.163435808,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "status": "ok",
+          "wall_s": 11.945889486,
+          "nearest_finish_telemetry_ram_mib": 6431,
+          "nearest_finish_offset_s": 0.107454396,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "status": "ok",
+          "wall_s": 16.753365592,
+          "nearest_finish_telemetry_ram_mib": 6417,
+          "nearest_finish_offset_s": 0.120217493,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "status": "ok",
+          "wall_s": 13.054498799,
+          "nearest_finish_telemetry_ram_mib": 6518,
+          "nearest_finish_offset_s": -0.123888748,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "status": "ok",
+          "wall_s": 14.619853853,
+          "nearest_finish_telemetry_ram_mib": 6524,
+          "nearest_finish_offset_s": -0.006897734,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "status": "ok",
+          "wall_s": 11.291794458,
+          "nearest_finish_telemetry_ram_mib": 6539,
+          "nearest_finish_offset_s": -0.130855877,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "status": "ok",
+          "wall_s": 7.427339739,
+          "nearest_finish_telemetry_ram_mib": 6537,
+          "nearest_finish_offset_s": 0.069975399,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "status": "ok",
+          "wall_s": 18.867684058,
+          "nearest_finish_telemetry_ram_mib": 6541,
+          "nearest_finish_offset_s": 0.001761897,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "status": "ok",
+          "wall_s": 33.966158918,
+          "nearest_finish_telemetry_ram_mib": 6542,
+          "nearest_finish_offset_s": 0.188202531,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "status": "ok",
+          "wall_s": 10.626754779,
+          "nearest_finish_telemetry_ram_mib": 6561,
+          "nearest_finish_offset_s": 0.228521828,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "status": "ok",
+          "wall_s": 31.455708518,
+          "nearest_finish_telemetry_ram_mib": 6498,
+          "nearest_finish_offset_s": -0.060749991,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "status": "ok",
+          "wall_s": 8.440479125,
+          "nearest_finish_telemetry_ram_mib": 6565,
+          "nearest_finish_offset_s": 0.187817651,
+          "allocation_after": [
+            {
+              "name": "qwen3:1.7b",
+              "size": 1658826259,
+              "size_vram": 936703426,
+              "context_length": 2048
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "status": "interrupted",
+          "wall_s": 18.391147973,
+          "nearest_finish_telemetry_ram_mib": 6636,
+          "nearest_finish_offset_s": -0.306119173,
+          "allocation_after": []
+        }
+      ]
+    }
+  ],
+  "source_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01/start.json": "a56e7ff80bfad9cc5c8eb2d3d9df43ff9822dc81d077f9155f4a0c79a8d6e527",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01/finish.json": "f132a758095dbb9086de6ba9bd39744c8a3844d5738f413c91bd2c04e6c02462",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01/summary.json": "f49968490e40eab7375442d5439f1ff7123f41a7ada66957fd04265dbd155f94",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01/telemetry.jsonl": "e5b43777ccdbf52b37f9c1c72edf1b346eac2c5befb71ae338031b530219d3fd",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01/telemetry_summary.json": "595e94f65a8379c0301405dbc7cdbc01588aabac4e4664aa102f2a9602cd51c4",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01/observations.jsonl": "7d689e44a97bdd562b499a634d6f71eb0da8f9d0df606e36412125afeee81276",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03/start.json": "b100ecb168a135502beca299fda7e3863ef66f584744cae5706de9be755f525a",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03/finish.json": "9b5d3ae91c7fef0a0b0d8d81e1ab8f6e5e80e38bdaa2d649505d8596c80b265a",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03/summary.json": "36fe71872423bafc8ab3a5478f876a4ce65963f98150b5d0160d7a634be4f64c",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03/telemetry.jsonl": "2a8efb267d2821654ddae08609f1b97381b15cde7b0205ff02155a07dcac8707",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03/telemetry_summary.json": "154764aede8d8d564253e7636e19d9ac7dca64e4f51bc836326bb5dd44a6a59e",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03/observations.jsonl": "586326a1007a4c92baca5d31d483a42fa27ef57927c7d08bea9fa3ee7c9fcc5f",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04/start.json": "934b90b309df4e6d69ccd8760b873797ba888147d3cecd453b58c5e3e3b99efc",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04/finish.json": "038ad804aca38f863024c52accd69b7f8387fd0207846ffeb51773ca42987c07",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04/summary.json": "b106079c34800d389f376297d6e804327e1a455c67cd98910e84fc830ad11450",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04/telemetry.jsonl": "afbef663cf244c7b37a29724c37599afc335bbd6d0aed16b05d3831eb60a37f6",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04/telemetry_summary.json": "e66eea4085b6998befacc270c6e91b58b95d321a24c7b2e750f4f8aa890c87a2",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04/observations.jsonl": "7b564600f5ec7fad9d9c2636d6b30ba53fcc33a7bd7549feb6b528bd5ed8ab07",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04/start.json": "c8e2185dea54da1b4875830f4794c6539c27336f6a8cdc1a469acac37e5086c2",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04/finish.json": "89edd8e69bcdc7ad08b247072100db482dc8dfd83f988c7118bd5f3d057ea6a4",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04/summary.json": "bdb9e7f752f66e7b3b1ae050a7b2959cd809172703b82bdcf27ac3e7242cb8e4",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04/telemetry.jsonl": "dbff029702131400899b34b263d486914fc2bf8a98ca77f5a6aa0da373e751d2",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04/telemetry_summary.json": "a9804064115e06dded92a46a771db1caaf87a37926984053751818da3257f017",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04/observations.jsonl": "af258be91bb17bf1a64517666cdbefd6b21385d54bac34f26c7b6a19c540b530"
+  },
+  "observed_findings": [
+    "All four sessions had the declared sole model only and no resident model after cleanup.",
+    "Large-model allocation remained constant at 1658826259 bytes total, 936703426 bytes VRAM, context2048 across successful requests.",
+    "Slot4 after-first-load RAM rose nonmonotonically toward the runtime-floor interruption; this does not prove monotonically leaking Python objects.",
+    "Current process scan found no competing experiment command or Ollama runner. Existing desktop/user apps remain open.",
+    "Post-worker-exit available memory recovered near the original no-model baseline.",
+    "No per-process RSS/PSS was sampled during the failed worker, so native backend allocation, worker allocation and background contributions cannot be partitioned retrospectively."
+  ],
+  "admission_interpretation": "Current static thresholds pass and support attempting unchanged guarded admission; this does not demonstrate sustained large-model/session fit or guarantee all707 unattempted requests complete.",
+  "continuation_constraints": [
+    "Preserve all157 original attempts and retain the interrupted attempt as a failure.",
+    "Continue only never-started requests with explicit continuation provenance and unchanged source/model/evidence/decoding/guards.",
+    "Any new process/session fragments add cold-start boundaries and must be reported rather than spliced into an uninterrupted session timing claim."
+  ]
+}

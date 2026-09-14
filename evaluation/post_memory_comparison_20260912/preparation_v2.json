@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-09-12T12:25:57.151315+00:00",
+  "snapshot": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-12T12:25:57.154450+00:00",
+    "fan_pwm": 77,
+    "memory": {
+      "mem_total_kib": 7803236,
+      "mem_available_kib": 2388112,
+      "swap_total_kib": 3901608,
+      "swap_free_kib": 2891688,
+      "swap_used_kib": 1009920
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 51.687,
+      "gpu-thermal": 51.593,
+      "soc0-thermal": 50.468,
+      "soc1-thermal": 50.5,
+      "soc2-thermal": 50.937,
+      "tj-thermal": 51.812
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "proc_swaps": "Filename\t\t\t\tType\t\tSize\t\tUsed\t\tPriority\n/dev/zram0                              partition\t650268\t\t167180\t\t5\n/dev/zram1                              partition\t650268\t\t168752\t\t5\n/dev/zram2                              partition\t650268\t\t167580\t\t5\n/dev/zram3                              partition\t650268\t\t167512\t\t5\n/dev/zram4                              partition\t650268\t\t169484\t\t5\n/dev/zram5                              partition\t650268\t\t169412\t\t5\n",
+  "changed_from_v1_source_files": [
+    "scripts/freeze_post_memory_comparison.py",
+    "scripts/run_post_memory_batch.py",
+    "scripts/run_post_memory_comparison.py"
+  ],
+  "application_and_config_unchanged_from_v1": true,
+  "system_swap_configuration_changed": false
+}

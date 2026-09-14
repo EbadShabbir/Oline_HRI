@@ -1,0 +1,83 @@
+{
+  "approved": true,
+  "authorized_run_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v3",
+  "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v2",
+  "created_at": "2026-09-13T17:10:54.268993+00:00",
+  "human_validation": "pending",
+  "new_authorized_attempts": 680,
+  "next_attempt": {
+    "case_id": "ir_05_02",
+    "scheduled_index": 41,
+    "slot": 4
+  },
+  "original_execution_sources_unchanged": 44,
+  "original_freeze_seal_sha256": "fda698a52067906e3a071c36dee68d3abb579f5b9c199533cd731708a717a9fd",
+  "primary_answer_text_semantically_reviewed": false,
+  "primary_metadata_seen": true,
+  "prior_run_seal_sha256": "09dd4362ffaf8504093e920cd44887d10b67585cbc71049416ed539f10b27c76",
+  "protocol_sha256": "c4dfe28c1352d0bcf17fe22d6fee8683eb3850a1dcfe45fd80da62c49314d6cf",
+  "reporting_conditions": [
+    "Neither interrupted attempt nor any delivered attempt may be repeated or replaced.",
+    "Only block4 positions41\u201348 and unchanged blocks5\u201318 are authorized.",
+    "Every further fatal interruption stops and seals; another continuation requires another independently reviewed immutable plan.",
+    "Report at least20 physical fragments for18 logical condition blocks, both interruptions, additional cold loads and boundary gaps.",
+    "Repeated runtime memory-floor failures remain unfavorable observed outcomes; guards and frozen workload are unchanged."
+  ],
+  "retained_attempts": 184,
+  "retained_delivered": 182,
+  "retained_interrupted_failures": 2,
+  "retained_zero_request_admission_rejections": 11,
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Second prospective metadata-only continuation approval; previously approved execution code and tests are byte-identical.",
+  "source_authored_by_reviewer": false,
+  "source_sha256": {
+    "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+    "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+    "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+    "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+  },
+  "validation": {
+    "independent_prefix_arithmetic": "Separately reconstructed184 unique chronological slot/case identities, request-start correspondence, exact suffix offsets and182ok+2interrupted statuses directly from sealed records.",
+    "live_inference": false,
+    "physical_fragments": [
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 1,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 2,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 3,
+        "status": "complete"
+      },
+      {
+        "attempted": 13,
+        "offset": 0,
+        "slot": 4,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 27,
+        "offset": 13,
+        "slot": 4,
+        "status": "interrupted"
+      }
+    ],
+    "prior_execution_preflight": {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/reviews/continuation_preflight_review_v1.json",
+      "reason": "All four approved supplemental source/test hashes are unchanged.",
+      "sha256": "e4bc2240f4d9cd1d93194fd63683687f06b2b8e85b7aa9a85b8620f7a47ba50b",
+      "tests_previously_passed": 17,
+      "tests_rerun": false
+    },
+    "sealed_collection_chain_validation": "Passed through approved stdlib collection_chain, including ancestry, ledger/review/source seals, exact prefix, current prepared database/setup hashes, cleanup and original baseline."
+  }
+}

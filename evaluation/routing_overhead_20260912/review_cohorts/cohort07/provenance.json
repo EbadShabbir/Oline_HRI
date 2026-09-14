@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-09-12T16:30:13.530148+00:00",
+  "observed_attempts": 88,
+  "all_unique_groups": 52,
+  "new_groups": 4,
+  "adapter_sha256": "fdd38372fdbd51f6e00f010bb1e5f344eb4c34bb0254b94578c6d203072b1cfd",
+  "workload_sha256": "d8e2cd9a03accbdfb2a81a79045dba92485a8f6a94a4c3ddec095cd7c2fddd8b",
+  "previous_packet_sha256": {
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort01/packet.jsonl": "394dd72515316ec2675b07e3ccb1fd8154f1433501742cd17b3047a057af3676",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort02/packet.jsonl": "947121ac06c2dbf86a0fec3ad6315f59a6c6dc64b7580ca69cf466f6b586a503",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort03/packet.jsonl": "caa21574446e2de69728eed1b7c2f7ac3dd5f3e26e05d3c1323794e19787509b",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort04/packet.jsonl": "a85607c686dfa34064c10f43b47ea694468a0db91ac10ba888af955581884193",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort05/packet.jsonl": "c532b862abea2c39104e360093b06f6680e8f515efb7fe72740c3bc91f8df9d4",
+    "evaluation/routing_overhead_20260912/review_cohorts/cohort06/packet.jsonl": "b93be7b00a3ae2ed825773f4b9422cdd8b87140400555d77eeb57ef633062a28"
+  },
+  "grouping": "exact frozen question, history, rubric, prepared and supplied evidence, citations, delivered answer, delivery status and helper constraint",
+  "scope": "offline blinded review only; no timing/source/settings changes"
+}

@@ -1,0 +1,8 @@
+# restart history
+
+| restart_phase | history_mode | planned | attempted | delivered | useful_correct | forbidden_disclosure | withheld | interrupted | missing |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| after | fresh | 4 | 4 | 4 | 4 | 0 | 0 | 0 | 0 |
+| after | retained | 5 | 5 | 5 | 5 | 0 | 0 | 0 | 0 |
+| before | fresh | 5 | 5 | 5 | 5 | 0 | 0 | 0 | 0 |
+| before | retained | 10 | 10 | 10 | 10 | 0 | 0 | 0 | 0 |

@@ -1,0 +1,663 @@
+{
+  "created_at": "2026-09-14T14:24:20.180648+00:00",
+  "reviewer": "/root/lifecycle_validation_fix",
+  "review_type": "Unblinded assistant report factcheck; human validation pending",
+  "role_disclosure": "Reviewer implemented bounded validation/evidence code in the first repair and authored the separately labeled second relationship source amendment. This is an independent reading of the already frozen 96 answer judgments, tables and audit. It is not independent code authorship, blinded scoring or human validation. No frozen judgment changed.",
+  "scope": "Expanded first-96 README only; separately planned 24-checkpoint follow-up results are outside this receipt and must be reviewed when reported.",
+  "status": "approved_after_one_factual_wording_correction",
+  "reviewed_readme_sha256": "69ed3a641935f04d2531f20f1f3bded263abf435af766bc3005cecc229b574e5",
+  "issues": [
+    {
+      "id": "baseline_unstored_branches",
+      "status": "resolved_by_root",
+      "original_claim": "two replacement values never stored in their deletion branches",
+      "corrected_claim": "two replacement values never stored in their deletion or expiry branches",
+      "evidence": [
+        {
+          "checkpoint_id": "cm01_deletion_restart_fresh",
+          "branch": "deletion",
+          "baseline_forbidden_values": "[\"jasmine\"]",
+          "baseline_delivered_answer": "Your current preferred tea is jasmine tea without sugar."
+        },
+        {
+          "checkpoint_id": "cm01_expiry_restart_fresh",
+          "branch": "expiry",
+          "baseline_forbidden_values": "[\"jasmine\"]",
+          "baseline_delivered_answer": "Your current preferred tea is jasmine tea without sugar."
+        }
+      ]
+    }
+  ],
+  "outstanding_issues": [],
+  "automated_checks": [
+    {
+      "check": "analysis_v1 exact sealed inventory",
+      "passed": true,
+      "evidence": {
+        "file_count": 16
+      }
+    },
+    {
+      "check": "analysis_v1 sealed file hashes",
+      "passed": true,
+      "evidence": {
+        "seal_sha256": "117327f6c1d19b4870180f5219ce1d8014a51dcf0bbb33ed04f22693b7e5d8a6"
+      }
+    },
+    {
+      "check": "tables_v1 exact sealed inventory",
+      "passed": true,
+      "evidence": {
+        "file_count": 35
+      }
+    },
+    {
+      "check": "tables_v1 sealed file hashes",
+      "passed": true,
+      "evidence": {
+        "seal_sha256": "447c8b7101d270a87dfa5f01e92ff190a03b28451ee34df3c51d020fe04e804f"
+      }
+    },
+    {
+      "check": "matched_comparison_v1 exact sealed inventory",
+      "passed": true,
+      "evidence": {
+        "file_count": 11
+      }
+    },
+    {
+      "check": "matched_comparison_v1 sealed file hashes",
+      "passed": true,
+      "evidence": {
+        "seal_sha256": "85cc869a9d123f13ee5cdc86fb4dc4b50e8fcf814ff876354d1a01a03295ab3e"
+      }
+    },
+    {
+      "check": "first96 delivered quality and failures",
+      "passed": true,
+      "evidence": {
+        "planned": 96,
+        "attempted": 96,
+        "delivered": 94,
+        "missing": 0,
+        "useful_correct": 92,
+        "classification": {
+          "appropriate_uncertainty": 48,
+          "correct_recall": 44,
+          "partial": 2,
+          "no_delivered_answer": 2
+        },
+        "status": {
+          "delivered": 94,
+          "withheld": 2
+        },
+        "all_forbidden_disclosure": 0,
+        "validation_rejection_without_disclosure": 2,
+        "freshness_rejection_without_disclosure": 0,
+        "client_output_validation_without_disclosure": 0,
+        "failure_findings": {
+          "delivered_semantic_failure_with_sufficient_evidence": 2,
+          "validation_rejection": 2
+        },
+        "actual_models": {
+          "qwen3:0.6b": 281,
+          "qwen3:1.7b": 7
+        },
+        "requested_models": {
+          "qwen3:0.6b": 281,
+          "qwen3:1.7b": 7
+        },
+        "actual_generator_models": {
+          "qwen3:0.6b": 89,
+          "qwen3:1.7b": 7
+        },
+        "original": {
+          "successful": 16,
+          "planned": 16,
+          "delivered": 16
+        },
+        "replacement": {
+          "successful": 12,
+          "planned": 16,
+          "delivered": 14
+        },
+        "historical_control": {
+          "successful": 16,
+          "planned": 16,
+          "delivered": 16
+        },
+        "uncertainty": {
+          "successful": 48,
+          "planned": 48,
+          "delivered": 48
+        },
+        "stale_subject_disclosure_after_correction": {
+          "disclosures": 0,
+          "planned": 32,
+          "delivered": 30
+        },
+        "deleted_subject_disclosure": {
+          "disclosures": 0,
+          "planned": 24,
+          "delivered": 24
+        },
+        "expired_subject_disclosure": {
+          "disclosures": 0,
+          "planned": 20,
+          "delivered": 20
+        },
+        "stale_subject_disclosure_current_replacement_questions": {
+          "disclosures": 0,
+          "planned": 16,
+          "delivered": 14
+        },
+        "any_expired_fact_disclosure": {
+          "disclosures": 0,
+          "planned": 20,
+          "delivered": 20
+        }
+      }
+    },
+    {
+      "check": "original successful/planned/delivered",
+      "passed": true,
+      "evidence": {
+        "successful": 16,
+        "planned": 16,
+        "delivered": 16
+      }
+    },
+    {
+      "check": "replacement successful/planned/delivered",
+      "passed": true,
+      "evidence": {
+        "successful": 12,
+        "planned": 16,
+        "delivered": 14
+      }
+    },
+    {
+      "check": "historical_control successful/planned/delivered",
+      "passed": true,
+      "evidence": {
+        "successful": 16,
+        "planned": 16,
+        "delivered": 16
+      }
+    },
+    {
+      "check": "uncertainty successful/planned/delivered",
+      "passed": true,
+      "evidence": {
+        "successful": 48,
+        "planned": 48,
+        "delivered": 48
+      }
+    },
+    {
+      "check": "matched baseline uses96 and correct aggregate scores",
+      "passed": true,
+      "evidence": {
+        "dimensions": "all",
+        "group": "{}",
+        "baseline_planned": "96",
+        "repair_planned": "96",
+        "delta_planned": "0",
+        "baseline_delivered": "93",
+        "repair_delivered": "94",
+        "delta_delivered": "1",
+        "baseline_useful_correct": "39",
+        "repair_useful_correct": "92",
+        "delta_useful_correct": "53",
+        "baseline_forbidden_disclosure": "30",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "-30",
+        "baseline_revoked_original_disclosure": "28",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "-28",
+        "baseline_unstored_replacement_disclosure": "2",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "-2",
+        "baseline_withheld": "3",
+        "repair_withheld": "2",
+        "delta_withheld": "-1",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "history_mode{'history_mode': 'retained'}",
+      "passed": true,
+      "evidence": {
+        "dimensions": "history_mode",
+        "group": "{\"history_mode\": \"retained\"}",
+        "baseline_planned": "60",
+        "repair_planned": "60",
+        "delta_planned": "0",
+        "baseline_delivered": "60",
+        "repair_delivered": "59",
+        "delta_delivered": "-1",
+        "baseline_useful_correct": "19",
+        "repair_useful_correct": "58",
+        "delta_useful_correct": "39",
+        "baseline_forbidden_disclosure": "28",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "-28",
+        "baseline_revoked_original_disclosure": "28",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "-28",
+        "baseline_unstored_replacement_disclosure": "0",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "0",
+        "baseline_withheld": "0",
+        "repair_withheld": "1",
+        "delta_withheld": "1",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "history_mode{'history_mode': 'fresh'}",
+      "passed": true,
+      "evidence": {
+        "dimensions": "history_mode",
+        "group": "{\"history_mode\": \"fresh\"}",
+        "baseline_planned": "36",
+        "repair_planned": "36",
+        "delta_planned": "0",
+        "baseline_delivered": "33",
+        "repair_delivered": "35",
+        "delta_delivered": "2",
+        "baseline_useful_correct": "20",
+        "repair_useful_correct": "34",
+        "delta_useful_correct": "14",
+        "baseline_forbidden_disclosure": "2",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "-2",
+        "baseline_revoked_original_disclosure": "0",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "0",
+        "baseline_unstored_replacement_disclosure": "2",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "-2",
+        "baseline_withheld": "3",
+        "repair_withheld": "1",
+        "delta_withheld": "-2",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "after_restart{'after_restart': True}",
+      "passed": true,
+      "evidence": {
+        "dimensions": "after_restart",
+        "group": "{\"after_restart\": true}",
+        "baseline_planned": "36",
+        "repair_planned": "36",
+        "delta_planned": "0",
+        "baseline_delivered": "34",
+        "repair_delivered": "34",
+        "delta_delivered": "0",
+        "baseline_useful_correct": "9",
+        "repair_useful_correct": "34",
+        "delta_useful_correct": "25",
+        "baseline_forbidden_disclosure": "15",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "-15",
+        "baseline_revoked_original_disclosure": "13",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "-13",
+        "baseline_unstored_replacement_disclosure": "2",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "-2",
+        "baseline_withheld": "2",
+        "repair_withheld": "2",
+        "delta_withheld": "0",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "retained/fresh pairs",
+      "passed": true,
+      "evidence": {
+        "count": 36,
+        "both_observed": 36,
+        "both_success": 34,
+        "retained_only": 0,
+        "fresh_only": 0,
+        "neither": 2
+      }
+    },
+    {
+      "check": "stale_subject_disclosure_current_replacement_questions",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 16,
+        "delivered": 14
+      }
+    },
+    {
+      "check": "deleted_subject_disclosure",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 24,
+        "delivered": 24
+      }
+    },
+    {
+      "check": "expired_subject_disclosure",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 20,
+        "delivered": 20
+      }
+    },
+    {
+      "check": "any_expired_fact_disclosure",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 20,
+        "delivered": 20
+      }
+    },
+    {
+      "check": "resolved baseline unstored-value branch wording",
+      "passed": true,
+      "evidence": [
+        {
+          "checkpoint_id": "cm01_deletion_restart_fresh",
+          "branch": "deletion",
+          "baseline_forbidden_values": "[\"jasmine\"]",
+          "baseline_delivered_answer": "Your current preferred tea is jasmine tea without sugar."
+        },
+        {
+          "checkpoint_id": "cm01_expiry_restart_fresh",
+          "branch": "expiry",
+          "baseline_forbidden_values": "[\"jasmine\"]",
+          "baseline_delivered_answer": "Your current preferred tea is jasmine tea without sugar."
+        }
+      ]
+    },
+    {
+      "check": "baseline actual generator counts",
+      "passed": true,
+      "evidence": {
+        "dimensions": "all",
+        "group": "{}",
+        "system": "baseline",
+        "checkpoint_attempts": "96",
+        "model_metadata_missing": "0",
+        "checkpoints_with_no_returned_generator_model": "0",
+        "actual_generator_calls": "96",
+        "actual_generator_model_calls": "{\"qwen3:0.6b\": 85, \"qwen3:1.7b\": 11}"
+      }
+    },
+    {
+      "check": "repair actual generator counts",
+      "passed": true,
+      "evidence": {
+        "dimensions": "all",
+        "group": "{}",
+        "system": "repair",
+        "checkpoint_attempts": "96",
+        "model_metadata_missing": "0",
+        "checkpoints_with_no_returned_generator_model": "0",
+        "actual_generator_calls": "96",
+        "actual_generator_model_calls": "{\"qwen3:0.6b\": 89, \"qwen3:1.7b\": 7}"
+      }
+    },
+    {
+      "check": "recorded constraints",
+      "passed": true,
+      "evidence": {
+        "verified_location": 24,
+        "verified_user_relationship": 6,
+        "None": 66
+      }
+    },
+    {
+      "check": "latency all_attempts",
+      "passed": true,
+      "evidence": {
+        "dimensions": "all",
+        "group": "{}",
+        "scope": "all_attempts",
+        "baseline_eligible_attempts": "96",
+        "baseline_timed_attempts": "96",
+        "baseline_missing_timing": "0",
+        "baseline_median_seconds": "3.1104075585000004",
+        "baseline_p95_seconds": "48.32670764",
+        "repair_eligible_attempts": "96",
+        "repair_timed_attempts": "96",
+        "repair_missing_timing": "0",
+        "repair_median_seconds": "2.938967221",
+        "repair_p95_seconds": "36.484219227",
+        "delta_median_seconds": "-0.17144033750000043",
+        "delta_p95_seconds": "-11.842488413000005"
+      }
+    },
+    {
+      "check": "latency delivered_only",
+      "passed": true,
+      "evidence": {
+        "dimensions": "all",
+        "group": "{}",
+        "scope": "delivered_only",
+        "baseline_eligible_attempts": "93",
+        "baseline_timed_attempts": "93",
+        "baseline_missing_timing": "0",
+        "baseline_median_seconds": "3.00499913",
+        "baseline_p95_seconds": "44.210858004",
+        "repair_eligible_attempts": "94",
+        "repair_timed_attempts": "94",
+        "repair_missing_timing": "0",
+        "repair_median_seconds": "2.938967221",
+        "repair_p95_seconds": "36.484219227",
+        "delta_median_seconds": "-0.06603190899999989",
+        "delta_p95_seconds": "-7.726638777000005"
+      }
+    },
+    {
+      "check": "frozen assistant agreement47 no adjudication",
+      "passed": true,
+      "evidence": {
+        "prepared_seal_sha256": "8a6786ed30063ee260e5e430ebed24a968ac4594cc51d7cf5eb74ce18b533ca3",
+        "packet_sha256": "cea0c5a30720e45366d9bd992528625d182de5a451c894f8c9950a6d733fc306",
+        "review_a_sha256": "fda44cdbb5e057024996f719705cc1ab00641dbcbe0a7f2980f783faf77543b5",
+        "review_b_sha256": "44302ccbe3cef789c92d21ccfa7043842d69238a03fa1eac23a2ad54d3cfc53d",
+        "disagreements": [],
+        "agreements": 47,
+        "groups": 47,
+        "script_sha256": "7013efb9a06860d676b0d0922494ad65795841923dcebc5ae4e73519356b4cb8",
+        "command": [
+          "evaluation/changing_memory_repair_20260914/analyze_repair.py",
+          "seal-reviews",
+          "--prepared",
+          "evaluation/changing_memory_repair_20260914/prepared_final_v1",
+          "--review-a",
+          "evaluation/changing_memory_repair_20260914/bound_reviews_v1/review_a.json",
+          "--review-b",
+          "evaluation/changing_memory_repair_20260914/bound_reviews_v1/review_b.json",
+          "--output",
+          "evaluation/changing_memory_repair_20260914/sealed_reviews_v1"
+        ],
+        "human_validation": "pending",
+        "diagnostics_revealed": false,
+        "adjudicator": null,
+        "resolved_before_diagnostics": true,
+        "votes_seal_sha256": "776be820ed8915e8d32a597a1989e6eaaa48a70c0cd51b2260d6d9b3370d184c"
+      }
+    },
+    {
+      "check": "reproduction34 passing comparisons",
+      "passed": true,
+      "evidence": {
+        "checks": {
+          "analysis/metrics.json": true,
+          "analysis/reviewed_answers.jsonl": true,
+          "analysis/history_pairs.jsonl": true,
+          "analysis/answers.md": true,
+          "analysis/acknowledgments.jsonl": true,
+          "analysis/diagnostic_answers.jsonl": true,
+          "analysis/audit_events.jsonl": true,
+          "analysis/process_audit.json": true,
+          "analysis/frozen_votes/resolved.json": true,
+          "review_agreement_excluding_new_timestamped_seal_identity": true,
+          "tables/generation_call_aggregates.csv": true,
+          "tables/disclosure_scopes.csv": true,
+          "tables/restart_history.csv": true,
+          "tables/history_pair_aggregates.csv": true,
+          "tables/expected_kind_restart_history.csv": true,
+          "tables/collection_audit.csv": true,
+          "tables/checkpoint_model_selections.csv": true,
+          "tables/stage_history.csv": true,
+          "tables/generation_call_details.csv": true,
+          "tables/branch_restart_history.csv": true,
+          "tables/requested_routes.csv": true,
+          "tables/overall.csv": true,
+          "tables/scenarios.csv": true,
+          "tables/expected_kind_history.csv": true,
+          "tables/history_exposure_audit.csv": true,
+          "tables/history_pair_details.csv": true,
+          "comparison/aggregate.csv": true,
+          "comparison/repair_recorded_diagnostics.csv": true,
+          "comparison/actual_generator_counts.csv": true,
+          "comparison/wall_latency.csv": true,
+          "comparison/checkpoints.csv": true,
+          "comparison/classification_transitions.csv": true,
+          "comparison/repair_diagnostic_summary.csv": true,
+          "figures/sourcedata.csv": true
+        }
+      }
+    },
+    {
+      "check": "six changed source files eleven matched conditions",
+      "passed": true,
+      "evidence": {
+        "status": "passed",
+        "baseline": "../changing_memory_20260914/frozen_v1",
+        "repair": "frozen_v2",
+        "matching_runtime_conditions": {
+          "config": true,
+          "models": true,
+          "ollama_version": true,
+          "embedding_assets": true,
+          "packages": true,
+          "python": true,
+          "generation_seed": true,
+          "device_policy": true,
+          "routing_policy": true,
+          "retain_large_model": true,
+          "logical_clock": true
+        },
+        "changed_source_files": [
+          "src/oline_hri/conversation.py",
+          "src/oline_hri/evaluation_scoring.py",
+          "src/oline_hri/grounded_composition.py",
+          "src/oline_hri/memory_evidence.py",
+          "src/oline_hri/relationships.py",
+          "src/oline_hri/routing.py"
+        ],
+        "note": "Baseline remains immutable. New review and source freeze; same installed models/embeddings, config, packages and generation settings."
+      }
+    },
+    {
+      "check": "offline test counts",
+      "passed": true,
+      "evidence": {
+        "full": "1093 total,26 skipped; suite successful",
+        "affected": "226,no skips"
+      }
+    },
+    {
+      "check": "scope and remaining failures explicit",
+      "passed": true,
+      "evidence": {
+        "interpretation": "Targeted development regression, constraints distinguished, failed delivery/contradiction preserved; no causal latency or universal safety claim."
+      }
+    },
+    {
+      "check": "README unchanged during final verification",
+      "passed": true,
+      "evidence": {
+        "sha256": "69ed3a641935f04d2531f20f1f3bded263abf435af766bc3005cecc229b574e5"
+      }
+    }
+  ],
+  "manual_checks": [
+    {
+      "check": "Audit methods and counts",
+      "passed": true,
+      "evidence": "collection_audit_findings_v1.md/json supports 10,541 checks with zero violations, 184 operations, 24 writes, four corrections, four forgetting operations, eight purged IDs, 12 databases/restarts, 12 warm probes, 32 snapshot probes, 96 answer freshness checks, 56 retained originals, 36 empty fresh histories, 57.437 C maximum temperature, 6,593/7,620 MB RAM and 750 MB swap. One zero-operation thermal admission rejection occurred, with no runtime guard or cleanup failures."
+    },
+    {
+      "check": "Controlled expiry and real process scope",
+      "passed": true,
+      "evidence": "Protocol/frozen clock require time strictly before 2026-10-08T12:00:00Z after seven-day retention. Checkpoints occur at boundary minus one microsecond, equality, plus one microsecond, and restart plus two seconds. No OS-clock change or row editing simulates expiry. Evaluation restores history rather than claiming deployment chat persistence."
+    },
+    {
+      "check": "Contradictory answers diagnostic attribution",
+      "passed": true,
+      "evidence": "partial_answer_diagnostics_v1.md/json and sealed scores identify two cm01 correction answers whose raw speech equals delivery: sufficient current evidence, identical history-free inputs, no composition, and accepted validation. Both remain partial with no forbidden disclosure. No internal-model or cache cause is asserted."
+    },
+    {
+      "check": "Withheld answers diagnostic attribution",
+      "passed": true,
+      "evidence": "withheld_diagnostics_v1.md/json identify both cm04 restart withholds: supported raw Niko Fern values rejected by the literal-current request-link gate. Report preserves the failed delivery judgments."
+    }
+  ],
+  "inference_performed": false,
+  "production_changes": false,
+  "readme_edited_by_reviewer": false,
+  "blinded_reviewer_contact": false,
+  "input_sha256": {
+    "README.md": "69ed3a641935f04d2531f20f1f3bded263abf435af766bc3005cecc229b574e5",
+    "analysis_v1/metrics.json": "945fa8e95c8417304b7ab56692532f23e95857e57051b2a49499d09c6a0a6d22",
+    "analysis_v1/review_agreement.json": "743024667fe089cbb4007e45b2b7ee0cac2e7e74f9d9facf937c9229df394890",
+    "analysis_v1/reviewed_answers.jsonl": "3139ec60184e3e7c8cc0ff4077d3f81f476ffd443df5beab7070eb5020553a9b",
+    "analysis_v1/seal.json": "117327f6c1d19b4870180f5219ce1d8014a51dcf0bbb33ed04f22693b7e5d8a6",
+    "tables_v1/seal.json": "447c8b7101d270a87dfa5f01e92ff190a03b28451ee34df3c51d020fe04e804f",
+    "matched_comparison_v1/comparison.json": "daf5bd4a896ce403497d0ddb9c55e9e93f87bffd9e29137a57874c50c2389361",
+    "matched_comparison_v1/checkpoints.csv": "2796231865b59703cd4cf368b2da6f0d2fa24192995df1e8691a8788bb0c0e2a",
+    "matched_comparison_v1/aggregate.csv": "0e1b03f3a921b043c52fc68a97d639f3eb7c2617a6d11b1c88b7a30d18dbf6ef",
+    "matched_comparison_v1/wall_latency.csv": "97e95d7a6062e40cf0c6f3c9983d78bff70b4ebfd2ed6fa6e0e366812f7033a2",
+    "matched_comparison_v1/actual_generator_counts.csv": "94c48e3fda0af4a128a580dd3243d3db9da59621e1d65f6bccd6ca37c7d62b8a",
+    "matched_comparison_v1/repair_diagnostic_summary.csv": "a282b6c9817272796948eff06e823017d9b5d4878f355cf117ab5b9958f23482",
+    "matched_comparison_v1/seal.json": "85cc869a9d123f13ee5cdc86fb4dc4b50e8fcf814ff876354d1a01a03295ab3e",
+    "collection_audit_findings_v1.md": "07888016b1de9541c1a8e13b6eabf32df5ec53404901a0f819ebf8782e47a23a",
+    "collection_audit_findings_v1.json": "d2cea4f864e1012dc605c2d6e7e70baf3015d48b764f1cf39afd43690f1b9729",
+    "collection_audit_v1.json": "914786d716b005ce59eb83ae18e2aaa0912bd878a631c7546544d6075f26e860",
+    "partial_answer_diagnostics_v1.md": "4174e4a8d19aac2053c007f20a1edd09aa5121792ca16d4501748afb9d167641",
+    "partial_answer_diagnostics_v1.json": "5654f196d6c9b517d3bb4423827f64c19b551b8b6f7b04ba46a6dea6a9e30f80",
+    "withheld_diagnostics_v1.md": "3ad87a0fd2393bf89597664e1fcbae1f10a92738c7f5f113a6cf17104138b9b1",
+    "withheld_diagnostics_v1.json": "e200223184007f07ce97b8ea5ff8d0bf24f5abc264c0e6ea6b8bbbed4a8b0e91",
+    "freeze_comparison_v1.json": "0fe0ca284460ab35915aff662236b1bf1e6a806ce64c2a7aba77b04cab10d5ef",
+    "authoring_validation_v1.json": "7ccca056b553de092c5eab0cda6fe48141a5186f881e1a72cc11208909de4488",
+    "analysis_reproduction_v1.json": "ec2ba0171aa93d9ed589b940a768841d59adbffda469299819f00cd20efd2c51",
+    "repair_changes_v1.md": "5381b6f8220fd362458ca7dc5253adc540ddd2e765b53d5f92c91218b5371309",
+    "offline_validation_v1/full_suite_attempt_02.log": "8471d2591f73a4f6c0314105fa14cfb91835cd46356bfd95eecd3e40d0251ffd",
+    "offline_validation_v1/final_focused_v1.log": "faff0e8e02ad5c861da7e442360f2144d048cb7c77fa9bb6d92b09e143928da0"
+  }
+}

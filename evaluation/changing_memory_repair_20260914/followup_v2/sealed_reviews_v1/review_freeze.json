@@ -1,0 +1,24 @@
+{
+  "prepared_seal_sha256": "33611cdd1a4b2b391d3b2d040c6ce973cc70e4621f77fe5e9ac66cebb928fb61",
+  "packet_sha256": "365fa306ae7a3a66e6a6cca11bf6701c0b406cfaf827320e6762b4e183a28b1b",
+  "review_a_sha256": "0bd7ab4b2e6ebb0ed80fdfd5144925896fef16cdc9004041b7e12e0d2546674b",
+  "review_b_sha256": "9ec165903d30db075fde830fb032df92ff6bfdda6e9dbbf069266daaedd50a0d",
+  "disagreements": [],
+  "agreements": 11,
+  "groups": 11,
+  "script_sha256": "7013efb9a06860d676b0d0922494ad65795841923dcebc5ae4e73519356b4cb8",
+  "command": [
+    "evaluation/changing_memory_repair_20260914/analyze_repair.py",
+    "seal-reviews",
+    "--prepared",
+    "evaluation/changing_memory_repair_20260914/followup_v2/prepared_v1",
+    "--review-a",
+    "evaluation/changing_memory_repair_20260914/followup_v2/review_a_v1.json",
+    "--review-b",
+    "evaluation/changing_memory_repair_20260914/followup_v2/review_b_v1.json",
+    "--output",
+    "evaluation/changing_memory_repair_20260914/followup_v2/sealed_reviews_v1"
+  ],
+  "human_validation": "pending",
+  "diagnostics_revealed": false
+}

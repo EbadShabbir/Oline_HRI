@@ -1,0 +1,21 @@
+{
+  "baseline_root": "evaluation/changing_memory_20260914",
+  "scenario_ids": [
+    "cm01",
+    "cm04",
+    "cm07",
+    "cm09"
+  ],
+  "planned_checkpoints": 96,
+  "planned_branches": 12,
+  "planned_restarts": 12,
+  "planned_generation_turns": 108,
+  "baseline_files_sha256": {
+    "scenarios.json": "0523168faa7126f18ed8ec36bfc0291348909f5010b4fc197a9888bb208e36b9",
+    "author_ledger.py": "21004fec28d37c18bae5ba01c2196d950d18ad717edf542938a4d78133a39d03",
+    "frozen_v1/protocol.md": "cfafedde92fc073702a0c67747f9cb913850299ac4743fd50871d2bd423e260a",
+    "frozen_v1/runtime.json": "0f60d2f5f85b69ca263ec05cdcd4920112ce1811445346dcb152c842d0ab683e",
+    "frozen_v1/expected_ledger.json": "f917809b143fee3e9684ff4200942e58ba3b37c73fef81dc47940946402c0226",
+    "seal.json": "e8e3b3e64a1da7f79ff316b4668942388d03050eaac1319630e6e75f3a1af4fb"
+  }
+}

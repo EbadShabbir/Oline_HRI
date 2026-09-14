@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-11T15:33:34.682723+00:00",
+  "scope": "Read-only Stage 2 carry-over admission audit after completed large r2; no model execution or intervention",
+  "previous_session": "04_large_r2",
+  "device_policy": {
+    "policy_id": "complete_system_stage2_common_device_limits_v1",
+    "scope": "all three Stage 2 arms; embeddings through final cleanup",
+    "min_start_available_kib": 2097152,
+    "max_start_swap_used_kib": 786432,
+    "max_start_temperature_c_exclusive": 55.0,
+    "min_runtime_available_kib": 786432,
+    "max_runtime_swap_used_kib": 1048576,
+    "max_runtime_temperature_c_exclusive": 68.0,
+    "maximum_resident_models": 1,
+    "power_mode": "15W mode 0",
+    "fan_required": true,
+    "unchanged_boot_and_thermal_trip_counters": true,
+    "telemetry_interval_ms": 500,
+    "telemetry_stall_ceiling_seconds": 5,
+    "persistent_system_changes": false,
+    "prior_arc_limits_reused": false
+  },
+  "session_artifact_sha256": {
+    "start.json": "7c1c0f023955fc2d83c376fcec0b790b028d9913ab4fd33e9ff8fa1774aa2dfa",
+    "finish.json": "7bf572fe4615af544a8f64b36f538e0c0571f3f833115e3c9930087687b4454f",
+    "summary.json": "904d58254201097ea9b1e929e92ec1dc733dff636b38d5cc9209bf9e275d19e7",
+    "telemetry_summary.json": "2b151ad21b512b5191cddad82d4f3e5991df011f460ee4af567aa3af9a562355"
+  },
+  "previous_start": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-11T15:26:43.193527+00:00",
+    "fan_pwm": 84,
+    "memory": {
+      "mem_available_kib": 2428228,
+      "mem_total_kib": 7803236,
+      "swap_free_kib": 3165864,
+      "swap_total_kib": 3901608,
+      "swap_used_kib": 735744
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 52.781,
+      "gpu-thermal": 52.968,
+      "soc0-thermal": 51.625,
+      "soc1-thermal": 51.625,
+      "soc2-thermal": 52.0,
+      "tj-thermal": 52.781
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "gpu": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "previous_finish": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-11T15:30:47.683469+00:00",
+    "cleanup_errors": [],
+    "failure": null,
+    "fan_pwm": 117,
+    "guard_violation": null,
+    "memory": {
+      "mem_available_kib": 2426164,
+      "mem_total_kib": 7803236,
+      "swap_free_kib": 3047848,
+      "swap_total_kib": 3901608,
+      "swap_used_kib": 853760
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "status": "complete_with_errors",
+    "telemetry_reader_error": null,
+    "temperatures_c": {
+      "cpu-thermal": 62.093,
+      "gpu-thermal": 62.375,
+      "soc0-thermal": 60.281,
+      "soc1-thermal": 60.187,
+      "soc2-thermal": 61.156,
+      "tj-thermal": 62.375
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "gpu": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "previous_summary": {
+    "arm": "large",
+    "attempted": 48,
+    "delivered": 44,
+    "first_case_seconds": 22.936028567,
+    "latency_seconds": {
+      "max": 22.936028567,
+      "mean": 4.970162086249999,
+      "min": 2.677032932,
+      "n": 48,
+      "p50": 4.475069642499999,
+      "p95": 7.4578374388499995
+    },
+    "planned": 48,
+    "repetition": 2,
+    "status": "complete_with_errors"
+  },
+  "previous_telemetry_summary": {
+    "duration_seconds": 243.697369038,
+    "metrics": {
+      "cpu_mean_percent": {
+        "max": 96.16666666666667,
+        "p50": 59.833333333333336,
+        "p95": 75.5
+      },
+      "gr3d_percent": {
+        "max": 99,
+        "p50": 99,
+        "p95": 99
+      },
+      "ram_used_mb": {
+        "max": 6416,
+        "p50": 6340,
+        "p95": 6403
+      },
+      "swap_used_mb": {
+        "max": 834,
+        "p50": 796,
+        "p95": 834
+      },
+      "vdd_in_average_mw": {
+        "max": 13972,
+        "p50": 13284,
+        "p95": 13934
+      },
+      "vdd_in_mw": {
+        "max": 14810,
+        "p50": 14747,
+        "p95": 14810
+      }
+    },
+    "record_type": "jetson_telemetry_summary",
+    "sample_count": 481,
+    "schema_version": 1,
+    "temperatures_c": {
+      "cpu": {
+        "max": 62.281,
+        "p50": 60.531,
+        "p95": 61.968,
+        "sample_count": 481
+      },
+      "gpu": {
+        "max": 63.437,
+        "p50": 61.406,
+        "p95": 63.062,
+        "sample_count": 481
+      },
+      "soc0": {
+        "max": 60.437,
+        "p50": 58.718,
+        "p95": 60.187,
+        "sample_count": 481
+      },
+      "soc1": {
+        "max": 60.187,
+        "p50": 58.437,
+        "p95": 59.968,
+        "sample_count": 481
+      },
+      "soc2": {
+        "max": 61.406,
+        "p50": 59.656,
+        "p95": 61.156,
+        "sample_count": 481
+      },
+      "tj": {
+        "max": 63.437,
+        "p50": 61.406,
+        "p95": 63.031,
+        "sample_count": 481
+      }
+    },
+    "vdd_in_energy_joules": 3407.012992907657
+  },
+  "current_snapshot": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-11T15:33:34.672722+00:00",
+    "fan_pwm": 84,
+    "memory": {
+      "mem_total_kib": 7803236,
+      "mem_available_kib": 2620988,
+      "swap_total_kib": 3901608,
+      "swap_free_kib": 3048360,
+      "swap_used_kib": 853248
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 53.812,
+      "gpu-thermal": 53.5,
+      "soc0-thermal": 52.562,
+      "soc1-thermal": 52.468,
+      "soc2-thermal": 52.781,
+      "tj-thermal": 53.812
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "current_admission": {
+    "passed": false,
+    "failure": {
+      "type": "SafetyGateError",
+      "message": "swap use exceeds the Stage 2 768 MiB start gate"
+    }
+  },
+  "remaining_slots": [
+    {
+      "session": "05_cascade_r2",
+      "directory_exists": false,
+      "observation_file_exists": false,
+      "observation_count": 0
+    },
+    {
+      "session": "06_small_r2",
+      "directory_exists": false,
+      "observation_file_exists": false,
+      "observation_count": 0
+    },
+    {
+      "session": "07_cascade_r3",
+      "directory_exists": false,
+      "observation_file_exists": false,
+      "observation_count": 0
+    },
+    {
+      "session": "08_small_r3",
+      "directory_exists": false,
+      "observation_file_exists": false,
+      "observation_count": 0
+    },
+    {
+      "session": "09_large_r3",
+      "directory_exists": false,
+      "observation_file_exists": false,
+      "observation_count": 0
+    }
+  ],
+  "interpretation": "A scheduler preflight rejection is not an executed cascade/small/large request. Preserve unattempted slots and original large-r2 observations. No causal attribution for swap changes is established by these snapshots."
+}

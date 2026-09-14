@@ -1,0 +1,23 @@
+{
+  "snapshot_sessions": 26,
+  "observed_turns": 104,
+  "eligible_complete_sequences": 26,
+  "raw_backend_calls": 157,
+  "raw_generation_calls": 104,
+  "generation_output_token_metadata_missing_calls": 0,
+  "rejected_or_interrupted_turns": 4,
+  "rejected_turns_with_generation_output_token_counts": 4,
+  "output_tokens_on_rejected_turns": 365,
+  "adaptive_DDEE_sequences_observed": 0,
+  "adaptive_DDEE_selected_LLLS": 0,
+  "adaptive_DDEE_actual_LLLS": 0,
+  "small_returns": 0,
+  "requests_after_small_return": 0,
+  "validation_only_delivery_count": 100,
+  "quality": {
+    "status": "pending",
+    "independently_human_reviewed": false
+  },
+  "audit_errors": [],
+  "note": "Counts describe the current snapshot. Repetitions, turns and shared templates/profile are dependent."
+}

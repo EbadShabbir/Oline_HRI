@@ -1,0 +1,23 @@
+test_120_unique_cases_and_exact_counterbalance (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_active_deadline_and_stalled_telemetry_interrupt_blocking_call (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_attempts_preserve_truncation_invalid_answers_and_errors (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_complete_evidence_unicode_budget_and_no_history (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_duplicate_and_missing_cases_rejected (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_exclusive_creation_and_frozen_source_drift (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_inputs_equal_and_reference_annotations_never_rendered (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_interruption_retains_attempt_before_propagating (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_parse_preserves_exact_output_and_rejects_wrong_identity (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_residency_checks_name_digest_and_context (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_strict_answer_rejects_duplicate_nonfinite_and_nonobject_json (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_thinking_and_observed_budget_violation_are_fatal (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_transport_archives_real_bytes_and_http_error_body (test_matched_evidence.MatchedEvidenceTests) ... ok
+test_byte_alphabet_coverage_and_utf8_budget (test_matched_evidence.TokenizerProofTests) ... ok
+test_different_model_tokenizer_metadata_cannot_be_certified (test_matched_evidence.TokenizerProofTests) ... ok
+test_gguf_reader_excludes_weights_and_rejects_truncation (test_matched_evidence.TokenizerProofTests) ... ok
+test_incomplete_bytes_and_wrong_tokenizer_rejected (test_matched_evidence.TokenizerProofTests) ... ok
+test_installed_pair_has_identical_complete_byte_bpe_without_inference (test_matched_evidence.TokenizerProofTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 2.988s
+
+OK

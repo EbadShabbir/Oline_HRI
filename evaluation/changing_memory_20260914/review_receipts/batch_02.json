@@ -1,0 +1,13 @@
+{
+  "packet_sha256": "d1e53737215ece18b1b3db24680a77de4b051781e2e8c49605c44142d50364e2",
+  "reviewer_a_sha256": "b9fc5240b5fda116122f0dd2f763bb24da6e50bdd888fd1f1b9ced773a782659",
+  "reviewer_b_sha256": "849c64aaa92de80a02a5ba7326937ed1413e01a647cb6fc0cd47d4ca6f9b023e",
+  "judgments_frozen_before_diagnostics": true,
+  "human_validation": "pending",
+  "independent_contexts": [
+    "/root/blinded_reviewer_a",
+    "/root/blinded_reviewer_b"
+  ],
+  "agreement": 35,
+  "groups": 35
+}

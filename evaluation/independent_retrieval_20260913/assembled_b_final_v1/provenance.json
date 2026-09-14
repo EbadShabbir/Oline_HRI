@@ -1,0 +1,26 @@
+{
+  "command": [
+    "assemble",
+    "--remap",
+    "evaluation/independent_retrieval_20260913/remap_b_final_v1",
+    "--missing-review",
+    "evaluation/independent_retrieval_20260913/review_b_final_additional",
+    "--output",
+    "evaluation/independent_retrieval_20260913/assembled_b_final_v1"
+  ],
+  "created_at": "2026-09-13T18:56:34.730060+00:00",
+  "human_validation": "pending",
+  "inputs": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/remap_b_final_v1/seal.json": "c75d1323db4f9e673dae4f360f92dc78d4cd3077a99e9bf3c53e917d69842732",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_b_final_additional/seal.json": "daf09ea959a323ee0a70f7c604912a261a9ed79b4d11b9c3301efc975ab2fe24"
+  },
+  "phase": "assemble_complete_individual_review",
+  "private_mapping_read": false,
+  "semantic_judgments_generated_by_program": false,
+  "source_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/batch_independent_retrieval_reviews.py": "578d8078ce563cf399400ce3d5d4abea34dcf2d218800874276ece34222bbeed",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_retrieval_review_batches.py": "d9bc5815baf7a60a929ba19c9360f24ae96fbff56b45e6d0c0560df55350c5f7"
+  },
+  "working_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI"
+}

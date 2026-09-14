@@ -1,0 +1,41 @@
+{
+  "attempted": 184,
+  "freeze": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/frozen_v1",
+  "freeze_seal_sha256": "fda698a52067906e3a071c36dee68d3abb579f5b9c199533cd731708a717a9fd",
+  "remaining": 680,
+  "run": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2",
+  "run_seal_sha256": "09dd4362ffaf8504093e920cd44887d10b67585cbc71049416ed539f10b27c76",
+  "scope": "sealed cumulative strict-prefix cohort; final full analyzer audit and coverage remain required",
+  "sessions": [
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_01",
+      "exit_code": 0,
+      "seal_sha256": "db3525fe2d2563ba0d042dcc42a2d3b95f88d99217e2b0dd61709f2ad08fa13e",
+      "slot": 1
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_02_admission_retry_03",
+      "exit_code": 0,
+      "seal_sha256": "cd0b060dd6d8f34e39f3ba345c7d6c9649d454851fe275096fc2bd1725b02b8e",
+      "slot": 2
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_03_admission_retry_04",
+      "exit_code": 0,
+      "seal_sha256": "7893fc42e187861ce33c7302e4848eac670e180ca6f1a96a1f956334245ccebb",
+      "slot": 3
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v1/session_04_admission_retry_04",
+      "exit_code": 1,
+      "seal_sha256": "d3217b69d9a860d1b566f5984e03e4da01f61094286e5c158d4e8cc475f08b12",
+      "slot": 4
+    },
+    {
+      "directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2/session_04_from_14",
+      "exit_code": 1,
+      "seal_sha256": "cc50e94b94f344b5c8009b100a5ae5336776a7f1baf2ae296b1799ed4eb15bba",
+      "slot": 4
+    }
+  ]
+}

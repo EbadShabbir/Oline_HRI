@@ -1,0 +1,14 @@
+{
+  "analysis": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/matched_evidence_20260912/analysis_v1",
+  "input_sha256": {
+    "provenance.json": "e854db8dbf963f48f80259d4ec1067ac7826bb38995b5f529362c3fc9a172167",
+    "resolved_reviews.json": "888af86eda3ea0c9cb77750760121ed427679853a778d677feb31377f9db07d1",
+    "tables_and_answers.md": "3011cc331e4e29e6e4d63c6e03ae6a1b4cad23640502de424eeb67917421df2b",
+    "analysis.json": "e4d14504c7e503d02589ce999405f765c13fe30de2079d02a1de6bfee3a70d72",
+    "scored_answers.jsonl": "b33b3b1b501cf8ee4a4804736f56babac1597e7c0eefd4e7f9fbde8211b459a4",
+    "seal.json": "d2a841d4e1fd0934b039b97733b54ba33517f06925637e24cf1ecf26ce8e80d6"
+  },
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:21:46) [GCC 14.3.0]",
+  "matplotlib": "3.11.2",
+  "scope": "offline presentation of frozen reviewed analysis"
+}

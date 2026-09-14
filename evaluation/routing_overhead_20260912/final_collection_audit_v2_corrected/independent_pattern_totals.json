@@ -1,0 +1,54 @@
+[
+  {
+    "pattern": "EEEE",
+    "sequences_per_arm": 9,
+    "sequence_total_seconds_by_arm": {
+      "small": 167.066226939,
+      "large": 632.751908017,
+      "adaptive": 174.54718410400002,
+      "replay": 150.90989770099998
+    },
+    "large_minus_adaptive_seconds": 458.20472391299995,
+    "small_minus_adaptive_seconds": -7.480957165000035,
+    "adaptive_minus_replay_seconds": 23.637286403000047
+  },
+  {
+    "pattern": "DDDD",
+    "sequences_per_arm": 9,
+    "sequence_total_seconds_by_arm": {
+      "small": 191.854908892,
+      "large": 818.584882796,
+      "adaptive": 785.4447161670001,
+      "replay": 746.3249455760001
+    },
+    "large_minus_adaptive_seconds": 33.14016662899985,
+    "small_minus_adaptive_seconds": -593.5898072750001,
+    "adaptive_minus_replay_seconds": 39.11977059100002
+  },
+  {
+    "pattern": "EDED",
+    "sequences_per_arm": 9,
+    "sequence_total_seconds_by_arm": {
+      "small": 182.509370437,
+      "large": 660.3900204880001,
+      "adaptive": 642.364006876,
+      "replay": 588.6784426869999
+    },
+    "large_minus_adaptive_seconds": 18.026013612000156,
+    "small_minus_adaptive_seconds": -459.85463643899993,
+    "adaptive_minus_replay_seconds": 53.68556418900005
+  },
+  {
+    "pattern": "DDEE",
+    "sequences_per_arm": 9,
+    "sequence_total_seconds_by_arm": {
+      "small": 182.714922969,
+      "large": 712.620504017,
+      "adaptive": 762.642276646,
+      "replay": 581.7041605080001
+    },
+    "large_minus_adaptive_seconds": -50.021772629,
+    "small_minus_adaptive_seconds": -579.927353677,
+    "adaptive_minus_replay_seconds": 180.93811613799994
+  }
+]

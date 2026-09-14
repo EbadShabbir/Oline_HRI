@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-09-14T14:00:00.003103+00:00",
+  "status": "passed",
+  "tests": 4,
+  "failures": 0,
+  "errors": 0,
+  "no_inference": true,
+  "no_live_answer_scoring": true,
+  "all_original_function_ast_unchanged": true,
+  "only_module_change": "Analyzer import points to separately tested count-derived analyze_repair.py.",
+  "sha256": {
+    "evaluation/changing_memory_20260914/batch_reviews.py": "454206690cdf64c649e7c7c308f3618b2f2bbbdd43fedbca13363cd346769566",
+    "evaluation/changing_memory_repair_20260914/batch_reviews.py": "806c7afd5ff92739f0edcd727f49caeaba7b523a2df4b5d501d3bfd5935b9e59",
+    "evaluation/changing_memory_repair_20260914/analyze_repair.py": "7013efb9a06860d676b0d0922494ad65795841923dcebc5ae4e73519356b4cb8",
+    "tests/test_batch_memory_reviews.py": "ef653df7ac5d838245e310d7260dac5f5014cebcc1e0fc841841224d7bddfac8"
+  },
+  "review_batches": "Completed sealed scenarios only; predetermined pairs cm01/cm04 andcm07/cm09. Final binding changes only opaqueIDs and packet envelope hash, preserving original votes and reasons."
+}

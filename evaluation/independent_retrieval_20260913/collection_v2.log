@@ -1,0 +1,30 @@
+SESSION 4/18 qwen3:1.7b SELECTIVE suffix14–48 admission1
+slot 04 qwen3:1.7b SELECTIVE r1 1/35 ir_04_04 ok 37.693s
+slot 04 qwen3:1.7b SELECTIVE r1 2/35 ir_06_04 ok 11.326s
+[0;93m2026-09-13 21:04:29.997786552 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+slot 04 qwen3:1.7b SELECTIVE r1 3/35 ir_05_06 ok 11.559s
+slot 04 qwen3:1.7b SELECTIVE r1 4/35 ir_03_01 ok 4.780s
+slot 04 qwen3:1.7b SELECTIVE r1 5/35 ir_02_01 ok 4.745s
+slot 04 qwen3:1.7b SELECTIVE r1 6/35 ir_02_02 ok 8.302s
+slot 04 qwen3:1.7b SELECTIVE r1 7/35 ir_06_02 ok 8.487s
+slot 04 qwen3:1.7b SELECTIVE r1 8/35 ir_04_05 ok 10.105s
+slot 04 qwen3:1.7b SELECTIVE r1 9/35 ir_01_02 ok 11.210s
+slot 04 qwen3:1.7b SELECTIVE r1 10/35 ir_01_05 ok 9.513s
+slot 04 qwen3:1.7b SELECTIVE r1 11/35 ir_02_04 ok 14.980s
+slot 04 qwen3:1.7b SELECTIVE r1 12/35 ir_02_06 ok 9.418s
+slot 04 qwen3:1.7b SELECTIVE r1 13/35 ir_08_03 ok 6.880s
+slot 04 qwen3:1.7b SELECTIVE r1 14/35 ir_03_05 ok 6.142s
+slot 04 qwen3:1.7b SELECTIVE r1 15/35 ir_06_01 ok 5.088s
+slot 04 qwen3:1.7b SELECTIVE r1 16/35 ir_04_06 ok 11.304s
+slot 04 qwen3:1.7b SELECTIVE r1 17/35 ir_08_01 ok 8.040s
+slot 04 qwen3:1.7b SELECTIVE r1 18/35 ir_05_03 ok 8.437s
+slot 04 qwen3:1.7b SELECTIVE r1 19/35 ir_02_05 ok 7.082s
+slot 04 qwen3:1.7b SELECTIVE r1 20/35 ir_07_06 ok 13.181s
+slot 04 qwen3:1.7b SELECTIVE r1 21/35 ir_01_06 ok 6.293s
+slot 04 qwen3:1.7b SELECTIVE r1 22/35 ir_01_04 ok 12.789s
+slot 04 qwen3:1.7b SELECTIVE r1 23/35 ir_06_03 ok 8.910s
+slot 04 qwen3:1.7b SELECTIVE r1 24/35 ir_05_05 ok 5.630s
+slot 04 qwen3:1.7b SELECTIVE r1 25/35 ir_07_03 ok 15.113s
+slot 04 qwen3:1.7b SELECTIVE r1 26/35 ir_02_03 ok 10.395s
+slot 04 qwen3:1.7b SELECTIVE r1 27/35 ir_03_02 interrupted 9.100s
+BATCH interrupted /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2

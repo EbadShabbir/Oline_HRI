@@ -1,0 +1,7 @@
+{
+  "immutability": "exclusive output creation, SHA256 manifest, read-only files; not privileged WORM",
+  "sha256": {
+    "independent_numeric_audit.py": "66c4bed36b791cbd2d5cff869e2e9017b320b8ecd5f7f76bdf0410fb7cd5edd0",
+    "numeric_audit.json": "a0f8141a4ab7f6b6533eca9303fa375debc7d9a00c011666342982948986e217"
+  }
+}

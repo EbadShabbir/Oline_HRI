@@ -1,0 +1,27 @@
+{
+  "renderer_sha256": "9945f6e1d2b91383d21364ba4dec345ec29c29b21274d29f8287cba9b13ec3a2",
+  "analysis_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/analysis_v2_reviewed",
+  "input_sha256": {
+    "analysis.json": "6ab197dda150e4001edebd380bd96b62a717bd6f8a7aaccf3720eaa7cd696549",
+    "row_metrics.jsonl": "a5859d64d6b8b4d42a12be71bc6b842971e252ca904b27c691870be0b4bfd2b7",
+    "blinded_mapping.jsonl": "8684ec25d436cb719a80d6d3769ef3d72f92cbcd4d58bc53a4efa5f02510fb0a",
+    "review_manifest.json": "9d95f5109944b31c515b0f8b08cfa7d4bee0b40cef10972410734e0d24880732",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2/01_large_r1/observations.jsonl": "780db8bee003d8813be8aa43b51fbb4342619ffca7b65fd31c32472bbe2df5de",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1/observations.jsonl": "552de48cbcd0737ce39e88ec93d348e6eb3ffb6f8833e16b17b1181fb56d0d20",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1/observations.jsonl": "f76e1706bb0ad409e922147942c4ec7d9e8f6cf0c15296ea82aa5bff26da2a15",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2/observations.jsonl": "6bf194c81d481d436390bbaf48d252d1ffbc35ef732f6cf2334bd6323e38b842",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2/observations.jsonl": "1f8da8142837e315606bca4f4def56c1a87c5b7209ce6b49e4fb36608d4abec1",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2/observations.jsonl": "6bd1075cc03d88a07ed69391602ec33882315a9d70b89ee66569d724d8b559e5",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3/observations.jsonl": "71fd6715a0345c914f7c79dcbc3f23bff8cce387620ae3366cef567c8ade9da2",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3/observations.jsonl": "24293120332777699af047cde9c6adb64d9adbc0fab54546a63e031701cd9621",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3/observations.jsonl": "13a71afa16140ed54aa0770851899c3d6a670ad5fa49fdde6b4929e1155c5301"
+  },
+  "raw_artifacts_read": true,
+  "grading_performed": false,
+  "scope": "Descriptive rendering of saved artifact-validated and fully reviewed observed measurements",
+  "output_sha256": {
+    "summary.json": "7f8b69b0b08b4e427d2c19f46769d640ea0f4b2f70a1599c63642f0762eedd45",
+    "tables.md": "aa0049688295dfed03967b9f39da403944d815df85c5c25b38e836c1c8b9c948",
+    "runtime_evidence.json": "aa3685a2d46059d001a1f7b72eb8951da8e116cca6a1a5a422611a1e1048c933"
+  }
+}

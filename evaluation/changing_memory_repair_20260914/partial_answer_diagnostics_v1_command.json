@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evaluation/changing_memory_repair_20260914/partial_answer_diagnostics_v1.py"
+  ],
+  "cwd": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI",
+  "started_at": "2026-09-14T14:19:52.631778+00:00",
+  "finished_at": "2026-09-14T14:19:53.208739+00:00",
+  "returncode": 0,
+  "sha256": {
+    "evaluation/changing_memory_repair_20260914/partial_answer_diagnostics_v1.py": "54b04e9d0104f5428f349d5bfbd9b6d7d78a7c2c4ff205e94fd4bcc22bfec319",
+    "evaluation/changing_memory_repair_20260914/partial_answer_diagnostics_v1.log": "fa7c6e348c2a51ef5e16522ee75ede1ba86e08a92aa080c55f515330962c2ace",
+    "evaluation/changing_memory_repair_20260914/partial_answer_diagnostics_v1.json": "5654f196d6c9b517d3bb4423827f64c19b551b8b6f7b04ba46a6dea6a9e30f80"
+  }
+}

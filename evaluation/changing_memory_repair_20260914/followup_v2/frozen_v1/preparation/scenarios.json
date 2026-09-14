@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "authorship": "Original fictional cm04 scenario reused unchanged for a second targeted repair after first-repair failures; not held-out and never pooled with the first 96 checkpoints.",
+  "scenarios": [
+    {
+      "id": "cm04",
+      "category": "relationship",
+      "kind": "fact",
+      "original_text": "Your walking partner is Elora Vale.",
+      "replacement_text": "Your walking partner is Niko Fern.",
+      "old_value": "Elora Vale",
+      "new_value": "Niko Fern",
+      "historical_text": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+      "historical_value": "Birch Lodge",
+      "historical_event_time": "2026-09-06T09:00:00+00:00",
+      "questions": {
+        "direct": "Who is my walking partner?",
+        "unseen": "Earlier I told you about my walking partner. Who is my walking partner now?",
+        "restart": "Returning to my earlier walking partner information, who is my current walking partner?",
+        "historical": "Where was my Marigold garden tour on 2026-09-06?",
+        "forgotten_history": "Which walking partner did I name earlier, before I asked you to forget that information?"
+      }
+    }
+  ]
+}

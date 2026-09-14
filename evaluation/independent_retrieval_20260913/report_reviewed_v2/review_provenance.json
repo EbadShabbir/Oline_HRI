@@ -1,0 +1,52 @@
+{
+  "adjudicated_count": 12,
+  "agreement_count": 147,
+  "agreement_fields": [
+    "label",
+    "unsupported_claim",
+    "unsupported_personal_claim",
+    "abstained",
+    "explicit_conflict",
+    "forbidden_disclosure"
+  ],
+  "agreement_fraction": 0.9245283018867925,
+  "analysis_seal_sha256": "47ff6211d065d97505e8869c7a980e04b94843d8d481aa03463eccff7f2fad91",
+  "analysis_semantic_reviews_verified": true,
+  "attempt_index_sha256": "b9d96885bac5e3ddc895d874b7cac028bba7ce11c76aa9589dbeef3b26a893ee",
+  "comparison_seal_sha256": "9b062aba17ff83555ff39afa17a521cbdd54617d8b9cb9659d009547c40eb72b",
+  "disagreement_count": 12,
+  "human_validation": "pending",
+  "mapped_groups": 159,
+  "mapped_observations": 864,
+  "mapping_coverage_complete": true,
+  "mapping_coverage_status": "verified exact one-to-one group membership for all recorded attempts against sealed analysis, after resolved judgments were sealed",
+  "mapping_read": true,
+  "mapping_scope": "all recorded attempts; planned-attempt coverage is reported separately",
+  "planned_attempt_coverage_complete": true,
+  "planned_attempts": 864,
+  "private_mapping_sha256": "fbde4cded14c96804d1c963707a9f80213e26d99b2da5043414f4f88b916c9ff",
+  "rationale_only_difference_counts_as_disagreement": false,
+  "resolution_rule": "Agreements retain first review's exact judgment, including rationale; both exact original sheets retained. Disagreements use only the third assistant's supplied judgment.",
+  "resolution_seal_sha256": "35298ca8605c09da25a4113b7f569535276ad540b9aa02ea20785cbcc1bbef1b",
+  "resolved_groups": 159,
+  "resolved_reviews_sha256": "97c06a405564e4d2243370e6df473432fff0bc8d3caa371c5caf725248f823f9",
+  "review_kind": "independent blinded assistant review",
+  "reviewer_provenance": {
+    "adjudicator": {
+      "identity": "/root/audit_design/blind_adjudicator",
+      "sheet": "original_adjudication.jsonl"
+    },
+    "identity_and_independence": "caller-provided; separate assistant contexts required by workflow",
+    "reviewers": [
+      {
+        "identity": "/root/inspect_harness/blinded_reviewer_a",
+        "sheet": "original_review_a.jsonl"
+      },
+      {
+        "identity": "/root/prepare_dataset/blinded_reviewer_b",
+        "sheet": "original_review_b.jsonl"
+      }
+    ]
+  },
+  "total_groups": 159
+}

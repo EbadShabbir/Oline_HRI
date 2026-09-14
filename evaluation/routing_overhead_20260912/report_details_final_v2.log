@@ -1,0 +1,71 @@
+{
+  "snapshot_sessions": 144,
+  "observed_turns": 576,
+  "eligible_complete_sequences": 144,
+  "raw_backend_calls": 855,
+  "raw_generation_calls": 576,
+  "generation_output_token_metadata_missing_calls": 0,
+  "rejected_or_interrupted_turns": 30,
+  "rejected_turns_with_generation_output_token_counts": 30,
+  "output_tokens_on_rejected_turns": 2090,
+  "adaptive_DDEE_sequences_observed": 9,
+  "adaptive_DDEE_selected_LLLS": 9,
+  "adaptive_DDEE_actual_LLLS": 9,
+  "small_returns": 18,
+  "requests_after_small_return": 0,
+  "validation_only_delivery_count": 546,
+  "quality": {
+    "status": "assistant_reviewed",
+    "independently_human_reviewed": false,
+    "unique_output_groups": 146,
+    "systems": {
+      "small": {
+        "attempts": 144,
+        "correct": 66,
+        "labels": {
+          "incorrect": 45,
+          "complete": 66,
+          "partial": 18,
+          "inappropriate_abstention": 6,
+          "technical_failure": 9
+        }
+      },
+      "large": {
+        "attempts": 144,
+        "correct": 97,
+        "labels": {
+          "complete": 97,
+          "incorrect": 38,
+          "technical_failure": 5,
+          "partial": 2,
+          "inappropriate_abstention": 2
+        }
+      },
+      "adaptive": {
+        "attempts": 144,
+        "correct": 77,
+        "labels": {
+          "complete": 77,
+          "incorrect": 50,
+          "inappropriate_abstention": 4,
+          "technical_failure": 8,
+          "partial": 5
+        }
+      },
+      "replay": {
+        "attempts": 144,
+        "correct": 77,
+        "labels": {
+          "complete": 77,
+          "incorrect": 47,
+          "inappropriate_abstention": 6,
+          "technical_failure": 8,
+          "partial": 6
+        }
+      }
+    },
+    "caveat": "Repeated answers and turns within sequences are dependent; judgments require independent human validation."
+  },
+  "audit_errors": [],
+  "note": "Counts describe the current snapshot. Repetitions, turns and shared templates/profile are dependent."
+}

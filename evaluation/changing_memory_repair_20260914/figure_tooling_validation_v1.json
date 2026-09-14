@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-09-14T13:53:42.131115+00:00",
+  "status": "passed",
+  "no_inference": true,
+  "no_rescoring": true,
+  "source_sha256": {
+    "evaluation/changing_memory_20260914/render_checkpoint_figure.py": "daeb61d0b24f92d302d01f2706ddf36d8fb1a6c3e9ccf1f57e1a24f482f24ff6",
+    "evaluation/changing_memory_repair_20260914/render_repair_figure.py": "3942940119c5ae2e86849fa82051371c82660a6aed14662058f1279057b824e0"
+  },
+  "original_category_mapping_ast_unchanged": true,
+  "original24_stage_layout_unchanged": true,
+  "baseline288_cell_rows_identical": true,
+  "scenario_count_generalized": true,
+  "final96_cell_figure_visual_check": "pending after final sealed reviews and rendering"
+}

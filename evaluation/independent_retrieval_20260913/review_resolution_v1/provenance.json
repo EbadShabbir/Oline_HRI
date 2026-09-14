@@ -1,0 +1,24 @@
+{
+  "command": [
+    "resolve",
+    "--comparison",
+    "evaluation/independent_retrieval_20260913/review_comparison_v1",
+    "--adjudication",
+    "evaluation/independent_retrieval_20260913/blinded_work/adjudicator/final_original.jsonl",
+    "--adjudicator",
+    "/root/audit_design/blind_adjudicator",
+    "--output",
+    "evaluation/independent_retrieval_20260913/review_resolution_v1"
+  ],
+  "created_at": "2026-09-13T18:58:31.689857+00:00",
+  "human_validation": "pending",
+  "inputs": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/blinded_work/adjudicator/final_original.jsonl": "93ca39eb5b08f5132b43b4f09b4942a1ab3cb252ee0ba0ad454683e65a2c6dce",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/review_comparison_v1/seal.json": "9b062aba17ff83555ff39afa17a521cbdd54617d8b9cb9659d009547c40eb72b"
+  },
+  "mapping_read": false,
+  "phase": "resolve",
+  "semantic_judgments_generated_by_program": false,
+  "source_sha256": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+  "working_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI"
+}

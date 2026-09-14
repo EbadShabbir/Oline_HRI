@@ -1,0 +1,50 @@
+{
+  "prepared": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/prepared_final_v1",
+  "prepared_seal_sha256": "8a6786ed30063ee260e5e430ebed24a968ac4594cc51d7cf5eb74ce18b533ca3",
+  "final_packet_sha256": "cea0c5a30720e45366d9bd992528625d182de5a451c894f8c9950a6d733fc306",
+  "inputs": [
+    {
+      "batch": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/review_batches/batch_01",
+      "batch_seal_sha256": "82ea5f54e396a8fe66d2bc9a2e099003b6a40183de105c92965c342289ef74f1",
+      "packet_sha256": "60e7d27daa7233342c14feadf9b7fe54e383df74ae61ee937d85d3536b869b74",
+      "review_a": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/reviewer_a/batch_01.json",
+      "review_a_sha256": "96adb111547df1e2e426425002d6a91377c1268d2d2bc2394d1d8476d78824ad",
+      "review_b": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/reviewer_b/batch_01.json",
+      "review_b_sha256": "c27088a0f85fb9073aac117693b92c0a1264c2ce631d0422fce9eb359bb0386a"
+    },
+    {
+      "batch": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/review_batches/batch_02",
+      "batch_seal_sha256": "dd85a8fae97c3869b34c786f4440a19aae1f4d9462fe42be1b8d8ada19cf1323",
+      "packet_sha256": "d8efa60c57ef9ff32d2abc7f60010370062e3c8e840e9ead58508278b33ddd7d",
+      "review_a": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/reviewer_a/batch_02.json",
+      "review_a_sha256": "51d49a7fef0006e699bcc57d996ceb2ccc6e5a301d59193e8c03b376a8ef912b",
+      "review_b": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/reviewer_b/batch_02.json",
+      "review_b_sha256": "bf32e8f22476518f008fd8b8029fe60f1ad4ab4adbc6770312cdd52d4a58ce71"
+    }
+  ],
+  "final_groups": 47,
+  "batch_count": 2,
+  "script_sha256": "806c7afd5ff92739f0edcd727f49caeaba7b523a2df4b5d501d3bfd5935b9e59",
+  "analyzer_sha256": "7013efb9a06860d676b0d0922494ad65795841923dcebc5ae4e73519356b4cb8",
+  "command": [
+    "evaluation/changing_memory_repair_20260914/batch_reviews.py",
+    "bind",
+    "--prepared",
+    "evaluation/changing_memory_repair_20260914/prepared_final_v1",
+    "--batches",
+    "evaluation/changing_memory_repair_20260914/review_batches/batch_01",
+    "evaluation/changing_memory_repair_20260914/review_batches/batch_02",
+    "--reviews-a",
+    "evaluation/changing_memory_repair_20260914/reviewer_a/batch_01.json",
+    "evaluation/changing_memory_repair_20260914/reviewer_a/batch_02.json",
+    "--reviews-b",
+    "evaluation/changing_memory_repair_20260914/reviewer_b/batch_01.json",
+    "evaluation/changing_memory_repair_20260914/reviewer_b/batch_02.json",
+    "--output",
+    "evaluation/changing_memory_repair_20260914/bound_reviews_v1"
+  ],
+  "judgment_transformation": "Only blind_id rebinding; all original semantic votes/reasons preserved. Final packet_sha256 replaces batch packet_sha256.",
+  "duplicate_policy": "Equivalent score duplicates use first supplied original unchanged; all originals and reasons preserved. Conflicting score duplicates are rejected.",
+  "human_validation": "pending",
+  "diagnostics_disclosed": false
+}

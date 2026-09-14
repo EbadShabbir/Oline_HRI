@@ -1,0 +1,39 @@
+{
+  "scope": "Reuse as historical context only; no prior timing is an exchangeable paired observation for the new four-turn workload.",
+  "reused_evidence": {
+    "evaluation/post_memory_comparison_20260912/report_v2/summary.json": {
+      "sha256": "7f8b69b0b08b4e427d2c19f46769d640ea0f4b2f70a1599c63642f0762eedd45"
+    },
+    "evaluation/final_tradeoff_analysis_20260912/README.md": {
+      "sha256": "114c5511dc7983d818b9db0258b97336a1de2fdd1af6b2018e5c43359066488f"
+    },
+    "evaluation/lightweight_routing_20260912/README.md": {
+      "sha256": "6b4bb833c18331fd795d3c87be54afc8051418cdb5801a8e515f1356cc4a326b"
+    },
+    "evaluation/matched_evidence_20260912/README.md": {
+      "sha256": "f917cf343ad4082bce63bbb2ef40dd4da435e26e77d950fbdba8b59106869d3b"
+    }
+  },
+  "post_memory_comparison": {
+    "attempts": 432,
+    "per_arm_attempts": 144,
+    "small_mean_seconds": 2.314,
+    "large_mean_seconds": 11.255,
+    "adaptive_mean_seconds": 8.916,
+    "small_backend_load_total_seconds": 28.363,
+    "large_backend_load_total_seconds": 72.821,
+    "adaptive_backend_load_total_seconds": 166.549,
+    "round_reversal": "large-only faster than adaptive in repetitions 2 and 3",
+    "reuse_limit": "Different prompts; fresh history per request; 48-request residency sessions; no routing bypass or monotonic eviction verification; placement differs."
+  },
+  "lightweight_diagnostic": {
+    "measured_live_requests": 0,
+    "reuse_limit": "Preflights and offline lifecycle validation only; no five-turn live timing to reuse."
+  },
+  "new_measurements_needed": [
+    "12 four-turn workloads with retained history and cold starts",
+    "verified eviction and disjoint monotonic accounting",
+    "exact adaptive routing-bypass replay",
+    "paired startup-inclusive sequence totals"
+  ]
+}

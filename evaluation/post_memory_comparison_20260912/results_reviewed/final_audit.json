@@ -1,0 +1,37 @@
+{
+  "verified_at": "2026-09-12T12:05:51.108979+00:00",
+  "scope": "Final numerical, artifact and source audit; incomplete comparison remains incomplete",
+  "runtime_files_unchanged": 40,
+  "validated_files_unchanged": 112,
+  "prior_archives_verified_counts": [
+    105,
+    40,
+    34
+  ],
+  "observed_attempts": 48,
+  "planned_attempts": 432,
+  "delivered": 45,
+  "assistant_review_successes": 14,
+  "unattempted": 384,
+  "common_all_arm_observations": 0,
+  "reviews_agreed": 48,
+  "independent_human_review_complete": false,
+  "resident_models_at_batch_finish": [],
+  "source_sha256": {
+    "results_reviewed/tables.md": "4bd339a4222236dc9540388e8e7f8c9292497f811c621742f3d7c5ca696f7d18",
+    "results_reviewed/analysis.json": "4caa5ac6853850461c8f99c3a4a05a88de1e8add51d659154b74bf675b21bfb4",
+    "results_reviewed/semantic_review.json": "036d4a50d7ada644972db352dd6c7160791b0d4597e97e373bb93fd222ca2bec",
+    "run_v1/batch_finish.json": "8d058db5eb02d4b85c96cac71aa097de9e1b7af14aa14be3d2dc085edc78adcf",
+    "run_v1/startup_waits.json": "3cd016fc49ec3e530015acd7c2b6a2767d4e75ab580506fe447c060aaf689825",
+    "small_r1_pipeline_diagnostics.json": "8b0f31abe6e04d177390917b79061079bab34b8269e052dc8ddcd034721a9647",
+    "reviews/review_agreement.json": "21add03d5abb6c070c493b3ca98f9f248bac6d8d37a2c7071b3b9e377bbb167b",
+    "frozen_v1/freeze.json": "3711cb8a8c51e28aa956f74275c651c7da4ba44cd58c73c1cfeccff6ce710c2d"
+  },
+  "checks": [
+    "Raw observation digest still matches final analysis",
+    "Overview and stratum totals match independent assistant judgments",
+    "All request timings include cold first request and failures",
+    "Absent arms have no measured score or latency",
+    "All new result documentation links resolve"
+  ]
+}

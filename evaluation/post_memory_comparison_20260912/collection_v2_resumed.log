@@ -1,0 +1,395 @@
+PREFLIGHT WAIT small r1: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+SESSION 3/9 small r1
+[0;93m2026-09-12 16:53:35.655606305 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+small r1 1/48 s3_p01: ok 11.058s
+small r1 2/48 s3_c12: ok 2.957s
+small r1 3/48 s3_r01: ok 1.530s
+small r1 4/48 s3_t04: ok 5.394s
+small r1 5/48 s3_c02: ok 2.797s
+small r1 6/48 s3_t12: error 3.271s
+small r1 7/48 s3_r11: ok 1.118s
+small r1 8/48 s3_p08: error 2.731s
+small r1 9/48 s3_c08: ok 2.315s
+small r1 10/48 s3_r07: ok 1.482s
+small r1 11/48 s3_t06: ok 2.280s
+small r1 12/48 s3_p09: ok 2.315s
+small r1 13/48 s3_p02: ok 1.548s
+small r1 14/48 s3_r04: ok 1.530s
+small r1 15/48 s3_c10: ok 3.071s
+small r1 16/48 s3_t03: ok 2.055s
+small r1 17/48 s3_t10: ok 2.425s
+small r1 18/48 s3_p11: ok 2.260s
+small r1 19/48 s3_r02: ok 2.134s
+small r1 20/48 s3_c01: ok 2.255s
+small r1 21/48 s3_p04: ok 1.943s
+small r1 22/48 s3_c06: ok 2.265s
+small r1 23/48 s3_t08: ok 2.574s
+small r1 24/48 s3_r12: ok 1.569s
+small r1 25/48 s3_r08: error 2.653s
+small r1 26/48 s3_r03: ok 2.101s
+small r1 27/48 s3_r10: ok 1.178s
+small r1 28/48 s3_r09: ok 1.221s
+small r1 29/48 s3_r06: ok 1.155s
+small r1 30/48 s3_r05: ok 1.554s
+small r1 31/48 s3_p07: ok 1.650s
+small r1 32/48 s3_p03: ok 2.910s
+small r1 33/48 s3_p06: ok 1.026s
+small r1 34/48 s3_p05: ok 1.635s
+small r1 35/48 s3_p10: ok 1.533s
+small r1 36/48 s3_p12: ok 1.523s
+small r1 37/48 s3_c07: ok 2.624s
+small r1 38/48 s3_c11: ok 3.130s
+small r1 39/48 s3_c04: ok 1.928s
+small r1 40/48 s3_c03: ok 1.910s
+small r1 41/48 s3_c09: ok 2.350s
+small r1 42/48 s3_c05: ok 1.354s
+small r1 43/48 s3_t11: ok 2.222s
+small r1 44/48 s3_t05: ok 2.529s
+small r1 45/48 s3_t09: ok 3.313s
+small r1 46/48 s3_t07: ok 2.021s
+small r1 47/48 s3_t01: ok 1.972s
+small r1 48/48 s3_t02: ok 1.718s
+ARTIFACTS /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1 status=complete_with_errors
+PREFLIGHT WAIT cascade r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT cascade r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT cascade r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT cascade r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT cascade r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT cascade r2: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+PREFLIGHT WAIT cascade r2: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+SESSION 4/9 cascade r2
+[0;93m2026-09-12 16:57:53.197312271 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+cascade r2 1/48 s3_p01: ok 28.029s
+cascade r2 2/48 s3_c12: ok 8.636s
+cascade r2 3/48 s3_r01: ok 4.499s
+cascade r2 4/48 s3_t04: ok 10.091s
+cascade r2 5/48 s3_c02: ok 8.755s
+cascade r2 6/48 s3_t12: error 9.845s
+cascade r2 7/48 s3_r11: ok 14.570s
+cascade r2 8/48 s3_p08: ok 8.308s
+cascade r2 9/48 s3_c08: ok 12.458s
+cascade r2 10/48 s3_r07: ok 6.957s
+cascade r2 11/48 s3_t06: ok 15.165s
+cascade r2 12/48 s3_p09: ok 9.514s
+cascade r2 13/48 s3_p02: ok 4.230s
+cascade r2 14/48 s3_r04: ok 11.819s
+cascade r2 15/48 s3_c10: ok 32.602s
+cascade r2 16/48 s3_t03: ok 8.591s
+cascade r2 17/48 s3_t10: ok 10.180s
+cascade r2 18/48 s3_p11: ok 8.975s
+cascade r2 19/48 s3_r02: ok 9.834s
+cascade r2 20/48 s3_c01: ok 9.396s
+cascade r2 21/48 s3_p04: ok 3.515s
+cascade r2 22/48 s3_c06: ok 11.280s
+cascade r2 23/48 s3_t08: ok 11.506s
+cascade r2 24/48 s3_r12: ok 7.550s
+cascade r2 25/48 s3_r08: ok 13.989s
+cascade r2 26/48 s3_r03: ok 7.249s
+cascade r2 27/48 s3_r10: ok 5.120s
+cascade r2 28/48 s3_r09: ok 11.746s
+cascade r2 29/48 s3_r06: ok 3.554s
+cascade r2 30/48 s3_r05: ok 9.715s
+cascade r2 31/48 s3_p07: ok 7.987s
+cascade r2 32/48 s3_p03: ok 11.270s
+cascade r2 33/48 s3_p06: ok 7.890s
+cascade r2 34/48 s3_p05: ok 7.500s
+cascade r2 35/48 s3_p10: ok 4.948s
+cascade r2 36/48 s3_p12: ok 5.643s
+cascade r2 37/48 s3_c07: ok 8.515s
+cascade r2 38/48 s3_c11: ok 10.181s
+cascade r2 39/48 s3_c04: ok 9.278s
+cascade r2 40/48 s3_c03: ok 17.673s
+cascade r2 41/48 s3_c09: ok 9.286s
+cascade r2 42/48 s3_c05: ok 9.324s
+cascade r2 43/48 s3_t11: ok 11.443s
+cascade r2 44/48 s3_t05: ok 10.774s
+cascade r2 45/48 s3_t09: ok 15.192s
+cascade r2 46/48 s3_t07: ok 9.296s
+cascade r2 47/48 s3_t01: ok 14.441s
+cascade r2 48/48 s3_t02: ok 9.536s
+ARTIFACTS /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2 status=complete_with_errors
+PREFLIGHT WAIT small r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT small r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT small r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT small r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT small r2: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+PREFLIGHT WAIT small r2: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+PREFLIGHT WAIT small r2: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+PREFLIGHT WAIT small r2: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+SESSION 5/9 small r2
+[0;93m2026-09-12 17:08:58.003675750 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+small r2 1/48 s3_p01: ok 11.055s
+small r2 2/48 s3_c12: ok 2.953s
+small r2 3/48 s3_r01: ok 1.503s
+small r2 4/48 s3_t04: ok 5.239s
+small r2 5/48 s3_c02: ok 2.775s
+small r2 6/48 s3_t12: error 3.263s
+small r2 7/48 s3_r11: ok 1.143s
+small r2 8/48 s3_p08: error 2.793s
+small r2 9/48 s3_c08: ok 2.283s
+small r2 10/48 s3_r07: ok 1.518s
+small r2 11/48 s3_t06: ok 2.251s
+small r2 12/48 s3_p09: ok 2.313s
+small r2 13/48 s3_p02: ok 1.593s
+small r2 14/48 s3_r04: ok 1.555s
+small r2 15/48 s3_c10: ok 3.051s
+small r2 16/48 s3_t03: ok 2.080s
+small r2 17/48 s3_t10: ok 2.382s
+small r2 18/48 s3_p11: ok 2.320s
+small r2 19/48 s3_r02: ok 2.210s
+small r2 20/48 s3_c01: ok 2.254s
+small r2 21/48 s3_p04: ok 1.971s
+small r2 22/48 s3_c06: ok 2.329s
+small r2 23/48 s3_t08: ok 2.563s
+small r2 24/48 s3_r12: ok 1.604s
+small r2 25/48 s3_r08: error 2.651s
+small r2 26/48 s3_r03: ok 1.996s
+small r2 27/48 s3_r10: ok 1.177s
+small r2 28/48 s3_r09: ok 1.191s
+small r2 29/48 s3_r06: ok 1.156s
+small r2 30/48 s3_r05: ok 1.545s
+small r2 31/48 s3_p07: ok 1.668s
+small r2 32/48 s3_p03: ok 2.849s
+small r2 33/48 s3_p06: ok 1.071s
+small r2 34/48 s3_p05: ok 1.647s
+small r2 35/48 s3_p10: ok 1.460s
+small r2 36/48 s3_p12: ok 1.514s
+small r2 37/48 s3_c07: ok 2.681s
+small r2 38/48 s3_c11: ok 3.164s
+small r2 39/48 s3_c04: ok 1.958s
+small r2 40/48 s3_c03: ok 1.906s
+small r2 41/48 s3_c09: ok 2.257s
+small r2 42/48 s3_c05: ok 1.370s
+small r2 43/48 s3_t11: ok 2.288s
+small r2 44/48 s3_t05: ok 2.566s
+small r2 45/48 s3_t09: ok 3.267s
+small r2 46/48 s3_t07: ok 2.061s
+small r2 47/48 s3_t01: ok 1.941s
+small r2 48/48 s3_t02: ok 1.749s
+ARTIFACTS /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2 status=complete_with_errors
+PREFLIGHT WAIT large r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT large r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT large r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT large r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT large r2: revised startup temperature must be below 55 C
+PREFLIGHT WAIT large r2: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+PREFLIGHT WAIT large r2: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+SESSION 6/9 large r2
+[0;93m2026-09-12 17:13:15.760990546 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+large r2 1/48 s3_p01: ok 29.228s
+large r2 2/48 s3_c12: ok 11.745s
+large r2 3/48 s3_r01: ok 7.239s
+large r2 4/48 s3_t04: ok 10.065s
+large r2 5/48 s3_c02: ok 13.176s
+large r2 6/48 s3_t12: error 5.781s
+large r2 7/48 s3_r11: ok 7.188s
+large r2 8/48 s3_p08: ok 10.088s
+large r2 9/48 s3_c08: ok 20.218s
+large r2 10/48 s3_r07: ok 7.504s
+large r2 11/48 s3_t06: error 16.439s
+large r2 12/48 s3_p09: ok 6.697s
+large r2 13/48 s3_p02: ok 3.178s
+large r2 14/48 s3_r04: ok 3.487s
+large r2 15/48 s3_c10: ok 8.926s
+large r2 16/48 s3_t03: ok 8.640s
+large r2 17/48 s3_t10: ok 9.007s
+large r2 18/48 s3_p11: ok 7.523s
+large r2 19/48 s3_r02: ok 4.374s
+large r2 20/48 s3_c01: ok 5.286s
+large r2 21/48 s3_p04: ok 3.768s
+large r2 22/48 s3_c06: ok 7.717s
+large r2 23/48 s3_t08: ok 9.256s
+large r2 24/48 s3_r12: ok 5.845s
+large r2 25/48 s3_r08: ok 6.145s
+large r2 26/48 s3_r03: ok 3.917s
+large r2 27/48 s3_r10: ok 3.186s
+large r2 28/48 s3_r09: ok 6.842s
+large r2 29/48 s3_r06: ok 3.034s
+large r2 30/48 s3_r05: ok 3.465s
+large r2 31/48 s3_p07: ok 4.058s
+large r2 32/48 s3_p03: error 3.960s
+large r2 33/48 s3_p06: ok 5.630s
+large r2 34/48 s3_p05: ok 5.000s
+large r2 35/48 s3_p10: ok 4.407s
+large r2 36/48 s3_p12: ok 3.899s
+large r2 37/48 s3_c07: ok 5.886s
+large r2 38/48 s3_c11: ok 4.607s
+large r2 39/48 s3_c04: ok 6.978s
+large r2 40/48 s3_c03: ok 8.992s
+large r2 41/48 s3_c09: ok 7.015s
+large r2 42/48 s3_c05: ok 13.682s
+large r2 43/48 s3_t11: ok 9.035s
+large r2 44/48 s3_t05: ok 7.700s
+large r2 45/48 s3_t09: ok 10.156s
+large r2 46/48 s3_t07: ok 8.028s
+large r2 47/48 s3_t01: ok 16.078s
+large r2 48/48 s3_t02: ok 7.838s
+ARTIFACTS /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2 status=complete_with_errors
+PREFLIGHT WAIT small r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT small r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT small r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT small r3: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+PREFLIGHT WAIT small r3: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+SESSION 7/9 small r3
+[0;93m2026-09-12 17:21:23.815693750 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+small r3 1/48 s3_p01: ok 11.672s
+small r3 2/48 s3_c12: ok 2.954s
+small r3 3/48 s3_r01: ok 1.467s
+small r3 4/48 s3_t04: ok 5.280s
+small r3 5/48 s3_c02: ok 2.683s
+small r3 6/48 s3_t12: error 3.217s
+small r3 7/48 s3_r11: ok 1.080s
+small r3 8/48 s3_p08: error 2.771s
+small r3 9/48 s3_c08: ok 2.195s
+small r3 10/48 s3_r07: ok 1.469s
+small r3 11/48 s3_t06: ok 2.238s
+small r3 12/48 s3_p09: ok 2.327s
+small r3 13/48 s3_p02: ok 1.568s
+small r3 14/48 s3_r04: ok 1.492s
+small r3 15/48 s3_c10: ok 2.894s
+small r3 16/48 s3_t03: ok 1.998s
+small r3 17/48 s3_t10: ok 2.269s
+small r3 18/48 s3_p11: ok 2.307s
+small r3 19/48 s3_r02: ok 2.045s
+small r3 20/48 s3_c01: ok 2.126s
+small r3 21/48 s3_p04: ok 1.875s
+small r3 22/48 s3_c06: ok 2.171s
+small r3 23/48 s3_t08: ok 2.477s
+small r3 24/48 s3_r12: ok 1.465s
+small r3 25/48 s3_r08: error 2.615s
+small r3 26/48 s3_r03: ok 1.955s
+small r3 27/48 s3_r10: ok 1.145s
+small r3 28/48 s3_r09: ok 1.231s
+small r3 29/48 s3_r06: ok 1.112s
+small r3 30/48 s3_r05: ok 1.519s
+small r3 31/48 s3_p07: ok 1.594s
+small r3 32/48 s3_p03: ok 2.767s
+small r3 33/48 s3_p06: ok 1.014s
+small r3 34/48 s3_p05: ok 1.598s
+small r3 35/48 s3_p10: ok 1.495s
+small r3 36/48 s3_p12: ok 1.472s
+small r3 37/48 s3_c07: ok 2.555s
+small r3 38/48 s3_c11: ok 2.926s
+small r3 39/48 s3_c04: ok 1.834s
+small r3 40/48 s3_c03: ok 1.767s
+small r3 41/48 s3_c09: ok 2.108s
+small r3 42/48 s3_c05: ok 1.317s
+small r3 43/48 s3_t11: ok 2.167s
+small r3 44/48 s3_t05: ok 2.423s
+small r3 45/48 s3_t09: ok 3.105s
+small r3 46/48 s3_t07: ok 1.879s
+small r3 47/48 s3_t01: ok 1.797s
+small r3 48/48 s3_t02: ok 1.564s
+ARTIFACTS /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3 status=complete_with_errors
+PREFLIGHT WAIT large r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT large r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT large r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT large r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT large r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT large r3: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+SESSION 8/9 large r3
+[0;93m2026-09-12 17:25:18.575298460 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+large r3 1/48 s3_p01: ok 30.244s
+large r3 2/48 s3_c12: ok 8.634s
+large r3 3/48 s3_r01: ok 9.450s
+large r3 4/48 s3_t04: ok 8.813s
+large r3 5/48 s3_c02: ok 5.176s
+large r3 6/48 s3_t12: error 8.501s
+large r3 7/48 s3_r11: ok 5.815s
+large r3 8/48 s3_p08: ok 5.809s
+large r3 9/48 s3_c08: ok 10.831s
+large r3 10/48 s3_r07: ok 6.377s
+large r3 11/48 s3_t06: ok 15.671s
+large r3 12/48 s3_p09: ok 6.520s
+large r3 13/48 s3_p02: ok 11.719s
+large r3 14/48 s3_r04: ok 7.954s
+large r3 15/48 s3_c10: ok 11.973s
+large r3 16/48 s3_t03: ok 7.585s
+large r3 17/48 s3_t10: ok 7.117s
+large r3 18/48 s3_p11: ok 5.262s
+large r3 19/48 s3_r02: ok 6.246s
+large r3 20/48 s3_c01: ok 6.517s
+large r3 21/48 s3_p04: ok 4.418s
+large r3 22/48 s3_c06: ok 10.834s
+large r3 23/48 s3_t08: ok 7.808s
+large r3 24/48 s3_r12: ok 7.869s
+large r3 25/48 s3_r08: ok 7.024s
+large r3 26/48 s3_r03: ok 6.449s
+large r3 27/48 s3_r10: ok 3.607s
+large r3 28/48 s3_r09: ok 7.190s
+large r3 29/48 s3_r06: ok 6.114s
+large r3 30/48 s3_r05: ok 8.128s
+large r3 31/48 s3_p07: ok 5.103s
+large r3 32/48 s3_p03: ok 7.790s
+large r3 33/48 s3_p06: ok 5.492s
+large r3 34/48 s3_p05: ok 10.031s
+large r3 35/48 s3_p10: ok 3.613s
+large r3 36/48 s3_p12: ok 6.271s
+large r3 37/48 s3_c07: ok 11.443s
+large r3 38/48 s3_c11: ok 7.371s
+large r3 39/48 s3_c04: ok 7.668s
+large r3 40/48 s3_c03: ok 8.890s
+large r3 41/48 s3_c09: ok 7.059s
+large r3 42/48 s3_c05: ok 6.922s
+large r3 43/48 s3_t11: ok 5.979s
+large r3 44/48 s3_t05: ok 8.884s
+large r3 45/48 s3_t09: ok 10.305s
+large r3 46/48 s3_t07: ok 7.142s
+large r3 47/48 s3_t01: ok 16.227s
+large r3 48/48 s3_t02: ok 9.381s
+ARTIFACTS /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3 status=complete_with_errors
+PREFLIGHT WAIT cascade r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT cascade r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT cascade r3: revised startup temperature must be below 55 C
+PREFLIGHT WAIT cascade r3: waiting for below-54 C scheduler handoff margin; arm gate remains 55 C
+SESSION 9/9 cascade r3
+[0;93m2026-09-12 17:33:27.072383941 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+cascade r3 1/48 s3_p01: ok 32.202s
+cascade r3 2/48 s3_c12: ok 7.884s
+cascade r3 3/48 s3_r01: ok 5.277s
+cascade r3 4/48 s3_t04: ok 9.529s
+cascade r3 5/48 s3_c02: ok 12.244s
+cascade r3 6/48 s3_t12: error 5.910s
+cascade r3 7/48 s3_r11: ok 6.843s
+cascade r3 8/48 s3_p08: ok 8.262s
+cascade r3 9/48 s3_c08: ok 18.966s
+cascade r3 10/48 s3_r07: ok 11.879s
+cascade r3 11/48 s3_t06: ok 14.028s
+cascade r3 12/48 s3_p09: ok 8.629s
+cascade r3 13/48 s3_p02: ok 4.134s
+cascade r3 14/48 s3_r04: ok 12.279s
+cascade r3 15/48 s3_c10: ok 38.313s
+cascade r3 16/48 s3_t03: ok 12.734s
+cascade r3 17/48 s3_t10: ok 10.868s
+cascade r3 18/48 s3_p11: ok 5.347s
+cascade r3 19/48 s3_r02: ok 8.832s
+cascade r3 20/48 s3_c01: ok 6.383s
+cascade r3 21/48 s3_p04: ok 5.491s
+cascade r3 22/48 s3_c06: ok 8.169s
+cascade r3 23/48 s3_t08: ok 6.100s
+cascade r3 24/48 s3_r12: ok 4.010s
+cascade r3 25/48 s3_r08: ok 7.087s
+cascade r3 26/48 s3_r03: ok 4.109s
+cascade r3 27/48 s3_r10: ok 3.578s
+cascade r3 28/48 s3_r09: ok 6.990s
+cascade r3 29/48 s3_r06: ok 3.574s
+cascade r3 30/48 s3_r05: ok 7.262s
+cascade r3 31/48 s3_p07: ok 5.779s
+cascade r3 32/48 s3_p03: ok 7.914s
+cascade r3 33/48 s3_p06: ok 3.690s
+cascade r3 34/48 s3_p05: ok 5.320s
+cascade r3 35/48 s3_p10: ok 2.797s
+cascade r3 36/48 s3_p12: ok 3.797s
+cascade r3 37/48 s3_c07: ok 7.247s
+cascade r3 38/48 s3_c11: ok 7.958s
+cascade r3 39/48 s3_c04: ok 5.951s
+cascade r3 40/48 s3_c03: ok 9.461s
+cascade r3 41/48 s3_c09: ok 6.413s
+cascade r3 42/48 s3_c05: ok 5.965s
+cascade r3 43/48 s3_t11: ok 6.195s
+cascade r3 44/48 s3_t05: ok 6.779s
+cascade r3 45/48 s3_t09: ok 16.411s
+cascade r3 46/48 s3_t07: ok 7.539s
+cascade r3 47/48 s3_t01: ok 20.844s
+cascade r3 48/48 s3_t02: ok 9.180s
+ARTIFACTS /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3 status=complete_with_errors

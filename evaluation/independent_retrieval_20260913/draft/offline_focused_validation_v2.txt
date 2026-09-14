@@ -1,0 +1,37 @@
+test_all_six_conditions_keep_generator_and_trace_evidence (tests.test_independent_retrieval_adapter.IndependentRetrievalAdapterTests) ... ok
+test_ambiguous_selector_uses_sole_model_and_does_not_supply_response_intent (tests.test_independent_retrieval_adapter.IndependentRetrievalAdapterTests) ... ok
+test_authorization_denial_precedes_any_classifier_or_store_access (tests.test_independent_retrieval_adapter.IndependentRetrievalAdapterTests) ... ok
+test_freshness_blocks_change_after_generation (tests.test_independent_retrieval_adapter.IndependentRetrievalAdapterTests) ... ok
+test_general_and_unknown_without_linked_evidence_have_identical_generation_inputs (tests.test_independent_retrieval_adapter.IndependentRetrievalAdapterTests) ... ok
+test_inspection_observes_all_eligible_records_and_lifecycle_filters (tests.test_independent_retrieval_adapter.IndependentRetrievalAdapterTests) ... ok
+test_logical_role_normalization_makes_cross_model_inputs_identical (tests.test_independent_retrieval_adapter.IndependentRetrievalAdapterTests) ... ok
+test_timeout_has_no_cross_model_fallback_and_preserves_supplied_evidence (tests.test_independent_retrieval_adapter.IndependentRetrievalAdapterTests) ... ok
+test_counterbalance_and_complete_pairing (tests.test_independent_retrieval_runner.RunnerTests) ... ok
+test_durable_http_start_is_saved_when_transport_fails (tests.test_independent_retrieval_runner.RunnerTests) ... ok
+test_frozen_configuration_enforces_requested_decoding (tests.test_independent_retrieval_runner.RunnerTests) ... ok
+test_seals_cover_nested_manifests_and_detect_mutation (tests.test_independent_retrieval_runner.RunnerTests) ... ok
+test_seals_reject_extra_unrecorded_files (tests.test_independent_retrieval_runner.RunnerTests) ... ok
+test_already_imported_runtime_guard_observes_revision_and_all_original_invariants (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_capacity_drift_missing_capacity_and_bad_memory_readings_fail_closed (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_historical_988_mib_rejection_is_admitted_only_under_explicit_revision (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_nested_revision_and_interrupt_restore_all_prior_constants (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_reserve_boundary_accepts_equality_and_rejects_one_kib_more (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_streaming_swap_crossing_is_saved_then_interrupts_once (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_temperature_fan_power_boot_trip_and_empty_residency_requirements_remain (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_actual_client_keeps_sole_large_resident_and_never_calls_peer (tests.test_evaluation_systems.CompleteSystemAdaptersTests) ... ok
+test_classifier_must_return_actual_selected_model_and_complete_schema (tests.test_evaluation_systems.CompleteSystemAdaptersTests) ... ok
+test_fixed_generator_keeps_stale_evidence_and_citation_validation (tests.test_evaluation_systems.CompleteSystemAdaptersTests) ... ok
+test_fixed_generator_overrides_logical_route_without_peer_timeout_fallback (tests.test_evaluation_systems.CompleteSystemAdaptersTests) ... ok
+test_memory_only_router_uses_identical_production_input_and_one_real_call (tests.test_evaluation_systems.CompleteSystemAdaptersTests) ... ok
+test_true_single_systems_retain_retrieval_composition_and_snapshot_checks (tests.test_evaluation_systems.CompleteSystemAdaptersTests) ... ok
+test_unmarked_missing_compute_result_is_still_rejected (tests.test_evaluation_systems.CompleteSystemAdaptersTests) ... ok
+test_actual_client_transition_eviction_and_backend_overlap (tests.test_routing_timing.TimingTests) ... ok
+test_complete_turn_contains_classification_generation_validation (tests.test_routing_timing.TimingTests) ... ok
+test_failed_eviction_aborts_generation_and_residency_is_unknown (tests.test_routing_timing.TimingTests) ... ok
+test_fixed_and_llm_classifier_calls_are_named (tests.test_routing_timing.TimingTests) ... ok
+test_monotonic_nesting_and_durable_interrupted_start (tests.test_routing_timing.TimingTests) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 2.586s
+
+OK

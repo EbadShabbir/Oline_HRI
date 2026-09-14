@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "authorship": "New fictional scenarios authored before model inference on 2026-09-14; these names, preferences and events do not describe real people.",
+  "scenarios": [
+    {
+      "id": "cm01", "category": "preference", "kind": "preference",
+      "original_text": "Your preferred tea is rooibos tea.",
+      "replacement_text": "Your preferred tea is jasmine tea.",
+      "old_value": "rooibos", "new_value": "jasmine",
+      "historical_text": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+      "historical_value": "Maple Pavilion", "historical_event_time": "2026-09-03T14:00:00+00:00",
+      "questions": {
+        "direct": "What is my preferred tea?",
+        "unseen": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+        "restart": "Returning to my earlier tea preference, what is my current preferred tea?",
+        "historical": "Where was my Larkspur picnic on 2026-09-03?",
+        "forgotten_history": "What tea preference did I tell you earlier, before I asked you to forget it?"
+      }
+    },
+    {
+      "id": "cm02", "category": "preference", "kind": "preference",
+      "original_text": "Your preferred music is bluegrass music.",
+      "replacement_text": "Your preferred music is bossa nova music.",
+      "old_value": "bluegrass", "new_value": "bossa nova",
+      "historical_text": "Your Amber craft fair was at Willow Hall on 2026-09-04 at 10:00.",
+      "historical_value": "Willow Hall", "historical_event_time": "2026-09-04T10:00:00+00:00",
+      "questions": {
+        "direct": "What is my preferred music?",
+        "unseen": "Earlier I told you about my music preference. Which music do I prefer now?",
+        "restart": "Returning to my earlier music preference, what is my current preferred music?",
+        "historical": "Where was my Amber craft fair on 2026-09-04?",
+        "forgotten_history": "What music preference did I tell you earlier, before I asked you to forget it?"
+      }
+    },
+    {
+      "id": "cm03", "category": "preference", "kind": "preference",
+      "original_text": "Your preferred notebook color is turquoise.",
+      "replacement_text": "Your preferred notebook color is burgundy.",
+      "old_value": "turquoise", "new_value": "burgundy",
+      "historical_text": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+      "historical_value": "Cedar Court", "historical_event_time": "2026-09-05T11:00:00+00:00",
+      "questions": {
+        "direct": "What is my preferred notebook color?",
+        "unseen": "Earlier I told you about my notebook color preference. Which notebook color do I prefer now?",
+        "restart": "Returning to my earlier notebook color preference, what is my current preferred notebook color?",
+        "historical": "Where was my Juniper reading festival on 2026-09-05?",
+        "forgotten_history": "What notebook color preference did I tell you earlier, before I asked you to forget it?"
+      }
+    },
+    {
+      "id": "cm04", "category": "relationship", "kind": "fact",
+      "original_text": "Your walking partner is Elora Vale.",
+      "replacement_text": "Your walking partner is Niko Fern.",
+      "old_value": "Elora Vale", "new_value": "Niko Fern",
+      "historical_text": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+      "historical_value": "Birch Lodge", "historical_event_time": "2026-09-06T09:00:00+00:00",
+      "questions": {
+        "direct": "Who is my walking partner?",
+        "unseen": "Earlier I told you about my walking partner. Who is my walking partner now?",
+        "restart": "Returning to my earlier walking partner information, who is my current walking partner?",
+        "historical": "Where was my Marigold garden tour on 2026-09-06?",
+        "forgotten_history": "Which walking partner did I name earlier, before I asked you to forget that information?"
+      }
+    },
+    {
+      "id": "cm05", "category": "relationship", "kind": "fact",
+      "original_text": "Your book club contact is Tessa Brook.",
+      "replacement_text": "Your book club contact is Orin Moss.",
+      "old_value": "Tessa Brook", "new_value": "Orin Moss",
+      "historical_text": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+      "historical_value": "Acorn Studio", "historical_event_time": "2026-09-07T16:00:00+00:00",
+      "questions": {
+        "direct": "Who is my book club contact?",
+        "unseen": "Earlier I told you about my book club contact. Who is my book club contact now?",
+        "restart": "Returning to my earlier book club information, who is my current book club contact?",
+        "historical": "Where was my Saffron painting class on 2026-09-07?",
+        "forgotten_history": "Which book club contact did I name earlier, before I asked you to forget that information?"
+      }
+    },
+    {
+      "id": "cm06", "category": "object_location", "kind": "fact",
+      "original_text": "Your sketchbook is in the wicker basket.",
+      "replacement_text": "Your sketchbook is in the walnut drawer.",
+      "old_value": "wicker basket", "new_value": "walnut drawer",
+      "historical_text": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+      "historical_value": "Clover Field", "historical_event_time": "2026-09-08T13:00:00+00:00",
+      "questions": {
+        "direct": "Where is my sketchbook?",
+        "unseen": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+        "restart": "Returning to my earlier sketchbook information, where should I find my sketchbook now?",
+        "historical": "Where was my Moonbeam kite festival on 2026-09-08?",
+        "forgotten_history": "What sketchbook location did I tell you earlier, before I asked you to forget it?"
+      }
+    },
+    {
+      "id": "cm07", "category": "object_location", "kind": "fact",
+      "original_text": "Your binoculars are in the canvas tote.",
+      "replacement_text": "Your binoculars are in the cedar cabinet.",
+      "old_value": "canvas tote", "new_value": "cedar cabinet",
+      "historical_text": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+      "historical_value": "Fern Terrace", "historical_event_time": "2026-09-09T15:00:00+00:00",
+      "questions": {
+        "direct": "Where are my binoculars?",
+        "unseen": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+        "restart": "Returning to my earlier binoculars information, where should I find my binoculars now?",
+        "historical": "Where was my Rosewood puzzle afternoon on 2026-09-09?",
+        "forgotten_history": "What binoculars location did I tell you earlier, before I asked you to forget it?"
+      }
+    },
+    {
+      "id": "cm08", "category": "object_location", "kind": "fact",
+      "original_text": "Your sewing kit is in the striped tin.",
+      "replacement_text": "Your sewing kit is in the velvet pouch.",
+      "old_value": "striped tin", "new_value": "velvet pouch",
+      "historical_text": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+      "historical_value": "Elm Bridge", "historical_event_time": "2026-09-10T18:00:00+00:00",
+      "questions": {
+        "direct": "Where is my sewing kit?",
+        "unseen": "Earlier I told you where my sewing kit is. Where is my sewing kit located now?",
+        "restart": "Returning to my earlier sewing kit information, where should I find my sewing kit now?",
+        "historical": "Where was my Hawthorn lantern walk on 2026-09-10?",
+        "forgotten_history": "What sewing kit location did I tell you earlier, before I asked you to forget it?"
+      }
+    },
+    {
+      "id": "cm09", "category": "appointment", "kind": "event", "event_time": null,
+      "original_text": "Your pottery appointment is on 2026-10-03 at 09:00.",
+      "replacement_text": "Your pottery appointment is on 2026-10-03 at 11:30.",
+      "old_value": "09:00", "new_value": "11:30",
+      "historical_text": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+      "historical_value": "Hazel Auditorium", "historical_event_time": "2026-09-11T17:00:00+00:00",
+      "questions": {
+        "direct": "What time is my pottery appointment on 2026-10-03?",
+        "unseen": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+        "restart": "Returning to my earlier pottery appointment, what is its recorded start time on 2026-10-03 now?",
+        "historical": "Where was my Silverleaf choir rehearsal on 2026-09-11?",
+        "forgotten_history": "What pottery appointment start time did I tell you earlier, before I asked you to forget it?"
+      }
+    },
+    {
+      "id": "cm10", "category": "appointment", "kind": "event", "event_time": null,
+      "original_text": "Your bicycle fitting appointment is on 2026-10-04 at 14:15.",
+      "replacement_text": "Your bicycle fitting appointment is on 2026-10-04 at 16:45.",
+      "old_value": "14:15", "new_value": "16:45",
+      "historical_text": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+      "historical_value": "Linden Library", "historical_event_time": "2026-09-12T19:00:00+00:00",
+      "questions": {
+        "direct": "What time is my bicycle fitting appointment on 2026-10-04?",
+        "unseen": "Earlier I told you about my bicycle fitting appointment on 2026-10-04. What start time is currently recorded?",
+        "restart": "Returning to my earlier bicycle fitting appointment, what is its recorded start time on 2026-10-04 now?",
+        "historical": "Where was my Foxglove chess evening on 2026-09-12?",
+        "forgotten_history": "What bicycle fitting appointment start time did I tell you earlier, before I asked you to forget it?"
+      }
+    },
+    {
+      "id": "cm11", "category": "dated_event", "kind": "event", "event_time": null,
+      "original_text": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+      "replacement_text": "Your Seaglass workshop was at Orchid Hall on 2026-09-20 at 10:00.",
+      "old_value": "Copper Hall", "new_value": "Orchid Hall",
+      "historical_text": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+      "historical_value": "Aspen Cafe", "historical_event_time": "2026-09-13T12:00:00+00:00",
+      "questions": {
+        "direct": "Where was my Seaglass workshop on 2026-09-20?",
+        "unseen": "Earlier I told you about my Seaglass workshop on 2026-09-20. Which venue is in the current record?",
+        "restart": "Returning to my earlier Seaglass workshop, what venue is now recorded for that event on 2026-09-20?",
+        "historical": "Where was my Bluebell poetry lunch on 2026-09-13?",
+        "forgotten_history": "Which venue did I originally name for my Seaglass workshop, before I asked you to forget that information?"
+      }
+    },
+    {
+      "id": "cm12", "category": "dated_event", "kind": "event", "event_time": null,
+      "original_text": "Your Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00.",
+      "replacement_text": "Your Sunstone exhibition visit was at Iris Gallery on 2026-09-22 at 15:00.",
+      "old_value": "Dune Gallery", "new_value": "Iris Gallery",
+      "historical_text": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+      "historical_value": "Pine Theater", "historical_event_time": "2026-09-14T20:00:00+00:00",
+      "questions": {
+        "direct": "Where was my Sunstone exhibition visit on 2026-09-22?",
+        "unseen": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22. Which venue is in the current record?",
+        "restart": "Returning to my earlier Sunstone exhibition visit, what venue is now recorded for that event on 2026-09-22?",
+        "historical": "Where was my Meadowlark storytelling night on 2026-09-14?",
+        "forgotten_history": "Which venue did I originally name for my Sunstone exhibition visit, before I asked you to forget that information?"
+      }
+    }
+  ]
+}

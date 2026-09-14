@@ -1,0 +1,74 @@
+{
+  "task": "Implement memory-lifecycle repairs and validate against96 matched baseline checkpoints",
+  "status": "complete",
+  "primary_experiment_immutable": "../changing_memory_20260914",
+  "candidate": "followup_v2/offline_validation_v1/after_source",
+  "new_freeze": "followup_v2/frozen_v1",
+  "new_run": "followup_v2/run_v1",
+  "planned_checkpoints": 96,
+  "scenarios": [
+    "cm01",
+    "cm04",
+    "cm07",
+    "cm09"
+  ],
+  "independent_databases": 12,
+  "real_process_restarts": 12,
+  "offline_full_suite": {
+    "tests": 1093,
+    "skipped": 26,
+    "exit_code": 0
+  },
+  "offline_final_focused": {
+    "tests": 226,
+    "skipped": 0,
+    "exit_code": 0
+  },
+  "source_must_not_change_after_freeze": true,
+  "human_validation": "pending",
+  "updated_at": "2026-09-14T14:37:41.409355+00:00",
+  "remaining": [],
+  "collection_session_id": 54018,
+  "freeze_failure_preserved": "frozen_v1/failure.json",
+  "runtime_source_frozen_do_not_edit": true,
+  "followup": {
+    "directory": "followup_v2",
+    "status": "complete_reviewed_audited",
+    "planned_checkpoints": 24,
+    "completed": 24,
+    "useful_correct": 24,
+    "forbidden_disclosure": 0,
+    "withheld": 0,
+    "missing": 0,
+    "independent_databases": 3,
+    "real_process_restarts": 3,
+    "new_blinded_groups": 11,
+    "semantic_disagreements": 0,
+    "integrity_checks": 2811,
+    "integrity_violations": 0,
+    "offline_tests": 190
+  },
+  "first_repair_result": {
+    "planned": 96,
+    "completed": 96,
+    "delivered": 94,
+    "useful_correct": 92,
+    "forbidden_disclosure": 0,
+    "withheld": 2,
+    "partial_delivered": 2,
+    "missing": 0,
+    "blinded_groups": 47,
+    "semantic_disagreements": 0,
+    "integrity_checks": 10541,
+    "integrity_violations": 0
+  },
+  "planned_live_repair_checkpoints": {
+    "first_source_version": 96,
+    "final_amendment": 24
+  },
+  "known_unresolved_limitations": [
+    "Two contradictory tea answers in first96 remain unsuccessful and were not retested in relationship-only final amendment.",
+    "Bounded English matching; no held-out/general conversation guarantee.",
+    "Human validation pending; process restart/controlled logical expiry/text only."
+  ]
+}

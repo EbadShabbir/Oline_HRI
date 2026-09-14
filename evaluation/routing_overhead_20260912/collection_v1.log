@@ -1,0 +1,239 @@
+SESSION 1/144 ro_eeee_1_r1_small
+[0;93m2026-09-12 19:46:05.181985320 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_1 r1 small 1/4 ok 12.199s qwen3:0.6b
+ro_eeee_1 r1 small 2/4 ok 1.969s qwen3:0.6b
+ro_eeee_1 r1 small 3/4 ok 1.700s qwen3:0.6b
+ro_eeee_1 r1 small 4/4 ok 1.729s qwen3:0.6b
+SEQUENCE FINISHED ro_eeee_1_r1_small: complete
+COOLING ro_eeee_1_r1_large: scheduler cooling target below 54 C
+SESSION 2/144 ro_eeee_1_r1_large
+[0;93m2026-09-12 19:46:37.995828777 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_1 r1 large 1/4 ok 51.158s qwen3:1.7b
+ro_eeee_1 r1 large 2/4 ok 17.625s qwen3:1.7b
+ro_eeee_1 r1 large 3/4 ok 20.737s qwen3:1.7b
+ro_eeee_1 r1 large 4/4 ok 24.265s qwen3:1.7b
+SEQUENCE FINISHED ro_eeee_1_r1_large: complete
+COOLING ro_eeee_1_r1_adaptive: revised startup temperature must be below 55 C
+COOLING ro_eeee_1_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_eeee_1_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_eeee_1_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_eeee_1_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_eeee_1_r1_adaptive: scheduler cooling target below 54 C
+SESSION 3/144 ro_eeee_1_r1_adaptive
+[0;93m2026-09-12 19:49:38.431898724 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_1 r1 adaptive 1/4 ok 11.732s qwen3:0.6b
+ro_eeee_1 r1 adaptive 2/4 ok 1.714s qwen3:0.6b
+ro_eeee_1 r1 adaptive 3/4 ok 1.670s qwen3:0.6b
+ro_eeee_1 r1 adaptive 4/4 ok 1.778s qwen3:0.6b
+SEQUENCE FINISHED ro_eeee_1_r1_adaptive: complete
+COOLING ro_eeee_1_r1_replay: revised startup temperature must be below 55 C
+COOLING ro_eeee_1_r1_replay: scheduler cooling target below 54 C
+COOLING ro_eeee_1_r1_replay: scheduler cooling target below 54 C
+COOLING ro_eeee_1_r1_replay: scheduler cooling target below 54 C
+SESSION 4/144 ro_eeee_1_r1_replay
+[0;93m2026-09-12 19:50:39.968588839 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_1 r1 replay 1/4 ok 10.298s qwen3:0.6b
+ro_eeee_1 r1 replay 2/4 ok 1.071s qwen3:0.6b
+ro_eeee_1 r1 replay 3/4 ok 1.135s qwen3:0.6b
+ro_eeee_1 r1 replay 4/4 ok 1.089s qwen3:0.6b
+SEQUENCE FINISHED ro_eeee_1_r1_replay: complete
+COOLING ro_eeee_2_r1_small: revised startup temperature must be below 55 C
+COOLING ro_eeee_2_r1_small: scheduler cooling target below 54 C
+COOLING ro_eeee_2_r1_small: scheduler cooling target below 54 C
+COOLING ro_eeee_2_r1_small: scheduler cooling target below 54 C
+SESSION 5/144 ro_eeee_2_r1_small
+[0;93m2026-09-12 19:51:38.139816094 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_2 r1 small 1/4 ok 10.278s qwen3:0.6b
+ro_eeee_2 r1 small 2/4 ok 1.954s qwen3:0.6b
+ro_eeee_2 r1 small 3/4 ok 1.593s qwen3:0.6b
+ro_eeee_2 r1 small 4/4 ok 1.612s qwen3:0.6b
+SEQUENCE FINISHED ro_eeee_2_r1_small: complete
+COOLING ro_eeee_2_r1_large: revised startup temperature must be below 55 C
+SESSION 6/144 ro_eeee_2_r1_large
+[0;93m2026-09-12 19:52:07.883916665 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_2 r1 large 1/4 ok 53.931s qwen3:1.7b
+ro_eeee_2 r1 large 2/4 ok 13.455s qwen3:1.7b
+ro_eeee_2 r1 large 3/4 ok 14.487s qwen3:1.7b
+ro_eeee_2 r1 large 4/4 ok 8.223s qwen3:1.7b
+SEQUENCE FINISHED ro_eeee_2_r1_large: complete
+COOLING ro_eeee_2_r1_adaptive: revised startup temperature must be below 55 C
+COOLING ro_eeee_2_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_eeee_2_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_eeee_2_r1_adaptive: scheduler cooling target below 54 C
+SESSION 7/144 ro_eeee_2_r1_adaptive
+[0;93m2026-09-12 19:54:23.583240018 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_2 r1 adaptive 1/4 ok 11.811s qwen3:0.6b
+ro_eeee_2 r1 adaptive 2/4 ok 2.045s qwen3:0.6b
+ro_eeee_2 r1 adaptive 3/4 ok 1.615s qwen3:0.6b
+ro_eeee_2 r1 adaptive 4/4 ok 1.697s qwen3:0.6b
+SEQUENCE FINISHED ro_eeee_2_r1_adaptive: complete
+COOLING ro_eeee_2_r1_replay: revised startup temperature must be below 55 C
+COOLING ro_eeee_2_r1_replay: scheduler cooling target below 54 C
+COOLING ro_eeee_2_r1_replay: scheduler cooling target below 54 C
+COOLING ro_eeee_2_r1_replay: scheduler cooling target below 54 C
+COOLING ro_eeee_2_r1_replay: scheduler cooling target below 54 C
+SESSION 8/144 ro_eeee_2_r1_replay
+[0;93m2026-09-12 19:55:35.790182526 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_2 r1 replay 1/4 ok 10.361s qwen3:0.6b
+ro_eeee_2 r1 replay 2/4 ok 1.148s qwen3:0.6b
+ro_eeee_2 r1 replay 3/4 ok 1.027s qwen3:0.6b
+ro_eeee_2 r1 replay 4/4 ok 1.099s qwen3:0.6b
+SEQUENCE FINISHED ro_eeee_2_r1_replay: complete
+COOLING ro_eeee_3_r1_small: revised startup temperature must be below 55 C
+COOLING ro_eeee_3_r1_small: scheduler cooling target below 54 C
+COOLING ro_eeee_3_r1_small: scheduler cooling target below 54 C
+COOLING ro_eeee_3_r1_small: scheduler cooling target below 54 C
+COOLING ro_eeee_3_r1_small: scheduler cooling target below 54 C
+SESSION 9/144 ro_eeee_3_r1_small
+[0;93m2026-09-12 19:56:44.171530227 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_3 r1 small 1/4 ok 11.089s qwen3:0.6b
+ro_eeee_3 r1 small 2/4 ok 1.887s qwen3:0.6b
+ro_eeee_3 r1 small 3/4 ok 1.308s qwen3:0.6b
+ro_eeee_3 r1 small 4/4 ok 1.316s qwen3:0.6b
+SEQUENCE FINISHED ro_eeee_3_r1_small: complete
+COOLING ro_eeee_3_r1_large: revised startup temperature must be below 55 C
+COOLING ro_eeee_3_r1_large: scheduler cooling target below 54 C
+COOLING ro_eeee_3_r1_large: scheduler cooling target below 54 C
+SESSION 10/144 ro_eeee_3_r1_large
+[0;93m2026-09-12 19:57:34.540782546 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_3 r1 large 1/4 ok 36.935s qwen3:1.7b
+ro_eeee_3 r1 large 2/4 ok 18.239s qwen3:1.7b
+ro_eeee_3 r1 large 3/4 ok 12.231s qwen3:1.7b
+ro_eeee_3 r1 large 4/4 ok 19.961s qwen3:1.7b
+SEQUENCE FINISHED ro_eeee_3_r1_large: complete
+COOLING ro_eeee_3_r1_adaptive: revised startup temperature must be below 55 C
+COOLING ro_eeee_3_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_eeee_3_r1_adaptive: revised startup temperature must be below 55 C
+COOLING ro_eeee_3_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_eeee_3_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_eeee_3_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_eeee_3_r1_adaptive: scheduler cooling target below 54 C
+SESSION 11/144 ro_eeee_3_r1_adaptive
+[0;93m2026-09-12 20:00:18.407136887 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_3 r1 adaptive 1/4 ok 12.311s qwen3:0.6b
+ro_eeee_3 r1 adaptive 2/4 ok 1.904s qwen3:0.6b
+ro_eeee_3 r1 adaptive 3/4 ok 1.349s qwen3:0.6b
+ro_eeee_3 r1 adaptive 4/4 ok 1.343s qwen3:0.6b
+SEQUENCE FINISHED ro_eeee_3_r1_adaptive: complete
+COOLING ro_eeee_3_r1_replay: revised startup temperature must be below 55 C
+COOLING ro_eeee_3_r1_replay: scheduler cooling target below 54 C
+COOLING ro_eeee_3_r1_replay: scheduler cooling target below 54 C
+COOLING ro_eeee_3_r1_replay: scheduler cooling target below 54 C
+SESSION 12/144 ro_eeee_3_r1_replay
+[0;93m2026-09-12 20:01:21.693861597 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_eeee_3 r1 replay 1/4 ok 11.380s qwen3:0.6b
+ro_eeee_3 r1 replay 2/4 ok 1.059s qwen3:0.6b
+ro_eeee_3 r1 replay 3/4 ok 0.685s qwen3:0.6b
+ro_eeee_3 r1 replay 4/4 ok 0.663s qwen3:0.6b
+SEQUENCE FINISHED ro_eeee_3_r1_replay: complete
+COOLING ro_dddd_1_r1_small: revised startup temperature must be below 55 C
+SESSION 13/144 ro_dddd_1_r1_small
+[0;93m2026-09-12 20:01:49.968971620 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_dddd_1 r1 small 1/4 ok 10.177s qwen3:0.6b
+ro_dddd_1 r1 small 2/4 ok 2.434s qwen3:0.6b
+ro_dddd_1 r1 small 3/4 ok 2.046s qwen3:0.6b
+ro_dddd_1 r1 small 4/4 ok 2.167s qwen3:0.6b
+SEQUENCE FINISHED ro_dddd_1_r1_small: complete
+COOLING ro_dddd_1_r1_large: revised startup temperature must be below 55 C
+SESSION 14/144 ro_dddd_1_r1_large
+[0;93m2026-09-12 20:02:21.010521216 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_dddd_1 r1 large 1/4 ok 53.748s qwen3:1.7b
+ro_dddd_1 r1 large 2/4 ok 20.513s qwen3:1.7b
+ro_dddd_1 r1 large 3/4 ok 18.737s qwen3:1.7b
+ro_dddd_1 r1 large 4/4 ok 19.282s qwen3:1.7b
+SEQUENCE FINISHED ro_dddd_1_r1_large: complete
+COOLING ro_dddd_1_r1_adaptive: revised startup temperature must be below 55 C
+COOLING ro_dddd_1_r1_adaptive: scheduler cooling target below 54 C
+SESSION 15/144 ro_dddd_1_r1_adaptive
+[0;93m2026-09-12 20:04:38.694939967 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_dddd_1 r1 adaptive 1/4 ok 42.232s qwen3:1.7b
+ro_dddd_1 r1 adaptive 2/4 ok 40.075s qwen3:1.7b
+ro_dddd_1 r1 adaptive 3/4 ok 16.117s qwen3:1.7b
+ro_dddd_1 r1 adaptive 4/4 ok 24.723s qwen3:1.7b
+SEQUENCE FINISHED ro_dddd_1_r1_adaptive: complete
+COOLING ro_dddd_1_r1_replay: revised startup temperature must be below 55 C
+COOLING ro_dddd_1_r1_replay: scheduler cooling target below 54 C
+SESSION 16/144 ro_dddd_1_r1_replay
+[0;93m2026-09-12 20:07:07.707555812 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_dddd_1 r1 replay 1/4 ok 63.305s qwen3:1.7b
+ro_dddd_1 r1 replay 2/4 ok 30.399s qwen3:1.7b
+ro_dddd_1 r1 replay 3/4 ok 19.575s qwen3:1.7b
+ro_dddd_1 r1 replay 4/4 ok 7.747s qwen3:1.7b
+SEQUENCE FINISHED ro_dddd_1_r1_replay: complete
+COOLING ro_dddd_2_r1_small: revised startup temperature must be below 55 C
+COOLING ro_dddd_2_r1_small: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_small: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_small: scheduler cooling target below 54 C
+SESSION 17/144 ro_dddd_2_r1_small
+[0;93m2026-09-12 20:09:53.952517784 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_dddd_2 r1 small 1/4 ok 12.368s qwen3:0.6b
+ro_dddd_2 r1 small 2/4 ok 2.316s qwen3:0.6b
+ro_dddd_2 r1 small 3/4 ok 2.914s qwen3:0.6b
+ro_dddd_2 r1 small 4/4 ok 1.422s qwen3:0.6b
+SEQUENCE FINISHED ro_dddd_2_r1_small: complete
+COOLING ro_dddd_2_r1_large: revised startup temperature must be below 55 C
+COOLING ro_dddd_2_r1_large: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_large: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_large: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_large: scheduler cooling target below 54 C
+SESSION 18/144 ro_dddd_2_r1_large
+[0;93m2026-09-12 20:11:07.783629846 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_dddd_2 r1 large 1/4 ok 47.633s qwen3:1.7b
+ro_dddd_2 r1 large 2/4 ok 15.366s qwen3:1.7b
+ro_dddd_2 r1 large 3/4 ok 22.954s qwen3:1.7b
+ro_dddd_2 r1 large 4/4 ok 31.670s qwen3:1.7b
+SEQUENCE FINISHED ro_dddd_2_r1_large: complete
+COOLING ro_dddd_2_r1_adaptive: revised startup temperature must be below 55 C
+COOLING ro_dddd_2_r1_adaptive: revised startup temperature must be below 55 C
+COOLING ro_dddd_2_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_adaptive: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_adaptive: scheduler cooling target below 54 C
+SESSION 19/144 ro_dddd_2_r1_adaptive
+[0;93m2026-09-12 20:14:41.958778030 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_dddd_2 r1 adaptive 1/4 ok 41.276s qwen3:1.7b
+ro_dddd_2 r1 adaptive 2/4 ok 15.926s qwen3:1.7b
+ro_dddd_2 r1 adaptive 3/4 ok 25.781s qwen3:1.7b
+ro_dddd_2 r1 adaptive 4/4 ok 19.994s qwen3:1.7b
+SEQUENCE FINISHED ro_dddd_2_r1_adaptive: complete
+COOLING ro_dddd_2_r1_replay: revised startup temperature must be below 55 C
+COOLING ro_dddd_2_r1_replay: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_replay: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_replay: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_replay: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_replay: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_replay: scheduler cooling target below 54 C
+COOLING ro_dddd_2_r1_replay: scheduler cooling target below 54 C
+SESSION 20/144 ro_dddd_2_r1_replay
+[0;93m2026-09-12 20:17:50.404765659 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_dddd_2 r1 replay 1/4 ok 32.315s qwen3:1.7b
+ro_dddd_2 r1 replay 2/4 ok 7.379s qwen3:1.7b
+ro_dddd_2 r1 replay 3/4 ok 20.102s qwen3:1.7b
+ro_dddd_2 r1 replay 4/4 ok 12.574s qwen3:1.7b
+SEQUENCE FINISHED ro_dddd_2_r1_replay: complete
+COOLING ro_dddd_3_r1_small: revised startup temperature must be below 55 C
+COOLING ro_dddd_3_r1_small: scheduler cooling target below 54 C
+COOLING ro_dddd_3_r1_small: scheduler cooling target below 54 C
+COOLING ro_dddd_3_r1_small: scheduler cooling target below 54 C
+SESSION 21/144 ro_dddd_3_r1_small
+[0;93m2026-09-12 20:19:47.605076206 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_dddd_3 r1 small 1/4 ok 11.273s qwen3:0.6b
+ro_dddd_3 r1 small 2/4 ok 2.438s qwen3:0.6b
+ro_dddd_3 r1 small 3/4 ok 3.329s qwen3:0.6b
+ro_dddd_3 r1 small 4/4 ok 2.922s qwen3:0.6b
+SEQUENCE FINISHED ro_dddd_3_r1_small: complete
+COOLING ro_dddd_3_r1_large: revised startup temperature must be below 55 C
+COOLING ro_dddd_3_r1_large: scheduler cooling target below 54 C
+COOLING ro_dddd_3_r1_large: scheduler cooling target below 54 C
+COOLING ro_dddd_3_r1_large: scheduler cooling target below 54 C
+COOLING ro_dddd_3_r1_large: scheduler cooling target below 54 C
+SESSION 22/144 ro_dddd_3_r1_large
+[0;93m2026-09-12 20:21:02.402746494 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+ro_dddd_3 r1 large 1/4 ok 41.107s qwen3:1.7b
+ro_dddd_3 r1 large 2/4 ok 23.780s qwen3:1.7b
+ro_dddd_3 r1 large 3/4 ok 26.550s qwen3:1.7b
+ro_dddd_3 r1 large 4/4 interrupted 27.545s None
+SEQUENCE FINISHED ro_dddd_3_r1_large: interrupted

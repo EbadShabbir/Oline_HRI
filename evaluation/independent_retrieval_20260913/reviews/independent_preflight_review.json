@@ -1,0 +1,109 @@
+{
+  "approved": true,
+  "component_sha256": {
+    "execution_cases_canonical_json": "26888c0310ff9c16bb8eb32b366eacb28ef6ea0e8d9b6ce1476c77cc72deb409",
+    "memory_catalog_canonical_json": "4032f6ff4cca509fdef2c0a6ebc40e8792cc5d1eb04f2b5ecc59fee718e41309",
+    "memory_seed_canonical_json": "dde4a3f1248fe5c82e6ac58d80a8592b0149cc28b7352d1579dd51d4b28b723f",
+    "reference_cases_canonical_json": "33e471110be4c4e096e24a4cb076855108d51ee04a63e33437fefab825e485b0"
+  },
+  "created_at": "2026-09-13T16:19:11.209224+00:00",
+  "human_validation": "pending",
+  "independence": {
+    "adapter_or_runner_authored_by_reviewer": false,
+    "dataset_authored_by_reviewer": false,
+    "llm_inference_run_by_reviewer": false,
+    "primary_model_outputs_seen": false
+  },
+  "limitations": [
+    "Eight shared fictional topic scenarios; repetitions dependent.",
+    "No justified noninferiority margin: descriptive observed preservation only.",
+    "Controlled logical-role and response-framing adapter; evidence-dependent helpers part of system behavior.",
+    "Fixed post-lifecycle snapshot; no live propagation or spoken-system claim.",
+    "Independent human validation pending."
+  ],
+  "prepared_snapshot": {
+    "catalog_and_eligible_reference_check": "passed",
+    "directory": "evaluation/independent_retrieval_20260913/prepared_snapshot_v1",
+    "embedding_count": 25,
+    "logical_sha256": "70170bc5c9db5aea0a0f939043671a83068507bb9ca9f5cb2b7a1acfd1dc3fcc",
+    "preparation_status": "complete",
+    "sha256": {
+      "memory.sqlite3": "fe813f333c977c2d69a41fb3505393cd679fc191907ada3f710eb1e1e86bae0a",
+      "seal.json": "4f12a007b68a53276fb65364aaa4c050f35e0123256e0b4b50589ceaeb48e60c",
+      "setup.json": "cd692c4dc8ae52389b087adafccef3bac6ce498ce7b1d3e2d9931d08dd28254a",
+      "status.json": "056773fbcd1c923600c8ac0b456ce8d9d031bd85f26c156cc352af9542ef64cb"
+    },
+    "stored_record_count": 27
+  },
+  "review_artifacts": {
+    "dataset_audit.md": "69494232d5cff910c9c0931ec830bb1cb0f7ac236350941c7f57e03092fd9104",
+    "design_audit_preliminary.md": "f4d85f6782da28cd20c1f8d46269b1a68b4333e6e2d2b3c4ffcaf2540fbb0c73",
+    "freshness_exact_overlap.json": "697facb69e741047e973141b6fe8f72e958ce87cdec598e024047689ad66548b",
+    "harness_audit.md": "79c1ad7a0fcc699de668fe5cabd1ffe9393412c3774346c15c56313d5cf141e5",
+    "offline_review_validation_final.txt": "8d7a738d3a9e0f4f5d9a90f4e4380de831cabff466a66d3d4aa60d39f744ae29",
+    "offline_review_validation_initial.txt": "0bc030d3db44a42bc9eae76d01011555b78f080d052c3e10724673027f7674cc"
+  },
+  "review_type": "assistant independent pre-inference design, dataset, source and actual prepared-snapshot audit",
+  "reviewer": "Independent assistant agent /root/audit_design",
+  "sha256": {
+    "protocol.md": "e60b0e84fd422d81508a50c8eebdb24757292cc7ec265a0cbabfd9f3b8846380",
+    "references.json": "b04b59c81fbf99736950385bbd2e671a1364ce9bee90881d46c05966a3e3513e",
+    "runtime.json": "2a28340835c388a1486ead8d06a607874af6d2cf8d6d8ef889053aa96d3fe36d"
+  },
+  "source_change_rule": "Any execution source or approved data/protocol change invalidates this approval for the changed freeze.",
+  "source_sha256": {
+    "config/default.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+    "scripts/complete_system_device_guard.py": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+    "scripts/independent_retrieval_adapter.py": "b38eb74bfa7fe0b48fb8e057ba75ad7202b3bf148734b32bb13d40faf4ff76a3",
+    "scripts/post_memory_device_guard.py": "10463685afd110895b8aad15cde2f97cb414253ea40ed9e37097f9872b695ea0",
+    "scripts/run_arc_capability.py": "2d55342123aa853952a44b6496285b338b322ec65f32f83bbf106e5c606885a0",
+    "scripts/run_complete_system.py": "888daae7b84126744cfdd54aa56cf220f0482f81b7d0b167a2ad3107849f4dcb",
+    "scripts/run_independent_retrieval.py": "020ebbce0e039a60f57b761ccd16d64b3dd56a87224534f2e06544fb0d0a004d",
+    "scripts/run_pair_remediation_validation.py": "5e9ce447e2591c17b741781638140a1cec06d3b99603f29fd335639591cbbb13",
+    "scripts/run_post_memory_comparison.py": "fbdffadfbc16306b37e6034cc9bce9bca87eba701ad882928e9bd57c991428bb",
+    "scripts/smoke_independent_retrieval.py": "27245ab388eaadd6e7837ede8e1abce29c5a7f697886bff49e30f3334d0eb1db",
+    "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+    "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+    "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+    "src/oline_hri/cli.py": "90f6a1e6de50bfb47a7b37b47a6cca73fe381ee510b88c7002c08240117e450e",
+    "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+    "src/oline_hri/conversation.py": "d9a0499de2f6f76e290640097d2a9201d4fe988876516dee4020b29fd9806b90",
+    "src/oline_hri/default_config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+    "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+    "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+    "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+    "src/oline_hri/evaluation_experiment.py": "d5d286d1dff60b2a85acc9be524dd75f07f8dde363c002094b505c0734431739",
+    "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+    "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+    "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+    "src/oline_hri/evaluation_runner.py": "2a7d3ec2dcd4f10c75eac7ce4703f31a2fbdfe039270f50407e0b8a65ad0161f",
+    "src/oline_hri/evaluation_scoring.py": "cd94c9d04452130b0cd1113ed128e1d2a3a28e33cfd5e89cde4ae006baff4d3e",
+    "src/oline_hri/evaluation_systems.py": "77437ef8a579d2de531a4770fc2bda2a2088d3310cad4d3db3be536e4203f66a",
+    "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+    "src/oline_hri/grounded_composition.py": "310f0758dbef225fa84f41517fbe1faa53afbbe5065a2e0bdb72d8d32da73d6a",
+    "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+    "src/oline_hri/memory.py": "4f2d261de00fd1df2018ebeba2778cedc236ef077697c8e1319302b61f9a78cb",
+    "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+    "src/oline_hri/memory_evidence.py": "04b38d066ff3b7e71f35a29a667f757e812cf1a6db741a22b19c9356a2d5ea74",
+    "src/oline_hri/ollama.py": "7a82fe0a71461c7bd02faee3fbd739b32e4d4388e5f42ec146ab685e208a43d1",
+    "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+    "src/oline_hri/relationships.py": "9ceee92ed123e988047c8722c20e872b77acdc9060dddb52ed38d08c1199a823",
+    "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+    "src/oline_hri/retrieval.py": "40364d1fb06aa68bae9bd3d31a583421f74883d9a0fe9815f72e9958eb8cea84",
+    "src/oline_hri/routing.py": "e29406aa5240cb006a13a5d637af82501b96b68b2065402fb09305afcdc17b50",
+    "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0",
+    "src/oline_hri/timing.py": "23c1c126c26d65e03833dc1c107ffa14670843fefd3755fd42ecd0969af1a445",
+    "tests/test_independent_retrieval_adapter.py": "e6087a5dd2d60bfeb7db918a4402c5da14b00a4b235b2ed25799fd54d906d25f",
+    "tests/test_independent_retrieval_runner.py": "48352f3a34f70b260e06dad96c2401744ea000bcf8a2021e6e79732ea7053cd1"
+  },
+  "unresolved_blocking_findings": [],
+  "validation": {
+    "command": "PYTHONPATH=src:scripts:tests .venv/bin/python -m unittest -v tests.test_independent_retrieval_adapter tests.test_independent_retrieval_runner tests.test_post_memory_device_guard tests.test_evaluation_systems tests.test_routing_timing",
+    "elapsed_seconds": 2.801,
+    "errors": 0,
+    "failures": 0,
+    "live_inference": false,
+    "passed": 34,
+    "tests": 34
+  }
+}

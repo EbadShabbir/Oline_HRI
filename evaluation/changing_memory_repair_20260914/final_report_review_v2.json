@@ -1,0 +1,1131 @@
+{
+  "created_at": "2026-09-14T14:36:22.687487+00:00",
+  "status": "approved",
+  "reviewer": "/root/lifecycle_validation_fix",
+  "review_type": "Final unblinded assistant report/document factcheck against frozen evidence",
+  "role_disclosure": "Reviewer implemented first-repair validation/evidence changes and authored the second relationship amendment. This factcheck independently reads frozen answer judgments and diagnostics; it is not independent code authorship, blinded answer scoring, or human validation. No judgments changed.",
+  "scope": "Final parent repair README, new results.md and developments.MD sections, older-body preservation, and final followup_v2 README. First96 and second24 outcomes are checked separately.",
+  "human_validation": "pending",
+  "doc_sha256": {
+    "evaluation/changing_memory_repair_20260914/README.md": "33f2b832584e24b98cea91aab339d4f6ad7e21d285ef737c19cec6c7cbf1a4ee",
+    "results.md": "0457da8732fcb0a83b53ca5acad783b63edd4912b8de6296c6d60dd74f5ee307",
+    "developments.MD": "df20c6e5df08ee1f106b43b1dbee61e5169747e2b10da5514d48bc7af7599587",
+    "evaluation/changing_memory_repair_20260914/followup_v2/README.md": "1f088e32d79b12f0d20640a192955d5856f54d0ca902dfa858e1928ed6641e42"
+  },
+  "input_sha256": {
+    "evaluation/changing_memory_repair_20260914/report_review_first96_v1.json": "fa719394028ac0bb3e869074e15b7ed53c7eeb01ac3ea0aa8f44ac7919de1d23",
+    "evaluation/changing_memory_repair_20260914/reporting_facts_v1.json": "2ec997811a53f42f8960a476bb51c8ac344a2c6a7cc3fed4fe39b3e23a80948b",
+    "evaluation/changing_memory_repair_20260914/analysis_v1/metrics.json": "945fa8e95c8417304b7ab56692532f23e95857e57051b2a49499d09c6a0a6d22",
+    "evaluation/changing_memory_repair_20260914/analysis_v1/review_agreement.json": "743024667fe089cbb4007e45b2b7ee0cac2e7e74f9d9facf937c9229df394890",
+    "evaluation/changing_memory_repair_20260914/analysis_v1/seal.json": "117327f6c1d19b4870180f5219ce1d8014a51dcf0bbb33ed04f22693b7e5d8a6",
+    "evaluation/changing_memory_repair_20260914/tables_v1/seal.json": "447c8b7101d270a87dfa5f01e92ff190a03b28451ee34df3c51d020fe04e804f",
+    "evaluation/changing_memory_repair_20260914/matched_comparison_v1/seal.json": "85cc869a9d123f13ee5cdc86fb4dc4b50e8fcf814ff876354d1a01a03295ab3e",
+    "evaluation/changing_memory_repair_20260914/collection_audit_v1.json": "914786d716b005ce59eb83ae18e2aaa0912bd878a631c7546544d6075f26e860",
+    "evaluation/changing_memory_repair_20260914/collection_audit_findings_v1.json": "d2cea4f864e1012dc605c2d6e7e70baf3015d48b764f1cf39afd43690f1b9729",
+    "evaluation/changing_memory_repair_20260914/partial_answer_diagnostics_v1.json": "5654f196d6c9b517d3bb4423827f64c19b551b8b6f7b04ba46a6dea6a9e30f80",
+    "evaluation/changing_memory_repair_20260914/withheld_diagnostics_v1.json": "e200223184007f07ce97b8ea5ff8d0bf24f5abc264c0e6ea6b8bbbed4a8b0e91",
+    "evaluation/changing_memory_repair_20260914/analysis_reproduction_v1.json": "ec2ba0171aa93d9ed589b940a768841d59adbffda469299819f00cd20efd2c51",
+    "evaluation/changing_memory_repair_20260914/followup_v2/analysis_v1/metrics.json": "a9a4e6275c0d4d8f5f2647a39e6c40e6792f5a3322eefd22657241b031bbd88e",
+    "evaluation/changing_memory_repair_20260914/followup_v2/analysis_v1/review_agreement.json": "0de264cb28fdf0395407b4c3f169eb2dea47ad237ad6ca46a600b4982fff9ea0",
+    "evaluation/changing_memory_repair_20260914/followup_v2/analysis_v1/seal.json": "ac757ec863121726700aa4d65e790f8bdb2612d11fa96ec08333bcb31e85d60f",
+    "evaluation/changing_memory_repair_20260914/followup_v2/tables_v1/seal.json": "ac7c23cc9ef417b2f66774eb238eb58a241b923ba7083c6b78c8a4494fe23b26",
+    "evaluation/changing_memory_repair_20260914/followup_v2/compared_first_repair_v1/seal.json": "d9f00fa44997438f1ac2b2417cf6cc9dc888befd12b290da93d766bd4d8553d5",
+    "evaluation/changing_memory_repair_20260914/followup_v2/compared_original_baseline_v1/seal.json": "0fcd539904f16e4e564ff17d991815f20bc072273bf0ae8cbb7fb4eddb680903",
+    "evaluation/changing_memory_repair_20260914/followup_v2/collection_audit_v1.json": "1f9770ad509dace9a09cf1883201b6c8765cd8abbe9b95ec6839d96e287da39e",
+    "evaluation/changing_memory_repair_20260914/followup_v2/collection_audit_findings_v1.json": "9db228aa431b17e562b345f6d4032ea802d5d7a181d1316614c1e4c86ad8fc35",
+    "evaluation/changing_memory_repair_20260914/followup_v2/analysis_reproduction_v1.json": "b3d93136c25a3430267a42954ba3a7d4dc46a61196ce0085edd0882b98b5a076",
+    "evaluation/changing_memory_repair_20260914/followup_v2/freeze_comparison_v1.json": "5151a7e6caceea5e7fe07a8a1ee946d70bee19d6da9fc34a74e4ecf8ac93cfd2",
+    "evaluation/changing_memory_repair_20260914/followup_v2/frozen_v1/freeze.json": "b4d1d2dc71b5b7ec7373e6c0640970d139306723a386b42e8cdedd0bc83709e0",
+    "evaluation/changing_memory_repair_20260914/followup_v2/implementation_v1.md": "518765e9b6db88dac2943c125ac6b0a6ef3ce0a8da86d5cf7d53af1c5c14866b",
+    "evaluation/changing_memory_repair_20260914/followup_v2/completed_analysis_commands_v1.sh": "ba3b5b2e30c0ac00d3bc32e20b3b1789954a8f62526947d1eddaf2ff6b3ae54f",
+    "evaluation/changing_memory_repair_20260914/final_changes_from_primary.diff": "cb121d8a3065f258978cea3663a225730ad20eccd8c16618b3ad27412ea8fec2",
+    "evaluation/changing_memory_repair_20260914/frozen_source_reproduction.md": "f8b5320aeeda3fff339fc4f39f46b45e2f7b77943179dce029e59d309aef7b26"
+  },
+  "current_runtime_source_sha256": {
+    "config/default.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+    "scripts/complete_system_device_guard.py": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+    "scripts/post_memory_device_guard.py": "10463685afd110895b8aad15cde2f97cb414253ea40ed9e37097f9872b695ea0",
+    "scripts/run_arc_capability.py": "2d55342123aa853952a44b6496285b338b322ec65f32f83bbf106e5c606885a0",
+    "scripts/run_changing_memory.py": "4b8102177858572e1a5244d443c798d53bf48b34743d93858412c2418972d893",
+    "scripts/run_complete_system.py": "888daae7b84126744cfdd54aa56cf220f0482f81b7d0b167a2ad3107849f4dcb",
+    "scripts/run_independent_retrieval.py": "62feb1069c7cf1cddf79ece56a3044a4526352252f79391459e67631dda81c9a",
+    "scripts/run_pair_remediation_validation.py": "5e9ce447e2591c17b741781638140a1cec06d3b99603f29fd335639591cbbb13",
+    "scripts/run_post_memory_comparison.py": "fbdffadfbc16306b37e6034cc9bce9bca87eba701ad882928e9bd57c991428bb",
+    "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+    "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+    "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+    "src/oline_hri/cli.py": "90f6a1e6de50bfb47a7b37b47a6cca73fe381ee510b88c7002c08240117e450e",
+    "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+    "src/oline_hri/conversation.py": "878361152fcfed2dac6867badb3b935f0dea727f5ef2300cb704008a1444e2a7",
+    "src/oline_hri/default_config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+    "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+    "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+    "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+    "src/oline_hri/evaluation_experiment.py": "d5d286d1dff60b2a85acc9be524dd75f07f8dde363c002094b505c0734431739",
+    "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+    "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+    "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+    "src/oline_hri/evaluation_runner.py": "2a7d3ec2dcd4f10c75eac7ce4703f31a2fbdfe039270f50407e0b8a65ad0161f",
+    "src/oline_hri/evaluation_scoring.py": "f73f7f01b89a5a3d83ac2543fdb585a120c19bccf94062e8c38bf498a8ca6a09",
+    "src/oline_hri/evaluation_systems.py": "77437ef8a579d2de531a4770fc2bda2a2088d3310cad4d3db3be536e4203f66a",
+    "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+    "src/oline_hri/grounded_composition.py": "52e458baa35b59aa7bc00736daf7a2e8b98b38a0fae1ce77b872fcf40eff7507",
+    "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+    "src/oline_hri/memory.py": "4f2d261de00fd1df2018ebeba2778cedc236ef077697c8e1319302b61f9a78cb",
+    "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+    "src/oline_hri/memory_evidence.py": "c0b1b0744f022fd593501e7a7310040309b4d198ba56435643ba14f2645d22e7",
+    "src/oline_hri/ollama.py": "7a82fe0a71461c7bd02faee3fbd739b32e4d4388e5f42ec146ab685e208a43d1",
+    "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+    "src/oline_hri/relationships.py": "29f04fc94ab15a357ef90bdf0bd645958ecf2ecdadc3ad857363756528cae505",
+    "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+    "src/oline_hri/retrieval.py": "40364d1fb06aa68bae9bd3d31a583421f74883d9a0fe9815f72e9958eb8cea84",
+    "src/oline_hri/routing.py": "2604cc1a386a7f4e40f9528794423f46a4976501394c8e17d3479145e83f8bd1",
+    "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0",
+    "src/oline_hri/timing.py": "23c1c126c26d65e03833dc1c107ffa14670843fefd3755fd42ecd0969af1a445",
+    "tests/test_changing_memory.py": "2c1717af83ed553cdd2426acf15bdeaa57a340d36d9c808a1ece5a65c78fd730"
+  },
+  "checks_passed": 55,
+  "checks": [
+    {
+      "check": "evaluation/changing_memory_repair_20260914/analysis_v1 sealed inventory and hashes",
+      "passed": true,
+      "evidence": {
+        "files": 16,
+        "seal_sha256": "117327f6c1d19b4870180f5219ce1d8014a51dcf0bbb33ed04f22693b7e5d8a6"
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914/tables_v1 sealed inventory and hashes",
+      "passed": true,
+      "evidence": {
+        "files": 35,
+        "seal_sha256": "447c8b7101d270a87dfa5f01e92ff190a03b28451ee34df3c51d020fe04e804f"
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914/matched_comparison_v1 sealed inventory and hashes",
+      "passed": true,
+      "evidence": {
+        "files": 11,
+        "seal_sha256": "85cc869a9d123f13ee5cdc86fb4dc4b50e8fcf814ff876354d1a01a03295ab3e"
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914/followup_v2/analysis_v1 sealed inventory and hashes",
+      "passed": true,
+      "evidence": {
+        "files": 16,
+        "seal_sha256": "ac757ec863121726700aa4d65e790f8bdb2612d11fa96ec08333bcb31e85d60f"
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914/followup_v2/tables_v1 sealed inventory and hashes",
+      "passed": true,
+      "evidence": {
+        "files": 35,
+        "seal_sha256": "ac7c23cc9ef417b2f66774eb238eb58a241b923ba7083c6b78c8a4494fe23b26"
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914/followup_v2/compared_first_repair_v1 sealed inventory and hashes",
+      "passed": true,
+      "evidence": {
+        "files": 11,
+        "seal_sha256": "d9f00fa44997438f1ac2b2417cf6cc9dc888befd12b290da93d766bd4d8553d5"
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914/followup_v2/compared_original_baseline_v1 sealed inventory and hashes",
+      "passed": true,
+      "evidence": {
+        "files": 11,
+        "seal_sha256": "0fcd539904f16e4e564ff17d991815f20bc072273bf0ae8cbb7fb4eddb680903"
+      }
+    },
+    {
+      "check": "First result unchanged and agrees with independent reporting facts",
+      "passed": true,
+      "evidence": {
+        "first": {
+          "planned": 96,
+          "delivered": 94,
+          "useful_correct": 92,
+          "forbidden_disclosure": 0,
+          "withheld": 2,
+          "interrupted": 0,
+          "missing": 0,
+          "classification": {
+            "appropriate_uncertainty": 48,
+            "correct_recall": 44,
+            "partial": 2,
+            "no_delivered_answer": 2
+          }
+        },
+        "first_report_review_sha256": "fa719394028ac0bb3e869074e15b7ed53c7eeb01ac3ea0aa8f44ac7919de1d23"
+      }
+    },
+    {
+      "check": "Follow-up24 all useful and delivered with no failure classification",
+      "passed": true,
+      "evidence": {
+        "planned": 24,
+        "attempted": 24,
+        "delivered": 24,
+        "missing": 0,
+        "useful_correct": 24,
+        "classification": {
+          "appropriate_uncertainty": 12,
+          "correct_recall": 12
+        },
+        "status": {
+          "delivered": 24
+        },
+        "all_forbidden_disclosure": 0,
+        "validation_rejection_without_disclosure": 0,
+        "freshness_rejection_without_disclosure": 0,
+        "client_output_validation_without_disclosure": 0,
+        "failure_findings": {},
+        "actual_models": {
+          "qwen3:0.6b": 72
+        },
+        "requested_models": {
+          "qwen3:0.6b": 72
+        },
+        "actual_generator_models": {
+          "qwen3:0.6b": 24
+        },
+        "original": {
+          "successful": 4,
+          "planned": 4,
+          "delivered": 4
+        },
+        "replacement": {
+          "successful": 4,
+          "planned": 4,
+          "delivered": 4
+        },
+        "historical_control": {
+          "successful": 4,
+          "planned": 4,
+          "delivered": 4
+        },
+        "uncertainty": {
+          "successful": 12,
+          "planned": 12,
+          "delivered": 12
+        },
+        "stale_subject_disclosure_after_correction": {
+          "disclosures": 0,
+          "planned": 8,
+          "delivered": 8
+        },
+        "deleted_subject_disclosure": {
+          "disclosures": 0,
+          "planned": 6,
+          "delivered": 6
+        },
+        "expired_subject_disclosure": {
+          "disclosures": 0,
+          "planned": 5,
+          "delivered": 5
+        },
+        "stale_subject_disclosure_current_replacement_questions": {
+          "disclosures": 0,
+          "planned": 4,
+          "delivered": 4
+        },
+        "any_expired_fact_disclosure": {
+          "disclosures": 0,
+          "planned": 5,
+          "delivered": 5
+        }
+      }
+    },
+    {
+      "check": "Follow-up original",
+      "passed": true,
+      "evidence": {
+        "successful": 4,
+        "planned": 4,
+        "delivered": 4
+      }
+    },
+    {
+      "check": "Follow-up replacement",
+      "passed": true,
+      "evidence": {
+        "successful": 4,
+        "planned": 4,
+        "delivered": 4
+      }
+    },
+    {
+      "check": "Follow-up historical_control",
+      "passed": true,
+      "evidence": {
+        "successful": 4,
+        "planned": 4,
+        "delivered": 4
+      }
+    },
+    {
+      "check": "Follow-up uncertainty",
+      "passed": true,
+      "evidence": {
+        "successful": 12,
+        "planned": 12,
+        "delivered": 12
+      }
+    },
+    {
+      "check": "Follow-up disclosure denominator stale_subject_disclosure_after_correction",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 8,
+        "delivered": 8
+      }
+    },
+    {
+      "check": "Follow-up disclosure denominator stale_subject_disclosure_current_replacement_questions",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 4,
+        "delivered": 4
+      }
+    },
+    {
+      "check": "Follow-up disclosure denominator deleted_subject_disclosure",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 6,
+        "delivered": 6
+      }
+    },
+    {
+      "check": "Follow-up disclosure denominator any_expired_fact_disclosure",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 5,
+        "delivered": 5
+      }
+    },
+    {
+      "check": "First-run disclosure denominator stale_subject_disclosure_current_replacement_questions",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 16,
+        "delivered": 14
+      }
+    },
+    {
+      "check": "First-run disclosure denominator deleted_subject_disclosure",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 24,
+        "delivered": 24
+      }
+    },
+    {
+      "check": "First-run disclosure denominator any_expired_fact_disclosure",
+      "passed": true,
+      "evidence": {
+        "disclosures": 0,
+        "planned": 20,
+        "delivered": 20
+      }
+    },
+    {
+      "check": "Follow-up paired history success",
+      "passed": true,
+      "evidence": {
+        "count": 9,
+        "both_observed": 9,
+        "both_success": 9,
+        "retained_only": 0,
+        "fresh_only": 0,
+        "neither": 0
+      }
+    },
+    {
+      "check": "compared_first_repair_v1 matched24 comparison",
+      "passed": true,
+      "evidence": {
+        "dimensions": "all",
+        "group": "{}",
+        "baseline_planned": "24",
+        "repair_planned": "24",
+        "delta_planned": "0",
+        "baseline_delivered": "22",
+        "repair_delivered": "24",
+        "delta_delivered": "2",
+        "baseline_useful_correct": "22",
+        "repair_useful_correct": "24",
+        "delta_useful_correct": "2",
+        "baseline_forbidden_disclosure": "0",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "0",
+        "baseline_revoked_original_disclosure": "0",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "0",
+        "baseline_unstored_replacement_disclosure": "0",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "0",
+        "baseline_withheld": "2",
+        "repair_withheld": "0",
+        "delta_withheld": "-2",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "compared_original_baseline_v1 matched24 comparison",
+      "passed": true,
+      "evidence": {
+        "dimensions": "all",
+        "group": "{}",
+        "baseline_planned": "24",
+        "repair_planned": "24",
+        "delta_planned": "0",
+        "baseline_delivered": "23",
+        "repair_delivered": "24",
+        "delta_delivered": "1",
+        "baseline_useful_correct": "10",
+        "repair_useful_correct": "24",
+        "delta_useful_correct": "14",
+        "baseline_forbidden_disclosure": "9",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "-9",
+        "baseline_revoked_original_disclosure": "9",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "-9",
+        "baseline_unstored_replacement_disclosure": "0",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "0",
+        "baseline_withheld": "1",
+        "repair_withheld": "0",
+        "delta_withheld": "-1",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "Follow-up subgroup {'history_mode': 'retained'}",
+      "passed": true,
+      "evidence": {
+        "dimensions": "history_mode",
+        "group": "{\"history_mode\": \"retained\"}",
+        "baseline_planned": "15",
+        "repair_planned": "15",
+        "delta_planned": "0",
+        "baseline_delivered": "14",
+        "repair_delivered": "15",
+        "delta_delivered": "1",
+        "baseline_useful_correct": "14",
+        "repair_useful_correct": "15",
+        "delta_useful_correct": "1",
+        "baseline_forbidden_disclosure": "0",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "0",
+        "baseline_revoked_original_disclosure": "0",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "0",
+        "baseline_unstored_replacement_disclosure": "0",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "0",
+        "baseline_withheld": "1",
+        "repair_withheld": "0",
+        "delta_withheld": "-1",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "Follow-up subgroup {'history_mode': 'fresh'}",
+      "passed": true,
+      "evidence": {
+        "dimensions": "history_mode",
+        "group": "{\"history_mode\": \"fresh\"}",
+        "baseline_planned": "9",
+        "repair_planned": "9",
+        "delta_planned": "0",
+        "baseline_delivered": "8",
+        "repair_delivered": "9",
+        "delta_delivered": "1",
+        "baseline_useful_correct": "8",
+        "repair_useful_correct": "9",
+        "delta_useful_correct": "1",
+        "baseline_forbidden_disclosure": "0",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "0",
+        "baseline_revoked_original_disclosure": "0",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "0",
+        "baseline_unstored_replacement_disclosure": "0",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "0",
+        "baseline_withheld": "1",
+        "repair_withheld": "0",
+        "delta_withheld": "-1",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "Follow-up subgroup {'after_restart': True}",
+      "passed": true,
+      "evidence": {
+        "dimensions": "after_restart",
+        "group": "{\"after_restart\": true}",
+        "baseline_planned": "9",
+        "repair_planned": "9",
+        "delta_planned": "0",
+        "baseline_delivered": "7",
+        "repair_delivered": "9",
+        "delta_delivered": "2",
+        "baseline_useful_correct": "7",
+        "repair_useful_correct": "9",
+        "delta_useful_correct": "2",
+        "baseline_forbidden_disclosure": "0",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "0",
+        "baseline_revoked_original_disclosure": "0",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "0",
+        "baseline_unstored_replacement_disclosure": "0",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "0",
+        "baseline_withheld": "2",
+        "repair_withheld": "0",
+        "delta_withheld": "-2",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "Follow-up subgroup {'branch': 'correction'}",
+      "passed": true,
+      "evidence": {
+        "dimensions": "branch",
+        "group": "{\"branch\": \"correction\"}",
+        "baseline_planned": "10",
+        "repair_planned": "10",
+        "delta_planned": "0",
+        "baseline_delivered": "8",
+        "repair_delivered": "10",
+        "delta_delivered": "2",
+        "baseline_useful_correct": "8",
+        "repair_useful_correct": "10",
+        "delta_useful_correct": "2",
+        "baseline_forbidden_disclosure": "0",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "0",
+        "baseline_revoked_original_disclosure": "0",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "0",
+        "baseline_unstored_replacement_disclosure": "0",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "0",
+        "baseline_withheld": "2",
+        "repair_withheld": "0",
+        "delta_withheld": "-2",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "Follow-up subgroup {'branch': 'deletion'}",
+      "passed": true,
+      "evidence": {
+        "dimensions": "branch",
+        "group": "{\"branch\": \"deletion\"}",
+        "baseline_planned": "7",
+        "repair_planned": "7",
+        "delta_planned": "0",
+        "baseline_delivered": "7",
+        "repair_delivered": "7",
+        "delta_delivered": "0",
+        "baseline_useful_correct": "7",
+        "repair_useful_correct": "7",
+        "delta_useful_correct": "0",
+        "baseline_forbidden_disclosure": "0",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "0",
+        "baseline_revoked_original_disclosure": "0",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "0",
+        "baseline_unstored_replacement_disclosure": "0",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "0",
+        "baseline_withheld": "0",
+        "repair_withheld": "0",
+        "delta_withheld": "0",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "Follow-up subgroup {'branch': 'expiry'}",
+      "passed": true,
+      "evidence": {
+        "dimensions": "branch",
+        "group": "{\"branch\": \"expiry\"}",
+        "baseline_planned": "7",
+        "repair_planned": "7",
+        "delta_planned": "0",
+        "baseline_delivered": "7",
+        "repair_delivered": "7",
+        "delta_delivered": "0",
+        "baseline_useful_correct": "7",
+        "repair_useful_correct": "7",
+        "delta_useful_correct": "0",
+        "baseline_forbidden_disclosure": "0",
+        "repair_forbidden_disclosure": "0",
+        "delta_forbidden_disclosure": "0",
+        "baseline_revoked_original_disclosure": "0",
+        "repair_revoked_original_disclosure": "0",
+        "delta_revoked_original_disclosure": "0",
+        "baseline_unstored_replacement_disclosure": "0",
+        "repair_unstored_replacement_disclosure": "0",
+        "delta_unstored_replacement_disclosure": "0",
+        "baseline_withheld": "0",
+        "repair_withheld": "0",
+        "delta_withheld": "0",
+        "baseline_interrupted": "0",
+        "repair_interrupted": "0",
+        "delta_interrupted": "0",
+        "baseline_missing": "0",
+        "repair_missing": "0",
+        "delta_missing": "0"
+      }
+    },
+    {
+      "check": "Follow-up unfavorable latency all_attempts",
+      "passed": true,
+      "evidence": {
+        "dimensions": "all",
+        "group": "{}",
+        "scope": "all_attempts",
+        "baseline_eligible_attempts": "24",
+        "baseline_timed_attempts": "24",
+        "baseline_missing_timing": "0",
+        "baseline_median_seconds": "2.6325576605",
+        "baseline_p95_seconds": "12.340897805",
+        "repair_eligible_attempts": "24",
+        "repair_timed_attempts": "24",
+        "repair_missing_timing": "0",
+        "repair_median_seconds": "2.760499736",
+        "repair_p95_seconds": "12.647251669",
+        "delta_median_seconds": "0.12794207550000003",
+        "delta_p95_seconds": "0.3063538639999983"
+      }
+    },
+    {
+      "check": "Follow-up unfavorable latency delivered_only",
+      "passed": true,
+      "evidence": {
+        "dimensions": "all",
+        "group": "{}",
+        "scope": "delivered_only",
+        "baseline_eligible_attempts": "22",
+        "baseline_timed_attempts": "22",
+        "baseline_missing_timing": "0",
+        "baseline_median_seconds": "2.572482054",
+        "baseline_p95_seconds": "11.831923612",
+        "repair_eligible_attempts": "24",
+        "repair_timed_attempts": "24",
+        "repair_missing_timing": "0",
+        "repair_median_seconds": "2.760499736",
+        "repair_p95_seconds": "12.647251669",
+        "delta_median_seconds": "0.1880176819999999",
+        "delta_p95_seconds": "0.8153280569999986"
+      }
+    },
+    {
+      "check": "Follow-up independent integrity audit",
+      "passed": true,
+      "evidence": {
+        "checks": 2811,
+        "violations": []
+      }
+    },
+    {
+      "check": "Follow-up lifecycle and process counts",
+      "passed": true,
+      "evidence": {
+        "counts": {
+          "chat_http_requests": 81,
+          "answer_rows": 27,
+          "answer_status_delivered": 27,
+          "retained_history_expected": 14,
+          "retained_history_with_original_disclosure": 14,
+          "operations_started": 46,
+          "operations_finished": 46,
+          "mutation_remember": 6,
+          "mutation_correct": 1,
+          "mutation_forget": 1,
+          "purged_record_ids": 2,
+          "planned_checkpoints": 24,
+          "unique_observed_checkpoints": 24,
+          "scheduled_segments": 6,
+          "process_fragments": 6,
+          "extra_continuation_fragments": 0,
+          "independent_databases": 3,
+          "distinct_processes": 6
+        },
+        "workload": {
+          "planned_checkpoints": 24,
+          "scenario_ids": [
+            "cm04"
+          ],
+          "scenario_count": 1,
+          "independent_databases": 3,
+          "scheduled_restarts": 3,
+          "scheduled_segments": 6,
+          "disclosures": 3,
+          "history_pairs": 9,
+          "stage_history_groups": 24,
+          "post_restart_checkpoints": 9
+        }
+      }
+    },
+    {
+      "check": "Follow-up actual models and constraints",
+      "passed": true,
+      "evidence": {
+        "generators": [
+          {
+            "scope": "scored",
+            "requested_model": "qwen3:0.6b",
+            "actual_model": "qwen3:0.6b",
+            "count": 24
+          },
+          {
+            "scope": "setup",
+            "requested_model": "qwen3:0.6b",
+            "actual_model": "qwen3:0.6b",
+            "count": 3
+          }
+        ],
+        "constraints": {
+          "None": 12,
+          "verified_user_relationship": 8,
+          "verified_location": 4
+        },
+        "route": [
+          {
+            "memory_required": true,
+            "model_size": "small",
+            "count": 24
+          }
+        ]
+      }
+    },
+    {
+      "check": "First-run actual model and constraint counts",
+      "passed": true,
+      "evidence": {
+        "models": {
+          "qwen3:0.6b": 89,
+          "qwen3:1.7b": 7
+        },
+        "constraints": {
+          "None": 66,
+          "verified_location": 24,
+          "verified_user_relationship": 6
+        }
+      }
+    },
+    {
+      "check": "Follow-up retained history and probes",
+      "passed": true,
+      "evidence": {
+        "history": {
+          "all_scored_checkpoints": {
+            "checkpoints": 24,
+            "checkpoints_with_generation_call": 24,
+            "exact_original_statement_present": 14,
+            "exact_original_statement_forwarded": 0,
+            "literal_original_value_present": 14,
+            "literal_original_value_forwarded": 0,
+            "literal_value_present_without_exact_statement": 0,
+            "literal_value_forwarded_without_exact_statement": 0
+          },
+          "history_mode=retained": {
+            "checkpoints": 15,
+            "checkpoints_with_generation_call": 15,
+            "exact_original_statement_present": 14,
+            "exact_original_statement_forwarded": 0,
+            "literal_original_value_present": 14,
+            "literal_original_value_forwarded": 0,
+            "literal_value_present_without_exact_statement": 0,
+            "literal_value_forwarded_without_exact_statement": 0
+          },
+          "branch=correction": {
+            "checkpoints": 10,
+            "checkpoints_with_generation_call": 10,
+            "exact_original_statement_present": 5,
+            "exact_original_statement_forwarded": 0,
+            "literal_original_value_present": 5,
+            "literal_original_value_forwarded": 0,
+            "literal_value_present_without_exact_statement": 0,
+            "literal_value_forwarded_without_exact_statement": 0
+          },
+          "history_mode=fresh": {
+            "checkpoints": 9,
+            "checkpoints_with_generation_call": 9,
+            "exact_original_statement_present": 0,
+            "exact_original_statement_forwarded": 0,
+            "literal_original_value_present": 0,
+            "literal_original_value_forwarded": 0,
+            "literal_value_present_without_exact_statement": 0,
+            "literal_value_forwarded_without_exact_statement": 0
+          },
+          "after_restart": {
+            "checkpoints": 9,
+            "checkpoints_with_generation_call": 9,
+            "exact_original_statement_present": 5,
+            "exact_original_statement_forwarded": 0,
+            "literal_original_value_present": 5,
+            "literal_original_value_forwarded": 0,
+            "literal_value_present_without_exact_statement": 0,
+            "literal_value_forwarded_without_exact_statement": 0
+          },
+          "branch=deletion": {
+            "checkpoints": 7,
+            "checkpoints_with_generation_call": 7,
+            "exact_original_statement_present": 5,
+            "exact_original_statement_forwarded": 0,
+            "literal_original_value_present": 5,
+            "literal_original_value_forwarded": 0,
+            "literal_value_present_without_exact_statement": 0,
+            "literal_value_forwarded_without_exact_statement": 0
+          },
+          "branch=expiry": {
+            "checkpoints": 7,
+            "checkpoints_with_generation_call": 7,
+            "exact_original_statement_present": 4,
+            "exact_original_statement_forwarded": 0,
+            "literal_original_value_present": 4,
+            "literal_original_value_forwarded": 0,
+            "literal_value_present_without_exact_statement": 0,
+            "literal_value_forwarded_without_exact_statement": 0
+          }
+        },
+        "probes": [
+          {
+            "operation": "cache_probe",
+            "snapshot_current": true,
+            "count": 3
+          },
+          {
+            "operation": "snapshot_probe",
+            "snapshot_current": false,
+            "count": 7
+          },
+          {
+            "operation": "snapshot_probe",
+            "snapshot_current": true,
+            "count": 1
+          }
+        ],
+        "backend_cache": [
+          {
+            "purpose": "compute_selector",
+            "positive_cached_token_count": true,
+            "count": 27
+          },
+          {
+            "purpose": "generation",
+            "positive_cached_token_count": true,
+            "count": 27
+          },
+          {
+            "purpose": "memory_selector",
+            "positive_cached_token_count": false,
+            "count": 6
+          },
+          {
+            "purpose": "memory_selector",
+            "positive_cached_token_count": true,
+            "count": 21
+          }
+        ]
+      }
+    },
+    {
+      "check": "Follow-up sampled resource maxima",
+      "passed": true,
+      "evidence": {
+        "fragments": 6,
+        "telemetry_samples": 285,
+        "max_sampled_temperature_c": 56.906,
+        "max_sampled_ram_used_mb": 6116,
+        "ram_total_mb": [
+          7620
+        ],
+        "max_sampled_swap_used_mb": 748,
+        "runtime_guard_or_cleanup_observations": [],
+        "limits": "Sampled RAM use is not MemAvailable. Resource checks do not prove unobserved instantaneous values."
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914 blinded assistant agreement",
+      "passed": true,
+      "evidence": {
+        "groups": 47,
+        "resolved_before_diagnostics": true,
+        "human_validation": "pending"
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914/followup_v2 blinded assistant agreement",
+      "passed": true,
+      "evidence": {
+        "groups": 11,
+        "resolved_before_diagnostics": true,
+        "human_validation": "pending"
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914 analysis reproduction",
+      "passed": true,
+      "evidence": {
+        "checks": 34,
+        "receipt_sha256": "ec2ba0171aa93d9ed589b940a768841d59adbffda469299819f00cd20efd2c51"
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914/followup_v2 analysis reproduction",
+      "passed": true,
+      "evidence": {
+        "checks": 41,
+        "receipt_sha256": "b3d93136c25a3430267a42954ba3a7d4dc46a61196ce0085edd0882b98b5a076"
+      }
+    },
+    {
+      "check": "Separate offline test populations",
+      "passed": true,
+      "evidence": {
+        "first_full_total": 1093,
+        "first_full_skipped": 26,
+        "first_final_affected": 226,
+        "second_focused": 190,
+        "second_new": 11
+      }
+    },
+    {
+      "check": "Final current source exactly matches24-checkpoint freeze",
+      "passed": true,
+      "evidence": {
+        "config/default.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+        "scripts/complete_system_device_guard.py": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+        "scripts/post_memory_device_guard.py": "10463685afd110895b8aad15cde2f97cb414253ea40ed9e37097f9872b695ea0",
+        "scripts/run_arc_capability.py": "2d55342123aa853952a44b6496285b338b322ec65f32f83bbf106e5c606885a0",
+        "scripts/run_changing_memory.py": "4b8102177858572e1a5244d443c798d53bf48b34743d93858412c2418972d893",
+        "scripts/run_complete_system.py": "888daae7b84126744cfdd54aa56cf220f0482f81b7d0b167a2ad3107849f4dcb",
+        "scripts/run_independent_retrieval.py": "62feb1069c7cf1cddf79ece56a3044a4526352252f79391459e67631dda81c9a",
+        "scripts/run_pair_remediation_validation.py": "5e9ce447e2591c17b741781638140a1cec06d3b99603f29fd335639591cbbb13",
+        "scripts/run_post_memory_comparison.py": "fbdffadfbc16306b37e6034cc9bce9bca87eba701ad882928e9bd57c991428bb",
+        "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+        "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+        "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+        "src/oline_hri/cli.py": "90f6a1e6de50bfb47a7b37b47a6cca73fe381ee510b88c7002c08240117e450e",
+        "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+        "src/oline_hri/conversation.py": "878361152fcfed2dac6867badb3b935f0dea727f5ef2300cb704008a1444e2a7",
+        "src/oline_hri/default_config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+        "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+        "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+        "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+        "src/oline_hri/evaluation_experiment.py": "d5d286d1dff60b2a85acc9be524dd75f07f8dde363c002094b505c0734431739",
+        "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+        "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+        "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+        "src/oline_hri/evaluation_runner.py": "2a7d3ec2dcd4f10c75eac7ce4703f31a2fbdfe039270f50407e0b8a65ad0161f",
+        "src/oline_hri/evaluation_scoring.py": "f73f7f01b89a5a3d83ac2543fdb585a120c19bccf94062e8c38bf498a8ca6a09",
+        "src/oline_hri/evaluation_systems.py": "77437ef8a579d2de531a4770fc2bda2a2088d3310cad4d3db3be536e4203f66a",
+        "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+        "src/oline_hri/grounded_composition.py": "52e458baa35b59aa7bc00736daf7a2e8b98b38a0fae1ce77b872fcf40eff7507",
+        "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+        "src/oline_hri/memory.py": "4f2d261de00fd1df2018ebeba2778cedc236ef077697c8e1319302b61f9a78cb",
+        "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+        "src/oline_hri/memory_evidence.py": "c0b1b0744f022fd593501e7a7310040309b4d198ba56435643ba14f2645d22e7",
+        "src/oline_hri/ollama.py": "7a82fe0a71461c7bd02faee3fbd739b32e4d4388e5f42ec146ab685e208a43d1",
+        "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+        "src/oline_hri/relationships.py": "29f04fc94ab15a357ef90bdf0bd645958ecf2ecdadc3ad857363756528cae505",
+        "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+        "src/oline_hri/retrieval.py": "40364d1fb06aa68bae9bd3d31a583421f74883d9a0fe9815f72e9958eb8cea84",
+        "src/oline_hri/routing.py": "2604cc1a386a7f4e40f9528794423f46a4976501394c8e17d3479145e83f8bd1",
+        "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0",
+        "src/oline_hri/timing.py": "23c1c126c26d65e03833dc1c107ffa14670843fefd3755fd42ecd0969af1a445",
+        "tests/test_changing_memory.py": "2c1717af83ed553cdd2426acf15bdeaa57a340d36d9c808a1ece5a65c78fd730"
+      }
+    },
+    {
+      "check": "Second-only source delta remains two files",
+      "passed": true,
+      "evidence": {
+        "changed": [
+          "src/oline_hri/conversation.py",
+          "src/oline_hri/relationships.py"
+        ]
+      }
+    },
+    {
+      "check": "Combined current source delta remains six files",
+      "passed": true,
+      "evidence": {
+        "changed": [
+          "src/oline_hri/conversation.py",
+          "src/oline_hri/evaluation_scoring.py",
+          "src/oline_hri/grounded_composition.py",
+          "src/oline_hri/memory_evidence.py",
+          "src/oline_hri/relationships.py",
+          "src/oline_hri/routing.py"
+        ]
+      }
+    },
+    {
+      "check": "Eleven non-source conditions unchanged",
+      "passed": true,
+      "evidence": {
+        "config": true,
+        "models": true,
+        "embedding_assets": true,
+        "packages": true,
+        "python": true,
+        "generation_seed": true,
+        "device_policy": true,
+        "routing_policy": true,
+        "retain_large_model": true,
+        "ollama_version": true,
+        "logical_clock": true
+      }
+    },
+    {
+      "check": "results.md older body byte-identical",
+      "passed": true,
+      "evidence": {
+        "starting_heading": "## Changing memory: correction, deletion, expiry and restart",
+        "bytes": 73193,
+        "body_sha256": "81bf6e275539c313a4573509f4e3dc2e37128f0cfa9b8ea23b6dbe8b7546d2b9",
+        "frozen_preparation_sha256": "68ef5cdc26c38a44ef88273d6871a3557e5ec88594c5bfc5f285f3d32b4134f1"
+      }
+    },
+    {
+      "check": "developments.MD older body byte-identical",
+      "passed": true,
+      "evidence": {
+        "starting_heading": "## Changing-memory lifecycle evaluation",
+        "bytes": 74413,
+        "body_sha256": "ab5f6f9c4ea084e94d3a8e7585c3fe5b5f7bececdbb618211701170ac9fbc921",
+        "frozen_preparation_sha256": "91abb90453251175b9d7741d5ffceb0d84474936dc89626e84b2616ee1055890"
+      }
+    },
+    {
+      "check": "Baseline mistaken branch wording stays corrected",
+      "passed": true,
+      "evidence": {
+        "resolved_issue": "One baseline never-stored jasmine disclosure was in deletion and one was in expiry; earlier deletion-only wording is gone."
+      }
+    },
+    {
+      "check": "Final24 live scope explicit in both reports and new root docs",
+      "passed": true,
+      "evidence": {
+        "scope": "No pooled final-code96 claim; first failures and unresolved tea contradictions retained."
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914/README.md scoped relative links resolve",
+      "passed": true,
+      "evidence": {
+        "link_count": 37,
+        "missing": []
+      }
+    },
+    {
+      "check": "results.md scoped relative links resolve",
+      "passed": true,
+      "evidence": {
+        "link_count": 2,
+        "missing": []
+      }
+    },
+    {
+      "check": "developments.MD scoped relative links resolve",
+      "passed": true,
+      "evidence": {
+        "link_count": 2,
+        "missing": []
+      }
+    },
+    {
+      "check": "evaluation/changing_memory_repair_20260914/followup_v2/README.md scoped relative links resolve",
+      "passed": true,
+      "evidence": {
+        "link_count": 19,
+        "missing": []
+      }
+    },
+    {
+      "check": "All four reviewed documents stable during checks",
+      "passed": true,
+      "evidence": {
+        "evaluation/changing_memory_repair_20260914/README.md": "33f2b832584e24b98cea91aab339d4f6ad7e21d285ef737c19cec6c7cbf1a4ee",
+        "results.md": "0457da8732fcb0a83b53ca5acad783b63edd4912b8de6296c6d60dd74f5ee307",
+        "developments.MD": "df20c6e5df08ee1f106b43b1dbee61e5169747e2b10da5514d48bc7af7599587",
+        "evaluation/changing_memory_repair_20260914/followup_v2/README.md": "1f088e32d79b12f0d20640a192955d5856f54d0ca902dfa858e1928ed6641e42"
+      }
+    }
+  ],
+  "issues": [],
+  "previous_issue_resolved": {
+    "id": "baseline_unstored_branches",
+    "resolution": "Parent report correctly says deletion or expiry branches, preserving one observed example from each."
+  },
+  "manual_findings": [
+    "Both reports distinguish useful delivered recall from safe withholding and from literal non-disclosure. First96 remains92 useful with two contradictory tea answers and two withholds; final code has only24 live follow-up observations.",
+    "All four reviewed texts label assistant review and pending human validation, selected development scope, controlled logical expiry and real worker process restart; none claims held-out accuracy, power-loss recovery or spoken performance.",
+    "Follow-up README accurately describes six worker processes, three independent databases, unchanged branch schedules, original statement retained but excluded from generation, actual recorded constraints and backend cache counts. These are execution observations, not unconstrained model reasoning or cache-origin causal claims.",
+    "Latency reports preserve the unfavorable increase on the second run, distinct all-attempt/delivered-only membership, nearest-rank p95, omitted setup/mutation/cooling time and non-causal interpretation.",
+    "Implementation claims are limited to bounded parsing and witnessed current relationships; original failures and first-run source remain preserved."
+  ],
+  "inference_performed": false,
+  "production_changes": false,
+  "reviewed_docs_edited_by_reviewer": false,
+  "blinded_reviewer_contact": false
+}

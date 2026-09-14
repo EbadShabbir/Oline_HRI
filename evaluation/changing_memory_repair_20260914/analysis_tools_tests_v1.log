@@ -1,0 +1,10 @@
+test_counts_derive_full_baseline_and_targeted_subset (__main__.RepairAnalysisTests) ... ok
+test_diagnostic_vote_and_aggregation_functions_unchanged (__main__.RepairAnalysisTests) ... ok
+test_full_and_subset_offline_pipeline_preserves_reviews_counts_and_labels (__main__.RepairAnalysisTests) ... ok
+test_truncation_duplicate_and_ledger_drift_rejected (__main__.RepairAnalysisTests) ... ok
+test_wrong_audit_denominator_and_binding_rejected (__main__.RepairAnalysisTests) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.338s
+
+OK

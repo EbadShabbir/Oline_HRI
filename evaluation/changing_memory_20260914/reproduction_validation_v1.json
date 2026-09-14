@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-09-14T13:25:06.710880+00:00",
+  "command": [
+    "bash",
+    "evaluation/changing_memory_20260914/reproduce_analysis.sh",
+    "/tmp/clara-memory-analysis-reproduction-20260914"
+  ],
+  "exit_code": 0,
+  "no_inference": true,
+  "no_rescoring": true,
+  "checks": {
+    "analysis_v2/metrics.json": true,
+    "analysis_v2/reviewed_answers.jsonl": true,
+    "analysis_v2/history_pairs.jsonl": true,
+    "tables/generation_call_aggregates.csv": true,
+    "tables/disclosure_scopes.csv": true,
+    "tables/restart_history.csv": true,
+    "tables/history_pair_aggregates.csv": true,
+    "tables/expected_kind_restart_history.csv": true,
+    "tables/collection_audit.csv": true,
+    "tables/checkpoint_model_selections.csv": true,
+    "tables/stage_history.csv": true,
+    "tables/generation_call_details.csv": true,
+    "tables/branch_restart_history.csv": true,
+    "tables/requested_routes.csv": true,
+    "tables/overall.csv": true,
+    "tables/scenarios.csv": true,
+    "tables/expected_kind_history.csv": true,
+    "tables/history_exposure_audit.csv": true,
+    "tables/history_pair_details.csv": true,
+    "figure_sourcedata": true
+  },
+  "script_sha256": "7176b76bd421b64c142973877c48f26b0b658e2ea6a9ab756519a1de063bcd04",
+  "log_sha256": "82e73470a65cfefe441f7883b7aad89e15dc6a6fc2efa85ac93ebc8644ffa55e",
+  "note": "Exact reproduction of original frozen analysis outputs,16 CSV tables and288 figure-data rows. Generated artifacts in /tmp are disposable; original sealed outputs remain preserved."
+}

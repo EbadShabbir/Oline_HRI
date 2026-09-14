@@ -1,0 +1,45 @@
+{
+  "approved": true,
+  "checks": 181,
+  "created_at": "2026-09-13T19:05:57.658108+00:00",
+  "documentation_clarification": "The final report faithfully reproduces request-row KeyboardInterrupt labels and explains the corresponding session SafetyGateError available-memory-floor cause. It distinguishes rubric-prohibited content from actual authorization violations.",
+  "errors": [],
+  "hashes": {
+    "evaluation/independent_retrieval_20260913/analysis_reviewed_v1/analysis.json": "bb7f508f358a5bce14aa0bfd1e41b45799537a585fd484756334ff22d1e39b81",
+    "evaluation/independent_retrieval_20260913/analysis_reviewed_v1/seal.json": "47ff6211d065d97505e8869c7a980e04b94843d8d481aa03463eccff7f2fad91",
+    "evaluation/independent_retrieval_20260913/numeric_audit_v1/numeric_audit.json": "a0f8141a4ab7f6b6533eca9303fa375debc7d9a00c011666342982948986e217",
+    "evaluation/independent_retrieval_20260913/numeric_audit_v1/seal.json": "d43729c7724de91e2697668ac036c972df26cf9e15155161f085bb98b91c833d",
+    "evaluation/independent_retrieval_20260913/report_reviewed_v1/seal.json": "f86b307948a9b36ba989374a94a2f1041c079e3f6331fd8feb625b0596eb3e18",
+    "evaluation/independent_retrieval_20260913/report_reviewed_v2/seal.json": "9e0d9464c218c62bc81717df58f3a07312e652efb216f5540b1bbc6e46032a4a",
+    "evaluation/independent_retrieval_20260913/report_reviewed_v3/report.md": "9d3d875cf8e56e533a7fc12f36fc6914cc636481fce5aa4121bf481780e2f0b0",
+    "evaluation/independent_retrieval_20260913/report_reviewed_v3/report_source.py": "88a873737de2e194dab9357d5182a0669ec5de4010bb35e0f07098ca4a73465a",
+    "evaluation/independent_retrieval_20260913/report_reviewed_v3/review_provenance.json": "87ff8c0af14176d7faf1f2a9a13d1e2dd7c658e412ea19a9708e60cdb13031dd",
+    "evaluation/independent_retrieval_20260913/report_reviewed_v3/seal.json": "ecf337777add258006b0160a5cbe36445f0f883bc1745bea166bcfd067250d1a",
+    "evaluation/independent_retrieval_20260913/report_reviewed_v3/tables.md": "b43b4344fc300a72443f08fa380ed7f4b0bc8b713e37c4f474b2c6ba178d4cf1",
+    "evaluation/independent_retrieval_20260913/reviews/final_report_numeric_checks_v1.py": "de23b232b29b4e2b679bebf30f3f5be7554b4980c95dfa16a2a79d75e1ee9c20"
+  },
+  "human_validation": "pending",
+  "interpretation_findings": [
+    "Small generator preserves observed known-authorized success totals but adds mean request time; no equivalence claim is made.",
+    "Large generator saves observed mean time with one fewer known success; broader task success and category results remain separately reported.",
+    "Large SELECTIVE p95 is worse (30.457 versus20.657 seconds); category tables retain paraphrased recall6/24 and unknown/conflict SELECTIVE9/24 small and6/24 large versus OFF21/24 and23/24.",
+    "All attempts include eight interruptions; physical-fragment cold starts and rejected-admission costs are explicitly distinguished.",
+    "Repeated attempts are dependent; paired category contrasts use frozen whole-scenario bootstrap intervals without noninferiority/equivalence inference.",
+    "Evidence-dependent helper rewrites and possible timing/semantic effects are disclosed; unsupported truth judgments remain distinct from runtime grounding."
+  ],
+  "renderer_change": "From retained failed v1 to successful v2, exactly one line replaces an unbound local audit with summary[\"audit\"] in the approved helper-disclosure paragraph. From v2 to final v3, one contiguous insertion counts sealed session guard causes and clarifies the forbidden_disclosure flag. No other code changed; no metric, scoring, grouping, or statistical logic changed.",
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Final rendered metric tables and interpretation against independently audited analysis; no new semantic grading.",
+  "table_rows_verified": {
+    "category_summary": 12,
+    "overall_paired": 6,
+    "overall_retrieval": 6,
+    "overall_summary": 6,
+    "qwen3:0.6b: answer quality and complete request time": 18,
+    "qwen3:0.6b: paired differences": 21,
+    "qwen3:0.6b: retrieval, relevance and disclosure by category": 18,
+    "qwen3:1.7b: answer quality and complete request time": 18,
+    "qwen3:1.7b: paired differences": 21,
+    "qwen3:1.7b: retrieval, relevance and disclosure by category": 18
+  }
+}

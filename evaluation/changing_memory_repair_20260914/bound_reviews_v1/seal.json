@@ -1,0 +1,28 @@
+{
+  "sha256": {
+    "bindings.json": "58c87f78d0b4a539ef237a9de9e1bc740190862c0aeba38ddaa2f93cdbd1f241",
+    "originals/batch_01/batch/private/mapping.json": "44966f481f3ea29de3e38d7ab055c8d6115c09bcef65ce454ecf4733efd55ebf",
+    "originals/batch_01/batch/private/process_audit.json": "da39d3bb45e249750fcf87aa465f8734bb27cfb8d58c1b1594de0be14b34bd56",
+    "originals/batch_01/batch/private/provenance.json": "6dbb8bf416e3642dd0aafd3ed23472abc14125f09d7a3452e1597e48f1485425",
+    "originals/batch_01/batch/public/instructions.md": "074349fe9cf7e891bb030f9c45b732056b4f8dc9c5ac4ebc7e10348f7b363f89",
+    "originals/batch_01/batch/public/packets.jsonl": "60e7d27daa7233342c14feadf9b7fe54e383df74ae61ee937d85d3536b869b74",
+    "originals/batch_01/batch/public/review_schema.json": "3fa8901de3d5d179f7ae806496922a3ef280c17e259d24bd878befde13acfc07",
+    "originals/batch_01/batch/seal.json": "82ea5f54e396a8fe66d2bc9a2e099003b6a40183de105c92965c342289ef74f1",
+    "originals/batch_01/review_a.json": "96adb111547df1e2e426425002d6a91377c1268d2d2bc2394d1d8476d78824ad",
+    "originals/batch_01/review_b.json": "c27088a0f85fb9073aac117693b92c0a1264c2ce631d0422fce9eb359bb0386a",
+    "originals/batch_02/batch/private/mapping.json": "a37fdf8e5527ba092165fde7173503d7e6122d5ddc657d824fd42cf7abb0b11c",
+    "originals/batch_02/batch/private/process_audit.json": "34cd8200ebea82b230d8736b1808faddf5f987ab549c2299186a27bad7fc9324",
+    "originals/batch_02/batch/private/provenance.json": "75a4efaa7b2f113fbe3bd5a63d26a2379cf8bd4d2228d98ddf0979b23a1903cc",
+    "originals/batch_02/batch/public/instructions.md": "074349fe9cf7e891bb030f9c45b732056b4f8dc9c5ac4ebc7e10348f7b363f89",
+    "originals/batch_02/batch/public/packets.jsonl": "d8efa60c57ef9ff32d2abc7f60010370062e3c8e840e9ead58508278b33ddd7d",
+    "originals/batch_02/batch/public/review_schema.json": "f342da4d1645439dde486c7a722e89b43cee51e8f64b960ab8e01ad0f73a5cff",
+    "originals/batch_02/batch/seal.json": "dd85a8fae97c3869b34c786f4440a19aae1f4d9462fe42be1b8d8ada19cf1323",
+    "originals/batch_02/review_a.json": "51d49a7fef0006e699bcc57d996ceb2ccc6e5a301d59193e8c03b376a8ef912b",
+    "originals/batch_02/review_b.json": "bf32e8f22476518f008fd8b8029fe60f1ad4ab4adbc6770312cdd52d4a58ce71",
+    "provenance.json": "45f5e5fd8b1402934e31a9a9c50a4ffb36f5b30a5c258ea4044fdb374148976f",
+    "review_a.json": "fda44cdbb5e057024996f719705cc1ab00641dbcbe0a7f2980f783faf77543b5",
+    "review_b.json": "44302ccbe3cef789c92d21ccfa7043842d69238a03fa1eac23a2ad54d3cfc53d"
+  },
+  "created_at": "2026-09-14T14:16:33.749708+00:00",
+  "immutability": "exclusive creation, SHA256 manifest, read-only permissions; not privileged WORM"
+}

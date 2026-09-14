@@ -1,0 +1,44 @@
+{
+  "approved": true,
+  "created_at": "2026-09-13T16:47:03.707883+00:00",
+  "findings_resolved": [
+    "Six overall and 36 category groups, answerability labels, 42 paired contrasts, and all consumed metrics match the current analyzer schema.",
+    "Signed left-minus-right intervals and percentage-point scaling are correct; repeated requests are not treated as independent inferential units.",
+    "Known-fact abstention remains missed personalization, with clean cautious misses and correct answers without supplied evidence reported separately.",
+    "All-attempt stage means, resolved-authorized selection denominators, occurrence-weighted evidence coverage, and per-attempt unique inspection counts are explicitly distinguished.",
+    "Paired unnecessary-retrieval differences average all paired tasks and are distinguished from eligible no-memory-task rates.",
+    "Supervisor slot cost scope includes rejected launches and startup/exit/sealing residual, without double counting worker time.",
+    "Energy wording now matches available powered sample-pair integration and does not imply complete interval coverage.",
+    "Null, equal-total, unfavorable quality, and unfavorable time branches preserve observed findings; no equivalence or population claim follows."
+  ],
+  "human_validation": "pending",
+  "primary_outputs_seen": false,
+  "remaining_limits": [
+    "Final reported arithmetic still requires independent audit of sealed collection, mappings, and resolved judgments.",
+    "The renderer consumes resolved assistant judgments; independent review and adjudication provenance must be supplied separately for the final user report.",
+    "Blinding cannot hide stylistic cues in answer content. Human validation remains pending.",
+    "Exact raw answers remain in sealed JSON/CSV traces; Markdown is a readable presentation.",
+    "Only eight fictional scenario clusters support descriptive intervals, and equal observed totals do not establish noninferiority."
+  ],
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Source-only independent report renderer audit and small synthetic checks; no collected outcomes or final numeric claims validated.",
+  "sha256": {
+    "evaluation/independent_retrieval_20260913/draft/references.json": "b04b59c81fbf99736950385bbd2e671a1364ce9bee90881d46c05966a3e3513e",
+    "evaluation/independent_retrieval_20260913/reviews/report_audit_preliminary.md": "8d7abdf3435ec159e01623a0bf87dca24857efe247bf748c024b0ddf581ac1bd",
+    "evaluation/independent_retrieval_20260913/reviews/report_renderer_synthetic_audit.py": "b71c477bd165d0974fd77e2811297bae3fa5015dff7db1d81bf02ccbb82bb996",
+    "evaluation/independent_retrieval_20260913/reviews/report_renderer_validation_v1.txt": "ae3e7e2e5847abcdc4bdc7cf6bb4790d2710c0fb02478632f8c52d2f9f2b94c6",
+    "scripts/analyze_independent_retrieval.py": "2d40084c72623568d9ce10961dfc47f5c10288fe3293570f082b9b3a2e1bbae3",
+    "scripts/report_independent_retrieval.py": "6aea1aa9f5834edbbc75036a571402e4e795e1c2fbfee2b5537e25f20864aa71"
+  },
+  "source_authored_by_reviewer": false,
+  "validation": {
+    "command": "python3 evaluation/independent_retrieval_20260913/reviews/report_renderer_synthetic_audit.py",
+    "errors": 0,
+    "failures": 0,
+    "live_inference": false,
+    "passed": 6,
+    "seconds": 0.004,
+    "stdlib_only": true,
+    "tests": 6
+  }
+}

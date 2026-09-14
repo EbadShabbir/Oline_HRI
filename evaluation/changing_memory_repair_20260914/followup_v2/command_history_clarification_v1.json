@@ -1,0 +1,9 @@
+{
+  "created_at": "2026-09-14T14:35:43.042763+00:00",
+  "author": "root assistant",
+  "file": "completed_analysis_commands_v1.sh",
+  "before_sha256": "241ddd6ef0065b4a82060aefd338d702033d673b2cb7303a7fe2bf4670a08729",
+  "after_sha256": "ba3b5b2e30c0ac00d3bc32e20b3b1789954a8f62526947d1eddaf2ff6b3ae54f",
+  "change": "Header only: distinguish added reproduction PYTHONPATH prefixes from observed original shellenvironment. Recorded commandargument arrays unchanged.",
+  "no_inference": true
+}

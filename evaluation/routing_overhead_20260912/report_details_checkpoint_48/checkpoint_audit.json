@@ -1,0 +1,109 @@
+{
+  "scope": "exact first repetition checkpoint; later repetitions excluded; provisional descriptive values, not final findings",
+  "sessions": 48,
+  "turns": 192,
+  "request_and_sequence_accounting_exact": true,
+  "identity_snapshots_verified": 669,
+  "prepared_memory_identical": true,
+  "replay_turns_exactly_matched": 48,
+  "replay_failed_deliveries_still_payload_checked": 3,
+  "failed_turns_by_arm": {
+    "adaptive": 2,
+    "large": 2,
+    "replay": 3,
+    "small": 3
+  },
+  "all_failures_retained": true,
+  "all_cleanup_verified_empty": true,
+  "guard_violations": 0,
+  "max_temperature_c": 56.937,
+  "max_logical_swap_mib": 2236,
+  "frozen_v2_source_unchanged": true,
+  "DDEE_adaptive_actual_LLLS_count": 3,
+  "DDEE_return_components": [
+    {
+      "sequence_id": "ro_ddee_1",
+      "actual_sequence": "LLLS",
+      "first_easy_held_large": true,
+      "return_turn_wall_seconds": 13.569767068,
+      "unload_ack_wall_seconds": 0.017616213,
+      "verified_eviction_wall_seconds": 0.210462795,
+      "small_backend_chat_wall_seconds": 10.828420684,
+      "nested_small_backend_load_seconds": 9.597621274,
+      "small_output_tokens": 25,
+      "next_turn_observed": false
+    },
+    {
+      "sequence_id": "ro_ddee_2",
+      "actual_sequence": "LLLS",
+      "first_easy_held_large": true,
+      "return_turn_wall_seconds": 13.171580967,
+      "unload_ack_wall_seconds": 0.014527646,
+      "verified_eviction_wall_seconds": 0.186492682,
+      "small_backend_chat_wall_seconds": 10.831989784,
+      "nested_small_backend_load_seconds": 9.729111024,
+      "small_output_tokens": 19,
+      "next_turn_observed": false
+    },
+    {
+      "sequence_id": "ro_ddee_3",
+      "actual_sequence": "LLLS",
+      "first_easy_held_large": true,
+      "return_turn_wall_seconds": 12.14398132,
+      "unload_ack_wall_seconds": 0.012515795,
+      "verified_eviction_wall_seconds": 0.209659385,
+      "small_backend_chat_wall_seconds": 10.032663545,
+      "nested_small_backend_load_seconds": 8.886437866,
+      "small_output_tokens": 25,
+      "next_turn_observed": false
+    }
+  ],
+  "provisional_first_repetition_pattern_means": [
+    {
+      "pattern": "EEEE",
+      "sequence_clusters": 3,
+      "small_mean_sequence_seconds": 18.931239544,
+      "large_mean_sequence_seconds": 99.872494189,
+      "adaptive_mean_sequence_seconds": 20.831718077666665,
+      "replay_mean_sequence_seconds": 16.269044508666667,
+      "adaptive_minus_small_seconds": 1.9004785336666643,
+      "adaptive_minus_large_seconds": -79.04077611133333,
+      "adaptive_minus_replay_seconds": 4.5626735689999975
+    },
+    {
+      "pattern": "DDDD",
+      "sequence_clusters": 3,
+      "small_mean_sequence_seconds": 21.228735425333333,
+      "large_mean_sequence_seconds": 118.82230816333333,
+      "adaptive_mean_sequence_seconds": 115.223209397,
+      "replay_mean_sequence_seconds": 108.072685308,
+      "adaptive_minus_small_seconds": 93.99447397166668,
+      "adaptive_minus_large_seconds": -3.599098766333327,
+      "adaptive_minus_replay_seconds": 7.150524089000001
+    },
+    {
+      "pattern": "EDED",
+      "sequence_clusters": 3,
+      "small_mean_sequence_seconds": 19.931610321,
+      "large_mean_sequence_seconds": 81.747554482,
+      "adaptive_mean_sequence_seconds": 65.95013649233333,
+      "replay_mean_sequence_seconds": 64.17626538900001,
+      "adaptive_minus_small_seconds": 46.01852617133333,
+      "adaptive_minus_large_seconds": -15.79741798966667,
+      "adaptive_minus_replay_seconds": 1.7738711033333203
+    },
+    {
+      "pattern": "DDEE",
+      "sequence_clusters": 3,
+      "small_mean_sequence_seconds": 20.233375789,
+      "large_mean_sequence_seconds": 75.18119152133333,
+      "adaptive_mean_sequence_seconds": 81.22060302333334,
+      "replay_mean_sequence_seconds": 53.91811384133334,
+      "adaptive_minus_small_seconds": 60.98722723433334,
+      "adaptive_minus_large_seconds": 6.039411502000007,
+      "adaptive_minus_replay_seconds": 27.302489182000002
+    }
+  ],
+  "blocking_instrumentation_errors": [],
+  "inference_or_plots_performed": false
+}

@@ -1,0 +1,272 @@
+[
+  {
+    "blind_id": "b_770326d6402ec6137178b89e",
+    "checkpoint_ids": [
+      "cm12_correction_restart_retained"
+    ],
+    "content_sha256": "a3d5952719dbc2ab099918a58fec51a768dca8ff06eb112663a9db674ee1c3ab"
+  },
+  {
+    "blind_id": "b_e0ed1e7b89b02a06e87508a8",
+    "checkpoint_ids": [
+      "cm11_expiry_at_fresh"
+    ],
+    "content_sha256": "b7d1523e94c08f07a22a615e0538c191206b209e33a744f7800770a6c10f7550"
+  },
+  {
+    "blind_id": "b_a95f3de842ea3cf132f5d9f7",
+    "checkpoint_ids": [
+      "cm12_expiry_before_retained"
+    ],
+    "content_sha256": "c3c6d7845599d601cd8a8ac99fc1b58ddaa03569ac26f10e06efb8fc8e7e2bac"
+  },
+  {
+    "blind_id": "b_d0967d8c7cfa863b1ae7245c",
+    "checkpoint_ids": [
+      "cm12_deletion_deleted_historical_retained"
+    ],
+    "content_sha256": "0a0ddb796527ea7e076b6283cefde0470fbcd9d3c8e857eb4df79fc38a4536d8"
+  },
+  {
+    "blind_id": "b_50697ac0f8cfd4c769c98e69",
+    "checkpoint_ids": [
+      "cm12_expiry_at_fresh"
+    ],
+    "content_sha256": "a70bb3b54ed1f03d9d9a98dccbad6dd737c6e4fcd0bc9a04e6080de928759a0a"
+  },
+  {
+    "blind_id": "b_b459ae1e2cbc272873a6774c",
+    "checkpoint_ids": [
+      "cm12_correction_historical_retained",
+      "cm12_correction_historical_fresh",
+      "cm12_correction_restart_historical_retained",
+      "cm12_correction_restart_historical_fresh"
+    ],
+    "content_sha256": "2e8371e7d65cc87ce14f4d7b9a980407d52934c298c84555f3eb697489821963"
+  },
+  {
+    "blind_id": "b_5f38c913ef07266c8fb0e464",
+    "checkpoint_ids": [
+      "cm11_correction_prestore"
+    ],
+    "content_sha256": "5ad40b3aaef82ab53bbb6c015948a635bf8d5949e66db51c9fb475e82a504c56"
+  },
+  {
+    "blind_id": "b_39be459bd5cc9390dce993cf",
+    "checkpoint_ids": [
+      "cm11_correction_corrected_fresh"
+    ],
+    "content_sha256": "0be5bd3dec0c92f6cada22a0415bd80c95ac27883b67a2cc4543a53e60746660"
+  },
+  {
+    "blind_id": "b_5884a10e0c5a8a0b8e3a86d7",
+    "checkpoint_ids": [
+      "cm12_deletion_deleted_fresh"
+    ],
+    "content_sha256": "56bd043e961207c6c2e2c0af0d362e4713565f019a26dcc5f68dd6cb47ad7bb8"
+  },
+  {
+    "blind_id": "b_c5fc4e6cf6c492ee3cdd45dc",
+    "checkpoint_ids": [
+      "cm12_deletion_deleted_retained"
+    ],
+    "content_sha256": "541a84b5c7b7fac287c8ea52c17ccd8b7969c47c3ecf38f5ede89d3507f45e81"
+  },
+  {
+    "blind_id": "b_df73064d018c74b8343d19fe",
+    "checkpoint_ids": [
+      "cm12_deletion_restart_retained"
+    ],
+    "content_sha256": "7671d9652a0834510ec5e54a60eeee85bdd4f125a6cfe9ec9c6cb9a0139f475d"
+  },
+  {
+    "blind_id": "b_907812e71809b1ccbbf39b73",
+    "checkpoint_ids": [
+      "cm11_expiry_at_retained",
+      "cm11_expiry_after_retained"
+    ],
+    "content_sha256": "0b9a18549d7b29a393061d1b1d2d3c3c0cd9bf17defe744f70fc7715f7f65c7d"
+  },
+  {
+    "blind_id": "b_f1bb4724bfbc05fcbef173b5",
+    "checkpoint_ids": [
+      "cm12_deletion_restart_fresh"
+    ],
+    "content_sha256": "403b497224cf852b40323ebe0cb35c82b1a1c907cd51c135b84ff234939875e8"
+  },
+  {
+    "blind_id": "b_c9bda0bd157ed1c0dda7fce5",
+    "checkpoint_ids": [
+      "cm12_expiry_at_retained",
+      "cm12_expiry_after_retained"
+    ],
+    "content_sha256": "60267570d95ba42dd3d725e534ef511f381977198e912a46705b1786bd8c44dd"
+  },
+  {
+    "blind_id": "b_60750972ce8153f1cd2f6b32",
+    "checkpoint_ids": [
+      "cm12_correction_corrected_fresh"
+    ],
+    "content_sha256": "95fc30350a725c901b43ec795a5d329de015d32c5a34fb78859554f264a0d0bb"
+  },
+  {
+    "blind_id": "b_4c0041f98066073711930bd0",
+    "checkpoint_ids": [
+      "cm12_correction_prestore"
+    ],
+    "content_sha256": "9424ffa7aad6d69c9cdf2d8173d316919f40b74dca8e30704d3157f31c47720f"
+  },
+  {
+    "blind_id": "b_f33f159c2a6a9d8b481fa6d2",
+    "checkpoint_ids": [
+      "cm11_deletion_deleted_fresh"
+    ],
+    "content_sha256": "de6b969d95988232a73fa2d58b32c268f5ec4ea128563e0ab8267ac57f16293f"
+  },
+  {
+    "blind_id": "b_b34b582c9cef046c27fa3c1d",
+    "checkpoint_ids": [
+      "cm11_expiry_before_fresh"
+    ],
+    "content_sha256": "775c03e31fd967c044ba747c69bf90c553abb86a8c83fc0c7f34bdbab1df9349"
+  },
+  {
+    "blind_id": "b_76f1f4e42c96358fa36b1517",
+    "checkpoint_ids": [
+      "cm11_deletion_deleted_retained"
+    ],
+    "content_sha256": "3a2e9482e71e37049efbdb9c5f6487f5cf123249cd2286c15b3f91d3fb648a0b"
+  },
+  {
+    "blind_id": "b_a097f38a28a19e69694804cc",
+    "checkpoint_ids": [
+      "cm12_expiry_restart_fresh"
+    ],
+    "content_sha256": "c11cf5cce486b804e998d2572f6fa6691d5a40f2cf692b4df598b5ce74c74456"
+  },
+  {
+    "blind_id": "b_a3f385bbe466456a97bd1606",
+    "checkpoint_ids": [
+      "cm11_deletion_restart_fresh"
+    ],
+    "content_sha256": "125181f5e35d62ecceab44404243a920378dcac58de0180a1a079de315eca89f"
+  },
+  {
+    "blind_id": "b_95caabb429ccb91d061c8577",
+    "checkpoint_ids": [
+      "cm11_expiry_restart_fresh"
+    ],
+    "content_sha256": "bc3b9daeac62e863c543109c1f0ea5686ba9de7e8960706879a7c5bcfa439548"
+  },
+  {
+    "blind_id": "b_57db2b46795e609cacf502a4",
+    "checkpoint_ids": [
+      "cm11_correction_corrected_retained"
+    ],
+    "content_sha256": "9ca3e62f6bd3a06c2876b679e6f48524735a804f1be08f9d28be70e7345d2849"
+  },
+  {
+    "blind_id": "b_0330f17f16343dfe09d524a3",
+    "checkpoint_ids": [
+      "cm11_deletion_restart_retained"
+    ],
+    "content_sha256": "fa27c8be94f92c4b683deefd0c1fc6eeb5d4749de26fbc0984ecd1c2ad58ed0a"
+  },
+  {
+    "blind_id": "b_e17369f8d5c1d7e56902868e",
+    "checkpoint_ids": [
+      "cm12_expiry_restart_retained"
+    ],
+    "content_sha256": "1c2665b2b98c6d4a987fd0711d374154078ef65c492d690d6010886d645966a9"
+  },
+  {
+    "blind_id": "b_3822251e5d058764931d83c1",
+    "checkpoint_ids": [
+      "cm12_expiry_before_fresh"
+    ],
+    "content_sha256": "d249acd19c4c4b5f722e418ca089ce0f864fd1cb02f7c2bf60e3d0ba2b66cef0"
+  },
+  {
+    "blind_id": "b_e3016834b72f3031c5465cdd",
+    "checkpoint_ids": [
+      "cm12_correction_recalled",
+      "cm12_deletion_recalled"
+    ],
+    "content_sha256": "8b1669616e8ea5e10c5646d8b7421dc004565acb1c7b6732c350a5a7e67f0735"
+  },
+  {
+    "blind_id": "b_1f628e8d0f48ef3365d60b1b",
+    "checkpoint_ids": [
+      "cm11_expiry_before_retained"
+    ],
+    "content_sha256": "c239f55cf6712847cba7ce7b98aa560166bb8c48f81a9d1d106dc469dbcb81a1"
+  },
+  {
+    "blind_id": "b_91ec355a5f571f1b940b63c4",
+    "checkpoint_ids": [
+      "cm11_expiry_restart_retained"
+    ],
+    "content_sha256": "07a08d542ab5e73eb1f676c4856854e7b9a149db34607e29c7fea12bdd1cafa7"
+  },
+  {
+    "blind_id": "b_7f4fa8feee71020536b7ba68",
+    "checkpoint_ids": [
+      "cm11_correction_restart_fresh"
+    ],
+    "content_sha256": "223f3668cc8826254948386f3d086de9e4fbd75215fce4c193b1da8b7ebc848c"
+  },
+  {
+    "blind_id": "b_0e3c7d1eb99393bbb3a530de",
+    "checkpoint_ids": [
+      "cm11_correction_restart_retained"
+    ],
+    "content_sha256": "a6cd6715c049fea71228baa2dcba7c0135211fc167dbc67a8fbb5a21d81f5c1c"
+  },
+  {
+    "blind_id": "b_185b8f26bdb125a49b648ec4",
+    "checkpoint_ids": [
+      "cm11_correction_historical_retained",
+      "cm11_correction_historical_fresh",
+      "cm11_correction_restart_historical_retained",
+      "cm11_correction_restart_historical_fresh"
+    ],
+    "content_sha256": "cf5693ed486886d08ba32931330e376cf524c4918222db8c2f8154a547650966"
+  },
+  {
+    "blind_id": "b_23f4797f023ec071c5d66f9c",
+    "checkpoint_ids": [
+      "cm12_deletion_restart_historical_retained"
+    ],
+    "content_sha256": "2df8d104efa70a7ccfb401df607bced5160389d8d9dfe5d4752325b3c72e4076"
+  },
+  {
+    "blind_id": "b_9a89eb7ded84e6590ba836b7",
+    "checkpoint_ids": [
+      "cm11_correction_recalled",
+      "cm11_deletion_recalled"
+    ],
+    "content_sha256": "30c57070757fa1fb0e5501e21951992db6420a738161805b6bbf927f06fd6d2d"
+  },
+  {
+    "blind_id": "b_7e4fcfd91f9b944451c73fed",
+    "checkpoint_ids": [
+      "cm11_deletion_deleted_historical_retained",
+      "cm11_deletion_restart_historical_retained"
+    ],
+    "content_sha256": "8924ad564323225a204c5c5c1c66c5e38f8bf9ca0f822058b7b49f6e054a506d"
+  },
+  {
+    "blind_id": "b_0ddf07d5424320aa8f93bfd3",
+    "checkpoint_ids": [
+      "cm12_correction_corrected_retained"
+    ],
+    "content_sha256": "f0ff511a640f5f23eb8c235a9d3e5873ccb9175e86fcf9fb3d323a03e0fcf86a"
+  },
+  {
+    "blind_id": "b_01a1300c8a0f7f3ea52c78e2",
+    "checkpoint_ids": [
+      "cm12_correction_restart_fresh"
+    ],
+    "content_sha256": "ef681a24fbc9f6e2737d0d0f667ce532be586f59e5a075d882c1c06c663fa213"
+  }
+]

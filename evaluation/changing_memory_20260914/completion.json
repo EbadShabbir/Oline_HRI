@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "completed_at": "2026-09-14T13:30:17.577180+00:00",
+  "experiment": "CLARA changing-memory, 2026-09-14",
+  "primary_collection": "run_v2",
+  "primary_runtime_freeze": "frozen_v1",
+  "scenario_count": 12,
+  "independent_branch_databases": 36,
+  "actual_worker_process_restarts": 36,
+  "successful_executing_worker_processes": 72,
+  "planned_checkpoints": 288,
+  "completed_live_checkpoints": 288,
+  "delivered_answers": 283,
+  "withheld_answers": 5,
+  "missing_checkpoints": 0,
+  "useful_full_rubric_answers": 118,
+  "review": {
+    "type": "two independent blinded assistant reviews",
+    "groups": 214,
+    "checkpoints_covered": 288,
+    "disagreements": 0,
+    "third_party_adjudication_required": false,
+    "judgments_frozen_before_diagnostics": true,
+    "human_validation": "pending"
+  },
+  "preserved_failures": {
+    "zero_operation_startup_temperature_rejections": 13,
+    "repeated_attempted_checkpoints": 0,
+    "withheld_answer_checkpoints": 5,
+    "pre_inference_invocation_rejection": "invocation_rejection_v1",
+    "offline_development_and_read_only_verification_failures": "Preserved with their successful later validation receipts; these are not live checkpoints."
+  },
+  "verification": {
+    "collection_audit_checks": 31342,
+    "collection_audit_check_kinds": 82,
+    "collection_audit_violations": 0,
+    "frozen_runtime_files_still_matching": 41,
+    "analysis_reproduction_byte_equal_checks": 20,
+    "report_factcheck_checks": 23,
+    "documentation_factcheck_checks": 15,
+    "all_checks_passed": true
+  },
+  "retained_history_revoked_original_disclosures": {
+    "correction_current_value": {
+      "disclosures": 21,
+      "queries": 24
+    },
+    "deletion": {
+      "disclosures": 39,
+      "queries": 48
+    },
+    "expiry": {
+      "disclosures": 27,
+      "queries": 36
+    }
+  },
+  "runtime_repaired_or_primary_observations_rerun": false,
+  "analysis_amendment": "v2 only recovers supplied-evidence envelopes for diagnostic attribution; frozen votes and answer metrics match v1. Both analyses preserved.",
+  "expiry": "Controlled logical time shared across storage, retrieval and validation; strict time < deadline; no OS clock change or manually edited DB expiry rows.",
+  "restart": "Real conversation worker subprocess restart opening the same persistent database. Retained history and captured snapshots explicitly restored by the evaluation; Ollama server and OS remain running.",
+  "limitations": [
+    "Assistant review; independent human validation pending.",
+    "Does not establish power-loss recovery.",
+    "Does not establish spoken performance.",
+    "Existing snapshot and cache paths exercised; no persistent production vector/retrieval cache exists in this runtime.",
+    "SHA256 manifests and read-only permissions are tamper-evident archival controls, not privileged WORM storage."
+  ],
+  "updated_repository_document_sha256": {
+    "results.md": "68ef5cdc26c38a44ef88273d6871a3557e5ec88594c5bfc5f285f3d32b4134f1",
+    "developments.MD": "91abb90453251175b9d7741d5ffceb0d84474936dc89626e84b2616ee1055890"
+  },
+  "key_artifact_sha256": {
+    "README.md": "2b6c865128c3a3f17b56c6f7d1f1dbbb0fe67c6b9ddf94bed9ec57589cb71890",
+    "frozen_v1/seal.json": "390e3d2079f8be8edeed7130cb11600e1aa2c58269947b81ffbc21dfc6e503b3",
+    "run_v2/seal.json": "80dc632bfdb44fe30f5a6fd81693dfa4bc71a2e8269416e673974b3d47dd339b",
+    "collection_completion_v1.json": "43fd87468a1633adb0523f6b7f276c36c020a693614475ab14eb912e334341a9",
+    "collection_audit_v1.json": "e754a02b39adb3f3b2a8a5cd5bf41e6008dbbb9bc2cc111e82f33f7ff0f7de49",
+    "prepared_final_v1/seal.json": "ba58ed648b438b686a46b545f0d00d84cd1c942e0e9fc41f60a3677b56cc9121",
+    "bound_reviews_v1/seal.json": "5421409f3e5bb9fc186180ddca265c715e50fb569d0328b491945286311da7f8",
+    "sealed_reviews_v1/seal.json": "0e706a990ac9933b9117e9a221ba1ca3a67d93b7a9d605a7199ba0d71ec91338",
+    "analysis_v1/seal.json": "a859e13f08a461f95846823fb4710d7513ab5a9f4b565d4ca9637dd3cd486aa1",
+    "analysis_v2/seal.json": "e46dfd0701457675845e9caf034e29f2126bdc950d1ba75838177326b97d9a47",
+    "analysis_v2/metrics.json": "f6ef4d0f68012d09fc2296be93891eb163df2f71f7185f160db75fa86fe4ec9f",
+    "analysis_v2/reviewed_answers.jsonl": "97dc70ceb270198490d0ec97f580227442c5484a9ef0a3616c1d245e636cf321",
+    "analysis_v2/review_agreement.json": "9300485cbe20c9f2e8c75f204fa1b0ee55b36a32cc875fae64195385188c330d",
+    "analysis_parser_amendment_v2/seal.json": "4a758f703300067f4d3cff2d04eb48527396ec442cb8671593deaaa051fe47f5",
+    "tables_v1/seal.json": "7387109ef22776a3d2b11d223269425a86ccbeb4c4f08c0e97bbf49c4e6c5bc4",
+    "figures_v2/seal.json": "95570123025ecab880a93842b37f82d511f5c699821131bfeba43209b86911e0",
+    "figure_caption_amendment_v2/seal.json": "b945827101f51ff12ec5e26497b5c939a85d26360c4c0224316deb4efa8b3ddc",
+    "report_review_v1.json": "0236b451720b9cc17561ef9bc1e105f09ced61879624878368bea0d7a638efbd",
+    "documentation_review_v1.json": "7edee8c64d3e0b0cfb4a0a48fbca9847c42aec0be1c3a95e5fa7a81e8177b8e8",
+    "documentation_snapshot_v1/seal.json": "cb1f6d7aefb08c85bc4e18fbb80e740c0b4ee004d7249266c71693683db772c3",
+    "final_tooling_snapshot_v1/seal.json": "9525e5e06cb9f1f2d75eec20008b9313a7a5667f38736b3637cde5eb77ca25e0",
+    "reproduction_validation_v1.json": "ff2bd7d218299224887ff4337767a9816029b9c751c6908948db4888766ff7df",
+    "final_analysis_verification_v3.json": "61af91a605a45047423a8c8ba704feccff801a47d4b8e84bd2d9c88191e4c38b",
+    "final_integrity_and_diagnosis_notes_v1_receipt.json": "edddd36e3e82ef37a18c90ef75937bfb8cda92b471aaeb4ee21d17ad9225b4c9",
+    "commands.sh": "3503ba7e87dda50cb20ba10be0579ddc26c9558acc9de1654bbaf92c8ff565c7",
+    "reproduce_analysis.sh": "7176b76bd421b64c142973877c48f26b0b658e2ea6a9ab756519a1de063bcd04",
+    "reproduce_collection.sh": "eeb211ad7dbf21a18f60c8db4b559ec7edbc838a34538865b78101f7e539293e",
+    "work_state.json": "a78c038e63e45b721dc931c5c3563c13ee2ff5bfb10c2ecf004f6455e2b92b82"
+  },
+  "final_archive_manifest": "seal.json"
+}

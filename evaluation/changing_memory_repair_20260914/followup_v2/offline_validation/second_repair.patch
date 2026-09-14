@@ -1,0 +1,320 @@
+--- a/src/oline_hri/relationships.py
++++ b/src/oline_hri/relationships.py
+@@ -99,21 +99,49 @@
+     )
+ 
+ 
+-def has_named_user_relationship(canonical_text: str, person: str) -> bool:
++def has_named_user_relationship(
++    canonical_text: str,
++    person: str,
++    *,
++    current_only: bool = False,
++    role: str | None = None,
++    qualifiers: frozenset[str] = frozenset(),
++    addressed_to_user: bool = False,
++) -> bool:
+     """Return whether source text explicitly binds ``person`` to the user.
+ 
+     Matching is case-insensitive but otherwise requires the complete parsed
+     person name.  Merely mentioning the same token in an unrelated fact, role
+-    qualifier, or another person's relationship is insufficient.
++    qualifier, or another person's relationship is insufficient. Optional
++    role, qualifier and current-status requirements must share that witness.
++    Generated speech can additionally be restricted to ``you/your`` wording.
+     """
+ 
+     normalized_person = " ".join(_normalize(person).casefold().split())
+     if not normalized_person:
+         return False
++    normalized_role = role.casefold() if role is not None else None
++    required_qualifiers = frozenset(
++        word.group().casefold()
++        for qualifier in qualifiers
++        for word in _WORD_PATTERN.finditer(_normalize(qualifier))
++    )
+     return any(
+         relationship.person == normalized_person
++        and (normalized_role is None or relationship.role == normalized_role)
++        and required_qualifiers.issubset(relationship.qualifiers)
++        and (
++            not current_only
++            or (
++                not relationship.past_tense
++                and not relationship.qualifiers.intersection(
++                    {"former", "previous", "past", "old"}
++                )
++            )
++        )
+         for relationship in _relationships(
+-            _normalize(canonical_text), source=True
++            _normalize(canonical_text), source=not addressed_to_user,
++            people=frozenset({normalized_person}),
+         )
+     )
+ 
+--- a/src/oline_hri/conversation.py
++++ b/src/oline_hri/conversation.py
+@@ -2154,6 +2154,24 @@
+         for item in supplied
+     ):
+         raise ResponseValidationError("robot response lacks evidence for the requested collaborator")
++    current_request = _current_collaborator_request(user_text)
++    if current_request is not None:
++        role, qualifiers = current_request
++        # Source linking alone does not establish the tense or role of the
++        # delivered claim. Reuse the same person/role/domain witness for both.
++        for item in supplied:
++            if item.memory.id not in response.memory_used:
++                continue
++            for person in _current_collaborator_people(
++                item.memory.canonical_text, role, qualifiers
++            ):
++                if not has_named_user_relationship(
++                    response.speech, person, current_only=True,
++                    role=role, qualifiers=qualifiers, addressed_to_user=True,
++                ):
++                    raise ResponseValidationError(
++                        "robot response omits the requested current collaborator relationship"
++                    )
+     required_names = _cited_named_collaborator_names(response, supplied)
+     for name in required_names:
+         # A literal full named-owner relationship is also grounded. Preserve
+@@ -2268,12 +2286,46 @@
+     return ()
+ 
+ 
++def _collaborator_request_match(user_text: str) -> re.Match[str] | None:
++    return re.search(
++        r"\b(?:(?:name|identify)\s+(?:who\s+is\s+)?(?:my\s+)?|who\s+is\s+my\s+)"
++        r"(?P<qualifiers>(?:[a-z-]+\s+){0,3}?)(?P<role>partner|collaborator)\b", user_text, re.I,
++    )
++
++
++def _current_collaborator_request(
++    user_text: str,
++) -> tuple[str, frozenset[str]] | None:
++    request = _collaborator_request_match(user_text)
++    if request is None:
++        return None
++    qualifiers = frozenset(re.findall(r"[a-z]+", request.group("qualifiers").casefold()))
++    if "current" not in qualifiers:
++        return None
++    # A collaborator query may request the existing partner role. Unsupported
++    # source grammar is still rejected by the relationship parser.
++    return "partner", qualifiers - {"current"}
++
++
++def _current_collaborator_people(
++    canonical: str, role: str, qualifiers: frozenset[str]
++) -> frozenset[str]:
++    return frozenset(
++        match.group(0)
++        for match in re.finditer(_PERSON_TEXT, canonical)
++        if has_named_user_relationship(
++            canonical, match.group(0), current_only=True,
++            role=role, qualifiers=qualifiers,
++        )
++    )
++
++
+ def _collaborator_request_link(user_text: str, canonical: str) -> bool:
+     """Link a requested partner facet only to a positive, qualified relation."""
+-    request = re.search(
+-        r"\b(?:(?:name|identify)\s+(?:who\s+is\s+)?(?:my\s+)?|who\s+is\s+my\s+)"
+-        r"(?P<qualifiers>(?:[a-z-]+\s+){0,3}?)(?:partner|collaborator)\b", user_text, re.I,
+-    )
++    current_request = _current_collaborator_request(user_text)
++    if current_request is not None:
++        return bool(_current_collaborator_people(canonical, *current_request))
++    request = _collaborator_request_match(user_text)
+     if request is None or not topic_terms(request.group('qualifiers')).issubset(topic_terms(canonical)):
+         return False
+     if any(p.fullmatch(canonical.rstrip('.')) for p in _OWNER_NAMED_COLLABORATOR_PATTERNS):
+--- /dev/null
++++ b/tests/test_current_relationship_repair.py
+@@ -0,0 +1,184 @@
++"""Second-repair regressions: current relationship witnesses, no inference."""
++
++import unittest
++
++from oline_hri.conversation import (
++    ConversationError, _collaborator_request_link,
++    _require_requested_named_collaborator,
++)
++from oline_hri.relationships import has_named_user_relationship
++from oline_hri.response import RobotResponse, ResponseValidationError
++from tests.test_conversation_routed import (
++    FakeBackend, FakeRetriever, FakeRouter, chat_result, hybrid_match, memory,
++    routed_conversation, routing_result,
++)
++
++
++QUERY = (
++    "Returning to my earlier walking partner information, "
++    "who is my current walking partner?"
++)
++SOURCE = "Your walking partner is Niko Fern."
++
++
++class CurrentRelationshipWitnessTests(unittest.TestCase):
++    def test_optional_filters_preserve_existing_historical_lookup(self):
++        self.assertTrue(has_named_user_relationship(
++            "Niko Fern was your former walking partner.", "Niko Fern"))
++        self.assertFalse(has_named_user_relationship(
++            "Niko Fern was your former walking partner.", "Niko Fern",
++            current_only=True))
++
++    def test_current_source_and_addressed_speech_are_bound_to_one_witness(self):
++        for text in (
++            SOURCE, "Niko Fern is your walking partner.",
++            "Niko Fern is your current walking partner.",
++            "Niko Fern, your walking partner, can help.",
++            "You and Niko Fern are walking partners.",
++        ):
++            for addressed in (False, True):
++                with self.subTest(text=text, addressed=addressed):
++                    self.assertTrue(has_named_user_relationship(
++                        text, "Niko Fern", current_only=True, role="partner",
++                        qualifiers=frozenset({"walking"}),
++                        addressed_to_user=addressed))
++        self.assertTrue(has_named_user_relationship(
++            "My walking partner is Niko Fern.", "Niko Fern", current_only=True,
++            role="partner", qualifiers=frozenset({"walking"})))
++        self.assertFalse(has_named_user_relationship(
++            "My walking partner is Niko Fern.", "Niko Fern", current_only=True,
++            role="partner", qualifiers=frozenset({"walking"}),
++            addressed_to_user=True))
++
++    def test_current_lookup_rejects_past_former_negative_and_other_person(self):
++        for text in (
++            "Niko Fern was your walking partner.",
++            "Your walking partner was Niko Fern.",
++            "You and Niko Fern were walking partners.",
++            "Niko Fern was your current walking partner.",
++            "Niko Fern is your former walking partner.",
++            "Niko Fern is your previous walking partner.",
++            "Niko Fern is your past walking partner.",
++            "Niko Fern is your old walking partner.",
++            "Niko Fern is not your walking partner.",
++            "Maybe Niko Fern is your walking partner.",
++            "Niko Fern is Lina's walking partner.",
++            "Elora Vale is your walking partner.",
++            "Niko Fern is your chess partner. You enjoy walking.",
++            "Niko Fern is your walking friend. Your partner is Elora Vale.",
++        ):
++            with self.subTest(text=text):
++                self.assertFalse(has_named_user_relationship(
++                    text, "Niko Fern", current_only=True, role="partner",
++                    qualifiers=frozenset({"walking"})))
++
++    def test_query_link_accepts_present_tense_without_literal_current(self):
++        for query, source in (
++            (QUERY, SOURCE),
++            ("Who is my current walking partner?", "Niko Fern is your walking partner."),
++            ("Who is my current garden project partner?", "Your garden project partner is Rina Moss."),
++            ("Identify my current garden-project partner.", "Rina Moss is your partner on the garden project."),
++        ):
++            with self.subTest(query=query, source=source):
++                self.assertTrue(_collaborator_request_link(query, source))
++
++    def test_query_link_cannot_borrow_role_domain_or_named_owner(self):
++        for source in (
++            "Niko Fern was your walking partner.",
++            "Your current walking partner was Niko Fern.",
++            "Niko Fern is your former walking partner.",
++            "Your walking partner is Niko Fern. Current ideas are available.",
++            "Niko Fern is your friend. Your current walking partner is unknown.",
++            "Niko Fern is your chess partner. Your current walking routine is pleasant.",
++            "Niko Fern is Lina's current walking partner.",
++        ):
++            # The unrelated 'current ideas' sentence must not affect an
++            # otherwise valid positive relationship witness.
++            expected = source.startswith("Your walking partner is Niko Fern.")
++            with self.subTest(source=source):
++                self.assertIs(_collaborator_request_link(QUERY, source), expected)
++
++    def test_noncurrent_relationship_query_keeps_legacy_behavior(self):
++        self.assertTrue(_collaborator_request_link(
++            "Who is my former walking partner?",
++            "Niko Fern was your former walking partner."))
++
++
++class CurrentRelationshipDeliveryTests(unittest.TestCase):
++    def test_current_delivery_requires_the_same_present_person_role_and_domain(self):
++        item = memory(2, SOURCE)
++        for speech, passes in (
++            (SOURCE, True),
++            ("Niko Fern is your walking partner.", True),
++            ("Niko Fern was your walking partner.", False),
++            ("Your walking partner was Niko Fern.", False),
++            ("Niko Fern is your former walking partner.", False),
++            ("Your walking partner is Elora Vale.", False),
++            ("Niko Fern is your partner.", False),
++            ("Niko Fern is your chess partner. You enjoy walking.", False),
++            ("Niko Fern is not your walking partner.", False),
++            ("Niko Fern is my walking partner.", False),
++            ("Niko Fern is Lina's walking partner.", False),
++        ):
++            response = RobotResponse(speech=speech, gesture_id="NO_ACTION",
++                memory_used=(item.id,), allowed_memory_ids=(item.id,))
++            with self.subTest(speech=speech):
++                if passes:
++                    _require_requested_named_collaborator(response, (hybrid_match(item),), QUERY)
++                else:
++                    with self.assertRaises(ResponseValidationError):
++                        _require_requested_named_collaborator(response, (hybrid_match(item),), QUERY)
++
++    def test_multiple_cited_current_people_cannot_silently_lose_one(self):
++        items = (memory(1, SOURCE), memory(2, "Elora Vale is your walking partner."))
++        response = RobotResponse(speech=SOURCE, gesture_id="NO_ACTION",
++            memory_used=tuple(item.id for item in items),
++            allowed_memory_ids=tuple(item.id for item in items))
++        with self.assertRaises(ResponseValidationError):
++            _require_requested_named_collaborator(response,
++                tuple(hybrid_match(item) for item in items), QUERY)
++
++    def test_conversation_delivers_supported_replacement_with_real_validators(self):
++        item = memory(2, SOURCE)
++        for composed in (False, True):
++            backend = FakeBackend((chat_result(SOURCE, memory_used=(item.id,)),))
++            retriever = FakeRetriever((hybrid_match(item),), snapshot_outcomes=(True, True))
++            conversation = routed_conversation(backend, FakeRouter((routing_result(True),)),
++                retriever, grounded_composition=composed)
++            reply = conversation.send(QUERY)
++            self.assertEqual(reply.response.speech, SOURCE)
++            self.assertEqual(reply.response.memory_used, (item.id,))
++            self.assertEqual(len(backend.calls), 1)
++            self.assertEqual(len(retriever.current_calls), 2)
++
++    def test_conversation_rejects_past_or_wrong_person_without_composition(self):
++        item = memory(2, SOURCE)
++        for speech in ("Niko Fern was your walking partner.",
++                       "Elora Vale is your walking partner."):
++            with self.subTest(speech=speech):
++                conversation = routed_conversation(
++                    FakeBackend((chat_result(speech, memory_used=(item.id,)),)),
++                    FakeRouter((routing_result(True),)),
++                    FakeRetriever((hybrid_match(item),)), grounded_composition=False)
++                with self.assertRaises(ResponseValidationError):
++                    conversation.send(QUERY)
++
++    def test_snapshot_change_still_withholds_and_missing_record_still_abstains(self):
++        item = memory(2, SOURCE)
++        for outcomes in ((False,), (True, False)):
++            conversation = routed_conversation(
++                FakeBackend((chat_result(SOURCE, memory_used=(item.id,)),)),
++                FakeRouter((routing_result(True),)),
++                FakeRetriever((hybrid_match(item),), snapshot_outcomes=outcomes))
++            with self.assertRaises(ConversationError):
++                conversation.send(QUERY)
++        conversation = routed_conversation(
++            FakeBackend((chat_result("I don't have that information."),)),
++            FakeRouter((routing_result(True),)), FakeRetriever())
++        reply = conversation.send(QUERY)
++        self.assertEqual(reply.response.memory_used, ())
++        self.assertNotIn("Niko", reply.response.speech)
++
++
++if __name__ == "__main__":
++    unittest.main()

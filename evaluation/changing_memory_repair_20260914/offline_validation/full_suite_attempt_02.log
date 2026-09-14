@@ -1,0 +1,31 @@
+.................................................................sssssssssss...........................................................................................................................................................................................ss........................................................................................................................................................................................{"output": "/tmp/clara-changing-analysis-offline-j38qthwa/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-changing-analysis-offline-j38qthwa/reviews", "groups": 132, "disagreements": 1}
+{"output": "/tmp/clara-changing-analysis-offline-17wao7m7/prepared", "review_groups": 133, "attempts": 287, "missing": 1, "packet_sha256": "d564a0058251af11a0c7e72f4a88c1232a75716e319ecab1c6ded0c510b790bc"}
+{"output": "/tmp/clara-changing-analysis-offline-yw7053nq/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-changing-analysis-offline-0hthb8p6/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-changing-analysis-offline-0hthb8p6/reviews", "groups": 132, "disagreements": 0}
+{"output": "/tmp/clara-changing-analysis-offline-0hthb8p6/analysis", "planned": 288, "attempted": 288, "useful_correct": 288, "disagreements": 0}
+{"output": "/tmp/clara-changing-analysis-offline-jfpgmt4x/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-batch-review-offline-8854owj1/prepared_batch", "scenarios": ["cm01"], "checkpoints": 24, "review_groups": 11, "packet_sha256": "5ea388617301f0627abe96ab5f62805dc35df1fb6068e3fad9b8a0f4414a945f"}
+{"output": "/tmp/clara-batch-review-offline-hanh1af7/bound", "final_groups": 2, "batches": 2, "reviewer_a": "offline-a", "reviewer_b": "offline-b"}
+slot 01 qwen3:0.6b OFF r1 1/2 request interrupted 0.005s
+..................................................................................................................................................sss..........................................................................................................................................................................................................s...............................BATCH /tmp/tmp6j8xwh3a/run status=interrupted
+.SESSION 1/9 large r1
+SESSION 2/9 cascade r1
+SESSION 3/9 small r1
+SESSION 4/9 cascade r2
+SESSION 5/9 small r2
+SESSION 6/9 large r2
+SESSION 7/9 small r3
+SESSION 8/9 large r3
+SESSION 9/9 cascade r3
+BATCH /tmp/tmptlsc478v/run status=complete
+.SESSION 1/9 large r1
+BATCH /tmp/tmpynxnt0ok/run status=interrupted
+...SESSION 1/9 large r1
+BATCH /tmp/tmpvoaopvic/run status=interrupted
+.................................................................................................................................sssssssss......................................................................................................................
+----------------------------------------------------------------------
+Ran 1093 tests in 105.418s
+
+OK (skipped=26)

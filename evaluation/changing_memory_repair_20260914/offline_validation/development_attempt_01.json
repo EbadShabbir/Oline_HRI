@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-09-14T13:42:02.351373+00:00",
+  "command": "env PYTHONPATH=src:tests .venv/bin/python -m unittest test_lifecycle_history_repair test_memory_lifecycle_validation test_conversation_routed test_memory_grounding_review_regressions test_grounded_composition test_memory_evidence",
+  "exit_code": 1,
+  "tests_run": 148,
+  "errors": [
+    {
+      "test": "test_corrected_followup_uses_current_evidence_without_old_statement_or_echo",
+      "error": "ResponseValidationError: memory_used must be empty while personal memory is unavailable",
+      "finding": "Bounded What about my compass location again? followup did not link current evidence; agent fixing parser."
+    },
+    {
+      "test": "test_memory_lifecycle_validation",
+      "error": "ModuleNotFoundError: No module named test_memory_lifecycle_validation",
+      "finding": "Parallel test author had not yet written file when integration run started."
+    }
+  ],
+  "scope": "offline development; simulated outputs are not live observations"
+}

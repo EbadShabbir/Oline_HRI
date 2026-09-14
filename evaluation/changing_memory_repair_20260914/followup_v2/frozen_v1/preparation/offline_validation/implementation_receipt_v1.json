@@ -1,0 +1,58 @@
+{
+  "created_at": "2026-09-14T14:19:53.413254+00:00",
+  "status": "offline_implementation_complete_pending_independent_review_and_live_followup",
+  "live_inference": false,
+  "changed_runtime_files": {
+    "src/oline_hri/conversation.py": {
+      "before": "0717344dbf1ae1f8cfa33914a1c2e471513bc71cdf6308fa0aebd9f3c18dabe6",
+      "after": "878361152fcfed2dac6867badb3b935f0dea727f5ef2300cb704008a1444e2a7"
+    },
+    "src/oline_hri/relationships.py": {
+      "before": "759d2a6c671581ffd5db2b07e14a89b81d90fc58ed5fd3625bcf6ec9860b80f6",
+      "after": "29f04fc94ab15a357ef90bdf0bd645958ecf2ecdadc3ad857363756528cae505"
+    }
+  },
+  "new_test_files": {
+    "tests/test_current_relationship_repair.py": "647918dae1a257350dc0538e405faa9878b13bc6888dbed01332f6c7170c0bb3"
+  },
+  "primary_frozen_source_files_verified": 41,
+  "unchanged_current_source_files": 39,
+  "runtime_change_scope": "Optional current-only person/role/domain parsed witnesses for source linking and delivered speech; legacy non-current matching unchanged.",
+  "tests": [
+    {
+      "receipt": "before_patch_tests.json",
+      "result": "11 tests; 8 failing subtests,29 errors before optional API implementation; expected regression demonstration preserved"
+    },
+    {
+      "receipt": "after_patch_tests_v1.json",
+      "result": "11 new tests passed"
+    },
+    {
+      "receipt": "combined_tests_v1.json",
+      "result": "190 tests passed in5.221s, including prior grounding/routing and real subprocess/SQLite lifecycle tests with fake model transport"
+    }
+  ],
+  "diff_check": "git diff --check -- src/oline_hri/relationships.py src/oline_hri/conversation.py tests/test_current_relationship_repair.py exited0",
+  "patch_sha256": "f3b8c52608b1c8a97338bd88350a5efdf07a72e7f5974369b8aa709b180e62d7",
+  "limitations": [
+    "Bounded English grammar, not unrestricted semantic interpretation.",
+    "Current collaborator queries can match the existing parsed partner role; canonical collaborator wording remains unsupported where the prior relationship parser does not recognize it.",
+    "Offline fake-model responses do not establish live generation quality.",
+    "First96 live observations and their frozen source are not rewritten."
+  ],
+  "files_sha256": {
+    "after_patch_tests_v1.json": "528bee5aae879121b8cb0165354cd6a2033d29a916303167ec3771d40dc86eb4",
+    "after_patch_tests_v1.log": "e7fc0fd60b9316be873c6fb50dfe53aa34bc64a097e8683281e93fefcbc50133",
+    "after_source/src/oline_hri/conversation.py": "878361152fcfed2dac6867badb3b935f0dea727f5ef2300cb704008a1444e2a7",
+    "after_source/src/oline_hri/relationships.py": "29f04fc94ab15a357ef90bdf0bd645958ecf2ecdadc3ad857363756528cae505",
+    "after_source/tests/test_current_relationship_repair.py": "647918dae1a257350dc0538e405faa9878b13bc6888dbed01332f6c7170c0bb3",
+    "before_patch_tests.json": "369dc0875e7c97445d667625d7a5ca40d6d2de5549c01bf49953a2cac4003e1a",
+    "before_patch_tests.log": "cce5046bef3239f6934c13d52a0207f039354ac45a14194d302841c997041837",
+    "before_source/src/oline_hri/conversation.py": "0717344dbf1ae1f8cfa33914a1c2e471513bc71cdf6308fa0aebd9f3c18dabe6",
+    "before_source/src/oline_hri/relationships.py": "759d2a6c671581ffd5db2b07e14a89b81d90fc58ed5fd3625bcf6ec9860b80f6",
+    "before_source.json": "d02cd2a81a8d8f41db7b0ed4ab4218c6faa98c4f27d29634d93bd04aa0ab4538",
+    "combined_tests_v1.json": "f253febb42811af4cfd41a054ed59f7b261c6589b82b4e4e307600d82f30c1fb",
+    "combined_tests_v1.log": "2a7123922ac6d9dfcd088e9f76762fe41c3d97f1732ac66de8102ada795378a8",
+    "second_repair.patch": "f3b8c52608b1c8a97338bd88350a5efdf07a72e7f5974369b8aa709b180e62d7"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "command": [
+    "freeze-review",
+    "--packet",
+    "evaluation/independent_retrieval_20260913/remap_a_cohort_v4/missing_packet.jsonl",
+    "--instructions",
+    "evaluation/independent_retrieval_20260913/remap_a_cohort_v4/REVIEW_INSTRUCTIONS.md",
+    "--sheet",
+    "evaluation/independent_retrieval_20260913/blinded_work/reviewer_a/cohort_v4_additional_original.jsonl",
+    "--reviewer",
+    "/root/inspect_harness/blinded_reviewer_a",
+    "--output",
+    "evaluation/independent_retrieval_20260913/review_a_cohort_v4_additional"
+  ],
+  "created_at": "2026-09-13T18:27:32.155132+00:00",
+  "human_validation": "pending",
+  "inputs": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/blinded_work/reviewer_a/cohort_v4_additional_original.jsonl": "793d4e4614aeb3e9761671fd5adf2613e83ec6f98e00ef1006e8cd8798cb6279",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/remap_a_cohort_v4/REVIEW_INSTRUCTIONS.md": "17c20d7fdbaa66f43c31ae83d645f37aa8d8bd3c77e53cdad78bbf2360655f18",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/remap_a_cohort_v4/missing_packet.jsonl": "863a005869d4ee18849f64e221f193a59394b81c93f8b7638f32398ddae93f0b"
+  },
+  "phase": "freeze_individual_review",
+  "private_mapping_read": false,
+  "semantic_judgments_generated_by_program": false,
+  "source_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/batch_independent_retrieval_reviews.py": "578d8078ce563cf399400ce3d5d4abea34dcf2d218800874276ece34222bbeed",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_retrieval_review_batches.py": "d9bc5815baf7a60a929ba19c9360f24ae96fbff56b45e6d0c0560df55350c5f7"
+  },
+  "working_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI"
+}

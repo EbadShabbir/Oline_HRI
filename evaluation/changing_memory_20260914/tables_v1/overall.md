@@ -1,0 +1,5 @@
+# overall
+
+| planned | attempted | delivered | useful_correct | forbidden_disclosure | withheld | interrupted | missing |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 288 | 288 | 283 | 118 | 89 | 5 | 0 | 0 |

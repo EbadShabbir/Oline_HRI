@@ -1,0 +1,231 @@
+{
+  "approved": true,
+  "dataset_sha256": "038e9c49dc4c80fa16a81f99b490b088a2e74cf0aac6faf5c44657e0203d50ef",
+  "reviewer": "independent assistant",
+  "reviewed_at_utc": "2026-09-12T14:36:11.574818+00:00",
+  "reviewed_request_ids": [
+    "rg01",
+    "rg02",
+    "rg03",
+    "rg04",
+    "rg05",
+    "rg06",
+    "rg07",
+    "rg08",
+    "rg09",
+    "rg10",
+    "rg11",
+    "rg12",
+    "rg13",
+    "rg14",
+    "rg15",
+    "rg16",
+    "rg17",
+    "rg18",
+    "rg19",
+    "rg20",
+    "rg21",
+    "rg22",
+    "rg23",
+    "rg24",
+    "rg25",
+    "rg26",
+    "rg27",
+    "rg28",
+    "rg29",
+    "rg30",
+    "cg01",
+    "cg02",
+    "cg03",
+    "cg04",
+    "cg05",
+    "cg06",
+    "cg07",
+    "cg08",
+    "cg09",
+    "cg10",
+    "cg11",
+    "cg12",
+    "cg13",
+    "cg14",
+    "cg15",
+    "cg16",
+    "cg17",
+    "cg18",
+    "cg19",
+    "cg20",
+    "cg21",
+    "cg22",
+    "cg23",
+    "cg24",
+    "cg25",
+    "cg26",
+    "cg27",
+    "cg28",
+    "cg29",
+    "cg30",
+    "pr01",
+    "pr02",
+    "pr03",
+    "pr04",
+    "pr05",
+    "pr06",
+    "pr07",
+    "pr08",
+    "pr09",
+    "pr10",
+    "pr11",
+    "pr12",
+    "pr13",
+    "pr14",
+    "pr15",
+    "pr16",
+    "pr17",
+    "pr18",
+    "pr19",
+    "pr20",
+    "pr21",
+    "pr22",
+    "pr23",
+    "pr24",
+    "pr25",
+    "pr26",
+    "pr27",
+    "pr28",
+    "pr29",
+    "pr30",
+    "pt01",
+    "pt02",
+    "pt03",
+    "pt04",
+    "pt05",
+    "pt06",
+    "pt07",
+    "pt08",
+    "pt09",
+    "pt10",
+    "pt11",
+    "pt12",
+    "pt13",
+    "pt14",
+    "pt15",
+    "pt16",
+    "pt17",
+    "pt18",
+    "pt19",
+    "pt20",
+    "pt21",
+    "pt22",
+    "pt23",
+    "pt24",
+    "pt25",
+    "pt26",
+    "pt27",
+    "pt28",
+    "pt29",
+    "pt30"
+  ],
+  "human_validation": "pending",
+  "scope": "Independent pre-inference review of every question, complete evidence record and rubric; reviewer did not author the dataset or run generator inference.",
+  "counts": {
+    "requests": 120,
+    "distinct_scenarios": 120,
+    "categories": {
+      "routine_general": 30,
+      "constrained_general": 30,
+      "personal_recall": 30,
+      "personal_temporal": 30
+    },
+    "evidence_status": {
+      "answerable": 84,
+      "unknown": 18,
+      "conflicting": 18
+    }
+  },
+  "checks": {
+    "all_120_triples_individually_read": true,
+    "all_histories_empty": true,
+    "whole_evidence_preserved": true,
+    "question_evidence_and_rubric_consistent_after_corrections": true,
+    "arithmetic_and_temporal_references_independently_checked": true,
+    "fictional_household_scope_varied": true,
+    "references_only_in_rubrics_not_generator_prompt": true,
+    "identical_model_payload_bytes_except_model_selector": true,
+    "generic_answer_string_schema_without_answer_literals": true,
+    "max_complete_rendered_prompt_utf8_bytes": 762,
+    "max_prompt_output_and_safety_upper_bound": 1020,
+    "context_limit": 2048,
+    "max_reference_answer_json_utf8_bytes": 151,
+    "reference_answers_fit_192_output_tokens": "All compact answer JSON references are at most 151 UTF-8 bytes; the independently inspected common installed byte-BPE bound establishes that a compliant concise reference plus two conservative terminal slots fits below 192 tokens.",
+    "prior_json_artifact_files_checked_for_exact_normalized_question_reuse": 428,
+    "prior_request_text_fields_compared": 3149,
+    "exact_normalized_prior_question_matches": 0,
+    "primary_schedule": "six paired blocks, twenty requests per model block, five per category; every request once per model",
+    "inference_performed_by_reviewer": false
+  },
+  "findings": [
+    {
+      "status": "resolved",
+      "request_ids": [
+        "cg06"
+      ],
+      "issue": "Rubric required a gap-free schedule although the initial question specified only order and no overlap.",
+      "correction": "Question now explicitly requires back-to-back chores with no gaps."
+    },
+    {
+      "status": "resolved",
+      "request_ids": [
+        "cg29"
+      ],
+      "issue": "The phrase pack count could mean the known number of packs.",
+      "correction": "Question now refers explicitly to the number of tiles per pack."
+    },
+    {
+      "status": "resolved",
+      "request_ids": [
+        "pr25"
+      ],
+      "issue": "Two storage locations could theoretically be nested rather than conflicting.",
+      "correction": "Evidence now establishes separate nonnested storage places."
+    },
+    {
+      "status": "resolved",
+      "request_ids": [
+        "pr27"
+      ],
+      "issue": "Two named returners could jointly return the stool, which would not establish the rubric-required conflict.",
+      "correction": "Each record now asserts an exclusive sole returner and excludes the other person."
+    },
+    {
+      "status": "resolved",
+      "request_ids": [
+        "pt05"
+      ],
+      "issue": "Initial question did not explicitly ask the before-programme margin required by the rubric.",
+      "correction": "Question now asks how long before the programme the visit finished."
+    },
+    {
+      "status": "resolved",
+      "request_ids": [
+        "pt06"
+      ],
+      "issue": "Initial question referred to one unchanged part while the rubric requires time and place.",
+      "correction": "Question now asks which parts stayed the same."
+    },
+    {
+      "status": "resolved",
+      "request_ids": [
+        "pt11"
+      ],
+      "issue": "Initial question asked duration but rubric also required the exact overlap interval.",
+      "correction": "Question now explicitly asks both overlap interval and duration."
+    },
+    {
+      "status": "limitation",
+      "request_ids": [],
+      "issue": "The workload is assistant-authored and balanced by design. Familiar general concepts and common synthetic uncertainty templates do not establish household frequency, absence from pretraining, or independent human validity.",
+      "correction": "Keep these limitations in reporting; human validation remains pending."
+    }
+  ],
+  "unresolved_blocking_findings": []
+}

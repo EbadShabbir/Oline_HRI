@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "approved": true,
+  "reviewer": "independent assistant /root/runtime_audit",
+  "created_at": "2026-09-14T11:51:38.018383+00:00",
+  "review_kind": "Analysis pipeline code review before live answer review",
+  "human_validation": "pending",
+  "live_answer_files_read": false,
+  "scope": "Analysis-only source; no frozen runtime changes and no model inference. Root provided a high-level preliminary outcome during coordination; reviewer inspected no live answer or trace artifacts.",
+  "source_sha256": {
+    "scripts/analyze_changing_memory.py": "60709a1002f7537f8cfd8ea57e8c89052f7ba2e608ca4b36e275a0fc79c95215",
+    "tests/test_analysis_changing_memory.py": "be052c3e692ea477fdc89dd7703900599a5aa276dad284babb6389e6923592ab"
+  },
+  "frozen_runtime_source_unchanged": true,
+  "frozen_runtime_file_count": 41,
+  "validation": {
+    "command": "PYTHONPATH=src:scripts .venv/bin/python -m unittest tests.test_analysis_changing_memory -v",
+    "result": "9 offline synthetic-data tests passed",
+    "elapsed_seconds": 1.392,
+    "independent_additional_checks": [
+      "Synthetic broad post-correction denominator96 versus current replacement denominator48; one stale original correctly counted",
+      "Synthetic post-expiry denominator60; disclosure of expired historical control counted as any expired disclosure but not subject disclosure",
+      "Explicit partial preparation with all288 rows rejected as final resolution",
+      "Permitted partial resolution retains metrics.partial=true and PARTIAL SNAPSHOT report banner"
+    ],
+    "no_simulated_result_used_as_live_observation": true
+  },
+  "reviewed_properties": [
+    "Verified sealed final freeze/run inputs and runtime operation/time/branch/status binding",
+    "Two distinct assistant reviewers, question/state/rubric/delivered-answer-only packets, no model or diagnostic fields",
+    "Strict answer-availability and known-versus-uncertainty judgment compatibility",
+    "Both original vote sets sealed; third independent adjudication required for every disagreement; final votes sealed before private diagnostic reads",
+    "All288 planned checkpoints retained with missing, started-without-final and never-started distinctions",
+    "Process PID/start/boot and persistent database path/device/inode audit; cross-branch device/inode isolation",
+    "Required evidence unavailable, routing-skipped, routing-failed, retrieval-missing and evidence-supply-stage-not-reached distinguished",
+    "Recorded client output validation rejection separated from generation transport/call failure",
+    "Raw-generation versus transformation ambiguity preserved; a validator rejection alone is not labeled a validator defect",
+    "48 current replacement requests distinguished from96 total post-correction exposures;60 post-expiry requests include expired historical-control disclosure",
+    "Actual forwarded generation history distinguished from merely retained session history; matched planned/fully observed pair counts kept separate",
+    "Withheld or missing answers never count as useful recall or appropriate uncertainty; safe nondisclosure reported separately",
+    "Partial preparation cannot be silently promoted to final analysis even with288 rows"
+  ],
+  "result_limitations": [
+    "Code review and synthetic validation do not establish experimental accuracy.",
+    "Final live analysis must use sealed completed run inputs and independent fresh blinded answer reviewers.",
+    "Human validation remains pending."
+  ]
+}

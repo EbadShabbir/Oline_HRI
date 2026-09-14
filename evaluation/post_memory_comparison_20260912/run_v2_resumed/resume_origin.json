@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-12T12:53:13.906120+00:00",
+  "prior_root": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2",
+  "freeze_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/frozen_v2/freeze.json",
+  "freeze_sha256": "6497504cb7a3fd29c2b3b3740aa26f1a77dad8d626cbf0fedcabed997bfc7783",
+  "resume_script_sha256": "3d3973d3014cd1fc176f6017368e180703c2d30e2b23bd7839198ae480a7816a",
+  "reason": "startup temperature handoff jitter before any small-only request; all completed sessions retained; no quality-based retry",
+  "scheduler_handoff_temperature_c_exclusive": 54,
+  "unchanged_arm_start_temperature_c_exclusive": 55,
+  "retained_complete_sessions": [
+    {
+      "directory": "01_large_r1",
+      "source": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2/01_large_r1",
+      "observations_sha256": "780db8bee003d8813be8aa43b51fbb4342619ffca7b65fd31c32472bbe2df5de",
+      "finish_sha256": "c12112b01e0c2d0fc9674cb9f4d8f82ecf0814388f56f1025c33096a9d283de7"
+    },
+    {
+      "directory": "02_cascade_r1",
+      "source": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1",
+      "observations_sha256": "552de48cbcd0737ce39e88ec93d348e6eb3ffb6f8833e16b17b1181fb56d0d20",
+      "finish_sha256": "8c8bbe3f7baa41b3a70dbecf2ace5a33f7110d5ca9eab79856a8acb909f96b6d"
+    }
+  ],
+  "prior_batch_finish_sha256": "037473006f706e602d2c5af9de35b054b1d64e405b06306e5730a65ea94cdfe4",
+  "prior_startup_rejection": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2/03_small_r1"
+}

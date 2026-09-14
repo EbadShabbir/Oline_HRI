@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-09-13T17:27:37.707115+00:00",
+  "immutability": "exclusive creation, exact byte copies, SHA256 and read-only permissions; not privileged WORM",
+  "sha256": {
+    "REVIEW_INSTRUCTIONS.md": "17c20d7fdbaa66f43c31ae83d645f37aa8d8bd3c77e53cdad78bbf2360655f18",
+    "commands.sh": "ed86979c083203534d41e9a58d8e5add4b4bc2f3672d909c7a33e1b26ea9017e",
+    "original_reviews.jsonl": "239e297fbcdf6c1ffd91f454c872a7abe7939fe7cded11889d2819734bd5c227",
+    "packet.jsonl": "2875fc180299cff141fabd11d02af4eda0bc3660ba92067b2f3c6cc4ede7248b",
+    "provenance.json": "41929b07a216fb78bc681e5e38417e678cdc9084eaf7a11f424c24982cc7ad0f",
+    "review_batch.json": "988b13e8e78532dcfb774f2e21d36de942803c6bda00ab1e79ee8d1525e8d34b",
+    "source/batch_independent_retrieval_reviews.py": "578d8078ce563cf399400ce3d5d4abea34dcf2d218800874276ece34222bbeed",
+    "source/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+    "source/test_retrieval_review_batches.py": "d9bc5815baf7a60a929ba19c9360f24ae96fbff56b45e6d0c0560df55350c5f7"
+  }
+}

@@ -1,0 +1,1031 @@
+{
+  "created_at": "2026-09-12T13:15:52.414561+00:00",
+  "interpretation": [
+    "Actual call records, not post-request residency snapshots, establish generator and memory-classifier counts, including technically rejected outputs.",
+    "Each audited cascade session made47large and1small generation calls. Thus a faster cascade session does not primarily demonstrate frequent substitution of the small generator.",
+    "size_vram/size is the Ollama-reported GPU allocation share for the resident model at sampled request boundaries. It is not GPU utilization, GPU layer count, fraction of computation, or physically separate Jetson VRAM.",
+    "Large-only r1 reported61.454% GPU allocation, versus83.598%-86.188% for the large generator in cascade r1 and76.216%-81.007% in cascade r2. This is a material execution-placement difference for the same1.7B tag.",
+    "Observed elapsed differences combine routing, model loading/eviction, backend placement, prompt/output lengths and evolving device state. These measurements cannot isolate a causal selection benefit without matched execution placement or a design that separates those effects.",
+    "Load/prefill/decode/server durations are nested inside call/request wall time and must not be added again. Request wall decomposition uses recorded routing, generation-call and retrieval intervals plus a residual. Cleanup unloads are outside request latency.",
+    "Actual CPU/GPU offloaded layer counts and the cause of placement changes are not established by these PS snapshots. No service logs or active-session data were read in this bounded audit.",
+    "The original startup rejection and revised swap-policy results remain distinct. The original guard file was not changed; revised sessions declare their separate existing-capacity-minus256MiB policy."
+  ],
+  "new_model_calls": 0,
+  "new_semantic_judgments": 0,
+  "normal_guard_source": {
+    "frozen_v1_expected_sha256": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+    "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/complete_system_device_guard.py",
+    "sha256": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+    "unchanged": true
+  },
+  "observed_attempts": 240,
+  "schema_version": 1,
+  "scope": "Read-only placement/timing audit of terminal prefix01-05 only; no active06 reads, inference, source edits or semantic regrading.",
+  "selected_root": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed",
+  "sessions": [
+    {
+      "allocation_states": [
+        {
+          "context_length": 2048,
+          "first_index": 1,
+          "last_index": 48,
+          "model": "qwen3:1.7b",
+          "observed_after_request_count": 48,
+          "reported_gpu_allocation_percent": 61.454000710993085,
+          "reported_size_bytes": 1658826259,
+          "reported_size_vram_bytes": 1019415101
+        }
+      ],
+      "api_ps_after_model_counts": {
+        "qwen3:1.7b": 48
+      },
+      "attempted": 48,
+      "call_status_counts": {
+        "ok": 81
+      },
+      "cleanup_errors": [],
+      "compute_classifier_calls": 0,
+      "device_policy": {
+        "expected_swap_total_kib": 3901608,
+        "fan_required": true,
+        "logical_swap_reserve_kib": 262144,
+        "max_runtime_swap_used_kib": 3639464,
+        "max_runtime_temperature_c_exclusive": 68.0,
+        "max_start_swap_used_kib": 3639464,
+        "max_start_temperature_c_exclusive": 55.0,
+        "maximum_resident_models": 1,
+        "min_runtime_available_kib": 786432,
+        "min_start_available_kib": 2097152,
+        "persistent_system_changes": false,
+        "policy_id": "post_memory_existing_swap_reserve_v2",
+        "power_mode": "15W mode 0",
+        "prior_arc_limits_reused": false,
+        "scope": "all revised post-memory arms; embeddings through final cleanup",
+        "swap_capacity_policy": "existing capacity minus 256 MiB; equal start/runtime ceilings",
+        "swap_configuration_monitoring": "capacity in admission/final snapshots; runtime logical usage monitoring",
+        "swap_policy_interpretation": "revised experiment admission; not a validated physical safety threshold",
+        "telemetry_interval_ms": 500,
+        "telemetry_stall_ceiling_seconds": 5,
+        "unchanged_boot_and_thermal_trip_counters": true
+      },
+      "directory": "01_large_r1",
+      "embedding_setup_seconds": 2.46994891,
+      "entry_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/01_large_r1",
+      "finish_resident_models": [],
+      "finish_utc": "2026-09-12T12:42:43.856829+00:00",
+      "first_request_seconds": 50.311104559,
+      "frozen_workload_sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+      "generation_calls_actual": {
+        "qwen3:1.7b": 48
+      },
+      "generation_calls_requested": {
+        "qwen3:1.7b": 48
+      },
+      "generator_token_and_decode_metadata": {
+        "qwen3:1.7b": {
+          "decode_seconds": {
+            "max": 30.93706,
+            "mean": 13.602389666625001,
+            "n": 48,
+            "p50": 12.031181,
+            "p95": 23.59059185,
+            "sum": 652.914703998
+          },
+          "generated_tokens": {
+            "max": 92,
+            "mean": 51.333333333333336,
+            "n": 48,
+            "p50": 48.0,
+            "p95": 85.94999999999999,
+            "sum": 2464.0
+          },
+          "generation_calls": 48,
+          "prompt_tokens": {
+            "max": 561,
+            "mean": 367.375,
+            "n": 48,
+            "p50": 351.0,
+            "p95": 496.0,
+            "sum": 17634.0
+          }
+        }
+      },
+      "http_unloads": {
+        "count_including_cleanup": 1,
+        "during_recorded_requests": 0,
+        "wall_total_seconds": 0.003989856
+      },
+      "input_sha256": {
+        "finish.json": "c12112b01e0c2d0fc9674cb9f4d8f82ecf0814388f56f1025c33096a9d283de7",
+        "http_calls.jsonl": "86abeb73dc3d08a8a8cb3acb598147e0aa058a6d73d96e7f166a479059f3d425",
+        "manifest.json": "662956e7bb7f562f8d339891ae1447f03576638e830af1dcbd7010010707edad",
+        "memory_setup.json": "cbf1a76f167ab6a1d44953391d445ab724fe0616223b9b2723c503e254433bb7",
+        "observations.jsonl": "780db8bee003d8813be8aa43b51fbb4342619ffca7b65fd31c32472bbe2df5de",
+        "start.json": "73e867d38f1cf6b8f27eff46c24faa9ec2a0a71cbd21f963f9b669a5e181ecd9",
+        "telemetry.jsonl": "3edb5796917f38ad91d24a57c7f3e39e4d7d98b076751c5b062bca9279230254"
+      },
+      "is_link": true,
+      "later_request_latency_seconds": {
+        "max": 37.659707174,
+        "mean": 16.749185212106383,
+        "n": 47,
+        "p50": 15.370786688,
+        "p95": 28.0390172278,
+        "sum": 787.211704969
+      },
+      "load_metadata_seconds": {
+        "max": 27.295214582,
+        "mean": 0.3394405008024691,
+        "n": 81,
+        "p50": 0.002046929,
+        "p95": 0.003626806,
+        "sum": 27.494680565
+      },
+      "loads_above_one_second": [
+        {
+          "index": 1,
+          "load_seconds": 27.295214582,
+          "model": "qwen3:1.7b",
+          "purpose": "memory_selector"
+        }
+      ],
+      "memory_classifier_calls_actual": {
+        "qwen3:1.7b": 33
+      },
+      "memory_snapshot_sha256": "71bd3383c736b4185e51395853d25eb64065fc6abe2be1637b0c536f3c9b359c",
+      "model_metadata_unchanged": true,
+      "nested_call_metadata_seconds": {
+        "all_model_call_wall_total": 834.289518632,
+        "classifier_call_wall_total": 157.9278062,
+        "ollama_decode_total": 767.249688995,
+        "ollama_load_total": 27.494680565,
+        "ollama_prefill_total": 31.264063,
+        "ollama_server_total": 832.913435487
+      },
+      "ollama_version_unchanged": true,
+      "peak_ram_used_mib": 6367,
+      "peak_swap_used_mib": 1621,
+      "post_ps_disagrees_with_last_reported_generator_indices": [],
+      "profile_id": "post_memory_comparison_v1",
+      "request_latency_seconds": {
+        "max": 50.311104559,
+        "mean": 17.448391865166666,
+        "n": 48,
+        "p50": 15.485777558,
+        "p95": 29.6204910954,
+        "sum": 837.522809528
+      },
+      "request_wall_decomposition_seconds": {
+        "generation_call_wall_total": 676.361712432,
+        "other_request_wall_total": 1.461323933999982,
+        "request_total": 837.522809528,
+        "retrieval_total": 0.83790643,
+        "routing_total": 158.861866732
+      },
+      "selected_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2/01_large_r1",
+      "source_unchanged": true,
+      "start_available_ram_mib": 2330.4765625,
+      "start_max_temperature_c": 53.031,
+      "start_swap_used_mib": 986.25,
+      "start_utc": "2026-09-12T12:28:41.612935+00:00",
+      "status": "complete_with_errors",
+      "telemetry_gpu_activity_percent": {
+        "max": 99,
+        "mean": 59.15090909090909,
+        "n": 1650,
+        "p50": 55.0,
+        "p95": 99.0,
+        "sum": 97599.0
+      }
+    },
+    {
+      "allocation_states": [
+        {
+          "context_length": 2048,
+          "first_index": 1,
+          "last_index": 13,
+          "model": "qwen3:1.7b",
+          "observed_after_request_count": 13,
+          "reported_gpu_allocation_percent": 83.5976662732155,
+          "reported_size_bytes": 1658815773,
+          "reported_size_vram_bytes": 1386731274
+        },
+        {
+          "context_length": 2048,
+          "first_index": 14,
+          "last_index": 14,
+          "model": "qwen3:0.6b",
+          "observed_after_request_count": 1,
+          "reported_gpu_allocation_percent": 100.0,
+          "reported_size_bytes": 693423308,
+          "reported_size_vram_bytes": 693423308
+        },
+        {
+          "context_length": 2048,
+          "first_index": 15,
+          "last_index": 48,
+          "model": "qwen3:1.7b",
+          "observed_after_request_count": 34,
+          "reported_gpu_allocation_percent": 86.18819458897896,
+          "reported_size_bytes": 1658826259,
+          "reported_size_vram_bytes": 1429712404
+        }
+      ],
+      "api_ps_after_model_counts": {
+        "qwen3:0.6b": 1,
+        "qwen3:1.7b": 47
+      },
+      "attempted": 48,
+      "call_status_counts": {
+        "ok": 81
+      },
+      "cleanup_errors": [],
+      "compute_classifier_calls": 0,
+      "device_policy": {
+        "expected_swap_total_kib": 3901608,
+        "fan_required": true,
+        "logical_swap_reserve_kib": 262144,
+        "max_runtime_swap_used_kib": 3639464,
+        "max_runtime_temperature_c_exclusive": 68.0,
+        "max_start_swap_used_kib": 3639464,
+        "max_start_temperature_c_exclusive": 55.0,
+        "maximum_resident_models": 1,
+        "min_runtime_available_kib": 786432,
+        "min_start_available_kib": 2097152,
+        "persistent_system_changes": false,
+        "policy_id": "post_memory_existing_swap_reserve_v2",
+        "power_mode": "15W mode 0",
+        "prior_arc_limits_reused": false,
+        "scope": "all revised post-memory arms; embeddings through final cleanup",
+        "swap_capacity_policy": "existing capacity minus 256 MiB; equal start/runtime ceilings",
+        "swap_configuration_monitoring": "capacity in admission/final snapshots; runtime logical usage monitoring",
+        "swap_policy_interpretation": "revised experiment admission; not a validated physical safety threshold",
+        "telemetry_interval_ms": 500,
+        "telemetry_stall_ceiling_seconds": 5,
+        "unchanged_boot_and_thermal_trip_counters": true
+      },
+      "directory": "02_cascade_r1",
+      "embedding_setup_seconds": 2.89618837,
+      "entry_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/02_cascade_r1",
+      "finish_resident_models": [],
+      "finish_utc": "2026-09-12T12:49:20.121254+00:00",
+      "first_request_seconds": 29.928474276,
+      "frozen_workload_sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+      "generation_calls_actual": {
+        "qwen3:0.6b": 1,
+        "qwen3:1.7b": 47
+      },
+      "generation_calls_requested": {
+        "qwen3:0.6b": 1,
+        "qwen3:1.7b": 47
+      },
+      "generator_token_and_decode_metadata": {
+        "qwen3:0.6b": {
+          "decode_seconds": {
+            "max": 1.414863,
+            "mean": 1.414863,
+            "n": 1,
+            "p50": 1.414863,
+            "p95": 1.414863,
+            "sum": 1.414863
+          },
+          "generated_tokens": {
+            "max": 50,
+            "mean": 50.0,
+            "n": 1,
+            "p50": 50.0,
+            "p95": 50.0,
+            "sum": 50.0
+          },
+          "generation_calls": 1,
+          "prompt_tokens": {
+            "max": 354,
+            "mean": 354.0,
+            "n": 1,
+            "p50": 354.0,
+            "p95": 354.0,
+            "sum": 354.0
+          }
+        },
+        "qwen3:1.7b": {
+          "decode_seconds": {
+            "max": 9.302061,
+            "mean": 4.86610221274468,
+            "n": 47,
+            "p50": 4.588997,
+            "p95": 8.2445857997,
+            "sum": 228.706803999
+          },
+          "generated_tokens": {
+            "max": 88,
+            "mean": 50.8936170212766,
+            "n": 47,
+            "p50": 52.0,
+            "p95": 83.1,
+            "sum": 2392.0
+          },
+          "generation_calls": 47,
+          "prompt_tokens": {
+            "max": 561,
+            "mean": 364.3829787234043,
+            "n": 47,
+            "p50": 352.0,
+            "p95": 496.0,
+            "sum": 17126.0
+          }
+        }
+      },
+      "http_unloads": {
+        "count_including_cleanup": 4,
+        "during_recorded_requests": 3,
+        "wall_total_seconds": 0.011566389
+      },
+      "input_sha256": {
+        "finish.json": "8c8bbe3f7baa41b3a70dbecf2ace5a33f7110d5ca9eab79856a8acb909f96b6d",
+        "http_calls.jsonl": "940612f55d3060d82b3d307fa499a7498fc7d4164114692bf7f7d19a75130b70",
+        "manifest.json": "7f985ef8ee3c032ad8499215a00fdea4e3e2fe67282b9e7f6cf0af2eb78143de",
+        "memory_setup.json": "733f46eaf625b18787d8bd270ae1285517bd8c526d8774f3dc0832ef3c99e138",
+        "observations.jsonl": "552de48cbcd0737ce39e88ec93d348e6eb3ffb6f8833e16b17b1181fb56d0d20",
+        "start.json": "1ac33b97140654911b284ff8b8c875795eb8dd8ec382d8b942b13213dda0e190",
+        "telemetry.jsonl": "7c93b70282f105b81554652248c9cf93003ec6818911a6eef8d3da2df3368ba7"
+      },
+      "is_link": true,
+      "later_request_latency_seconds": {
+        "max": 30.01601883,
+        "mean": 6.806445334021277,
+        "n": 47,
+        "p50": 6.237935943,
+        "p95": 11.046649737,
+        "sum": 319.902930699
+      },
+      "load_metadata_seconds": {
+        "max": 23.648120533,
+        "mean": 0.6692155290987654,
+        "n": 81,
+        "p50": 0.001988847,
+        "p95": 0.004398282,
+        "sum": 54.206457857
+      },
+      "loads_above_one_second": [
+        {
+          "index": 1,
+          "load_seconds": 23.648120533,
+          "model": "qwen3:1.7b",
+          "purpose": "memory_selector"
+        },
+        {
+          "index": 14,
+          "load_seconds": 9.391383717,
+          "model": "qwen3:0.6b",
+          "purpose": "generation"
+        },
+        {
+          "index": 15,
+          "load_seconds": 20.992738166,
+          "model": "qwen3:1.7b",
+          "purpose": "generation"
+        }
+      ],
+      "memory_classifier_calls_actual": {
+        "qwen3:0.6b": 1,
+        "qwen3:1.7b": 32
+      },
+      "memory_snapshot_sha256": "71bd3383c736b4185e51395853d25eb64065fc6abe2be1637b0c536f3c9b359c",
+      "model_metadata_unchanged": true,
+      "nested_call_metadata_seconds": {
+        "all_model_call_wall_total": 346.826530543,
+        "classifier_call_wall_total": 70.970753755,
+        "ollama_decode_total": 268.631696999,
+        "ollama_load_total": 54.206457857,
+        "ollama_prefill_total": 16.241504,
+        "ollama_server_total": 345.387748968
+      },
+      "ollama_version_unchanged": true,
+      "peak_ram_used_mib": 6307,
+      "peak_swap_used_mib": 1666,
+      "post_ps_disagrees_with_last_reported_generator_indices": [],
+      "profile_id": "post_memory_comparison_v1",
+      "request_latency_seconds": {
+        "max": 30.01601883,
+        "mean": 7.2881542703125,
+        "n": 48,
+        "p50": 6.361941702999999,
+        "p95": 11.146197280300001,
+        "sum": 349.831404975
+      },
+      "request_wall_decomposition_seconds": {
+        "generation_call_wall_total": 275.855776788,
+        "other_request_wall_total": 1.390767202000018,
+        "request_total": 349.831404975,
+        "retrieval_total": 0.751617102,
+        "routing_total": 71.833243883
+      },
+      "selected_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1",
+      "source_unchanged": true,
+      "start_available_ram_mib": 2674.43359375,
+      "start_max_temperature_c": 54.687,
+      "start_swap_used_mib": 1560.5,
+      "start_utc": "2026-09-12T12:43:25.302890+00:00",
+      "status": "complete_with_errors",
+      "telemetry_gpu_activity_percent": {
+        "max": 99,
+        "mean": 71.6867816091954,
+        "n": 696,
+        "p50": 67.0,
+        "p95": 99.0,
+        "sum": 49894.0
+      }
+    },
+    {
+      "allocation_states": [
+        {
+          "context_length": 2048,
+          "first_index": 1,
+          "last_index": 48,
+          "model": "qwen3:0.6b",
+          "observed_after_request_count": 48,
+          "reported_gpu_allocation_percent": 100.0,
+          "reported_size_bytes": 693423308,
+          "reported_size_vram_bytes": 693423308
+        }
+      ],
+      "api_ps_after_model_counts": {
+        "qwen3:0.6b": 48
+      },
+      "attempted": 48,
+      "call_status_counts": {
+        "error": 1,
+        "ok": 80
+      },
+      "cleanup_errors": [],
+      "compute_classifier_calls": 0,
+      "device_policy": {
+        "expected_swap_total_kib": 3901608,
+        "fan_required": true,
+        "logical_swap_reserve_kib": 262144,
+        "max_runtime_swap_used_kib": 3639464,
+        "max_runtime_temperature_c_exclusive": 68.0,
+        "max_start_swap_used_kib": 3639464,
+        "max_start_temperature_c_exclusive": 55.0,
+        "maximum_resident_models": 1,
+        "min_runtime_available_kib": 786432,
+        "min_start_available_kib": 2097152,
+        "persistent_system_changes": false,
+        "policy_id": "post_memory_existing_swap_reserve_v2",
+        "power_mode": "15W mode 0",
+        "prior_arc_limits_reused": false,
+        "scope": "all revised post-memory arms; embeddings through final cleanup",
+        "swap_capacity_policy": "existing capacity minus 256 MiB; equal start/runtime ceilings",
+        "swap_configuration_monitoring": "capacity in admission/final snapshots; runtime logical usage monitoring",
+        "swap_policy_interpretation": "revised experiment admission; not a validated physical safety threshold",
+        "telemetry_interval_ms": 500,
+        "telemetry_stall_ceiling_seconds": 5,
+        "unchanged_boot_and_thermal_trip_counters": true
+      },
+      "directory": "03_small_r1",
+      "embedding_setup_seconds": 2.776862615,
+      "entry_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1",
+      "finish_resident_models": [],
+      "finish_utc": "2026-09-12T12:55:31.303092+00:00",
+      "first_request_seconds": 11.058392387,
+      "frozen_workload_sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+      "generation_calls_actual": {
+        "qwen3:0.6b": 48
+      },
+      "generation_calls_requested": {
+        "qwen3:0.6b": 48
+      },
+      "generator_token_and_decode_metadata": {
+        "qwen3:0.6b": {
+          "decode_seconds": {
+            "max": 4.391587,
+            "mean": 1.5845149166458334,
+            "n": 48,
+            "p50": 1.4859645000000001,
+            "p95": 2.61092565,
+            "sum": 76.056715999
+          },
+          "generated_tokens": {
+            "max": 147,
+            "mean": 55.333333333333336,
+            "n": 48,
+            "p50": 52.5,
+            "p95": 87.6,
+            "sum": 2656.0
+          },
+          "generation_calls": 48,
+          "prompt_tokens": {
+            "max": 607,
+            "mean": 394.5625,
+            "n": 48,
+            "p50": 383.5,
+            "p95": 552.6999999999999,
+            "sum": 18939.0
+          }
+        }
+      },
+      "http_unloads": {
+        "count_including_cleanup": 1,
+        "during_recorded_requests": 0,
+        "wall_total_seconds": 0.002305734
+      },
+      "input_sha256": {
+        "finish.json": "05eaf1420cb8e3153073ed3dc066d8b7fe0790033b1ebdad430d9c5d27611c50",
+        "http_calls.jsonl": "030fa825ce1a5535b52ab9574fb0f2f52bd2dadb07afe2b7ab20b4e324250102",
+        "manifest.json": "ef2baad35c834a15297181de55010544470420ff57c8791de9c621be63ee631c",
+        "memory_setup.json": "b90bdf32f446c123ba20e8bcb94df2f444a121201c2b334d0efc7e21a2976782",
+        "observations.jsonl": "f76e1706bb0ad409e922147942c4ec7d9e8f6cf0c15296ea82aa5bff26da2a15",
+        "start.json": "64fe5769be594b01f65767c20999013e9901c26c3ba491c42f817777e1e7ddcb",
+        "telemetry.jsonl": "46f7304a3b323c551c62cbab132c5cccfbe4b53e16945831f23739fd60e958b1"
+      },
+      "is_link": false,
+      "later_request_latency_seconds": {
+        "max": 5.394067256,
+        "mean": 2.1495192800425533,
+        "n": 47,
+        "p50": 2.100739914,
+        "p95": 3.2285695824999996,
+        "sum": 101.027406162
+      },
+      "load_metadata_seconds": {
+        "max": 9.186669788,
+        "mean": 0.11533828519753087,
+        "n": 81,
+        "p50": 0.00177398,
+        "p95": 0.003221491,
+        "sum": 9.342401101
+      },
+      "loads_above_one_second": [
+        {
+          "index": 1,
+          "load_seconds": 9.186669788,
+          "model": "qwen3:0.6b",
+          "purpose": "memory_selector"
+        }
+      ],
+      "memory_classifier_calls_actual": {
+        "qwen3:0.6b": 33
+      },
+      "memory_snapshot_sha256": "71bd3383c736b4185e51395853d25eb64065fc6abe2be1637b0c536f3c9b359c",
+      "model_metadata_unchanged": true,
+      "nested_call_metadata_seconds": {
+        "all_model_call_wall_total": 108.628647538,
+        "classifier_call_wall_total": 25.80736257,
+        "ollama_decode_total": 87.808382999,
+        "ollama_load_total": 9.342401101,
+        "ollama_prefill_total": 4.987519999,
+        "ollama_server_total": 107.227838662
+      },
+      "ollama_version_unchanged": true,
+      "peak_ram_used_mib": 5572,
+      "peak_swap_used_mib": 1648,
+      "post_ps_disagrees_with_last_reported_generator_indices": [],
+      "profile_id": "post_memory_comparison_v1",
+      "request_latency_seconds": {
+        "max": 11.058392387,
+        "mean": 2.3351208031041666,
+        "n": 48,
+        "p50": 2.1173656095,
+        "p95": 3.2981427674,
+        "sum": 112.085798549
+      },
+      "request_wall_decomposition_seconds": {
+        "generation_call_wall_total": 82.821284968,
+        "other_request_wall_total": 1.3351657880000032,
+        "request_total": 112.085798549,
+        "retrieval_total": 1.308118105,
+        "routing_total": 26.621229688
+      },
+      "selected_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1",
+      "source_unchanged": true,
+      "start_available_ram_mib": 2681.703125,
+      "start_max_temperature_c": 53.843,
+      "start_swap_used_mib": 1648.0,
+      "start_utc": "2026-09-12T12:53:34.396834+00:00",
+      "status": "complete_with_errors",
+      "telemetry_gpu_activity_percent": {
+        "max": 99,
+        "mean": 87.96521739130435,
+        "n": 230,
+        "p50": 96.0,
+        "p95": 99.0,
+        "sum": 20232.0
+      }
+    },
+    {
+      "allocation_states": [
+        {
+          "context_length": 2048,
+          "first_index": 1,
+          "last_index": 13,
+          "model": "qwen3:1.7b",
+          "observed_after_request_count": 13,
+          "reported_gpu_allocation_percent": 81.00671318165257,
+          "reported_size_bytes": 1658826258,
+          "reported_size_vram_bytes": 1343760629
+        },
+        {
+          "context_length": 2048,
+          "first_index": 14,
+          "last_index": 14,
+          "model": "qwen3:0.6b",
+          "observed_after_request_count": 1,
+          "reported_gpu_allocation_percent": 100.0,
+          "reported_size_bytes": 693423308,
+          "reported_size_vram_bytes": 693423308
+        },
+        {
+          "context_length": 2048,
+          "first_index": 15,
+          "last_index": 48,
+          "model": "qwen3:1.7b",
+          "observed_after_request_count": 34,
+          "reported_gpu_allocation_percent": 76.21636317778129,
+          "reported_size_bytes": 1658815773,
+          "reported_size_vram_bytes": 1264289054
+        }
+      ],
+      "api_ps_after_model_counts": {
+        "qwen3:0.6b": 1,
+        "qwen3:1.7b": 47
+      },
+      "attempted": 48,
+      "call_status_counts": {
+        "ok": 81
+      },
+      "cleanup_errors": [],
+      "compute_classifier_calls": 0,
+      "device_policy": {
+        "expected_swap_total_kib": 3901608,
+        "fan_required": true,
+        "logical_swap_reserve_kib": 262144,
+        "max_runtime_swap_used_kib": 3639464,
+        "max_runtime_temperature_c_exclusive": 68.0,
+        "max_start_swap_used_kib": 3639464,
+        "max_start_temperature_c_exclusive": 55.0,
+        "maximum_resident_models": 1,
+        "min_runtime_available_kib": 786432,
+        "min_start_available_kib": 2097152,
+        "persistent_system_changes": false,
+        "policy_id": "post_memory_existing_swap_reserve_v2",
+        "power_mode": "15W mode 0",
+        "prior_arc_limits_reused": false,
+        "scope": "all revised post-memory arms; embeddings through final cleanup",
+        "swap_capacity_policy": "existing capacity minus 256 MiB; equal start/runtime ceilings",
+        "swap_configuration_monitoring": "capacity in admission/final snapshots; runtime logical usage monitoring",
+        "swap_policy_interpretation": "revised experiment admission; not a validated physical safety threshold",
+        "telemetry_interval_ms": 500,
+        "telemetry_stall_ceiling_seconds": 5,
+        "unchanged_boot_and_thermal_trip_counters": true
+      },
+      "directory": "04_cascade_r2",
+      "embedding_setup_seconds": 2.466608009,
+      "entry_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2",
+      "finish_resident_models": [],
+      "finish_utc": "2026-09-12T13:06:14.751877+00:00",
+      "first_request_seconds": 28.029266228,
+      "frozen_workload_sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+      "generation_calls_actual": {
+        "qwen3:0.6b": 1,
+        "qwen3:1.7b": 47
+      },
+      "generation_calls_requested": {
+        "qwen3:0.6b": 1,
+        "qwen3:1.7b": 47
+      },
+      "generator_token_and_decode_metadata": {
+        "qwen3:0.6b": {
+          "decode_seconds": {
+            "max": 1.460698,
+            "mean": 1.460698,
+            "n": 1,
+            "p50": 1.460698,
+            "p95": 1.460698,
+            "sum": 1.460698
+          },
+          "generated_tokens": {
+            "max": 50,
+            "mean": 50.0,
+            "n": 1,
+            "p50": 50.0,
+            "p95": 50.0,
+            "sum": 50.0
+          },
+          "generation_calls": 1,
+          "prompt_tokens": {
+            "max": 354,
+            "mean": 354.0,
+            "n": 1,
+            "p50": 354.0,
+            "p95": 354.0,
+            "sum": 354.0
+          }
+        },
+        "qwen3:1.7b": {
+          "decode_seconds": {
+            "max": 14.204389,
+            "mean": 7.439895489361702,
+            "n": 47,
+            "p50": 6.985698,
+            "p95": 11.934955499999997,
+            "sum": 349.675088
+          },
+          "generated_tokens": {
+            "max": 91,
+            "mean": 52.51063829787234,
+            "n": 47,
+            "p50": 50.0,
+            "p95": 82.79999999999998,
+            "sum": 2468.0
+          },
+          "generation_calls": 47,
+          "prompt_tokens": {
+            "max": 561,
+            "mean": 364.3829787234043,
+            "n": 47,
+            "p50": 352.0,
+            "p95": 496.0,
+            "sum": 17126.0
+          }
+        }
+      },
+      "http_unloads": {
+        "count_including_cleanup": 4,
+        "during_recorded_requests": 3,
+        "wall_total_seconds": 0.015827578999999998
+      },
+      "input_sha256": {
+        "finish.json": "4066aaedfdda2c2ffdcc75245e27d4d565311d43ede259b4f567b1a9b10910c4",
+        "http_calls.jsonl": "316d77d53258b2d2cf0d22cfb752e28a6834b95c6d5192aaebeedd9315ddf6eb",
+        "manifest.json": "ea1f545e84c4aff1590b1b33466dda74c95325551fb764cdb05b54732520fe93",
+        "memory_setup.json": "6603e38be9e4357dc71fb2cb7c6cdde0c71723f4b5f6f3bfa6be8e5098ed9195",
+        "observations.jsonl": "6bf194c81d481d436390bbaf48d252d1ffbc35ef732f6cf2334bd6323e38b842",
+        "start.json": "6347512f52f222b1eeae06d54c1bfdf28c6627a46a626c9b913db94da9f2b149",
+        "telemetry.jsonl": "3e84d2737264780f90b50309a46bca15825c2b7eb5fb026be987a50e711df2e2"
+      },
+      "is_link": false,
+      "later_request_latency_seconds": {
+        "max": 32.601532012,
+        "mean": 9.996281425595745,
+        "n": 47,
+        "p50": 9.395548687,
+        "p95": 15.1836599636,
+        "sum": 469.825227003
+      },
+      "load_metadata_seconds": {
+        "max": 21.981471814,
+        "mean": 0.6674968055679013,
+        "n": 81,
+        "p50": 0.002063528,
+        "p95": 0.003344736,
+        "sum": 54.067241251
+      },
+      "loads_above_one_second": [
+        {
+          "index": 1,
+          "load_seconds": 21.904129088,
+          "model": "qwen3:1.7b",
+          "purpose": "memory_selector"
+        },
+        {
+          "index": 14,
+          "load_seconds": 10.007576987,
+          "model": "qwen3:0.6b",
+          "purpose": "generation"
+        },
+        {
+          "index": 15,
+          "load_seconds": 21.981471814,
+          "model": "qwen3:1.7b",
+          "purpose": "generation"
+        }
+      ],
+      "memory_classifier_calls_actual": {
+        "qwen3:0.6b": 1,
+        "qwen3:1.7b": 32
+      },
+      "memory_snapshot_sha256": "71bd3383c736b4185e51395853d25eb64065fc6abe2be1637b0c536f3c9b359c",
+      "model_metadata_unchanged": true,
+      "nested_call_metadata_seconds": {
+        "all_model_call_wall_total": 494.855666032,
+        "classifier_call_wall_total": 93.755013407,
+        "ollama_decode_total": 411.46794,
+        "ollama_load_total": 54.067241251,
+        "ollama_prefill_total": 21.505367998,
+        "ollama_server_total": 493.479827528
+      },
+      "ollama_version_unchanged": true,
+      "peak_ram_used_mib": 6487,
+      "peak_swap_used_mib": 1645,
+      "post_ps_disagrees_with_last_reported_generator_indices": [],
+      "profile_id": "post_memory_comparison_v1",
+      "request_latency_seconds": {
+        "max": 32.601532012,
+        "mean": 10.371968608979167,
+        "n": 48,
+        "p50": 9.4546173815,
+        "p95": 16.804430997549996,
+        "sum": 497.854493231
+      },
+      "request_wall_decomposition_seconds": {
+        "generation_call_wall_total": 401.100652625,
+        "other_request_wall_total": 1.3494381389999468,
+        "request_total": 497.854493231,
+        "retrieval_total": 0.779544028,
+        "routing_total": 94.62485843900001
+      },
+      "selected_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2",
+      "source_unchanged": true,
+      "start_available_ram_mib": 2610.65625,
+      "start_max_temperature_c": 53.812,
+      "start_swap_used_mib": 1642.75,
+      "start_utc": "2026-09-12T12:57:52.270840+00:00",
+      "status": "complete_with_errors",
+      "telemetry_gpu_activity_percent": {
+        "max": 100,
+        "mean": 63.733265720081135,
+        "n": 986,
+        "p50": 58.0,
+        "p95": 99.0,
+        "sum": 62841.0
+      }
+    },
+    {
+      "allocation_states": [
+        {
+          "context_length": 2048,
+          "first_index": 1,
+          "last_index": 48,
+          "model": "qwen3:0.6b",
+          "observed_after_request_count": 48,
+          "reported_gpu_allocation_percent": 100.0,
+          "reported_size_bytes": 693423308,
+          "reported_size_vram_bytes": 693423308
+        }
+      ],
+      "api_ps_after_model_counts": {
+        "qwen3:0.6b": 48
+      },
+      "attempted": 48,
+      "call_status_counts": {
+        "error": 1,
+        "ok": 80
+      },
+      "cleanup_errors": [],
+      "compute_classifier_calls": 0,
+      "device_policy": {
+        "expected_swap_total_kib": 3901608,
+        "fan_required": true,
+        "logical_swap_reserve_kib": 262144,
+        "max_runtime_swap_used_kib": 3639464,
+        "max_runtime_temperature_c_exclusive": 68.0,
+        "max_start_swap_used_kib": 3639464,
+        "max_start_temperature_c_exclusive": 55.0,
+        "maximum_resident_models": 1,
+        "min_runtime_available_kib": 786432,
+        "min_start_available_kib": 2097152,
+        "persistent_system_changes": false,
+        "policy_id": "post_memory_existing_swap_reserve_v2",
+        "power_mode": "15W mode 0",
+        "prior_arc_limits_reused": false,
+        "scope": "all revised post-memory arms; embeddings through final cleanup",
+        "swap_capacity_policy": "existing capacity minus 256 MiB; equal start/runtime ceilings",
+        "swap_configuration_monitoring": "capacity in admission/final snapshots; runtime logical usage monitoring",
+        "swap_policy_interpretation": "revised experiment admission; not a validated physical safety threshold",
+        "telemetry_interval_ms": 500,
+        "telemetry_stall_ceiling_seconds": 5,
+        "unchanged_boot_and_thermal_trip_counters": true
+      },
+      "directory": "05_small_r2",
+      "embedding_setup_seconds": 3.57771402,
+      "entry_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2",
+      "finish_resident_models": [],
+      "finish_utc": "2026-09-12T13:10:53.774935+00:00",
+      "first_request_seconds": 11.055301053,
+      "frozen_workload_sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+      "generation_calls_actual": {
+        "qwen3:0.6b": 48
+      },
+      "generation_calls_requested": {
+        "qwen3:0.6b": 48
+      },
+      "generator_token_and_decode_metadata": {
+        "qwen3:0.6b": {
+          "decode_seconds": {
+            "max": 4.291792,
+            "mean": 1.5879931666458333,
+            "n": 48,
+            "p50": 1.504248,
+            "p95": 2.57277945,
+            "sum": 76.223671999
+          },
+          "generated_tokens": {
+            "max": 147,
+            "mean": 55.333333333333336,
+            "n": 48,
+            "p50": 52.5,
+            "p95": 87.6,
+            "sum": 2656.0
+          },
+          "generation_calls": 48,
+          "prompt_tokens": {
+            "max": 607,
+            "mean": 394.5625,
+            "n": 48,
+            "p50": 383.5,
+            "p95": 552.6999999999999,
+            "sum": 18939.0
+          }
+        }
+      },
+      "http_unloads": {
+        "count_including_cleanup": 1,
+        "during_recorded_requests": 0,
+        "wall_total_seconds": 0.003558157
+      },
+      "input_sha256": {
+        "finish.json": "f64d318cea758d4f471e8e48ecbadc3a473a1305dbaa6aff431491a0f933633d",
+        "http_calls.jsonl": "98a42e089fc7f47bccc02f3bf042b643aa8b076468ed502f281116ec4403261b",
+        "manifest.json": "d70c03a8006766142ac4dcbeb78dfd62081f0d03c4e396edc892baa1972ca77b",
+        "memory_setup.json": "d6bea9e7e714c62a4c9d5aec37fe427d88299759956a38139e891fa66b802a01",
+        "observations.jsonl": "1f8da8142837e315606bca4f4def56c1a87c5b7209ce6b49e4fb36608d4abec1",
+        "start.json": "8ef4ac0c834ae970fa50b983083076553b03af92a6b17602fd4a3fc1a1eb5329",
+        "telemetry.jsonl": "316a30418dc83590615e4bea660dab92e68193e6071602b1b413a7e594ce2375"
+      },
+      "is_link": false,
+      "later_request_latency_seconds": {
+        "max": 5.239173362,
+        "mean": 2.1506408386170213,
+        "n": 47,
+        "p50": 2.07980205,
+        "p95": 3.2332922950999996,
+        "sum": 101.080119415
+      },
+      "load_metadata_seconds": {
+        "max": 9.154768743,
+        "mean": 0.11502614153086421,
+        "n": 81,
+        "p50": 0.001777606,
+        "p95": 0.003569517,
+        "sum": 9.317117464
+      },
+      "loads_above_one_second": [
+        {
+          "index": 1,
+          "load_seconds": 9.154768743,
+          "model": "qwen3:0.6b",
+          "purpose": "memory_selector"
+        }
+      ],
+      "memory_classifier_calls_actual": {
+        "qwen3:0.6b": 33
+      },
+      "memory_snapshot_sha256": "71bd3383c736b4185e51395853d25eb64065fc6abe2be1637b0c536f3c9b359c",
+      "model_metadata_unchanged": true,
+      "nested_call_metadata_seconds": {
+        "all_model_call_wall_total": 108.59678357,
+        "classifier_call_wall_total": 25.625639849,
+        "ollama_decode_total": 88.010975999,
+        "ollama_load_total": 9.317117464,
+        "ollama_prefill_total": 5.098202999,
+        "ollama_server_total": 107.196347637
+      },
+      "ollama_version_unchanged": true,
+      "peak_ram_used_mib": 5670,
+      "peak_swap_used_mib": 1643,
+      "post_ps_disagrees_with_last_reported_generator_indices": [],
+      "profile_id": "post_memory_comparison_v1",
+      "request_latency_seconds": {
+        "max": 11.055301053,
+        "mean": 2.3361545930833336,
+        "n": 48,
+        "p50": 2.1450460035,
+        "p95": 3.2659103203999997,
+        "sum": 112.135420468
+      },
+      "request_wall_decomposition_seconds": {
+        "generation_call_wall_total": 82.971143721,
+        "other_request_wall_total": 1.3568226520000082,
+        "request_total": 112.135420468,
+        "retrieval_total": 1.341039483,
+        "routing_total": 26.466414612
+      },
+      "selected_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2",
+      "source_unchanged": true,
+      "start_available_ram_mib": 2548.6796875,
+      "start_max_temperature_c": 53.437,
+      "start_swap_used_mib": 1643.5,
+      "start_utc": "2026-09-12T13:08:56.004284+00:00",
+      "status": "complete_with_errors",
+      "telemetry_gpu_activity_percent": {
+        "max": 99,
+        "mean": 87.54112554112554,
+        "n": 231,
+        "p50": 96.0,
+        "p95": 99.0,
+        "sum": 20222.0
+      }
+    }
+  ],
+  "terminal_sessions": 5
+}

@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-09-13T17:07:42.969023+00:00",
+  "author": "independent collection/numeric auditor /root/audit_design",
+  "source_sha256": "66c4bed36b791cbd2d5cff869e2e9017b320b8ecd5f7f76bdf0410fb7cd5edd0",
+  "validation": "AST syntax validation only; no complete primary observations or judgments analyzed during preparation.",
+  "implementation": "Standard-library independent arithmetic, without imports from analyzer or inference runtime.",
+  "changes": [
+    "Preserves strict global schedule prefix while reading inherited and new physical fragments.",
+    "Checks fragment offset, original scheduled index and local cold-first index independently.",
+    "Verifies suffix ledger/continuation seals and prior observation identity list.",
+    "Compares physical-fragment counts and18 logical-slot coverage separately.",
+    "Checks inherited/new zero-attempt rejection counts and forbids duplicate physical directories.",
+    "Independently checks fragment request/cold/warm timing distributions and setup/cleanup/wall durations.",
+    "Retains interrupted final-attempt status separately from complete864-attempt coverage.",
+    "Mismatch evidence is JSON-serializable, including sets and paths."
+  ],
+  "unchanged": "Per-attempt quality/retrieval/coverage/timing arithmetic and request/scenario dependent paired statistics; original prepv1 preserved.",
+  "execution_status": "Prepared, not executed against final collection/reviews. Do not run during active inference.",
+  "planned_command": "python3 evaluation/independent_retrieval_20260913/independent_numeric_audit.py --freeze FROZEN_DIRECTORY --run SEALED_FINAL_RUN_DIRECTORY --analysis SEALED_REVIEWED_ANALYSIS_DIRECTORY --output NEW_AUDIT_DIRECTORY"
+}

@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evaluation/changing_memory_repair_20260914/stage_first_repair_reproduction.py",
+    "stage",
+    "--stage",
+    "/tmp/clara-first-repair-source-20260914-v1",
+    "--output",
+    "/tmp/clara-first-repair-reproduction-20260914-v1"
+  ],
+  "cwd": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI",
+  "started_at": "2026-09-14T14:28:04.269859+00:00",
+  "finished_at": "2026-09-14T14:28:05.633205+00:00",
+  "returncode": 0,
+  "helper_sha256": "25b7b7c90394759a5b92d213a086182dd4898e45f35a86504b6ae7ad0b9189ca",
+  "log_sha256": "5536411d2e557bce0a3dbf49ecc1102b115acddc3fff651c20175c8ef1a38b2a"
+}

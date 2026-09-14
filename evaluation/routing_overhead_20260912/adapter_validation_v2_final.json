@@ -1,0 +1,17 @@
+{
+  "scope": "offline final adapter regression; failed-delivery status and corrupted payload injected in memory only",
+  "checks": [
+    {
+      "failed_delivery_payload_corrupted": false,
+      "passed": true
+    },
+    {
+      "failed_delivery_payload_corrupted": true,
+      "passed": true
+    }
+  ],
+  "earlier_validation": "adapter_validation_v2.json",
+  "adapter_sha256": "bdb1d2735fd173d16cb5000c8314b47c4d69b38e5afff47d1d044cea5359acb3",
+  "frozen_v1_source_modified": false,
+  "raw_artifacts_modified": false
+}

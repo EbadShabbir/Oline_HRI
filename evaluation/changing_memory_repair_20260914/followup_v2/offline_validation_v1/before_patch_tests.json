@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_current_relationship_repair",
+    "-v"
+  ],
+  "environment": {
+    "PYTHONPATH": "src:tests"
+  },
+  "started_at": "2026-09-14T14:17:56.062621+00:00",
+  "finished_at": "2026-09-14T14:17:56.556730+00:00",
+  "returncode": 1,
+  "purpose": "Demonstrate new regressions against the sealed first-repair source before applying the second repair.",
+  "live_inference": false
+}

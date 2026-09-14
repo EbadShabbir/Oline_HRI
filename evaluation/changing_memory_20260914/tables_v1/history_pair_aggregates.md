@@ -1,0 +1,16 @@
+# history pair aggregates
+
+| branch | restart_phase | pairs | both_observed | success_both | success_retained_only | success_fresh_only | success_neither | disclosure_both | disclosure_retained_only | disclosure_fresh_only | disclosure_neither | revoked_subject_disclosure_both | revoked_subject_disclosure_retained_only | revoked_subject_disclosure_fresh_only | revoked_subject_disclosure_neither |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| all | all | 108 | 108 | 13 | 3 | 53 | 39 | 2 | 57 | 0 | 49 | 0 | 59 | 0 | 49 |
+| all | before | 60 | 60 | 10 | 3 | 32 | 15 | 0 | 28 | 0 | 32 | 0 | 28 | 0 | 32 |
+| all | after | 48 | 48 | 3 | 0 | 21 | 24 | 2 | 29 | 0 | 17 | 0 | 31 | 0 | 17 |
+| correction | all | 48 | 48 | 0 | 0 | 15 | 33 | 0 | 21 | 0 | 27 | 0 | 21 | 0 | 27 |
+| correction | before | 24 | 24 | 0 | 0 | 9 | 15 | 0 | 10 | 0 | 14 | 0 | 10 | 0 | 14 |
+| correction | after | 24 | 24 | 0 | 0 | 6 | 18 | 0 | 11 | 0 | 13 | 0 | 11 | 0 | 13 |
+| deletion | all | 24 | 24 | 3 | 0 | 18 | 3 | 1 | 19 | 0 | 4 | 0 | 20 | 0 | 4 |
+| deletion | before | 12 | 12 | 2 | 0 | 10 | 0 | 0 | 9 | 0 | 3 | 0 | 9 | 0 | 3 |
+| deletion | after | 12 | 12 | 1 | 0 | 8 | 3 | 1 | 10 | 0 | 1 | 0 | 11 | 0 | 1 |
+| expiry | all | 36 | 36 | 10 | 3 | 20 | 3 | 1 | 17 | 0 | 18 | 0 | 18 | 0 | 18 |
+| expiry | before | 24 | 24 | 8 | 3 | 13 | 0 | 0 | 9 | 0 | 15 | 0 | 9 | 0 | 15 |
+| expiry | after | 12 | 12 | 2 | 0 | 7 | 3 | 1 | 8 | 0 | 3 | 0 | 9 | 0 | 3 |

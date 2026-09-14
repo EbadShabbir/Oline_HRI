@@ -1,0 +1,1668 @@
+{
+  "partial": false,
+  "all": {
+    "planned": 288,
+    "attempted": 288,
+    "delivered": 283,
+    "missing": 0,
+    "useful_correct": 118,
+    "classification": {
+      "appropriate_uncertainty": 67,
+      "correct_recall": 51,
+      "incorrect": 101,
+      "partial": 55,
+      "no_delivered_answer": 5,
+      "inappropriate_uncertainty": 9
+    },
+    "status": {
+      "delivered": 283,
+      "withheld": 5
+    },
+    "all_forbidden_disclosure": 89,
+    "validation_rejection_without_disclosure": 5,
+    "freshness_rejection_without_disclosure": 0,
+    "client_output_validation_without_disclosure": 0,
+    "failure_findings": {
+      "retrieval_skipped_by_memory_policy": 39,
+      "delivered_semantic_failure_with_sufficient_evidence": 131,
+      "evidence_selection_required_fact_missing": 9,
+      "validation_rejection": 5
+    },
+    "actual_models": {
+      "qwen3:0.6b": 830,
+      "qwen3:1.7b": 34
+    },
+    "requested_models": {
+      "qwen3:0.6b": 830,
+      "qwen3:1.7b": 34
+    },
+    "actual_generator_models": {
+      "qwen3:0.6b": 254,
+      "qwen3:1.7b": 34
+    },
+    "original": {
+      "successful": 36,
+      "planned": 48,
+      "delivered": 48
+    },
+    "replacement": {
+      "successful": 13,
+      "planned": 48,
+      "delivered": 43
+    },
+    "historical_control": {
+      "successful": 2,
+      "planned": 48,
+      "delivered": 48
+    },
+    "uncertainty": {
+      "successful": 67,
+      "planned": 144,
+      "delivered": 144
+    },
+    "stale_subject_disclosure_after_correction": {
+      "disclosures": 21,
+      "planned": 96,
+      "delivered": 91
+    },
+    "deleted_subject_disclosure": {
+      "disclosures": 39,
+      "planned": 72,
+      "delivered": 72
+    },
+    "expired_subject_disclosure": {
+      "disclosures": 27,
+      "planned": 60,
+      "delivered": 60
+    },
+    "stale_subject_disclosure_current_replacement_questions": {
+      "disclosures": 21,
+      "planned": 48,
+      "delivered": 43
+    },
+    "any_expired_fact_disclosure": {
+      "disclosures": 27,
+      "planned": 60,
+      "delivered": 60
+    }
+  },
+  "groups": {
+    "branch=correction": {
+      "planned": 120,
+      "attempted": 120,
+      "delivered": 115,
+      "missing": 0,
+      "useful_correct": 36,
+      "classification": {
+        "appropriate_uncertainty": 12,
+        "correct_recall": 24,
+        "incorrect": 23,
+        "partial": 52,
+        "no_delivered_answer": 5,
+        "inappropriate_uncertainty": 4
+      },
+      "status": {
+        "delivered": 115,
+        "withheld": 5
+      },
+      "all_forbidden_disclosure": 21,
+      "validation_rejection_without_disclosure": 5,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 27,
+        "delivered_semantic_failure_with_sufficient_evidence": 51,
+        "evidence_selection_required_fact_missing": 6,
+        "validation_rejection": 5
+      },
+      "actual_models": {
+        "qwen3:0.6b": 349,
+        "qwen3:1.7b": 11
+      },
+      "requested_models": {
+        "qwen3:0.6b": 349,
+        "qwen3:1.7b": 11
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 109,
+        "qwen3:1.7b": 11
+      },
+      "original": {
+        "successful": 9,
+        "planned": 12,
+        "delivered": 12
+      },
+      "replacement": {
+        "successful": 13,
+        "planned": 48,
+        "delivered": 43
+      },
+      "historical_control": {
+        "successful": 2,
+        "planned": 48,
+        "delivered": 48
+      },
+      "uncertainty": {
+        "successful": 12,
+        "planned": 12,
+        "delivered": 12
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 21,
+        "planned": 96,
+        "delivered": 91
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 21,
+        "planned": 48,
+        "delivered": 43
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      }
+    },
+    "branch=deletion": {
+      "planned": 84,
+      "attempted": 84,
+      "delivered": 84,
+      "missing": 0,
+      "useful_correct": 37,
+      "classification": {
+        "correct_recall": 9,
+        "incorrect": 44,
+        "appropriate_uncertainty": 28,
+        "inappropriate_uncertainty": 1,
+        "partial": 2
+      },
+      "status": {
+        "delivered": 84
+      },
+      "all_forbidden_disclosure": 40,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "delivered_semantic_failure_with_sufficient_evidence": 46,
+        "evidence_selection_required_fact_missing": 1
+      },
+      "actual_models": {
+        "qwen3:0.6b": 243,
+        "qwen3:1.7b": 9
+      },
+      "requested_models": {
+        "qwen3:0.6b": 243,
+        "qwen3:1.7b": 9
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 75,
+        "qwen3:1.7b": 9
+      },
+      "original": {
+        "successful": 9,
+        "planned": 12,
+        "delivered": 12
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "uncertainty": {
+        "successful": 28,
+        "planned": 72,
+        "delivered": 72
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 39,
+        "planned": 72,
+        "delivered": 72
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      }
+    },
+    "branch=expiry": {
+      "planned": 84,
+      "attempted": 84,
+      "delivered": 84,
+      "missing": 0,
+      "useful_correct": 45,
+      "classification": {
+        "correct_recall": 18,
+        "incorrect": 34,
+        "appropriate_uncertainty": 27,
+        "inappropriate_uncertainty": 4,
+        "partial": 1
+      },
+      "status": {
+        "delivered": 84
+      },
+      "all_forbidden_disclosure": 28,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 12,
+        "delivered_semantic_failure_with_sufficient_evidence": 34,
+        "evidence_selection_required_fact_missing": 2
+      },
+      "actual_models": {
+        "qwen3:0.6b": 238,
+        "qwen3:1.7b": 14
+      },
+      "requested_models": {
+        "qwen3:0.6b": 238,
+        "qwen3:1.7b": 14
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 70,
+        "qwen3:1.7b": 14
+      },
+      "original": {
+        "successful": 18,
+        "planned": 24,
+        "delivered": 24
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "uncertainty": {
+        "successful": 27,
+        "planned": 60,
+        "delivered": 60
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 27,
+        "planned": 60,
+        "delivered": 60
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 27,
+        "planned": 60,
+        "delivered": 60
+      }
+    },
+    "category=appointment": {
+      "planned": 48,
+      "attempted": 48,
+      "delivered": 44,
+      "missing": 0,
+      "useful_correct": 29,
+      "classification": {
+        "appropriate_uncertainty": 23,
+        "correct_recall": 6,
+        "inappropriate_uncertainty": 5,
+        "no_delivered_answer": 4,
+        "partial": 8,
+        "incorrect": 2
+      },
+      "status": {
+        "delivered": 44,
+        "withheld": 4
+      },
+      "all_forbidden_disclosure": 2,
+      "validation_rejection_without_disclosure": 4,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 6,
+        "evidence_selection_required_fact_missing": 4,
+        "validation_rejection": 4,
+        "delivered_semantic_failure_with_sufficient_evidence": 9
+      },
+      "actual_models": {
+        "qwen3:0.6b": 124,
+        "qwen3:1.7b": 20
+      },
+      "requested_models": {
+        "qwen3:0.6b": 124,
+        "qwen3:1.7b": 20
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 28,
+        "qwen3:1.7b": 20
+      },
+      "original": {
+        "successful": 6,
+        "planned": 8,
+        "delivered": 8
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 8,
+        "delivered": 4
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 8,
+        "delivered": 8
+      },
+      "uncertainty": {
+        "successful": 23,
+        "planned": 24,
+        "delivered": 24
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 1,
+        "planned": 16,
+        "delivered": 12
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 1,
+        "planned": 12,
+        "delivered": 12
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 10,
+        "delivered": 10
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 1,
+        "planned": 8,
+        "delivered": 4
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 0,
+        "planned": 10,
+        "delivered": 10
+      }
+    },
+    "category=dated_event": {
+      "planned": 48,
+      "attempted": 48,
+      "delivered": 48,
+      "missing": 0,
+      "useful_correct": 14,
+      "classification": {
+        "appropriate_uncertainty": 10,
+        "partial": 15,
+        "incorrect": 19,
+        "correct_recall": 4
+      },
+      "status": {
+        "delivered": 48
+      },
+      "all_forbidden_disclosure": 13,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "delivered_semantic_failure_with_sufficient_evidence": 29,
+        "retrieval_skipped_by_memory_policy": 6
+      },
+      "actual_models": {
+        "qwen3:0.6b": 131,
+        "qwen3:1.7b": 13
+      },
+      "requested_models": {
+        "qwen3:0.6b": 131,
+        "qwen3:1.7b": 13
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 35,
+        "qwen3:1.7b": 13
+      },
+      "original": {
+        "successful": 2,
+        "planned": 8,
+        "delivered": 8
+      },
+      "replacement": {
+        "successful": 2,
+        "planned": 8,
+        "delivered": 8
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 8,
+        "delivered": 8
+      },
+      "uncertainty": {
+        "successful": 10,
+        "planned": 24,
+        "delivered": 24
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 4,
+        "planned": 16,
+        "delivered": 16
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 6,
+        "planned": 12,
+        "delivered": 12
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 3,
+        "planned": 10,
+        "delivered": 10
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 4,
+        "planned": 8,
+        "delivered": 8
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 3,
+        "planned": 10,
+        "delivered": 10
+      }
+    },
+    "category=object_location": {
+      "planned": 72,
+      "attempted": 72,
+      "delivered": 72,
+      "missing": 0,
+      "useful_correct": 26,
+      "classification": {
+        "appropriate_uncertainty": 13,
+        "correct_recall": 13,
+        "incorrect": 30,
+        "partial": 12,
+        "inappropriate_uncertainty": 4
+      },
+      "status": {
+        "delivered": 72
+      },
+      "all_forbidden_disclosure": 27,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 10,
+        "delivered_semantic_failure_with_sufficient_evidence": 35,
+        "evidence_selection_required_fact_missing": 4
+      },
+      "actual_models": {
+        "qwen3:0.6b": 215,
+        "qwen3:1.7b": 1
+      },
+      "requested_models": {
+        "qwen3:0.6b": 215,
+        "qwen3:1.7b": 1
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 71,
+        "qwen3:1.7b": 1
+      },
+      "original": {
+        "successful": 8,
+        "planned": 12,
+        "delivered": 12
+      },
+      "replacement": {
+        "successful": 5,
+        "planned": 12,
+        "delivered": 12
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 12,
+        "delivered": 12
+      },
+      "uncertainty": {
+        "successful": 13,
+        "planned": 36,
+        "delivered": 36
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 6,
+        "planned": 24,
+        "delivered": 24
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 12,
+        "planned": 18,
+        "delivered": 18
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 9,
+        "planned": 15,
+        "delivered": 15
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 6,
+        "planned": 12,
+        "delivered": 12
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 9,
+        "planned": 15,
+        "delivered": 15
+      }
+    },
+    "category=preference": {
+      "planned": 72,
+      "attempted": 72,
+      "delivered": 72,
+      "missing": 0,
+      "useful_correct": 28,
+      "classification": {
+        "appropriate_uncertainty": 11,
+        "correct_recall": 17,
+        "incorrect": 32,
+        "partial": 12
+      },
+      "status": {
+        "delivered": 72
+      },
+      "all_forbidden_disclosure": 29,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 11,
+        "delivered_semantic_failure_with_sufficient_evidence": 36
+      },
+      "actual_models": {
+        "qwen3:0.6b": 216
+      },
+      "requested_models": {
+        "qwen3:0.6b": 216
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 72
+      },
+      "original": {
+        "successful": 12,
+        "planned": 12,
+        "delivered": 12
+      },
+      "replacement": {
+        "successful": 3,
+        "planned": 12,
+        "delivered": 12
+      },
+      "historical_control": {
+        "successful": 2,
+        "planned": 12,
+        "delivered": 12
+      },
+      "uncertainty": {
+        "successful": 11,
+        "planned": 36,
+        "delivered": 36
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 6,
+        "planned": 24,
+        "delivered": 24
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 12,
+        "planned": 18,
+        "delivered": 18
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 9,
+        "planned": 15,
+        "delivered": 15
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 6,
+        "planned": 12,
+        "delivered": 12
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 9,
+        "planned": 15,
+        "delivered": 15
+      }
+    },
+    "category=relationship": {
+      "planned": 48,
+      "attempted": 48,
+      "delivered": 47,
+      "missing": 0,
+      "useful_correct": 21,
+      "classification": {
+        "appropriate_uncertainty": 10,
+        "correct_recall": 11,
+        "incorrect": 18,
+        "partial": 8,
+        "no_delivered_answer": 1
+      },
+      "status": {
+        "delivered": 47,
+        "withheld": 1
+      },
+      "all_forbidden_disclosure": 18,
+      "validation_rejection_without_disclosure": 1,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 6,
+        "delivered_semantic_failure_with_sufficient_evidence": 22,
+        "evidence_selection_required_fact_missing": 1,
+        "validation_rejection": 1
+      },
+      "actual_models": {
+        "qwen3:0.6b": 144
+      },
+      "requested_models": {
+        "qwen3:0.6b": 144
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 48
+      },
+      "original": {
+        "successful": 8,
+        "planned": 8,
+        "delivered": 8
+      },
+      "replacement": {
+        "successful": 3,
+        "planned": 8,
+        "delivered": 7
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 8,
+        "delivered": 8
+      },
+      "uncertainty": {
+        "successful": 10,
+        "planned": 24,
+        "delivered": 24
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 4,
+        "planned": 16,
+        "delivered": 15
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 8,
+        "planned": 12,
+        "delivered": 12
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 6,
+        "planned": 10,
+        "delivered": 10
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 4,
+        "planned": 8,
+        "delivered": 7
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 6,
+        "planned": 10,
+        "delivered": 10
+      }
+    },
+    "history_mode=fresh": {
+      "planned": 108,
+      "attempted": 108,
+      "delivered": 103,
+      "missing": 0,
+      "useful_correct": 66,
+      "classification": {
+        "partial": 27,
+        "appropriate_uncertainty": 42,
+        "incorrect": 8,
+        "correct_recall": 24,
+        "no_delivered_answer": 5,
+        "inappropriate_uncertainty": 2
+      },
+      "status": {
+        "delivered": 103,
+        "withheld": 5
+      },
+      "all_forbidden_disclosure": 2,
+      "validation_rejection_without_disclosure": 5,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "delivered_semantic_failure_with_sufficient_evidence": 32,
+        "retrieval_skipped_by_memory_policy": 3,
+        "evidence_selection_required_fact_missing": 7,
+        "validation_rejection": 5
+      },
+      "actual_models": {
+        "qwen3:0.6b": 300,
+        "qwen3:1.7b": 24
+      },
+      "requested_models": {
+        "qwen3:0.6b": 300,
+        "qwen3:1.7b": 24
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 84,
+        "qwen3:1.7b": 24
+      },
+      "original": {
+        "successful": 9,
+        "planned": 12,
+        "delivered": 12
+      },
+      "replacement": {
+        "successful": 13,
+        "planned": 24,
+        "delivered": 19
+      },
+      "historical_control": {
+        "successful": 2,
+        "planned": 24,
+        "delivered": 24
+      },
+      "uncertainty": {
+        "successful": 42,
+        "planned": 48,
+        "delivered": 48
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 0,
+        "planned": 48,
+        "delivered": 43
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 24,
+        "delivered": 24
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 24,
+        "delivered": 24
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 0,
+        "planned": 24,
+        "delivered": 19
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 0,
+        "planned": 24,
+        "delivered": 24
+      }
+    },
+    "history_mode=retained": {
+      "planned": 180,
+      "attempted": 180,
+      "delivered": 180,
+      "missing": 0,
+      "useful_correct": 52,
+      "classification": {
+        "appropriate_uncertainty": 25,
+        "correct_recall": 27,
+        "incorrect": 93,
+        "partial": 28,
+        "inappropriate_uncertainty": 7
+      },
+      "status": {
+        "delivered": 180
+      },
+      "all_forbidden_disclosure": 87,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 36,
+        "delivered_semantic_failure_with_sufficient_evidence": 99,
+        "evidence_selection_required_fact_missing": 2
+      },
+      "actual_models": {
+        "qwen3:0.6b": 530,
+        "qwen3:1.7b": 10
+      },
+      "requested_models": {
+        "qwen3:0.6b": 530,
+        "qwen3:1.7b": 10
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 170,
+        "qwen3:1.7b": 10
+      },
+      "original": {
+        "successful": 27,
+        "planned": 36,
+        "delivered": 36
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 24,
+        "delivered": 24
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 24,
+        "delivered": 24
+      },
+      "uncertainty": {
+        "successful": 25,
+        "planned": 96,
+        "delivered": 96
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 21,
+        "planned": 48,
+        "delivered": 48
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 39,
+        "planned": 48,
+        "delivered": 48
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 27,
+        "planned": 36,
+        "delivered": 36
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 21,
+        "planned": 24,
+        "delivered": 24
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 27,
+        "planned": 36,
+        "delivered": 36
+      }
+    },
+    "expected_kind=historical_control": {
+      "planned": 48,
+      "attempted": 48,
+      "delivered": 48,
+      "missing": 0,
+      "useful_correct": 2,
+      "classification": {
+        "partial": 46,
+        "correct_recall": 2
+      },
+      "status": {
+        "delivered": 48
+      },
+      "all_forbidden_disclosure": 0,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "delivered_semantic_failure_with_sufficient_evidence": 46
+      },
+      "actual_models": {
+        "qwen3:0.6b": 144
+      },
+      "requested_models": {
+        "qwen3:0.6b": 144
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 48
+      },
+      "original": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "historical_control": {
+        "successful": 2,
+        "planned": 48,
+        "delivered": 48
+      },
+      "uncertainty": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 0,
+        "planned": 48,
+        "delivered": 48
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      }
+    },
+    "expected_kind=original": {
+      "planned": 48,
+      "attempted": 48,
+      "delivered": 48,
+      "missing": 0,
+      "useful_correct": 36,
+      "classification": {
+        "correct_recall": 36,
+        "inappropriate_uncertainty": 6,
+        "partial": 5,
+        "incorrect": 1
+      },
+      "status": {
+        "delivered": 48
+      },
+      "all_forbidden_disclosure": 0,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 12,
+        "evidence_selection_required_fact_missing": 4,
+        "delivered_semantic_failure_with_sufficient_evidence": 5
+      },
+      "actual_models": {
+        "qwen3:0.6b": 141,
+        "qwen3:1.7b": 3
+      },
+      "requested_models": {
+        "qwen3:0.6b": 141,
+        "qwen3:1.7b": 3
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 45,
+        "qwen3:1.7b": 3
+      },
+      "original": {
+        "successful": 36,
+        "planned": 48,
+        "delivered": 48
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "uncertainty": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      }
+    },
+    "expected_kind=replacement": {
+      "planned": 48,
+      "attempted": 48,
+      "delivered": 43,
+      "missing": 0,
+      "useful_correct": 13,
+      "classification": {
+        "incorrect": 23,
+        "partial": 4,
+        "correct_recall": 13,
+        "no_delivered_answer": 5,
+        "inappropriate_uncertainty": 3
+      },
+      "status": {
+        "delivered": 43,
+        "withheld": 5
+      },
+      "all_forbidden_disclosure": 21,
+      "validation_rejection_without_disclosure": 5,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 27,
+        "delivered_semantic_failure_with_sufficient_evidence": 3,
+        "evidence_selection_required_fact_missing": 5,
+        "validation_rejection": 5
+      },
+      "actual_models": {
+        "qwen3:0.6b": 133,
+        "qwen3:1.7b": 11
+      },
+      "requested_models": {
+        "qwen3:0.6b": 133,
+        "qwen3:1.7b": 11
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 37,
+        "qwen3:1.7b": 11
+      },
+      "original": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "replacement": {
+        "successful": 13,
+        "planned": 48,
+        "delivered": 43
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "uncertainty": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 21,
+        "planned": 48,
+        "delivered": 43
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 21,
+        "planned": 48,
+        "delivered": 43
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      }
+    },
+    "expected_kind=uncertainty": {
+      "planned": 144,
+      "attempted": 144,
+      "delivered": 144,
+      "missing": 0,
+      "useful_correct": 67,
+      "classification": {
+        "appropriate_uncertainty": 67,
+        "incorrect": 77
+      },
+      "status": {
+        "delivered": 144
+      },
+      "all_forbidden_disclosure": 68,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "delivered_semantic_failure_with_sufficient_evidence": 77
+      },
+      "actual_models": {
+        "qwen3:0.6b": 412,
+        "qwen3:1.7b": 20
+      },
+      "requested_models": {
+        "qwen3:0.6b": 412,
+        "qwen3:1.7b": 20
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 124,
+        "qwen3:1.7b": 20
+      },
+      "original": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "uncertainty": {
+        "successful": 67,
+        "planned": 144,
+        "delivered": 144
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 39,
+        "planned": 72,
+        "delivered": 72
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 27,
+        "planned": 60,
+        "delivered": 60
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 27,
+        "planned": 60,
+        "delivered": 60
+      }
+    },
+    "after_restart": {
+      "planned": 108,
+      "attempted": 108,
+      "delivered": 105,
+      "missing": 0,
+      "useful_correct": 29,
+      "classification": {
+        "incorrect": 50,
+        "partial": 25,
+        "correct_recall": 6,
+        "appropriate_uncertainty": 23,
+        "no_delivered_answer": 3,
+        "inappropriate_uncertainty": 1
+      },
+      "status": {
+        "delivered": 105,
+        "withheld": 3
+      },
+      "all_forbidden_disclosure": 43,
+      "validation_rejection_without_disclosure": 3,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 15,
+        "delivered_semantic_failure_with_sufficient_evidence": 61,
+        "evidence_selection_required_fact_missing": 3,
+        "validation_rejection": 3
+      },
+      "actual_models": {
+        "qwen3:0.6b": 305,
+        "qwen3:1.7b": 19
+      },
+      "requested_models": {
+        "qwen3:0.6b": 305,
+        "qwen3:1.7b": 19
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 89,
+        "qwen3:1.7b": 19
+      },
+      "original": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "replacement": {
+        "successful": 5,
+        "planned": 24,
+        "delivered": 21
+      },
+      "historical_control": {
+        "successful": 1,
+        "planned": 24,
+        "delivered": 24
+      },
+      "uncertainty": {
+        "successful": 23,
+        "planned": 60,
+        "delivered": 60
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 11,
+        "planned": 48,
+        "delivered": 45
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 21,
+        "planned": 36,
+        "delivered": 36
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 9,
+        "planned": 24,
+        "delivered": 24
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 11,
+        "planned": 24,
+        "delivered": 21
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 9,
+        "planned": 24,
+        "delivered": 24
+      }
+    },
+    "expiry_before": {
+      "planned": 24,
+      "attempted": 24,
+      "delivered": 24,
+      "missing": 0,
+      "useful_correct": 18,
+      "classification": {
+        "correct_recall": 18,
+        "inappropriate_uncertainty": 4,
+        "partial": 1,
+        "incorrect": 1
+      },
+      "status": {
+        "delivered": 24
+      },
+      "all_forbidden_disclosure": 0,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "retrieval_skipped_by_memory_policy": 12,
+        "evidence_selection_required_fact_missing": 2,
+        "delivered_semantic_failure_with_sufficient_evidence": 1
+      },
+      "actual_models": {
+        "qwen3:0.6b": 69,
+        "qwen3:1.7b": 3
+      },
+      "requested_models": {
+        "qwen3:0.6b": 69,
+        "qwen3:1.7b": 3
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 21,
+        "qwen3:1.7b": 3
+      },
+      "original": {
+        "successful": 18,
+        "planned": 24,
+        "delivered": 24
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "uncertainty": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      }
+    },
+    "expiry_at": {
+      "planned": 24,
+      "attempted": 24,
+      "delivered": 24,
+      "missing": 0,
+      "useful_correct": 14,
+      "classification": {
+        "incorrect": 10,
+        "appropriate_uncertainty": 14
+      },
+      "status": {
+        "delivered": 24
+      },
+      "all_forbidden_disclosure": 9,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "delivered_semantic_failure_with_sufficient_evidence": 10
+      },
+      "actual_models": {
+        "qwen3:0.6b": 67,
+        "qwen3:1.7b": 5
+      },
+      "requested_models": {
+        "qwen3:0.6b": 67,
+        "qwen3:1.7b": 5
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 19,
+        "qwen3:1.7b": 5
+      },
+      "original": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "uncertainty": {
+        "successful": 14,
+        "planned": 24,
+        "delivered": 24
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 9,
+        "planned": 24,
+        "delivered": 24
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 9,
+        "planned": 24,
+        "delivered": 24
+      }
+    },
+    "expiry_after": {
+      "planned": 12,
+      "attempted": 12,
+      "delivered": 12,
+      "missing": 0,
+      "useful_correct": 2,
+      "classification": {
+        "incorrect": 10,
+        "appropriate_uncertainty": 2
+      },
+      "status": {
+        "delivered": 12
+      },
+      "all_forbidden_disclosure": 9,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "delivered_semantic_failure_with_sufficient_evidence": 10
+      },
+      "actual_models": {
+        "qwen3:0.6b": 35,
+        "qwen3:1.7b": 1
+      },
+      "requested_models": {
+        "qwen3:0.6b": 35,
+        "qwen3:1.7b": 1
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 11,
+        "qwen3:1.7b": 1
+      },
+      "original": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "uncertainty": {
+        "successful": 2,
+        "planned": 12,
+        "delivered": 12
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 9,
+        "planned": 12,
+        "delivered": 12
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 9,
+        "planned": 12,
+        "delivered": 12
+      }
+    },
+    "expiry_restart": {
+      "planned": 24,
+      "attempted": 24,
+      "delivered": 24,
+      "missing": 0,
+      "useful_correct": 11,
+      "classification": {
+        "incorrect": 13,
+        "appropriate_uncertainty": 11
+      },
+      "status": {
+        "delivered": 24
+      },
+      "all_forbidden_disclosure": 10,
+      "validation_rejection_without_disclosure": 0,
+      "freshness_rejection_without_disclosure": 0,
+      "client_output_validation_without_disclosure": 0,
+      "failure_findings": {
+        "delivered_semantic_failure_with_sufficient_evidence": 13
+      },
+      "actual_models": {
+        "qwen3:0.6b": 67,
+        "qwen3:1.7b": 5
+      },
+      "requested_models": {
+        "qwen3:0.6b": 67,
+        "qwen3:1.7b": 5
+      },
+      "actual_generator_models": {
+        "qwen3:0.6b": 19,
+        "qwen3:1.7b": 5
+      },
+      "original": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "replacement": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "historical_control": {
+        "successful": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "uncertainty": {
+        "successful": 11,
+        "planned": 24,
+        "delivered": 24
+      },
+      "stale_subject_disclosure_after_correction": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "deleted_subject_disclosure": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "expired_subject_disclosure": {
+        "disclosures": 9,
+        "planned": 24,
+        "delivered": 24
+      },
+      "stale_subject_disclosure_current_replacement_questions": {
+        "disclosures": 0,
+        "planned": 0,
+        "delivered": 0
+      },
+      "any_expired_fact_disclosure": {
+        "disclosures": 9,
+        "planned": 24,
+        "delivered": 24
+      }
+    }
+  },
+  "history_pairs": {
+    "count": 108,
+    "both_observed": 108,
+    "both_success": 13,
+    "retained_only": 3,
+    "fresh_only": 53,
+    "neither": 39
+  },
+  "original_history_present": {
+    "retained": 144
+  },
+  "original_history_forwarded_to_generation": {
+    "retained": 94
+  },
+  "started_without_final_record": [],
+  "never_started_missing_checkpoints": [],
+  "acknowledgment_status": {
+    "delivered": 36
+  },
+  "mutation_status": {
+    "remember:ok": 72,
+    "correct:ok": 12,
+    "forget:ok": 12
+  },
+  "human_validation": "pending"
+}

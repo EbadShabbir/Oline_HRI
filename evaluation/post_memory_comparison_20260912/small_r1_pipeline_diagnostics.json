@@ -1,0 +1,288 @@
+{
+  "created_at": "2026-09-12T11:59:58.015174+00:00",
+  "scope": "Mechanical diagnostics for the first completed small-only session; not new semantic grading or all-arm results",
+  "source_sha256": {
+    "evaluation/post_memory_comparison_20260912/run_v1/01_small_r1/observations.jsonl": "91e425e2a6f8f5c50dd4f2897e80e42decaaa850e3239eab052f77edb3ae6153",
+    "evaluation/post_memory_comparison_20260912/analysis_small_r1_snapshot/row_metrics.jsonl": "fa95faff95b0aaa9de23706e4ff2fc68dd8696fcd293e2d6e3d7bac81c5df6c9",
+    "evaluation/post_memory_comparison_20260912/frozen_v1/workload.json": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+    "scripts/summarize_complete_system_pipeline.py": "ccb73ae90b303022d29d074836851531c8f6251fd5f70ae61aa38a9a2d5ab94f"
+  },
+  "overall": {
+    "attempted": 48,
+    "status_counts": {
+      "ok": 45,
+      "error": 3
+    },
+    "retrieval_call_count": 19,
+    "requests_with_retrieval": 19,
+    "route_memory_required": {
+      "False": 29,
+      "True": 19
+    },
+    "personal_attempts": 24,
+    "personal_attempts_with_required_ids": 20,
+    "required_evidence_known_attempts": 20,
+    "required_evidence_unknown_attempts": 0,
+    "all_required_ids_supplied_attempts": 11,
+    "some_required_ids_missing_from_evidence_attempts": 9,
+    "required_id_occurrences": 31,
+    "required_id_occurrences_supplied": 15,
+    "delivered_personal_attempts_with_required_ids": 18,
+    "delivered_personal_with_missing_required_citations": 9,
+    "delivered_personal_missing_required_citation_occurrences": 16,
+    "requests_with_known_forbidden_supplied_ids": 1,
+    "delivered_with_forbidden_cited_ids": 1,
+    "reference_ids_field": {
+      "empty": 45,
+      "unrecorded": 3
+    },
+    "recorded_reference_ids": {},
+    "answer_constraints": {
+      "none": 45,
+      "unrecorded": 3
+    },
+    "response_transforms": {
+      "none": 45,
+      "unrecorded": 3
+    },
+    "model_call_purposes": {
+      "memory_selector": 33,
+      "generation": 48
+    },
+    "backend_call_errors": {
+      "OllamaError: Ollama assistant speech contains a reserved memory reference": 1
+    },
+    "request_errors": {
+      "ConversationError: chat generation request failed": 1,
+      "ResponseValidationError: robot response omits requested temporal memory detail": 2
+    }
+  },
+  "by_stratum": {
+    "general_multiconstraint": {
+      "attempted": 12,
+      "status_counts": {
+        "ok": 12
+      },
+      "retrieval_call_count": 0,
+      "requests_with_retrieval": 0,
+      "route_memory_required": {
+        "False": 12
+      },
+      "personal_attempts": 0,
+      "personal_attempts_with_required_ids": 0,
+      "required_evidence_known_attempts": 0,
+      "required_evidence_unknown_attempts": 0,
+      "all_required_ids_supplied_attempts": 0,
+      "some_required_ids_missing_from_evidence_attempts": 0,
+      "required_id_occurrences": 0,
+      "required_id_occurrences_supplied": 0,
+      "delivered_personal_attempts_with_required_ids": 0,
+      "delivered_personal_with_missing_required_citations": 0,
+      "delivered_personal_missing_required_citation_occurrences": 0,
+      "requests_with_known_forbidden_supplied_ids": 0,
+      "delivered_with_forbidden_cited_ids": 0,
+      "reference_ids_field": {
+        "empty": 12
+      },
+      "recorded_reference_ids": {},
+      "answer_constraints": {
+        "none": 12
+      },
+      "response_transforms": {
+        "none": 12
+      },
+      "model_call_purposes": {
+        "memory_selector": 11,
+        "generation": 12
+      },
+      "backend_call_errors": {},
+      "request_errors": {}
+    },
+    "personal_recall": {
+      "attempted": 12,
+      "status_counts": {
+        "ok": 11,
+        "error": 1
+      },
+      "retrieval_call_count": 11,
+      "requests_with_retrieval": 11,
+      "route_memory_required": {
+        "False": 1,
+        "True": 11
+      },
+      "personal_attempts": 12,
+      "personal_attempts_with_required_ids": 8,
+      "required_evidence_known_attempts": 8,
+      "required_evidence_unknown_attempts": 0,
+      "all_required_ids_supplied_attempts": 7,
+      "some_required_ids_missing_from_evidence_attempts": 1,
+      "required_id_occurrences": 9,
+      "required_id_occurrences_supplied": 8,
+      "delivered_personal_attempts_with_required_ids": 7,
+      "delivered_personal_with_missing_required_citations": 1,
+      "delivered_personal_missing_required_citation_occurrences": 1,
+      "requests_with_known_forbidden_supplied_ids": 1,
+      "delivered_with_forbidden_cited_ids": 1,
+      "reference_ids_field": {
+        "empty": 11,
+        "unrecorded": 1
+      },
+      "recorded_reference_ids": {},
+      "answer_constraints": {
+        "none": 11,
+        "unrecorded": 1
+      },
+      "response_transforms": {
+        "none": 11,
+        "unrecorded": 1
+      },
+      "model_call_purposes": {
+        "memory_selector": 5,
+        "generation": 12
+      },
+      "backend_call_errors": {},
+      "request_errors": {
+        "ResponseValidationError: robot response omits requested temporal memory detail": 1
+      }
+    },
+    "personal_temporal_synthesis": {
+      "attempted": 12,
+      "status_counts": {
+        "ok": 11,
+        "error": 1
+      },
+      "retrieval_call_count": 4,
+      "requests_with_retrieval": 4,
+      "route_memory_required": {
+        "True": 4,
+        "False": 8
+      },
+      "personal_attempts": 12,
+      "personal_attempts_with_required_ids": 12,
+      "required_evidence_known_attempts": 12,
+      "required_evidence_unknown_attempts": 0,
+      "all_required_ids_supplied_attempts": 4,
+      "some_required_ids_missing_from_evidence_attempts": 8,
+      "required_id_occurrences": 22,
+      "required_id_occurrences_supplied": 7,
+      "delivered_personal_attempts_with_required_ids": 11,
+      "delivered_personal_with_missing_required_citations": 8,
+      "delivered_personal_missing_required_citation_occurrences": 15,
+      "requests_with_known_forbidden_supplied_ids": 0,
+      "delivered_with_forbidden_cited_ids": 0,
+      "reference_ids_field": {
+        "empty": 11,
+        "unrecorded": 1
+      },
+      "recorded_reference_ids": {},
+      "answer_constraints": {
+        "none": 11,
+        "unrecorded": 1
+      },
+      "response_transforms": {
+        "none": 11,
+        "unrecorded": 1
+      },
+      "model_call_purposes": {
+        "memory_selector": 10,
+        "generation": 12
+      },
+      "backend_call_errors": {
+        "OllamaError: Ollama assistant speech contains a reserved memory reference": 1
+      },
+      "request_errors": {
+        "ConversationError: chat generation request failed": 1
+      }
+    },
+    "routine_general": {
+      "attempted": 12,
+      "status_counts": {
+        "ok": 11,
+        "error": 1
+      },
+      "retrieval_call_count": 4,
+      "requests_with_retrieval": 4,
+      "route_memory_required": {
+        "False": 8,
+        "True": 4
+      },
+      "personal_attempts": 0,
+      "personal_attempts_with_required_ids": 0,
+      "required_evidence_known_attempts": 0,
+      "required_evidence_unknown_attempts": 0,
+      "all_required_ids_supplied_attempts": 0,
+      "some_required_ids_missing_from_evidence_attempts": 0,
+      "required_id_occurrences": 0,
+      "required_id_occurrences_supplied": 0,
+      "delivered_personal_attempts_with_required_ids": 0,
+      "delivered_personal_with_missing_required_citations": 0,
+      "delivered_personal_missing_required_citation_occurrences": 0,
+      "requests_with_known_forbidden_supplied_ids": 0,
+      "delivered_with_forbidden_cited_ids": 0,
+      "reference_ids_field": {
+        "empty": 11,
+        "unrecorded": 1
+      },
+      "recorded_reference_ids": {},
+      "answer_constraints": {
+        "none": 11,
+        "unrecorded": 1
+      },
+      "response_transforms": {
+        "none": 11,
+        "unrecorded": 1
+      },
+      "model_call_purposes": {
+        "memory_selector": 7,
+        "generation": 12
+      },
+      "backend_call_errors": {},
+      "request_errors": {
+        "ResponseValidationError: robot response omits requested temporal memory detail": 1
+      }
+    }
+  },
+  "personal_requests_routed_without_memory": [
+    "s3_p01",
+    "s3_t06",
+    "s3_t03",
+    "s3_t10",
+    "s3_t08",
+    "s3_t05",
+    "s3_t07",
+    "s3_t01",
+    "s3_t02"
+  ],
+  "general_requests_routed_to_memory": [
+    "s3_r12",
+    "s3_r08",
+    "s3_r03",
+    "s3_r05"
+  ],
+  "failed_attempts": [
+    {
+      "case_id": "s3_t12",
+      "error": "ConversationError",
+      "message": "chat generation request failed",
+      "score_credit": 0
+    },
+    {
+      "case_id": "s3_p08",
+      "error": "ResponseValidationError",
+      "message": "robot response omits requested temporal memory detail",
+      "score_credit": 0
+    },
+    {
+      "case_id": "s3_r08",
+      "error": "ResponseValidationError",
+      "message": "robot response omits requested temporal memory detail",
+      "score_credit": 0
+    }
+  ],
+  "interpretation": [
+    "All fields derive from recorded first-session attempts; gold required-ID matches are mechanical coverage, not answer correctness.",
+    "The4unknown personal tasks have no required IDs; they remain quality-scored against their independent abstention rubrics.",
+    "A missing required citation does not by itself identify whether intent, candidate retrieval, evidence filtering, or generation caused the final answer failure.",
+    "Do not regrade withheld text as successful output. Frozen implementation and workload remain unchanged after seeing these failures."
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "authorship": "Four fictional scenarios reused unchanged from the sealed changing_memory_20260914 baseline for explicitly diagnostic repaired-runtime validation; selection was informed by baseline failures. This is not a new held-out benchmark.",
+  "scenarios": [
+    {
+      "id": "cm01",
+      "category": "preference",
+      "kind": "preference",
+      "original_text": "Your preferred tea is rooibos tea.",
+      "replacement_text": "Your preferred tea is jasmine tea.",
+      "old_value": "rooibos",
+      "new_value": "jasmine",
+      "historical_text": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+      "historical_value": "Maple Pavilion",
+      "historical_event_time": "2026-09-03T14:00:00+00:00",
+      "questions": {
+        "direct": "What is my preferred tea?",
+        "unseen": "Earlier I told you about my tea preference. Which tea do I prefer now?",
+        "restart": "Returning to my earlier tea preference, what is my current preferred tea?",
+        "historical": "Where was my Larkspur picnic on 2026-09-03?",
+        "forgotten_history": "What tea preference did I tell you earlier, before I asked you to forget it?"
+      }
+    },
+    {
+      "id": "cm04",
+      "category": "relationship",
+      "kind": "fact",
+      "original_text": "Your walking partner is Elora Vale.",
+      "replacement_text": "Your walking partner is Niko Fern.",
+      "old_value": "Elora Vale",
+      "new_value": "Niko Fern",
+      "historical_text": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+      "historical_value": "Birch Lodge",
+      "historical_event_time": "2026-09-06T09:00:00+00:00",
+      "questions": {
+        "direct": "Who is my walking partner?",
+        "unseen": "Earlier I told you about my walking partner. Who is my walking partner now?",
+        "restart": "Returning to my earlier walking partner information, who is my current walking partner?",
+        "historical": "Where was my Marigold garden tour on 2026-09-06?",
+        "forgotten_history": "Which walking partner did I name earlier, before I asked you to forget that information?"
+      }
+    },
+    {
+      "id": "cm07",
+      "category": "object_location",
+      "kind": "fact",
+      "original_text": "Your binoculars are in the canvas tote.",
+      "replacement_text": "Your binoculars are in the cedar cabinet.",
+      "old_value": "canvas tote",
+      "new_value": "cedar cabinet",
+      "historical_text": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+      "historical_value": "Fern Terrace",
+      "historical_event_time": "2026-09-09T15:00:00+00:00",
+      "questions": {
+        "direct": "Where are my binoculars?",
+        "unseen": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+        "restart": "Returning to my earlier binoculars information, where should I find my binoculars now?",
+        "historical": "Where was my Rosewood puzzle afternoon on 2026-09-09?",
+        "forgotten_history": "What binoculars location did I tell you earlier, before I asked you to forget it?"
+      }
+    },
+    {
+      "id": "cm09",
+      "category": "appointment",
+      "kind": "event",
+      "event_time": null,
+      "original_text": "Your pottery appointment is on 2026-10-03 at 09:00.",
+      "replacement_text": "Your pottery appointment is on 2026-10-03 at 11:30.",
+      "old_value": "09:00",
+      "new_value": "11:30",
+      "historical_text": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+      "historical_value": "Hazel Auditorium",
+      "historical_event_time": "2026-09-11T17:00:00+00:00",
+      "questions": {
+        "direct": "What time is my pottery appointment on 2026-10-03?",
+        "unseen": "Earlier I told you about my pottery appointment on 2026-10-03. What start time is currently recorded?",
+        "restart": "Returning to my earlier pottery appointment, what is its recorded start time on 2026-10-03 now?",
+        "historical": "Where was my Silverleaf choir rehearsal on 2026-09-11?",
+        "forgotten_history": "What pottery appointment start time did I tell you earlier, before I asked you to forget it?"
+      }
+    }
+  ]
+}

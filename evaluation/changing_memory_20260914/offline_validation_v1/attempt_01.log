@@ -1,0 +1,17 @@
+test_actual_authored_schema_runs_all_initial_operations_without_oracle_inputs (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_actual_process_restarts_preserve_mutations_history_and_nonempty_snapshots (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_cli_acknowledgments_mutate_same_live_store_and_keep_original_history (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_configured_expiry_uses_shared_clock_at_exact_boundary_without_db_edits (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_fresh_queries_do_not_modify_retained_history_and_log_supplied_evidence (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_generation_interruption_is_logged_before_propagation (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_same_process_reconstruction_and_backward_clock_are_rejected (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_source_and_config_drift_rejected_before_model_inventory_access (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_stale_snapshot_replay_is_withheld_before_generation_and_preserved (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_supervisor_passes_persisted_state_and_only_unstarted_suffix_to_continuation (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_worker_continuation_preserves_interrupted_checkpoint_and_executes_only_suffix (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_worker_rejects_missing_partial_or_wrong_file_leases_before_runtime_access (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 16.049s
+
+OK

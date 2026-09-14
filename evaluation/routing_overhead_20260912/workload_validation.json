@@ -1,0 +1,127 @@
+{
+  "status": "passed",
+  "scope": "offline_workload_schema_seed_and_DDEE_rules_only_zero_model_and_embedding_calls",
+  "workload_sha256": "01c910a6336422c24bf27bfd8bda8c3304bd7158dedd8ffa3e24c1eeeef88ba1",
+  "sequence_count": 12,
+  "turn_slots": 48,
+  "unique_prompt_texts": 39,
+  "patterns": {
+    "EEEE": 3,
+    "DDDD": 3,
+    "EDED": 3,
+    "DDEE": 3
+  },
+  "seed_operations": 30,
+  "eligible_memory_count": 26,
+  "seed_value_identical_to_post_memory_v2": true,
+  "exact_prompt_overlap_with_post_memory_v2": [],
+  "ddee_rule_checks": [
+    {
+      "sequence": "ro_ddee_1",
+      "simulated_choices": [
+        {
+          "id": "ro_ddee_1_t1",
+          "choice": "large",
+          "source": "lightweight_large",
+          "memory_source": "policy_general",
+          "small_eligible": false
+        },
+        {
+          "id": "ro_ddee_1_t2",
+          "choice": "large",
+          "source": "lightweight_large",
+          "memory_source": "resident_model",
+          "small_eligible": false
+        },
+        {
+          "id": "ro_ddee_1_t3",
+          "choice": "large",
+          "source": "lightweight_resident",
+          "memory_source": "resident_model",
+          "small_eligible": true
+        },
+        {
+          "id": "ro_ddee_1_t4",
+          "choice": "small",
+          "source": "lightweight_small",
+          "memory_source": "resident_model",
+          "small_eligible": true
+        }
+      ],
+      "note": "Simulated classifier always returns memory false; fake timings are not measurements. Full prior history retained to check the strictest non-social history condition."
+    },
+    {
+      "sequence": "ro_ddee_2",
+      "simulated_choices": [
+        {
+          "id": "ro_ddee_2_t1",
+          "choice": "large",
+          "source": "lightweight_large",
+          "memory_source": "resident_model",
+          "small_eligible": false
+        },
+        {
+          "id": "ro_ddee_2_t2",
+          "choice": "large",
+          "source": "lightweight_large",
+          "memory_source": "resident_model",
+          "small_eligible": false
+        },
+        {
+          "id": "ro_ddee_2_t3",
+          "choice": "large",
+          "source": "lightweight_resident",
+          "memory_source": "resident_model",
+          "small_eligible": true
+        },
+        {
+          "id": "ro_ddee_2_t4",
+          "choice": "small",
+          "source": "lightweight_small",
+          "memory_source": "resident_model",
+          "small_eligible": true
+        }
+      ],
+      "note": "Simulated classifier always returns memory false; fake timings are not measurements. Full prior history retained to check the strictest non-social history condition."
+    },
+    {
+      "sequence": "ro_ddee_3",
+      "simulated_choices": [
+        {
+          "id": "ro_ddee_3_t1",
+          "choice": "large",
+          "source": "lightweight_large",
+          "memory_source": "policy_personal",
+          "small_eligible": false
+        },
+        {
+          "id": "ro_ddee_3_t2",
+          "choice": "large",
+          "source": "lightweight_large",
+          "memory_source": "policy_personal",
+          "small_eligible": false
+        },
+        {
+          "id": "ro_ddee_3_t3",
+          "choice": "large",
+          "source": "lightweight_resident",
+          "memory_source": "resident_model",
+          "small_eligible": true
+        },
+        {
+          "id": "ro_ddee_3_t4",
+          "choice": "small",
+          "source": "lightweight_small",
+          "memory_source": "resident_model",
+          "small_eligible": true
+        }
+      ],
+      "note": "Simulated classifier always returns memory false; fake timings are not measurements. Full prior history retained to check the strictest non-social history condition."
+    }
+  ],
+  "source_hashes": {
+    "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+    "src/oline_hri/routing.py": "e29406aa5240cb006a13a5d637af82501b96b68b2065402fb09305afcdc17b50",
+    "scripts/run_complete_system.py": "888daae7b84126744cfdd54aa56cf220f0482f81b7d0b167a2ad3107849f4dcb"
+  }
+}

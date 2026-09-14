@@ -1,0 +1,76 @@
+{
+  "prepared_seal_sha256": "33611cdd1a4b2b391d3b2d040c6ce973cc70e4621f77fe5e9ac66cebb928fb61",
+  "reviews_seal_sha256": "fc6d8577011aab48aa856e794a4320b714ad2a1d21b66e815ed7cdaed3db6d86",
+  "script_sha256": "7013efb9a06860d676b0d0922494ad65795841923dcebc5ae4e73519356b4cb8",
+  "command": [
+    "evaluation/changing_memory_repair_20260914/analyze_repair.py",
+    "resolve",
+    "--prepared",
+    "evaluation/changing_memory_repair_20260914/followup_v2/prepared_v1",
+    "--reviews",
+    "evaluation/changing_memory_repair_20260914/followup_v2/sealed_reviews_v1",
+    "--output",
+    "evaluation/changing_memory_repair_20260914/followup_v2/analysis_v1"
+  ],
+  "input_provenance": {
+    "input_sha256": {
+      "evaluation/changing_memory_repair_20260914/followup_v2/frozen_v1/expected_ledger.json": "71761d87911d6f4182e20dbd8bba46532ca860f544117315cb99ab13a48fc7c5",
+      "evaluation/changing_memory_repair_20260914/followup_v2/frozen_v1/runtime.json": "09d60f82aa0edcf173aba9eaefca48e66b76208b00159a4d98f85bf0bc3673e5",
+      "evaluation/changing_memory_repair_20260914/followup_v2/frozen_v1/freeze.json": "b4d1d2dc71b5b7ec7373e6c0640970d139306723a386b42e8cdedd0bc83709e0",
+      "evaluation/changing_memory_repair_20260914/followup_v2/frozen_v1/seal.json": "32c78a7b18264300899502ecad534379655816d266c8f834e8cb16da3b3bb069",
+      "evaluation/changing_memory_repair_20260914/followup_v2/run_v1/seal.json": "eb12e1f02112920d96ccc6350695b7bb3382b03918e411ff631888461a6d2ac0",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/answers.jsonl": "fc5589804480a8ffc4417abc26ec8d3fc3014a032641705c554a2d183d7535d9",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/answers.jsonl": "f62b8c7da5e17c2abe6ab5a11525662abc18c4e24f4f20473de54ba64dc3f299",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/answers.jsonl": "36d1ab827c5031cae7fb607e3b8141aacfdbd457dec9cede4868a93aa63ec012",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/answers.jsonl": "667609b5fa5bf99b6480b60744a9f61a50814f8d68a37ecb757c2b164175fe5a",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/answers.jsonl": "c6731cc5013878e9c6297e006b7d0bf40367904101ba8dd5c6da72ab5b9d67ce",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/restart/answers.jsonl": "505189a5f1fc5ec8cdc7dd9fe94d105ce160101377311a3426bb774f901a59e5",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/initial/events.jsonl": "6c48eb4dce45aa229849af6adc4dba35b60cbe552713536aacd028ad6e817544",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_correction/restart/events.jsonl": "8027bad9057f4e1229beaff8176fe5e39d26aa72257183a4fb94a68ddeb7e914",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/initial/events.jsonl": "25d089da1ca6d49760446f3c145d893a5ce7581cba9c1a406d94cb08ffa449d2",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_deletion/restart/events.jsonl": "cbc4cb4487b71ed56c03ef3158ed1e394c7640a3e56aeb64d4d57e4906d0d84e",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/initial/events.jsonl": "49a7002f5e362ab640b434128b4893462cc088b2e48e1cc1d6d5da855d9054a7",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/followup_v2/run_v1/cm04_expiry/restart/events.jsonl": "bff8737f1361a3ee33ab069702e7bf74ffde377597b212e4593ee71fc3e363b8"
+    },
+    "script_sha256": "7013efb9a06860d676b0d0922494ad65795841923dcebc5ae4e73519356b4cb8",
+    "command": [
+      "evaluation/changing_memory_repair_20260914/analyze_repair.py",
+      "prepare",
+      "--freeze",
+      "evaluation/changing_memory_repair_20260914/followup_v2/frozen_v1",
+      "--run",
+      "evaluation/changing_memory_repair_20260914/followup_v2/run_v1",
+      "--output",
+      "evaluation/changing_memory_repair_20260914/followup_v2/prepared_v1"
+    ],
+    "blind_seed": 20260914,
+    "planned_checkpoints": 24,
+    "workload": {
+      "planned_checkpoints": 24,
+      "scenario_ids": [
+        "cm04"
+      ],
+      "scenario_count": 1,
+      "independent_databases": 3,
+      "scheduled_restarts": 3,
+      "scheduled_segments": 6,
+      "disclosures": 3,
+      "history_pairs": 9,
+      "stage_history_groups": 24,
+      "post_restart_checkpoints": 9
+    },
+    "study_scope": "targeted matched regression; not held-out",
+    "explicit_attempts": 24,
+    "missing_checkpoints": [],
+    "started_without_final_record": [],
+    "never_started_missing_checkpoints": [],
+    "input_policy": "verified sealed freeze and run roots",
+    "review_groups": 11,
+    "packet_sha256": "365fa306ae7a3a66e6a6cca11bf6701c0b406cfaf827320e6762b4e183a28b1b",
+    "acknowledgments": 3,
+    "partial": false,
+    "human_validation": "pending"
+  },
+  "partial": false,
+  "human_validation": "pending"
+}

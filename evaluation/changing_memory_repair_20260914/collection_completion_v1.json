@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-09-14T14:15:14.064749+00:00",
+  "supervisor_session_id": 39025,
+  "exit_code": 0,
+  "freeze": "frozen_v2",
+  "run": "run_v1",
+  "run_seal_sha256": "2ef6fc4978d1305f7a481aca6fa4cb587183fd57d9ea5904b761e3852e6de012",
+  "planned_checkpoints": 96,
+  "observed_checkpoints": 96,
+  "status_counts": {
+    "delivered": 94,
+    "withheld": 2
+  },
+  "source_changes_during_collection": false
+}

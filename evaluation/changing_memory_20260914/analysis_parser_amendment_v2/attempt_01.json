@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_analysis_memory_evidence_v2",
+    "tests.test_analysis_changing_memory",
+    "-v"
+  ],
+  "returncode": 1,
+  "tests": 16,
+  "passed": 15,
+  "test_errors": 1,
+  "elapsed_reported_seconds": 2.227,
+  "failure": "The new comparison test used frozen_votes/resolved_votes.json; production uses frozen_votes/resolved.json. The assertion path was corrected. All preceding packet, vote, metric and diagnosis assertions passed. No analyzer behavior changed in response.",
+  "scope": "offline synthetic inference only; no live checkpoints"
+}

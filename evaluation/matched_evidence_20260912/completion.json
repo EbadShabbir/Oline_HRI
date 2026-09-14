@@ -1,0 +1,40 @@
+{
+  "completed_at": "2026-09-12T15:16:53.212306+00:00",
+  "status": "experiment complete; independent human validation pending",
+  "scope": "direct generator capability under matched evidence",
+  "requests": 120,
+  "primary_attempts": 240,
+  "excluded_harness_attempts": 4,
+  "independent_blinded_assistant_reviews": 2,
+  "answers_per_review": 240,
+  "adjudicated_disagreements": 8,
+  "independent_human_validation": "pending",
+  "relevant_offline_tests_passed": 55,
+  "final_independent_checks_passed": 10250,
+  "frozen_source_files_unchanged": 39,
+  "dataset_sha256": "038e9c49dc4c80fa16a81f99b490b088a2e74cf0aac6faf5c44657e0203d50ef",
+  "nested_seal_sha256": {
+    "analysis_v1/seal.json": "d2a841d4e1fd0934b039b97733b54ba33517f06925637e24cf1ecf26ce8e80d6",
+    "blinded_v1/seal.json": "f791ca93286bd0ef54bd88410b18d55cc4438f78415067ee0fa07114887d915a",
+    "disagreements_v1/seal.json": "5b9bb11432601c432b2ffcb0770a65a4ca44592186500e5c1b84fc5dd4ba5d62",
+    "figures_v1/seal.json": "94bf44bb870d106b5f0054077bdc6351bb276385385ee92f6d36db207470df0e",
+    "final_numeric_audit_v1/seal.json": "7628ebcb0829ba4dd8041ec6c66d7c3d25bd253c6ea24220b88fa8b10bea1dd0",
+    "frozen_v1/seal.json": "a52e1bc054346d1dc1b0be03b7f8534ba9bd059c6ba212547ed6bbf532f8df72",
+    "resource_audit_v1/seal.json": "145c68e58e244f2f312abfb284f7d2bb208cf6d494e7bb720028f96043421311",
+    "reviews/seal.json": "a937e19de2102de2c64e96200901d4f1b9b66a4b4244d261d63a93a51bf950eb",
+    "run_v1/seal.json": "31554ad2ceeb7e6ed602f0634c3140bd4aad890e0bdcc16d192904d43dd66f6c",
+    "smoke_v1/seal.json": "37b031a3b5be1212b3a42a1f55f4cae15bb78031e02fd64209033a7aad251a40"
+  },
+  "documentation_sha256": {
+    "results.md": "54bc674036e1e76fc9cda1ac705ba6764f6917ec04481884b6d66625a70ff10f",
+    "developments.MD": "9ad229da671c6814616b2d2f6ec9530a25ad6c8fc692def7b4aa41ac81902611"
+  },
+  "final_checks": {
+    "commands_bash_syntax": true,
+    "git_diff_check": true,
+    "report_regenerates_byte_identically": true,
+    "earlier_documentation_preserved": true
+  },
+  "os_configuration_changed": false,
+  "immutability": "exclusive directory, SHA256 manifests, read-only files and directories; not privileged WORM"
+}

@@ -1,0 +1,44 @@
+{
+  "scope": "offline adapter validation; mocked v2 archive metadata only; no inference or source archive mutation",
+  "checks_passed": 4,
+  "original_observations": 88,
+  "eligible_whole_sequences": 22,
+  "original_failed_turns_retained": 1,
+  "audit_errors": 0,
+  "changed_setting_rejected": true,
+  "modified_exception_artifact_rejected": true,
+  "source_compatibility": {
+    "unchanged_fields": [
+      "profile_id",
+      "workload_sha256",
+      "models",
+      "ollama_version",
+      "config",
+      "generation",
+      "generation_seed",
+      "embedding_asset_sha256",
+      "packages",
+      "python",
+      "device_policy",
+      "arm_orders",
+      "diagnostic_replay_order",
+      "sequences",
+      "turns_per_sequence",
+      "repetitions",
+      "main_attempts",
+      "diagnostic_attempts"
+    ],
+    "changed_source_files": [
+      "scripts/run_routing_overhead.py",
+      "tests/test_routing_overhead_runner.py"
+    ],
+    "added_source_files": [
+      "evaluation/routing_overhead_20260912/analyze_continued.py",
+      "evaluation/routing_overhead_20260912/continue_collection.py"
+    ],
+    "previous_freeze_sha256": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec",
+    "current_freeze_sha256": "574f848586e28b46e23efda8a2cbbdfccc72e37dc905d7bae6aac3540515b599"
+  },
+  "adapter_sha256": "cb549c7d682791f7ce1b5807217e351ec33ca2f8977f142f771016d57a752af7",
+  "temporary_path": "/tmp/clara-routing-continued-offline-2nyc0bu6"
+}

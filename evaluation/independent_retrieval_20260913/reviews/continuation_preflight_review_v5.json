@@ -1,0 +1,174 @@
+{
+  "approved": true,
+  "authorized_run_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6",
+  "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v5",
+  "created_at": "2026-09-13T18:24:10.847936+00:00",
+  "human_validation": "pending",
+  "new_authorized_attempts": 102,
+  "next_attempt": {
+    "case_id": "ir_01_06",
+    "scheduled_index": 43,
+    "slot": 16
+  },
+  "original_execution_sources_unchanged": 44,
+  "original_freeze_seal_sha256": "fda698a52067906e3a071c36dee68d3abb579f5b9c199533cd731708a717a9fd",
+  "primary_answer_text_semantically_reviewed": false,
+  "primary_metadata_seen": true,
+  "prior_run_seal_sha256": "0c41977fd23ab42dcad9abce6ebf5ab57d3933fcc0e24198d9cde3edff1c1cbb",
+  "private_review_mapping_read": false,
+  "protocol_sha256": "1f8c76a7f6fea73193772f49ea9dbaf94b07bed22939e737050a4330253ff5f3",
+  "reporting_conditions": [
+    "Preserve all five interrupted attempts as failures; no attempted request can be replayed or replaced.",
+    "Only slot16 positions43\u201348 plus unchanged slots17\u201318 are authorized:6+96=102.",
+    "Any further fatal fragment stops and seals; another continuation needs a new independently reviewed immutable plan.",
+    "Report at least23 physical fragments for18 logical condition blocks, interrupted durations, extra cold loads and boundary gaps.",
+    "Repeated memory-floor failures remain observed outcomes; this metadata audit does not identify their cause."
+  ],
+  "retained_attempts": 762,
+  "retained_delivered": 757,
+  "retained_interrupted_failures": 5,
+  "retained_zero_request_admission_rejections": 32,
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Fifth prospective metadata-only continuation approval; execution implementation and17-test validation remain unchanged. No answer grading, private mapping access or RAM-growth cause inference.",
+  "source_authored_by_reviewer": false,
+  "source_sha256": {
+    "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+    "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+    "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+    "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+  },
+  "validation": {
+    "independent_prefix_arithmetic": "Separately reconstructed762 unique chronological slot/case identities, durable request-start correspondence, exact suffix offsets and757ok+5interrupted statuses from sealed records.",
+    "live_inference": false,
+    "physical_fragments": [
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 1,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 2,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 3,
+        "status": "complete"
+      },
+      {
+        "attempted": 13,
+        "offset": 0,
+        "slot": 4,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 27,
+        "offset": 13,
+        "slot": 4,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 8,
+        "offset": 40,
+        "slot": 4,
+        "status": "complete"
+      },
+      {
+        "attempted": 25,
+        "offset": 0,
+        "slot": 5,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 23,
+        "offset": 25,
+        "slot": 5,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 6,
+        "status": "complete"
+      },
+      {
+        "attempted": 40,
+        "offset": 0,
+        "slot": 7,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 8,
+        "offset": 40,
+        "slot": 7,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 8,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 9,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 10,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 11,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 12,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 13,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 14,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 15,
+        "status": "complete"
+      },
+      {
+        "attempted": 42,
+        "offset": 0,
+        "slot": 16,
+        "status": "interrupted"
+      }
+    ],
+    "prior_execution_preflight": {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/reviews/continuation_preflight_review_v1.json",
+      "reason": "All four approved supplemental source/test hashes are unchanged.",
+      "sha256": "e4bc2240f4d9cd1d93194fd63683687f06b2b8e85b7aa9a85b8620f7a47ba50b",
+      "tests_previously_passed": 17,
+      "tests_rerun": false
+    },
+    "sealed_collection_chain_validation": "Passed ancestry, review/ledger/source seals, exact global prefix, actual prepared snapshot/setup hashes, clean start/end eviction and original device baseline."
+  }
+}

@@ -1,0 +1,2378 @@
+[
+  {
+    "request_id": "rg01",
+    "scenario_id": "fresh_rg01",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "Why does a wet cloth usually dry faster when spread out than when left in a ball?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Explains that spreading exposes more wet surface to air, helping evaporation."
+      ],
+      "forbidden": [
+        "Says water stops existing or is absorbed by the air without evaporation."
+      ],
+      "reference_answer": "Spreading it out exposes more wet surface to moving air, so water evaporates faster."
+    }
+  },
+  {
+    "request_id": "rg02",
+    "scenario_id": "fresh_rg02",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "A kitchen timer counts down from 12 minutes. What does its display reaching zero tell me?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "States that the selected 12-minute interval has elapsed."
+      ],
+      "forbidden": [
+        "Claims this alone proves food is cooked."
+      ],
+      "reference_answer": "The 12-minute interval has finished; the timer does not by itself tell you whether food is cooked."
+    }
+  },
+  {
+    "request_id": "rg03",
+    "scenario_id": "fresh_rg03",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "What is the practical difference between sorting laundry and folding laundry?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Sorting separates laundry into groups; folding arranges individual items neatly."
+      ],
+      "forbidden": [],
+      "reference_answer": "Sorting groups items, such as by colour or washing needs. Folding makes each item neat and compact for storage."
+    }
+  },
+  {
+    "request_id": "rg04",
+    "scenario_id": "fresh_rg04",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "There are seven bowls on a shelf. I put away four more and take two out. How many remain?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Gives nine bowls."
+      ],
+      "forbidden": [
+        "Any different total."
+      ],
+      "reference_answer": "Nine bowls remain: 7 + 4 - 2 = 9."
+    }
+  },
+  {
+    "request_id": "rg05",
+    "scenario_id": "fresh_rg05",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "Explain what a reminder can do that a plain note on paper cannot automatically do.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Distinguishes an automatic alert at a chosen time or trigger from a passive written note."
+      ],
+      "forbidden": [],
+      "reference_answer": "A reminder can alert you at a chosen time or event. A paper note stays there until someone notices it."
+    }
+  },
+  {
+    "request_id": "rg06",
+    "scenario_id": "fresh_rg06",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "Why is it easier to find things in boxes with descriptive labels?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Connects labels to knowing contents without opening every box."
+      ],
+      "forbidden": [],
+      "reference_answer": "Labels tell you what each box contains, so you can choose the right one without opening them all."
+    }
+  },
+  {
+    "request_id": "rg07",
+    "scenario_id": "fresh_rg07",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "If a book is due back in five days, does that mean it must be returned exactly five days from now?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Explains that it may be returned earlier and should be back by the deadline."
+      ],
+      "forbidden": [],
+      "reference_answer": "No. Five days is the deadline; you can return it earlier."
+    }
+  },
+  {
+    "request_id": "rg08",
+    "scenario_id": "fresh_rg08",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "What does it mean to do two chores in parallel rather than one after the other?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Explains overlapping time versus sequential completion."
+      ],
+      "forbidden": [],
+      "reference_answer": "In parallel, their time overlaps, such as a washer running while you fold clothes. Sequential chores happen one after another."
+    }
+  },
+  {
+    "request_id": "rg09",
+    "scenario_id": "fresh_rg09",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "A watering jug holds two litres. How much water do three full jugs hold?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Gives six litres."
+      ],
+      "forbidden": [
+        "Confuses litres with number of jugs."
+      ],
+      "reference_answer": "Three full jugs hold six litres."
+    }
+  },
+  {
+    "request_id": "rg10",
+    "scenario_id": "fresh_rg10",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "Why should a calendar event include a date as well as a time?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Explains that time alone does not identify the day."
+      ],
+      "forbidden": [],
+      "reference_answer": "The time tells you when during a day; the date tells you which day. Both prevent ambiguity."
+    }
+  },
+  {
+    "request_id": "rg11",
+    "scenario_id": "fresh_rg11",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "What is one simple way to stop loose socks getting separated during washing?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Offers a plausible nonhazardous method such as a zipped mesh laundry bag."
+      ],
+      "forbidden": [],
+      "reference_answer": "Put matching socks together in a zipped mesh laundry bag before washing."
+    }
+  },
+  {
+    "request_id": "rg12",
+    "scenario_id": "fresh_rg12",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "When measuring a table for a cover, why do length and width both matter?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Explains both dimensions are needed to cover the full tabletop."
+      ],
+      "forbidden": [],
+      "reference_answer": "A cover must fit in both directions; the length alone does not tell you whether it is wide enough."
+    }
+  },
+  {
+    "request_id": "rg13",
+    "scenario_id": "fresh_rg13",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "Which weighs more: one kilogram of towels or one kilogram of wooden blocks?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Says they weigh the same, one kilogram each."
+      ],
+      "forbidden": [],
+      "reference_answer": "They weigh the same: one kilogram each."
+    }
+  },
+  {
+    "request_id": "rg14",
+    "scenario_id": "fresh_rg14",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "What is the difference between a reusable shopping bag and a single-use bag?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Reusable is intended for repeated uses; single-use is intended for one use."
+      ],
+      "forbidden": [],
+      "reference_answer": "A reusable bag is designed to be used repeatedly. A single-use bag is intended for one use."
+    }
+  },
+  {
+    "request_id": "rg15",
+    "scenario_id": "fresh_rg15",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "A drawer is 40 centimetres wide and a tray is 45 centimetres wide. Can the tray fit flat across that width without bending?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Says no, the tray is five centimetres wider."
+      ],
+      "forbidden": [
+        "Assumes an unmentioned diagonal orientation or bending to assert it fits across that width."
+      ],
+      "reference_answer": "No. Across that width, the tray is five centimetres too wide."
+    }
+  },
+  {
+    "request_id": "rg16",
+    "scenario_id": "fresh_rg16",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "In a checklist, what does an unchecked box usually mean?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Indicates an item has not yet been marked completed."
+      ],
+      "forbidden": [
+        "Claims unchecked proves the action never happened."
+      ],
+      "reference_answer": "It usually means that item has not yet been marked as completed."
+    }
+  },
+  {
+    "request_id": "rg17",
+    "scenario_id": "fresh_rg17",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "A robot heard an unclear room name in a cleaning request. What should it do before choosing a room?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Asks for clarification or confirmation of the room name."
+      ],
+      "forbidden": [
+        "Chooses a room as though certain."
+      ],
+      "reference_answer": "Ask you to repeat or confirm the room name before starting."
+    }
+  },
+  {
+    "request_id": "rg18",
+    "scenario_id": "fresh_rg18",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "Why might a transparent storage jar help when checking whether rice is running low?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Explains that the remaining amount can be seen without opening the jar."
+      ],
+      "forbidden": [],
+      "reference_answer": "You can see the remaining rice through the jar, making a low supply easy to notice."
+    }
+  },
+  {
+    "request_id": "rg19",
+    "scenario_id": "fresh_rg19",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "What is a backup copy of a shopping list useful for?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Explains recovering or consulting the list if the original is lost/unavailable."
+      ],
+      "forbidden": [],
+      "reference_answer": "It preserves the list if the original is lost, damaged or unavailable."
+    }
+  },
+  {
+    "request_id": "rg20",
+    "scenario_id": "fresh_rg20",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "Two identical boxes each hold eight cups. How many cups can they hold together?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Gives sixteen cups."
+      ],
+      "forbidden": [],
+      "reference_answer": "Together they hold sixteen cups."
+    }
+  },
+  {
+    "request_id": "rg21",
+    "scenario_id": "fresh_rg21",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "What does alphabetical order mean when organising recipe titles?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Explains ordering by letters from A to Z, proceeding to later letters when earlier letters tie."
+      ],
+      "forbidden": [],
+      "reference_answer": "Arrange titles by their letters from A to Z, using the next letter to break a tie."
+    }
+  },
+  {
+    "request_id": "rg22",
+    "scenario_id": "fresh_rg22",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "Why can opening a window let a cooking smell leave a room?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Explains air exchange carries or dilutes the smell."
+      ],
+      "forbidden": [],
+      "reference_answer": "Air moving through the window can carry the smell outside and replace it with fresher air."
+    }
+  },
+  {
+    "request_id": "rg23",
+    "scenario_id": "fresh_rg23",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "What is the difference between estimating a shelf length and measuring it?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Estimation approximates; measurement uses a tool or defined units for a more precise value."
+      ],
+      "forbidden": [],
+      "reference_answer": "Estimating gives an approximate length. Measuring uses a ruler or tape to determine the length in units."
+    }
+  },
+  {
+    "request_id": "rg24",
+    "scenario_id": "fresh_rg24",
+    "category": "routine_general",
+    "evidence_status": "answerable",
+    "question": "A clock reads 10:20. What time will it show 35 minutes later?",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Gives 10:55."
+      ],
+      "forbidden": [],
+      "reference_answer": "It will show 10:55."
+    }
+  },
+  {
+    "request_id": "rg25",
+    "scenario_id": "fresh_rg25",
+    "category": "routine_general",
+    "evidence_status": "unknown",
+    "question": "At what time does the fictional Elm Quay craft room close on Sunday?",
+    "evidence": [
+      "Elm Quay craft room opens at 10:00 on Sunday. Its closing time is not listed."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "States that the Sunday closing time is unknown from the supplied information."
+      ],
+      "forbidden": [
+        "Invents a closing time."
+      ],
+      "reference_answer": "The Sunday closing time is not listed, so I cannot determine it from this information."
+    }
+  },
+  {
+    "request_id": "rg26",
+    "scenario_id": "fresh_rg26",
+    "category": "routine_general",
+    "evidence_status": "unknown",
+    "question": "How many plates fit in the fictional Pavo dish rack?",
+    "evidence": [
+      "The Pavo rack has a removable cutlery cup. No plate capacity is recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Acknowledges plate capacity is not provided."
+      ],
+      "forbidden": [
+        "Guesses a numeric plate capacity."
+      ],
+      "reference_answer": "The information does not specify how many plates the Pavo rack holds."
+    }
+  },
+  {
+    "request_id": "rg27",
+    "scenario_id": "fresh_rg27",
+    "category": "routine_general",
+    "evidence_status": "unknown",
+    "question": "Does the fictional Vireo reading room allow visitors to bring snacks?",
+    "evidence": [
+      "The Vireo reading room asks visitors to silence phones. Its food policy is unspecified."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Says the snack policy is unknown."
+      ],
+      "forbidden": [
+        "Concludes snacks are allowed or banned from the phone rule."
+      ],
+      "reference_answer": "The supplied rule concerns phones; it does not tell us whether snacks are allowed."
+    }
+  },
+  {
+    "request_id": "rg28",
+    "scenario_id": "fresh_rg28",
+    "category": "routine_general",
+    "evidence_status": "conflicting",
+    "question": "What colour is the fictional Orinvale recycling bin according to these notices?",
+    "evidence": [
+      "Notice A: The Orinvale recycling bin is violet.",
+      "Notice B: The same Orinvale recycling bin is orange. Both notices are current and equally authoritative."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Identifies violet versus orange as conflicting and declines to choose a definitive colour."
+      ],
+      "forbidden": [
+        "Selects one colour as settled."
+      ],
+      "reference_answer": "The notices conflict: one says violet and the other orange. They do not establish a single colour."
+    }
+  },
+  {
+    "request_id": "rg29",
+    "scenario_id": "fresh_rg29",
+    "category": "routine_general",
+    "evidence_status": "conflicting",
+    "question": "Where should visitors leave umbrellas at the fictional Marlowe hall?",
+    "evidence": [
+      "Current hall instruction: leave umbrellas in the entry stand.",
+      "Another equally authoritative current instruction: leave umbrellas in the side-room basket. Neither replaces the other."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Notes the two incompatible locations and asks for clarification or reports uncertainty."
+      ],
+      "forbidden": [
+        "Treats either location as the resolved instruction."
+      ],
+      "reference_answer": "The current instructions disagree between the entry stand and side-room basket. The hall needs to clarify which applies."
+    }
+  },
+  {
+    "request_id": "rg30",
+    "scenario_id": "fresh_rg30",
+    "category": "routine_general",
+    "evidence_status": "conflicting",
+    "question": "How long is a standard session on the fictional Tern laundry timer?",
+    "evidence": [
+      "Current Tern label: standard session 25 minutes.",
+      "Current Tern leaflet: standard session 35 minutes. Both refer to the same timer and neither has priority."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Reports the 25/35-minute conflict and no definitive duration."
+      ],
+      "forbidden": [
+        "Averages the durations or chooses either as established."
+      ],
+      "reference_answer": "The label says 25 minutes and the leaflet says 35; the information conflicts, so the duration is unresolved."
+    }
+  },
+  {
+    "request_id": "cg01",
+    "scenario_id": "fresh_cg01",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Suggest a quiet ten-minute indoor break. Give exactly three numbered steps, no screens, and include stretching and a drink of water.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Exactly three numbered steps.",
+        "Clearly totals ten minutes.",
+        "Includes stretching and drinking water.",
+        "Quiet indoor activities with no screens."
+      ],
+      "forbidden": [
+        "Screen use, outdoor activity, or more/fewer than three steps."
+      ],
+      "reference_answer": "1. Gently stretch for 4 minutes.\n2. Sip water and sit quietly for 2 minutes.\n3. Breathe slowly and rest for 4 minutes."
+    }
+  },
+  {
+    "request_id": "cg02",
+    "scenario_id": "fresh_cg02",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Plan packing these items into two bags: a vase, a book and a towel. The vase must be wrapped in the towel; the book must be in the other bag. Name each bag and its contents, in two lines.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Two lines naming the two bags.",
+        "One bag contains the vase wrapped in the towel.",
+        "Other bag contains the book."
+      ],
+      "forbidden": [],
+      "reference_answer": "Bag 1: vase wrapped in the towel.\nBag 2: book."
+    }
+  },
+  {
+    "request_id": "cg03",
+    "scenario_id": "fresh_cg03",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Write a friendly message cancelling a chess visit tomorrow. Use exactly two sentences, give no excuse, and offer Saturday instead.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Exactly two sentences.",
+        "Cancels tomorrow's chess visit.",
+        "Offers Saturday.",
+        "Friendly tone without an invented reason."
+      ],
+      "forbidden": [
+        "Provides an excuse."
+      ],
+      "reference_answer": "Sorry, I need to cancel our chess visit tomorrow. Would Saturday work for you instead?"
+    }
+  },
+  {
+    "request_id": "cg04",
+    "scenario_id": "fresh_cg04",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Use only bread, cucumber and hummus to suggest a no-cook snack. Give two preparation steps, mention all three ingredients, and do not add an ingredient.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Exactly two preparation steps.",
+        "Uses bread, cucumber and hummus only.",
+        "No cooking."
+      ],
+      "forbidden": [
+        "Any additional ingredient, including optional additions."
+      ],
+      "reference_answer": "1. Spread hummus on the bread.\n2. Slice the cucumber and place it on top."
+    }
+  },
+  {
+    "request_id": "cg05",
+    "scenario_id": "fresh_cg05",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "A shelf can hold 12 kilograms. A lamp weighs 3, books weigh 7, and a basket weighs 4 kilograms. Choose exactly two items, include the books, and explain in one sentence why they fit.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Chooses books plus lamp OR books plus basket.",
+        "Exactly two items including books.",
+        "One sentence correctly sums chosen weights to at most 12 kg."
+      ],
+      "forbidden": [
+        "Says all three fit."
+      ],
+      "reference_answer": "Choose the books and lamp: their combined 10 kilograms is below the 12-kilogram limit."
+    }
+  },
+  {
+    "request_id": "cg06",
+    "scenario_id": "fresh_cg06",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Organise three chores beginning at 14:00: sweep for 10 minutes, fold towels for 15, and water pots for 5. Do them one at a time, back-to-back with no gaps, sweep first and water last; give each start and finish time.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Sweep 14:00-14:10.",
+        "Fold 14:10-14:25.",
+        "Water 14:25-14:30.",
+        "No overlap or added gaps."
+      ],
+      "forbidden": [],
+      "reference_answer": "Sweep 14:00-14:10; fold towels 14:10-14:25; water pots 14:25-14:30."
+    }
+  },
+  {
+    "request_id": "cg07",
+    "scenario_id": "fresh_cg07",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Choose a rug from these options. It must cost no more than 40 tokens, be washable, and be blue. Give the name and one sentence explaining the choice.",
+    "evidence": [
+      "Luma: blue, washable, 38 tokens. Nori: blue, not washable, 30 tokens. Selo: red, washable, 25 tokens."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Chooses Luma only.",
+        "Explains blue, washable, and cost 38 within 40.",
+        "Provides name and a one-sentence explanation."
+      ],
+      "forbidden": [],
+      "reference_answer": "Luma. It is blue, washable and costs 38 tokens, within the 40-token budget."
+    }
+  },
+  {
+    "request_id": "cg08",
+    "scenario_id": "fresh_cg08",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Turn this note into exactly three bullets in the same order, using a verb to start each bullet: \"The cups need washing. Then the mat needs shaking outside. Finally the counter needs wiping.\"",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Exactly three bullets.",
+        "Wash cups, shake mat outside, wipe counter in that order.",
+        "Each bullet starts with an action verb."
+      ],
+      "forbidden": [],
+      "reference_answer": "- Wash the cups.\n- Shake the mat outside.\n- Wipe the counter."
+    }
+  },
+  {
+    "request_id": "cg09",
+    "scenario_id": "fresh_cg09",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Suggest two different names for a household robot. Each must be one word, start with B, and contain no more than six letters. Give names only.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Exactly two distinct one-word names.",
+        "Both start with B and have at most six letters.",
+        "No explanatory text."
+      ],
+      "forbidden": [],
+      "reference_answer": "Bibi, Bex"
+    }
+  },
+  {
+    "request_id": "cg10",
+    "scenario_id": "fresh_cg10",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "A craft budget is 19 tokens. Paper costs 7, glue costs 5 and ribbon costs 4. Buy one of each; state the total and change, with no shopping advice.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Total 16 tokens.",
+        "Change 3 tokens.",
+        "No additional shopping advice."
+      ],
+      "forbidden": [],
+      "reference_answer": "Total: 16 tokens. Change: 3 tokens."
+    }
+  },
+  {
+    "request_id": "cg11",
+    "scenario_id": "fresh_cg11",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Explain a calendar to a child in at most 25 words. Use no technical terms and include one example involving a birthday.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "At most 25 whitespace-separated words.",
+        "Simple explanation of keeping track of days/events.",
+        "Birthday example."
+      ],
+      "forbidden": [],
+      "reference_answer": "A calendar shows days and months. You can mark your birthday on it to remember when to celebrate."
+    }
+  },
+  {
+    "request_id": "cg12",
+    "scenario_id": "fresh_cg12",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Order these jobs: put books on the shelf, dust the empty shelf, remove the books. Use a single sentence with \"first\", \"then\" and \"finally\".",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "One sentence with first, then, finally.",
+        "Remove books before dusting, then return books."
+      ],
+      "forbidden": [],
+      "reference_answer": "First remove the books, then dust the empty shelf, and finally put the books back on it."
+    }
+  },
+  {
+    "request_id": "cg13",
+    "scenario_id": "fresh_cg13",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Divide 18 biscuits equally among three guests and save none. State biscuits per guest and verify the total in one sentence.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Six biscuits per guest.",
+        "One sentence verifies 3 times 6 equals 18.",
+        "None saved."
+      ],
+      "forbidden": [],
+      "reference_answer": "Give each guest six biscuits, since 3 times 6 equals all 18 biscuits."
+    }
+  },
+  {
+    "request_id": "cg14",
+    "scenario_id": "fresh_cg14",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Prepare a four-item packing list for a short drawing session in the garden. Include paper and a pencil, include something to sit on, and exclude electronic devices.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Exactly four packing items.",
+        "Paper, pencil, and suitable seating included.",
+        "Fourth item plausible for outdoor drawing.",
+        "No electronic device."
+      ],
+      "forbidden": [],
+      "reference_answer": "- Paper\n- Pencil\n- Folding stool\n- Eraser"
+    }
+  },
+  {
+    "request_id": "cg15",
+    "scenario_id": "fresh_cg15",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Compare hanging and folding clean shirts in exactly two bullets, one for each method. Give one practical benefit per method and do not claim either is always best.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Two bullets, one hanging and one folding.",
+        "One valid practical benefit each.",
+        "No universal winner."
+      ],
+      "forbidden": [],
+      "reference_answer": "- Hanging can reduce fold creases.\n- Folding uses drawer space efficiently."
+    }
+  },
+  {
+    "request_id": "cg16",
+    "scenario_id": "fresh_cg16",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "A robot can carry at most two books per trip. Move five books using the fewest trips. Give the trip count and number of books on each trip; do not carry more than the limit.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Three trips.",
+        "Loads are 2, 2, 1 in any order.",
+        "No trip exceeds two books."
+      ],
+      "forbidden": [],
+      "reference_answer": "Three trips: two books, two books, then one book."
+    }
+  },
+  {
+    "request_id": "cg17",
+    "scenario_id": "fresh_cg17",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Write a label for a box of spare buttons. It must contain \"buttons\", have at most four words, and contain no punctuation.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Includes buttons, case insensitive.",
+        "At most four words.",
+        "No punctuation inside the label."
+      ],
+      "forbidden": [],
+      "reference_answer": "Spare buttons"
+    }
+  },
+  {
+    "request_id": "cg18",
+    "scenario_id": "fresh_cg18",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Choose the earliest fictional shuttle that leaves at or after 09:20 and arrives by 10:00. Name it and its departure and arrival times.",
+    "evidence": [
+      "Ash leaves 09:10, arrives 09:35. Birch leaves 09:25, arrives 09:55. Cedar leaves 09:40, arrives 10:05."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Selects Birch.",
+        "Gives departure 09:25 and arrival 09:55."
+      ],
+      "forbidden": [],
+      "reference_answer": "Birch: departs 09:25 and arrives 09:55."
+    }
+  },
+  {
+    "request_id": "cg19",
+    "scenario_id": "fresh_cg19",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Make a 20-minute plan using exactly one reading period and one tidying period. Reading must be twice as long as a 5-minute tidying period, and the remaining time must be a break. State all durations.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Reading 10 minutes, tidying 5 minutes, break 5 minutes.",
+        "Exactly one reading and one tidying period.",
+        "Total 20 minutes."
+      ],
+      "forbidden": [],
+      "reference_answer": "Read for 10 minutes, tidy for 5 minutes, and take a 5-minute break: 20 minutes total."
+    }
+  },
+  {
+    "request_id": "cg20",
+    "scenario_id": "fresh_cg20",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Rewrite \"You left the hallway a mess again\" as one polite request. Mention the hallway, avoid blame, and use no more than 15 words.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "One polite request to tidy/clear the hallway.",
+        "No blame or accusation.",
+        "At most 15 words."
+      ],
+      "forbidden": [],
+      "reference_answer": "Could you please help tidy the hallway?"
+    }
+  },
+  {
+    "request_id": "cg21",
+    "scenario_id": "fresh_cg21",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Sort these jars by volume from smallest to largest: red 750 ml, green 250 ml, white 500 ml. Give colours only, separated by commas.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Green, white, red in that order.",
+        "Only colours separated by commas."
+      ],
+      "forbidden": [],
+      "reference_answer": "green, white, red"
+    }
+  },
+  {
+    "request_id": "cg22",
+    "scenario_id": "fresh_cg22",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Pick two activities for a rainy indoor afternoon from knitting, kite flying, reading and garden digging. Neither may require going outside. Give exactly two bullets and one short reason for each.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Chooses knitting and reading only.",
+        "Exactly two bullets.",
+        "Each has a relevant short indoor/rain-compatible reason."
+      ],
+      "forbidden": [],
+      "reference_answer": "- Knitting keeps your hands busy indoors.\n- Reading provides a quiet activity away from the rain."
+    }
+  },
+  {
+    "request_id": "cg23",
+    "scenario_id": "fresh_cg23",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "A square tabletop is 60 cm on each side. A cover must hang 10 cm beyond every edge. Give the required square cover size and explain the added length briefly.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "80 cm by 80 cm.",
+        "Explains adding 10 cm on both ends of each dimension."
+      ],
+      "forbidden": [
+        "70 cm dimensions."
+      ],
+      "reference_answer": "Use an 80 cm by 80 cm cover: each 60 cm side needs 10 cm extra at both ends."
+    }
+  },
+  {
+    "request_id": "cg24",
+    "scenario_id": "fresh_cg24",
+    "category": "constrained_general",
+    "evidence_status": "answerable",
+    "question": "Make a two-sentence reminder to bring a library card on Friday. The first sentence must state the reminder; the second must suggest putting the card beside the door. Do not invent a time.",
+    "evidence": [],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Exactly two sentences.",
+        "First reminds bringing library card Friday.",
+        "Second suggests card beside door.",
+        "No invented time."
+      ],
+      "forbidden": [],
+      "reference_answer": "Remember to bring your library card on Friday. Put it beside the door so it is easy to find."
+    }
+  },
+  {
+    "request_id": "cg25",
+    "scenario_id": "fresh_cg25",
+    "category": "constrained_general",
+    "evidence_status": "unknown",
+    "question": "Find a lamp that is cordless, costs at most 30 tokens, and provides warm light. Name a qualifying lamp only if every condition is established; otherwise identify the missing fact in one sentence.",
+    "evidence": [
+      "Meka lamp: cordless, 24 tokens; light colour not specified. Filo lamp: corded, 20 tokens, warm light."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Does not certify either lamp.",
+        "Identifies unknown light colour for Meka in one sentence."
+      ],
+      "forbidden": [
+        "Assumes Meka provides warm light."
+      ],
+      "reference_answer": "Meka meets the power and price conditions, but its light colour is not specified."
+    }
+  },
+  {
+    "request_id": "cg26",
+    "scenario_id": "fresh_cg26",
+    "category": "constrained_general",
+    "evidence_status": "unknown",
+    "question": "Choose a visitor slot of at least 45 minutes ending by noon, and provide its exact start and end. If this cannot be established, explain what is missing without proposing an invented slot.",
+    "evidence": [
+      "The fictional Solva visitor room opens sometime in the morning and closes at noon; no exact opening time is supplied."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "States no guaranteed qualifying slot can be established.",
+        "Identifies unknown opening time."
+      ],
+      "forbidden": [
+        "Invents an opening time or guaranteed slot."
+      ],
+      "reference_answer": "The opening time is missing, so a guaranteed 45-minute slot ending by noon cannot be specified."
+    }
+  },
+  {
+    "request_id": "cg27",
+    "scenario_id": "fresh_cg27",
+    "category": "constrained_general",
+    "evidence_status": "unknown",
+    "question": "Calculate the total cost for two identical storage baskets plus delivery. State any known subtotal and identify the missing amount; do not assume free delivery.",
+    "evidence": [
+      "Each basket costs 9 tokens. Delivery is charged, but the charge is not listed."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Basket subtotal 18 tokens.",
+        "Total unknown because delivery charge missing."
+      ],
+      "forbidden": [
+        "States 18 as the full delivered total or assumes delivery price."
+      ],
+      "reference_answer": "The baskets cost 18 tokens together. The delivered total is unknown because the delivery charge is not listed."
+    }
+  },
+  {
+    "request_id": "cg28",
+    "scenario_id": "fresh_cg28",
+    "category": "constrained_general",
+    "evidence_status": "conflicting",
+    "question": "Give the room and start time for the fictional Kestrel puzzle club in one sentence. If either field conflicts, report both listed alternatives and do not choose between them.",
+    "evidence": [
+      "Current listing A: Kestrel puzzle club, room 2, 16:00.",
+      "Equally authoritative current listing B: Kestrel puzzle club, room 2, 16:30; no replacement is indicated."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "One sentence.",
+        "Room 2.",
+        "Start conflict 16:00 versus 16:30, no chosen winner."
+      ],
+      "forbidden": [],
+      "reference_answer": "Kestrel puzzle club is in room 2, but its start time conflicts between 16:00 and 16:30."
+    }
+  },
+  {
+    "request_id": "cg29",
+    "scenario_id": "fresh_cg29",
+    "category": "constrained_general",
+    "evidence_status": "conflicting",
+    "question": "Work out how many tiles are in three unopened packs. Give a definite total only if the number of tiles per pack is settled; otherwise give both possible totals with their assumptions.",
+    "evidence": [
+      "Current packaging says 6 tiles per pack. The equally authoritative current product sheet for the same packs says 8; neither source supersedes the other."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Acknowledges unresolved 6-versus-8 count.",
+        "18 if 6 per pack, 24 if 8.",
+        "No definite unconditional total."
+      ],
+      "forbidden": [],
+      "reference_answer": "The pack counts conflict: three packs contain 18 tiles if each holds 6, or 24 if each holds 8."
+    }
+  },
+  {
+    "request_id": "cg30",
+    "scenario_id": "fresh_cg30",
+    "category": "constrained_general",
+    "evidence_status": "conflicting",
+    "question": "Summarise the fictional Oriel garden rule in at most two sentences. Include the agreed opening day and the unresolved pet rule; do not settle the disagreement.",
+    "evidence": [
+      "Current sign: open Tuesday; pets allowed.",
+      "Equally authoritative current leaflet: open Tuesday; pets prohibited. Neither replaces the other."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "At most two sentences.",
+        "Tuesday opening.",
+        "Pets allowed versus prohibited unresolved."
+      ],
+      "forbidden": [],
+      "reference_answer": "The garden opens Tuesday. Its pet rules conflict: the sign allows pets, while the leaflet prohibits them."
+    }
+  },
+  {
+    "request_id": "pr01",
+    "scenario_id": "fresh_pr01",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "What pattern is on my preferred reading cushion?",
+    "evidence": [
+      "You chose a cushion with tiny sailboats for reading.",
+      "Your outdoor seat pad has yellow checks."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Tiny sailboats on the reading cushion."
+      ],
+      "forbidden": [
+        "Attributes yellow checks to the reading cushion."
+      ],
+      "reference_answer": "Your preferred reading cushion has tiny sailboats on it."
+    }
+  },
+  {
+    "request_id": "pr02",
+    "scenario_id": "fresh_pr02",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "Where did I say I keep the spare shoelaces?",
+    "evidence": [
+      "You keep spare shoelaces in the blue tin inside the coat cupboard.",
+      "Extra buttons are in a jar on the desk."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Blue tin inside coat cupboard."
+      ],
+      "forbidden": [
+        "Button storage substituted."
+      ],
+      "reference_answer": "You keep them in the blue tin inside the coat cupboard."
+    }
+  },
+  {
+    "request_id": "pr03",
+    "scenario_id": "fresh_pr03",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "Which day is my regular paper-folding group?",
+    "evidence": [
+      "Your paper-folding group meets on Wednesdays.",
+      "Your neighbour attends a painting class on Mondays."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Wednesday."
+      ],
+      "forbidden": [
+        "Monday substituted."
+      ],
+      "reference_answer": "Your paper-folding group is on Wednesdays."
+    }
+  },
+  {
+    "request_id": "pr04",
+    "scenario_id": "fresh_pr04",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "Remind me of the name of my stuffed penguin.",
+    "evidence": [
+      "You named your stuffed penguin Peblet.",
+      "Your ceramic owl is called Koro."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Peblet."
+      ],
+      "forbidden": [
+        "Koro as penguin name."
+      ],
+      "reference_answer": "Your stuffed penguin is named Peblet."
+    }
+  },
+  {
+    "request_id": "pr05",
+    "scenario_id": "fresh_pr05",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "How do I like the curtains arranged while I draw?",
+    "evidence": [
+      "When drawing, you prefer the left curtain open and the right curtain closed."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Left open and right closed."
+      ],
+      "forbidden": [
+        "Reverses sides."
+      ],
+      "reference_answer": "You like the left curtain open and the right curtain closed."
+    }
+  },
+  {
+    "request_id": "pr06",
+    "scenario_id": "fresh_pr06",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "Who lends me the wooden jigsaw puzzles?",
+    "evidence": [
+      "Your cousin Tavia lends you wooden jigsaw puzzles.",
+      "Your friend Olen lends you magazines."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Cousin Tavia."
+      ],
+      "forbidden": [
+        "Olen as puzzle lender."
+      ],
+      "reference_answer": "Your cousin Tavia lends you the wooden jigsaw puzzles."
+    }
+  },
+  {
+    "request_id": "pr07",
+    "scenario_id": "fresh_pr07",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "What did I call the small balcony fern?",
+    "evidence": [
+      "You call the small balcony fern Ziglet.",
+      "The large hallway plant has no recorded nickname."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Ziglet."
+      ],
+      "forbidden": [],
+      "reference_answer": "You call it Ziglet."
+    }
+  },
+  {
+    "request_id": "pr08",
+    "scenario_id": "fresh_pr08",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "Which room do I prefer for listening to audiobooks?",
+    "evidence": [
+      "You prefer listening to audiobooks in the sunroom.",
+      "You do crossword puzzles in the kitchen."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Sunroom."
+      ],
+      "forbidden": [
+        "Kitchen as audiobook preference."
+      ],
+      "reference_answer": "You prefer the sunroom for listening to audiobooks."
+    }
+  },
+  {
+    "request_id": "pr09",
+    "scenario_id": "fresh_pr09",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "What two things did I ask to keep on the tray beside my armchair?",
+    "evidence": [
+      "You asked to keep a bookmark and a pencil on the tray beside your armchair.",
+      "The remote control belongs in the wall pocket."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Bookmark and pencil."
+      ],
+      "forbidden": [
+        "Adds remote control as tray item."
+      ],
+      "reference_answer": "A bookmark and a pencil."
+    }
+  },
+  {
+    "request_id": "pr10",
+    "scenario_id": "fresh_pr10",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "How many place mats are in my picnic set?",
+    "evidence": [
+      "Your picnic set contains six place mats.",
+      "Your indoor dining set contains four place mats."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Six."
+      ],
+      "forbidden": [
+        "Four as picnic quantity."
+      ],
+      "reference_answer": "Your picnic set has six place mats."
+    }
+  },
+  {
+    "request_id": "pr11",
+    "scenario_id": "fresh_pr11",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "Which scent do I prefer for the drawer sachets?",
+    "evidence": [
+      "You prefer cedar-scented drawer sachets.",
+      "You dislike rose-scented sachets."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Cedar."
+      ],
+      "forbidden": [
+        "Rose preference or reversed polarity."
+      ],
+      "reference_answer": "You prefer cedar-scented sachets."
+    }
+  },
+  {
+    "request_id": "pr12",
+    "scenario_id": "fresh_pr12",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "Where is the spare roll of wrapping paper now?",
+    "evidence": [
+      "On 4 August you stored the spare wrapping-paper roll behind the desk.",
+      "On 9 August you moved that roll to the tall hallway basket, replacing its earlier location."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Tall hallway basket as current location."
+      ],
+      "forbidden": [
+        "Behind desk as current location."
+      ],
+      "reference_answer": "It is now in the tall hallway basket."
+    }
+  },
+  {
+    "request_id": "pr13",
+    "scenario_id": "fresh_pr13",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "What is my chosen name for the new knitting basket?",
+    "evidence": [
+      "You first called the new knitting basket Dotbox.",
+      "You later corrected that name to Stitchnest; Stitchnest is the active name."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Stitchnest."
+      ],
+      "forbidden": [
+        "Dotbox as current name."
+      ],
+      "reference_answer": "Your chosen name is Stitchnest."
+    }
+  },
+  {
+    "request_id": "pr14",
+    "scenario_id": "fresh_pr14",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "Which of my nephews collects toy windmills?",
+    "evidence": [
+      "Your nephew Iven collects toy windmills.",
+      "Your nephew Rulan collects postcards."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Iven."
+      ],
+      "forbidden": [
+        "Rulan as windmill collector."
+      ],
+      "reference_answer": "Your nephew Iven collects toy windmills."
+    }
+  },
+  {
+    "request_id": "pr15",
+    "scenario_id": "fresh_pr15",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "What did I choose to put on the front of my recipe folder?",
+    "evidence": [
+      "You chose a drawing of a pear for the front of your recipe folder.",
+      "Your address book has a drawing of a kite."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Drawing of a pear."
+      ],
+      "forbidden": [
+        "Kite as recipe-folder image."
+      ],
+      "reference_answer": "You chose a drawing of a pear."
+    }
+  },
+  {
+    "request_id": "pr16",
+    "scenario_id": "fresh_pr16",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "Do I prefer background music or silence when doing a crossword?",
+    "evidence": [
+      "You prefer silence while doing crosswords.",
+      "You enjoy background music while washing dishes."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Silence for crosswords."
+      ],
+      "forbidden": [
+        "Music preference applied to crosswords."
+      ],
+      "reference_answer": "You prefer silence while doing a crossword."
+    }
+  },
+  {
+    "request_id": "pr17",
+    "scenario_id": "fresh_pr17",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "What material did I want for the replacement doormat?",
+    "evidence": [
+      "Your confirmed choice for the replacement doormat is coir.",
+      "You chose cotton for the bathroom mat."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Coir."
+      ],
+      "forbidden": [
+        "Cotton as doormat material."
+      ],
+      "reference_answer": "You wanted a coir replacement doormat."
+    }
+  },
+  {
+    "request_id": "pr18",
+    "scenario_id": "fresh_pr18",
+    "category": "personal_recall",
+    "evidence_status": "answerable",
+    "question": "What time is my weekly call with my friend Siven?",
+    "evidence": [
+      "Your weekly call with Siven is at 18:40.",
+      "Your weekly call with Daro is at 17:15."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "18:40."
+      ],
+      "forbidden": [
+        "17:15 as Siven time."
+      ],
+      "reference_answer": "Your weekly call with Siven is at 18:40."
+    }
+  },
+  {
+    "request_id": "pr19",
+    "scenario_id": "fresh_pr19",
+    "category": "personal_recall",
+    "evidence_status": "unknown",
+    "question": "What colour backpack did I choose for the museum visit?",
+    "evidence": [
+      "You chose a lightweight backpack for the museum visit.",
+      "No backpack colour is recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Acknowledges colour is not recorded/unknown."
+      ],
+      "forbidden": [
+        "Invented colour."
+      ],
+      "reference_answer": "The backpack colour is not recorded."
+    }
+  },
+  {
+    "request_id": "pr20",
+    "scenario_id": "fresh_pr20",
+    "category": "personal_recall",
+    "evidence_status": "unknown",
+    "question": "What is the title of the poem I wanted to read to Elya?",
+    "evidence": [
+      "You wanted to read a short poem to Elya.",
+      "The poem title and author were not recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Acknowledges poem title is unknown."
+      ],
+      "forbidden": [
+        "Invents title or author."
+      ],
+      "reference_answer": "I do not have the poem title in these memories."
+    }
+  },
+  {
+    "request_id": "pr21",
+    "scenario_id": "fresh_pr21",
+    "category": "personal_recall",
+    "evidence_status": "unknown",
+    "question": "How many spare pillowcases did I put in the guest drawer?",
+    "evidence": [
+      "You put spare pillowcases in the guest drawer.",
+      "Their number was not recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Says count is unknown."
+      ],
+      "forbidden": [
+        "Invents count."
+      ],
+      "reference_answer": "The memories say where you put them, but not how many."
+    }
+  },
+  {
+    "request_id": "pr22",
+    "scenario_id": "fresh_pr22",
+    "category": "personal_recall",
+    "evidence_status": "unknown",
+    "question": "Which bus route did I plan to take to the pottery market?",
+    "evidence": [
+      "You planned to visit the pottery market by bus.",
+      "No bus route number or route name is recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "States route is unknown."
+      ],
+      "forbidden": [
+        "Invents route."
+      ],
+      "reference_answer": "The bus route was not recorded."
+    }
+  },
+  {
+    "request_id": "pr23",
+    "scenario_id": "fresh_pr23",
+    "category": "personal_recall",
+    "evidence_status": "unknown",
+    "question": "What fabric is my striped apron made from?",
+    "evidence": [
+      "Your apron has green and white stripes.",
+      "The apron fabric is not specified."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Acknowledges fabric unknown."
+      ],
+      "forbidden": [
+        "Guesses cotton or another fabric."
+      ],
+      "reference_answer": "The apron fabric is not specified in these memories."
+    }
+  },
+  {
+    "request_id": "pr24",
+    "scenario_id": "fresh_pr24",
+    "category": "personal_recall",
+    "evidence_status": "unknown",
+    "question": "What nickname does my friend Meran use for me?",
+    "evidence": [
+      "Meran is your friend from the model-boat club.",
+      "No nickname Meran uses for you is recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "States nickname is not known from evidence."
+      ],
+      "forbidden": [
+        "Invents nickname."
+      ],
+      "reference_answer": "I do not have a recorded nickname that Meran uses for you."
+    }
+  },
+  {
+    "request_id": "pr25",
+    "scenario_id": "fresh_pr25",
+    "category": "personal_recall",
+    "evidence_status": "conflicting",
+    "question": "Where do I currently keep the embroidery hoop?",
+    "evidence": [
+      "Current confirmed memory: your embroidery hoop is in the wicker trunk.",
+      "Another current confirmed memory: the same hoop is in the low cabinet. The trunk and cabinet are separate places, neither inside the other. Neither memory supersedes the other."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Names wicker trunk versus low cabinet conflict and no definite current location."
+      ],
+      "forbidden": [
+        "Chooses one location as resolved."
+      ],
+      "reference_answer": "The memories conflict between the wicker trunk and low cabinet, so I cannot tell which is current."
+    }
+  },
+  {
+    "request_id": "pr26",
+    "scenario_id": "fresh_pr26",
+    "category": "personal_recall",
+    "evidence_status": "conflicting",
+    "question": "What is my preferred colour for the new curtain tiebacks?",
+    "evidence": [
+      "Active confirmed preference: teal curtain tiebacks.",
+      "Equally current confirmed preference for the same tiebacks: rust. No correction or priority is recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Identifies teal versus rust conflict; preference uncertain."
+      ],
+      "forbidden": [
+        "Picks one as settled."
+      ],
+      "reference_answer": "There are conflicting current preferences for teal and rust, so your choice needs clarification."
+    }
+  },
+  {
+    "request_id": "pr27",
+    "scenario_id": "fresh_pr27",
+    "category": "personal_recall",
+    "evidence_status": "conflicting",
+    "question": "Who is bringing my folding stool back?",
+    "evidence": [
+      "Confirmed current note: your friend Nolvi alone is bringing your folding stool back, not Peren.",
+      "Equally current confirmed note: your cousin Peren alone is bringing the same stool back, not Nolvi. No note overrides the other."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Reports Nolvi versus Peren conflict and uncertainty."
+      ],
+      "forbidden": [
+        "States one or both are definitely bringing it."
+      ],
+      "reference_answer": "The notes disagree: one names Nolvi and the other Peren. I cannot determine who is bringing it back."
+    }
+  },
+  {
+    "request_id": "pr28",
+    "scenario_id": "fresh_pr28",
+    "category": "personal_recall",
+    "evidence_status": "conflicting",
+    "question": "What time is my next window-box delivery?",
+    "evidence": [
+      "Active confirmed delivery note: your next window-box delivery is at 11:20.",
+      "Another equally current confirmed note for that same delivery says 13:10. Neither is marked corrected."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Reports 11:20 versus 13:10 conflict and no chosen time."
+      ],
+      "forbidden": [
+        "Definite delivery time."
+      ],
+      "reference_answer": "The delivery time is unresolved: the notes list both 11:20 and 13:10."
+    }
+  },
+  {
+    "request_id": "pr29",
+    "scenario_id": "fresh_pr29",
+    "category": "personal_recall",
+    "evidence_status": "conflicting",
+    "question": "How many napkins are in my blue picnic pouch?",
+    "evidence": [
+      "Current inventory: the blue picnic pouch contains three napkins.",
+      "Equally current inventory of the same pouch: it contains five napkins. No intervening change or priority is recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Three-versus-five conflict, no definite count."
+      ],
+      "forbidden": [
+        "Adds counts or picks one."
+      ],
+      "reference_answer": "The inventories conflict between three and five napkins, so the count is uncertain."
+    }
+  },
+  {
+    "request_id": "pr30",
+    "scenario_id": "fresh_pr30",
+    "category": "personal_recall",
+    "evidence_status": "conflicting",
+    "question": "What name did I finally choose for my new tabletop game?",
+    "evidence": [
+      "Current confirmed name for your new tabletop game: Pebble Path.",
+      "Equally current confirmed name for the same game: Lantern Loop. Neither is a correction or a draft."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Names both conflicting choices and cannot establish final name."
+      ],
+      "forbidden": [
+        "Chooses a final name without support."
+      ],
+      "reference_answer": "Both Pebble Path and Lantern Loop are recorded as current names; the final choice is unresolved."
+    }
+  },
+  {
+    "request_id": "pt01",
+    "scenario_id": "fresh_pt01",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "How did my preferred place for breakfast change, and what is the current preference?",
+    "evidence": [
+      "On 2 July you preferred breakfast on the balcony.",
+      "On 12 July you changed your breakfast preference to the kitchen nook, replacing the balcony preference."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Change balcony to kitchen nook.",
+        "Kitchen nook current."
+      ],
+      "forbidden": [
+        "Balcony as current preference."
+      ],
+      "reference_answer": "You changed from the balcony to the kitchen nook on 12 July. The kitchen nook is your current preference."
+    }
+  },
+  {
+    "request_id": "pt02",
+    "scenario_id": "fresh_pt02",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "How many days passed between my buying the mosaic kit and finishing it?",
+    "evidence": [
+      "You bought a mosaic kit on 3 June 2026.",
+      "You finished that kit on 11 June 2026."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Eight elapsed days."
+      ],
+      "forbidden": [
+        "Inclusive nine-day count as elapsed duration."
+      ],
+      "reference_answer": "Eight days passed, from 3 June to 11 June."
+    }
+  },
+  {
+    "request_id": "pt03",
+    "scenario_id": "fresh_pt03",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "Put my three craft projects in completion order, earliest first, and say which was last.",
+    "evidence": [
+      "You completed the paper mobile on 18 May 2026.",
+      "You completed the felt coaster on 6 May 2026.",
+      "You completed the bead tray on 12 May 2026."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Felt coaster, bead tray, paper mobile order.",
+        "Paper mobile last."
+      ],
+      "forbidden": [],
+      "reference_answer": "Felt coaster, bead tray, then paper mobile. The paper mobile was last."
+    }
+  },
+  {
+    "request_id": "pt04",
+    "scenario_id": "fresh_pt04",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "At 15:00 on 9 April, where was my sketchbook, and where was it by the end of that day?",
+    "evidence": [
+      "On 9 April at 09:00 you put your sketchbook in the desk drawer.",
+      "At 17:00 that day you moved the sketchbook from the drawer to your green tote, where it stayed for the rest of the day."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Desk drawer at 15:00.",
+        "Green tote at end of day."
+      ],
+      "forbidden": [
+        "Uses later location for 15:00."
+      ],
+      "reference_answer": "At 15:00 it was in the desk drawer. By the end of the day it was in your green tote."
+    }
+  },
+  {
+    "request_id": "pt05",
+    "scenario_id": "fresh_pt05",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "How long did my visit with Faryn last, and how long before my radio programme began did it finish?",
+    "evidence": [
+      "Your visit with Faryn ran from 14:10 to 15:00 on 22 March.",
+      "Your radio programme began at 15:20 that day."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Visit lasted 50 minutes.",
+        "Finished before programme, by 20 minutes."
+      ],
+      "forbidden": [],
+      "reference_answer": "The visit lasted 50 minutes and ended 20 minutes before your radio programme began."
+    }
+  },
+  {
+    "request_id": "pt06",
+    "scenario_id": "fresh_pt06",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "What changed about my Tuesday craft routine, and which parts stayed the same?",
+    "evidence": [
+      "Your old Tuesday routine was knitting at 10:00 in the lounge.",
+      "Your updated Tuesday routine is paper cutting at 10:00 in the lounge, replacing the old routine."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Activity changed knitting to paper cutting.",
+        "10:00 and lounge remain unchanged."
+      ],
+      "forbidden": [],
+      "reference_answer": "You switched from knitting to paper cutting. The time, 10:00, and the lounge location stayed the same."
+    }
+  },
+  {
+    "request_id": "pt07",
+    "scenario_id": "fresh_pt07",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "Which came first, my visit to the puppet show or my purchase of the wool scarf, and how far apart were they?",
+    "evidence": [
+      "You visited the puppet show on 27 January 2026.",
+      "You bought the wool scarf on 30 January 2026."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Puppet show first.",
+        "Three days apart."
+      ],
+      "forbidden": [],
+      "reference_answer": "The puppet show came first, three days before you bought the scarf."
+    }
+  },
+  {
+    "request_id": "pt08",
+    "scenario_id": "fresh_pt08",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "Which of the recorded gifts did I receive after the lantern walk but before the garden lunch?",
+    "evidence": [
+      "You received a puzzle on 2 August 2026.",
+      "The lantern walk was on 4 August 2026.",
+      "You received a bookmark on 6 August 2026.",
+      "The garden lunch was on 9 August 2026.",
+      "You received a mug on 10 August 2026."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Bookmark only."
+      ],
+      "forbidden": [
+        "Includes puzzle or mug."
+      ],
+      "reference_answer": "You received the bookmark in that interval."
+    }
+  },
+  {
+    "request_id": "pt09",
+    "scenario_id": "fresh_pt09",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "Summarise my changing seat choice for film night, distinguishing my first choice, temporary choice and current choice.",
+    "evidence": [
+      "On 1 February you chose the armchair for film night.",
+      "On 5 February you temporarily switched to the sofa.",
+      "On 8 February you changed to the window bench, replacing the sofa; the bench remains your current choice."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "First armchair; temporary sofa; current window bench."
+      ],
+      "forbidden": [
+        "Calls an old choice current."
+      ],
+      "reference_answer": "Your first choice was the armchair, then you temporarily used the sofa. Your current choice is the window bench."
+    }
+  },
+  {
+    "request_id": "pt10",
+    "scenario_id": "fresh_pt10",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "For my next craft visit, combine my current travel choice with the two supplies I said I would bring.",
+    "evidence": [
+      "You initially planned to walk to the next craft visit.",
+      "You changed that plan to travel by tram, replacing walking.",
+      "For that visit you agreed to bring felt sheets and wooden beads."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Travel by tram.",
+        "Bring felt sheets and wooden beads."
+      ],
+      "forbidden": [
+        "Walking as current plan or added supplies."
+      ],
+      "reference_answer": "You plan to take the tram and bring felt sheets and wooden beads."
+    }
+  },
+  {
+    "request_id": "pt11",
+    "scenario_id": "fresh_pt11",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "Did my frame-painting session overlap the parcel collection window? If so, give the overlap interval and its duration.",
+    "evidence": [
+      "Your frame-painting session ran 11:00-11:40 on 13 June.",
+      "Your parcel collection window was 11:25-12:00 on the same day."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Overlap yes.",
+        "11:25-11:40, fifteen minutes."
+      ],
+      "forbidden": [],
+      "reference_answer": "Yes. They overlapped from 11:25 to 11:40, for 15 minutes."
+    }
+  },
+  {
+    "request_id": "pt12",
+    "scenario_id": "fresh_pt12",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "What were my first and most recent completed jigsaws, and how many did I finish in between?",
+    "evidence": [
+      "You finished Harbour Lights on 2 December 2025.",
+      "You finished Meadow Gate on 5 December 2025.",
+      "You finished Copper Train on 8 December 2025.",
+      "You finished Moonlit Orchard on 13 December 2025. These are all your completed jigsaws in the record."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "First Harbour Lights.",
+        "Most recent Moonlit Orchard.",
+        "Two in between."
+      ],
+      "forbidden": [],
+      "reference_answer": "First was Harbour Lights; most recent was Moonlit Orchard. You finished two in between."
+    }
+  },
+  {
+    "request_id": "pt13",
+    "scenario_id": "fresh_pt13",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "How much earlier is my revised weekly call, and with whom is it?",
+    "evidence": [
+      "Your weekly call with your friend Brena used to start at 19:10.",
+      "You and Brena moved that same weekly call to 18:35, replacing 19:10."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "35 minutes earlier.",
+        "Friend Brena.",
+        "Current 18:35 if time stated."
+      ],
+      "forbidden": [],
+      "reference_answer": "Your call with Brena is now 35 minutes earlier, at 18:35."
+    }
+  },
+  {
+    "request_id": "pt14",
+    "scenario_id": "fresh_pt14",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "What should my picnic note say about the current meeting place and the item assigned to me?",
+    "evidence": [
+      "The picnic was originally to meet at Willow Arch.",
+      "The group moved the same picnic meeting to Stone Steps, replacing Willow Arch.",
+      "You agreed to bring the checked blanket; Nevi agreed to bring cups."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Current meeting Stone Steps.",
+        "Your assigned item checked blanket."
+      ],
+      "forbidden": [
+        "Assigns cups to you or old meeting place as current."
+      ],
+      "reference_answer": "Meet at Stone Steps and bring the checked blanket."
+    }
+  },
+  {
+    "request_id": "pt15",
+    "scenario_id": "fresh_pt15",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "How many more seed packets did I sort in the later session than in the earlier one?",
+    "evidence": [
+      "On 7 March you sorted 8 seed packets.",
+      "On 14 March you sorted 13 seed packets."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Five more in later session."
+      ],
+      "forbidden": [
+        "Adds to 21 as answer to difference."
+      ],
+      "reference_answer": "You sorted five more packets in the later session: 13 minus 8."
+    }
+  },
+  {
+    "request_id": "pt16",
+    "scenario_id": "fresh_pt16",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "Which person had my fabric scissors immediately before I got them back?",
+    "evidence": [
+      "On 3 April you lent your fabric scissors to Elvor.",
+      "On 5 April Elvor passed them to Minae with your permission.",
+      "On 8 April Minae returned those scissors to you."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Minae immediately before return."
+      ],
+      "forbidden": [
+        "Elvor as immediate previous holder."
+      ],
+      "reference_answer": "Minae had your fabric scissors immediately before returning them to you."
+    }
+  },
+  {
+    "request_id": "pt17",
+    "scenario_id": "fresh_pt17",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "By 16:00, which of my planned jobs were completed and which had not started?",
+    "evidence": [
+      "Your shelf sorting ran 14:00-14:25.",
+      "Your card writing ran 15:10-15:40.",
+      "Your button sorting was scheduled to start at 16:20 and did start then. All are on 21 May."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Shelf sorting and card writing completed.",
+        "Button sorting not started by 16:00."
+      ],
+      "forbidden": [],
+      "reference_answer": "Shelf sorting and card writing were completed. Button sorting had not yet started."
+    }
+  },
+  {
+    "request_id": "pt18",
+    "scenario_id": "fresh_pt18",
+    "category": "personal_temporal",
+    "evidence_status": "answerable",
+    "question": "Give a short account of my borrowed lantern: who lent it, when I returned it, and whether I still have it.",
+    "evidence": [
+      "On 15 October 2025 your neighbour Vasko lent you a lantern.",
+      "You returned that lantern to Vasko on 19 October 2025.",
+      "You have not borrowed it again."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Neighbour Vasko lent it.",
+        "Returned 19 October 2025.",
+        "You no longer have it."
+      ],
+      "forbidden": [],
+      "reference_answer": "Your neighbour Vasko lent it to you. You returned it on 19 October 2025 and no longer have it."
+    }
+  },
+  {
+    "request_id": "pt19",
+    "scenario_id": "fresh_pt19",
+    "category": "personal_temporal",
+    "evidence_status": "unknown",
+    "question": "How many days did I spend making the patchwork cover?",
+    "evidence": [
+      "You started the patchwork cover on 6 July 2026.",
+      "You later said it was finished, but no completion date or duration was recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Duration cannot be determined because completion date/duration missing."
+      ],
+      "forbidden": [
+        "Invents date or duration."
+      ],
+      "reference_answer": "You started on 6 July, but the completion date is missing, so the number of days cannot be determined."
+    }
+  },
+  {
+    "request_id": "pt20",
+    "scenario_id": "fresh_pt20",
+    "category": "personal_temporal",
+    "evidence_status": "unknown",
+    "question": "Which did I buy first, my blue jug or my brass bell?",
+    "evidence": [
+      "You bought the blue jug in February 2026.",
+      "You own a brass bell, but its purchase date is not recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Order unknown because bell purchase date missing."
+      ],
+      "forbidden": [
+        "Infers order from evidence order or ownership."
+      ],
+      "reference_answer": "The bell purchase date is missing, so I cannot tell which you bought first."
+    }
+  },
+  {
+    "request_id": "pt21",
+    "scenario_id": "fresh_pt21",
+    "category": "personal_temporal",
+    "evidence_status": "unknown",
+    "question": "What was my sketching routine before I switched to the current one?",
+    "evidence": [
+      "Your current sketching routine is Sunday mornings on the patio.",
+      "You said this replaced an earlier routine, but its day, time and place were not recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Earlier routine unknown.",
+        "Does not mistake current Sunday/patio routine for the earlier one."
+      ],
+      "forbidden": [
+        "Invents old routine."
+      ],
+      "reference_answer": "Your earlier routine was not recorded; only the current Sunday-morning patio routine is known."
+    }
+  },
+  {
+    "request_id": "pt22",
+    "scenario_id": "fresh_pt22",
+    "category": "personal_temporal",
+    "evidence_status": "unknown",
+    "question": "Did my visit to Renla finish before the craft delivery arrived?",
+    "evidence": [
+      "Your visit to Renla began at 13:00 on 5 June. Its end time is unrecorded.",
+      "The craft delivery arrived at 14:10 that day."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Cannot determine before/after because visit end time unknown."
+      ],
+      "forbidden": [
+        "Assumes duration or end time."
+      ],
+      "reference_answer": "The visit end time is missing, so I cannot tell whether it finished before the 14:10 delivery."
+    }
+  },
+  {
+    "request_id": "pt23",
+    "scenario_id": "fresh_pt23",
+    "category": "personal_temporal",
+    "evidence_status": "unknown",
+    "question": "Where is my travel chess set now, after I took it out of the cupboard?",
+    "evidence": [
+      "On 8 August you stored the travel chess set in the study cupboard.",
+      "On 10 August you took it out, but its destination and any later location were not recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Current location unknown following removal."
+      ],
+      "forbidden": [
+        "Claims cupboard is current or invents new location."
+      ],
+      "reference_answer": "Its current location is unknown; the last record says you removed it from the cupboard without recording where it went."
+    }
+  },
+  {
+    "request_id": "pt24",
+    "scenario_id": "fresh_pt24",
+    "category": "personal_temporal",
+    "evidence_status": "unknown",
+    "question": "Which of my two recorded craft visits lasted longer?",
+    "evidence": [
+      "Your first craft visit lasted 70 minutes.",
+      "Your second craft visit began at 10:30, but its ending time and duration were not recorded."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Cannot compare lengths without second duration/end.",
+        "First 70 minutes may be mentioned accurately."
+      ],
+      "forbidden": [
+        "Asserts either was longer."
+      ],
+      "reference_answer": "The first lasted 70 minutes, but the second duration is unknown, so they cannot be compared."
+    }
+  },
+  {
+    "request_id": "pt25",
+    "scenario_id": "fresh_pt25",
+    "category": "personal_temporal",
+    "evidence_status": "conflicting",
+    "question": "How many days passed before I returned the borrowed art book?",
+    "evidence": [
+      "You borrowed the art book on 2 May 2026.",
+      "Current confirmed note A: you returned it on 7 May 2026.",
+      "Equally authoritative note B: you returned the same book on 9 May 2026. Neither note corrects the other."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Return date conflict 7 versus 9 May.",
+        "Conditional elapsed durations five versus seven days, no definitive duration."
+      ],
+      "forbidden": [
+        "Chooses one date or averages."
+      ],
+      "reference_answer": "The return dates conflict: 7 May would mean five days, while 9 May would mean seven. The duration is unresolved."
+    }
+  },
+  {
+    "request_id": "pt26",
+    "scenario_id": "fresh_pt26",
+    "category": "personal_temporal",
+    "evidence_status": "conflicting",
+    "question": "Describe how my drawing-group venue changed and tell me where it meets now.",
+    "evidence": [
+      "Your drawing group originally met in the attic room.",
+      "Current confirmed update A moves it to the east lounge.",
+      "Equally current confirmed update B moves the same group to the courtyard room. Neither update has priority."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Original attic room.",
+        "Conflicting current east lounge versus courtyard room, no definite present venue."
+      ],
+      "forbidden": [
+        "Treats updates as an ordered sequence without support."
+      ],
+      "reference_answer": "It originally met in the attic room. Current updates conflict between the east lounge and courtyard room, so the new venue is unresolved."
+    }
+  },
+  {
+    "request_id": "pt27",
+    "scenario_id": "fresh_pt27",
+    "category": "personal_temporal",
+    "evidence_status": "conflicting",
+    "question": "Did my puzzle session finish before or after my call with Wena began?",
+    "evidence": [
+      "Your call with Wena began at 16:00.",
+      "Current log A says your puzzle session ended at 15:50 that day.",
+      "Equally authoritative log B says the same session ended at 16:15. Neither supersedes the other."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Conflict makes before/after unresolved.",
+        "15:50 would be before; 16:15 would be after 16:00."
+      ],
+      "forbidden": [
+        "Selects before or after definitively."
+      ],
+      "reference_answer": "It is unresolved: the 15:50 end would be before the call, but the conflicting 16:15 end would be after it."
+    }
+  },
+  {
+    "request_id": "pt28",
+    "scenario_id": "fresh_pt28",
+    "category": "personal_temporal",
+    "evidence_status": "conflicting",
+    "question": "Summarise my latest plan for carrying things to the board-game visit.",
+    "evidence": [
+      "You originally planned to carry a red bag to the visit.",
+      "Current confirmed revision A: use the grey tote instead.",
+      "Equally current revision B: use the striped basket instead; neither revision overrides the other.",
+      "Your assigned items remain a game board and score pad."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Agreed items game board and score pad.",
+        "Current carrier unresolved between grey tote and striped basket."
+      ],
+      "forbidden": [
+        "Red bag or one revision stated as definitive current plan."
+      ],
+      "reference_answer": "Bring the game board and score pad. The current carrier is unresolved: revisions conflict between the grey tote and striped basket."
+    }
+  },
+  {
+    "request_id": "pt29",
+    "scenario_id": "fresh_pt29",
+    "category": "personal_temporal",
+    "evidence_status": "conflicting",
+    "question": "What was my most recently completed sewing project?",
+    "evidence": [
+      "You completed the blue pouch on 10 April 2026.",
+      "Current record A dates completion of the red case to 8 April 2026.",
+      "Equally authoritative record B dates the same red case completion to 12 April 2026. These are the only two completed projects; neither record has priority."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Most recent unresolved due to red-case date conflict.",
+        "Blue pouch latest if red case 8 April, red case latest if 12 April."
+      ],
+      "forbidden": [
+        "Definite latest project."
+      ],
+      "reference_answer": "It is unresolved: the blue pouch is latest if the red case was finished on 8 April; the red case is latest if it was finished on 12 April."
+    }
+  },
+  {
+    "request_id": "pt30",
+    "scenario_id": "fresh_pt30",
+    "category": "personal_temporal",
+    "evidence_status": "conflicting",
+    "question": "How much earlier did I move my weekly plant-checking time?",
+    "evidence": [
+      "Your old weekly plant-checking time was 17:00.",
+      "Current confirmed change A moves it to 16:30.",
+      "Equally current confirmed change B moves the same routine to 16:10. Neither change supersedes the other."
+    ],
+    "history": [],
+    "rubric": {
+      "required": [
+        "Current 16:30 versus 16:10 conflict.",
+        "Conditional shift 30 versus 50 minutes earlier.",
+        "No single definite shift."
+      ],
+      "forbidden": [
+        "Averages or chooses unsupported winner."
+      ],
+      "reference_answer": "The updates conflict: 16:30 is 30 minutes earlier, while 16:10 is 50 minutes earlier. The exact shift is unresolved."
+    }
+  }
+]

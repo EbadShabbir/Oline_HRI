@@ -1,0 +1,27 @@
+{
+  "status": "passed",
+  "baseline": "../changing_memory_20260914/frozen_v1",
+  "repair": "frozen_v2",
+  "matching_runtime_conditions": {
+    "config": true,
+    "models": true,
+    "ollama_version": true,
+    "embedding_assets": true,
+    "packages": true,
+    "python": true,
+    "generation_seed": true,
+    "device_policy": true,
+    "routing_policy": true,
+    "retain_large_model": true,
+    "logical_clock": true
+  },
+  "changed_source_files": [
+    "src/oline_hri/conversation.py",
+    "src/oline_hri/evaluation_scoring.py",
+    "src/oline_hri/grounded_composition.py",
+    "src/oline_hri/memory_evidence.py",
+    "src/oline_hri/relationships.py",
+    "src/oline_hri/routing.py"
+  ],
+  "note": "Baseline remains immutable. New review and source freeze; same installed models/embeddings, config, packages and generation settings."
+}

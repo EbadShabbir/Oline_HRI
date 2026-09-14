@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evaluation/changing_memory_20260914/verify_final_analysis_v2.py",
+    "--experiment",
+    "evaluation/changing_memory_20260914",
+    "--output",
+    "evaluation/changing_memory_20260914/final_analysis_verification_v2.json"
+  ],
+  "cwd": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI",
+  "started_at": "2026-09-14T13:20:58.102170+00:00",
+  "finished_at": "2026-09-14T13:20:59.338537+00:00",
+  "returncode": 1,
+  "sha256": {
+    "evaluation/changing_memory_20260914/verify_final_analysis_v2.py": "982b71fb9ab840a68bde74e7a236f9e13cd020a022530ff62aa7990f8d2fe9e5",
+    "evaluation/changing_memory_20260914/final_analysis_verification_v2.log": "7041aac4f9cde8bb9373bfe04d5e404e34a27ef7bc64da57c1cf39831c8a5763"
+  },
+  "prior_failed_wrapper": "evaluation/changing_memory_20260914/final_analysis_verification_v1.log",
+  "wrapper_correction": "Removed byte-equality requirement for answers.md because that rendering includes the intentionally amended diagnostics; allrow and metric comparison requirements remain."
+}

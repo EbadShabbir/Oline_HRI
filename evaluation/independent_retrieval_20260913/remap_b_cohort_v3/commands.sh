@@ -1,0 +1,3 @@
+# Offline only; export requires a no-model interval.
+cd /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI
+/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/bin/python /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/batch_independent_retrieval_reviews.py remap --packet evaluation/independent_retrieval_20260913/blind_cohort_v3/blinded/packet_b.jsonl --instructions evaluation/independent_retrieval_20260913/blind_cohort_v3/blinded/REVIEW_INSTRUCTIONS.md --reviewer /root/prepare_dataset/blinded_reviewer_b --batch evaluation/independent_retrieval_20260913/review_b_cohort_v1 --batch evaluation/independent_retrieval_20260913/review_b_cohort_v2_additional --output /absolute/path/to/a/new/batch-artifact

@@ -1,0 +1,112 @@
+{
+  "reviewer": "independent assistant /root/audit_design",
+  "new_prompt_count": 48,
+  "comparison": "Exact complete string equality; not semantic independence proof",
+  "checked_files": [
+    {
+      "path": "src/oline_hri/fictional_seven_day_v1_1.json",
+      "sha256": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d"
+    },
+    {
+      "path": "src/oline_hri/fictional_seven_day_v1.json",
+      "sha256": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/run_v1/01_small_r1/workload.json",
+      "sha256": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2/workload.json",
+      "sha256": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/workload.json",
+      "sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3/workload.json",
+      "sha256": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2/workload.json",
+      "sha256": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3/workload.json",
+      "sha256": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2/workload.json",
+      "sha256": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3/workload.json",
+      "sha256": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4"
+    },
+    {
+      "path": "evaluation/complete_system_20260911/workload.json",
+      "sha256": "5ac0f9f8c160862e0a14a2162e6bda0d61a3cdf6045ed31e844f63f93996542c"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1/workload.json",
+      "sha256": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4"
+    },
+    {
+      "path": "evaluation/fictional_seven_day_v1.json",
+      "sha256": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e"
+    },
+    {
+      "path": "evaluation/routing_overhead_20260912/frozen_v1/workload.json",
+      "sha256": "d8e2cd9a03accbdfb2a81a79045dba92485a8f6a94a4c3ddec095cd7c2fddd8b"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/run_v2/01_large_r1/workload.json",
+      "sha256": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1/workload.json",
+      "sha256": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/frozen_v2/workload.json",
+      "sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59"
+    },
+    {
+      "path": "evaluation/post_memory_comparison_20260912/frozen_v1/workload.json",
+      "sha256": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59"
+    },
+    {
+      "path": "evaluation/matched_evidence_20260912_draft/dataset.json",
+      "sha256": "038e9c49dc4c80fa16a81f99b490b088a2e74cf0aac6faf5c44657e0203d50ef"
+    },
+    {
+      "path": "evaluation/routing_overhead_20260912/workload.json",
+      "sha256": "d8e2cd9a03accbdfb2a81a79045dba92485a8f6a94a4c3ddec095cd7c2fddd8b"
+    },
+    {
+      "path": "evaluation/matched_evidence_20260912/frozen_v1/dataset.json",
+      "sha256": "038e9c49dc4c80fa16a81f99b490b088a2e74cf0aac6faf5c44657e0203d50ef"
+    },
+    {
+      "path": "evaluation/routing_overhead_20260912/workload_validation_final.json",
+      "sha256": "6e6491d59f31864e91c89adfe465084f04dffd197e6b25f98df51d0499cc4a4f"
+    },
+    {
+      "path": "evaluation/fictional_seven_day_v1_1.json",
+      "sha256": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d"
+    },
+    {
+      "path": "evaluation/arc_capability_20260911/dataset.json",
+      "sha256": "c0e858c862381a6ddf04de56f53d3d12113ac01920aa6a5f7fe30c297f80c4a5"
+    },
+    {
+      "path": "evaluation/routing_overhead_20260912/frozen_v2/workload.json",
+      "sha256": "d8e2cd9a03accbdfb2a81a79045dba92485a8f6a94a4c3ddec095cd7c2fddd8b"
+    },
+    {
+      "path": "evaluation/routing_overhead_20260912/workload_validation.json",
+      "sha256": "0eb851ddcb2d3d77a8e92ec3ba378c6cdef5eb343fcada8e5ba0d42c83dc76a1"
+    }
+  ],
+  "matches": {}
+}

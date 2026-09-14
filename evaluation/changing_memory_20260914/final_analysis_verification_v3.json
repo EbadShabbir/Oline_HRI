@@ -1,0 +1,3204 @@
+{
+  "created_at": "2026-09-14T13:21:18.771976+00:00",
+  "command": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/bin/python evaluation/changing_memory_20260914/verify_final_analysis_v3.py --experiment evaluation/changing_memory_20260914 --output evaluation/changing_memory_20260914/final_analysis_verification_v3.json",
+  "cwd": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI",
+  "script_sha256": "af8db44a05a9448cdd98b60f0ee34f1efba3bc802d8e751c1e9d9579a0c7901f",
+  "input_seal_sha256": {
+    "analysis_v1": "a859e13f08a461f95846823fb4710d7513ab5a9f4b565d4ca9637dd3cd486aa1",
+    "analysis_v2": "e46dfd0701457675845e9caf034e29f2126bdc950d1ba75838177326b97d9a47"
+  },
+  "audit_sha256": "e754a02b39adb3f3b2a8a5cd5bf41e6008dbbb9bc2cc111e82f33f7ff0f7de49",
+  "scope": "Independent mechanical verification after both original blinded reviews were frozen. No inference, rescoring, or runtime change.",
+  "comparison": {
+    "non_diagnostic_rows_exactly_equal": 288,
+    "frozen_vote_file_hashes": {
+      "review_a.json": "9e5c7cc88227769635336d91a080b5196255911d42ce5c5a233b7842103bb2db",
+      "review_b.json": "4bdfca5aa9671c951f5cdd3d804ac6d13e92e4145bd584b61a289e9ac0124890",
+      "resolved.json": "4aea189730cb6f5b8be60e8f7eba2f32ff190518fa25a4b544a197d6c2fbb3e2"
+    },
+    "answer_metrics_exactly_equal": true,
+    "only_metric_difference_paths": [
+      "/all/failure_findings/evidence_selection_required_fact_missing",
+      "/groups/after_restart/failure_findings/evidence_selection_required_fact_missing",
+      "/groups/branch=correction/failure_findings/evidence_selection_required_fact_missing",
+      "/groups/category=appointment/failure_findings/evidence_selection_required_fact_missing",
+      "/groups/category=relationship/failure_findings/evidence_selection_required_fact_missing",
+      "/groups/expected_kind=replacement/failure_findings/evidence_selection_required_fact_missing",
+      "/groups/history_mode=fresh/failure_findings/evidence_selection_required_fact_missing"
+    ],
+    "other_exactly_equal_files": [
+      "history_pairs.jsonl",
+      "process_audit.json",
+      "acknowledgments.jsonl",
+      "audit_events.jsonl",
+      "diagnostic_answers.jsonl"
+    ],
+    "diagnostic_changes": [
+      {
+        "checkpoint_id": "cm04_correction_restart_fresh",
+        "changed_diagnostic_fields": [
+          "/failure_findings",
+          "/required_evidence_supplied",
+          "/supplied_ids"
+        ],
+        "v1_findings": [
+          "evidence_selection_required_fact_missing",
+          "validation_rejection"
+        ],
+        "v2_findings": [
+          "validation_rejection"
+        ]
+      },
+      {
+        "checkpoint_id": "cm09_correction_corrected_fresh",
+        "changed_diagnostic_fields": [
+          "/failure_findings",
+          "/required_evidence_supplied",
+          "/supplied_ids"
+        ],
+        "v1_findings": [
+          "evidence_selection_required_fact_missing",
+          "validation_rejection"
+        ],
+        "v2_findings": [
+          "validation_rejection"
+        ]
+      },
+      {
+        "checkpoint_id": "cm09_correction_restart_fresh",
+        "changed_diagnostic_fields": [
+          "/failure_findings",
+          "/required_evidence_supplied",
+          "/supplied_ids"
+        ],
+        "v1_findings": [
+          "evidence_selection_required_fact_missing",
+          "validation_rejection"
+        ],
+        "v2_findings": [
+          "validation_rejection"
+        ]
+      },
+      {
+        "checkpoint_id": "cm10_correction_corrected_fresh",
+        "changed_diagnostic_fields": [
+          "/failure_findings",
+          "/required_evidence_supplied",
+          "/supplied_ids"
+        ],
+        "v1_findings": [
+          "evidence_selection_required_fact_missing",
+          "validation_rejection"
+        ],
+        "v2_findings": [
+          "validation_rejection"
+        ]
+      },
+      {
+        "checkpoint_id": "cm10_correction_restart_fresh",
+        "changed_diagnostic_fields": [
+          "/failure_findings",
+          "/required_evidence_supplied",
+          "/supplied_ids"
+        ],
+        "v1_findings": [
+          "evidence_selection_required_fact_missing",
+          "validation_rejection"
+        ],
+        "v2_findings": [
+          "validation_rejection"
+        ]
+      }
+    ]
+  },
+  "scored_and_setup_status": [
+    {
+      "scope": "scored",
+      "status": "delivered",
+      "count": 283
+    },
+    {
+      "scope": "scored",
+      "status": "withheld",
+      "count": 5
+    },
+    {
+      "scope": "setup",
+      "status": "delivered",
+      "count": 36
+    }
+  ],
+  "actual_generation_requests": [
+    {
+      "scope": "scored",
+      "requested_model": "qwen3:0.6b",
+      "actual_model": "qwen3:0.6b",
+      "count": 254
+    },
+    {
+      "scope": "scored",
+      "requested_model": "qwen3:1.7b",
+      "actual_model": "qwen3:1.7b",
+      "count": 34
+    },
+    {
+      "scope": "setup",
+      "requested_model": "qwen3:0.6b",
+      "actual_model": "qwen3:0.6b",
+      "count": 36
+    }
+  ],
+  "recorded_cached_token_counts": [
+    {
+      "purpose": "compute_selector",
+      "cached_token_count": "nonzero",
+      "count": 324
+    },
+    {
+      "purpose": "generation",
+      "cached_token_count": "nonzero",
+      "count": 290
+    },
+    {
+      "purpose": "generation",
+      "cached_token_count": "zero",
+      "count": 34
+    },
+    {
+      "purpose": "memory_selector",
+      "cached_token_count": "nonzero",
+      "count": 223
+    },
+    {
+      "purpose": "memory_selector",
+      "cached_token_count": "zero",
+      "count": 101
+    }
+  ],
+  "generation_failure_comparison": {
+    "count": 131,
+    "exact_raw_delivered_matches": 131,
+    "required_fact_tasks": 54,
+    "no_required_fact_uncertainty_tasks": 77,
+    "expected_kind_counts": {
+      "replacement": 3,
+      "historical_control": 46,
+      "uncertainty": 77,
+      "original": 5
+    },
+    "rows": [
+      {
+        "checkpoint_id": "cm01_correction_corrected_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "replacement",
+        "required_fact_count": 1,
+        "raw_speech": "Your preferred tea is jasmine tea without sugar.",
+        "delivered_speech": "Your preferred tea is jasmine tea without sugar.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+        "delivered_speech": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+        "delivered_speech": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+        "delivered_speech": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+        "delivered_speech": "Your Larkspur picnic was at Maple Pavilion on 2026-09-03 at 14:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_deletion_deleted_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred tea is rooibos tea.",
+        "delivered_speech": "Your preferred tea is rooibos tea.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_deletion_deleted_historical_retained",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred tea is rooibos tea.",
+        "delivered_speech": "Your preferred tea is rooibos tea.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_deletion/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred tea is rooibos tea.",
+        "delivered_speech": "Your preferred tea is rooibos tea.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_deletion/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your current preferred tea is jasmine tea without sugar.",
+        "delivered_speech": "Your current preferred tea is jasmine tea without sugar.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_deletion_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_deletion/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred tea is rooibos tea.",
+        "delivered_speech": "Your preferred tea is rooibos tea.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_expiry_at_retained",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred tea is rooibos tea.",
+        "delivered_speech": "Your preferred tea is rooibos tea.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_expiry_after_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred tea is rooibos tea.",
+        "delivered_speech": "Your preferred tea is rooibos tea.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_expiry_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_expiry/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred tea is rooibos tea.",
+        "delivered_speech": "Your preferred tea is rooibos tea.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_expiry/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your current preferred tea is jasmine tea without sugar.",
+        "delivered_speech": "Your current preferred tea is jasmine tea without sugar.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Amber craft fair was at Willow Hall on 2026-09-04 at 10:00.",
+        "delivered_speech": "Your Amber craft fair was at Willow Hall on 2026-09-04 at 10:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Amber craft fair was at Willow Hall on 2026-09-04 at 10:00.",
+        "delivered_speech": "Your Amber craft fair was at Willow Hall on 2026-09-04 at 10:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_deletion_deleted_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred music is bluegrass music.",
+        "delivered_speech": "Your preferred music is bluegrass music.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_deletion_deleted_historical_retained",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred music is bluegrass music.",
+        "delivered_speech": "Your preferred music is bluegrass music.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred music is bluegrass music.",
+        "delivered_speech": "Your preferred music is bluegrass music.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_deletion_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred music is bluegrass music.",
+        "delivered_speech": "Your preferred music is bluegrass music.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_expiry_at_retained",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred music is bluegrass music.",
+        "delivered_speech": "Your preferred music is bluegrass music.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_expiry_after_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred music is bluegrass music.",
+        "delivered_speech": "Your preferred music is bluegrass music.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_expiry_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_expiry/restart_continuation_03/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred music is bluegrass music.",
+        "delivered_speech": "Your preferred music is bluegrass music.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+        "delivered_speech": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+        "delivered_speech": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+        "delivered_speech": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+        "delivered_speech": "Your Juniper reading festival was at Cedar Court on 2026-09-05 at 11:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_deletion_deleted_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred notebook color is turquoise.",
+        "delivered_speech": "Your preferred notebook color is turquoise.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_deletion_deleted_historical_retained",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred notebook color is turquoise.",
+        "delivered_speech": "Your preferred notebook color is turquoise.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred notebook color is turquoise.",
+        "delivered_speech": "Your preferred notebook color is turquoise.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred notebook color is blue.",
+        "delivered_speech": "Your preferred notebook color is blue.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_deletion_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred notebook color is turquoise.",
+        "delivered_speech": "Your preferred notebook color is turquoise.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_expiry_at_retained",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred notebook color is turquoise.",
+        "delivered_speech": "Your preferred notebook color is turquoise.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_expiry_after_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred notebook color is turquoise.",
+        "delivered_speech": "Your preferred notebook color is turquoise.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_expiry_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred notebook color is turquoise.",
+        "delivered_speech": "Your preferred notebook color is turquoise.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your preferred notebook color is blue.",
+        "delivered_speech": "Your preferred notebook color is blue.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+        "delivered_speech": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+        "delivered_speech": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+        "delivered_speech": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+        "delivered_speech": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_deletion_deleted_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your walking partner is Elora Vale.",
+        "delivered_speech": "Your walking partner is Elora Vale.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_deletion_deleted_historical_retained",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your walking partner is Elora Vale.",
+        "delivered_speech": "Your walking partner is Elora Vale.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your current walking partner is Elora Vale.",
+        "delivered_speech": "Your current walking partner is Elora Vale.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_deletion_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your current walking partner is Elora Vale.",
+        "delivered_speech": "Your current walking partner is Elora Vale.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_expiry_at_retained",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your walking partner is Elora Vale.",
+        "delivered_speech": "Your walking partner is Elora Vale.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_expiry_after_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your walking partner is Elora Vale.",
+        "delivered_speech": "Your walking partner is Elora Vale.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_expiry_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your current walking partner is Elora Vale.",
+        "delivered_speech": "Your current walking partner is Elora Vale.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+        "delivered_speech": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+        "delivered_speech": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+        "delivered_speech": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+        "delivered_speech": "Your Saffron painting class was at Acorn Studio on 2026-09-07 at 16:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_deletion_deleted_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your book club contact is Tessa Brook.",
+        "delivered_speech": "Your book club contact is Tessa Brook.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_deletion_deleted_historical_retained",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your book club contact is Tessa Brook.",
+        "delivered_speech": "Your book club contact is Tessa Brook.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your book club contact is Tessa Brook.",
+        "delivered_speech": "Your book club contact is Tessa Brook.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_deletion_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your book club contact is Tessa Brook.",
+        "delivered_speech": "Your book club contact is Tessa Brook.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_expiry_at_retained",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your book club contact is Tessa Brook.",
+        "delivered_speech": "Your book club contact is Tessa Brook.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_expiry_after_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your book club contact is Tessa Brook.",
+        "delivered_speech": "Your book club contact is Tessa Brook.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_expiry_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your book club contact is Tessa Brook.",
+        "delivered_speech": "Your book club contact is Tessa Brook.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+        "delivered_speech": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+        "delivered_speech": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_correction/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+        "delivered_speech": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_correction/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+        "delivered_speech": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_deletion_deleted_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sketchbook is still in the wicker basket.",
+        "delivered_speech": "Your sketchbook is still in the wicker basket.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_deletion_deleted_historical_retained",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sketchbook is still in the wicker basket.",
+        "delivered_speech": "Your sketchbook is still in the wicker basket.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sketchbook is still in the wicker basket.",
+        "delivered_speech": "Your sketchbook is still in the wicker basket.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_deletion_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sketchbook is still in the wicker basket.",
+        "delivered_speech": "Your sketchbook is still in the wicker basket.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_expiry_at_retained",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sketchbook is still in the wicker basket.",
+        "delivered_speech": "Your sketchbook is still in the wicker basket.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_expiry_after_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sketchbook is still in the wicker basket.",
+        "delivered_speech": "Your sketchbook is still in the wicker basket.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_expiry_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sketchbook is still in the wicker basket.",
+        "delivered_speech": "Your sketchbook is still in the wicker basket.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_correction/initial_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+        "delivered_speech": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_correction/initial_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+        "delivered_speech": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+        "delivered_speech": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+        "delivered_speech": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_deletion_deleted_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_deletion/initial_continuation_03/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your binoculars are in the canvas tote.",
+        "delivered_speech": "Your binoculars are in the canvas tote.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_deletion_deleted_historical_retained",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_deletion/initial_continuation_03/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your binoculars are in the canvas tote.",
+        "delivered_speech": "Your binoculars are in the canvas tote.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your binoculars are in the canvas tote.",
+        "delivered_speech": "Your binoculars are in the canvas tote.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_deletion_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your binoculars are in the canvas tote.",
+        "delivered_speech": "Your binoculars are in the canvas tote.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_expiry_at_retained",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your binoculars are in the canvas tote.",
+        "delivered_speech": "Your binoculars are in the canvas tote.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_expiry_after_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your binoculars are in the canvas tote.",
+        "delivered_speech": "Your binoculars are in the canvas tote.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_expiry_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your binoculars are in the canvas tote.",
+        "delivered_speech": "Your binoculars are in the canvas tote.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+        "delivered_speech": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+        "delivered_speech": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+        "delivered_speech": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+        "delivered_speech": "Your Hawthorn lantern walk was at Elm Bridge on 2026-09-10 at 18:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_deletion_deleted_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sewing kit is in the striped tin.",
+        "delivered_speech": "Your sewing kit is in the striped tin.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_deletion_deleted_historical_retained",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sewing kit is in the striped tin.",
+        "delivered_speech": "Your sewing kit is in the striped tin.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sewing kit is in the striped tin.",
+        "delivered_speech": "Your sewing kit is in the striped tin.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sewing kit is located in the top drawer of the cabinet on the right side of the room.",
+        "delivered_speech": "Your sewing kit is located in the top drawer of the cabinet on the right side of the room.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_deletion_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sewing kit is in the striped tin.",
+        "delivered_speech": "Your sewing kit is in the striped tin.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_expiry_at_retained",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sewing kit is in the striped tin.",
+        "delivered_speech": "Your sewing kit is in the striped tin.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_expiry_after_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sewing kit is in the striped tin.",
+        "delivered_speech": "Your sewing kit is in the striped tin.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_expiry_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sewing kit is in the striped tin.",
+        "delivered_speech": "Your sewing kit is in the striped tin.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your sewing kit is located in the top drawer of the cabinet on the right side of the room.",
+        "delivered_speech": "Your sewing kit is located in the top drawer of the cabinet on the right side of the room.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm09_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+        "delivered_speech": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm09_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+        "delivered_speech": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm09_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+        "delivered_speech": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm09_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+        "delivered_speech": "Your Silverleaf choir rehearsal was at Hazel Auditorium on 2026-09-11 at 17:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm09_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "The recorded start time for your pottery appointment on 2026-10-03 is 09:00.",
+        "delivered_speech": "The recorded start time for your pottery appointment on 2026-10-03 is 09:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm10_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm10_correction/initial_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+        "delivered_speech": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm10_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm10_correction/initial_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+        "delivered_speech": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm10_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm10_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+        "delivered_speech": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm10_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm10_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+        "delivered_speech": "Your Foxglove chess evening was at Linden Library on 2026-09-12 at 19:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_correction_recalled",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "original",
+        "required_fact_count": 1,
+        "raw_speech": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+        "delivered_speech": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_correction_corrected_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "replacement",
+        "required_fact_count": 1,
+        "raw_speech": "Your Seaglass workshop was at Orchid Hall on 2026-09-20 at 10:00.",
+        "delivered_speech": "Your Seaglass workshop was at Orchid Hall on 2026-09-20 at 10:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+        "delivered_speech": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+        "delivered_speech": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_correction_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_correction/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "replacement",
+        "required_fact_count": 1,
+        "raw_speech": "Your Seaglass workshop was at Orchid Hall on 2026-09-20 at 10:00.",
+        "delivered_speech": "Your Seaglass workshop was at Orchid Hall on 2026-09-20 at 10:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_correction/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+        "delivered_speech": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_correction/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+        "delivered_speech": "Your Bluebell poetry lunch was at Aspen Cafe on 2026-09-13 at 12:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_deletion_recalled",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "original",
+        "required_fact_count": 1,
+        "raw_speech": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+        "delivered_speech": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_deletion_deleted_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Earlier I told you about my Seaglass workshop on 2026-09-20. The venue is Copper Hall.",
+        "delivered_speech": "Earlier I told you about my Seaglass workshop on 2026-09-20. The venue is Copper Hall.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_deletion_deleted_historical_retained",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Earlier I told you about my Seaglass workshop on 2026-09-20. The venue is Copper Hall.",
+        "delivered_speech": "Earlier I told you about my Seaglass workshop on 2026-09-20. The venue is Copper Hall.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_deletion/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+        "delivered_speech": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_deletion_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_deletion/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Earlier I told you about my Seaglass workshop on 2026-09-20. The venue is Copper Hall.",
+        "delivered_speech": "Earlier I told you about my Seaglass workshop on 2026-09-20. The venue is Copper Hall.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_expiry_before_fresh",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "original",
+        "required_fact_count": 1,
+        "raw_speech": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+        "delivered_speech": "Your Seaglass workshop was at Copper Hall on 2026-09-20 at 10:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_expiry_at_retained",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Earlier I told you about my Seaglass workshop on 2026-09-20. The venue is Copper Hall.",
+        "delivered_speech": "Earlier I told you about my Seaglass workshop on 2026-09-20. The venue is Copper Hall.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_expiry_after_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Earlier I told you about my Seaglass workshop on 2026-09-20. The venue is Copper Hall.",
+        "delivered_speech": "Earlier I told you about my Seaglass workshop on 2026-09-20. The venue is Copper Hall.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_expiry_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "The venue recorded for the Seaglass workshop on 2026-09-20 is Copper Hall.",
+        "delivered_speech": "The venue recorded for the Seaglass workshop on 2026-09-20 is Copper Hall.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_correction_recalled",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "original",
+        "required_fact_count": 1,
+        "raw_speech": "Your Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00.",
+        "delivered_speech": "Your Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_correction_historical_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+        "delivered_speech": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_correction_historical_fresh",
+        "source": {
+          "line": 7,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+        "delivered_speech": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_correction_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+        "delivered_speech": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_correction_restart_historical_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_correction/restart/answers.jsonl"
+        },
+        "expected_kind": "historical_control",
+        "required_fact_count": 1,
+        "raw_speech": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+        "delivered_speech": "Your Meadowlark storytelling night was at Pine Theater on 2026-09-14 at 20:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_deletion_recalled",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "original",
+        "required_fact_count": 1,
+        "raw_speech": "Your Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00.",
+        "delivered_speech": "Your Sunstone exhibition visit was at Dune Gallery on 2026-09-22 at 15:00.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_deletion_deleted_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22.",
+        "delivered_speech": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_deletion_deleted_historical_retained",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22.",
+        "delivered_speech": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_deletion_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_deletion/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Your Sunstone exhibition visit was at Dune Gallery on 2026-09-22.",
+        "delivered_speech": "Your Sunstone exhibition visit was at Dune Gallery on 2026-09-22.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_deletion_restart_historical_retained",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_deletion/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I originally named the venue for my Sunstone exhibition visit as Dune Gallery on 2026-09-22.",
+        "delivered_speech": "I originally named the venue for my Sunstone exhibition visit as Dune Gallery on 2026-09-22.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_expiry_at_retained",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22.",
+        "delivered_speech": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_expiry_after_retained",
+        "source": {
+          "line": 6,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22.",
+        "delivered_speech": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_expiry_restart_retained",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_expiry/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22.",
+        "delivered_speech": "Earlier I told you about my Sunstone exhibition visit on 2026-09-22.",
+        "exact_speech_match": true,
+        "recorded_response_transform": null
+      }
+    ]
+  },
+  "all_delivered_speech_changes": {
+    "count": 58,
+    "all_are_fixed_memory_abstention": true,
+    "all_have_null_recorded_transform": true,
+    "rows": [
+      {
+        "checkpoint_id": "cm01_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a preferred tea, but I can recommend some options for you.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't know which tea I prefer right now.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm01_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't know which tea I prefer right now.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a preferred music preference.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a preference for music, but I can suggest some genres or artists that might interest you.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a preferred music preference.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a preference for music, but I can suggest some genres or artists that might interest you.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm02_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm02_expiry/restart_continuation_03/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a preferred music preference.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a preferred notebook color.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a preference for notebook color, but I can help you choose.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm03_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm03_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a preference for notebook color, but I can help you choose.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a walking partner, but I can help you plan your route or suggest ways to walk with others.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have information about my walking partner.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have information about your walking partner.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have information about my walking partner.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm04_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm04_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have information about your walking partner.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have information about your book club contact.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a book club contact at the moment.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have information about your book club contact.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a book club contact at the moment.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm05_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm05_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have information about your book club contact.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have access to my sketchbook, but I can help you find it in my workspace. Please let me know if you need assistance with anything else.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a sketchbook, but I can help you find it.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have access to your sketchbook, but I can help you find it.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_expiry_before_fresh",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "original",
+        "required_fact_count": 1,
+        "raw_speech": "I don't have a sketchbook, but I can help you find it.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a sketchbook, but I can help you find it.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm06_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have access to your sketchbook, but I can help you find it.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_correction/initial_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have access to my binoculars.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_correction_recalled",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_correction/initial_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "original",
+        "required_fact_count": 1,
+        "raw_speech": "I don't have access to my binoculars.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_deletion_recalled",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_deletion/initial_continuation_03/answers.jsonl"
+        },
+        "expected_kind": "original",
+        "required_fact_count": 1,
+        "raw_speech": "I don't have access to my binoculars.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_deletion/initial_continuation_03/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have access to my binoculars, but I can help you find them if you provide the location or details.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "You should check your binoculars in the binocular box in the control room.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_expiry_before_fresh",
+        "source": {
+          "line": 3,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "original",
+        "required_fact_count": 1,
+        "raw_speech": "I don't have access to my binoculars, but I can help you find them if you provide the location or details.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have access to my binoculars, but I can help you find them if you provide the location or details.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm07_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "You should check your binoculars in the binocular box in the control room.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have access to my sewing kit, but I can help you find it if you provide more details.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a sewing kit, but I can help you find it.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm08_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm08_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have a sewing kit, but I can help you find it.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm09_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have access to my personal time or schedule. Please check your calendar or contact the scheduling system for the exact time.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm09_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to your personal memory records. Please provide the information you wish to retrieve.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm09_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to personal memory records for your pottery appointment. Please provide the details again or ask a different question.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm09_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to your personal memory records. Please provide the information you wish to retrieve.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm09_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm09_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to personal memory records. Please provide the user with the start time of the pottery appointment they mentioned earlier.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm10_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm10_correction/initial_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to the time of my bicycle fitting appointment.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm10_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm10_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to real-time data or personal records. I cannot provide the start time of your bicycle fitting appointment.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm10_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm10_deletion/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to personal memory records. Please provide the user with the start time of the bicycle fitting appointment they mentioned.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm10_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm10_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to real-time data or personal records. I cannot provide the start time of your bicycle fitting appointment.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm10_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm10_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to personal memory records. Please provide the user with the start time of the bicycle fitting appointment.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have information about the Seaglass workshop on 2026-09-20.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to personal memory records for the Seaglass workshop. Please provide the venue name, and I will assist you.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_deletion/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have verified records of the Seaglass workshop event on 2026-09-20. Please provide more details or ask a different question.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have access to personal memory records. Please provide the venue name, and I will assist you.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm11_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm11_expiry/restart/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have verified records of the Seaglass workshop event on 2026-09-20. Please provide more details or ask a different question.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_correction_prestore",
+        "source": {
+          "line": 1,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_correction/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I don't have information about the Sunstone exhibition visit on 2026-09-22.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_deletion_deleted_fresh",
+        "source": {
+          "line": 4,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_deletion/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not know the current venue for your Sunstone exhibition visit.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_deletion_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_deletion/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have verified records of the Sunstone exhibition event on 2026-09-22. Please provide more details or ask a different question.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_expiry_at_fresh",
+        "source": {
+          "line": 5,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_expiry/initial/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not know the current venue for your Sunstone exhibition visit.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      },
+      {
+        "checkpoint_id": "cm12_expiry_restart_fresh",
+        "source": {
+          "line": 2,
+          "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm12_expiry/restart_continuation_02/answers.jsonl"
+        },
+        "expected_kind": "uncertainty",
+        "required_fact_count": 0,
+        "raw_speech": "I do not have verified records of the Sunstone exhibition event on 2026-09-22. Please provide more details or ask a different question.",
+        "delivered_speech": "I do not have a verified personal memory that answers that.",
+        "exact_speech_match": false,
+        "recorded_response_transform": null
+      }
+    ]
+  },
+  "evidence_selection_cases": [
+    {
+      "checkpoint_id": "cm06_expiry_before_fresh",
+      "source": {
+        "line": 3,
+        "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm06_expiry/initial/answers.jsonl"
+      },
+      "expected_kind": "original",
+      "required_fact_count": 1,
+      "raw_speech": "I don't have a sketchbook, but I can help you find it.",
+      "delivered_speech": "I do not have a verified personal memory that answers that.",
+      "exact_speech_match": false,
+      "recorded_response_transform": null,
+      "question": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+      "permitted_evidence": [
+        {
+          "canonical_text": "Your sketchbook is in the wicker basket.",
+          "record_key": "subject",
+          "retention_until": "2026-10-08T12:00:00+00:00",
+          "stored_at": "2026-10-01T12:00:00+00:00",
+          "value": "wicker basket",
+          "version": "original"
+        }
+      ],
+      "retrieval_calls": [
+        {
+          "logical_time": "2026-10-08T11:59:59.999999+00:00",
+          "matches": [
+            {
+              "fused_score": 0.01639344262295082,
+              "memory": {
+                "canonical_text": "Your sketchbook is in the wicker basket.",
+                "confidence": 1.0,
+                "consent_status": "confirmed",
+                "created_at": "2026-10-01T12:00:00.000000Z",
+                "event_time": null,
+                "id": "mem_9fe0ddfd9d034af98eb3213422b71d6e",
+                "importance": 3,
+                "kind": "fact",
+                "profile_id": "fictional-changing-memory",
+                "retention_until": "2026-10-08T12:00:00.000000Z",
+                "sensitivity": "normal",
+                "source_turn_id": null,
+                "status": "active",
+                "supersedes_id": null,
+                "updated_at": "2026-10-01T12:00:00.000000Z",
+                "valid_from": "2026-10-01T12:00:00.000000Z",
+                "valid_until": null
+              }
+            },
+            {
+              "fused_score": 0.016129032258064516,
+              "memory": {
+                "canonical_text": "Your Moonbeam kite festival was at Clover Field on 2026-09-08 at 13:00.",
+                "confidence": 1.0,
+                "consent_status": "confirmed",
+                "created_at": "2026-10-01T12:00:00.000000Z",
+                "event_time": "2026-09-08T13:00:00.000000Z",
+                "id": "mem_06130a35e3b5477dba61e17d381c799c",
+                "importance": 3,
+                "kind": "event",
+                "profile_id": "fictional-changing-memory",
+                "retention_until": "2026-10-08T12:00:00.000000Z",
+                "sensitivity": "normal",
+                "source_turn_id": null,
+                "status": "active",
+                "supersedes_id": null,
+                "updated_at": "2026-10-01T12:00:00.000000Z",
+                "valid_from": "2026-10-01T12:00:00.000000Z",
+                "valid_until": null
+              }
+            }
+          ],
+          "query": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "started_ns": 5698829345315,
+          "status": "ok",
+          "wall_ns": 67791588
+        }
+      ],
+      "actual_generation_messages": [
+        {
+          "content": "You are a concise, friendly assistant running fully offline on a household companion robot. Be honest about uncertainty and never claim that a physical action occurred.\n\nReturn only JSON fields speech, gesture_id, memory_used. Answer ordinary informational and planning requests now, including offline. Assume reasonable missing details; do not refuse for missing details/access. Compare, recommend, plan. gesture_id must be \"NO_ACTION\". No verified personal-memory records were supplied for this turn, so memory_used must be an empty array. Start with the answer itself. Do not merely say what you can or will do; include the requested reasoning and plan now. Human facts use \"you\"/\"your\"; never copy \"the user\" or use robot \"I\"/\"my\". Never invent personal time/date/name/relationship beyond request/memory. Complete JSON in at most 80 speech words. Speech must not say or imply that you performed a physical action.",
+          "role": "system"
+        },
+        {
+          "content": "Personal memory was requested for this turn, but no verified records were retrieved. Do not invent a personal fact; say that you do not know or ask the user.",
+          "role": "system"
+        },
+        {
+          "content": "Earlier I told you where my sketchbook is. Where is my sketchbook located now?",
+          "role": "user"
+        }
+      ],
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_9fe0ddfd9d034af98eb3213422b71d6e",
+          "mem_06130a35e3b5477dba61e17d381c799c"
+        ],
+        "supplied_ids": []
+      },
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "diagnosis": "Required eligible fact retrieved; actual production generation request supplied no evidence. This is not an analysis extraction gap."
+    },
+    {
+      "checkpoint_id": "cm07_correction_recalled",
+      "source": {
+        "line": 3,
+        "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_correction/initial_continuation_02/answers.jsonl"
+      },
+      "expected_kind": "original",
+      "required_fact_count": 1,
+      "raw_speech": "I don't have access to my binoculars.",
+      "delivered_speech": "I do not have a verified personal memory that answers that.",
+      "exact_speech_match": false,
+      "recorded_response_transform": null,
+      "question": "Where are my binoculars?",
+      "permitted_evidence": [
+        {
+          "canonical_text": "Your binoculars are in the canvas tote.",
+          "record_key": "subject",
+          "retention_until": "2026-10-08T12:00:00+00:00",
+          "stored_at": "2026-10-01T12:00:00+00:00",
+          "value": "canvas tote",
+          "version": "original"
+        }
+      ],
+      "retrieval_calls": [
+        {
+          "logical_time": "2026-10-01T12:00:02+00:00",
+          "matches": [
+            {
+              "fused_score": 0.01639344262295082,
+              "memory": {
+                "canonical_text": "Your binoculars are in the canvas tote.",
+                "confidence": 1.0,
+                "consent_status": "confirmed",
+                "created_at": "2026-10-01T12:00:00.000000Z",
+                "event_time": null,
+                "id": "mem_421bc1855a844a54b12fb8bebb5fe8c9",
+                "importance": 3,
+                "kind": "fact",
+                "profile_id": "fictional-changing-memory",
+                "retention_until": "2026-10-08T12:00:00.000000Z",
+                "sensitivity": "normal",
+                "source_turn_id": null,
+                "status": "active",
+                "supersedes_id": null,
+                "updated_at": "2026-10-01T12:00:00.000000Z",
+                "valid_from": "2026-10-01T12:00:00.000000Z",
+                "valid_until": null
+              }
+            },
+            {
+              "fused_score": 0.016129032258064516,
+              "memory": {
+                "canonical_text": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+                "confidence": 1.0,
+                "consent_status": "confirmed",
+                "created_at": "2026-10-01T12:00:00.000000Z",
+                "event_time": "2026-09-09T15:00:00.000000Z",
+                "id": "mem_bddd1aa6cbd54c5f88716447bdf87c2c",
+                "importance": 3,
+                "kind": "event",
+                "profile_id": "fictional-changing-memory",
+                "retention_until": "2026-10-08T12:00:00.000000Z",
+                "sensitivity": "normal",
+                "source_turn_id": null,
+                "status": "active",
+                "supersedes_id": null,
+                "updated_at": "2026-10-01T12:00:00.000000Z",
+                "valid_from": "2026-10-01T12:00:00.000000Z",
+                "valid_until": null
+              }
+            }
+          ],
+          "query": "Where are my binoculars?",
+          "started_ns": 5843729126775,
+          "status": "ok",
+          "wall_ns": 58638968
+        }
+      ],
+      "actual_generation_messages": [
+        {
+          "content": "You are a concise, friendly assistant running fully offline on a household companion robot. Be honest about uncertainty and never claim that a physical action occurred.\n\nReturn only JSON fields speech, gesture_id, memory_used. Answer ordinary informational and planning requests now, including offline. Assume reasonable missing details; do not refuse for missing details/access. Compare, recommend, plan. gesture_id must be \"NO_ACTION\". No verified personal-memory records were supplied for this turn, so memory_used must be an empty array. Start with the answer itself. Do not merely say what you can or will do; include the requested reasoning and plan now. Human facts use \"you\"/\"your\"; never copy \"the user\" or use robot \"I\"/\"my\". Never invent personal time/date/name/relationship beyond request/memory. Complete JSON in at most 80 speech words. Speech must not say or imply that you performed a physical action.",
+          "role": "system"
+        },
+        {
+          "content": "Personal memory was requested for this turn, but no verified records were retrieved. Do not invent a personal fact; say that you do not know or ask the user.",
+          "role": "system"
+        },
+        {
+          "content": "Where are my binoculars?",
+          "role": "user"
+        }
+      ],
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_421bc1855a844a54b12fb8bebb5fe8c9",
+          "mem_bddd1aa6cbd54c5f88716447bdf87c2c"
+        ],
+        "supplied_ids": []
+      },
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "diagnosis": "Required eligible fact retrieved; actual production generation request supplied no evidence. This is not an analysis extraction gap."
+    },
+    {
+      "checkpoint_id": "cm07_deletion_recalled",
+      "source": {
+        "line": 2,
+        "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_deletion/initial_continuation_03/answers.jsonl"
+      },
+      "expected_kind": "original",
+      "required_fact_count": 1,
+      "raw_speech": "I don't have access to my binoculars.",
+      "delivered_speech": "I do not have a verified personal memory that answers that.",
+      "exact_speech_match": false,
+      "recorded_response_transform": null,
+      "question": "Where are my binoculars?",
+      "permitted_evidence": [
+        {
+          "canonical_text": "Your binoculars are in the canvas tote.",
+          "record_key": "subject",
+          "retention_until": "2026-10-08T12:00:00+00:00",
+          "stored_at": "2026-10-01T12:00:00+00:00",
+          "value": "canvas tote",
+          "version": "original"
+        }
+      ],
+      "retrieval_calls": [
+        {
+          "logical_time": "2026-10-01T12:00:02+00:00",
+          "matches": [
+            {
+              "fused_score": 0.01639344262295082,
+              "memory": {
+                "canonical_text": "Your binoculars are in the canvas tote.",
+                "confidence": 1.0,
+                "consent_status": "confirmed",
+                "created_at": "2026-10-01T12:00:00.000000Z",
+                "event_time": null,
+                "id": "mem_40d409c7351f4c788b17cafa5bf9ea3d",
+                "importance": 3,
+                "kind": "fact",
+                "profile_id": "fictional-changing-memory",
+                "retention_until": "2026-10-08T12:00:00.000000Z",
+                "sensitivity": "normal",
+                "source_turn_id": null,
+                "status": "active",
+                "supersedes_id": null,
+                "updated_at": "2026-10-01T12:00:00.000000Z",
+                "valid_from": "2026-10-01T12:00:00.000000Z",
+                "valid_until": null
+              }
+            },
+            {
+              "fused_score": 0.016129032258064516,
+              "memory": {
+                "canonical_text": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+                "confidence": 1.0,
+                "consent_status": "confirmed",
+                "created_at": "2026-10-01T12:00:00.000000Z",
+                "event_time": "2026-09-09T15:00:00.000000Z",
+                "id": "mem_e49a34c0a1e34616a579dad34483ef27",
+                "importance": 3,
+                "kind": "event",
+                "profile_id": "fictional-changing-memory",
+                "retention_until": "2026-10-08T12:00:00.000000Z",
+                "sensitivity": "normal",
+                "source_turn_id": null,
+                "status": "active",
+                "supersedes_id": null,
+                "updated_at": "2026-10-01T12:00:00.000000Z",
+                "valid_from": "2026-10-01T12:00:00.000000Z",
+                "valid_until": null
+              }
+            }
+          ],
+          "query": "Where are my binoculars?",
+          "started_ns": 5999246719704,
+          "status": "ok",
+          "wall_ns": 54761932
+        }
+      ],
+      "actual_generation_messages": [
+        {
+          "content": "You are a concise, friendly assistant running fully offline on a household companion robot. Be honest about uncertainty and never claim that a physical action occurred.\n\nReturn only JSON fields speech, gesture_id, memory_used. Answer ordinary informational and planning requests now, including offline. Assume reasonable missing details; do not refuse for missing details/access. Compare, recommend, plan. gesture_id must be \"NO_ACTION\". No verified personal-memory records were supplied for this turn, so memory_used must be an empty array. Start with the answer itself. Do not merely say what you can or will do; include the requested reasoning and plan now. Human facts use \"you\"/\"your\"; never copy \"the user\" or use robot \"I\"/\"my\". Never invent personal time/date/name/relationship beyond request/memory. Complete JSON in at most 80 speech words. Speech must not say or imply that you performed a physical action.",
+          "role": "system"
+        },
+        {
+          "content": "Personal memory was requested for this turn, but no verified records were retrieved. Do not invent a personal fact; say that you do not know or ask the user.",
+          "role": "system"
+        },
+        {
+          "content": "Where are my binoculars?",
+          "role": "user"
+        }
+      ],
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_40d409c7351f4c788b17cafa5bf9ea3d",
+          "mem_e49a34c0a1e34616a579dad34483ef27"
+        ],
+        "supplied_ids": []
+      },
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "diagnosis": "Required eligible fact retrieved; actual production generation request supplied no evidence. This is not an analysis extraction gap."
+    },
+    {
+      "checkpoint_id": "cm07_expiry_before_fresh",
+      "source": {
+        "line": 3,
+        "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm07_expiry/initial/answers.jsonl"
+      },
+      "expected_kind": "original",
+      "required_fact_count": 1,
+      "raw_speech": "I don't have access to my binoculars, but I can help you find them if you provide the location or details.",
+      "delivered_speech": "I do not have a verified personal memory that answers that.",
+      "exact_speech_match": false,
+      "recorded_response_transform": null,
+      "question": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+      "permitted_evidence": [
+        {
+          "canonical_text": "Your binoculars are in the canvas tote.",
+          "record_key": "subject",
+          "retention_until": "2026-10-08T12:00:00+00:00",
+          "stored_at": "2026-10-01T12:00:00+00:00",
+          "value": "canvas tote",
+          "version": "original"
+        }
+      ],
+      "retrieval_calls": [
+        {
+          "logical_time": "2026-10-08T11:59:59.999999+00:00",
+          "matches": [
+            {
+              "fused_score": 0.01639344262295082,
+              "memory": {
+                "canonical_text": "Your binoculars are in the canvas tote.",
+                "confidence": 1.0,
+                "consent_status": "confirmed",
+                "created_at": "2026-10-01T12:00:00.000000Z",
+                "event_time": null,
+                "id": "mem_f638c6abcadc4a60aaca438dfe9ca20d",
+                "importance": 3,
+                "kind": "fact",
+                "profile_id": "fictional-changing-memory",
+                "retention_until": "2026-10-08T12:00:00.000000Z",
+                "sensitivity": "normal",
+                "source_turn_id": null,
+                "status": "active",
+                "supersedes_id": null,
+                "updated_at": "2026-10-01T12:00:00.000000Z",
+                "valid_from": "2026-10-01T12:00:00.000000Z",
+                "valid_until": null
+              }
+            },
+            {
+              "fused_score": 0.016129032258064516,
+              "memory": {
+                "canonical_text": "Your Rosewood puzzle afternoon was at Fern Terrace on 2026-09-09 at 15:00.",
+                "confidence": 1.0,
+                "consent_status": "confirmed",
+                "created_at": "2026-10-01T12:00:00.000000Z",
+                "event_time": "2026-09-09T15:00:00.000000Z",
+                "id": "mem_5700d254da36413c82d3e3127775bd19",
+                "importance": 3,
+                "kind": "event",
+                "profile_id": "fictional-changing-memory",
+                "retention_until": "2026-10-08T12:00:00.000000Z",
+                "sensitivity": "normal",
+                "source_turn_id": null,
+                "status": "active",
+                "supersedes_id": null,
+                "updated_at": "2026-10-01T12:00:00.000000Z",
+                "valid_from": "2026-10-01T12:00:00.000000Z",
+                "valid_until": null
+              }
+            }
+          ],
+          "query": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "started_ns": 6124345558373,
+          "status": "ok",
+          "wall_ns": 91153174
+        }
+      ],
+      "actual_generation_messages": [
+        {
+          "content": "You are a concise, friendly assistant running fully offline on a household companion robot. Be honest about uncertainty and never claim that a physical action occurred.\n\nReturn only JSON fields speech, gesture_id, memory_used. Answer ordinary informational and planning requests now, including offline. Assume reasonable missing details; do not refuse for missing details/access. Compare, recommend, plan. gesture_id must be \"NO_ACTION\". No verified personal-memory records were supplied for this turn, so memory_used must be an empty array. Start with the answer itself. Do not merely say what you can or will do; include the requested reasoning and plan now. Human facts use \"you\"/\"your\"; never copy \"the user\" or use robot \"I\"/\"my\". Never invent personal time/date/name/relationship beyond request/memory. Complete JSON in at most 80 speech words. Speech must not say or imply that you performed a physical action.",
+          "role": "system"
+        },
+        {
+          "content": "Personal memory was requested for this turn, but no verified records were retrieved. Do not invent a personal fact; say that you do not know or ask the user.",
+          "role": "system"
+        },
+        {
+          "content": "Earlier I told you where my binoculars are. Where are my binoculars located now?",
+          "role": "user"
+        }
+      ],
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [
+          "mem_f638c6abcadc4a60aaca438dfe9ca20d",
+          "mem_5700d254da36413c82d3e3127775bd19"
+        ],
+        "supplied_ids": []
+      },
+      "route": {
+        "memory_required": true,
+        "model_size": "small"
+      },
+      "diagnosis": "Required eligible fact retrieved; actual production generation request supplied no evidence. This is not an analysis extraction gap."
+    }
+  ],
+  "fresh_jasmine_cases": [
+    {
+      "checkpoint_id": "cm01_deletion_restart_fresh",
+      "source": {
+        "line": 2,
+        "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_deletion/restart_continuation_02/answers.jsonl"
+      },
+      "expected_kind": "uncertainty",
+      "required_fact_count": 0,
+      "raw_speech": "Your current preferred tea is jasmine tea without sugar.",
+      "delivered_speech": "Your current preferred tea is jasmine tea without sugar.",
+      "exact_speech_match": true,
+      "recorded_response_transform": null,
+      "question": "Returning to my earlier tea preference, what is my current preferred tea?",
+      "original_subject_value": "rooibos",
+      "replacement_subject_value": "jasmine",
+      "history_before_length": 1,
+      "route": {
+        "memory_required": false,
+        "model_size": "small"
+      },
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [],
+        "supplied_ids": []
+      },
+      "prompt_matches": [
+        {
+          "purpose": "generation",
+          "message_index": 0,
+          "role": "system",
+          "content": "You are a concise, friendly assistant running fully offline on a household companion robot. Be honest about uncertainty and never claim that a physical action occurred.\n\nReturn only JSON fields speech, gesture_id, memory_used. Answer ordinary informational and planning requests now, including offline. Assume reasonable missing details; do not refuse for missing details/access. Compare, recommend, plan. gesture_id must be \"NO_ACTION\". No verified personal-memory records were supplied for this turn, so memory_used must be an empty array. Start with the answer itself. Do not merely say what you can or will do; include the requested reasoning and plan now. Human facts use \"you\"/\"your\"; never copy \"the user\" or use robot \"I\"/\"my\". Never invent personal time/date/name/relationship beyond request/memory. Complete JSON in at most 80 speech words. Speech must not say or imply that you performed a physical action.\nRespond to the current human message; earlier replies are context, not a script to repeat. When the human shares a personal fact, acknowledge it briefly using you/your. Example: human says 'I prefer jasmine tea without sugar.'; robot says 'You prefer jasmine tea without sugar.' Human says 'My meetings are on Tuesdays.'; robot says 'Your meetings are on Tuesdays.' Human says 'Sam is my partner.'; robot says 'Sam is your partner.' I/my/me in a human message always refer to the human. Do not adopt their preference as your own or offer physical actions. Do not claim anything was saved. For questions, answer the question."
+        }
+      ],
+      "interpretation": "Jasmine is explicitly present in the actual generation system demonstration. It is a forbidden never-stored replacement in this branch, not disclosure of the deleted/expired original rooibos. No cache-origin or cross-database inference is established."
+    },
+    {
+      "checkpoint_id": "cm01_expiry_restart_fresh",
+      "source": {
+        "line": 2,
+        "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/run_v2/cm01_expiry/restart_continuation_02/answers.jsonl"
+      },
+      "expected_kind": "uncertainty",
+      "required_fact_count": 0,
+      "raw_speech": "Your current preferred tea is jasmine tea without sugar.",
+      "delivered_speech": "Your current preferred tea is jasmine tea without sugar.",
+      "exact_speech_match": true,
+      "recorded_response_transform": null,
+      "question": "Returning to my earlier tea preference, what is my current preferred tea?",
+      "original_subject_value": "rooibos",
+      "replacement_subject_value": "jasmine",
+      "history_before_length": 1,
+      "route": {
+        "memory_required": false,
+        "model_size": "small"
+      },
+      "memory": {
+        "model_used_ids": [],
+        "retrieved_ids": [],
+        "supplied_ids": []
+      },
+      "prompt_matches": [
+        {
+          "purpose": "generation",
+          "message_index": 0,
+          "role": "system",
+          "content": "You are a concise, friendly assistant running fully offline on a household companion robot. Be honest about uncertainty and never claim that a physical action occurred.\n\nReturn only JSON fields speech, gesture_id, memory_used. Answer ordinary informational and planning requests now, including offline. Assume reasonable missing details; do not refuse for missing details/access. Compare, recommend, plan. gesture_id must be \"NO_ACTION\". No verified personal-memory records were supplied for this turn, so memory_used must be an empty array. Start with the answer itself. Do not merely say what you can or will do; include the requested reasoning and plan now. Human facts use \"you\"/\"your\"; never copy \"the user\" or use robot \"I\"/\"my\". Never invent personal time/date/name/relationship beyond request/memory. Complete JSON in at most 80 speech words. Speech must not say or imply that you performed a physical action.\nRespond to the current human message; earlier replies are context, not a script to repeat. When the human shares a personal fact, acknowledge it briefly using you/your. Example: human says 'I prefer jasmine tea without sugar.'; robot says 'You prefer jasmine tea without sugar.' Human says 'My meetings are on Tuesdays.'; robot says 'Your meetings are on Tuesdays.' Human says 'Sam is my partner.'; robot says 'Sam is your partner.' I/my/me in a human message always refer to the human. Do not adopt their preference as your own or offer physical actions. Do not claim anything was saved. For questions, answer the question."
+        }
+      ],
+      "interpretation": "Jasmine is explicitly present in the actual generation system demonstration. It is a forbidden never-stored replacement in this branch, not disclosure of the deleted/expired original rooibos. No cache-origin or cross-database inference is established."
+    }
+  ],
+  "resource_summary": {
+    "telemetry_samples": 6450,
+    "sampled_temperature_max_c": 58.281,
+    "sampled_ram_used_mb_min": 4294,
+    "sampled_ram_used_mb_max": 6668,
+    "sampled_ram_total_mb": [
+      7620
+    ],
+    "sampled_swap_used_mb_min": 8,
+    "sampled_swap_used_mb_max": 448,
+    "start_capture_count": 85,
+    "finish_capture_count": 85,
+    "runtime_guard_violations": [],
+    "cleanup_errors": [],
+    "boundary_mem_available_kib_min": 1469760,
+    "limitations": "Telemetry RAM used is not Linux MemAvailable. Boundary captures and recorded runtime-guard outcomes do not prove unobserved instantaneous resource values. Ollama cached token counts show cache activity, not a source of answer content."
+  },
+  "audit_interpretation": {
+    "integrity_pass": true,
+    "integrity_check_count": 31342,
+    "integrity_check_kinds": 82,
+    "integrity_violation_count": 0,
+    "system_observation_codes": {
+      "preserved_zero_inference_worker_rejection": 13,
+      "original_disclosure_missing_in_retained_history": 24,
+      "withheld_or_interrupted_answer": 5
+    },
+    "counts": {
+      "chat_http_requests": 972,
+      "answer_rows": 324,
+      "answer_status_delivered": 319,
+      "retained_history_expected": 168,
+      "retained_history_with_original_disclosure": 144,
+      "operations_started": 552,
+      "operations_finished": 552,
+      "mutation_remember": 72,
+      "mutation_correct": 12,
+      "zero_operation_worker_admission_rejections": 13,
+      "mutation_forget": 12,
+      "purged_record_ids": 24,
+      "answer_status_withheld": 5,
+      "planned_checkpoints": 288,
+      "unique_observed_checkpoints": 288,
+      "scheduled_segments": 72,
+      "process_fragments": 85,
+      "extra_continuation_fragments": 13,
+      "independent_databases": 36,
+      "distinct_processes": 72
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "command": "analyze_repair.py seal-reviews with bound_reviews_v1/reviewer_a.json and reviewer_b.json",
+  "exit_code": 1,
+  "error": "FileNotFoundError: actual binding outputs are review_a.json and review_b.json",
+  "scope": "Analysis command path typo; no inference, output directory creation, or judgments modified. Corrected command succeeded and is recorded separately."
+}

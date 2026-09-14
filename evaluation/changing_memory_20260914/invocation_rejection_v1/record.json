@@ -1,0 +1,10 @@
+{
+  "status": "rejected_before_inference",
+  "cause": "An analysis-only test filename matched the runtime source-inventory glob after freeze.",
+  "added_path": "tests/test_changing_memory_analysis.py",
+  "renamed_to": "tests/test_analysis_changing_memory.py",
+  "runtime_source_changed": false,
+  "primary_attempts": 0,
+  "runtime_inventory_restored": true,
+  "continuation": "New collection invocation run_v2 under original frozen_v1; no checkpoint retried."
+}

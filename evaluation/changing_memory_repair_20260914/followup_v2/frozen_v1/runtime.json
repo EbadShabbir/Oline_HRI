@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "experiment": "changing_memory_repair_20260914_followup_v2",
+  "logical_clock": {
+    "base_time": "2026-10-01T12:00:00+00:00",
+    "retention_days": 7,
+    "advance_only_between_operations": true
+  },
+  "branches": [
+    {
+      "branch_id": "cm04_correction",
+      "scenario_id": "cm04",
+      "category": "relationship",
+      "branch": "correction",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "ask",
+          "id": "cm04_correction_op01",
+          "time": "2026-10-01T11:59:59+00:00",
+          "checkpoint_id": "cm04_correction_prestore",
+          "question": "Who is my walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "disclose",
+          "id": "cm04_correction_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My walking partner is Elora Vale."
+        },
+        {
+          "op": "remember",
+          "id": "cm04_correction_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your walking partner is Elora Vale.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm04_correction_op04",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-06T09:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm04_correction_op05",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Who is my walking partner?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op06",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm04_correction_recalled",
+          "question": "Who is my walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "correct",
+          "id": "cm04_correction_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "text": "Your walking partner is Niko Fern.",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_correction_op08",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm04_correction_corrected_retained",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op10",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm04_correction_corrected_fresh",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op11",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm04_correction_historical_retained",
+          "question": "Where was my Marigold garden tour on 2026-09-06?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op12",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm04_correction_historical_fresh",
+          "question": "Where was my Marigold garden tour on 2026-09-06?",
+          "history": "fresh"
+        },
+        {
+          "op": "restart",
+          "id": "cm04_correction_op13",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_correction_op14",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op15",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm04_correction_restart_retained",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op16",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm04_correction_restart_fresh",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op17",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm04_correction_restart_historical_retained",
+          "question": "Where was my Marigold garden tour on 2026-09-06?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_correction_op18",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm04_correction_restart_historical_fresh",
+          "question": "Where was my Marigold garden tour on 2026-09-06?",
+          "history": "fresh"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm04_deletion",
+      "scenario_id": "cm04",
+      "category": "relationship",
+      "branch": "deletion",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm04_deletion_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My walking partner is Elora Vale."
+        },
+        {
+          "op": "remember",
+          "id": "cm04_deletion_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your walking partner is Elora Vale.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm04_deletion_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-06T09:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm04_deletion_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Who is my walking partner?",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op05",
+          "time": "2026-10-01T12:00:02+00:00",
+          "checkpoint_id": "cm04_deletion_recalled",
+          "question": "Who is my walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "forget",
+          "id": "cm04_deletion_op06",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_deletion_op07",
+          "time": "2026-10-01T12:01:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op08",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm04_deletion_deleted_retained",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op09",
+          "time": "2026-10-01T12:01:01+00:00",
+          "checkpoint_id": "cm04_deletion_deleted_fresh",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op10",
+          "time": "2026-10-01T12:01:02+00:00",
+          "checkpoint_id": "cm04_deletion_deleted_historical_retained",
+          "question": "Which walking partner did I name earlier, before I asked you to forget that information?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm04_deletion_op11",
+          "time": "2026-10-01T12:02:00+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_deletion_op12",
+          "time": "2026-10-01T12:02:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op13",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm04_deletion_restart_retained",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op14",
+          "time": "2026-10-01T12:02:01+00:00",
+          "checkpoint_id": "cm04_deletion_restart_fresh",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "fresh"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_deletion_op15",
+          "time": "2026-10-01T12:02:02+00:00",
+          "checkpoint_id": "cm04_deletion_restart_historical_retained",
+          "question": "Which walking partner did I name earlier, before I asked you to forget that information?",
+          "history": "retained"
+        }
+      ]
+    },
+    {
+      "branch_id": "cm04_expiry",
+      "scenario_id": "cm04",
+      "category": "relationship",
+      "branch": "expiry",
+      "profile_id": "fictional-changing-memory",
+      "operations": [
+        {
+          "op": "disclose",
+          "id": "cm04_expiry_op01",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "My walking partner is Elora Vale."
+        },
+        {
+          "op": "remember",
+          "id": "cm04_expiry_op02",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your walking partner is Elora Vale.",
+          "kind": "fact",
+          "record_key": "subject",
+          "event_time": null
+        },
+        {
+          "op": "remember",
+          "id": "cm04_expiry_op03",
+          "time": "2026-10-01T12:00:00+00:00",
+          "text": "Your Marigold garden tour was at Birch Lodge on 2026-09-06 at 09:00.",
+          "kind": "event",
+          "record_key": "history",
+          "event_time": "2026-09-06T09:00:00+00:00"
+        },
+        {
+          "op": "cache_probe",
+          "id": "cm04_expiry_op04",
+          "time": "2026-10-01T12:00:01+00:00",
+          "query": "Who is my walking partner?",
+          "target_key": "subject"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_expiry_op05",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op06",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm04_expiry_before_retained",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op07",
+          "time": "2026-10-08T11:59:59.999999+00:00",
+          "checkpoint_id": "cm04_expiry_before_fresh",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_expiry_op08",
+          "time": "2026-10-08T12:00:00+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op09",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm04_expiry_at_retained",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op10",
+          "time": "2026-10-08T12:00:00+00:00",
+          "checkpoint_id": "cm04_expiry_at_fresh",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "fresh"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_expiry_op11",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op12",
+          "time": "2026-10-08T12:00:00.000001+00:00",
+          "checkpoint_id": "cm04_expiry_after_retained",
+          "question": "Earlier I told you about my walking partner. Who is my walking partner now?",
+          "history": "retained"
+        },
+        {
+          "op": "restart",
+          "id": "cm04_expiry_op13",
+          "time": "2026-10-08T12:00:01+00:00"
+        },
+        {
+          "op": "snapshot_probe",
+          "id": "cm04_expiry_op14",
+          "time": "2026-10-08T12:00:01+00:00",
+          "target_key": "subject"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op15",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm04_expiry_restart_retained",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "retained"
+        },
+        {
+          "op": "ask",
+          "id": "cm04_expiry_op16",
+          "time": "2026-10-08T12:00:02+00:00",
+          "checkpoint_id": "cm04_expiry_restart_fresh",
+          "question": "Returning to my earlier walking partner information, who is my current walking partner?",
+          "history": "fresh"
+        }
+      ]
+    }
+  ]
+}

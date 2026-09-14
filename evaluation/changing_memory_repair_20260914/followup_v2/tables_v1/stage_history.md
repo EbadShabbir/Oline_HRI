@@ -1,0 +1,28 @@
+# stage history
+
+| branch | stage | history_mode | restart_phase | expected_kind | planned | attempted | delivered | useful_correct | forbidden_disclosure | withheld | interrupted | missing |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| correction | corrected | fresh | before | replacement | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| correction | corrected | retained | before | replacement | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| correction | historical | fresh | before | historical_control | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| correction | historical | retained | before | historical_control | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| correction | prestore | retained | before | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| correction | recalled | retained | before | original | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| correction | restart | fresh | after | replacement | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| correction | restart | retained | after | replacement | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| correction | restart_historical | fresh | after | historical_control | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| correction | restart_historical | retained | after | historical_control | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| deletion | deleted | fresh | before | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| deletion | deleted | retained | before | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| deletion | deleted_historical | retained | before | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| deletion | recalled | retained | before | original | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| deletion | restart | fresh | after | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| deletion | restart | retained | after | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| deletion | restart_historical | retained | after | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| expiry | after | retained | before | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| expiry | at | fresh | before | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| expiry | at | retained | before | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| expiry | before | fresh | before | original | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| expiry | before | retained | before | original | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| expiry | restart | fresh | after | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |
+| expiry | restart | retained | after | uncertainty | 1 | 1 | 1 | 1 | 0 | 0 | 0 | 0 |

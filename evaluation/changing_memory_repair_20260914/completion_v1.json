@@ -1,0 +1,449 @@
+{
+  "created_at": "2026-09-14T14:37:41.410259+00:00",
+  "task_status": "completed",
+  "all_planned_live_checkpoints_and_analysis_complete": true,
+  "original_baseline_preserved": {
+    "directory": "evaluation/changing_memory_20260914",
+    "seal_sha256": "e8e3b3e64a1da7f79ff316b4668942388d03050eaac1319630e6e75f3a1af4fb",
+    "files_verified": 2058
+  },
+  "nested_seals_verified_before_final_seal": [
+    {
+      "directory": "analysis_v1/frozen_votes",
+      "files": 3,
+      "seal_sha256": "776be820ed8915e8d32a597a1989e6eaaa48a70c0cd51b2260d6d9b3370d184c"
+    },
+    {
+      "directory": "analysis_v1",
+      "files": 16,
+      "seal_sha256": "117327f6c1d19b4870180f5219ce1d8014a51dcf0bbb33ed04f22693b7e5d8a6"
+    },
+    {
+      "directory": "bound_reviews_v1/originals/batch_01/batch",
+      "files": 6,
+      "seal_sha256": "82ea5f54e396a8fe66d2bc9a2e099003b6a40183de105c92965c342289ef74f1"
+    },
+    {
+      "directory": "bound_reviews_v1/originals/batch_02/batch",
+      "files": 6,
+      "seal_sha256": "dd85a8fae97c3869b34c786f4440a19aae1f4d9462fe42be1b8d8ada19cf1323"
+    },
+    {
+      "directory": "bound_reviews_v1",
+      "files": 22,
+      "seal_sha256": "fc0e3d12e98204b1733fbc61c3602ee2db15a540ec22a546c82e150fad93117b"
+    },
+    {
+      "directory": "candidate_source_v1",
+      "files": 16,
+      "seal_sha256": "5800d1085e9c39118202572034969819c18682d63e88dcdd909ef70f97f97d2c"
+    },
+    {
+      "directory": "candidate_source_v2",
+      "files": 17,
+      "seal_sha256": "768fddb925a53234d4c088abefe053e490f4570427d823f7f2f039fc3a795af7"
+    },
+    {
+      "directory": "figures_v1",
+      "files": 5,
+      "seal_sha256": "032307e731e9810791a1d357c2d45f248214ac10f8cca579809211026b937024"
+    },
+    {
+      "directory": "followup_v2/analysis_v1/frozen_votes",
+      "files": 3,
+      "seal_sha256": "6990a7584544a456b092e01aeccd222a545f81ece8474a73ede300039e3d02e1"
+    },
+    {
+      "directory": "followup_v2/analysis_v1",
+      "files": 16,
+      "seal_sha256": "ac757ec863121726700aa4d65e790f8bdb2612d11fa96ec08333bcb31e85d60f"
+    },
+    {
+      "directory": "followup_v2/compared_first_repair_v1",
+      "files": 11,
+      "seal_sha256": "d9f00fa44997438f1ac2b2417cf6cc9dc888befd12b290da93d766bd4d8553d5"
+    },
+    {
+      "directory": "followup_v2/compared_original_baseline_v1",
+      "files": 11,
+      "seal_sha256": "0fcd539904f16e4e564ff17d991815f20bc072273bf0ae8cbb7fb4eddb680903"
+    },
+    {
+      "directory": "followup_v2/figures_v1",
+      "files": 5,
+      "seal_sha256": "7509681eb608d9b3881d2ac9bdd680eac4e6ea41b2209fac98ee6e118bdf6f07"
+    },
+    {
+      "directory": "followup_v2/frozen_v1/preparation/offline_validation",
+      "files": 15,
+      "seal_sha256": "9af1543e139e8fc51590e4f33c46ab58e173495c0bec2d96adca971fd258c4ed"
+    },
+    {
+      "directory": "followup_v2/frozen_v1",
+      "files": 73,
+      "seal_sha256": "32c78a7b18264300899502ecad534379655816d266c8f834e8cb16da3b3bb069"
+    },
+    {
+      "directory": "followup_v2/offline_validation_v1",
+      "files": 15,
+      "seal_sha256": "9af1543e139e8fc51590e4f33c46ab58e173495c0bec2d96adca971fd258c4ed"
+    },
+    {
+      "directory": "followup_v2/prepared_v1",
+      "files": 12,
+      "seal_sha256": "33611cdd1a4b2b391d3b2d040c6ce973cc70e4621f77fe5e9ac66cebb928fb61"
+    },
+    {
+      "directory": "followup_v2/run_v1/cm04_correction/initial",
+      "files": 21,
+      "seal_sha256": "f1f494e84354e3f60c1b05aeeddcadacbba264cef282a66e8920753efdaa9598"
+    },
+    {
+      "directory": "followup_v2/run_v1/cm04_correction/restart",
+      "files": 14,
+      "seal_sha256": "93d8941074238c7bbf3d3734cfb0c87a546eedb0eed7bef1d23e189b456ca55f"
+    },
+    {
+      "directory": "followup_v2/run_v1/cm04_correction",
+      "files": 42,
+      "seal_sha256": "a7b237d0975ab174e5837319bf6c288076338d964368d0c3c98255aecfbccc58"
+    },
+    {
+      "directory": "followup_v2/run_v1/cm04_deletion/initial",
+      "files": 19,
+      "seal_sha256": "c9ad9af38fe5e0ad9c428c99e0c815b56d6b3b79f3260128520bcb3d34275fca"
+    },
+    {
+      "directory": "followup_v2/run_v1/cm04_deletion/restart",
+      "files": 13,
+      "seal_sha256": "f51204102c495ad4f0bedf07a4384f89c9c4da880f0f3a9ac482f35ca35cc424"
+    },
+    {
+      "directory": "followup_v2/run_v1/cm04_deletion",
+      "files": 41,
+      "seal_sha256": "3fba14254b1d59f9685e7748e59498a5343a438dc27529fc605768239246ce92"
+    },
+    {
+      "directory": "followup_v2/run_v1/cm04_expiry/initial",
+      "files": 21,
+      "seal_sha256": "6b2f28712a0ed893002f36026b8e944ad17f343795c337b46500dccad8b9445c"
+    },
+    {
+      "directory": "followup_v2/run_v1/cm04_expiry/restart",
+      "files": 12,
+      "seal_sha256": "bb02a0ddc002dd1a5ab9b7648984e5a678756e93ac1a39155306ca1e37214c61"
+    },
+    {
+      "directory": "followup_v2/run_v1/cm04_expiry",
+      "files": 41,
+      "seal_sha256": "49d12274e3fd509a158ea859465934fc988eb8d3bc89341eb8681345afcef646"
+    },
+    {
+      "directory": "followup_v2/run_v1",
+      "files": 128,
+      "seal_sha256": "eb12e1f02112920d96ccc6350695b7bb3382b03918e411ff631888461a6d2ac0"
+    },
+    {
+      "directory": "followup_v2/sealed_reviews_v1",
+      "files": 4,
+      "seal_sha256": "fc6d8577011aab48aa856e794a4320b714ad2a1d21b66e815ed7cdaed3db6d86"
+    },
+    {
+      "directory": "followup_v2/tables_v1",
+      "files": 35,
+      "seal_sha256": "ac7c23cc9ef417b2f66774eb238eb58a241b923ba7083c6b78c8a4494fe23b26"
+    },
+    {
+      "directory": "frozen_v1/preparation/offline_validation",
+      "files": 16,
+      "seal_sha256": "79defeab462a80b7ad80ec82af2fbd6fc6e4c066717b855287a54402f99f9ea1"
+    },
+    {
+      "directory": "frozen_v1",
+      "files": 73,
+      "seal_sha256": "e3eac769017398449926bdcfafe808a79fedd3699cca0a3ebacfd011630dad44"
+    },
+    {
+      "directory": "frozen_v2/preparation/offline_validation",
+      "files": 16,
+      "seal_sha256": "79defeab462a80b7ad80ec82af2fbd6fc6e4c066717b855287a54402f99f9ea1"
+    },
+    {
+      "directory": "frozen_v2",
+      "files": 74,
+      "seal_sha256": "0b9b8e04dda46462ef1dd2682065d731439885723b2ff7ec723c18b79cf7660b"
+    },
+    {
+      "directory": "matched_comparison_source_v1",
+      "files": 5,
+      "seal_sha256": "a348e0f7ffbc18509d2efb54bee133f22928f24a237fbe1920d644eafee8edaf"
+    },
+    {
+      "directory": "matched_comparison_v1",
+      "files": 11,
+      "seal_sha256": "85cc869a9d123f13ee5cdc86fb4dc4b50e8fcf814ff876354d1a01a03295ab3e"
+    },
+    {
+      "directory": "offline_validation_v1",
+      "files": 16,
+      "seal_sha256": "79defeab462a80b7ad80ec82af2fbd6fc6e4c066717b855287a54402f99f9ea1"
+    },
+    {
+      "directory": "prepared_final_v1",
+      "files": 12,
+      "seal_sha256": "8a6786ed30063ee260e5e430ebed24a968ac4594cc51d7cf5eb74ce18b533ca3"
+    },
+    {
+      "directory": "review_batches/batch_01",
+      "files": 6,
+      "seal_sha256": "82ea5f54e396a8fe66d2bc9a2e099003b6a40183de105c92965c342289ef74f1"
+    },
+    {
+      "directory": "review_batches/batch_02",
+      "files": 6,
+      "seal_sha256": "dd85a8fae97c3869b34c786f4440a19aae1f4d9462fe42be1b8d8ada19cf1323"
+    },
+    {
+      "directory": "run_v1/cm01_correction/initial",
+      "files": 21,
+      "seal_sha256": "f3e684854709548f75d52ddec07a3716fd7e492b76f53c56c24e13f5c359c28d"
+    },
+    {
+      "directory": "run_v1/cm01_correction/restart",
+      "files": 14,
+      "seal_sha256": "0a660a09280c508532c23333f33069473d74ade81da7b8c199d84d2c1de551e9"
+    },
+    {
+      "directory": "run_v1/cm01_correction",
+      "files": 43,
+      "seal_sha256": "d9eac0918b9edc48e2106015c1f694736eb0f6adfe7191e7ee47e8f252a90d04"
+    },
+    {
+      "directory": "run_v1/cm01_deletion/initial",
+      "files": 19,
+      "seal_sha256": "ee4c05e27e9877188bea9d36eb3e05fcb62654726668086de928ad1609722fbd"
+    },
+    {
+      "directory": "run_v1/cm01_deletion/restart",
+      "files": 2,
+      "seal_sha256": "0433b70a6be597426fd1c2b0e51191c366a43ddb9eb56903cda5acdbd9aa7f33"
+    },
+    {
+      "directory": "run_v1/cm01_deletion/restart_continuation_02",
+      "files": 13,
+      "seal_sha256": "87c55a99d449b2120a8a24b6e2a87a738c35d723ee05ff0c69f9ac506699bd59"
+    },
+    {
+      "directory": "run_v1/cm01_deletion",
+      "files": 47,
+      "seal_sha256": "6184e386852229748d09981e06c3ae5d217695938df66c50e5cdf6c91bc9c719"
+    },
+    {
+      "directory": "run_v1/cm01_expiry/initial",
+      "files": 21,
+      "seal_sha256": "3d1b634383b64dcecffb07d1187cbcebd728bcfc2a518243cd651e5cfbbf6a6f"
+    },
+    {
+      "directory": "run_v1/cm01_expiry/restart",
+      "files": 12,
+      "seal_sha256": "5b98cf9c6be3f05b8a37c7ced19e952818e064e556c0da965147ec61ff97f541"
+    },
+    {
+      "directory": "run_v1/cm01_expiry",
+      "files": 43,
+      "seal_sha256": "ae4d4ad45d503a148d51490833a1bcc4e9edf73b1a563263abc3869b7f03dcfa"
+    },
+    {
+      "directory": "run_v1/cm04_correction/initial",
+      "files": 21,
+      "seal_sha256": "94365255c39ca80e8a4ce7a8fbf35fd6eb98acb6ac138a0d1266d968ef2cff2e"
+    },
+    {
+      "directory": "run_v1/cm04_correction/restart",
+      "files": 14,
+      "seal_sha256": "486e312100e508150e0a8aaa496f1530ec4ebf5b9bdb84818a82f96ba4c47960"
+    },
+    {
+      "directory": "run_v1/cm04_correction",
+      "files": 45,
+      "seal_sha256": "955c9c39b8a142e727bf5bf584c374f0405a7e11e9a325ddb07ee0070efbce30"
+    },
+    {
+      "directory": "run_v1/cm04_deletion/initial",
+      "files": 19,
+      "seal_sha256": "e52a3b677784e296fd4f89f537741a8411a037067ff8a6e2a09c9e55d50c2948"
+    },
+    {
+      "directory": "run_v1/cm04_deletion/restart",
+      "files": 13,
+      "seal_sha256": "2b44a4310cbdb05583cdb2c75c1d09541774f66b76768137ae6fb7bea29602b6"
+    },
+    {
+      "directory": "run_v1/cm04_deletion",
+      "files": 41,
+      "seal_sha256": "bfbdfc231516ed62b3b1b5164e0cfefd939560446d91e37d6b9317f7728d26e6"
+    },
+    {
+      "directory": "run_v1/cm04_expiry/initial",
+      "files": 21,
+      "seal_sha256": "ffe4af4ec8fe77a17b84167977f57348b0c5b61a6d96e80ffb0191cc8425314d"
+    },
+    {
+      "directory": "run_v1/cm04_expiry/restart",
+      "files": 12,
+      "seal_sha256": "1ff8ee9579e623c054f3427aa174edbf8e352d1bb927d4958b26de21c6b6ba74"
+    },
+    {
+      "directory": "run_v1/cm04_expiry",
+      "files": 43,
+      "seal_sha256": "3642cd7d26d2702102a0a05a6b89e77bccdf1ff46928c73212f4af9facb7c043"
+    },
+    {
+      "directory": "run_v1/cm07_correction/initial",
+      "files": 21,
+      "seal_sha256": "ba0c48e9b17e007c3e535e9550f9d3d29e9202bd31279c6857468a48a4ee366f"
+    },
+    {
+      "directory": "run_v1/cm07_correction/restart",
+      "files": 14,
+      "seal_sha256": "1aeffd1067bdf1e1babb183c57ae216fea7c2c74836a18ea6dfe2d46bfafc250"
+    },
+    {
+      "directory": "run_v1/cm07_correction",
+      "files": 44,
+      "seal_sha256": "cabcdb4cd6966c939660b1f13e8295fdc0e48f87a74230a309ed3843cc899e4b"
+    },
+    {
+      "directory": "run_v1/cm07_deletion/initial",
+      "files": 19,
+      "seal_sha256": "7349331218e54c2126d6b391758978e225a3a7c38fa84079a517ec94fa85d42d"
+    },
+    {
+      "directory": "run_v1/cm07_deletion/restart",
+      "files": 13,
+      "seal_sha256": "9b8864dbc96c92178d7190a88e19dd95cfa33b675db3571611b7dcbec4d461d0"
+    },
+    {
+      "directory": "run_v1/cm07_deletion",
+      "files": 41,
+      "seal_sha256": "0317cff31f81ab6d79a674c36a2b5c26cfcd61c97c1e3523863df592845bf903"
+    },
+    {
+      "directory": "run_v1/cm07_expiry/initial",
+      "files": 21,
+      "seal_sha256": "edcf9885169c8eb447cdb01a2fc20f4e2cf20d55d5fdf73ab1fc5c37a4b13b40"
+    },
+    {
+      "directory": "run_v1/cm07_expiry/restart",
+      "files": 12,
+      "seal_sha256": "430ac9071a0facd79375aca87a912389c096c4bf4db5a3932a4a0419f7acf41a"
+    },
+    {
+      "directory": "run_v1/cm07_expiry",
+      "files": 42,
+      "seal_sha256": "393b446594320a89b4259cbd02a8fad06c1fe405a4c7df27ae5317e2c47e2f06"
+    },
+    {
+      "directory": "run_v1/cm09_correction/initial",
+      "files": 21,
+      "seal_sha256": "0aae85f8d2ed5c4b8851271d68f236c46cdd18595cd6cee150e19274aa5a0745"
+    },
+    {
+      "directory": "run_v1/cm09_correction/restart",
+      "files": 14,
+      "seal_sha256": "1ae6b0652fe9b58b72e91ca7b6cb8648d74707fa7ab79c4f626b9cafb0f688c0"
+    },
+    {
+      "directory": "run_v1/cm09_correction",
+      "files": 44,
+      "seal_sha256": "1f948fbf8ff190800d8636092ff731efb895dea1b8d5e88cfd85e3fe1062f5ba"
+    },
+    {
+      "directory": "run_v1/cm09_deletion/initial",
+      "files": 19,
+      "seal_sha256": "1a3e61ff62f705d17c302ba9347e37357d0bc9d220da9ed525d01dcd230181a1"
+    },
+    {
+      "directory": "run_v1/cm09_deletion/restart",
+      "files": 13,
+      "seal_sha256": "e2900c1dc09ab58b1662cbd1a7bac81df69679ed012d5040ec2c2bd76d97ae2b"
+    },
+    {
+      "directory": "run_v1/cm09_deletion",
+      "files": 41,
+      "seal_sha256": "f59d92f98420049e56d937a96bf08f0eab362b450e55c874bf7fb93c4cfbe136"
+    },
+    {
+      "directory": "run_v1/cm09_expiry/initial",
+      "files": 21,
+      "seal_sha256": "7a971f19134ce86bc0e7bbcf3c5a093a9a052e8953a2c92b23239e8d87b7c9ac"
+    },
+    {
+      "directory": "run_v1/cm09_expiry/restart",
+      "files": 12,
+      "seal_sha256": "42441f36faac2d155822bffa3274f30f1c081a8b116fb9ecfcd4cfb6afa208d1"
+    },
+    {
+      "directory": "run_v1/cm09_expiry",
+      "files": 40,
+      "seal_sha256": "a7638f3e5008c91691f98d8d6522657144ca91c1a207537118f0cfa97c3eb847"
+    },
+    {
+      "directory": "run_v1",
+      "files": 527,
+      "seal_sha256": "2ef6fc4978d1305f7a481aca6fa4cb587183fd57d9ea5904b761e3852e6de012"
+    },
+    {
+      "directory": "sealed_reviews_v1",
+      "files": 4,
+      "seal_sha256": "a6360c34aad321b364e01ddddcc77c4dbd5e2f8d2e724e087c2ee6dbb08cb101"
+    },
+    {
+      "directory": "staging_validation_v1",
+      "files": 8,
+      "seal_sha256": "ca9b2b85d945d0e390d11bff2945e97b00b2513460720193fd5fed6e25d030d5"
+    },
+    {
+      "directory": "tables_v1",
+      "files": 35,
+      "seal_sha256": "447c8b7101d270a87dfa5f01e92ff190a03b28451ee34df3c51d020fe04e804f"
+    }
+  ],
+  "current_final_runtime_hashes_verified": 41,
+  "independent_final_report_review_sha256": "ced67ca5541f8c9e13e1fb90b3bebc6c5cff8f18d450b1657181d861730fc537",
+  "first_repair": {
+    "completed": 96,
+    "useful_correct": 92,
+    "delivered": 94,
+    "forbidden_disclosure": 0,
+    "partial_delivered": 2,
+    "withheld": 2,
+    "missing": 0,
+    "startup_rejections_before_operations": 1,
+    "audit_checks": 10541
+  },
+  "final_amendment": {
+    "completed": 24,
+    "useful_correct": 24,
+    "delivered": 24,
+    "forbidden_disclosure": 0,
+    "withheld": 0,
+    "missing": 0,
+    "startup_rejections": 0,
+    "audit_checks": 2811
+  },
+  "no_pooled_final96_score": true,
+  "analysis_reproduction_data_checks": [
+    34,
+    41
+  ],
+  "repository_diff_whitespace_check_exit_code": 0,
+  "final_report_links_verified": 60,
+  "all_inference_collectors_exited_zero": true,
+  "human_validation": "pending",
+  "scope": "Text, actual worker process restart and controlled logical-time expiry; no OS/Ollama restart, power-loss recovery or spoken performance.",
+  "workspace_document_snapshot": "workspace_docs_v1",
+  "final_followup_seal_sha256": "93ba481aa2865dda0cc615431f3d5d888c0343f7102689950773ef39ee9faaad",
+  "followup_files_sealed": 370,
+  "workspace_docs_seal_sha256": "f2d9665c5b04cb8ab51360a9c4855fed588b9e4cdfe2304387dc97a950648c75"
+}

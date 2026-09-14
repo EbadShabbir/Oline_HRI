@@ -1,0 +1,20 @@
+{
+  "scope": "read-only compatibility check; merged first two incremental packets and latest mapping in temporary directory",
+  "packets": 2,
+  "anonymous_groups": 20,
+  "mapped_observations": 36,
+  "frozen_quality_join_succeeded": true,
+  "initial_label_and_flag_agreement": 20,
+  "judgments_compared": 20,
+  "supplied_ids_all_present_in_saved_retrieval_matches": true,
+  "critical_final_merge_requirements": [
+    "Concatenate all unique cohort packet entries; retain stable IDs.",
+    "Use final cumulative private_mapping.json only; do not concatenate cumulative mappings.",
+    "Combine resolved reviews for all packet IDs once.",
+    "At final completion include attempts with durable manifest/events but no finish, if any."
+  ],
+  "limitations": [
+    "Frozen quality_join validates raw question/history/answer/delivery identity but does not itself validate new supplied_evidence/cited_memory_ids fields; audit adapter reconstruction separately.",
+    "Current helper iterates finish.json sessions only, appropriate for incremental completed sessions; a crash with no finish needs explicit terminal handling for full coverage."
+  ]
+}

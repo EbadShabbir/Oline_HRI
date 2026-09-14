@@ -1,0 +1,388 @@
+{
+  "schema_version": "dependency_corpus_fragment_v1",
+  "scope": "Known diagnostic and reported failures deliberately used as training, never held-out evidence. Labels authored from existing development cases.",
+  "cases": [
+    {
+      "id": "observed_general_01",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "My Python script prints a list with brackets. How can I print the items one per line?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_02",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Why does a microphone pick up a loud squeal when it is close to a speaker?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_03",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Help me remember the difference between RAM and storage with a simple analogy.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_04",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What is a practical way to stop a fitted sheet coming off the mattress?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_05",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "How can someone politely decline an invitation without giving a long excuse?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_06",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "I have twenty minutes, a frying pan, rice, peas, and two eggs. Suggest a simple dinner using those ingredients.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_07",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "I rent a small room and cannot drill holes. How could I organize books and cables cheaply?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_08",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "I am new to public speaking and have to give a three-minute introduction to six coworkers tomorrow. Give me a practice plan.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_09",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Why might a mobile robot use both a camera and a depth sensor to avoid obstacles?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_10",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Can a social robot tell that someone is joking just from their words?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_11",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Make the second one warmer and less formal.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Give me two short ways to thank a neighbor for watering my plants."
+        },
+        {
+          "role": "assistant",
+          "content": "1. Thanks for watering my plants while I was away! 2. I appreciate your assistance in keeping my plants watered."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_general_12",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Could you explain that again with an example from a kitchen?",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "What is the difference between doing tasks sequentially and concurrently?"
+        },
+        {
+          "role": "assistant",
+          "content": "Sequential tasks happen one after another. Concurrent tasks can make progress during overlapping periods of time."
+        }
+      ],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_01",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What was the name of the pottery class I told you I signed up for last month?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_02",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Remind me which laptop I decided to buy after we compared them last week.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_03",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Which part of my presentation did I say I was least confident about?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_04",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What is the nickname I use for my houseplant?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_05",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Plan a reading week around my usual work shifts, using the schedule I gave you before.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_06",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Suggest a birthday present for my brother based on the hobbies I told you he has.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_07",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Use the balcony measurements I shared yesterday to work out where the two chairs could fit.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_memory_08",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Go with the same budget limit I gave you in our last conversation and outline a weekend craft project.",
+      "prior_turns": [
+        {
+          "role": "assistant",
+          "content": "How much would you like to spend on the craft project?"
+        }
+      ],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_review_01",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Would that work for me?",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "observed_review_02",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What did I say about coffee last time, and how is cold brew made?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "how is cold brew made?"
+    },
+    {
+      "id": "observed_review_03",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "You know what I like. Pick a movie for tonight.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "observed_review_04",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Give me the usual version, but make it shorter.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "I need an opening line for a team meeting."
+        },
+        {
+          "role": "assistant",
+          "content": "Would you like an upbeat greeting or a concise agenda introduction?"
+        }
+      ],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "observed_reported_headache",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Yesterday I had a really bad day. I have headache. What should I do?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_headache_followup",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Can you suggest me something that I can do, I have headache.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_robot_specs",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What are your specifications, robot?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_preferred_tea",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What is my preferred tea?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_optional_weekend",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Suggest a weekend activity; use my interests if you know them, otherwise give general ideas.",
+      "prior_turns": [],
+      "mode": "optional",
+      "general_request": ""
+    },
+    {
+      "id": "observed_required_camera",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Where is my camera?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_unfinished_speech",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "It's like a... it's like a...",
+      "prior_turns": [],
+      "mode": "clarify",
+      "general_request": ""
+    },
+    {
+      "id": "observed_mixed_camera",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Where is my camera? Explain how batteries work.",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": "Explain how batteries work."
+    },
+    {
+      "id": "observed_fragment_0",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "how is cold brew made?",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    },
+    {
+      "id": "observed_fragment_1",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "What did I say about coffee last time?",
+      "prior_turns": [],
+      "mode": "required",
+      "general_request": ""
+    },
+    {
+      "id": "observed_fragment_2",
+      "group": "observed_development",
+      "domain": "observed_regressions",
+      "split": "train",
+      "text": "Explain how batteries work.",
+      "prior_turns": [],
+      "mode": "none",
+      "general_request": ""
+    }
+  ]
+}

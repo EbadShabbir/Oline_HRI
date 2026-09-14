@@ -1,0 +1,13 @@
+{
+  "scope": "Audit-only false-positive correction; no collection or frozen artifact changed",
+  "original_attempt": "final_collection_audit_v2",
+  "corrected_attempt": "final_collection_audit_v2_corrected",
+  "issue": "Runtime _canonical_bytes includes a trailing newline; the original offline auditor used core.canonical without it. All 144 memory checks failed, including the first snapshot compared with itself.",
+  "evidence": {
+    "recorded_memory_sha256": "71bd3383c736b4185e51395853d25eb64065fc6abe2be1637b0c536f3c9b359c",
+    "runtime_serialization_sha256": "71bd3383c736b4185e51395853d25eb64065fc6abe2be1637b0c536f3c9b359c",
+    "without_newline_sha256": "d32b7c6db74127c8993c1b7cec583f0181464a04d9048380746d074ace68fbcf"
+  },
+  "change": "Append b\"\\n\" when reproducing only the recorded runtime snapshot hash. Snapshot equality itself still compares complete canonical records.",
+  "original_summary_and_checks_preserved": true
+}

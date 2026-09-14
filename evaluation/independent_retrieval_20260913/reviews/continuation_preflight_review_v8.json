@@ -1,0 +1,204 @@
+{
+  "approved": true,
+  "authorized_run_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v9",
+  "continuation_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/continuation_v8",
+  "created_at": "2026-09-13T18:47:05.329906+00:00",
+  "human_validation": "pending",
+  "new_authorized_attempts": 4,
+  "next_attempt": {
+    "case_id": "ir_07_01",
+    "scheduled_index": 45,
+    "slot": 18
+  },
+  "original_execution_sources_unchanged": 44,
+  "original_freeze_seal_sha256": "fda698a52067906e3a071c36dee68d3abb579f5b9c199533cd731708a717a9fd",
+  "primary_answer_text_semantically_reviewed": false,
+  "primary_metadata_seen": true,
+  "prior_run_seal_sha256": "54b9721df3a1c95efc838255b6c8ad2941cfc2e1596f81974191a449bd531653",
+  "private_review_mapping_read": false,
+  "protocol_sha256": "6403f6f47c32ecfaa606f61d5475809c98f26a7a00d6c3087b22ff25a245a44f",
+  "reporting_conditions": [
+    "Preserve all eight interrupted attempts as failures; no attempted request can be replayed or replaced.",
+    "Only slot18 positions45\u201348 are authorized: exactly four requests.",
+    "Any further fatal fragment stops and seals; remaining unattempted requests would require another independently reviewed immutable plan.",
+    "Report at least26 physical fragments for18 logical condition blocks, interrupted durations, extra cold loads and boundary gaps.",
+    "Repeated memory-floor failures remain observed outcomes; this metadata audit does not identify their cause."
+  ],
+  "retained_attempts": 860,
+  "retained_delivered": 852,
+  "retained_interrupted_failures": 8,
+  "retained_zero_request_admission_rejections": 35,
+  "reviewer": "independent assistant /root/audit_design",
+  "scope": "Eighth prospective metadata-only continuation approval for final four never-attempted requests; execution implementation and17-test validation remain unchanged. No answer grading, private mapping access or RAM-growth cause inference.",
+  "source_authored_by_reviewer": false,
+  "source_sha256": {
+    "scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+    "scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+    "tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+    "tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+  },
+  "validation": {
+    "independent_prefix_arithmetic": "Separately reconstructed860 unique chronological slot/case identities, durable request-start correspondence, exact suffix offsets and852ok+8interrupted statuses from sealed records.",
+    "live_inference": false,
+    "physical_fragments": [
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 1,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 2,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 3,
+        "status": "complete"
+      },
+      {
+        "attempted": 13,
+        "offset": 0,
+        "slot": 4,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 27,
+        "offset": 13,
+        "slot": 4,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 8,
+        "offset": 40,
+        "slot": 4,
+        "status": "complete"
+      },
+      {
+        "attempted": 25,
+        "offset": 0,
+        "slot": 5,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 23,
+        "offset": 25,
+        "slot": 5,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 6,
+        "status": "complete"
+      },
+      {
+        "attempted": 40,
+        "offset": 0,
+        "slot": 7,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 8,
+        "offset": 40,
+        "slot": 7,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 8,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 9,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 10,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 11,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 12,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 13,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 14,
+        "status": "complete"
+      },
+      {
+        "attempted": 48,
+        "offset": 0,
+        "slot": 15,
+        "status": "complete"
+      },
+      {
+        "attempted": 42,
+        "offset": 0,
+        "slot": 16,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 6,
+        "offset": 42,
+        "slot": 16,
+        "status": "complete"
+      },
+      {
+        "attempted": 20,
+        "offset": 0,
+        "slot": 17,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 23,
+        "offset": 20,
+        "slot": 17,
+        "status": "interrupted"
+      },
+      {
+        "attempted": 5,
+        "offset": 43,
+        "slot": 17,
+        "status": "complete"
+      },
+      {
+        "attempted": 44,
+        "offset": 0,
+        "slot": 18,
+        "status": "interrupted"
+      }
+    ],
+    "prior_execution_preflight": {
+      "path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/reviews/continuation_preflight_review_v1.json",
+      "reason": "All four approved supplemental source/test hashes are unchanged.",
+      "sha256": "e4bc2240f4d9cd1d93194fd63683687f06b2b8e85b7aa9a85b8620f7a47ba50b",
+      "tests_previously_passed": 17,
+      "tests_rerun": false
+    },
+    "sealed_collection_chain_validation": "Passed ancestry, review/ledger/source seals, exact global prefix, actual prepared snapshot/setup hashes, clean start/end eviction and original device baseline."
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-09-14T14:17:55.367010+00:00",
+  "status": "before_second_runtime_patch",
+  "first_collection_audit_sha256": "914786d716b005ce59eb83ae18e2aaa0912bd878a631c7546544d6075f26e860",
+  "source_sha256": {
+    "src/oline_hri/relationships.py": "759d2a6c671581ffd5db2b07e14a89b81d90fc58ed5fd3625bcf6ec9860b80f6",
+    "src/oline_hri/conversation.py": "0717344dbf1ae1f8cfa33914a1c2e471513bc71cdf6308fa0aebd9f3c18dabe6"
+  },
+  "live_inference": false
+}

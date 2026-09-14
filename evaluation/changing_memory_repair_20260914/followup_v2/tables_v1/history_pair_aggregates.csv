@@ -1,0 +1,13 @@
+branch,restart_phase,pairs,both_observed,success_both,success_retained_only,success_fresh_only,success_neither,disclosure_both,disclosure_retained_only,disclosure_fresh_only,disclosure_neither,revoked_subject_disclosure_both,revoked_subject_disclosure_retained_only,revoked_subject_disclosure_fresh_only,revoked_subject_disclosure_neither
+all,all,9,9,9,0,0,0,0,0,0,9,0,0,0,9
+all,before,5,5,5,0,0,0,0,0,0,5,0,0,0,5
+all,after,4,4,4,0,0,0,0,0,0,4,0,0,0,4
+correction,all,4,4,4,0,0,0,0,0,0,4,0,0,0,4
+correction,before,2,2,2,0,0,0,0,0,0,2,0,0,0,2
+correction,after,2,2,2,0,0,0,0,0,0,2,0,0,0,2
+deletion,all,2,2,2,0,0,0,0,0,0,2,0,0,0,2
+deletion,before,1,1,1,0,0,0,0,0,0,1,0,0,0,1
+deletion,after,1,1,1,0,0,0,0,0,0,1,0,0,0,1
+expiry,all,3,3,3,0,0,0,0,0,0,3,0,0,0,3
+expiry,before,2,2,2,0,0,0,0,0,0,2,0,0,0,2
+expiry,after,1,1,1,0,0,0,0,0,0,1,0,0,0,1

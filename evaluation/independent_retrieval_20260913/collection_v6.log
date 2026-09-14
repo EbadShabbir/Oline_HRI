@@ -1,0 +1,36 @@
+SESSION 16/18 qwen3:1.7b OFF suffix43–48 admission1
+WAIT 16: available memory is below the revised 2 GiB start gate
+SESSION 16/18 qwen3:1.7b OFF suffix43–48 admission2
+WAIT 16: available memory is below the revised 2 GiB start gate
+SESSION 16/18 qwen3:1.7b OFF suffix43–48 admission3
+WAIT 16: available memory is below the revised 2 GiB start gate
+SESSION 16/18 qwen3:1.7b OFF suffix43–48 admission4
+slot 16 qwen3:1.7b OFF r3 1/6 ir_01_06 ok 35.175s
+slot 16 qwen3:1.7b OFF r3 2/6 ir_02_02 ok 8.177s
+slot 16 qwen3:1.7b OFF r3 3/6 ir_07_01 ok 7.098s
+slot 16 qwen3:1.7b OFF r3 4/6 ir_08_05 ok 6.570s
+slot 16 qwen3:1.7b OFF r3 5/6 ir_07_05 ok 6.672s
+slot 16 qwen3:1.7b OFF r3 6/6 ir_06_01 ok 8.336s
+SESSION 17/18 qwen3:1.7b SELECTIVE suffix1–48 admission1
+[0;93m2026-09-13 22:29:08.530936270 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+slot 17 qwen3:1.7b SELECTIVE r3 1/48 ir_05_06 ok 30.650s
+slot 17 qwen3:1.7b SELECTIVE r3 2/48 ir_07_02 ok 7.563s
+slot 17 qwen3:1.7b SELECTIVE r3 3/48 ir_01_05 ok 4.478s
+slot 17 qwen3:1.7b SELECTIVE r3 4/48 ir_01_01 ok 3.217s
+slot 17 qwen3:1.7b SELECTIVE r3 5/48 ir_03_01 ok 2.684s
+slot 17 qwen3:1.7b SELECTIVE r3 6/48 ir_02_04 ok 4.932s
+slot 17 qwen3:1.7b SELECTIVE r3 7/48 ir_06_03 ok 5.019s
+slot 17 qwen3:1.7b SELECTIVE r3 8/48 ir_07_06 ok 4.311s
+slot 17 qwen3:1.7b SELECTIVE r3 9/48 ir_05_02 ok 3.071s
+slot 17 qwen3:1.7b SELECTIVE r3 10/48 ir_08_03 ok 7.426s
+slot 17 qwen3:1.7b SELECTIVE r3 11/48 ir_01_02 ok 6.240s
+slot 17 qwen3:1.7b SELECTIVE r3 12/48 ir_02_06 ok 3.665s
+slot 17 qwen3:1.7b SELECTIVE r3 13/48 ir_01_03 ok 5.781s
+slot 17 qwen3:1.7b SELECTIVE r3 14/48 ir_08_02 ok 5.520s
+slot 17 qwen3:1.7b SELECTIVE r3 15/48 ir_06_02 ok 3.330s
+slot 17 qwen3:1.7b SELECTIVE r3 16/48 ir_04_03 ok 4.565s
+slot 17 qwen3:1.7b SELECTIVE r3 17/48 ir_02_05 ok 4.297s
+slot 17 qwen3:1.7b SELECTIVE r3 18/48 ir_05_03 ok 4.619s
+slot 17 qwen3:1.7b SELECTIVE r3 19/48 ir_08_01 ok 3.048s
+slot 17 qwen3:1.7b SELECTIVE r3 20/48 ir_04_06 interrupted 4.124s
+BATCH interrupted /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v6

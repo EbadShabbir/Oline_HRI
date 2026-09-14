@@ -1,0 +1,56 @@
+{
+  "scope": "Post-review, read-only extraction check of sealed cm01-cm04 branches only; no inference, no answer re-scoring.",
+  "scored_rows_parsed": 96,
+  "rows_with_actual_generation_evidence": 34,
+  "malformed_or_ambiguous_payloads": 0,
+  "checkpoint_id": "cm04_correction_restart_fresh",
+  "v1_findings": [
+    "evidence_selection_required_fact_missing",
+    "validation_rejection"
+  ],
+  "v2_findings": [
+    "validation_rejection"
+  ],
+  "v2_required_evidence_supplied": true,
+  "v2_supplied_ids": [
+    "mem_5ca26ac68c4c4893bdd57e1d65d8b9f6"
+  ],
+  "input_sha256": {
+    "evaluation/changing_memory_20260914/run_v2/cm01_correction/seal.json": "8a0a5bfead0454a2f2297e400202383a1f4bd617dfd93c495f439998c4fad4b4",
+    "evaluation/changing_memory_20260914/run_v2/cm01_correction/initial/answers.jsonl": "635deda131625dd77fa52268e6a943c28240223d962c65f0683da7c8463f28bd",
+    "evaluation/changing_memory_20260914/run_v2/cm01_correction/restart/answers.jsonl": "faab8f049dc7980cbe64f470aa41909428192f198053001809487dbb249854ff",
+    "evaluation/changing_memory_20260914/run_v2/cm01_deletion/seal.json": "898b5117677968a023f3eea26201b7b28c6a66b05e0a01832924e23f4881be08",
+    "evaluation/changing_memory_20260914/run_v2/cm01_deletion/initial/answers.jsonl": "9c99bd8c79ed2c8bd40fef493e96c4c6376d4be2b34db6bd7e0e710b66d8e7e7",
+    "evaluation/changing_memory_20260914/run_v2/cm01_deletion/restart_continuation_02/answers.jsonl": "f7f850dd5224672ba072c730a7b2ab649ca46dd1b97cf8a1a7e51bef7218ef5c",
+    "evaluation/changing_memory_20260914/run_v2/cm01_expiry/seal.json": "60089b1dcbf4c0e6c0371b95da270928272afb41df2e1ec886d4740ab824e035",
+    "evaluation/changing_memory_20260914/run_v2/cm01_expiry/initial/answers.jsonl": "7bc37fdc18f5b765895f2e76285c97c915bcdd8518b3deb612aa50d64f29d437",
+    "evaluation/changing_memory_20260914/run_v2/cm01_expiry/restart_continuation_02/answers.jsonl": "91c9a6839318a199fc97e5b4c19ac82b55ecf69ce72c1b629b3c74cd71ab81a9",
+    "evaluation/changing_memory_20260914/run_v2/cm02_correction/seal.json": "61df589f242fa3ec7ce1a2e68c21fdb925972765d029efccecf416942c7c4766",
+    "evaluation/changing_memory_20260914/run_v2/cm02_correction/initial/answers.jsonl": "fff8d34d57ab5527f325e310ed1816b043fae34b55e70c7a4f73bba31e973ac1",
+    "evaluation/changing_memory_20260914/run_v2/cm02_correction/restart/answers.jsonl": "dc6a4d2967ed2bb961113628ecec428fdb01d30a7883fffb683e8cc78563aac9",
+    "evaluation/changing_memory_20260914/run_v2/cm02_deletion/seal.json": "9419a4a2cd50371e543b4f33239814f611a5f541637bfd1c21e354239b46d96b",
+    "evaluation/changing_memory_20260914/run_v2/cm02_deletion/initial/answers.jsonl": "4a72a09bedf3d7af0c4393ae62d9684cb0f296e198a53b6213c12d20c743796d",
+    "evaluation/changing_memory_20260914/run_v2/cm02_deletion/restart/answers.jsonl": "6bb7e2083bcf5cb42927e69f4abe749b37bf4fa88edfa2980eac8850879c7cca",
+    "evaluation/changing_memory_20260914/run_v2/cm02_expiry/seal.json": "bb75abc1ba325438d4d3d130b31a49d414fdded5fb7efba7e7eb6c5e4bc3eafd",
+    "evaluation/changing_memory_20260914/run_v2/cm02_expiry/initial/answers.jsonl": "476e7644b1647bc6e8bb38d2d8bbfd695f99e1fa4c765edd147595bd5e36813d",
+    "evaluation/changing_memory_20260914/run_v2/cm02_expiry/restart_continuation_03/answers.jsonl": "9d87f7ddd86047add8bbf2194e09133d990001329bed5ce26e3a2e4dd304c7b2",
+    "evaluation/changing_memory_20260914/run_v2/cm03_correction/seal.json": "656a867b0805fbbf833d8517ad2cb74151296680c48747541ab3013d433b07a4",
+    "evaluation/changing_memory_20260914/run_v2/cm03_correction/initial/answers.jsonl": "8d6de46b0278d0887e622dd9a990f66ed757a6d91314285fd61d09580f60a97b",
+    "evaluation/changing_memory_20260914/run_v2/cm03_correction/restart/answers.jsonl": "31b67a59c6b92fd8dfb5dfc6c90f293881f707e10234005653a8010a0e53f2c5",
+    "evaluation/changing_memory_20260914/run_v2/cm03_deletion/seal.json": "5cf29895597c1973170a3c971523a87f88d7d2097ead0563483719708507a575",
+    "evaluation/changing_memory_20260914/run_v2/cm03_deletion/initial/answers.jsonl": "8846df9a9e055bff60763989e05dbdf524522071100cd79f906e936fe6e5b3f9",
+    "evaluation/changing_memory_20260914/run_v2/cm03_deletion/restart/answers.jsonl": "87ed0a819c536ac1bdd15ad0d0677483c1d341b0a6ac2e90006bfe20950717cc",
+    "evaluation/changing_memory_20260914/run_v2/cm03_expiry/seal.json": "469056df8f8e50d09ef9d15f8f9a67aaafb9f2552565a91d1b60ab79f89c2a97",
+    "evaluation/changing_memory_20260914/run_v2/cm03_expiry/initial/answers.jsonl": "6fa01f389333858f9ee541a7b506e69226ce4fa456f01be6d6bb767aba9a02df",
+    "evaluation/changing_memory_20260914/run_v2/cm03_expiry/restart/answers.jsonl": "b716beec3e4e9d9a03d2073247e6e0854c93d166e72c1feb009d4067a68bbde6",
+    "evaluation/changing_memory_20260914/run_v2/cm04_correction/seal.json": "25231c3fb1fc3a368847f7cb631f8c95c3051a069742b1c984430316e414d6ed",
+    "evaluation/changing_memory_20260914/run_v2/cm04_correction/initial/answers.jsonl": "86134caceb706f4b223f83a03543674d3877444765422d37c89981b3825a6ed6",
+    "evaluation/changing_memory_20260914/run_v2/cm04_correction/restart/answers.jsonl": "21f362fdb5fe41a8562d7b07675c0ff7c8c5a7c141fdffc21691ca0a20a59ce0",
+    "evaluation/changing_memory_20260914/run_v2/cm04_deletion/seal.json": "dee40ae8980bbda292351e570ad638ca191e244b28408197e8506a157c2421b9",
+    "evaluation/changing_memory_20260914/run_v2/cm04_deletion/initial/answers.jsonl": "21e5e89fd91b2d02148bbba6fa7d38d33d52986c47f378a831302806a6c44a38",
+    "evaluation/changing_memory_20260914/run_v2/cm04_deletion/restart/answers.jsonl": "4f184387716cef5ba5e73f44d1091b4b13676bbdbf5489a6012e370b0b03368c",
+    "evaluation/changing_memory_20260914/run_v2/cm04_expiry/seal.json": "b9ae6395ecbeac0d8bdea20424f8f36024c110beb84e3f1be98c37580510c3dc",
+    "evaluation/changing_memory_20260914/run_v2/cm04_expiry/initial/answers.jsonl": "30b71facae73e933edc1ee21a59f95754fb9a9e3114d3562c8deefc9474daf4f",
+    "evaluation/changing_memory_20260914/run_v2/cm04_expiry/restart/answers.jsonl": "9ee315891569486247c29e7976db183706d22efa2f6bc1c9488a667008f024e8"
+  }
+}

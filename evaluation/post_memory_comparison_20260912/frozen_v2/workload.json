@@ -1,0 +1,1541 @@
+{
+  "schema_version": 1,
+  "metadata": {
+    "workload_id": "clara_post_memory_text_pilot_20260912_v1",
+    "created_on": "2026-09-12",
+    "status": "authored_before_pilot_inference",
+    "annotation_status": "assistant_authored_pending_independent_human_review",
+    "scope": "text_request_complete_pipeline_static_memory_lifecycle_snapshot",
+    "fictional_data": true,
+    "public_benchmark": false,
+    "provenance": "Fresh assistant-authored prompts, fictional scenarios, and references. Prior pilot failure modes informed breadth of task coverage. No outputs from these items were used to select or revise them; not an independent or confirmatory evaluation.",
+    "execution_order": "first_24_stratified_alternating_then_four_six_case_same_stratum_runs",
+    "order_seed": 20260912,
+    "counts_by_stratum": {
+      "personal_recall": 12,
+      "general_multiconstraint": 12,
+      "routine_general": 12,
+      "personal_temporal_synthesis": 12
+    },
+    "planned_repetitions": 3,
+    "counterbalanced_arm_orders": [
+      [
+        "small",
+        "large",
+        "cascade"
+      ],
+      [
+        "large",
+        "cascade",
+        "small"
+      ],
+      [
+        "cascade",
+        "small",
+        "large"
+      ]
+    ],
+    "planned_total_attempts": 432,
+    "conversation_history": "fresh_conversation_per_request",
+    "model_residency": "natural_serial_residency_within_each_48_request_session",
+    "quality_unit": "distinct_request_item_with_shared_scenario_and_profile_clustering",
+    "scoring": "Every required semantic claim and forbidden-claim rule is reviewed; lexical checks are auxiliary signals only.",
+    "execution_gold_boundary": "Only execution_cases.prompt enters the user-message path. Rubrics, expected_state, labels, stratum and scenario_id are excluded from model input.",
+    "predefined_pass_thresholds": null,
+    "threshold_note": "Exploratory fresh pilot; no new acceptance cutoff or superiority hypothesis is inferred from the observed results."
+  },
+  "memory_seed": {
+    "profile_id": "fictional_tideglass_post_memory_v1",
+    "evaluation_at": "2026-10-03T20:00:00.000000Z",
+    "retention_days": 7,
+    "clock_basis": "UTC for all fictional stored and requested times; the evaluation clock is independent of real device time.",
+    "confirmation": "Every remember and correct operation is an explicitly confirmed fictional seed operation.",
+    "events": [
+      {
+        "id": "s3_seed_archive_name",
+        "at": "2026-09-29T08:00:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003101",
+        "canonical_text": "You call your neighbourhood sound archive Tideglass.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_editor",
+        "at": "2026-09-29T08:01:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003102",
+        "canonical_text": "Selma is your sound-archive editor and helps you check recordings.",
+        "kind": "relationship"
+      },
+      {
+        "id": "s3_seed_filename_rule",
+        "at": "2026-09-29T08:02:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003103",
+        "canonical_text": "For sound-archive clips, you want filenames to start with the recording date followed by the street name.",
+        "kind": "preference"
+      },
+      {
+        "id": "s3_seed_old_pickup",
+        "at": "2026-09-29T08:03:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003104",
+        "canonical_text": "You collect reserved library books from the lobby shelf.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_transit_card",
+        "at": "2026-09-29T08:04:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003105",
+        "canonical_text": "Your spare transit card is inside the striped notebook.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_locker",
+        "at": "2026-09-29T08:05:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003106",
+        "canonical_text": "Your temporary equipment locker number is 17.",
+        "kind": "fact",
+        "valid_until": "2026-10-02T18:00:00.000000Z"
+      },
+      {
+        "id": "s3_seed_map_early",
+        "at": "2026-09-29T08:06:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003107",
+        "canonical_text": "Your community map session on 5 October 2026 starts at 14:00.",
+        "kind": "event",
+        "event_time": "2026-10-05T14:00:00.000000Z"
+      },
+      {
+        "id": "s3_seed_map_late",
+        "at": "2026-09-29T08:07:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003108",
+        "canonical_text": "Your community map session on 5 October 2026 starts at 15:00.",
+        "kind": "event",
+        "event_time": "2026-10-05T15:00:00.000000Z"
+      },
+      {
+        "id": "s3_seed_shed_hook",
+        "at": "2026-09-29T08:08:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003109",
+        "canonical_text": "The square hook beside the shed door is where you keep the watering-can key.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_pots",
+        "at": "2026-09-29T08:09:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310a",
+        "canonical_text": "Your balcony rack holds fourteen seedling pots.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_fan_rule",
+        "at": "2026-09-29T08:10:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310b",
+        "canonical_text": "You keep the desktop fan off whenever the recording light is on.",
+        "kind": "preference"
+      },
+      {
+        "id": "s3_seed_other_ticket",
+        "at": "2026-09-29T08:11:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310c",
+        "canonical_text": "Dalia's river-ferry ticket is valid for the upper deck.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_water_credit",
+        "at": "2026-09-29T08:12:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310d",
+        "canonical_text": "Your allotment tap meter has 42 litres of prepaid water remaining.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_water_reserve",
+        "at": "2026-09-29T08:13:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310e",
+        "canonical_text": "You reserve 10 litres of the remaining allotment tap water for seedlings.",
+        "kind": "preference"
+      },
+      {
+        "id": "s3_seed_booth",
+        "at": "2026-09-29T08:14:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000310f",
+        "canonical_text": "Your editing-booth booking on 4 October 2026 runs from 09:10 to 10:50.",
+        "kind": "event",
+        "event_time": "2026-10-04T09:10:00.000000Z"
+      },
+      {
+        "id": "s3_seed_review_call",
+        "at": "2026-09-29T08:15:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003110",
+        "canonical_text": "Your audio-review call on 4 October 2026 begins at 10:30.",
+        "kind": "event",
+        "event_time": "2026-10-04T10:30:00.000000Z"
+      },
+      {
+        "id": "s3_seed_cycle_rule",
+        "at": "2026-09-29T08:16:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003111",
+        "canonical_text": "For cycle commutes, you allow at most two road crossings and choose the quickest route among those allowed.",
+        "kind": "preference"
+      },
+      {
+        "id": "s3_seed_cameras",
+        "at": "2026-09-29T08:17:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003112",
+        "canonical_text": "You have five loan cameras ready for use.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_tripods",
+        "at": "2026-09-29T08:18:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003113",
+        "canonical_text": "You have three loan tripods ready for use.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_repair",
+        "at": "2026-09-29T08:19:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003114",
+        "canonical_text": "Your clock-repair appointment on 6 October 2026 starts at 11:20.",
+        "kind": "event",
+        "event_time": "2026-10-06T11:20:00.000000Z"
+      },
+      {
+        "id": "s3_seed_adhesive_rule",
+        "at": "2026-09-29T08:20:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003115",
+        "canonical_text": "For your display frames, you leave newly applied adhesive untouched for 25 minutes.",
+        "kind": "routine"
+      },
+      {
+        "id": "s3_seed_atlas_due",
+        "at": "2026-09-29T08:21:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003116",
+        "canonical_text": "Your borrowed atlas is due back on 7 October 2026.",
+        "kind": "fact"
+      },
+      {
+        "id": "s3_seed_returns_close",
+        "at": "2026-09-29T08:22:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003117",
+        "canonical_text": "On 7 October 2026, your library book-returns desk closes at 18:15.",
+        "kind": "event",
+        "event_time": "2026-10-07T18:15:00.000000Z"
+      },
+      {
+        "id": "s3_seed_scan_start",
+        "at": "2026-09-30T23:41:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003118",
+        "canonical_text": "You started the photo scanning batch on 30 September 2026 at 23:40.",
+        "kind": "event",
+        "event_time": "2026-09-30T23:40:00.000000Z"
+      },
+      {
+        "id": "s3_seed_scan_done",
+        "at": "2026-10-01T00:26:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_00000000000000000000000000003119",
+        "canonical_text": "You finished the photo scanning batch on 1 October 2026 at 00:25.",
+        "kind": "event",
+        "event_time": "2026-10-01T00:25:00.000000Z"
+      },
+      {
+        "id": "s3_seed_upload_done",
+        "at": "2026-10-01T01:06:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000311a",
+        "canonical_text": "The scanned-photo upload finished on 1 October 2026 at 01:05.",
+        "kind": "event",
+        "event_time": "2026-10-01T01:05:00.000000Z"
+      },
+      {
+        "id": "s3_seed_basin_recording",
+        "at": "2026-10-02T07:40:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000311b",
+        "canonical_text": "You recorded the Basin Road sound clip on 2 October 2026 at 07:35.",
+        "kind": "event",
+        "event_time": "2026-10-02T07:35:00.000000Z"
+      },
+      {
+        "id": "s3_seed_correct_pickup",
+        "at": "2026-10-02T12:00:00.000000Z",
+        "operation": "correct",
+        "target_id": "mem_00000000000000000000000000003104",
+        "memory_id": "mem_0000000000000000000000000000311c",
+        "canonical_text": "Your reserved library books are now collected at the side-window desk."
+      },
+      {
+        "id": "s3_seed_forget_transit_card",
+        "at": "2026-10-03T10:00:00.000000Z",
+        "operation": "forget",
+        "target_id": "mem_00000000000000000000000000003105"
+      },
+      {
+        "id": "s3_seed_adhesive_start",
+        "at": "2026-10-03T16:46:00.000000Z",
+        "operation": "remember",
+        "memory_id": "mem_0000000000000000000000000000311d",
+        "canonical_text": "You applied adhesive to the delivery display frame on 3 October 2026 at 16:45.",
+        "kind": "event",
+        "event_time": "2026-10-03T16:45:00.000000Z"
+      }
+    ],
+    "expected_state": {
+      "eligible_current_memory_ids": [
+        "mem_00000000000000000000000000003101",
+        "mem_00000000000000000000000000003102",
+        "mem_00000000000000000000000000003103",
+        "mem_00000000000000000000000000003107",
+        "mem_00000000000000000000000000003108",
+        "mem_00000000000000000000000000003109",
+        "mem_0000000000000000000000000000310a",
+        "mem_0000000000000000000000000000310b",
+        "mem_0000000000000000000000000000310c",
+        "mem_0000000000000000000000000000310d",
+        "mem_0000000000000000000000000000310e",
+        "mem_0000000000000000000000000000310f",
+        "mem_00000000000000000000000000003110",
+        "mem_00000000000000000000000000003111",
+        "mem_00000000000000000000000000003112",
+        "mem_00000000000000000000000000003113",
+        "mem_00000000000000000000000000003114",
+        "mem_00000000000000000000000000003115",
+        "mem_00000000000000000000000000003116",
+        "mem_00000000000000000000000000003117",
+        "mem_00000000000000000000000000003118",
+        "mem_00000000000000000000000000003119",
+        "mem_0000000000000000000000000000311a",
+        "mem_0000000000000000000000000000311b",
+        "mem_0000000000000000000000000000311c",
+        "mem_0000000000000000000000000000311d"
+      ],
+      "superseded_memory_ids": [
+        "mem_00000000000000000000000000003104"
+      ],
+      "forgotten_memory_ids": [
+        "mem_00000000000000000000000000003105"
+      ],
+      "expired_memory_ids": [
+        "mem_00000000000000000000000000003106"
+      ],
+      "unknown_fields": [
+        "user audiobook-language preference",
+        "user river-ferry ticket deck",
+        "home-to-clock-repair tram journey duration"
+      ],
+      "unresolved_conflict_groups": [
+        [
+          "mem_00000000000000000000000000003107",
+          "mem_00000000000000000000000000003108"
+        ]
+      ],
+      "memory_id_labels": {
+        "archive_name": "mem_00000000000000000000000000003101",
+        "editor": "mem_00000000000000000000000000003102",
+        "filename_rule": "mem_00000000000000000000000000003103",
+        "old_pickup": "mem_00000000000000000000000000003104",
+        "transit_card": "mem_00000000000000000000000000003105",
+        "locker": "mem_00000000000000000000000000003106",
+        "map_early": "mem_00000000000000000000000000003107",
+        "map_late": "mem_00000000000000000000000000003108",
+        "shed_hook": "mem_00000000000000000000000000003109",
+        "pots": "mem_0000000000000000000000000000310a",
+        "fan_rule": "mem_0000000000000000000000000000310b",
+        "other_ticket": "mem_0000000000000000000000000000310c",
+        "water_credit": "mem_0000000000000000000000000000310d",
+        "water_reserve": "mem_0000000000000000000000000000310e",
+        "booth": "mem_0000000000000000000000000000310f",
+        "review_call": "mem_00000000000000000000000000003110",
+        "cycle_rule": "mem_00000000000000000000000000003111",
+        "cameras": "mem_00000000000000000000000000003112",
+        "tripods": "mem_00000000000000000000000000003113",
+        "repair": "mem_00000000000000000000000000003114",
+        "adhesive_rule": "mem_00000000000000000000000000003115",
+        "atlas_due": "mem_00000000000000000000000000003116",
+        "returns_close": "mem_00000000000000000000000000003117",
+        "scan_start": "mem_00000000000000000000000000003118",
+        "scan_done": "mem_00000000000000000000000000003119",
+        "upload_done": "mem_0000000000000000000000000000311a",
+        "basin_recording": "mem_0000000000000000000000000000311b",
+        "current_pickup": "mem_0000000000000000000000000000311c",
+        "adhesive_start": "mem_0000000000000000000000000000311d"
+      },
+      "notes": "The two map-session start times are separate current assertions, not a correction chain. The ferry ticket belongs to Dalia, not the user. Seed transitions happen before requests, so the evaluation tests a fixed lifecycle snapshot only."
+    }
+  },
+  "execution_cases": [
+    {
+      "id": "s3_p01",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_sound_archive",
+      "prompt": "I am making a cover page for the neighbourhood sound archive. Remind me what I call it."
+    },
+    {
+      "id": "s3_c12",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_short_overlap",
+      "prompt": "A machine is available from 09:00 to 09:25, and its operator from 09:20 to 09:50. A task needs both for 15 uninterrupted minutes. Can the task fit? State the common time window and how many more common minutes would be needed."
+    },
+    {
+      "id": "s3_r01",
+      "stratum": "routine_general",
+      "scenario_id": "general_access_board",
+      "prompt": "An access board reads: A closed, B open, C closed, D open. List just the open letters."
+    },
+    {
+      "id": "s3_t04",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_audio_schedule",
+      "prompt": "On 4 October I need 70 uninterrupted minutes in my booked editing booth and must finish no later than the start of my audio-review call. Candidate starts are 09:00, 09:20, and 09:50. Which candidate works? Briefly rule out the others."
+    },
+    {
+      "id": "s3_c02",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_parallel_dependencies",
+      "prompt": "At 14:00, baking starts for 20 minutes and printing starts for 8 minutes. Cooling takes 15 minutes immediately after baking. Packing takes 5 minutes and must wait until both printing and cooling finish. Give the earliest packing start and final finish."
+    },
+    {
+      "id": "s3_t12",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_sound_archive",
+      "prompt": "Create a filename stem for my saved Basin Road sound clip, respecting my recorded filename order. Use the saved recording date in YYYY-MM-DD form, then an underscore and the street name with a hyphen; omit the file extension."
+    },
+    {
+      "id": "s3_r11",
+      "stratum": "routine_general",
+      "scenario_id": "general_condensation",
+      "prompt": "What is condensation?"
+    },
+    {
+      "id": "s3_p08",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_map_session",
+      "prompt": "Can you confirm the start time of my community map session on 5 October?"
+    },
+    {
+      "id": "s3_c08",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_bounded_string_choice",
+      "prompt": "From elm, ash, oak, willow, and cedar, choose the longest word whose length is at most five letters. Break any tie alphabetically. Give the word and its length."
+    },
+    {
+      "id": "s3_r07",
+      "stratum": "routine_general",
+      "scenario_id": "general_signed_change",
+      "prompt": "A number starts at minus three and increases by eight. What is its final value?"
+    },
+    {
+      "id": "s3_t06",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_map_session",
+      "prompt": "If I arrive at the community map session at 14:30 on 5 October, can you say for sure that I am on time? Explain what each saved start-time record implies."
+    },
+    {
+      "id": "s3_p09",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_shed",
+      "prompt": "I need the watering-can key. Which hook is the one I use for it?"
+    },
+    {
+      "id": "s3_p02",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_sound_archive",
+      "prompt": "What is Selma’s role in my sound-archive work?"
+    },
+    {
+      "id": "s3_r04",
+      "stratum": "routine_general",
+      "scenario_id": "general_book_index",
+      "prompt": "What is the purpose of an index at the back of a book?"
+    },
+    {
+      "id": "s3_c10",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_correction_statistics",
+      "prompt": "The values are 11, 17, 13, and 19. First correct 17 to 9. Give the mean and the median of the corrected four values; for four values, the median is the average of the middle two after sorting."
+    },
+    {
+      "id": "s3_t03",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_allotment_water",
+      "prompt": "I want to water large pots, using 6 litres for each pot, from the prepaid water still on my allotment meter. Keep my seedling reserve untouched. What is the largest number of whole pots I can water, and how much prepaid water remains afterwards?"
+    },
+    {
+      "id": "s3_t10",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_library",
+      "prompt": "Suppose I return the atlas on its saved due date. I leave for the library returns desk at 17:50, and the walk takes 22 minutes. Tell me the date, arrival time, and whether I beat that day’s saved closing time, including the margin."
+    },
+    {
+      "id": "s3_p11",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_recording_rule",
+      "prompt": "My recording light is on. Under the rule I keep for this, should the desktop fan be on or off?"
+    },
+    {
+      "id": "s3_r02",
+      "stratum": "routine_general",
+      "scenario_id": "general_unique_tags",
+      "prompt": "The tag list is oak, pine, oak, birch, pine. How many different tags occur?"
+    },
+    {
+      "id": "s3_c01",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_box_selection",
+      "prompt": "Choose exactly two boxes with total weight at most 10 kg, maximizing their score. A weighs 6 kg and scores 8; B weighs 4 kg and scores 7; C weighs 3 kg and scores 6. Give the pair, total weight, and score."
+    },
+    {
+      "id": "s3_p04",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_library",
+      "prompt": "Where should I collect the library books I reserved, according to the current arrangement?"
+    },
+    {
+      "id": "s3_c06",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_departure_wait",
+      "prompt": "Buses depart at 17:20, 17:32, and 17:44. Walking to the stop takes 9 minutes. You leave at 17:25 and can board at the instant a bus departs. State arrival time, earliest catchable bus, and waiting time."
+    },
+    {
+      "id": "s3_t08",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_frame_adhesive",
+      "prompt": "It is 17:05 on 3 October. Based on when I applied the display-frame adhesive and my usual waiting rule, is it ready to touch? Give the earliest allowed time and any remaining wait."
+    },
+    {
+      "id": "s3_r12",
+      "stratum": "routine_general",
+      "scenario_id": "general_weekday_offset",
+      "prompt": "Suppose today is Monday. What weekday is it nine days after today?"
+    },
+    {
+      "id": "s3_r08",
+      "stratum": "routine_general",
+      "scenario_id": "general_clock_addition",
+      "prompt": "A timer starts at 12:48 and lasts 17 minutes. At what clock time does it end?"
+    },
+    {
+      "id": "s3_r03",
+      "stratum": "routine_general",
+      "scenario_id": "general_whole_portions",
+      "prompt": "Seventeen counters are divided into complete groups of five. How many complete groups and leftover counters are there?"
+    },
+    {
+      "id": "s3_r10",
+      "stratum": "routine_general",
+      "scenario_id": "general_colander",
+      "prompt": "What is a colander used for in a kitchen?"
+    },
+    {
+      "id": "s3_r09",
+      "stratum": "routine_general",
+      "scenario_id": "general_character_removal",
+      "prompt": "Take the word PLANET and remove its first and last letters. Return the remaining letters in order."
+    },
+    {
+      "id": "s3_r06",
+      "stratum": "routine_general",
+      "scenario_id": "general_fragile_label",
+      "prompt": "What does fragile mean on a parcel label?"
+    },
+    {
+      "id": "s3_r05",
+      "stratum": "routine_general",
+      "scenario_id": "general_colour_switch",
+      "prompt": "Use this rule only: blue tokens go left; every other colour goes right. Where does a red token go?"
+    },
+    {
+      "id": "s3_p07",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_unknown_language",
+      "prompt": "Which language do I usually choose for audiobooks?"
+    },
+    {
+      "id": "s3_p03",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_sound_archive",
+      "prompt": "For filenames on my sound clips, which two pieces of information did I want first, and in what order?"
+    },
+    {
+      "id": "s3_p06",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_expired_locker",
+      "prompt": "What number is my temporary equipment locker now?"
+    },
+    {
+      "id": "s3_p05",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_forgotten_card",
+      "prompt": "I cannot find my spare transit card. Is there a saved location for it?"
+    },
+    {
+      "id": "s3_p10",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_balcony",
+      "prompt": "How many seedling pots are on my balcony rack?"
+    },
+    {
+      "id": "s3_p12",
+      "stratum": "personal_recall",
+      "scenario_id": "personal_ticket_ownership",
+      "prompt": "Which deck is my river-ferry ticket valid for?"
+    },
+    {
+      "id": "s3_c07",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_crate_packing",
+      "prompt": "Pack 22 items into crates that each hold at most 6 items. Items cannot be split and every item must be packed. Give the minimum number of crates and one valid list of their item counts."
+    },
+    {
+      "id": "s3_c11",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_source_consistency",
+      "prompt": "Treat this manifest as authoritative: parcel A is in bin 2, parcel B is in bin 2, parcel C is in bin 4. Nora says A and B share a bin. Ivo says B and C share a bin. State which speaker is consistent with the manifest and correct the other claim."
+    },
+    {
+      "id": "s3_c04",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_filter_sort",
+      "prompt": "Records are K: cost 4, urgent; L: cost 8, normal; M: cost 6, urgent; N: cost 3, normal. Keep only urgent records costing at most 6, then list their letters from higher cost to lower cost."
+    },
+    {
+      "id": "s3_c03",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_all_codes",
+      "prompt": "A code uses X, Y, and Z exactly once each. X cannot be first, and Y must be before Z. List all valid codes and no others."
+    },
+    {
+      "id": "s3_c09",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_exception_rules",
+      "prompt": "For this fictional gate, a red light means STOP unless the permit code is 7. With code 7, the action is GO regardless of light colour. With any other code and a non-red light, the action is WAIT. Give actions for (red,5), (red,7), and (blue,5), in that order."
+    },
+    {
+      "id": "s3_c05",
+      "stratum": "general_multiconstraint",
+      "scenario_id": "constraints_exact_purchase",
+      "prompt": "A bundle of three pens costs 5 credits; a single pen costs 2 credits. Buy exactly seven pens, with no extra pens. What is the cheapest bundle/single combination and its total cost?"
+    },
+    {
+      "id": "s3_t11",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_clock_repair",
+      "prompt": "Remind me when my clock-repair appointment starts, then tell me the exact time to leave home by tram. Use only what is actually saved; do not guess the travel duration."
+    },
+    {
+      "id": "s3_t05",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_cycle_routes",
+      "prompt": "Apply my cycle-commute rule to these routes: Towpath takes 28 minutes with one road crossing; Market takes 16 minutes with three crossings; Canal takes 19 minutes with two crossings. Which should I choose, and why?"
+    },
+    {
+      "id": "s3_t09",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_equipment_loans",
+      "prompt": "Set aside two of my ready loan cameras. Each remaining loan kit needs one camera and one tripod. With the equipment counts you have saved, how many complete kits can I offer, and what stays outside those kits?"
+    },
+    {
+      "id": "s3_t07",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_library",
+      "prompt": "Make a two-part collection note from current memory: where I get my reserved library books, and which temporary equipment locker number I should use. Mark any unavailable part clearly."
+    },
+    {
+      "id": "s3_t01",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_scan_timeline",
+      "prompt": "The photo work crossed midnight. Lay out the scanning start, scanning finish, and upload finish in order, with the date and clock time of each."
+    },
+    {
+      "id": "s3_t02",
+      "stratum": "personal_temporal_synthesis",
+      "scenario_id": "personal_scan_timeline",
+      "prompt": "From starting my photo scanning batch to finishing its upload, how long did the whole span last? Account for the date change."
+    }
+  ],
+  "rubrics": {
+    "s3_r01": {
+      "mode": "supported",
+      "reference_answer": "B and D.",
+      "required_claims": [
+        "Only B and D are listed as open."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r02": {
+      "mode": "supported",
+      "reference_answer": "Three different tags.",
+      "required_claims": [
+        "There are 3 distinct tags."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [
+          {
+            "claim": "Count 3",
+            "any": [
+              "\\b3\\b",
+              "\\bthree\\b"
+            ]
+          }
+        ],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r03": {
+      "mode": "supported",
+      "reference_answer": "Three complete groups and two counters left over.",
+      "required_claims": [
+        "There are 3 complete groups.",
+        "There are 2 counters left over."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r04": {
+      "mode": "supported",
+      "reference_answer": "It lists topics or names with page references so you can find where they are discussed.",
+      "required_claims": [
+        "An index links listed topics or names to page locations in the book.",
+        "Its purpose is to help the reader find relevant information."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r05": {
+      "mode": "supported",
+      "reference_answer": "Right.",
+      "required_claims": [
+        "The red token goes right."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r06": {
+      "mode": "supported",
+      "reference_answer": "The contents can break or be damaged easily, so the parcel needs careful handling.",
+      "required_claims": [
+        "Fragile indicates contents are easily broken or damaged; a handling recommendation is optional."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r07": {
+      "mode": "supported",
+      "reference_answer": "Five.",
+      "required_claims": [
+        "The final value is 5."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r08": {
+      "mode": "supported",
+      "reference_answer": "13:05.",
+      "required_claims": [
+        "The timer ends at 13:05."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r09": {
+      "mode": "supported",
+      "reference_answer": "LANE.",
+      "required_claims": [
+        "The remaining sequence is LANE."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r10": {
+      "mode": "supported",
+      "reference_answer": "It drains liquid from solid food such as pasta, using holes that let the liquid pass while retaining the food.",
+      "required_claims": [
+        "A colander drains or strains liquid away from solid food; construction details and examples are optional."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r11": {
+      "mode": "supported",
+      "reference_answer": "Condensation is the change of a gas or vapour into a liquid, such as water droplets forming from water vapour.",
+      "required_claims": [
+        "Condensation is a gas or vapour changing into a liquid."
+      ],
+      "forbidden_claims": [
+        "Do not define condensation as liquid changing into gas or as freezing into a solid."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_r12": {
+      "mode": "supported",
+      "reference_answer": "Wednesday.",
+      "required_claims": [
+        "The weekday is Wednesday."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c01": {
+      "mode": "supported",
+      "reference_answer": "A and B: 10 kg and score 15.",
+      "required_claims": [
+        "The selected pair is A and B.",
+        "Their combined weight is 10 kg.",
+        "Their combined score is 15."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c02": {
+      "mode": "supported",
+      "reference_answer": "Packing starts at 14:35 and finishes at 14:40.",
+      "required_claims": [
+        "Packing cannot start until 14:35.",
+        "The complete process ends at 14:40."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c03": {
+      "mode": "supported",
+      "reference_answer": "YXZ and YZX.",
+      "required_claims": [
+        "Both YXZ and YZX are listed.",
+        "No other code is listed."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c04": {
+      "mode": "supported",
+      "reference_answer": "M, K.",
+      "required_claims": [
+        "Only M and K are retained.",
+        "M appears before K."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c05": {
+      "mode": "supported",
+      "reference_answer": "Two bundles and one single pen, costing 12 credits.",
+      "required_claims": [
+        "Buy 2 bundles and 1 single pen.",
+        "The total is exactly 7 pens.",
+        "The minimum cost is 12 credits."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c06": {
+      "mode": "supported",
+      "reference_answer": "Arrive 17:34, take the 17:44 bus, and wait 10 minutes.",
+      "required_claims": [
+        "Arrival is 17:34.",
+        "The earliest catchable bus is 17:44.",
+        "The wait at the stop is 10 minutes."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c07": {
+      "mode": "supported",
+      "reference_answer": "Four crates, for example 6, 6, 6, 4.",
+      "required_claims": [
+        "The minimum number of crates is 4.",
+        "The proposed 4 positive integer counts sum to 22 and each is at most 6."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c08": {
+      "mode": "supported",
+      "reference_answer": "cedar, five letters.",
+      "required_claims": [
+        "The chosen word is cedar.",
+        "Its length is 5."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c09": {
+      "mode": "supported",
+      "reference_answer": "STOP, GO, WAIT.",
+      "required_claims": [
+        "The three actions are STOP, GO, WAIT in exactly that order."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c10": {
+      "mode": "supported",
+      "reference_answer": "Mean 13; median 12.",
+      "required_claims": [
+        "Calculations use 11, 9, 13, 19.",
+        "The mean is 13.",
+        "The median is 12."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c11": {
+      "mode": "supported",
+      "reference_answer": "Nora is consistent. Ivo is wrong: B is in bin 2 and C is in bin 4, so they do not share a bin.",
+      "required_claims": [
+        "Nora is consistent with the manifest.",
+        "Ivo is inconsistent.",
+        "Correct Ivo’s claim by stating that B and C are in different bins; repeating the bin numbers is optional."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_c12": {
+      "mode": "supported",
+      "reference_answer": "No. The overlap is 09:20–09:25, only 5 minutes; 10 additional common minutes are needed.",
+      "required_claims": [
+        "The common window is 09:20 to 09:25.",
+        "It lasts 5 minutes, insufficient for the 15-minute task.",
+        "The shortfall is 10 minutes."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p01": {
+      "mode": "supported",
+      "reference_answer": "You call it Tideglass.",
+      "required_claims": [
+        "The archive name is Tideglass."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003101"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p02": {
+      "mode": "supported",
+      "reference_answer": "Selma is your sound-archive editor and helps check recordings.",
+      "required_claims": [
+        "Selma is the user’s sound-archive editor; the checking-recordings detail is optional."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003102"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p03": {
+      "mode": "supported",
+      "reference_answer": "Recording date first, then street name.",
+      "required_claims": [
+        "The filename begins with the recording date.",
+        "The street name follows the recording date."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003103"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p04": {
+      "mode": "supported",
+      "reference_answer": "At the side-window desk.",
+      "required_claims": [
+        "The current collection place is the side-window desk."
+      ],
+      "forbidden_claims": [
+        "Do not present the lobby shelf as the current collection place."
+      ],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000311c"
+      ],
+      "forbidden_memory_ids": [
+        "mem_00000000000000000000000000003104"
+      ],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p05": {
+      "mode": "abstain",
+      "reference_answer": "I do not have a current saved location for your spare transit card.",
+      "required_claims": [
+        "Acknowledge that the card’s location is not available in current memory."
+      ],
+      "forbidden_claims": [
+        "Do not disclose the striped-notebook location, even as an old or negated location.",
+        "Do not invent a location."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [
+        "mem_00000000000000000000000000003105"
+      ],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p06": {
+      "mode": "abstain",
+      "reference_answer": "I do not have a current verified locker number.",
+      "required_claims": [
+        "Acknowledge that the current locker number is unknown."
+      ],
+      "forbidden_claims": [
+        "Do not assert locker 17 as current.",
+        "Do not invent a replacement locker number."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [
+        "mem_00000000000000000000000000003106"
+      ],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p07": {
+      "mode": "abstain",
+      "reference_answer": "I do not have a saved audiobook-language preference for you.",
+      "required_claims": [
+        "Acknowledge that the audiobook-language preference is unknown."
+      ],
+      "forbidden_claims": [
+        "Do not guess a language from names or other memories."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p08": {
+      "mode": "uncertain",
+      "reference_answer": "Two current records disagree: one says 14:00 and one says 15:00 on 5 October. I cannot confirm which is correct.",
+      "required_claims": [
+        "Identify both 14:00 and 15:00 for the same session.",
+        "Explain that the records conflict and the start time cannot be confirmed."
+      ],
+      "forbidden_claims": [
+        "Do not choose either time as established.",
+        "The later-created assertion is not a confirmed correction."
+      ],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003107",
+        "mem_00000000000000000000000000003108"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p09": {
+      "mode": "supported",
+      "reference_answer": "The square hook beside the shed door.",
+      "required_claims": [
+        "Identify the square hook; its location beside the shed door is optional supporting detail."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003109"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p10": {
+      "mode": "supported",
+      "reference_answer": "Fourteen pots.",
+      "required_claims": [
+        "There are 14 seedling pots on the balcony rack."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000310a"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p11": {
+      "mode": "supported",
+      "reference_answer": "Off while the recording light is on.",
+      "required_claims": [
+        "The desktop fan should be off under the stored rule."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000310b"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_p12": {
+      "mode": "abstain",
+      "reference_answer": "I do not have a verified deck assignment for your ticket.",
+      "required_claims": [
+        "Acknowledge that the user’s ticket deck is unknown."
+      ],
+      "forbidden_claims": [
+        "Do not attribute Dalia’s upper-deck ticket to the user.",
+        "Do not claim the user has any particular deck assignment."
+      ],
+      "required_memory_ids": [],
+      "forbidden_memory_ids": [
+        "mem_0000000000000000000000000000310c"
+      ],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t01": {
+      "mode": "supported",
+      "reference_answer": "Scanning started on 30 September 2026 at 23:40, finished on 1 October at 00:25, and the upload finished on 1 October at 01:05.",
+      "required_claims": [
+        "Scanning start: 30 September at 23:40.",
+        "Scanning finish: 1 October at 00:25.",
+        "Upload finish: 1 October at 01:05.",
+        "These events appear in that chronological order."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003118",
+        "mem_00000000000000000000000000003119",
+        "mem_0000000000000000000000000000311a"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t02": {
+      "mode": "supported",
+      "reference_answer": "85 minutes, or 1 hour 25 minutes, from 30 September at 23:40 to 1 October at 01:05.",
+      "required_claims": [
+        "The span begins at 30 September 23:40 and ends at 1 October 01:05.",
+        "The elapsed span is 85 minutes or 1 hour 25 minutes."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003118",
+        "mem_0000000000000000000000000000311a"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t03": {
+      "mode": "supported",
+      "reference_answer": "Five pots use 30 litres. Twelve litres remain, including the protected 10-litre seedling reserve.",
+      "required_claims": [
+        "Start from 42 litres and protect 10 litres.",
+        "At most 5 whole pots can receive 6 litres each.",
+        "30 litres are used and 12 litres remain, with the 10-litre reserve intact."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000310d",
+        "mem_0000000000000000000000000000310e"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t04": {
+      "mode": "supported",
+      "reference_answer": "09:20 works, finishing at 10:30. 09:00 is before the booth booking opens at 09:10; 09:50 would finish at 11:00, after both the call start and the 10:50 booking end.",
+      "required_claims": [
+        "Select 09:20, ending at 10:30.",
+        "Reject 09:00 because access starts at 09:10.",
+        "Reject 09:50 because it would finish too late: after the 10:30 call or after the 10:50 booking end. Either actual violation suffices."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000310f",
+        "mem_00000000000000000000000000003110"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t05": {
+      "mode": "supported",
+      "reference_answer": "Canal. It satisfies your maximum of two crossings and is faster than Towpath. Market is faster but has too many crossings.",
+      "required_claims": [
+        "The stored rule permits at most 2 road crossings and selects the quickest permitted route.",
+        "Choose Canal at 19 minutes with 2 crossings.",
+        "Market is ineligible with 3 crossings; Towpath is eligible but slower."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003111"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t06": {
+      "mode": "uncertain",
+      "reference_answer": "No. With the 14:00 start you would be 30 minutes late; with the 15:00 start you would be 30 minutes early. The conflicting records prevent a definite answer.",
+      "required_claims": [
+        "Explicitly decline to guarantee that 14:30 is on time.",
+        "For a 14:00 start, arrival is 30 minutes late.",
+        "For a 15:00 start, arrival is 30 minutes early.",
+        "The saved start-time records are unresolved."
+      ],
+      "forbidden_claims": [
+        "Do not silently choose one conflicting start time."
+      ],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003107",
+        "mem_00000000000000000000000000003108"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t07": {
+      "mode": "supported",
+      "reference_answer": "Collect your books at the side-window desk. Your current temporary equipment locker number is not available.",
+      "required_claims": [
+        "The current book collection place is the side-window desk.",
+        "Explicitly identify the current equipment locker number as unknown."
+      ],
+      "forbidden_claims": [
+        "Do not give the lobby shelf as the current pickup point.",
+        "Do not give locker 17 as current.",
+        "Do not replace the supported pickup answer with blanket abstention."
+      ],
+      "required_memory_ids": [
+        "mem_0000000000000000000000000000311c"
+      ],
+      "forbidden_memory_ids": [
+        "mem_00000000000000000000000000003104",
+        "mem_00000000000000000000000000003106"
+      ],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t08": {
+      "mode": "supported",
+      "reference_answer": "Not yet. The 25-minute wait from 16:45 ends at 17:10, so wait another 5 minutes.",
+      "required_claims": [
+        "Apply the 25-minute waiting rule to the 16:45 application.",
+        "The earliest allowed handling time is 17:10.",
+        "At 17:05 it is not ready; 5 minutes remain."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003115",
+        "mem_0000000000000000000000000000311d"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t09": {
+      "mode": "supported",
+      "reference_answer": "Three complete kits. The two reserved cameras stay aside; all three available cameras and all three tripods go into the kits.",
+      "required_claims": [
+        "There are 5 cameras and 3 tripods before reserving.",
+        "After setting aside 2 cameras, 3 complete camera-plus-tripod kits are possible.",
+        "The 2 reserved cameras remain outside the kits; no other available camera or tripod remains unused."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003112",
+        "mem_00000000000000000000000000003113"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t10": {
+      "mode": "supported",
+      "reference_answer": "Return it on 7 October 2026. Arrival is 18:12, three minutes before the returns desk closes at 18:15.",
+      "required_claims": [
+        "The saved due date is 7 October 2026.",
+        "Arrival after the 22-minute walk is 18:12.",
+        "The desk closes at 18:15 that day, so arrival is 3 minutes before closing."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003116",
+        "mem_00000000000000000000000000003117"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t11": {
+      "mode": "supported",
+      "reference_answer": "The appointment starts on 6 October 2026 at 11:20. I cannot determine an exact departure time because your home-to-appointment tram journey duration is not saved.",
+      "required_claims": [
+        "Give 6 October 2026 at 11:20 as the appointment start.",
+        "State that an exact departure time cannot be determined without the missing tram journey duration."
+      ],
+      "forbidden_claims": [
+        "Do not invent a tram duration, departure time, timetable, or location.",
+        "Do not omit the supported appointment start."
+      ],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003114"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    },
+    "s3_t12": {
+      "mode": "supported",
+      "reference_answer": "2026-10-02_Basin-Road",
+      "required_claims": [
+        "Use the recording date 2026-10-02 first.",
+        "Follow with an underscore and Basin-Road; capitalization may vary.",
+        "Do not include a file extension or reverse street/date order."
+      ],
+      "forbidden_claims": [],
+      "required_memory_ids": [
+        "mem_00000000000000000000000000003103",
+        "mem_0000000000000000000000000000311b"
+      ],
+      "forbidden_memory_ids": [],
+      "automated_checks": {
+        "kind": "lexical_signals_only",
+        "required_groups": [],
+        "forbidden_presence_patterns": []
+      }
+    }
+  }
+}

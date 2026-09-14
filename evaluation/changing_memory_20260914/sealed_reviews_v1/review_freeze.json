@@ -1,0 +1,24 @@
+{
+  "prepared_seal_sha256": "ba58ed648b438b686a46b545f0d00d84cd1c942e0e9fc41f60a3677b56cc9121",
+  "packet_sha256": "3a686dbf0564ba54fddcb977994595e5416c74cfd9c185588a9fc76723f0c238",
+  "review_a_sha256": "9e5c7cc88227769635336d91a080b5196255911d42ce5c5a233b7842103bb2db",
+  "review_b_sha256": "4bdfca5aa9671c951f5cdd3d804ac6d13e92e4145bd584b61a289e9ac0124890",
+  "disagreements": [],
+  "agreements": 214,
+  "groups": 214,
+  "script_sha256": "60709a1002f7537f8cfd8ea57e8c89052f7ba2e608ca4b36e275a0fc79c95215",
+  "command": [
+    "scripts/analyze_changing_memory.py",
+    "seal-reviews",
+    "--prepared",
+    "evaluation/changing_memory_20260914/prepared_final_v1",
+    "--review-a",
+    "evaluation/changing_memory_20260914/bound_reviews_v1/review_a.json",
+    "--review-b",
+    "evaluation/changing_memory_20260914/bound_reviews_v1/review_b.json",
+    "--output",
+    "evaluation/changing_memory_20260914/sealed_reviews_v1"
+  ],
+  "human_validation": "pending",
+  "diagnostics_revealed": false
+}

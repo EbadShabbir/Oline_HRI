@@ -1,0 +1,193 @@
+{
+  "stage": "/tmp/clara-first-repair-source-20260914-v1",
+  "new_output": "/tmp/clara-first-repair-reproduction-20260914-v1",
+  "frozen_source_count": 41,
+  "frozen_seal_sha256": "0b9b8e04dda46462ef1dd2682065d731439885723b2ff7ec723c18b79cf7660b",
+  "shared_input_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/reproduce_collection.sh": "089651c105c8f1e19c26a163bf5e86107d9d5a4d3d09a630042b7885035961d6",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/adaptive_selection_protocol_draft.md": "9d190b0ce5b23596d1c95567fc0f476bd740367cc2cb129df4c4f41d4e385b8c",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/memory_pipeline_20260912/README.md": "da571bd5e1d233fba777966b8fc80cdee78c52fab0069094c5b03b8c91cf524c",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/README.md": "b0c5f524167c38d819ce4de7c15d6ed9da88cfe61e1318928252dbc49f8fd935",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/report_reviewed_v3/report.md": "9d3d875cf8e56e533a7fc12f36fc6914cc636481fce5aa4121bf481780e2f0b0",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/README.md": "f2fab66a73418171dc10f7b02c205a96f056943062d9928c4092a14f012050f1",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/authored_v1/runtime.json": "75f6f79fdc27a625ba38e730ac4e12c2d049148d688a8d5d0b6eb9c75131e51d",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/authored_v1/expected_ledger.json": "c0366f98363989e4b6786740260283d7918ceba8aa9cf97b91f8ea44998231ed",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/authored_v1/protocol.md": "00007dc56ab40221836bf54196f8fea1e0499e24c403d06f33ef37142d5491c8",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/preflight_review_v1.json": "087e4ec2a08e99c80ca0198612f0da6a1a63c7af8564a44a5308b320a9db0aa3",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/scenarios.json": "5636fd0db7091199839167ab7848b14822ef48ad779c8a45074b8011e0f540f1",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/author_ledger.py": "9eb6765c7d34881cd6049565f57f235a28d2fd7e936e253e47306903def78c83",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/authoring_v2_changes.md": "3375088d5f7592a58c4dd72b3594a8bb3d3d2d2379b728c6bbffc4dd65e347ae",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/development_attempt_01.json": "8019f361a524fa635fb04e8332dd30a95c9028dd6dd59eedf8ed57a2949e89c0",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/development_attempt_02.log": "0c05ea72a8d11a7419cd69b1c4cc15e5248be078f81daa93844f293579149dec",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/final_focused_v1.log": "faff0e8e02ad5c861da7e442360f2144d048cb7c77fa9bb6d92b09e143928da0",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/final_source_manifest.json": "dfdd9f119c2c7efa34b09fa19997752cc68be1d1e781044628db823f59492b29",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/full_suite_attempt_01.log": "5966d68fed00c081615a0bb8e441a65afa93850fa6835c3266ed2df867930d24",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/full_suite_attempt_02.log": "8471d2591f73a4f6c0314105fa14cfb91835cd46356bfd95eecd3e40d0251ffd",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/receipt.json": "3443a1414e2975db659351775eda0086c45be90e484fb2ca964a83f3b2a6cb45",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/seal.json": "79defeab462a80b7ad80ec82af2fbd6fc6e4c066717b855287a54402f99f9ea1",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/tests/test_conversation_routed.py": "a255207c6fcde9b98ec50eeb59ca73dca2c42ab86fa87a49f075ad9f8082ce33",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/tests/test_lifecycle_history_repair.py": "3e9392b94e4fe9bdbc5403af453acd0f1eeae7f6ba07cd82576dcf22b1be0d63",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/tests/test_lightweight_integration.py": "01c73abbd0bdbd9cfc406e4df93e891080dd5fc5e23d17d8b2d84eb1f1c50ef7",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/tests/test_memory_grounding_review_regressions.py": "c50a2e9ac13c93afb0195319d45b8e36086dd9e7faaf6f8decb52feb40b15861",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/tests/test_memory_intent_regressions.py": "9fdc3b50d8f152002dff43001da1ec0daf1a98fec85f46cadabdbbd5b3f73de6",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/tests/test_memory_lifecycle_validation.py": "d22b48a23278bf4500588d7f96dc1b02363114815e96fd16898539428e11912f",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/tests/test_pair_remediation.py": "32be3dfd654a35fc3b14395c69e394af4b1a48f0b268a8ba40ee31041376fbc3",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/tests/test_routing.py": "354c394cef9a0b3e4f2a7dc7d5ba0818604f5ff1c874fdb32b881799008feb9a",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/offline_validation_v1/tests/test_routing_lifecycle_revalidation.py": "92f2c13819d03eb1e1ed5ee8559b2fe0fb47d15f2791ae6740ea56f78f515182"
+  },
+  "shared_lock_identities": [
+    {
+      "lease": "independent_retrieval_inference.lock",
+      "real": {
+        "resolved_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_inference.lock",
+        "device": 45825,
+        "inode": 3300742
+      },
+      "staged": {
+        "resolved_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_inference.lock",
+        "device": 45825,
+        "inode": 3300742
+      }
+    },
+    {
+      "lease": "matched_evidence_inference.lock",
+      "real": {
+        "resolved_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/matched_evidence_inference.lock",
+        "device": 45825,
+        "inode": 3300727
+      },
+      "staged": {
+        "resolved_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/matched_evidence_inference.lock",
+        "device": 45825,
+        "inode": 3300727
+      }
+    },
+    {
+      "lease": "independent_retrieval_batch.lock",
+      "real": {
+        "resolved_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_batch.lock",
+        "device": 45825,
+        "inode": 3300746
+      },
+      "staged": {
+        "resolved_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_batch.lock",
+        "device": 45825,
+        "inode": 3300746
+      }
+    },
+    {
+      "lease": "/tmp/clara-jetson-inference.lock",
+      "real": {
+        "resolved_path": "/tmp/clara-jetson-inference.lock",
+        "device": 45825,
+        "inode": 132992
+      },
+      "staged": {
+        "resolved_path": "/tmp/clara-jetson-inference.lock",
+        "device": 45825,
+        "inode": 132992
+      }
+    }
+  ],
+  "offline_smoke": {
+    "source_count": 41,
+    "source_sha256": {
+      "config/default.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "scripts/complete_system_device_guard.py": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+      "scripts/post_memory_device_guard.py": "10463685afd110895b8aad15cde2f97cb414253ea40ed9e37097f9872b695ea0",
+      "scripts/run_arc_capability.py": "2d55342123aa853952a44b6496285b338b322ec65f32f83bbf106e5c606885a0",
+      "scripts/run_changing_memory.py": "4b8102177858572e1a5244d443c798d53bf48b34743d93858412c2418972d893",
+      "scripts/run_complete_system.py": "888daae7b84126744cfdd54aa56cf220f0482f81b7d0b167a2ad3107849f4dcb",
+      "scripts/run_independent_retrieval.py": "62feb1069c7cf1cddf79ece56a3044a4526352252f79391459e67631dda81c9a",
+      "scripts/run_pair_remediation_validation.py": "5e9ce447e2591c17b741781638140a1cec06d3b99603f29fd335639591cbbb13",
+      "scripts/run_post_memory_comparison.py": "fbdffadfbc16306b37e6034cc9bce9bca87eba701ad882928e9bd57c991428bb",
+      "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+      "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+      "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+      "src/oline_hri/cli.py": "90f6a1e6de50bfb47a7b37b47a6cca73fe381ee510b88c7002c08240117e450e",
+      "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+      "src/oline_hri/conversation.py": "0717344dbf1ae1f8cfa33914a1c2e471513bc71cdf6308fa0aebd9f3c18dabe6",
+      "src/oline_hri/default_config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+      "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+      "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+      "src/oline_hri/evaluation_experiment.py": "d5d286d1dff60b2a85acc9be524dd75f07f8dde363c002094b505c0734431739",
+      "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+      "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+      "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+      "src/oline_hri/evaluation_runner.py": "2a7d3ec2dcd4f10c75eac7ce4703f31a2fbdfe039270f50407e0b8a65ad0161f",
+      "src/oline_hri/evaluation_scoring.py": "f73f7f01b89a5a3d83ac2543fdb585a120c19bccf94062e8c38bf498a8ca6a09",
+      "src/oline_hri/evaluation_systems.py": "77437ef8a579d2de531a4770fc2bda2a2088d3310cad4d3db3be536e4203f66a",
+      "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+      "src/oline_hri/grounded_composition.py": "52e458baa35b59aa7bc00736daf7a2e8b98b38a0fae1ce77b872fcf40eff7507",
+      "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+      "src/oline_hri/memory.py": "4f2d261de00fd1df2018ebeba2778cedc236ef077697c8e1319302b61f9a78cb",
+      "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+      "src/oline_hri/memory_evidence.py": "c0b1b0744f022fd593501e7a7310040309b4d198ba56435643ba14f2645d22e7",
+      "src/oline_hri/ollama.py": "7a82fe0a71461c7bd02faee3fbd739b32e4d4388e5f42ec146ab685e208a43d1",
+      "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+      "src/oline_hri/relationships.py": "759d2a6c671581ffd5db2b07e14a89b81d90fc58ed5fd3625bcf6ec9860b80f6",
+      "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+      "src/oline_hri/retrieval.py": "40364d1fb06aa68bae9bd3d31a583421f74883d9a0fe9815f72e9958eb8cea84",
+      "src/oline_hri/routing.py": "2604cc1a386a7f4e40f9528794423f46a4976501394c8e17d3479145e83f8bd1",
+      "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0",
+      "src/oline_hri/timing.py": "23c1c126c26d65e03833dc1c107ffa14670843fefd3755fd42ecd0969af1a445",
+      "tests/test_changing_memory.py": "2c1717af83ed553cdd2426acf15bdeaa57a340d36d9c808a1ece5a65c78fd730"
+    },
+    "loaded_local_modules": {
+      "oline_hri": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/__init__.py",
+      "oline_hri.config": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/config.py",
+      "oline_hri.embedding": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/embedding.py",
+      "oline_hri.memory": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/memory.py",
+      "oline_hri.answer_guidance": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/answer_guidance.py",
+      "oline_hri.memory_evidence": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/memory_evidence.py",
+      "oline_hri.grounded_composition": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/grounded_composition.py",
+      "oline_hri.operational_planning": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/operational_planning.py",
+      "oline_hri.timing": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/timing.py",
+      "oline_hri.response": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/response.py",
+      "oline_hri.ollama": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/ollama.py",
+      "oline_hri.retrieval": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/retrieval.py",
+      "oline_hri.relationships": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/relationships.py",
+      "oline_hri.routing": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/routing.py",
+      "oline_hri.conversation": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/conversation.py",
+      "oline_hri.evaluation": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/evaluation.py",
+      "oline_hri.evaluation_scoring": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/evaluation_scoring.py",
+      "oline_hri.evaluation_runner": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/evaluation_runner.py",
+      "oline_hri.evaluation_experiment": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/evaluation_experiment.py",
+      "oline_hri.evaluation_telemetry": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/evaluation_telemetry.py",
+      "oline_hri.evaluation_model_pairs": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/evaluation_model_pairs.py",
+      "oline_hri.memory_capture": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/memory_capture.py",
+      "oline_hri.lightweight_routing": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/lightweight_routing.py",
+      "oline_hri.speech": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/speech.py",
+      "oline_hri.cli": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/cli.py",
+      "post_memory_device_guard": "/tmp/clara-first-repair-source-20260914-v1/scripts/post_memory_device_guard.py",
+      "oline_hri.evaluation_systems": "/tmp/clara-first-repair-source-20260914-v1/src/oline_hri/evaluation_systems.py",
+      "run_pair_remediation_validation": "/tmp/clara-first-repair-source-20260914-v1/scripts/run_pair_remediation_validation.py",
+      "run_arc_capability": "/tmp/clara-first-repair-source-20260914-v1/scripts/run_arc_capability.py",
+      "complete_system_device_guard": "/tmp/clara-first-repair-source-20260914-v1/scripts/complete_system_device_guard.py",
+      "run_complete_system": "/tmp/clara-first-repair-source-20260914-v1/scripts/run_complete_system.py",
+      "run_post_memory_comparison": "/tmp/clara-first-repair-source-20260914-v1/scripts/run_post_memory_comparison.py",
+      "run_independent_retrieval": "/tmp/clara-first-repair-source-20260914-v1/scripts/run_independent_retrieval.py",
+      "run_changing_memory": "/tmp/clara-first-repair-source-20260914-v1/scripts/run_changing_memory.py"
+    },
+    "runner_root": "/tmp/clara-first-repair-source-20260914-v1",
+    "retrieval_runner_root": "/tmp/clara-first-repair-source-20260914-v1",
+    "config_matches": true,
+    "packages_match": true,
+    "python_matches": true,
+    "device_policy_matches": true,
+    "embedding_asset_sha256": {
+      "config.json": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750",
+      "onnx/model.onnx": "828e1496d7fabb79cfa4dcd84fa38625c0d3d21da474a00f08db0f559940cf35",
+      "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66"
+    },
+    "network_process_audit_guard": "enabled; no external call made",
+    "freeze_worker_collect_or_inference_called": false
+  },
+  "created_at": "2026-09-14T14:28:05.613570+00:00",
+  "helper_sha256": "25b7b7c90394759a5b92d213a086182dd4898e45f35a86504b6ae7ad0b9189ca",
+  "executed_action": "offline staging and verification only",
+  "live_reproduction_command_not_executed": "bash -c '/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/bin/python /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/stage_first_repair_reproduction.py verify --stage /tmp/clara-first-repair-source-20260914-v1 --output /tmp/clara-first-repair-reproduction-20260914-v1 && cd -- /tmp/clara-first-repair-source-20260914-v1 && PYTHONDONTWRITEBYTECODE=1 bash evaluation/changing_memory_repair_20260914/reproduce_collection.sh /tmp/clara-first-repair-reproduction-20260914-v1'",
+  "new_answers_require_new_blinded_reviews": true,
+  "limitations": "No installed model HTTP/digest verification performed offline; unchanged reproducer re-freezes and compares model/runtime conditions before collection. Shared inputs/leases remain tied to this repository; do not copy the evaluation directory or run concurrently."
+}

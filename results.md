@@ -1162,3 +1162,39 @@ The [experiment README and commands](evaluation/independent_retrieval_20260913/R
 [complete answer review](evaluation/independent_retrieval_20260913/report_reviewed_v3/answers.md),
 and [review provenance](evaluation/independent_retrieval_20260913/reviews_verified_v1/review_agreement.json)
 preserve the result and its limitations. All earlier results remain unchanged.
+
+## 2026-09-14: routing reliability repair, first release rejected
+
+The live speech transcript exposed two separate faults: general help could be
+blocked by a false required-memory decision, and the small generator could
+repeat unhelpful robot-identity prose. The replacement runtime separates
+general answering, optional personalization, required personal recall and
+clarification. Evidence authorization and reply-quality checks run separately
+from the route. The implementation and subsequent validation are recorded in
+[the repair directory](evaluation/routing_reliability_20260914/README.md).
+
+The first frozen candidate did **not** pass its independently authored
+32-case text release. Its raw local classifier matched 29/32 labels, but
+empirical margin rejection reduced final agreement to 19/32. Of 12 general
+requests, only one received an answer; ten unnecessarily clarified and one
+incorrectly refused for missing personal memory. Five of six optional
+requests received general content; the sixth exhausted the prompt budget
+before model dispatch. Both mixed requests lost their independent general
+part. Zero unsupported personal facts were delivered, but independent review
+found one unsupported physical-action promise and one explicit count failure.
+
+The historical Boolean router matched 20/28 scorable retrieval projections
+on these cases; the four clarification labels have no Boolean equivalent.
+It incorrectly requested memory for 6/12 general cases. This comparison
+contains routing calls only, so it does not measure historical answer quality.
+The failed replacement made 45 model calls, with 32/32 completed case records
+and no transport errors. Its 359.6 seconds total and 47.22-second median among
+generated answers are descriptive local timings, not a latency improvement.
+
+The [frozen source](evaluation/routing_reliability_20260914/candidate_freeze_v1/freeze.json),
+[raw replacement run](evaluation/routing_reliability_20260914/release_learned_v1/summary.json),
+[legacy routing run](evaluation/routing_reliability_20260914/release_legacy_v1/summary.json),
+and [independent review](evaluation/routing_reliability_20260914/release_review_v1/review.md)
+preserve this failed result. These cases became development material after
+inspection. Later corrections require separate validation; neither fitted
+calibration scores nor passing unit tests establish unseen response quality.

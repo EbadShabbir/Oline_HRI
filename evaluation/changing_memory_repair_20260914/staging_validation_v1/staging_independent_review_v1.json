@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-09-14T14:30:45.813971+00:00",
+  "reviewer": "root assistant, independent of helper author runtime_audit",
+  "approved": true,
+  "review_kind": "Code and captured offline-proof review; no new inference or source changes",
+  "helper_sha256": "25b7b7c90394759a5b92d213a086182dd4898e45f35a86504b6ae7ad0b9189ca",
+  "tests_sha256": "8ddade1fb6c232543dc91d3bece8f5b4d825c3bdbd659295d55e5f57a199212c",
+  "proof_sha256": "00f8fee8b8e5a3f706b896fa85b7a3b39399672c58bea9e4277e8a49bb3d6b6c",
+  "checks": [
+    "Pinned firstfreeze manifest verified before copying",
+    "All41files copied with readonly permissions and exactcurrent imports/source hashes in offline proof",
+    "Source freeze unchanged; staged runnerROOT stays isolated",
+    "Wholeevaluation symlink and four samepath/device/inode lock witnesses prevent privatelease directory",
+    "No flock/network/model/freeze/collection in validation; smokechild externalcalls blocked",
+    "Originalreproducer untouched and hasheschecked; livecommand re-verifiesstage/conditions then realreproducer re-freezes",
+    "shlex.join/quote preserve paths; exclusiveoutputandstage; failedstagespreserved",
+    "Permissiontraversal restricted to copiedsource trees, not sharedsymlinks",
+    "ModelHTTPmetadata deferred to realreproducer; no claimofnewliveobservations"
+  ],
+  "limitations": "Offline verification only; new live observations require fresh independent review; no protection against privileged concurrent filesystem modification."
+}

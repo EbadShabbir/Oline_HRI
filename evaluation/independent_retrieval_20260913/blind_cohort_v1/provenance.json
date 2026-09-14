@@ -1,0 +1,30 @@
+{
+  "command": [
+    "export",
+    "--freeze",
+    "evaluation/independent_retrieval_20260913/frozen_v1",
+    "--run",
+    "evaluation/independent_retrieval_20260913/run_v2",
+    "--output",
+    "evaluation/independent_retrieval_20260913/blind_cohort_v1"
+  ],
+  "created_at": "2026-09-13T17:09:35.289759+00:00",
+  "human_validation": "pending",
+  "inputs": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/frozen_v1/seal.json": "fda698a52067906e3a071c36dee68d3abb579f5b9c199533cd731708a717a9fd",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/run_v2/seal.json": "09dd4362ffaf8504093e920cd44887d10b67585cbc71049416ed539f10b27c76"
+  },
+  "phase": "export_partial_blinded_cohort",
+  "private_mapping_read": true,
+  "review_mapping_exposed_in_public": false,
+  "semantic_judgments_generated_by_program": false,
+  "source_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/analyze_independent_retrieval.py": "6891c98a0853f29a0bfec7186a087321d50d867d660275bc5ecc8eba40d3ed70",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/batch_independent_retrieval_reviews.py": "578d8078ce563cf399400ce3d5d4abea34dcf2d218800874276ece34222bbeed",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/independent_retrieval_supervisor.py": "021fdfa66fa2d1c7fe6ce8bc49a26e5dae65866c5f3cf8f4809d37453236f96b",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_retrieval_review_batches.py": "d9bc5815baf7a60a929ba19c9360f24ae96fbff56b45e6d0c0560df55350c5f7"
+  },
+  "working_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI"
+}

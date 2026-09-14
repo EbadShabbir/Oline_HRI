@@ -1,0 +1,17 @@
+{
+  "packet_sha256": "d1e53737215ece18b1b3db24680a77de4b051781e2e8c49605c44142d50364e2",
+  "reviewer_id": "KEEP_YOUR_ASSIGNED_REVIEWER_ID_STABLE_ACROSS_BATCHES",
+  "human_validation": "pending",
+  "judgments": [
+    {
+      "blind_id": "ONE_ID_FROM_PACKETS",
+      "classification": "ONE_OF: appropriate_uncertainty, correct_recall, inappropriate_uncertainty, incorrect, no_delivered_answer, partial",
+      "useful_correct": "boolean",
+      "forbidden_disclosure": "boolean",
+      "disclosed_forbidden_values": [
+        "canonical forbidden values, or empty"
+      ],
+      "reason": "brief answer-based explanation"
+    }
+  ]
+}

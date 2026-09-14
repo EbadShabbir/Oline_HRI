@@ -1,0 +1,102 @@
+{
+  "status": "complete",
+  "failure": null,
+  "sessions": [
+    {
+      "arm": "large",
+      "repetition": 1,
+      "path": "evaluation/post_memory_comparison_20260912/run_v2/01_large_r1",
+      "retained_complete": true,
+      "exit_code": 0
+    },
+    {
+      "arm": "cascade",
+      "repetition": 1,
+      "path": "evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1",
+      "retained_complete": true,
+      "exit_code": 0
+    },
+    {
+      "arm": "small",
+      "repetition": 1,
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1",
+      "started_at": "2026-09-12T12:53:33.958305+00:00",
+      "exit_code": 0
+    },
+    {
+      "arm": "cascade",
+      "repetition": 2,
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2",
+      "started_at": "2026-09-12T12:57:51.832439+00:00",
+      "exit_code": 0
+    },
+    {
+      "arm": "small",
+      "repetition": 2,
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2",
+      "started_at": "2026-09-12T13:08:55.557506+00:00",
+      "exit_code": 0
+    },
+    {
+      "arm": "large",
+      "repetition": 2,
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2",
+      "started_at": "2026-09-12T13:13:14.355437+00:00",
+      "exit_code": 0
+    },
+    {
+      "arm": "small",
+      "repetition": 3,
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3",
+      "started_at": "2026-09-12T13:21:22.221877+00:00",
+      "exit_code": 0
+    },
+    {
+      "arm": "large",
+      "repetition": 3,
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3",
+      "started_at": "2026-09-12T13:25:17.136735+00:00",
+      "exit_code": 0
+    },
+    {
+      "arm": "cascade",
+      "repetition": 3,
+      "path": "evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3",
+      "started_at": "2026-09-12T13:33:24.233435+00:00",
+      "exit_code": 0
+    }
+  ],
+  "snapshot": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-12T13:40:47.775998+00:00",
+    "fan_pwm": 104,
+    "memory": {
+      "mem_total_kib": 7803236,
+      "mem_available_kib": 2668456,
+      "swap_total_kib": 3901608,
+      "swap_free_kib": 2246824,
+      "swap_used_kib": 1654784
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 57.5,
+      "gpu-thermal": 57.968,
+      "soc0-thermal": 56.687,
+      "soc1-thermal": 56.5,
+      "soc2-thermal": 56.968,
+      "tj-thermal": 58.156
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  }
+}

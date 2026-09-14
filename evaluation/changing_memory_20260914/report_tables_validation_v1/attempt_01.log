@@ -1,0 +1,12 @@
+test_actual_generation_calls_are_distinct_from_nominal_route_and_classifier (tests.test_memory_report_tables.ReportTableTests) ... ok
+test_disclosure_scopes_use_judgments_and_keep_unstored_values_separate (tests.test_memory_report_tables.ReportTableTests) ... ok
+test_final_sealed_tables_and_input_provenance (tests.test_memory_report_tables.ReportTableTests) ... ok
+test_pair_success_and_disclosure_transitions_include_withholding (tests.test_memory_report_tables.ReportTableTests) ... ok
+test_partial_preparation_cannot_be_labeled_final (tests.test_memory_report_tables.ReportTableTests) ... ok
+test_partial_wrong_binding_and_tampered_inputs_rejected_but_audit_failure_preserved (tests.test_memory_report_tables.ReportTableTests) ... ok
+test_stage_history_kind_restart_and_scenario_denominators (tests.test_memory_report_tables.ReportTableTests) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.530s
+
+OK

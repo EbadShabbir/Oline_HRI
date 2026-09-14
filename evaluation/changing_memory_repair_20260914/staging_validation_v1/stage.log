@@ -1,0 +1,7 @@
+{
+  "offline_staging_passed": true,
+  "stage": "/tmp/clara-first-repair-source-20260914-v1",
+  "receipt_sha256": "00f8fee8b8e5a3f706b896fa85b7a3b39399672c58bea9e4277e8a49bb3d6b6c",
+  "source_count": 41,
+  "live_command_not_executed": "bash -c '/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/bin/python /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/stage_first_repair_reproduction.py verify --stage /tmp/clara-first-repair-source-20260914-v1 --output /tmp/clara-first-repair-reproduction-20260914-v1 && cd -- /tmp/clara-first-repair-source-20260914-v1 && PYTHONDONTWRITEBYTECODE=1 bash evaluation/changing_memory_repair_20260914/reproduce_collection.sh /tmp/clara-first-repair-reproduction-20260914-v1'"
+}

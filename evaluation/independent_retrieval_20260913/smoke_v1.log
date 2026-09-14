@@ -1,0 +1,12 @@
+[0;93m2026-09-13 20:18:59.011109641 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+slot 01 qwen3:0.6b OFF r0 1/2 excluded_smoke_recall ok 13.750s
+slot 01 qwen3:0.6b OFF r0 2/2 excluded_smoke_general ok 0.971s
+slot 02 qwen3:0.6b ALWAYS r0 1/2 excluded_smoke_recall ok 1.523s
+slot 02 qwen3:0.6b ALWAYS r0 2/2 excluded_smoke_general ok 1.004s
+slot 03 qwen3:0.6b SELECTIVE r0 1/2 excluded_smoke_recall ok 1.405s
+slot 03 qwen3:0.6b SELECTIVE r0 2/2 excluded_smoke_general ok 1.020s
+SMOKE WAIT qwen3:1.7b: available memory is below the revised 2 GiB start gate
+SMOKE WAIT qwen3:1.7b: available memory is below the revised 2 GiB start gate
+SMOKE WAIT qwen3:1.7b: available memory is below the revised 2 GiB start gate
+SMOKE WAIT qwen3:1.7b: available memory is below the revised 2 GiB start gate
+EXCLUDED SMOKE interrupted /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/smoke_v1

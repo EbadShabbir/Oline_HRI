@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-09-13T17:08:18.724613+00:00",
+  "immutability": "exclusive creation, SHA256 manifests, read-only permissions; not privileged WORM",
+  "sha256": {
+    "batch_finish.json": "d6774f71e12d3d03e911c4c2117d4da144697558b933a691c1181be1bbaf33dd",
+    "ledger_04_13_admission_00/ledger.json": "e9e8d78864de64563e58c1b7b4f34e36f4b0c03b18a1ae075512cbc8b430cc88",
+    "ledger_04_13_admission_00/seal.json": "7218c56b8250e6770898d53702fb87e50ced85310441346367cef17efe8bdd0b",
+    "plan.json": "b3421c9fa61fd9f3cd98d23d29084f5b3b806d2e5109491aeb6c7f7b0f1d922b",
+    "session_04_from_14/cleanup_timing.json": "ce6324dce85b2bccef8ca74cdb44f4c5b7e31aaf5704e95276320d8b6ccd973a",
+    "session_04_from_14/events.jsonl": "ef5400abf09fc66dd8980d3a913d4ab0a1922dc3b15f30073cce78e1268ab9fe",
+    "session_04_from_14/finish.json": "c77458b79e63a40f2a2205f97e1c9e4bd7e8156f627af37cddd732f645919612",
+    "session_04_from_14/http_calls.jsonl": "014cadc01f839ee33460424c18b9ffc99822655791de4bd152d5cd6a69b602f0",
+    "session_04_from_14/manifest.json": "f3870127956135f1e4c40601fcb29a5f2bafcf776a6c8939f765dc56f9dfd1a2",
+    "session_04_from_14/memory.sqlite3": "fe813f333c977c2d69a41fb3505393cd679fc191907ada3f710eb1e1e86bae0a",
+    "session_04_from_14/observations.jsonl": "3d453cf648cb79312a447ede845f5d33aa621e5d5e4a3a56b058f6c17e8709d7",
+    "session_04_from_14/seal.json": "cc50e94b94f344b5c8009b100a5ae5336776a7f1baf2ae296b1799ed4eb15bba",
+    "session_04_from_14/setup.json": "b261caaef70331e240d9f1860f20a4cfd7c870dccd70b251f88c29b6caebd18e",
+    "session_04_from_14/snapshot_verification.json": "5af346e5d63d26a01af09dc71b5842a2ccf60944ddfe2c18ac83a89f237824b0",
+    "session_04_from_14/start.json": "8c06ad4e70fdbef9238a2d57d8464831f299e15e8e0d35b0295991d077f6d3b3",
+    "session_04_from_14/summary.json": "dbcf66a9f4c96625cd281f4334e968651498722077b12dec5796b41826cf8c2e",
+    "session_04_from_14/telemetry.jsonl": "c3c8bf10fa9e189abb6c52652ddd4873e82b535f83569d39bd4d0914b1611aa0",
+    "session_04_from_14/telemetry_summary.json": "3be7e29c7040715ee9dcc26b5cd6ffd859a48f2d62b3810a35caae87708ebbd1",
+    "startup_waits.jsonl": "19e33367826956bbe0236e94f335c6a656198d38365481067d7ebb4bad42f31b"
+  }
+}

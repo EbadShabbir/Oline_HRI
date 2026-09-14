@@ -1,0 +1,363 @@
+{
+  "schema_version": 1,
+  "reviewer_id": "independent_blinded_assistant_a",
+  "review_kind": "Unblinded report fact-check after original delivered-answer judgments were sealed",
+  "reviewed_at": "2026-09-14T13:25:16.161706+00:00",
+  "reviewed_readme_path": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/README.md",
+  "reviewed_readme_sha256": "2b6c865128c3a3f17b56c6f7d1f1dbbb0fe67c6b9ddf94bed9ec57589cb71890",
+  "original_votes_frozen_before_unblinding": true,
+  "originalvotesfrozenbeforeunblinding": true,
+  "human_validation": "pending",
+  "inference_performed": false,
+  "rescoring_performed": false,
+  "original_judgments_modified": false,
+  "readme_edited_by_reviewer": false,
+  "result": "passed_after_two_prose_corrections",
+  "outstanding_corrections": [],
+  "resolved_corrections": [
+    {
+      "issue": "Evidence-selection paragraph called the object headphones.",
+      "resolution": "Changed to binoculars, matching the three cm07 questions."
+    },
+    {
+      "issue": "All records were said to start at the original storage time.",
+      "resolution": "Limited this claim to original subject and historical-control records; replacement rows begin at the correction time while retaining the original deadline."
+    }
+  ],
+  "checks": [
+    {
+      "check": "complete_checkpoint_and_classification_counts",
+      "status": "passed",
+      "details": {
+        "appropriate_uncertainty": 67,
+        "correct_recall": 51,
+        "incorrect": 101,
+        "partial": 55,
+        "no_delivered_answer": 5,
+        "inappropriate_uncertainty": 9
+      }
+    },
+    {
+      "check": "full_rubric_success",
+      "status": "passed",
+      "details": {
+        "useful": 118,
+        "planned": 288,
+        "percent": 41.0
+      }
+    },
+    {
+      "check": "expected_kind_original",
+      "status": "passed",
+      "details": {
+        "planned": 48,
+        "useful": 36,
+        "classifications": {
+          "correct_recall": 36,
+          "inappropriate_uncertainty": 6,
+          "partial": 5,
+          "incorrect": 1
+        }
+      }
+    },
+    {
+      "check": "expected_kind_replacement",
+      "status": "passed",
+      "details": {
+        "planned": 48,
+        "useful": 13,
+        "classifications": {
+          "incorrect": 23,
+          "partial": 4,
+          "correct_recall": 13,
+          "no_delivered_answer": 5,
+          "inappropriate_uncertainty": 3
+        }
+      }
+    },
+    {
+      "check": "expected_kind_historical_control",
+      "status": "passed",
+      "details": {
+        "planned": 48,
+        "useful": 2,
+        "classifications": {
+          "partial": 46,
+          "correct_recall": 2
+        }
+      }
+    },
+    {
+      "check": "expected_kind_uncertainty",
+      "status": "passed",
+      "details": {
+        "planned": 144,
+        "useful": 67,
+        "classifications": {
+          "appropriate_uncertainty": 67,
+          "incorrect": 77
+        }
+      }
+    },
+    {
+      "check": "historical_controls_remain_distinct_from_target_recall",
+      "status": "passed",
+      "details": {
+        "correct_venue_present": 48,
+        "frozen_partial_for_unrequested_time": 46,
+        "full_rubric_correct": 2,
+        "interpretation": "Venue recall is preserved; these partials do not show that historical venues disappeared."
+      }
+    },
+    {
+      "check": "withholding_kept_separate",
+      "status": "passed",
+      "details": {
+        "withheld": 5,
+        "immediate": 2,
+        "after_restart": 3,
+        "raw_answer_diagnosis": "Separate unblinded diagnostic assistant assessment; frozen null-answer votes unchanged."
+      }
+    },
+    {
+      "check": "history_total_retained",
+      "status": "passed",
+      "details": {
+        "planned": 180,
+        "useful": 52
+      }
+    },
+    {
+      "check": "history_total_fresh",
+      "status": "passed",
+      "details": {
+        "planned": 108,
+        "useful": 66
+      }
+    },
+    {
+      "check": "paired_comparison",
+      "status": "passed",
+      "details": {
+        "pairs": 108,
+        "both": 13,
+        "retained_only": 3,
+        "fresh_only": 53,
+        "neither": 39,
+        "retained_useful": 16,
+        "fresh_useful": 66,
+        "interpretation": "Matched descriptive comparison; retained preceded fresh, and unpaired task composition differs."
+      }
+    },
+    {
+      "check": "restart_denominator",
+      "status": "passed",
+      "details": {
+        "planned": 108,
+        "useful": 29
+      }
+    },
+    {
+      "check": "revoked_original_versus_never_stored_claims",
+      "status": "passed",
+      "details": {
+        "all_forbidden": 89,
+        "revoked_original": 87,
+        "never_stored_jasmine_claims": 2,
+        "interpretation": "Matching jasmine example is present in actual generator prompts; no causal or cross-branch-cache mechanism is established."
+      }
+    },
+    {
+      "check": "disclosure_scope_counts",
+      "status": "passed",
+      "details": {
+        "retained": {
+          "correction_current": {
+            "disclosures": 21,
+            "planned": 24
+          },
+          "deletion": {
+            "disclosures": 39,
+            "planned": 48
+          },
+          "expiry": {
+            "disclosures": 27,
+            "planned": 36
+          }
+        },
+        "all_histories": {
+          "correction_current": "21/48",
+          "correction_broad": "21/96",
+          "deletion": "39/72",
+          "expiry": "27/60"
+        },
+        "after_restart_all_histories": {
+          "correction_current": "11/24",
+          "deletion": "21/36",
+          "expiry": "9/24"
+        }
+      }
+    },
+    {
+      "check": "validation_accepts_forbidden_answers",
+      "status": "passed",
+      "details": {
+        "accepted_forbidden_answers": 89
+      }
+    },
+    {
+      "check": "selection_omissions_objects",
+      "status": "passed",
+      "details": {
+        "objects": [
+          "sketchbook",
+          "binoculars"
+        ],
+        "checkpoint_ids": [
+          "cm06_expiry_before_fresh",
+          "cm07_correction_recalled",
+          "cm07_deletion_recalled",
+          "cm07_expiry_before_fresh"
+        ]
+      }
+    },
+    {
+      "check": "generation_failure_scope_and_raw_link",
+      "status": "passed",
+      "details": {
+        "known_fact": 54,
+        "unavailable_fact": 77,
+        "exact_raw_delivered_matches": 131,
+        "no_recorded_transform": 131,
+        "interpretation": "The 77 unavailable-fact tasks are not claimed to have positive supporting factual evidence."
+      }
+    },
+    {
+      "check": "collection_integrity",
+      "status": "passed",
+      "details": {
+        "checks": 31342,
+        "kinds": 82,
+        "integrity_violations": 0,
+        "counts": {
+          "chat_http_requests": 972,
+          "answer_rows": 324,
+          "answer_status_delivered": 319,
+          "retained_history_expected": 168,
+          "retained_history_with_original_disclosure": 144,
+          "operations_started": 552,
+          "operations_finished": 552,
+          "mutation_remember": 72,
+          "mutation_correct": 12,
+          "zero_operation_worker_admission_rejections": 13,
+          "mutation_forget": 12,
+          "purged_record_ids": 24,
+          "answer_status_withheld": 5,
+          "planned_checkpoints": 288,
+          "unique_observed_checkpoints": 288,
+          "scheduled_segments": 72,
+          "process_fragments": 85,
+          "extra_continuation_fragments": 13,
+          "independent_databases": 36,
+          "distinct_processes": 72
+        }
+      }
+    },
+    {
+      "check": "snapshot_probes",
+      "status": "passed",
+      "details": {
+        "probes": 96,
+        "current": 12,
+        "rejected_stale": 84
+      }
+    },
+    {
+      "check": "actual_model_counts",
+      "status": "passed",
+      "details": {
+        "scored_generations": 288,
+        "small": 254,
+        "large": 34,
+        "extra_small_generations": 36,
+        "classifiers": 648,
+        "all_chat_calls": 972
+      }
+    },
+    {
+      "check": "resources",
+      "status": "passed",
+      "details": {
+        "telemetry_samples": 6450,
+        "sampled_temperature_max_c": 58.281,
+        "sampled_ram_used_mb_min": 4294,
+        "sampled_ram_used_mb_max": 6668,
+        "sampled_ram_total_mb": [
+          7620
+        ],
+        "sampled_swap_used_mb_min": 8,
+        "sampled_swap_used_mb_max": 448,
+        "start_capture_count": 85,
+        "finish_capture_count": 85,
+        "runtime_guard_violations": [],
+        "cleanup_errors": [],
+        "boundary_mem_available_kib_min": 1469760,
+        "limitations": "Telemetry RAM used is not Linux MemAvailable. Boundary captures and recorded runtime-guard outcomes do not prove unobserved instantaneous resource values. Ollama cached token counts show cache activity, not a source of answer content."
+      }
+    },
+    {
+      "check": "unchanged_answer_analysis_and_frozen_reviews",
+      "status": "passed",
+      "details": {
+        "review_packets": 214,
+        "disagreements": 0,
+        "adjudication_performed": false,
+        "unchanged_non_diagnostic_rows": 288,
+        "diagnostic_changes": 5
+      }
+    },
+    {
+      "check": "report_artifact_links",
+      "status": "passed",
+      "details": {
+        "relative_links_checked": 39,
+        "missing": []
+      }
+    }
+  ],
+  "source_sha256": {
+    "analysis_v2/metrics.json": "f6ef4d0f68012d09fc2296be93891eb163df2f71f7185f160db75fa86fe4ec9f",
+    "analysis_v2/reviewed_answers.jsonl": "97dc70ceb270198490d0ec97f580227442c5484a9ef0a3616c1d245e636cf321",
+    "analysis_v2/audit_events.jsonl": "6a264918b83a9195eec2ab594308cd8a0d371916a01aa9bd8876b7df611fd87f",
+    "analysis_v2/review_agreement.json": "9300485cbe20c9f2e8c75f204fa1b0ee55b36a32cc875fae64195385188c330d",
+    "sealed_reviews_v1/review_freeze.json": "ce418ba1cc4ab1f07aaae1f8da9a5087cc3f244f20c41d550d1a4fd93babc32c",
+    "collection_audit_v1.json": "e754a02b39adb3f3b2a8a5cd5bf41e6008dbbb9bc2cc111e82f33f7ff0f7de49",
+    "final_analysis_verification_v3.json": "61af91a605a45047423a8c8ba704feccff801a47d4b8e84bd2d9c88191e4c38b",
+    "final_integrity_and_diagnosis_notes_v1.md": "d8a8d3e37a51fea777f3f9527235d1d9dfec30445e7ca7de76cc6f3ceb3b991e",
+    "diagnostic_examples_v1.md": "776dc4e797b35ba0f744f39b4ee4f118e577b6c63350e8555314278a30332e5d",
+    "withheld_appointment_diagnostics_v1.md": "077de6768bfb3b494c7e49e7513df2ffd3fd7e0278d6f3470943d6bc06032d66",
+    "methods_audit_notes_v1.md": "b7ae517b56576fa674a95379e011bd5265e3dcb6553ea2c18fe05657f12ba6eb",
+    "frozen_v1/freeze.json": "f9b31e4d8cd23f2c86a740566829c29516b641cc4f1ce0b216d9d4874017461a",
+    "preflight_review_v1.json": "6c39a2de55b7ff0f6604f93822813d8d3dc390499b461bc71ea9deb70c506b11",
+    "offline_validation_v1/attempt_02.json": "3bad1a807f2b0b707d2b082de652184b1010eefe632f852df3cdca8f564a8e2a",
+    "analysis_parser_amendment_v2/README.md": "2bf750f9aa9d2a98cef10e19984fd875a229f138bd720a1298ae90d433875b4c",
+    "figure_caption_amendment_v2/README.md": "d5307c6cc4aa7e7f21451e34aa026a3fc5833060af0e7f998f835f8fc3e148aa",
+    "reproduce_analysis.sh": "7176b76bd421b64c142973877c48f26b0b658e2ea6a9ab756519a1de063bcd04",
+    "reproduce_collection.sh": "eeb211ad7dbf21a18f60c8db4b559ec7edbc838a34538865b78101f7e539293e",
+    "tables_v1/overall.md": "c0155acaf84b2bc841541d5ace8f75c0163f12570f5eeee2db6d3400f8428972",
+    "tables_v1/expected_kind_history.md": "bcf9ee9595dc3bacb23e53393d8843c42e2389745303794cb6bfd706bc0d00f0",
+    "tables_v1/stage_history.md": "a05b5552060e2021643ce5c886ba2fff7b12cf57fbc53811308a969f50748eea",
+    "tables_v1/disclosure_scopes.md": "6a961c9fd6a017381ee49f743402a8bfe86ae2607ac889f6dc6dfbb1251f2485",
+    "tables_v1/history_pair_aggregates.md": "90b12d6fcc53efa18fce9ea183935a1e2155b139dce8984e443eb880244a79d6",
+    "tables_v1/history_exposure_audit.md": "c058481e0e3bf12ee76e81c0a885563fefece7c2f0f45fdfa45ae75a0b23e486",
+    "tables_v1/generation_call_aggregates.md": "3a2635e80bbdfa890ccf8ed037482423c27ad61529b1b9dc07bea9a27c559524"
+  },
+  "scope_interpretation": [
+    "Strict historical-control partials are preserved and distinguished from losing the venue.",
+    "Planned, retained/fresh, paired, and restart denominators are reported distinctly.",
+    "Revoked original facts, never-stored jasmine claims, safe withholding, and supported raw answers remain separate outcomes.",
+    "Prompt example matches support a possible source; the report does not establish causal attribution or cross-branch cache contamination.",
+    "Runtime, observations, frozen scores, synthetic-test boundaries, controlled logical expiry and process-restart limits remain explicit.",
+    "Reproduction scripts were inspected only; no live collection or diagnostic model inference was run."
+  ]
+}

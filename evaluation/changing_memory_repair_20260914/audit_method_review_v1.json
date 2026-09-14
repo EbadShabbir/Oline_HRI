@@ -1,0 +1,343 @@
+{
+  "created_at": "2026-09-14T13:56:47.663994+00:00",
+  "partial": true,
+  "scope": "Sealed cm01 correction and deletion only; full 96-checkpoint final audit remains required.",
+  "inference_performed": false,
+  "semantic_scoring_performed": false,
+  "no_live_unsealed_branches_read": true,
+  "reviewer": "assistant /root/runtime_audit",
+  "command": [
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/bin/python",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/audit_method_review_v1.py"
+  ],
+  "script_sha256": "26d0d251c8e694dce5d8e4a0449b9a50d102247bff35d6ea78f6b584006e0faa",
+  "auditor_sha256": "9fa45da1bf11cbad582693c74dd12fc24be2254a309e3f13ae566a5c7b59d56f",
+  "input_seal_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/frozen_v2/seal.json": "0b9b8e04dda46462ef1dd2682065d731439885723b2ff7ec723c18b79cf7660b",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_correction/seal.json": "d9eac0918b9edc48e2106015c1f694736eb0f6adfe7191e7ee47e8f252a90d04",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_deletion/seal.json": "6184e386852229748d09981e06c3ae5d217695938df66c50e5cdf6c91bc9c719"
+  },
+  "subset_integrity_pass": true,
+  "exception": null,
+  "integrity_checks": {
+    "sealed_directory": 8,
+    "seal_file_set": 8,
+    "seal_file_hash": 233,
+    "sealed_directory_readonly": 8,
+    "sealed_artifact_readonly": 260,
+    "full_frozen_workload_96_checkpoints_12_branches": 1,
+    "exact_original_expected_object": 96,
+    "exact_original_branch_schedule": 12,
+    "unchanged_non_source_runtime_condition": 11,
+    "unchanged_collection_harness": 1,
+    "frozen_source_hash": 41,
+    "current_source_hash": 41,
+    "reviewed_artifact_hash": 3,
+    "frozen_generation_options": 1,
+    "frozen_adaptive_policy": 1,
+    "frozen_installed_model_pair": 1,
+    "persistent_branch_database": 2,
+    "independent_database_inode": 2,
+    "scheduled_segment_exists": 4,
+    "resource_captures_present": 5,
+    "artifact_exists": 16,
+    "fresh_worker_process_identity": 4,
+    "launched_actual_worker_pid": 4,
+    "continuation_offset_no_replay": 4,
+    "serialized_http_start": 65,
+    "bytes_have_request": 65,
+    "byte_chunk_offset": 65,
+    "http_completion_has_start": 65,
+    "http_start_completion_match": 65,
+    "received_bytes_match_parsed_response": 65,
+    "actual_chat_options": 57,
+    "actual_chat_nonstream_no_thinking": 57,
+    "requested_installed_model": 57,
+    "no_oracle_fields_in_model_input": 57,
+    "returned_requested_model": 57,
+    "http_request_completion_preserved": 4,
+    "checkpoint_is_planned": 17,
+    "validation_delivery_link": 19,
+    "final_delivered_answer_link": 19,
+    "raw_answer_call_link": 19,
+    "delivered_generation_link": 19,
+    "model_call_has_http_request": 57,
+    "call_raw_payload_byte_link": 57,
+    "raw_generation_received_content": 57,
+    "checkpoint_expected_clock": 17,
+    "checkpoint_authored_question": 17,
+    "shared_retrieval_clock": 17,
+    "answer_process_identity": 19,
+    "same_database_inode_all_checkpoints": 19,
+    "recorded_history_presence_truthful": 19,
+    "shared_validation_clock": 20,
+    "fresh_history_is_empty": 6,
+    "http_chat_assigned_to_answer_attempt": 57,
+    "authored_operation_sequence": 4,
+    "shared_operation_clock": 31,
+    "scheduled_segment_operation_coverage": 4,
+    "restored_history_event": 2,
+    "exact_history_across_processes": 2,
+    "restored_ids": 2,
+    "restored_history": 2,
+    "restored_logical_time": 2,
+    "restored_saved_snapshot": 2,
+    "real_scheduled_process_restart": 2,
+    "complete_independent_branch_schedule": 2,
+    "all_operations_have_terminal_records": 2,
+    "actual_mutation_acknowledgement": 6,
+    "explicit_authored_mutation_authorization": 6,
+    "new_branch_initial_database_empty": 2,
+    "new_branch_initial_audit_empty": 2,
+    "independent_generated_memory_ids": 2,
+    "pre_inference_rejection_is_recorded_guard_failure": 1,
+    "pre_inference_rejection_has_no_model_or_operation_events": 1,
+    "admission_rejection_does_not_advance_schedule": 1,
+    "all_planned_checkpoints_present": 1,
+    "unique_checkpoint_attempts": 1,
+    "all_scheduled_segments": 1,
+    "all_independent_databases": 1
+  },
+  "integrity_violations": [],
+  "system_observations": [
+    {
+      "stage": "admission",
+      "code": "preserved_zero_inference_worker_rejection",
+      "where": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_deletion/restart",
+      "launch_pid": 40304,
+      "error": {
+        "message": "revised startup temperature must be below 55 C",
+        "type": "SafetyGateError"
+      }
+    }
+  ],
+  "findings": {
+    "full_planned_workload": {
+      "planned_checkpoints": 96,
+      "scenario_ids": [
+        "cm01",
+        "cm04",
+        "cm07",
+        "cm09"
+      ],
+      "scenario_count": 4,
+      "independent_databases": 12,
+      "scheduled_restarts": 12,
+      "scheduled_segments": 24,
+      "disclosures": 12,
+      "history_pairs": 36,
+      "stage_history_groups": 24,
+      "post_restart_checkpoints": 36
+    },
+    "matching_baseline_runtime_conditions": [
+      "config",
+      "models",
+      "ollama_version",
+      "embedding_assets",
+      "packages",
+      "python",
+      "generation_seed",
+      "device_policy",
+      "routing_policy",
+      "retain_large_model",
+      "logical_clock"
+    ],
+    "changed_production_source": [
+      "src/oline_hri/conversation.py",
+      "src/oline_hri/evaluation_scoring.py",
+      "src/oline_hri/grounded_composition.py",
+      "src/oline_hri/memory_evidence.py",
+      "src/oline_hri/relationships.py",
+      "src/oline_hri/routing.py"
+    ],
+    "subset_counts": {
+      "chat_http_requests": 57,
+      "answer_rows": 19,
+      "answer_status_delivered": 19,
+      "retained_history_expected": 10,
+      "retained_history_with_original_disclosure": 10,
+      "operations_started": 31,
+      "operations_finished": 31,
+      "mutation_remember": 4,
+      "mutation_correct": 1,
+      "zero_operation_worker_admission_rejections": 1,
+      "mutation_forget": 1,
+      "planned_checkpoints": 17,
+      "unique_observed_checkpoints": 17,
+      "scheduled_segments": 4,
+      "process_fragments": 5,
+      "extra_continuation_fragments": 1,
+      "independent_databases": 2,
+      "distinct_processes": 4
+    },
+    "branches": [
+      {
+        "branch_id": "cm01_correction",
+        "process_pids": [
+          39888,
+          40021
+        ],
+        "database_inode": [
+          45825,
+          3286027
+        ],
+        "checkpoints": 10,
+        "operation_count": 17,
+        "final_record_count": 3,
+        "final_audit_count": 3,
+        "mutation_counts": {
+          "remember": 2,
+          "correct": 1
+        }
+      },
+      {
+        "branch_id": "cm01_deletion",
+        "process_pids": [
+          40137,
+          40304,
+          40343
+        ],
+        "database_inode": [
+          45825,
+          3286078
+        ],
+        "checkpoints": 7,
+        "operation_count": 14,
+        "final_record_count": 1,
+        "final_audit_count": 3,
+        "mutation_counts": {
+          "remember": 2,
+          "forget": 1
+        }
+      }
+    ],
+    "resource_fragments": [
+      {
+        "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_correction/initial",
+        "status": "complete",
+        "cleanup_errors": [],
+        "samples": 63,
+        "maximum_temperature_c": 57.093,
+        "admission_only": false
+      },
+      {
+        "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_correction/restart",
+        "status": "complete",
+        "cleanup_errors": [],
+        "samples": 43,
+        "maximum_temperature_c": 57.125,
+        "admission_only": false
+      },
+      {
+        "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_deletion/initial",
+        "status": "complete",
+        "cleanup_errors": [],
+        "samples": 47,
+        "maximum_temperature_c": 57.343,
+        "admission_only": false
+      },
+      {
+        "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_deletion/restart",
+        "status": "interrupted",
+        "cleanup_errors": [],
+        "samples": 0,
+        "maximum_temperature_c": null,
+        "admission_only": true
+      },
+      {
+        "fragment": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_repair_20260914/run_v1/cm01_deletion/restart_continuation_02",
+        "status": "complete",
+        "cleanup_errors": [],
+        "samples": 36,
+        "maximum_temperature_c": 56.593,
+        "admission_only": false
+      }
+    ],
+    "history_exposure_counts": {
+      "all_scored_checkpoints": {
+        "checkpoints": 17,
+        "checkpoints_with_generation_call": 17,
+        "exact_original_statement_present": 10,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 10,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "history_mode=retained": {
+        "checkpoints": 11,
+        "checkpoints_with_generation_call": 11,
+        "exact_original_statement_present": 10,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 10,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "branch=correction": {
+        "checkpoints": 10,
+        "checkpoints_with_generation_call": 10,
+        "exact_original_statement_present": 5,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 5,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "history_mode=fresh": {
+        "checkpoints": 6,
+        "checkpoints_with_generation_call": 6,
+        "exact_original_statement_present": 0,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 0,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "after_restart": {
+        "checkpoints": 7,
+        "checkpoints_with_generation_call": 7,
+        "exact_original_statement_present": 4,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 4,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      },
+      "branch=deletion": {
+        "checkpoints": 7,
+        "checkpoints_with_generation_call": 7,
+        "exact_original_statement_present": 5,
+        "exact_original_statement_forwarded": 0,
+        "literal_original_value_present": 5,
+        "literal_original_value_forwarded": 0,
+        "literal_value_present_without_exact_statement": 0,
+        "literal_value_forwarded_without_exact_statement": 0
+      }
+    },
+    "actual_model_requests": [
+      {
+        "purpose": "compute_selector",
+        "model": "qwen3:0.6b",
+        "count": 19
+      },
+      {
+        "purpose": "generation",
+        "model": "qwen3:0.6b",
+        "count": 19
+      },
+      {
+        "purpose": "memory_selector",
+        "model": "qwen3:0.6b",
+        "count": 19
+      }
+    ]
+  },
+  "method_limits": [
+    "Targeted development regression selected after baseline failures, not held-out accuracy.",
+    "History remains available to routing but the repaired generator excludes prior turns on personal-memory requests.",
+    "Location extraction can constrain model speech; this must be reported separately from unconstrained generation.",
+    "Logical expiry, application-process restart, and text only; no power-loss or spoken-performance claim.",
+    "Human validation pending; no answer judgments made by this audit."
+  ]
+}

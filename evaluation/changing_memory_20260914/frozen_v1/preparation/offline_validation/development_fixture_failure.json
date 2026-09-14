@@ -1,0 +1,10 @@
+{
+  "scope": "Earlier offline harness development run; no live models or experimental observations.",
+  "source": "/tmp/changing-memory-offline-tests.log",
+  "failures": [
+    "Two authored correction cases correctly reached temporal validation rejection; full-schedule coverage assertion now preserves those outcomes.",
+    "Fresh-history fixture lacked the explicit disclosure because memory queries are omitted from reusable production history."
+  ],
+  "note": "Original run prior to fixture corrections and continuation/lease test additions. This failure log is preserved separately from passing attempt_01.",
+  "sha256": "cb223442fb1c90bc9d1d9d28423e211c1313429b412f05ca7e4a4988b5d8b701"
+}

@@ -1,0 +1,89 @@
+{
+  "status": "fail",
+  "checks": {
+    "pass": 11238,
+    "fail": 144
+  },
+  "categories": {
+    "artifacts_and_conclusion": {
+      "pass": 1840,
+      "fail": 0
+    },
+    "cold_admission": {
+      "pass": 576,
+      "fail": 0
+    },
+    "counterbalance": {
+      "pass": 147,
+      "fail": 0
+    },
+    "coverage": {
+      "pass": 147,
+      "fail": 0
+    },
+    "durable_attempts": {
+      "pass": 462,
+      "fail": 0
+    },
+    "eviction_and_residency": {
+      "pass": 3579,
+      "fail": 0
+    },
+    "hysteresis": {
+      "pass": 9,
+      "fail": 0
+    },
+    "memory_snapshot": {
+      "pass": 0,
+      "fail": 144
+    },
+    "nested_loads": {
+      "pass": 576,
+      "fail": 0
+    },
+    "replay_fidelity": {
+      "pass": 1,
+      "fail": 0
+    },
+    "resource_integrity": {
+      "pass": 1487,
+      "fail": 0
+    },
+    "sequence_accounting": {
+      "pass": 144,
+      "fail": 0
+    },
+    "settings_and_fixed_models": {
+      "pass": 288,
+      "fail": 0
+    },
+    "source_and_freeze": {
+      "pass": 241,
+      "fail": 0
+    },
+    "span_accounting": {
+      "pass": 576,
+      "fail": 0
+    },
+    "whole_sequence_reuse": {
+      "pass": 265,
+      "fail": 0
+    },
+    "workload_and_history": {
+      "pass": 900,
+      "fail": 0
+    }
+  },
+  "generated_at": "2026-09-12T19:07:51.555920+00:00",
+  "sequence_records": 144,
+  "inventory_paths": 2104,
+  "audit_source_sha256": "e322dd67e8ce792bebed6ad167d46b5afab62508cdcacdb3ba20dd8ab19a8767",
+  "scope": "Recorded collection integrity only; no new inference, device queries or artifact rewriting.",
+  "limitations": [
+    "Independent human correctness review and final report conclusions are separate acceptance checks.",
+    "Recorded allocation does not prove exact CPU/GPU compute placement.",
+    "Monitoring is sampled; no claim of continuous resource observability.",
+    "Initial model/process state is cold; operating-system file caches were retained.",
+    "Original v1 final-turn interrupted status and failed answer are unchanged; exact documented whole-sequence eligibility exception is explicit in provenance."
+  ]
+}

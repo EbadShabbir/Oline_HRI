@@ -1,0 +1,58 @@
+test_actual_authored_schema_runs_all_initial_operations_without_oracle_inputs (tests.test_changing_memory.ChangingMemoryHarnessTests) ... FAIL
+test_actual_process_restarts_preserve_mutations_history_and_nonempty_snapshots (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_cli_acknowledgments_mutate_same_live_store_and_keep_original_history (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_configured_expiry_uses_shared_clock_at_exact_boundary_without_db_edits (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_fresh_queries_do_not_modify_retained_history_and_log_supplied_evidence (tests.test_changing_memory.ChangingMemoryHarnessTests) ... FAIL
+test_generation_interruption_is_logged_before_propagation (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_same_process_reconstruction_and_backward_clock_are_rejected (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_source_and_config_drift_rejected_before_model_inventory_access (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+test_stale_snapshot_replay_is_withheld_before_generation_and_preserved (tests.test_changing_memory.ChangingMemoryHarnessTests) ... ok
+
+======================================================================
+FAIL: test_actual_authored_schema_runs_all_initial_operations_without_oracle_inputs (tests.test_changing_memory.ChangingMemoryHarnessTests) (branch='cm09_correction')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_changing_memory.py", line 168, in test_actual_authored_schema_runs_all_initial_operations_without_oracle_inputs
+    self.assertEqual(row["status"], "delivered", row.get("message"))
+AssertionError: 'withheld' != 'delivered'
+- withheld
++ delivered
+ : robot response omits requested temporal memory detail
+
+======================================================================
+FAIL: test_actual_authored_schema_runs_all_initial_operations_without_oracle_inputs (tests.test_changing_memory.ChangingMemoryHarnessTests) (branch='cm10_correction')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_changing_memory.py", line 168, in test_actual_authored_schema_runs_all_initial_operations_without_oracle_inputs
+    self.assertEqual(row["status"], "delivered", row.get("message"))
+AssertionError: 'withheld' != 'delivered'
+- withheld
++ delivered
+ : robot response omits requested temporal memory detail
+
+======================================================================
+FAIL: test_actual_authored_schema_runs_all_initial_operations_without_oracle_inputs (tests.test_changing_memory.ChangingMemoryHarnessTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_changing_memory.py", line 175, in test_actual_authored_schema_runs_all_initial_operations_without_oracle_inputs
+    self.assertEqual(executed, expected_initial)
+AssertionError: Items in the second set but not the first:
+'cm10_correction_historical_fresh'
+'cm09_correction_corrected_fresh'
+'cm09_correction_historical_fresh'
+'cm10_correction_corrected_fresh'
+'cm10_correction_historical_retained'
+'cm09_correction_historical_retained'
+
+======================================================================
+FAIL: test_fresh_queries_do_not_modify_retained_history_and_log_supplied_evidence (tests.test_changing_memory.ChangingMemoryHarnessTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_changing_memory.py", line 235, in test_fresh_queries_do_not_modify_retained_history_and_log_supplied_evidence
+    self.assertLess(len(fresh["history_before"]), len(saved))
+AssertionError: 1 not less than 1
+
+----------------------------------------------------------------------
+Ran 9 tests in 15.156s
+
+FAILED (failures=4)

@@ -1,0 +1,16 @@
+{
+  "script": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/report_details.py",
+  "arguments": {
+    "run_root": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v2",
+    "previous_root": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/run_v1",
+    "previous_freeze": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/frozen_v1/freeze.json",
+    "freeze": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/frozen_v2/freeze.json",
+    "workload": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/frozen_v2/workload.json",
+    "output_dir": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/report_details_final_v2",
+    "blind_dir": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/reviews_final_v2/blind",
+    "reviews": [
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/routing_overhead_20260912/reviews_final_v2/resolved.jsonl"
+    ]
+  },
+  "reproduction": "Use a new output directory; script depends on the unchanged sibling mixed-freeze adapter and frozen core analyzer."
+}

@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-09-13T17:20:44.186419+00:00",
+  "immutability": "exclusive creation, exact byte copies, SHA256 and read-only permissions; not privileged WORM",
+  "sha256": {
+    "REVIEW_INSTRUCTIONS.md": "17c20d7fdbaa66f43c31ae83d645f37aa8d8bd3c77e53cdad78bbf2360655f18",
+    "commands.sh": "18a1bb1ecd548fa44730661b589c98267d004a7fb7a58a7b9f848d094a66febd",
+    "missing_packet.jsonl": "2875fc180299cff141fabd11d02af4eda0bc3660ba92067b2f3c6cc4ede7248b",
+    "original_batches/batch_000/REVIEW_INSTRUCTIONS.md": "17c20d7fdbaa66f43c31ae83d645f37aa8d8bd3c77e53cdad78bbf2360655f18",
+    "original_batches/batch_000/commands.sh": "c810fca422e0d0a537ba70540e7367eda685529180ac3660eea2f3b75c5db78e",
+    "original_batches/batch_000/original_reviews.jsonl": "6f566eff87f1a6aa5b823dd7bd68874f46949624f09ff1e55edf21a264b26e10",
+    "original_batches/batch_000/packet.jsonl": "55c13b5214337fcafca8a6732527dabcfe01ff0bd92b92eba7fca824d1ebc8cc",
+    "original_batches/batch_000/provenance.json": "fcb45489f21ac1aa08be91aa3a3ae0c54da5afe5f46ad29e6e89c320aa04b031",
+    "original_batches/batch_000/review_batch.json": "f473d8e8193a2120fb422c09342ab05841961aec1357d535f924879f2f030a40",
+    "original_batches/batch_000/seal.json": "607b29fb307f25e17625b29cbd7ad2f534d7672413b1d691874ca77633ed0c37",
+    "original_batches/batch_000/source/batch_independent_retrieval_reviews.py": "578d8078ce563cf399400ce3d5d4abea34dcf2d218800874276ece34222bbeed",
+    "original_batches/batch_000/source/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+    "original_batches/batch_000/source/test_retrieval_review_batches.py": "d9bc5815baf7a60a929ba19c9360f24ae96fbff56b45e6d0c0560df55350c5f7",
+    "packet.jsonl": "84f789caa4c2899c7df82e9949428f35880db4d5d6bd48af9876128bcb17bc86",
+    "provenance.json": "65037c03e99fb75021487e08de02176875f8dea0e3c4a9911b32548e2162075b",
+    "remap.json": "7e75ae6a4cf9c26c6d85200e89d3b9f3e8ad217e440796c668935cb565f3e20a",
+    "remapping.json": "1f9f2341a048b87fe3eca7c665b76ffdb597eba317616c05365c9fb680a16c45",
+    "reused_reviews.jsonl": "455d235e290bba1a8e49bb0804c6fd36d10736c8818911b2a29964ca9bc0fa45",
+    "source/batch_independent_retrieval_reviews.py": "578d8078ce563cf399400ce3d5d4abea34dcf2d218800874276ece34222bbeed",
+    "source/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+    "source/test_retrieval_review_batches.py": "d9bc5815baf7a60a929ba19c9360f24ae96fbff56b45e6d0c0560df55350c5f7"
+  }
+}

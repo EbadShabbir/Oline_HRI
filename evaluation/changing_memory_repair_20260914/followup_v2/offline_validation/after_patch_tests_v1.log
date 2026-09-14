@@ -1,0 +1,16 @@
+test_conversation_delivers_supported_replacement_with_real_validators (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) ... ok
+test_conversation_rejects_past_or_wrong_person_without_composition (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) ... ok
+test_current_delivery_requires_the_same_present_person_role_and_domain (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) ... ok
+test_multiple_cited_current_people_cannot_silently_lose_one (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) ... ok
+test_snapshot_change_still_withholds_and_missing_record_still_abstains (tests.test_current_relationship_repair.CurrentRelationshipDeliveryTests) ... ok
+test_current_lookup_rejects_past_former_negative_and_other_person (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... ok
+test_current_source_and_addressed_speech_are_bound_to_one_witness (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... ok
+test_noncurrent_relationship_query_keeps_legacy_behavior (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... ok
+test_optional_filters_preserve_existing_historical_lookup (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... ok
+test_query_link_accepts_present_tense_without_literal_current (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... ok
+test_query_link_cannot_borrow_role_domain_or_named_owner (tests.test_current_relationship_repair.CurrentRelationshipWitnessTests) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.055s
+
+OK

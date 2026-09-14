@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-09-13T18:52:19.504309+00:00",
+  "immutability": "exclusive creation, hashes and read-only permissions; not privileged WORM",
+  "sha256": {
+    "analysis.json": "e1185234c176b9fadb3f9316c956a38b7c4a04d19cd0b652b6491c769269dc6c",
+    "analysis_source/analyze_independent_retrieval.py": "6891c98a0853f29a0bfec7186a087321d50d867d660275bc5ecc8eba40d3ed70",
+    "analysis_source/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+    "analysis_source/independent_retrieval_supervisor.py": "021fdfa66fa2d1c7fe6ce8bc49a26e5dae65866c5f3cf8f4809d37453236f96b",
+    "analysis_source/test_retrieval_experiment_analysis.py": "89e4ad2cc08bee3d83efe6b0e4cbd90e6693d9ea7c8afcf7ad90aeca8a40f2e9",
+    "attempts.csv": "32e5bfb7ca6974956354a984dfe727ba79453dc2afc32dd8e59655ad856af325",
+    "audit.json": "7720da7cca13962095336efab2cf52c78a29dc3d797398c2c9e898e515fa41fd",
+    "between_collection_boundaries.csv": "c9cf2d927c8359d286cfa6b6ddab1b7ebcff21b64d6e76b04f0f4fe9675dd83e",
+    "blinded/REVIEW_INSTRUCTIONS.md": "17c20d7fdbaa66f43c31ae83d645f37aa8d8bd3c77e53cdad78bbf2360655f18",
+    "blinded/packet_a.jsonl": "acdfbd99fca887a0f90275f8d6d93ce4e98d5a3bb62ea188b6b40aceb2c47785",
+    "blinded/packet_b.jsonl": "013296800451255ebfeda9214eaf9b615ef5ddee564baa91d029627365a3a975",
+    "by_category.csv": "46eef0bef3c22d857e7ee09e8beebfade91b6bb267acf1eca7f47b6092317fa1",
+    "commands.sh": "e11067205d95c8ec87d2bbd30fe2fa53984e953e94554d32bd773bad5bd59414",
+    "overall.csv": "f326acc152721bbd0a008ad7cce0d83f692d9500399e7e9f6efa9b4519ef5def",
+    "paired_attempts.csv": "ba98d31e692b319d70ed7394747329606be7b447eac728af03fcc5c8e352c5e8",
+    "paired_request_means.csv": "70f9263297f58122f9c345042c0d15cf096a751a587bd85ad88da59645500375",
+    "paired_summary.csv": "ffc6fe76f967a769745d53abb74cc5200d63319ccd33f4450789b7eb7e8ade19",
+    "private/mapping.json": "fbde4cded14c96804d1c963707a9f80213e26d99b2da5043414f4f88b916c9ff",
+    "private/seed.json": "7ffc953a0578275aa570bc6d310ea9524d555adf7528877a57a13e69c8d7eb34",
+    "provenance.json": "d15adb81107b22629cffec5407ef9609c052aeaecc24f32d4d736bf3c420ed56",
+    "rejected_admissions.csv": "abfc8931bebe9533d5d35904ccfe2ce3f9b1f04cb38426d2e57e0a8c0f569ffd",
+    "request_repetition_summary.csv": "c98379b7764e19135a77d98b21aef0e70ebf47ddb6718171c8577afa30493238",
+    "sessions.csv": "714d2c63fe42831e6f23eae18d1ae2d3637469347d2e7222d5cdd2eb579ad04b"
+  }
+}

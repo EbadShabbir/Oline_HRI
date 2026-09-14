@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "no_inference": true,
+  "source": "independent authored schedule comparison against sealed baseline",
+  "exact_matching_branch_objects": 12,
+  "exact_matching_checkpoint_objects": 96,
+  "scheduled_restarts": 12,
+  "post_restart_checkpoints": 36,
+  "counts": {
+    "branch": {
+      "correction": 40,
+      "deletion": 28,
+      "expiry": 28
+    },
+    "history_mode": {
+      "retained": 60,
+      "fresh": 36
+    },
+    "expected_kind": {
+      "uncertainty": 48,
+      "original": 16,
+      "replacement": 16,
+      "historical_control": 16
+    }
+  },
+  "artifact_sha256": {
+    "scenarios.json": "5636fd0db7091199839167ab7848b14822ef48ad779c8a45074b8011e0f540f1",
+    "author_ledger.py": "9eb6765c7d34881cd6049565f57f235a28d2fd7e936e253e47306903def78c83",
+    "protocol_v1.md": "00007dc56ab40221836bf54196f8fea1e0499e24c403d06f33ef37142d5491c8",
+    "authored_v1/runtime.json": "75f6f79fdc27a625ba38e730ac4e12c2d049148d688a8d5d0b6eb9c75131e51d",
+    "authored_v1/expected_ledger.json": "c0366f98363989e4b6786740260283d7918ceba8aa9cf97b91f8ea44998231ed",
+    "authored_v1/protocol.md": "00007dc56ab40221836bf54196f8fea1e0499e24c403d06f33ef37142d5491c8"
+  }
+}

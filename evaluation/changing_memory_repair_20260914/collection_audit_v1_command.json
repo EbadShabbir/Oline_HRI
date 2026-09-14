@@ -1,0 +1,23 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evaluation/changing_memory_repair_20260914/audit_repair_collection.py",
+    "--freeze",
+    "evaluation/changing_memory_repair_20260914/frozen_v2",
+    "--run",
+    "evaluation/changing_memory_repair_20260914/run_v1",
+    "--output",
+    "evaluation/changing_memory_repair_20260914/collection_audit_v1.json"
+  ],
+  "cwd": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI",
+  "started_at": "2026-09-14T14:15:09.251792+00:00",
+  "finished_at": "2026-09-14T14:15:10.108933+00:00",
+  "returncode": 0,
+  "sha256": {
+    "evaluation/changing_memory_repair_20260914/audit_repair_collection.py": "9fa45da1bf11cbad582693c74dd12fc24be2254a309e3f13ae566a5c7b59d56f",
+    "evaluation/changing_memory_repair_20260914/frozen_v2/seal.json": "0b9b8e04dda46462ef1dd2682065d731439885723b2ff7ec723c18b79cf7660b",
+    "evaluation/changing_memory_repair_20260914/run_v1/seal.json": "2ef6fc4978d1305f7a481aca6fa4cb587183fd57d9ea5904b761e3852e6de012",
+    "evaluation/changing_memory_repair_20260914/collection_audit_v1.json": "914786d716b005ce59eb83ae18e2aaa0912bd878a631c7546544d6075f26e860",
+    "evaluation/changing_memory_repair_20260914/collection_audit_v1.log": "94449f62b7abfee971ca43dd823490cb024f3f70aab428b7f4004a31e8945317"
+  }
+}

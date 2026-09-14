@@ -1,0 +1,29 @@
+test_direct_envelope_and_empty_records_remain_valid (tests.test_analysis_memory_evidence_v2.EvidenceParserAmendmentTests) ... ok
+test_malformed_or_ambiguous_envelopes_fail_closed (tests.test_analysis_memory_evidence_v2.EvidenceParserAmendmentTests) ... ok
+test_only_actual_generation_request_tail_supplies_evidence (tests.test_analysis_memory_evidence_v2.EvidenceParserAmendmentTests) ... ok
+test_only_parser_addition_and_one_diagnostic_extension_differ_from_original (tests.test_analysis_memory_evidence_v2.EvidenceParserAmendmentTests) ... ok
+test_original_convenience_evidence_and_unrelated_diagnostics_are_unchanged (tests.test_analysis_memory_evidence_v2.EvidenceParserAmendmentTests) ... ok
+test_prefixed_rejected_request_recovers_supplied_evidence_and_preserves_id (tests.test_analysis_memory_evidence_v2.EvidenceParserAmendmentTests) ... ok
+test_same_packets_votes_and_answer_metrics_from_identical_sealed_inputs (tests.test_analysis_memory_evidence_v2.EvidenceParserAmendmentTests) ... ok
+test_client_rejection_and_forwarded_history_are_recorded (tests.test_analysis_changing_memory.ChangingMemoryAnalysisTests) ... ok
+test_disagreement_requires_third_review_before_diagnostics (tests.test_analysis_changing_memory.ChangingMemoryAnalysisTests) ... ok
+test_duplicate_attempt_rejected_and_missing_requires_partial (tests.test_analysis_changing_memory.ChangingMemoryAnalysisTests) ... ok
+test_prepare_blinds_diagnostics_and_pairs_equal_packets (tests.test_analysis_changing_memory.ChangingMemoryAnalysisTests) ... ok
+test_rejected_answer_uses_supplied_envelope_and_validation_trace (tests.test_analysis_changing_memory.ChangingMemoryAnalysisTests) ... ok
+test_required_retrieval_skipped_and_not_reached_are_not_search_failures (tests.test_analysis_changing_memory.ChangingMemoryAnalysisTests) ... ok
+test_resolution_seals_votes_and_counts_all_288 (tests.test_analysis_changing_memory.ChangingMemoryAnalysisTests) ... ok
+test_sealed_inputs_and_process_restart_identity_are_enforced (tests.test_analysis_changing_memory.ChangingMemoryAnalysisTests) ... ok
+test_vote_classification_matches_rubric_and_answer_availability (tests.test_analysis_changing_memory.ChangingMemoryAnalysisTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 2.104s
+
+OK
+{"output": "/tmp/clara-changing-analysis-offline-s0i32dmp/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-changing-analysis-offline-s0i32dmp/reviews", "groups": 132, "disagreements": 1}
+{"output": "/tmp/clara-changing-analysis-offline-epcl60y2/prepared", "review_groups": 133, "attempts": 287, "missing": 1, "packet_sha256": "d564a0058251af11a0c7e72f4a88c1232a75716e319ecab1c6ded0c510b790bc"}
+{"output": "/tmp/clara-changing-analysis-offline-fkvy7fx7/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-changing-analysis-offline-f9wg013k/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-changing-analysis-offline-f9wg013k/reviews", "groups": 132, "disagreements": 0}
+{"output": "/tmp/clara-changing-analysis-offline-f9wg013k/analysis", "planned": 288, "attempted": 288, "useful_correct": 288, "disagreements": 0}
+{"output": "/tmp/clara-changing-analysis-offline-a7cfnl9f/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}

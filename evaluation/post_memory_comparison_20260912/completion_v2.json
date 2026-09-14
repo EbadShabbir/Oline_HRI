@@ -1,0 +1,28 @@
+{
+  "status": "complete",
+  "step": "3 post-memory complete-system comparison, revised existing-swap allowance",
+  "attempts": 432,
+  "attempts_per_arm": 144,
+  "distinct_request_items": 48,
+  "repetitions": 3,
+  "semantic_review_groups": 145,
+  "human_review": "pending",
+  "artifact_integrity_valid": true,
+  "independent_audit_valid": true,
+  "host_cleanup_and_configuration_audit_valid": true,
+  "documentation_links_checked": true,
+  "git_diff_check_exit_code": 0,
+  "result_files_sha256": {
+    "evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/analysis.json": "6ab197dda150e4001edebd380bd96b62a717bd6f8a7aaccf3720eaa7cd696549",
+    "evaluation/post_memory_comparison_20260912/report_v2/tables.md": "aa0049688295dfed03967b9f39da403944d815df85c5c25b38e836c1c8b9c948",
+    "evaluation/post_memory_comparison_20260912/report_v2/provenance.json": "f7baf5a3d18328810bce0f681dc292dda6340e9e8f08837a30567aa3733a72eb",
+    "evaluation/post_memory_comparison_20260912/reviews_v2/review_agreement_v2.json": "684f047534cec9d7923813d6ddf9f4262f47da1dd35ac40e8f288e013824378f",
+    "evaluation/post_memory_comparison_20260912/final_state_v2.json": "217b7324746bb256e04c5abfce2822b50ba1908ea5c3503e0ae23c4cf55827f4",
+    "evaluation/post_memory_comparison_20260912/independent_final_audit_v2.json": "ef8f7204709af103ca6d4f7c5c3588e7a13f9af4b853383e02bafff1e55406b7",
+    "evaluation/post_memory_comparison_20260912/independent_final_audit_v2.py": "22afe1ce0100336939df84bc1125826a7b15b08123fa485ba348348b6fa3cfb0",
+    "results.md": "7da38da97b210355f4d9472b51800b965bee7d14fa22ad01615af087d34a7b74",
+    "developments.MD": "c2a3488e15914e3bb614c054659f9a8db37efd01f21b63974c21c19a68b1f9d3",
+    "evaluation/post_memory_comparison_20260912/README.md": "0d493a1fea1fa06a58831bac0c3419d541a00f96bbcd4eaac48e1a3d14decda0"
+  },
+  "interpretation": "Small-only42/144,large-only44/144,cascade46/144 full-rubric successes. Cascade pooled timing advantage is not an isolated adaptive-routing benefit: only3/144 small generations, CPU/GPU placement differs, large-only faster in rounds2and3. No requirement pass threshold or independent human validation."
+}

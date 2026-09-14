@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-11T14:40:58.056236+00:00",
+  "scope": "first Stage 2 batch, small r1 aborted by output-validation error; excluded from future clean batch",
+  "session": "01_small_r1",
+  "source_unit": "ollama.service",
+  "journal_window": {
+    "since": "2026-09-11 14:38:55 UTC",
+    "until": "2026-09-11 14:39:39 UTC"
+  },
+  "journal_command": [
+    "journalctl",
+    "-u",
+    "ollama.service",
+    "--since",
+    "2026-09-11 14:38:55 UTC",
+    "--until",
+    "2026-09-11 14:39:39 UTC",
+    "--no-pager",
+    "-o",
+    "json"
+  ],
+  "selected_message_substrings": [
+    "offloaded",
+    "layers.requested",
+    "layers.model",
+    "memory.required",
+    "n_ctx                 =",
+    "n_ctx_seq             =",
+    "buffer size",
+    "starting llama server",
+    "flash_attn",
+    "n_gpu_layers",
+    "n_slots ="
+  ],
+  "selected_records_sha256": "812b41dbf4578c7920af727770e0a95288c5bc4b831281e53ee6a7d081a0b09f",
+  "selected_records_hash_serialization": "UTF-8 JSON sort_keys=True,separators=(comma,colon),ensure_ascii=False; no trailing newline",
+  "session_artifact_hashes": {
+    "start.json": "f9f573a53769b2f8d6bcac8f8f634d96a80cb3f1daec621ddc5bc91e74cc65c7",
+    "finish.json": "e95b86cab3c90a98cb331793b25eee62f2951b3dd8f17dada3b44e026124e958",
+    "manifest.json": "29c364c5c90948b3d64076549b1cdb0b22da755061cd4955436d7b01983c20f7",
+    "summary.json": "e0b50c2d6e880f7703471af62759a69d8be98266dfa563ce8c39498347756add"
+  },
+  "models": {
+    "qwen3:0.6b": {
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ],
+      "details": {
+        "context_length": 40960,
+        "embedding_length": 1024,
+        "families": [
+          "qwen3"
+        ],
+        "family": "qwen3",
+        "format": "gguf",
+        "parameter_size": "751.63M",
+        "parent_model": "",
+        "quantization_level": "Q4_K_M"
+      },
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "family": "qwen3",
+      "format": "gguf",
+      "name": "qwen3:0.6b",
+      "parameter_count": 751632384,
+      "parameter_size": "751.63M",
+      "quantization_level": "Q4_K_M",
+      "size": 522653767
+    }
+  },
+  "records": [
+    {
+      "__REALTIME_TIMESTAMP": "1789137541933281",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors: offloaded 29/29 layers to GPU"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789137541933281",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:        CUDA0 model buffer size =   409.29 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789137541933281",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "load_tensors:    CUDA_Host model buffer size =    83.46 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789137548191910",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx                 = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789137548191910",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: n_ctx_seq             = 2048"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789137548191910",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context: flash_attn            = auto"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789137548192674",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_context:  CUDA_Host  output buffer size =     0.58 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789137548224445",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "llama_kv_cache:      CUDA0 KV buffer size =   224.00 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789137548254748",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:      CUDA0 compute buffer size =    28.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789137548254748",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "sched_reserve:  CUDA_Host compute buffer size =     6.01 MiB"
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1789137548695393",
+      "_BOOT_ID": "42c93f634b104ae4b73c1cdf4def0661",
+      "_PID": "6412",
+      "MESSAGE": "srv    load_model: initializing, n_slots = 1, n_ctx_slot = 2048, kv_unified = 'false'"
+    }
+  ],
+  "interpretation": {
+    "gpu_offload": "29/29 layers",
+    "context_tokens": 2048,
+    "slots": 1,
+    "limitation": "Placement evidence for the aborted initial session only; does not establish later session placement."
+  }
+}

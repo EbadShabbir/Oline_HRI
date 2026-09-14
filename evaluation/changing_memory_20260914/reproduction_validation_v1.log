@@ -1,0 +1,6 @@
+{"output": "/tmp/clara-memory-analysis-reproduction-20260914/analysis_v1", "planned": 288, "attempted": 288, "useful_correct": 118, "disagreements": 0}
+{"output": "/tmp/clara-memory-analysis-reproduction-20260914/analysis_v2", "planned": 288, "attempted": 288, "useful_correct": 118, "disagreements": 0}
+{"output": "/tmp/clara-memory-analysis-reproduction-20260914/tables", "tables": 16, "checkpoints": 288, "pairs": 108}
+/usr/local/lib/python3.10/dist-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+{"output": "/tmp/clara-memory-analysis-reproduction-20260914/figures", "cells": 288, "matplotlib": "3.10.9"}

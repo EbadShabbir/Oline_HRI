@@ -1,0 +1,82 @@
+SESSION 1/9 small r1
+[0;93m2026-09-12 15:50:17.099371314 [W:onnxruntime:Default, device_discovery.cc:164 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:89 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+small r1 1/48 s3_p01: ok 13.468s
+small r1 2/48 s3_c12: ok 3.061s
+small r1 3/48 s3_r01: ok 1.613s
+small r1 4/48 s3_t04: ok 5.351s
+small r1 5/48 s3_c02: ok 2.860s
+small r1 6/48 s3_t12: error 3.326s
+small r1 7/48 s3_r11: ok 1.157s
+small r1 8/48 s3_p08: error 2.784s
+small r1 9/48 s3_c08: ok 2.399s
+small r1 10/48 s3_r07: ok 1.457s
+small r1 11/48 s3_t06: ok 2.396s
+small r1 12/48 s3_p09: ok 2.395s
+small r1 13/48 s3_p02: ok 1.570s
+small r1 14/48 s3_r04: ok 1.532s
+small r1 15/48 s3_c10: ok 3.137s
+small r1 16/48 s3_t03: ok 2.096s
+small r1 17/48 s3_t10: ok 2.423s
+small r1 18/48 s3_p11: ok 2.311s
+small r1 19/48 s3_r02: ok 2.222s
+small r1 20/48 s3_c01: ok 2.286s
+small r1 21/48 s3_p04: ok 2.008s
+small r1 22/48 s3_c06: ok 2.334s
+small r1 23/48 s3_t08: ok 2.661s
+small r1 24/48 s3_r12: ok 1.569s
+small r1 25/48 s3_r08: error 2.695s
+small r1 26/48 s3_r03: ok 2.062s
+small r1 27/48 s3_r10: ok 1.167s
+small r1 28/48 s3_r09: ok 1.312s
+small r1 29/48 s3_r06: ok 1.160s
+small r1 30/48 s3_r05: ok 1.624s
+small r1 31/48 s3_p07: ok 1.662s
+small r1 32/48 s3_p03: ok 2.871s
+small r1 33/48 s3_p06: ok 1.013s
+small r1 34/48 s3_p05: ok 1.678s
+small r1 35/48 s3_p10: ok 1.415s
+small r1 36/48 s3_p12: ok 1.585s
+small r1 37/48 s3_c07: ok 2.837s
+small r1 38/48 s3_c11: ok 3.190s
+small r1 39/48 s3_c04: ok 1.976s
+small r1 40/48 s3_c03: ok 1.896s
+small r1 41/48 s3_c09: ok 2.356s
+small r1 42/48 s3_c05: ok 1.359s
+small r1 43/48 s3_t11: ok 2.223s
+small r1 44/48 s3_t05: ok 2.524s
+small r1 45/48 s3_t09: ok 3.314s
+small r1 46/48 s3_t07: ok 2.002s
+small r1 47/48 s3_t01: ok 1.909s
+small r1 48/48 s3_t02: ok 1.701s
+ARTIFACTS /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v1/01_small_r1 status=complete_with_errors
+PREFLIGHT WAIT 02_large_r1: Stage 2 startup temperature must be below 55 C
+PREFLIGHT WAIT 02_large_r1: Stage 2 startup temperature must be below 55 C
+PREFLIGHT WAIT 02_large_r1: Stage 2 startup temperature must be below 55 C
+PREFLIGHT WAIT 02_large_r1: Stage 2 startup temperature must be below 55 C
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+PREFLIGHT WAIT 02_large_r1: swap use exceeds the Stage 2 768 MiB start gate
+BATCH /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/run_v1 status=interrupted

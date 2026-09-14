@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "tests": 5,
+  "stdlib_only": true,
+  "primary_outputs_read": false,
+  "renderer_sha256": "959e27fce25c0ce2693b751b73fd76df10b8af0af5b841a1b8555993a13130cb",
+  "cases": [
+    {
+      "terminal_status": "complete",
+      "attempts": 864,
+      "logical_slots": 18,
+      "strict_prefix": true,
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "terminal_status": "interrupted",
+      "attempts": 864,
+      "logical_slots": 18,
+      "strict_prefix": true,
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "terminal_status": "interrupted",
+      "attempts": 863,
+      "logical_slots": 17,
+      "strict_prefix": true,
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "terminal_status": "source_verification_failed",
+      "attempts": 864,
+      "logical_slots": 18,
+      "strict_prefix": true,
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "terminal_status": "interrupted",
+      "attempts": 864,
+      "logical_slots": 18,
+      "strict_prefix": false,
+      "accepted": false,
+      "expected": false
+    }
+  ]
+}

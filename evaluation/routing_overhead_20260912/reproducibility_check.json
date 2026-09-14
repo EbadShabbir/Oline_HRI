@@ -1,0 +1,13 @@
+{
+  "command": "bash evaluation/routing_overhead_20260912/commands.sh analyze /tmp/clara-routing-reanalysis",
+  "inference_performed": false,
+  "checks": {
+    "numeric_analysis": true,
+    "resolved_reviews": true,
+    "turn_component_table": true,
+    "sequence_component_table": true,
+    "generated_corrected_report": true,
+    "repeated_integrity_audit_passed": true
+  },
+  "passed": true
+}

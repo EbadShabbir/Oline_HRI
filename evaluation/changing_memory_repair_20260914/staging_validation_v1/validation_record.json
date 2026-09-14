@@ -1,0 +1,28 @@
+{
+  "created_at": "2026-09-14T14:29:44.037858+00:00",
+  "status": "passed",
+  "inference_performed": false,
+  "freeze_or_collection_performed": false,
+  "network_or_model_calls_performed": false,
+  "stage": "/tmp/clara-first-repair-source-20260914-v1",
+  "proposed_output_exists": false,
+  "offline_import_and_assets_smoke_passed": true,
+  "source_hash_matches": 41,
+  "lock_identity_matches": 4,
+  "protection_tests": {
+    "command": ".venv/bin/python evaluation/changing_memory_repair_20260914/test_frozen_source_staging.py",
+    "count": 5,
+    "failures": 0,
+    "errors": 0,
+    "duration_seconds": 0.034,
+    "evidence": "Successful exec tool output recorded in agent conversation; source snapshot preserved here."
+  },
+  "sha256": {
+    "stage.log": "5536411d2e557bce0a3dbf49ecc1102b115acddc3fff651c20175c8ef1a38b2a",
+    "frozen_source_reproduction.md": "f8b5320aeeda3fff339fc4f39f46b45e2f7b77943179dce029e59d309aef7b26",
+    "test_frozen_source_staging.py": "8ddade1fb6c232543dc91d3bece8f5b4d825c3bdbd659295d55e5f57a199212c",
+    "stage_first_repair_reproduction.py": "25b7b7c90394759a5b92d213a086182dd4898e45f35a86504b6ae7ad0b9189ca",
+    "stage_command.json": "15c4abac7eb12d64de4e4869709b80aa5ceedd6852e1dd0e67dff6985e9b0ac3",
+    "offline_stage_receipt.json": "00f8fee8b8e5a3f706b896fa85b7a3b39399672c58bea9e4277e8a49bb3d6b6c"
+  }
+}

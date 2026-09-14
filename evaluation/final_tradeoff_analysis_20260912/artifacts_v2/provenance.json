@@ -1,0 +1,47 @@
+{
+  "deadline_curve_verified_from_request_labels": true,
+  "deadline_readout_scope": "descriptive post-hoc coordinates, not requirements",
+  "deadline_readouts": [
+    5,
+    10,
+    15,
+    30
+  ],
+  "inference_calls": 0,
+  "input_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/analysis.json": "6ab197dda150e4001edebd380bd96b62a717bd6f8a7aaccf3720eaa7cd696549",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/blinded_mapping.jsonl": "8684ec25d436cb719a80d6d3769ef3d72f92cbcd4d58bc53a4efa5f02510fb0a",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/blinded_review.jsonl": "bc41f9615712db33bf6d6dd29af72422ad30e11cd4516933a71ea45119b0c2cc",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/deadline_quality_curve.json": "1c689675b910ae7dac76163d064a3b677d80cd87794e4995a700a37aa435244d",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/review_manifest.json": "9d95f5109944b31c515b0f8b08cfa7d4bee0b40cef10972410734e0d24880732",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/row_metrics.jsonl": "a5859d64d6b8b4d42a12be71bc6b842971e252ca904b27c691870be0b4bfd2b7",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/post_memory_comparison_20260912/analysis_v2_reviewed/semantic_review.json": "7bca49d3dc61e6962537c720f4215c4d95d99042ec88b4d204ccbe5e4fb9968f"
+  },
+  "inputs_unchanged": true,
+  "output_sha256": {
+    "analyze_tradeoffs.py": "8b44290d1344a35a72ecbb473f4ef4cfa4f5951dbbddedbf3fb7e67094c51527",
+    "deadline_curves.csv": "4679cb1421585cf708418a8563637a8cec3020edcb6f43b95cb94235ee61de94",
+    "deadline_curves.pdf": "6984fa1771f6b3aef47114071e7bfc639c9b81d4ba257c4f4fc5b3d8a4212e98",
+    "deadline_curves.png": "d3d1dab59956035be3075bfd9996ebf850d0f7886cff87b5d623514c9ae5cd22",
+    "deadline_curves.svg": "e7b463640093cf9e9dd7ed22131670beb0324b43f0234a41fd3d914e90a408dd",
+    "deadline_readouts.csv": "5a3d40e10d39d726b7756165ecf412ce14ec90b15c899e1bbcdfc2e50c79deab",
+    "quality_latency_rounds.pdf": "a017a7544faa25c72e57b9693892d3243c82a52ea8c0e869c03cf285b79f3506",
+    "quality_latency_rounds.png": "909b15ecbab11c2a71ec5183a9562f0d154438720f490ce307ee2c6dbb1ebbe8",
+    "quality_latency_rounds.svg": "2d9d6c9f743514491986d2e62133261eb1ea45f3abc7bb0302a5fdf321ffbc33",
+    "repetitions.csv": "86b4436e6ebee2881dfe06d1a48d81ff8dcc6a28969b378928953406f7229807",
+    "report.md": "30ad3c09b27705983c0f07a4dbb48aa30f55991b89c794e01f8b292221dc3ee5",
+    "summary.json": "c54e2da300b1167e4c483025c6f7f2907d5e9386e6fbea3d7ff96f8abd227a31"
+  },
+  "plotting_environment": "separate temporary virtual environment; CLARA runtime environment unchanged",
+  "plotting_packages": {
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.1",
+    "pillow": "12.3.0"
+  },
+  "python": "3.13.13",
+  "quality_source": "Resolved semantic_review.review_opinions joined through blinded_mapping; row_metrics.semantic_quality ignored",
+  "recorded_at": "2026-09-12T14:12:30.680729+00:00",
+  "scoring_changes": false,
+  "script_sha256": "8b44290d1344a35a72ecbb473f4ef4cfa4f5951dbbddedbf3fb7e67094c51527",
+  "system_configuration_changes": false
+}

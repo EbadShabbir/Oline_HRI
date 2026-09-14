@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "frozen_at": "2026-09-11T14:42:35.663389+00:00",
+  "workload_sha256": "5ac0f9f8c160862e0a14a2162e6bda0d61a3cdf6045ed31e844f63f93996542c",
+  "workload_notes_sha256": "cf4ce2fd8eff345a148264f26909d57c6c13ca0054c4f8d6f66110b7959e8607",
+  "protocol_sha256": "91b678f98510cb88d387ae9cd802b4a6c0df0ecd6526574cd549be0324590367",
+  "source_sha256": {
+    "config/default.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+    "scripts/complete_system_device_guard.py": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+    "scripts/run_arc_capability.py": "2d55342123aa853952a44b6496285b338b322ec65f32f83bbf106e5c606885a0",
+    "scripts/run_complete_system.py": "888daae7b84126744cfdd54aa56cf220f0482f81b7d0b167a2ad3107849f4dcb",
+    "scripts/run_complete_system_batch.py": "621dd19654bb290c0a07c652228e0d4b928e61b6eced7c9c3d9e709628be0014",
+    "scripts/run_pair_remediation_validation.py": "5e9ce447e2591c17b741781638140a1cec06d3b99603f29fd335639591cbbb13",
+    "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+    "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+    "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+    "src/oline_hri/cli.py": "ca1f8d307ebbe5028a5ac88e530da2b5062755ab0f5edbf73c85bdd1739efbb0",
+    "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+    "src/oline_hri/conversation.py": "3a1e371355a5c19b0b56f5e232252df21cfce526d859903bb881b4f006fcec4a",
+    "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+    "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+    "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+    "src/oline_hri/evaluation_experiment.py": "d5d286d1dff60b2a85acc9be524dd75f07f8dde363c002094b505c0734431739",
+    "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+    "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+    "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+    "src/oline_hri/evaluation_runner.py": "2a7d3ec2dcd4f10c75eac7ce4703f31a2fbdfe039270f50407e0b8a65ad0161f",
+    "src/oline_hri/evaluation_scoring.py": "e4e772a9a003e9ebf53d54cd9dae232dcfea23e896d8a783a6f6cce727ea9772",
+    "src/oline_hri/evaluation_systems.py": "93244d3ee2beb5469722f1cd2bd7eccc1fa3bf2139077a01cd196830ff6df014",
+    "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+    "src/oline_hri/grounded_composition.py": "b8a159c8412d444558e5a3832d8e40e8d33456fa4aa82953a54c2e3fe393e3ab",
+    "src/oline_hri/memory.py": "4f2d261de00fd1df2018ebeba2778cedc236ef077697c8e1319302b61f9a78cb",
+    "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+    "src/oline_hri/memory_evidence.py": "c2a0a9353eb1661dd5b37aab3fc0620f1ff74c0abafe5e8b4ef3da0e565f7802",
+    "src/oline_hri/ollama.py": "7ef373d808bb27ac25a3d813e36d82c2279baf6003242fe534b52d2f747029ba",
+    "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+    "src/oline_hri/relationships.py": "9ceee92ed123e988047c8722c20e872b77acdc9060dddb52ed38d08c1199a823",
+    "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+    "src/oline_hri/retrieval.py": "40364d1fb06aa68bae9bd3d31a583421f74883d9a0fe9815f72e9958eb8cea84",
+    "src/oline_hri/routing.py": "36263deb5fd317cd2881dff2270c407619697672ef82f094feeaec35e9767eff",
+    "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0"
+  },
+  "models": {
+    "qwen3:0.6b": {
+      "name": "qwen3:0.6b",
+      "size": 522653767,
+      "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "751.63M",
+        "quantization_level": "Q4_K_M",
+        "context_length": 40960,
+        "embedding_length": 1024
+      },
+      "family": "qwen3",
+      "format": "gguf",
+      "parameter_count": 751632384,
+      "parameter_size": "751.63M",
+      "quantization_level": "Q4_K_M",
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ]
+    },
+    "qwen3:1.7b": {
+      "name": "qwen3:1.7b",
+      "size": 1359293444,
+      "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "2.0B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 40960,
+        "embedding_length": 2048
+      },
+      "family": "qwen3",
+      "format": "gguf",
+      "parameter_count": 2031739904,
+      "parameter_size": "2.0B",
+      "quantization_level": "Q4_K_M",
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ]
+    }
+  },
+  "ollama_version": {
+    "version": "0.33.3"
+  },
+  "embedding_asset_sha256": {
+    "config.json": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750",
+    "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+    "onnx/model.onnx": "828e1496d7fabb79cfa4dcd84fa38625c0d3d21da474a00f08db0f559940cf35"
+  },
+  "runtime_versions": {
+    "numpy": "2.2.6",
+    "onnxruntime": "1.23.2",
+    "tokenizers": "0.23.2"
+  },
+  "device_policy": {
+    "policy_id": "complete_system_stage2_common_device_limits_v1",
+    "scope": "all three Stage 2 arms; embeddings through final cleanup",
+    "min_start_available_kib": 2097152,
+    "max_start_swap_used_kib": 786432,
+    "max_start_temperature_c_exclusive": 55.0,
+    "min_runtime_available_kib": 786432,
+    "max_runtime_swap_used_kib": 1048576,
+    "max_runtime_temperature_c_exclusive": 68.0,
+    "maximum_resident_models": 1,
+    "power_mode": "15W mode 0",
+    "fan_required": true,
+    "unchanged_boot_and_thermal_trip_counters": true,
+    "telemetry_interval_ms": 500,
+    "telemetry_stall_ceiling_seconds": 5,
+    "persistent_system_changes": false,
+    "prior_arc_limits_reused": false
+  },
+  "offline_validation": {
+    "adapter_and_production_regression_tests_passed": 177,
+    "runner_and_guard_tests_passed": 15,
+    "workload_replay_passed": true
+  },
+  "planned_attempts": 432,
+  "distinct_requests": 48,
+  "repetitions": 3,
+  "workload_metadata": {
+    "workload_id": "clara_complete_text_system_pilot_20260911_v1",
+    "created_on": "2026-09-11",
+    "status": "authored_before_pilot_inference",
+    "annotation_status": "author_gold_pending_independent_review",
+    "scope": "text_request_complete_pipeline_static_memory_lifecycle_snapshot",
+    "fictional_data": true,
+    "public_benchmark": false,
+    "provenance": "New synthetic prompts, facts, names and dates authored for this pilot; no model outputs used in selection.",
+    "execution_order": "stratified_shuffle_one_per_stratum_per_four_case_block",
+    "order_seed": 20260911,
+    "counts_by_stratum": {
+      "routine_general": 12,
+      "general_multiconstraint": 12,
+      "personal_recall": 12,
+      "personal_temporal_synthesis": 12
+    },
+    "planned_repetitions": 3,
+    "counterbalanced_arm_orders": [
+      [
+        "small",
+        "large",
+        "cascade"
+      ],
+      [
+        "large",
+        "cascade",
+        "small"
+      ],
+      [
+        "cascade",
+        "small",
+        "large"
+      ]
+    ],
+    "planned_total_attempts": 432,
+    "conversation_history": "fresh_conversation_per_request",
+    "model_residency": "natural_serial_residency_within_each_48_request_session",
+    "quality_unit": "distinct_request_item_with_shared_scenario_and_profile_clustering",
+    "scoring": "Complete semantic rubric review required; regexes are auxiliary lexical signals only.",
+    "execution_gold_boundary": "Only execution_cases.prompt enters the user-message path; rubrics, stratum, scenario_id and expected_state are excluded from model input.",
+    "predefined_pass_thresholds": null,
+    "threshold_note": "No user-approved quality or responsiveness cutoff; report continuous measures and actual tradeoffs."
+  },
+  "revision": 2,
+  "supersedes_freeze_sha256": "25a43bfa00b0a06775fd3169ce557f8f9b426484f1a7e7b74b834b9d883e11c9",
+  "runner_amendment_sha256": "2f1749ec4d979bc66870fb8bb8bb6121804c04a2c59aa33147f0a3ae84675b25"
+}

@@ -1,0 +1,25 @@
+{
+  "scope": "Two fresh-context assistant reviews of the neutral48-entry worksheet; no independent human validation",
+  "input_sha256": {
+    "review_inputs/worksheet.jsonl": "dd69de2e13644fb5d88e32185b609602914833a198e49aeb4b1fe56923be6535",
+    "reviews/reviewer_a.jsonl": "16d75bc5dac2427ef4432c086a0a8e36398d8a4b3ce8551050c86bb3a3fc17df",
+    "reviews/reviewer_b.jsonl": "aed4e69b6e0d6f0a67bbcf605eca70380b21cfecddfd17e9af234c0d4c2db4a4"
+  },
+  "unique_outputs": 48,
+  "review_opinions": 96,
+  "agreed_on_judgment_and_both_flags": 48,
+  "disagreement_review_ids": [],
+  "adjudication_required": false,
+  "judgment_counts": {
+    "incorrect": 22,
+    "complete": 11,
+    "appropriate_abstention": 3,
+    "partial": 6,
+    "technical_failure": 3,
+    "inappropriate_abstention": 3
+  },
+  "unsupported_personal_claim_outputs": 11,
+  "forbidden_or_stale_claim_outputs": 2,
+  "flag_interpretation": "The2forbidden-or-stale flags here concern an invented tram departure and a wrong-owner ticket assignment, not two forgotten/expired-memory disclosures. Preserve per-entry notes.",
+  "root_review": "Parent inspected all48 prompt/speech/judgment explanations and the2flagged forbidden claims; retained both original reviews unchanged."
+}

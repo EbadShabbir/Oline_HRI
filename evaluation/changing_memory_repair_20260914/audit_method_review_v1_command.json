@@ -1,0 +1,15 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "evaluation/changing_memory_repair_20260914/audit_method_review_v1.py"
+  ],
+  "cwd": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI",
+  "started_at": "2026-09-14T13:56:47.407644+00:00",
+  "finished_at": "2026-09-14T13:56:47.697989+00:00",
+  "returncode": 0,
+  "sha256": {
+    "evaluation/changing_memory_repair_20260914/audit_method_review_v1.py": "26d0d251c8e694dce5d8e4a0449b9a50d102247bff35d6ea78f6b584006e0faa",
+    "evaluation/changing_memory_repair_20260914/audit_method_review_v1.log": "4bfe6233ea2a5f352a1041014185683e39352f09a57d8f727598ad89dd4ccf7d",
+    "evaluation/changing_memory_repair_20260914/audit_method_review_v1.json": "eb4510ce22a31f893fc3e4275dbf3c591c884344f7e94d6302d119196616756f"
+  }
+}

@@ -1,0 +1,142 @@
+{
+  "scope": "read-only first completed live sequence audit; no inference or frozen source changes",
+  "sequence": {
+    "sequence_id": "ro_eeee_1",
+    "pattern": "EEEE",
+    "arm": "small",
+    "repetition": 1,
+    "attempt_directory": ".",
+    "status": "complete",
+    "attempted_turns": 4,
+    "complete": true,
+    "accounting_ok": true,
+    "startup_seconds": 2.785508094,
+    "request_seconds": 17.597038417,
+    "sequence_seconds": 20.565135428,
+    "sequence_gaps_seconds": 0.182588917,
+    "envelope_seconds": 21.493935681,
+    "cleanup_seconds": 0.156967047,
+    "delivered": 4,
+    "resident_models_after_cleanup": [],
+    "error": null,
+    "cleanup_errors": []
+  },
+  "turns": [
+    {
+      "index": 1,
+      "wall_seconds": 12.198719156,
+      "actual_generator": "qwen3:0.6b",
+      "residency_condition": "cold_start",
+      "memory_classifier_calls": 1,
+      "compute_classifier_calls": 0,
+      "gpu_allocation_fraction": 1.0
+    },
+    {
+      "index": 2,
+      "wall_seconds": 1.969340306,
+      "actual_generator": "qwen3:0.6b",
+      "residency_condition": "resident_same_model",
+      "memory_classifier_calls": 1,
+      "compute_classifier_calls": 0,
+      "gpu_allocation_fraction": 1.0
+    },
+    {
+      "index": 3,
+      "wall_seconds": 1.699976876,
+      "actual_generator": "qwen3:0.6b",
+      "residency_condition": "resident_same_model",
+      "memory_classifier_calls": 1,
+      "compute_classifier_calls": 0,
+      "gpu_allocation_fraction": 1.0
+    },
+    {
+      "index": 4,
+      "wall_seconds": 1.729002079,
+      "actual_generator": "qwen3:0.6b",
+      "residency_condition": "resident_same_model",
+      "memory_classifier_calls": 1,
+      "compute_classifier_calls": 0,
+      "gpu_allocation_fraction": 1.0
+    }
+  ],
+  "event_counts": {
+    "complete_request": 4,
+    "routing": 4,
+    "deterministic_routing": 4,
+    "memory_classifier": 4,
+    "model_transition": 8,
+    "backend_chat": 8,
+    "residency_audit": 8,
+    "answer_generation": 4,
+    "validation": 4
+  },
+  "backend_load_seconds": [
+    {
+      "index": 1,
+      "purpose": "memory_selector",
+      "load_duration_seconds": 9.800387863,
+      "backend_total_seconds": 10.732834241,
+      "call_wall_seconds": 10.778224437
+    },
+    {
+      "index": 1,
+      "purpose": "generation",
+      "load_duration_seconds": 0.002361717,
+      "backend_total_seconds": 1.226422383,
+      "call_wall_seconds": 1.269255763
+    },
+    {
+      "index": 2,
+      "purpose": "memory_selector",
+      "load_duration_seconds": 0.00375789,
+      "backend_total_seconds": 0.69605062,
+      "call_wall_seconds": 0.7461969
+    },
+    {
+      "index": 2,
+      "purpose": "generation",
+      "load_duration_seconds": 0.002510167,
+      "backend_total_seconds": 1.03155171,
+      "call_wall_seconds": 1.076280726
+    },
+    {
+      "index": 3,
+      "purpose": "memory_selector",
+      "load_duration_seconds": 0.001994546,
+      "backend_total_seconds": 0.473123431,
+      "call_wall_seconds": 0.51198929
+    },
+    {
+      "index": 3,
+      "purpose": "generation",
+      "load_duration_seconds": 0.003619617,
+      "backend_total_seconds": 1.003174951,
+      "call_wall_seconds": 1.040128762
+    },
+    {
+      "index": 4,
+      "purpose": "memory_selector",
+      "load_duration_seconds": 0.001809936,
+      "backend_total_seconds": 0.457040675,
+      "call_wall_seconds": 0.500979128
+    },
+    {
+      "index": 4,
+      "purpose": "generation",
+      "load_duration_seconds": 0.001607599,
+      "backend_total_seconds": 1.028289562,
+      "call_wall_seconds": 1.07307503
+    }
+  ],
+  "all_model_digests_and_contexts_match_freeze": true,
+  "identity_snapshots": 15,
+  "all_exclusive_partitions_equal_request_wall": true,
+  "audit_errors": [],
+  "frozen_source_archive_checked": true,
+  "selected_files_sha256": {
+    "evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_small/observations.jsonl": "873c9733890d0552184ff3f95b29992729bb9c764798876bf58f5a5b2ad44974",
+    "evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_small/finish.json": "ab683d2ad7b88c93cafed5e82c71da2f21877367995cead25477781a00fad6ed",
+    "evaluation/routing_overhead_20260912/run_v1/ro_eeee_1_r1_small/startup.json": "ea7720aa542a864529710ca5991075573dbd99b1a373021fd6786458e9ee96e5",
+    "evaluation/routing_overhead_20260912/frozen_v1/freeze.json": "43cabf6391b456adf8fe3237aa6216eb2d17d4b88ab8a14b7b505c94d4988aec"
+  }
+}

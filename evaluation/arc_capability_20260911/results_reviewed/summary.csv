@@ -1,0 +1,5 @@
+arm,status,correct,total,easy_correct,challenge_correct,mean_seconds,median_seconds,p95_seconds
+small,complete,64,100,40,24,0.40035405096,0.2744202225,0.31335687085
+large,complete,79,100,43,36,0.62398936516,0.4228311625,0.4931679591
+cascade,complete,79,100,43,36,29.82422833611,30.225652505,37.36206701475
+extra,preflight_blocked,,100,,,,,

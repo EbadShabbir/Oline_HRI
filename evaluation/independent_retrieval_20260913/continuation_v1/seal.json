@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-09-13T17:03:25.775915+00:00",
+  "immutability": "exclusive creation, SHA256 manifests, read-only permissions; not privileged WORM",
+  "sha256": {
+    "continuation.json": "072332931ed0c1eb6e504d8f5d18bb7d69b0e80d878f0eef1bbc116b6c1f8b96",
+    "independent_review.json": "e4bc2240f4d9cd1d93194fd63683687f06b2b8e85b7aa9a85b8620f7a47ba50b",
+    "protocol_amendment.md": "541a588a35c8ece2b2341e84e312d03923f049ee2381b73070266bbc3bb4d208",
+    "source/scripts/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+    "source/scripts/independent_retrieval_fragment_worker.py": "84f3e6423657465cc0783e42af4d796f608815d9696b38be2b9bd20bce896904",
+    "source/tests/test_retrieval_continuation.py": "498e498462f3e2b342e060710a0cdcee9d29170c484f1464b02fd7da9733387e",
+    "source/tests/test_retrieval_fragment_worker.py": "966e868b30173887112c09e447f8f4bd8980a62460647808956712c3788eb11b"
+  }
+}

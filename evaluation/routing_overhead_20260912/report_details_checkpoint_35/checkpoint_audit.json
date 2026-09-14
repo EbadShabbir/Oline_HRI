@@ -1,0 +1,27 @@
+{
+  "scope": "read-only finished-session checkpoint audit; provisional counts only",
+  "sessions": 35,
+  "turns": 140,
+  "span_partitions_exact": true,
+  "backend_HTTP_calls": 206,
+  "identity_snapshot_count": 486,
+  "model_digests_contexts_valid": true,
+  "cleanup_all_verified_empty": true,
+  "guard_violations": 0,
+  "telemetry_peak_temperature_c": 56.937,
+  "telemetry_peak_logical_swap_mib": 2076,
+  "all_startup_RAM_temperature_admission_checks_pass": true,
+  "replay_turns_exactly_matched": 32,
+  "matched_replay_turns_with_failed_delivery": 2,
+  "replay_classifier_calls": 0,
+  "successful_lifecycle_span_counts": {
+    "unload_request": 23,
+    "eviction_verification": 23
+  },
+  "unloads_of_model_present_before_turn": 5,
+  "frozen_v2_source_unchanged": true,
+  "blocking_instrumentation_errors": [],
+  "upcoming_DDEE": "Actual path separates unload_request HTTP acknowledgement, eviction_verification /api/ps completion, backend_chat nested loading, and complete turn wall. Selected and actual turn3/turn4 models are separately recorded. Turn4 return has no fifth request; following-turn cost after that return is unobserved.",
+  "offline_checker_note": "Preliminary checker looked for eviction proof at wrong attribute nesting; corrected to recorded attributes.residency_after and rechecked all spans. No instrumentation defect or raw edit.",
+  "no_inference_or_plots": true
+}

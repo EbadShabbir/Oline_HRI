@@ -1,0 +1,159 @@
+{
+  "captured_at": "2026-09-12T11:55:50.278752+00:00",
+  "scope": "Read-only process memory diagnostic while scheduled admission waits; no command lines or environment collected; RSS can double-count shared pages",
+  "snapshot": {
+    "boot_id": "42c93f63-4b10-4ae4-b73c-1cdf4def0661",
+    "captured_at": "2026-09-12T11:55:50.282045+00:00",
+    "fan_pwm": 84,
+    "memory": {
+      "mem_total_kib": 7803236,
+      "mem_available_kib": 2419984,
+      "swap_total_kib": 3901608,
+      "swap_free_kib": 2885800,
+      "swap_used_kib": 1015808
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "SYS_RESET_N",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 53.843,
+      "gpu-thermal": 53.312,
+      "soc0-thermal": 52.375,
+      "soc1-thermal": 52.25,
+      "soc2-thermal": 52.625,
+      "tj-thermal": 53.843
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "processes_by_rss": [
+    {
+      "pid": 10359,
+      "name": "code",
+      "rss_kib": 446904,
+      "swap_kib": 19984
+    },
+    {
+      "pid": 10521,
+      "name": "codex",
+      "rss_kib": 369608,
+      "swap_kib": 25124
+    },
+    {
+      "pid": 10271,
+      "name": "code",
+      "rss_kib": 298232,
+      "swap_kib": 31448
+    },
+    {
+      "pid": 59057,
+      "name": "update-manager",
+      "rss_kib": 273776,
+      "swap_kib": 0
+    },
+    {
+      "pid": 24135,
+      "name": "firefox",
+      "rss_kib": 256300,
+      "swap_kib": 14016
+    },
+    {
+      "pid": 10463,
+      "name": "code",
+      "rss_kib": 239352,
+      "swap_kib": 32244
+    },
+    {
+      "pid": 7979,
+      "name": "gnome-shell",
+      "rss_kib": 219492,
+      "swap_kib": 58560
+    },
+    {
+      "pid": 8503,
+      "name": "fwupd",
+      "rss_kib": 172248,
+      "swap_kib": 2120
+    },
+    {
+      "pid": 10179,
+      "name": "code",
+      "rss_kib": 138432,
+      "swap_kib": 52392
+    },
+    {
+      "pid": 9831,
+      "name": "anydesk",
+      "rss_kib": 136676,
+      "swap_kib": 6932
+    },
+    {
+      "pid": 10233,
+      "name": "code",
+      "rss_kib": 135300,
+      "swap_kib": 28304
+    },
+    {
+      "pid": 8343,
+      "name": "gnome-software",
+      "rss_kib": 115696,
+      "swap_kib": 67208
+    },
+    {
+      "pid": 24417,
+      "name": "Privileged Cont",
+      "rss_kib": 99588,
+      "swap_kib": 3028
+    },
+    {
+      "pid": 7291,
+      "name": "Xorg",
+      "rss_kib": 91660,
+      "swap_kib": 7844
+    },
+    {
+      "pid": 10365,
+      "name": "code",
+      "rss_kib": 83372,
+      "swap_kib": 13160
+    },
+    {
+      "pid": 8224,
+      "name": "packagekitd",
+      "rss_kib": 67792,
+      "swap_kib": 2312
+    },
+    {
+      "pid": 10432,
+      "name": "code",
+      "rss_kib": 66100,
+      "swap_kib": 35120
+    },
+    {
+      "pid": 10368,
+      "name": "code",
+      "rss_kib": 59452,
+      "swap_kib": 18736
+    },
+    {
+      "pid": 6674,
+      "name": "nxserver.bin",
+      "rss_kib": 50272,
+      "swap_kib": 78084
+    },
+    {
+      "pid": 10530,
+      "name": "code",
+      "rss_kib": 48444,
+      "swap_kib": 20544
+    }
+  ]
+}

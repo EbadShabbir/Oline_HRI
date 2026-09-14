@@ -1,0 +1,27 @@
+{
+  "created_at": "2026-09-13T18:58:31.703356+00:00",
+  "immutability": "exclusive creation, exact byte copies, SHA256 and read-only permissions; not privileged WORM",
+  "sha256": {
+    "REVIEW_INSTRUCTIONS.md": "17c20d7fdbaa66f43c31ae83d645f37aa8d8bd3c77e53cdad78bbf2360655f18",
+    "commands.sh": "ebdea56ee6809f08dc635ba6d09c64ecdb1288e4b232f48803f6951e312afd25",
+    "comparison/ADJUDICATION_INSTRUCTIONS.md": "caaa10f97450f7bb284291641f367e3cca4ae30210c31efd71679273e5214d22",
+    "comparison/REVIEW_INSTRUCTIONS.md": "17c20d7fdbaa66f43c31ae83d645f37aa8d8bd3c77e53cdad78bbf2360655f18",
+    "comparison/commands.sh": "10939947710f09f04c2f563c3467e76ddad9076c5f404bb1860120eff1f29a4a",
+    "comparison/comparison.json": "c5131c776fb6161c08de41ada2706640be8ba305f0bb7d7f3f8a669d3dd814d8",
+    "comparison/disagreement_packet.jsonl": "8869c15b3800be1a72a27e7b70d288ae9057e0037c523af0510dae08f36b8e2c",
+    "comparison/original_review_a.jsonl": "702d27db2519af79a0a3903aa00659cb7a91361c3e0141f931cb00209b6d9cb5",
+    "comparison/original_review_b.jsonl": "089013a9565a46f669615afb803713457c34d754be785ed0b7a4e49876358cf3",
+    "comparison/packet.jsonl": "acdfbd99fca887a0f90275f8d6d93ce4e98d5a3bb62ea188b6b40aceb2c47785",
+    "comparison/provenance.json": "c2f4b0097d0f9cecb88c7a80adfc8026ca51f5e9cb787dd5572f57eb64064a0d",
+    "comparison/seal.json": "9b062aba17ff83555ff39afa17a521cbdd54617d8b9cb9659d009547c40eb72b",
+    "comparison/source/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+    "original_adjudication.jsonl": "93ca39eb5b08f5132b43b4f09b4942a1ab3cb252ee0ba0ad454683e65a2c6dce",
+    "original_review_a.jsonl": "702d27db2519af79a0a3903aa00659cb7a91361c3e0141f931cb00209b6d9cb5",
+    "original_review_b.jsonl": "089013a9565a46f669615afb803713457c34d754be785ed0b7a4e49876358cf3",
+    "packet.jsonl": "acdfbd99fca887a0f90275f8d6d93ce4e98d5a3bb62ea188b6b40aceb2c47785",
+    "provenance.json": "9629770fe9a0ecee31210ec7893dd514d65255282b98f3167d7f76c78024681e",
+    "resolved_reviews.jsonl": "97c06a405564e4d2243370e6df473432fff0bc8d3caa371c5caf725248f823f9",
+    "review_agreement.json": "3be561797ad2b597076a4bb9229924a6c0236982b7e90e4dccb6d37e40dc6cee",
+    "source/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a"
+  }
+}

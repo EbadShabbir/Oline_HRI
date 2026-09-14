@@ -1,0 +1,17 @@
+{
+  "command": "PYTHONPATH=src:scripts:tests .venv/bin/python -m unittest tests.test_independent_retrieval_adapter tests.test_independent_retrieval_runner tests.test_post_memory_device_guard tests.test_evaluation_systems tests.test_routing_timing -v",
+  "tests": 37,
+  "passed": 37,
+  "failed": 0,
+  "skipped": 0,
+  "log": "offline_final_validation_v3.txt",
+  "live_inference": false,
+  "note": "Full evaluation answers remain ungenerated; excluded smoke revisions and original artifacts retained.",
+  "excluded_live_smoke": {
+    "directory": "../smoke_v3",
+    "attempted": 12,
+    "delivered": 12,
+    "controls_passed": true,
+    "included_in_primary_results": false
+  }
+}

@@ -1,0 +1,36 @@
+test_already_imported_runtime_guard_observes_revision_and_all_original_invariants (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_capacity_drift_missing_capacity_and_bad_memory_readings_fail_closed (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_historical_988_mib_rejection_is_admitted_only_under_explicit_revision (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_nested_revision_and_interrupt_restore_all_prior_constants (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_reserve_boundary_accepts_equality_and_rejects_one_kib_more (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_streaming_swap_crossing_is_saved_then_interrupts_once (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_temperature_fan_power_boot_trip_and_empty_residency_requirements_remain (tests.test_post_memory_device_guard.PostMemoryDeviceGuardTests) ... ok
+test_device_names_and_malformed_sources_are_rejected (tests.test_evaluation_telemetry.DiskStatsTests) ... ok
+test_incompatible_or_decreasing_snapshots_are_rejected (tests.test_evaluation_telemetry.DiskStatsTests) ... ok
+test_parse_and_delta_include_only_available_kernel_counters (tests.test_evaluation_telemetry.DiskStatsTests) ... ok
+test_read_diskstats_uses_bounded_fixed_source (tests.test_evaluation_telemetry.DiskStatsTests) ... ok
+test_baseline_is_json_safe_and_omits_unavailable_fields (tests.test_evaluation_telemetry.RuntimeBaselineTests) ... ok
+test_invalid_monotonic_timestamps_are_rejected (tests.test_evaluation_telemetry.TegrastatsParserTests) ... ok
+test_malformed_and_out_of_range_lines_are_rejected (tests.test_evaluation_telemetry.TegrastatsParserTests) ... ok
+test_optional_gr3d_frequencies_and_crlf_are_accepted (tests.test_evaluation_telemetry.TegrastatsParserTests) ... ok
+test_valid_line_is_strictly_parsed_and_canonicalized (tests.test_evaluation_telemetry.TegrastatsParserTests) ... ok
+test_body_cancellation_is_not_replaced_by_cleanup_failure (tests.test_evaluation_telemetry.TegrastatsSamplerTests) ... ok
+test_callback_cancellation_and_error_are_reported (tests.test_evaluation_telemetry.TegrastatsSamplerTests) ... ok
+test_invalid_construction_start_failure_and_reuse_are_safe (tests.test_evaluation_telemetry.TegrastatsSamplerTests) ... ok
+test_sampler_uses_fixed_argv_emits_callback_and_terminates_child (tests.test_evaluation_telemetry.TegrastatsSamplerTests) ... ok
+test_sampler_writes_and_flushes_canonical_jsonl (tests.test_evaluation_telemetry.TegrastatsSamplerTests) ... ok
+test_timeout_kills_only_the_owned_child (tests.test_evaluation_telemetry.TegrastatsSamplerTests) ... ok
+test_unexpected_eof_and_oversized_lines_are_reported (tests.test_evaluation_telemetry.TegrastatsSamplerTests) ... ok
+test_empty_and_single_sample_summaries_do_not_invent_energy (tests.test_evaluation_telemetry.TelemetrySummaryTests) ... ok
+test_nonincreasing_or_invalid_samples_are_rejected (tests.test_evaluation_telemetry.TelemetrySummaryTests) ... ok
+test_summary_has_nearest_rank_percentiles_and_trapezoidal_energy (tests.test_evaluation_telemetry.TelemetrySummaryTests) ... ok
+test_already_imported_runtime_guard_uses_new_limits_and_keeps_invariants (tests.test_complete_system_device_guard.CompleteSystemDeviceGuardTests) ... ok
+test_missing_and_invalid_sensors_fail_closed (tests.test_complete_system_device_guard.CompleteSystemDeviceGuardTests) ... ok
+test_nested_and_interrupt_exit_restore_every_previous_limit (tests.test_complete_system_device_guard.CompleteSystemDeviceGuardTests) ... ok
+test_start_boundary_has_no_snapshot_mutation_and_requires_explicit_scope (tests.test_complete_system_device_guard.CompleteSystemDeviceGuardTests) ... ok
+test_streaming_guard_persists_crossing_before_interrupt_and_uses_common_ceiling (tests.test_complete_system_device_guard.CompleteSystemDeviceGuardTests) ... ok
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.041s
+
+OK

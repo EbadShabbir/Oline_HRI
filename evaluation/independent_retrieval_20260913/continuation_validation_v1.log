@@ -1,0 +1,20 @@
+test_continuation_chain_preserves_prefix_and_rejects_cycles (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_frozen157_prefix_yields_exact707_remaining (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_ledger_authorizes_only_next_exact_suffix (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_ledger_rejects_output_rebinding (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_ledger_rejects_replayed_fatal_request (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_ledger_requires_admission_retry_proof (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_rejects_configuration_snapshot_and_baseline_drift (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_rejects_duplicated_skipped_and_out_of_order_fragments (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_rejects_missing_terminal_observation_and_changed_question (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_rejects_overlap_negative_time_and_postfatal_execution (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_same_plan_cannot_rebind_or_recreate_collection_output (tests.test_retrieval_continuation.ContinuationTests) ... ok
+test_final_integrity_failure_preserves_successful_observations (tests.test_retrieval_fragment_worker.FragmentWorkerTests) ... ok
+test_interrupted_request_is_durable_and_next_suffix_case_is_not_attempted (tests.test_retrieval_fragment_worker.FragmentWorkerTests) ... ok
+test_real_runner_only_executes_suffix_and_retains_sole_model (tests.test_retrieval_fragment_worker.FragmentWorkerTests) ... ok
+test_verified_inputs_requires_exact_nonempty_suffix_and_original_baseline (tests.test_retrieval_fragment_worker.FragmentWorkerTests) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 8.561s
+
+OK

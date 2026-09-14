@@ -1,0 +1,33 @@
+{
+  "created_at": "2026-09-13T17:01:23.053828+00:00",
+  "status": "implemented; independent hash-bound approval pending",
+  "scope": "Offline analysis and rendering compatibility with physical fragment continuation; no frozen runtime or scoring changes",
+  "source_sha256": {
+    "scripts/analyze_independent_retrieval.py": "4d46200be4b2e3f7ba7348c475cbe9802580f071e7ef8f55f80bcf836766cc77",
+    "tests/test_retrieval_experiment_analysis.py": "89e4ad2cc08bee3d83efe6b0e4cbd90e6693d9ea7c8afcf7ad90aeca8a40f2e9",
+    "scripts/report_independent_retrieval.py": "76b1a866a82e1e0cbb248f46c45eae910a2a8f9a1579fe2c2fe44a717ecc78ca"
+  },
+  "preserved_approved_sources": [
+    "evaluation/independent_retrieval_20260913/analysis_preflight_v2_source",
+    "evaluation/independent_retrieval_20260913/report_preflight_v1_source"
+  ],
+  "validation": {
+    "analyzer_tiny_tests": 18,
+    "renderer_existing_tiny_tests": 6,
+    "live_inference": false,
+    "primary_semantic_outputs_seen": false
+  },
+  "schema_changes": [
+    "attempts: physical_fragment_id, artifact_directory, fragment_offset, local_index, scheduled_index; index retains local meaning",
+    "sessions: one physical worker each; logical_slot, physical_fragment_id, planned suffix, scheduled index range, supervisor_fragment_amortized_s",
+    "audit: strict frozen global prefix, complete_logical_slots, physical_fragments, inherited/new admission rejection counts, continuation and ledger seal provenance",
+    "timing: directory-keyed terminal overhead; unavailable original fatal overhead remains null; between-collection request gaps and supervisor/old seal timestamp gaps separate; within-fragment energy only"
+  ],
+  "unchanged": [
+    "frozen questions and memory snapshot",
+    "runtime44 and guards",
+    "blinded packet truth context and external judgments",
+    "semantic success rules",
+    "paired request-repetition averaging and eight-scenario bootstrap"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "created_at": "2026-09-13T17:09:35.300010+00:00",
+  "immutability": "exclusive creation, exact byte copies, SHA256 and read-only permissions; not privileged WORM",
+  "sha256": {
+    "WORKFLOW.md": "d767c454b2dc36cecfa0591a65be23599f7acd6d46688979744261c3bc79d929",
+    "blinded/REVIEW_INSTRUCTIONS.md": "17c20d7fdbaa66f43c31ae83d645f37aa8d8bd3c77e53cdad78bbf2360655f18",
+    "blinded/packet_a.jsonl": "41754efb51e1ae4ea0f6beec973028a1122772372eafd4efbb3a52defd2f816d",
+    "blinded/packet_b.jsonl": "55c13b5214337fcafca8a6732527dabcfe01ff0bd92b92eba7fca824d1ebc8cc",
+    "commands.sh": "e6c4f65445ada1554241d7c9f94b691b6e38f30f157b9e588afa3c1ba9ea6aa3",
+    "private/cohort.json": "e09139e7f93615c9bb531a7be08dc4f26cc21fc33fe8506ed5f813ef471d08f6",
+    "private/mapping.json": "ad9fb420d0ab77ca04bcca23274696b53f52983e64f83630aa93ad5bc9f3a81e",
+    "private/seed.json": "6477c2529f28bcb39f04323e5d70f413dbdc691f81da3c9c032eea967b818281",
+    "provenance.json": "d8a9eb2d51e3dd8812597cd741b9299e14c4446ff34051f0e93a004794643823",
+    "source/analyze_independent_retrieval.py": "6891c98a0853f29a0bfec7186a087321d50d867d660275bc5ecc8eba40d3ed70",
+    "source/batch_independent_retrieval_reviews.py": "578d8078ce563cf399400ce3d5d4abea34dcf2d218800874276ece34222bbeed",
+    "source/independent_retrieval_continuation.py": "8099b6aacf6aa4bc46518d0abaad0088d239a22e683bb41b49abcfb77169051c",
+    "source/independent_retrieval_supervisor.py": "021fdfa66fa2d1c7fe6ce8bc49a26e5dae65866c5f3cf8f4809d37453236f96b",
+    "source/reconcile_independent_retrieval_reviews.py": "361986179c668e480379958b7658d33463d5959de21828ae1c8d2c319281b79a",
+    "source/test_retrieval_review_batches.py": "d9bc5815baf7a60a929ba19c9360f24ae96fbff56b45e6d0c0560df55350c5f7"
+  }
+}

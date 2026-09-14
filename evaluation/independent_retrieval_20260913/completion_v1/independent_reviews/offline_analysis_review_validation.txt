@@ -1,0 +1,17 @@
+Command: PYTHONPATH=src:scripts:tests .venv/bin/python -m unittest -v tests.test_retrieval_experiment_analysis
+
+test_blinding_groups_exact_case_answer_status_without_identity (tests.test_retrieval_experiment_analysis.RetrievalExperimentAnalysisTests) ... ok
+test_failed_partial_raw_output_is_not_presented_as_delivered (tests.test_retrieval_experiment_analysis.RetrievalExperimentAnalysisTests) ... ok
+test_full_current_authorized_truth_is_shared_and_denied_background_is_empty (tests.test_retrieval_experiment_analysis.RetrievalExperimentAnalysisTests) ... ok
+test_general_abstention_is_failure_and_abstention_flag_is_required (tests.test_retrieval_experiment_analysis.RetrievalExperimentAnalysisTests) ... ok
+test_paired_repetitions_average_before_whole_scenario_bootstrap (tests.test_retrieval_experiment_analysis.RetrievalExperimentAnalysisTests) ... ok
+test_request_means_include_metric_present_only_after_first_repetition (tests.test_retrieval_experiment_analysis.RetrievalExperimentAnalysisTests) ... ok
+test_reviews_cannot_reward_known_fact_abstention_or_duplicate_groups (tests.test_retrieval_experiment_analysis.RetrievalExperimentAnalysisTests) ... ok
+test_seal_covers_file_set_and_rejects_changed_content (tests.test_retrieval_experiment_analysis.RetrievalExperimentAnalysisTests) ... ok
+test_unsupported_personal_flag_requires_parent_flag (tests.test_retrieval_experiment_analysis.RetrievalExperimentAnalysisTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.045s
+
+OK
+

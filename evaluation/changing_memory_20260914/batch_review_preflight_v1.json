@@ -1,0 +1,29 @@
+{
+  "approved": true,
+  "reviewer": "independent assistant /root/runtime_audit",
+  "created_at": "2026-09-14T12:07:08.231015+00:00",
+  "scope": "Batch review preparation and identity rebinding code only; no live outputs inspected.",
+  "source_sha256": {
+    "evaluation/changing_memory_20260914/batch_reviews.py": "454206690cdf64c649e7c7c308f3618b2f2bbbdd43fedbca13363cd346769566",
+    "tests/test_batch_memory_reviews.py": "ef653df7ac5d838245e310d7260dac5f5014cebcc1e0fc841841224d7bddfac8",
+    "scripts/analyze_changing_memory.py": "60709a1002f7537f8cfd8ea57e8c89052f7ba2e608ca4b36e275a0fc79c95215"
+  },
+  "offline_validation": {
+    "command": "PYTHONPATH=src:scripts .venv/bin/python -m unittest tests.test_batch_memory_reviews -v",
+    "tests": 4,
+    "passed": 4,
+    "elapsed_seconds": 0.114
+  },
+  "verified": [
+    "Selected branch seals, exactly 24 checkpoints per chosen scenario, and process/database integrity required",
+    "Public packets restricted to question, authorized state, rubric and delivered answer",
+    "Original A/B vote schemas and packet hashes validated using approved analyzer",
+    "One stable identity per reviewer across batches; A and B distinct",
+    "Final binding requires exact canonical packet equality and complete final semantic-packet coverage",
+    "Conflicting duplicate semantic votes rejected; equivalent originals preserved",
+    "Only judgment blind_id and review packet_sha256 rebound; reasons and semantic judgments copied unchanged",
+    "Original batches and votes copied byte-for-byte with input hash verification before sealing"
+  ],
+  "human_validation": "pending",
+  "limitation": "Actual final binding, blinded judgments and adjudication require their own artifact verification; this approval is code-level."
+}

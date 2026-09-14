@@ -1,0 +1,15 @@
+test_actual_generators_count_returned_calls_without_route_inference (__main__.MatchedComparisonTests) ... ok
+test_duplicate_unmatched_wrong_count_and_incomplete_scenarios_rejected (__main__.MatchedComparisonTests) ... ok
+test_exact_subset_binding_and_expected_mismatches (__main__.MatchedComparisonTests) ... ok
+test_figure_mapping_and_stage_positions_match_original_with_96_and_288 (__main__.MatchedComparisonTests) ... ok
+test_figure_refuses_duplicate_incomplete_and_misbound_stages (__main__.MatchedComparisonTests) ... ok
+test_partial_unfrozen_vote_and_tampered_analysis_rejected (__main__.MatchedComparisonTests) ... ok
+test_recorded_repair_metadata_only_and_nulls_are_not_guessed (__main__.MatchedComparisonTests) ... ok
+test_sealed_comparison_writes_complete_artifacts_and_does_not_mutate_inputs (__main__.MatchedComparisonTests) ... ok
+test_success_disclosure_withholding_transitions_use_frozen_judgments (__main__.MatchedComparisonTests) ... ok
+test_wall_latency_scopes_quantiles_and_missing_timing_are_explicit (__main__.MatchedComparisonTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.694s
+
+OK

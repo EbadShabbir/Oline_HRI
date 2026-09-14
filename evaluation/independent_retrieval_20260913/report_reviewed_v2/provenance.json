@@ -1,0 +1,15 @@
+{
+  "analysis_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/analysis_reviewed_v1",
+  "created_at": "2026-09-13T19:03:29.613201+00:00",
+  "human_validation": "pending",
+  "input_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/analysis_reviewed_v1/analysis.json": "bb7f508f358a5bce14aa0bfd1e41b45799537a585fd484756334ff22d1e39b81",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/analysis_reviewed_v1/attempts.csv": "b9d96885bac5e3ddc895d874b7cac028bba7ce11c76aa9589dbeef3b26a893ee",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/analysis_reviewed_v1/blinded/packet_a.jsonl": "acdfbd99fca887a0f90275f8d6d93ce4e98d5a3bb62ea188b6b40aceb2c47785",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/analysis_reviewed_v1/provenance.json": "57821651cedcce30ad77864d522cf21bc0fc63fc356179d1164d22ba18a69019",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/independent_retrieval_20260913/analysis_reviewed_v1/seal.json": "47ff6211d065d97505e8869c7a980e04b94843d8d481aa03463eccff7f2fad91"
+  },
+  "renderer_sha256": "beeddc6408b823ff3b3b0a1aa280843bd0bbc195527a69af2c18a1c9e545ce50",
+  "review_provenance_sha256": "87ff8c0af14176d7faf1f2a9a13d1e2dd7c658e412ea19a9708e60cdb13031dd",
+  "statistics": "uses supplied analyzer's paired intervals; no bootstrap or semantic scoring performed"
+}

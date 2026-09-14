@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-09-14T13:17:14.312720+00:00",
+  "command": [
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/bin/python",
+    "evaluation/changing_memory_20260914/render_report_tables.py",
+    "--analysis",
+    "evaluation/changing_memory_20260914/analysis_v2",
+    "--audit",
+    "evaluation/changing_memory_20260914/collection_audit_v1.json",
+    "--output",
+    "evaluation/changing_memory_20260914/tables_v1"
+  ],
+  "renderer_sha256": "400ee2674fd411eef3f25cdd3f7f6864c047c81d0a710a046c8a0895475414c4",
+  "analysis_directory": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/analysis_v2",
+  "collection_audit": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/collection_audit_v1.json",
+  "input_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/analysis_v2/seal.json": "e46dfd0701457675845e9caf034e29f2126bdc950d1ba75838177326b97d9a47",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/changing_memory_20260914/collection_audit_v1.json": "e754a02b39adb3f3b2a8a5cd5bf41e6008dbbb9bc2cc111e82f33f7ff0f7de49"
+  },
+  "analysis_source_sha256": "65181ee60ac1064ac00fd27d956236d92bac343829cb0f56263bd2dd55297e00",
+  "auditor_source_sha256": "5808d204cfc6b10ea5b8a7f15139d66c72fe52d875a0fcdd80a0bf996bab9ef5",
+  "freeze_seal_sha256": "390e3d2079f8be8edeed7130cb11600e1aa2c58269947b81ffbc21dfc6e503b3",
+  "run_seal_sha256": "80dc632bfdb44fe30f5a6fd81693dfa4bc71a2e8269416e673974b3d47dd339b",
+  "integrity_pass": true,
+  "integrity_violations": [],
+  "table_rows": {
+    "overall": 1,
+    "stage_history": 24,
+    "restart_history": 4,
+    "expected_kind_history": 8,
+    "expected_kind_restart_history": 14,
+    "branch_restart_history": 12,
+    "scenarios": 12,
+    "disclosure_scopes": 63,
+    "history_pair_aggregates": 12,
+    "history_pair_details": 108,
+    "checkpoint_model_selections": 288,
+    "generation_call_details": 288,
+    "requested_routes": 4,
+    "generation_call_aggregates": 8,
+    "collection_audit": 1,
+    "history_exposure_audit": 7
+  },
+  "semantic_scoring_performed": false,
+  "inference_performed": false,
+  "human_validation": "pending"
+}

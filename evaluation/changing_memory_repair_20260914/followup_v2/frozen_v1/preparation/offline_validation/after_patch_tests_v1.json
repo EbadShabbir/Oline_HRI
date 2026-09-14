@@ -1,0 +1,16 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "tests.test_current_relationship_repair",
+    "-v"
+  ],
+  "environment": {
+    "PYTHONPATH": "src:tests"
+  },
+  "started_at": "2026-09-14T14:18:29.091483+00:00",
+  "finished_at": "2026-09-14T14:18:29.588054+00:00",
+  "returncode": 0,
+  "live_inference": false
+}
