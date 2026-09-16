@@ -106,22 +106,90 @@ versioned configuration and source, and independently reviewed result tables.
 
 ### P1 — Demonstrate the benefit of the cascade
 
-- [ ] Compare always-small, always-large, and adaptive routing on the current
-  configuration and the same query set, with controlled retrieval conditions.
+Completed post-fix comparison (2026-09-12): [Step 3 record](evaluation/post_memory_comparison_20260912/README.md).
+All nine sessions and 432 attempts ran under a separately frozen, user-authorized
+allowance using existing swap capacity. Small-only, large-only and cascade
+achieved 42/144 (29.2%), 44/144 (30.6%) and 46/144 (31.9%) full-rubric successes;
+their mean text-request times were 2.314, 11.255 and 8.916 seconds. This reuses
+48 partly observed assistant-authored requests across three rounds; human
+validation remains pending. Earlier restricted-swap attempts, including the
+first 48-request small-only session, remain separate historical evidence.
+
+The [Step 4 final analysis and figures](evaluation/final_tradeoff_analysis_20260912/README.md)
+show correct delivery versus deadline, repeated-session timing, loading costs
+and sampled whole-device energy. Small-only delivers all its correct answers
+within five seconds; cascade reaches its slightly higher total by fifteen
+seconds. These are descriptive observations, not selected requirements.
+Cascade uses small for only 3/144 generations. Its pooled timing advantage
+over large-only reverses in rounds 2 and 3 and is confounded by GPU allocation.
+The results do not yet justify a causal adaptive-selection benefit.
+
+Broader proposed evaluation: [adaptive selection protocol draft](evaluation/adaptive_selection_protocol_draft.md)
+(2026-09-11), including fair residency, actual-model enforcement, helper
+attribution, and separate changing-memory tests. Requirements remain provisional.
+
+First public-benchmark evidence: [2026-09-11 ARC capability pilot](evaluation/arc_capability_20260911/README.md).
+The first three arms score 64%, 79%, and 79%; that cascade is much slower
+than resident 1.7B on these short MCQs. The fourth 3B arm ran under an explicit
+startup amendment but stopped during request 84 at the retained 512 MiB runtime
+swap limit: 59 correct accepted answers among 83 successful requests. A
+user-requested continuation added 12 correct among the remaining 17, yielding
+71/100 composite item accuracy. That segment used an explicit 1 GiB runtime
+swap limit and partial CPU execution; report segment timings and the original
+failure separately. This does not establish uninterrupted full-run feasibility.
+Model cleanup and unchanged system configuration were verified.
+This component pilot does not complete the full-system or memory comparisons below.
+
+Earlier text-system pilot evidence is preserved in [results.md](results.md) and the
+[Stage 2 evaluation](evaluation/complete_system_20260911/README.md): 184/432
+planned attempts, with 166 validated deliveries and all observed outputs
+assistant-reviewed. On the common 40 first-round requests, small/large/cascade
+score 16/21/19. The cascade stopped at its RAM floor, and a later startup swap
+gate left five sessions unattempted. CPU/GPU placement varied materially.
+The later Step 3 comparison completes all repetitions under its new freeze;
+the earlier partial pilot is not pooled into it. Independent human review,
+retrieval ablations, live-memory tests, spoken timing, and an optimized-system
+benefit remain unproven.
+
+Overhead reduction implementation (2026-09-12): opt-in
+`chat --routing-policy lightweight` removes the compute classifier, evaluates
+existing memory-intent rules before optional classification on the resident
+model, and retains the active generator with a two-easy-request switch rule.
+Offline contract and pipeline tests cover this change. Its initial preflights
+were blocked by 812.5 MiB swap against the then-unchanged 768 MiB startup gate.
+Later Step 3 measures this routing policy against matched fixed-model systems
+under the revised frozen allowance. See the
+[implementation record](evaluation/lightweight_routing_20260912/README.md).
+Further heuristic changes require new development work and a separate test;
+the completed comparison does not establish globally optimized systems.
+
+- [x] Compare true small-only, large-only and adaptive systems on the same
+  frozen query sequence with a shared retrieval implementation. System-specific
+  memory classifiers can change supplied evidence; this is a complete-system
+  comparison, not a matched-evidence generator test.
 - [ ] Compare retrieval policies separately where needed to identify the effect
   of selective memory access. Keep other settings fixed within each comparison.
-- [ ] Measure semantic correctness, answer coverage, appropriate abstention,
+- [x] Measure semantic correctness, answer coverage, appropriate abstention,
   unsupported personal claims, latency, peak RAM, swap, and temperature.
-- [ ] Record cold/warm model conditions and loading overhead. Measure power or
-  energy directly if making energy-efficiency claims; 15 W mode alone is not an
-  energy-per-turn measurement.
-- [ ] Use the current 1.7B generator for the always-large baseline and preserve
-  the documented device limits. Do not load the retired 4B path on this unit.
+- [x] Record cold/later requests, loading overhead and sampled whole-device
+  energy, with background activity and coverage explicitly stated.
+- [x] Use the installed `qwen3:1.7b` artifact for the large-only baseline under
+  the documented revised experiment guards, with no retired 4B model loaded.
 
 **Completion evidence:** a fair complete-system comparison showing when the
 cascade helps and when its overhead or quality limitations outweigh benefits.
 
 ### P1 — Address memory reliability
+
+Step 2 implementation is available (2026-09-12): improved intent and evidence
+linking, no unrelated fallback disclosure, same-event conflict preservation,
+bounded partial/temporal composition, and separate-process lifecycle regression
+tests. The [offline development replay](evaluation/memory_pipeline_20260912/README.md)
+improves complete required selection from 47/56 to 54/56 on the same recorded
+candidate lists; two missing-candidate cases remain unassessed for new retrieval.
+This replay and the added tests do not complete the independent unseen-case
+quality assessment below. Do not reuse the development fixture as confirmatory
+evidence or attribute application-computed answers to model capability.
 
 - [ ] Improve request-linked retrieval/reranking and evidence selection.
 - [ ] Address unrelated citations, omitted required evidence, relationship

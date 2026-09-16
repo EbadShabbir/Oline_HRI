@@ -1,0 +1,643 @@
+{
+  "schema_version": "deployment_context_independent_review_v4",
+  "created_at": "2026-09-14T20:41:38.823366+00:00",
+  "scope": "Four known regression/control cases for the narrow deployment-context patch. Not unseen release evidence or a general answer-quality benchmark.",
+  "completed": 4,
+  "runner_failure": null,
+  "cleanup_error": null,
+  "raw_dependency_matches": 4,
+  "final_dependency_matches": 4,
+  "narrow_deployment_control_passes": 4,
+  "strict_task_passes_under_literal_word_form_reading": 3,
+  "strict_score_interpretation": "The ordinary-word control passes nontechnical behavior but uses whispered rather than whisper. The broad specs case is not penalized for an unrequested complete hardware inventory; its limited coverage and model notation remain explicit.",
+  "actual_call_counts": {
+    "model_size": 4,
+    "answer_generation": 5,
+    "answer_review": 4,
+    "dependency_review": 2
+  },
+  "all_call_bounds_pass": true,
+  "actual_retry_cases": [
+    "ordinary_whisper_word"
+  ],
+  "unsupported_delivered_personal_facts": 0,
+  "unsupported_delivered_deployment_claims": 0,
+  "latency": {
+    "median_seconds": 67.04823146000001,
+    "runner_seconds": 271.907061295,
+    "scope": "Observed local text-turn latency including model loading, not a general performance estimate."
+  },
+  "source_verification": {
+    "checked_at": "2026-09-14T20:41:38.823506+00:00",
+    "recorded_source_count": 42,
+    "working_source_mismatches": [],
+    "recorded_source_sha256": {
+      "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+      "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+      "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+      "src/oline_hri/answer_review.py": "358393c0b7d1f54e89d37616ba3e492270ea96da3578657cdc34481d34847f49",
+      "src/oline_hri/cli.py": "c47e15bed05ccc0e9f00c4295d9b4ddf7d5df85f85c47a5135228139195703b1",
+      "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+      "src/oline_hri/conversation.py": "878361152fcfed2dac6867badb3b935f0dea727f5ef2300cb704008a1444e2a7",
+      "src/oline_hri/dependency_classifier.py": "2dc25a405fc3c8e63c9ddeffa08c14d3491d8d182c8ff3f2e6299236d86ffb4b",
+      "src/oline_hri/dependency_review.py": "90842f6849641dec9325196bbe6c34eb874773a5d4c93ec39a89e41a627e0968",
+      "src/oline_hri/dependency_routing.py": "979935708ec0f21716715665438f6d9333f4d37ebf51d69a91b6085beb34277d",
+      "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+      "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+      "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+      "src/oline_hri/evaluation_experiment.py": "c58046a9143e0e0a2b1989549bb1d6d11490ebeca704d73ee65395867c7169cb",
+      "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+      "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+      "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+      "src/oline_hri/evaluation_runner.py": "fb3c521cee73d0f869ff7a115370b4213fc233904c330204300f7ba6f9eefd8f",
+      "src/oline_hri/evaluation_scoring.py": "e8a7e829415d928024f1c0273be8f04412947db792b1bc0b9316226ecccd2723",
+      "src/oline_hri/evaluation_systems.py": "77437ef8a579d2de531a4770fc2bda2a2088d3310cad4d3db3be536e4203f66a",
+      "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+      "src/oline_hri/grounded_composition.py": "52e458baa35b59aa7bc00736daf7a2e8b98b38a0fae1ce77b872fcf40eff7507",
+      "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+      "src/oline_hri/memory.py": "7910213701283ac86bf3157d9271c78114cfbc4104f8f20aed3db59924ee5f38",
+      "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+      "src/oline_hri/memory_evidence.py": "c0b1b0744f022fd593501e7a7310040309b4d198ba56435643ba14f2645d22e7",
+      "src/oline_hri/ollama.py": "7a82fe0a71461c7bd02faee3fbd739b32e4d4388e5f42ec146ab685e208a43d1",
+      "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+      "src/oline_hri/relationships.py": "29f04fc94ab15a357ef90bdf0bd645958ecf2ecdadc3ad857363756528cae505",
+      "src/oline_hri/reliable_conversation.py": "f83b608c9ce48cfd22db1548807a17674be57c7ce964b7c7db65c5201ac67b35",
+      "src/oline_hri/reply_guard.py": "a84e1301d2bf7f771883e23cd8c4f7e7b616e8964d679be90a21bdae201d73e4",
+      "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+      "src/oline_hri/retrieval.py": "def5286fb421b895328f7b97718592dd5a9b73ff82a039ba1e8f84fac7fa31f2",
+      "src/oline_hri/routing.py": "2e2c9e7ea0dc59c422f6062daabbff6fc93185ccf564fb080969091568921d3c",
+      "src/oline_hri/semantic_routing.py": "0612dc153fed76e52536c413edf69f981bc7b7b3c2f7412d4c7ed3ef178a83bf",
+      "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0",
+      "src/oline_hri/timing.py": "23c1c126c26d65e03833dc1c107ffa14670843fefd3755fd42ecd0969af1a445",
+      "src/oline_hri/default_config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "src/oline_hri/dependency_classifier_v1.json": "2ac2fa20d05c2bd172c6e54fdb8ab50224a848effd45a768fcfbbf26ce74ac33",
+      "src/oline_hri/fictional_seven_day_v1.json": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e",
+      "src/oline_hri/fictional_seven_day_v1_1.json": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d",
+      "scripts/run_routing_reliability.py": "4a1dc4edb2c8074c9097fd441d01676bf0875f395dc5d1f641d9c0114be22686"
+    }
+  },
+  "input_sha256": {
+    "tmp/deployment_context_v4/metadata.json": "59fb68649b9ea05079a2f0f335995f471b447372b373fcf7f07934b21d395bc3",
+    "tmp/deployment_context_v4/observations.jsonl": "92bf732b22c70b9da54cdd5f06b8a9d066339e2031de6ea485bf0712dca5e4b0",
+    "tmp/deployment_context_v4/model_calls.jsonl": "fff1b0061181cf635cbcfca323d6513fcb97f8c92eef155f4f2d192c7a682604",
+    "tmp/deployment_context_v4/retrieval_calls.jsonl": "774bd9571fe6fea0dd78b8b263a38e670978e837be69de86026aaf52f5926117",
+    "tmp/deployment_context_v4/summary.json": "cc371dbe0c8df1e841ca132ee5e28e160b64149cabdb6c33798fa6f66d86a129"
+  },
+  "cases_sha256": "291b249b3762db4dc6fcffe63b348aa6010830095711c72dae59a8a9621359e6",
+  "metrics_available_at_review": false,
+  "rows": [
+    {
+      "id": "quality_v3_optional_02",
+      "case": {
+        "id": "quality_v3_optional_02",
+        "text": "Make a three-step plan for sorting a crowded email inbox. Adapt it to any stored workflow preferences; if you have none, give a simple general plan.",
+        "prior_turns": [],
+        "expected_modes": [
+          "optional"
+        ],
+        "deliverable_criteria": {
+          "required_content": [
+            "An ordered sequence of three concrete inbox-organizing actions."
+          ],
+          "count_constraint": {
+            "unit": "ordered steps",
+            "requested": 3
+          },
+          "nonanswer_examples_by_form": [
+            "Only promises to create a plan.",
+            "Asks for preferences instead of giving the permitted general plan.",
+            "Says to organize the inbox without describing actions."
+          ],
+          "grounding": "Do not claim access to, inspection of, or modification of the actual inbox or knowledge of an unstated workflow."
+        }
+      },
+      "status": "ok",
+      "exact_delivered_text": "1. Sort emails by urgency and subject. 2. Group similar emails by content. 3. Delete duplicates. Use your workflow preferences for each step.",
+      "raw_predicted_mode": "optional",
+      "thresholded_mode": "optional",
+      "final_dependency": {
+        "form": "request",
+        "mode": "optional",
+        "missing_fact": "personal context",
+        "general_request": "",
+        "uncertain": false
+      },
+      "effective_execution_mode": "none",
+      "raw_label_match": true,
+      "final_label_match": true,
+      "dependency_review": null,
+      "generation_context_checks": [
+        {
+          "model": "qwen3:0.6b",
+          "system_contains_whisper_tool_name": false,
+          "system_contains_silero_tool_name": false,
+          "system_contains_qwen_model_names": false
+        }
+      ],
+      "generation_policy": "reliable_generation",
+      "raw_attempts": [
+        {
+          "model": "qwen3:0.6b",
+          "raw_content": "{\n  \"speech\": \"1. Sort emails by urgency and subject. 2. Group similar emails by content. 3. Delete duplicates. Use your workflow preferences for each step.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+          "accepted": true,
+          "confirmed_unsupported_personal_fact": false,
+          "confirmed_unsupported_deployment_claim": false
+        }
+      ],
+      "answer_reviews": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer",
+          "generation": {
+            "model": "qwen3:1.7b",
+            "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+            "done_reason": "stop",
+            "total_duration_ns": 36356308810,
+            "load_duration_ns": 26489665950,
+            "prompt_eval_count": 430,
+            "eval_count": 20,
+            "eval_duration_ns": 8877164000,
+            "prompt_eval_duration_ns": 952525000,
+            "citation_annotations_removed": 0
+          }
+        }
+      ],
+      "raw_review_attempts": [
+        {
+          "model": "qwen3:1.7b",
+          "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+          "done_reason": "stop",
+          "total_duration_ns": 36356308810,
+          "load_duration_ns": 26489665950,
+          "prompt_eval_count": 430,
+          "eval_count": 20,
+          "eval_duration_ns": 8877164000,
+          "prompt_eval_duration_ns": 952525000,
+          "citation_annotations_removed": 0
+        }
+      ],
+      "reported_quality_issues": [],
+      "actual_call_counts": {
+        "model_size": 1,
+        "answer_generation": 1,
+        "answer_review": 1
+      },
+      "all_call_bounds_pass": true,
+      "all_transport_calls_ok": true,
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "response_memory_ids": [],
+      "application_memory_ids": [],
+      "confirmed_unsupported_delivered_personal_fact": false,
+      "confirmed_unsupported_delivered_deployment_claim": false,
+      "wall_seconds": 50.45351406,
+      "judgment": {
+        "usefulness": "useful_concrete_plan",
+        "delivery_coverage": "complete_requested_plan",
+        "narrow_deployment_control_pass": true,
+        "strict_task_pass": true,
+        "criteria": [
+          {
+            "criterion": "Three concrete ordered inbox-organizing actions",
+            "result": "pass",
+            "evidence": "Sort by urgency/subject; group similar messages; delete duplicates."
+          },
+          {
+            "criterion": "No irrelevant Whisper/Silero guidance or actual-inbox/unstated-workflow claim",
+            "result": "pass",
+            "evidence": "No technical tool name occurs. The last preference sentence is advice to the human, not a claim that saved preferences were read."
+          }
+        ],
+        "deployment_fact_correctness": "No deployment capability or performed action is claimed.",
+        "limitations": [
+          "The final preference reminder is unnecessary but does not replace the supplied general plan."
+        ]
+      }
+    },
+    {
+      "id": "robot_specs",
+      "case": {
+        "id": "robot_specs",
+        "text": "What are your specifications, robot?",
+        "prior_turns": [],
+        "expected_modes": [
+          "none"
+        ]
+      },
+      "status": "ok",
+      "exact_delivered_text": "I am an offline Oline HRI assistant with specifications: Qwen 3.0.6B and Qwen 3.1.7B. I do not have physical actions.",
+      "raw_predicted_mode": "none",
+      "thresholded_mode": "none",
+      "final_dependency": {
+        "form": "question",
+        "mode": "none",
+        "missing_fact": "",
+        "general_request": "",
+        "uncertain": false
+      },
+      "effective_execution_mode": "none",
+      "raw_label_match": true,
+      "final_label_match": true,
+      "dependency_review": null,
+      "generation_context_checks": [
+        {
+          "model": "qwen3:0.6b",
+          "system_contains_whisper_tool_name": true,
+          "system_contains_silero_tool_name": true,
+          "system_contains_qwen_model_names": true
+        }
+      ],
+      "generation_policy": "reliable_generation",
+      "raw_attempts": [
+        {
+          "model": "qwen3:0.6b",
+          "raw_content": "{\n  \"speech\": \"I am an offline Oline HRI assistant with specifications: Qwen 3.0.6B and Qwen 3.1.7B. I do not have physical actions.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+          "accepted": true,
+          "confirmed_unsupported_personal_fact": false,
+          "confirmed_unsupported_deployment_claim": false
+        }
+      ],
+      "answer_reviews": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer",
+          "generation": {
+            "model": "qwen3:1.7b",
+            "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+            "done_reason": "stop",
+            "total_duration_ns": 30585425694,
+            "load_duration_ns": 25048300492,
+            "prompt_eval_count": 404,
+            "eval_count": 20,
+            "eval_duration_ns": 4637575000,
+            "prompt_eval_duration_ns": 884153000,
+            "citation_annotations_removed": 0
+          }
+        }
+      ],
+      "raw_review_attempts": [
+        {
+          "model": "qwen3:1.7b",
+          "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+          "done_reason": "stop",
+          "total_duration_ns": 30585425694,
+          "load_duration_ns": 25048300492,
+          "prompt_eval_count": 404,
+          "eval_count": 20,
+          "eval_duration_ns": 4637575000,
+          "prompt_eval_duration_ns": 884153000,
+          "citation_annotations_removed": 0
+        }
+      ],
+      "reported_quality_issues": [],
+      "actual_call_counts": {
+        "model_size": 1,
+        "answer_generation": 1,
+        "answer_review": 1
+      },
+      "all_call_bounds_pass": true,
+      "all_transport_calls_ok": true,
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "response_memory_ids": [],
+      "application_memory_ids": [],
+      "confirmed_unsupported_delivered_personal_fact": false,
+      "confirmed_unsupported_delivered_deployment_claim": false,
+      "wall_seconds": 43.173266705,
+      "judgment": {
+        "usefulness": "thin_but_relevant_software_answer",
+        "delivery_coverage": "partial_specification_overview",
+        "narrow_deployment_control_pass": true,
+        "strict_task_pass": true,
+        "criteria": [
+          {
+            "criterion": "Answer the broad specification request using known software facts without invented hardware",
+            "result": "pass",
+            "evidence": "Identifies the offline Oline HRI assistant and recognizably refers to its two configured Qwen3 model sizes; it invents no hardware quantity or component."
+          },
+          {
+            "criterion": "Do not claim unsupported physical action capability",
+            "result": "pass",
+            "evidence": "States it has no physical actions, consistent with the exposed terminal-text/NO_ACTION behavior."
+          }
+        ],
+        "deployment_fact_correctness": "Known software identity/model sizes are recognizable, but the rendered names Qwen 3.0.6B and Qwen 3.1.7B are awkward noncanonical notation. No hardware facts are invented.",
+        "full_specification_answer_complete": false,
+        "explicit_hardware_unknown_statement": false,
+        "limitations": [
+          "The output omits input/output details and an explicit hardware-unknown statement. Those omissions are reported as limited coverage, not an invented extra predeclared hardware requirement.",
+          "A narrow control pass is not a claim of complete specification-answer quality."
+        ]
+      }
+    },
+    {
+      "id": "explicit_speech_tools",
+      "case": {
+        "id": "explicit_speech_tools",
+        "category": "none",
+        "text": "What do you use Whisper and Silero VAD for?",
+        "prior_turns": [],
+        "expected_modes": [
+          "none"
+        ],
+        "expected_general_request": "",
+        "deliverable_criteria": {
+          "required_content": [
+            "Explain speech transcription and speech detection using the actual deployment roles."
+          ],
+          "grounding": "No invented non-speech capabilities."
+        }
+      },
+      "status": "ok",
+      "exact_delivered_text": "I use Whisper for transcription and Silero VAD for speech detection.",
+      "raw_predicted_mode": "none",
+      "thresholded_mode": "clarify",
+      "final_dependency": {
+        "form": "question",
+        "mode": "none",
+        "missing_fact": "",
+        "general_request": "",
+        "uncertain": false
+      },
+      "effective_execution_mode": "none",
+      "raw_label_match": true,
+      "final_label_match": true,
+      "dependency_review": {
+        "model": "qwen3:1.7b",
+        "content": "{\"needs_personal_facts\": false}",
+        "done_reason": "stop",
+        "total_duration_ns": 30296254675,
+        "load_duration_ns": 23443644133,
+        "prompt_eval_count": 301,
+        "eval_count": 9,
+        "eval_duration_ns": 6130683000,
+        "prompt_eval_duration_ns": 709991000,
+        "citation_annotations_removed": 0
+      },
+      "generation_context_checks": [
+        {
+          "model": "qwen3:0.6b",
+          "system_contains_whisper_tool_name": true,
+          "system_contains_silero_tool_name": true,
+          "system_contains_qwen_model_names": true
+        }
+      ],
+      "generation_policy": "reliable_generation",
+      "raw_attempts": [
+        {
+          "model": "qwen3:0.6b",
+          "raw_content": "{\n  \"speech\": \"I use Whisper for transcription and Silero VAD for speech detection.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+          "accepted": true,
+          "confirmed_unsupported_personal_fact": false,
+          "confirmed_unsupported_deployment_claim": false
+        }
+      ],
+      "answer_reviews": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer",
+          "generation": {
+            "model": "qwen3:1.7b",
+            "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+            "done_reason": "stop",
+            "total_duration_ns": 32678572244,
+            "load_duration_ns": 23956643703,
+            "prompt_eval_count": 384,
+            "eval_count": 19,
+            "eval_duration_ns": 7943017000,
+            "prompt_eval_duration_ns": 763339000,
+            "citation_annotations_removed": 0
+          }
+        }
+      ],
+      "raw_review_attempts": [
+        {
+          "model": "qwen3:1.7b",
+          "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+          "done_reason": "stop",
+          "total_duration_ns": 32678572244,
+          "load_duration_ns": 23956643703,
+          "prompt_eval_count": 384,
+          "eval_count": 19,
+          "eval_duration_ns": 7943017000,
+          "prompt_eval_duration_ns": 763339000,
+          "citation_annotations_removed": 0
+        }
+      ],
+      "reported_quality_issues": [],
+      "actual_call_counts": {
+        "model_size": 1,
+        "dependency_review": 1,
+        "answer_generation": 1,
+        "answer_review": 1
+      },
+      "all_call_bounds_pass": true,
+      "all_transport_calls_ok": true,
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "response_memory_ids": [],
+      "application_memory_ids": [],
+      "confirmed_unsupported_delivered_personal_fact": false,
+      "confirmed_unsupported_delivered_deployment_claim": false,
+      "wall_seconds": 83.64294886,
+      "judgment": {
+        "usefulness": "useful_concise_role_explanation",
+        "delivery_coverage": "complete",
+        "narrow_deployment_control_pass": true,
+        "strict_task_pass": true,
+        "criteria": [
+          {
+            "criterion": "Distinguish Whisper transcription from Silero VAD speech detection",
+            "result": "pass",
+            "evidence": "I use Whisper for transcription and Silero VAD for speech detection."
+          },
+          {
+            "criterion": "No invented non-speech capabilities",
+            "result": "pass",
+            "evidence": "Only the supplied actual speech-tool roles are stated."
+          }
+        ],
+        "deployment_fact_correctness": "Both tool-role assignments match the provided deployment facts.",
+        "limitations": [
+          "This confirms the explanation in a text replay, not execution or accuracy of either speech model."
+        ]
+      }
+    },
+    {
+      "id": "ordinary_whisper_word",
+      "case": {
+        "id": "ordinary_whisper_word",
+        "category": "none",
+        "text": "Write one short sentence using the word whisper in an ordinary, nontechnical way.",
+        "prior_turns": [],
+        "expected_modes": [
+          "none"
+        ],
+        "expected_general_request": "",
+        "deliverable_criteria": {
+          "required_content": [
+            "One short ordinary sentence using whisper, without technical tool guidance."
+          ],
+          "grounding": "Fictional wording is allowed."
+        }
+      },
+      "status": "ok",
+      "exact_delivered_text": "She whispered a secret to her friend.",
+      "raw_predicted_mode": "none",
+      "thresholded_mode": "clarify",
+      "final_dependency": {
+        "form": "request",
+        "mode": "none",
+        "missing_fact": "",
+        "general_request": "",
+        "uncertain": false
+      },
+      "effective_execution_mode": "none",
+      "raw_label_match": true,
+      "final_label_match": true,
+      "dependency_review": {
+        "model": "qwen3:1.7b",
+        "content": "{\"needs_personal_facts\": false}",
+        "done_reason": "stop",
+        "total_duration_ns": 27760446830,
+        "load_duration_ns": 23232603259,
+        "prompt_eval_count": 307,
+        "eval_count": 9,
+        "eval_duration_ns": 3739173000,
+        "prompt_eval_duration_ns": 778237000,
+        "citation_annotations_removed": 0
+      },
+      "generation_context_checks": [
+        {
+          "model": "qwen3:0.6b",
+          "system_contains_whisper_tool_name": false,
+          "system_contains_silero_tool_name": false,
+          "system_contains_qwen_model_names": false
+        },
+        {
+          "model": "qwen3:1.7b",
+          "system_contains_whisper_tool_name": false,
+          "system_contains_silero_tool_name": false,
+          "system_contains_qwen_model_names": false
+        }
+      ],
+      "generation_policy": "reliable_quality_retry",
+      "raw_attempts": [
+        {
+          "model": "qwen3:0.6b",
+          "raw_content": "{\"speech\": \"Whisper is a gentle sound that can help you feel more connected to others.\",\"gesture_id\": \"NO_ACTION\", \"memory_used\": []}",
+          "accepted": false,
+          "confirmed_unsupported_personal_fact": false,
+          "confirmed_unsupported_deployment_claim": false
+        },
+        {
+          "model": "qwen3:1.7b",
+          "raw_content": "{ \"speech\": \"She whispered a secret to her friend.\", \"gesture_id\": \"NO_ACTION\", \"memory_used\": [] }",
+          "accepted": true,
+          "confirmed_unsupported_personal_fact": false,
+          "confirmed_unsupported_deployment_claim": false
+        }
+      ],
+      "answer_reviews": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer",
+          "generation": {
+            "model": "qwen3:1.7b",
+            "content": "{\"verdict\": \"pass\", \"reason\": \"supported_answer\"}",
+            "done_reason": "stop",
+            "total_duration_ns": 4822895037,
+            "load_duration_ns": 2701084,
+            "prompt_eval_count": 384,
+            "eval_count": 17,
+            "eval_duration_ns": 4085822000,
+            "prompt_eval_duration_ns": 700717000,
+            "citation_annotations_removed": 0
+          }
+        }
+      ],
+      "raw_review_attempts": [
+        {
+          "model": "qwen3:1.7b",
+          "content": "{\"verdict\": \"pass\", \"reason\": \"supported_answer\"}",
+          "done_reason": "stop",
+          "total_duration_ns": 4822895037,
+          "load_duration_ns": 2701084,
+          "prompt_eval_count": 384,
+          "eval_count": 17,
+          "eval_duration_ns": 4085822000,
+          "prompt_eval_duration_ns": 700717000,
+          "citation_annotations_removed": 0
+        }
+      ],
+      "reported_quality_issues": [
+        "unsupported_personal_claim"
+      ],
+      "actual_call_counts": {
+        "model_size": 1,
+        "dependency_review": 1,
+        "answer_generation": 2,
+        "answer_review": 1
+      },
+      "all_call_bounds_pass": true,
+      "all_transport_calls_ok": true,
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "response_memory_ids": [],
+      "application_memory_ids": [],
+      "confirmed_unsupported_delivered_personal_fact": false,
+      "confirmed_unsupported_delivered_deployment_claim": false,
+      "wall_seconds": 94.479950711,
+      "judgment": {
+        "usefulness": "usable_nontechnical_sentence_with_word_form_mismatch",
+        "delivery_coverage": "partial_under_literal_requested_word_reading",
+        "narrow_deployment_control_pass": true,
+        "strict_task_pass": false,
+        "criteria": [
+          {
+            "criterion": "One short ordinary nontechnical sentence without tool guidance",
+            "result": "pass",
+            "evidence": "She whispered a secret to her friend. is one ordinary fictional sentence."
+          },
+          {
+            "criterion": "Use the requested word whisper",
+            "result": "fail_under_literal_word_form_reading",
+            "evidence": "The accepted sentence uses whispered, not the standalone word whisper. It satisfies the ordinary-meaning control while changing the requested word form."
+          },
+          {
+            "criterion": "Fictional wording is allowed; no actual private relation is asserted",
+            "result": "pass",
+            "evidence": "The sentence is a requested wording artifact, not a statement about the human user."
+          }
+        ],
+        "deployment_fact_correctness": "No technical role or tool guidance appears in either attempt.",
+        "literal_requested_word_present": false,
+        "inflected_requested_word_present": true,
+        "raw_guard_false_positive_concern": true,
+        "limitations": [
+          "The exact-form mismatch is separated from the successful nontechnical deployment-context control; treating inflected forms as acceptable would change only the literal-compliance subscore.",
+          "The small attempt described a generic possible emotional effect, not an actual personal value. Its unsupported_personal_claim rejection is retained as a manual false-positive concern."
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "No microphone or actual speech transcription was exercised.",
+    "No populated personal memory, lifecycle, or adversarial wrong-route guarantee follows from these four empty-store observations.",
+    "Earlier frozen V2/V3 quality failures and the unverified audio-drama title remain unresolved evidence outside this patch scope.",
+    "The specs response is a limited software overview, not a complete hardware-specification answer.",
+    "One literal word-form mismatch and one possible false-positive personal-claim guard remain visible."
+  ]
+}

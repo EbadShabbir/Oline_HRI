@@ -1,0 +1,164 @@
+{
+  "schema_version": "independent_known_development_review_v1",
+  "reviewer": "semantic_router_agent",
+  "scope": "Independent manual review of known original six text regressions; no new model calls, no source edits, no fresh V2 access. Neither speech transcription nor broad answer quality is established.",
+  "observations_sha256": "6b07c7a6fa6f60f284aca3999065f5b81529a3380f91783d175f9c314b5fecc6",
+  "metadata_sha256": "b7d2281cd5dba3e191a6ba14cd5f0daa15dd03f808e4f8d892589cadf461fc78",
+  "complete": true,
+  "mode_matches": 6,
+  "nonanswer_count": 1,
+  "observed_unsupported_personal_facts_delivered": 0,
+  "observed_repetition_loops": 0,
+  "observed_physical_action_claims": 0,
+  "completion_blocker": "optional_weekend delivered no activity despite explicit general fallback; reviewer falsely passed it.",
+  "rows": [
+    {
+      "id": "reported_headache",
+      "user_text": "Yesterday I had a really bad day. I have headache. What should I do?",
+      "route_mode": "none",
+      "effective_mode": "none",
+      "retrieval_status": "skipped",
+      "delivered_text": "It's important to take care of your health. Try to rest and seek medical help if needed. Do not worry about your health.",
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "mode_match": true,
+      "attempt_count": 1,
+      "answer_review_verdicts": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer"
+        }
+      ],
+      "quality_issues": [],
+      "usefulness": "weak_partial_answer",
+      "judgment": "Rest is an actual suggestion, but seeking help if needed is vague. The blanket instruction Do not worry about your health is unjustified reassurance; the model reviewer passed it.",
+      "material_concern": "Unjustified health reassurance; do not present this as strong answer quality."
+    },
+    {
+      "id": "headache_followup",
+      "user_text": "Can you suggest me something that I can do, I have headache.",
+      "route_mode": "none",
+      "effective_mode": "none",
+      "retrieval_status": "skipped",
+      "delivered_text": "It's okay to take a break and rest. Try drinking some water or using a cool compress. Let me know if you need help with anything else.",
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "mode_match": true,
+      "attempt_count": 1,
+      "answer_review_verdicts": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer"
+        }
+      ],
+      "quality_issues": [],
+      "usefulness": "basic_useful_answer",
+      "judgment": "Offers rest, water, and a cool compress directly. No memory refusal or irrelevant robot limitations.",
+      "material_concern": null
+    },
+    {
+      "id": "robot_specs",
+      "user_text": "What are your specifications, robot?",
+      "route_mode": "none",
+      "effective_mode": "none",
+      "retrieval_status": "skipped",
+      "delivered_text": "I am an offline Oline HRI assistant with specifications: Qwen 3.0.6B and Qwen 3.1.7B. I support local Whisper and Silero VAD for natural language processing.",
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "mode_match": true,
+      "attempt_count": 1,
+      "answer_review_verdicts": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer"
+        }
+      ],
+      "quality_issues": [],
+      "usefulness": "basic_useful_answer_with_wording_defect",
+      "judgment": "Names supplied software components rather than inventing hardware specifications. Qwen 3.0.6B and Qwen 3.1.7B blur model family and parameter size notation.",
+      "material_concern": "Minor model-label wording defect; no unsupported RAM or hardware value."
+    },
+    {
+      "id": "optional_weekend",
+      "user_text": "Suggest a weekend activity; use my interests if you know them, otherwise give general ideas.",
+      "route_mode": "optional",
+      "effective_mode": "none",
+      "retrieval_status": "empty_or_irrelevant",
+      "delivered_text": "Suggest a weekend activity that aligns with your interests. If you have specific interests, please share them, and I'll tailor the suggestion accordingly.",
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "mode_match": true,
+      "attempt_count": 1,
+      "answer_review_verdicts": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer"
+        }
+      ],
+      "quality_issues": [],
+      "usefulness": "nonanswer",
+      "judgment": "Correct optional-to-general control flow, but response restates the request and asks for interests without offering any activity. This fails the explicit general fallback request despite the answer reviewer passing it.",
+      "material_concern": "Blocks completion: no requested activity or general idea delivered."
+    },
+    {
+      "id": "unfinished_speech",
+      "user_text": "It's like a... it's like a...",
+      "route_mode": "clarify",
+      "effective_mode": "clarify",
+      "retrieval_status": "skipped",
+      "delivered_text": "Could you clarify what you would like me to help with?",
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "mode_match": true,
+      "attempt_count": 0,
+      "answer_review_verdicts": [],
+      "quality_issues": [],
+      "usefulness": "appropriate_clarification",
+      "judgment": "Short clarification for an unresolved fragment; no invented interpretation, personal claim, or repetitive generation.",
+      "material_concern": null
+    },
+    {
+      "id": "mixed_camera",
+      "user_text": "Where is my camera? Explain how batteries work.",
+      "route_mode": "required",
+      "effective_mode": "required",
+      "retrieval_status": "empty_or_irrelevant",
+      "delivered_text": "I don't have that personal detail available. Could you tell me the missing information? Batteries work by converting chemical energy into electrical energy. They consist of electrodes (positive and negative) and an electrolyte. When a battery is connected to a circuit, a chemical reaction occurs, creating a voltage difference that drives electric current through the circuit.",
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "mode_match": true,
+      "attempt_count": 2,
+      "answer_review_verdicts": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer"
+        }
+      ],
+      "quality_issues": [
+        "RoutingError"
+      ],
+      "usefulness": "useful_mixed_answer",
+      "judgment": "Missing personal detail is requested without fabricating the camera location, then the complete literal battery question gets a substantive chemical-to-electrical energy explanation.",
+      "material_concern": null,
+      "attempt_note": "Earlier undelivered small-model text incorrectly linked usable electricity to completed reactions. Its review returned inconsistent pass/unsupported_personal_claim metadata; strict parsing triggered retry. This is protocol validation evidence, not proof that the reviewer detected the factual flaw."
+    }
+  ]
+}

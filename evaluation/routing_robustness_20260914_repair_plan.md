@@ -1,11 +1,22 @@
 # Memory routing reliability: diagnosis and repair design
 
-Status: implementation complete, candidate validation in progress. The
+Status: implementation and scoped validation complete; broader behavioral
+release acceptance failed. The
 [implementation and validation record](routing_reliability_20260914/README.md)
 tracks the four-mode runtime, independent evidence boundary, reply checks,
 and measured promotion decision. This document preserves the original
 diagnosis and acceptance criteria. The earlier general-advice patch alone
 does not establish general routing reliability.
+
+The final suite ran 1,334 tests with 26 skipped and passed. The repaired CLI
+candidate implements all four dependency modes, bounded review/clarification,
+independent evidence checks and bounded reply-quality handling. The second
+frozen full release satisfied only 20/32 complete routing-and-delivery criteria;
+the later focused quality check satisfied only 3/8. Final targeted deployment
+controls do not supersede those failures. The CLI selects this repaired
+candidate for continued testing, without claiming general answer-quality
+acceptance. See the linked record for the final source snapshot, measured
+latency, finite evidence-check limits and absence of a new microphone test.
 
 ## What failed
 

@@ -1,0 +1,38 @@
+{
+  "schema_version": "independent_known_development_review_v1",
+  "reviewer": "semantic_router_agent",
+  "scope": "Independent targeted followup to the failed known original optional-weekend regression. Initial six-case run remains unchanged. No new model calls, source edits, or fresh V2 access.",
+  "observations_sha256": "df26fad4eec913919ae823cb8a088f8d07ee7af3557cfa66f31e7f8b317c387f",
+  "prior_failed_run": "tmp/reliable_final_original_v1",
+  "prior_observations_sha256": "6b07c7a6fa6f60f284aca3999065f5b81529a3380f91783d175f9c314b5fecc6",
+  "case_id": "optional_weekend",
+  "delivered_text": "Based on your interests, I suggest a weekend activity. If you prefer, I can recommend a general idea like a walk in nature, a movie night, or a creative project. Let me know your preferences!",
+  "route_mode": "optional",
+  "effective_mode": "none",
+  "retrieval_status": "empty_or_irrelevant",
+  "memory_diagnostics": {
+    "retrieved_ids": [],
+    "supplied_ids": [],
+    "model_used_ids": []
+  },
+  "attempt_models": [
+    "qwen3:0.6b",
+    "qwen3:1.7b"
+  ],
+  "quality_issues": [
+    "promise_only"
+  ],
+  "answer_review_verdicts": [
+    {
+      "verdict": "pass",
+      "reason": "supported_answer"
+    }
+  ],
+  "original_no_activity_blocker_resolved": true,
+  "usefulness": "Basic general suggestions now delivered: a walk in nature, a movie night, and a creative project. Despite conditional wording, these are actual choices rather than only a promise to provide choices later.",
+  "retry_assessment": "The same small-model request echo is now rejected as promise_only. One actual large-model retry supplies activity examples and its review passes.",
+  "remaining_limitation": "Based on your interests implies personalization unsupported by the empty retrieval and absence of supplied preferences. The response invents no specific interest or personal value, but this framing should not be called grounded or polished personalization.",
+  "observed_specific_personal_values_invented": false,
+  "wall_seconds": 110.343617767,
+  "timing_scope": "110.34 seconds during full-suite CPU overlap. Descriptive only; no speed-success or comparative latency claim."
+}

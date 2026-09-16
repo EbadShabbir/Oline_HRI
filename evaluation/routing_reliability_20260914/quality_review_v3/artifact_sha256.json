@@ -1,0 +1,22 @@
+{
+  "schema_version": "focused_quality_review_artifact_hashes_v3",
+  "created_at": "2026-09-14T20:27:17.855544+00:00",
+  "sha256": {
+    "evaluation/routing_reliability_20260914/candidate_freeze_v3/freeze.json": "b8d50f4f2c3d49dde80126a6e61b63123552f8af92dfc7b77e044a34f5449cff",
+    "evaluation/routing_reliability_20260914/quality_cases_v3.json": "b92b58264dc313a3086e046e55f453597234e24464098885949735876a0bc1c9",
+    "evaluation/routing_reliability_20260914/quality_learned_v3/metadata.json": "a381d6238221cb32400e99435d64d7822340744845ea17aa8cd1c97596c6be30",
+    "evaluation/routing_reliability_20260914/quality_learned_v3/model_calls.jsonl": "57619c9a1671ae88a8d9b23443db532b765e830df10f06076fd6b62fd854ac95",
+    "evaluation/routing_reliability_20260914/quality_learned_v3/observations.jsonl": "15c4cb494f346fdd13dd3e9389b1df852b76006d8cd474d31a969ac4b6d1de7b",
+    "evaluation/routing_reliability_20260914/quality_learned_v3/retrieval_calls.jsonl": "09b97b8002e58b596a831c4d7597d54c0c88d8c48da30c0c8e34b5524014e395",
+    "evaluation/routing_reliability_20260914/quality_learned_v3/summary.json": "75b2f6e2b5c0d468825a5184d3aff5d0f495bf1655a6581b8e0cc2c5db661ae4",
+    "evaluation/routing_reliability_20260914/quality_review_v3/build_review.py": "37e8a3d88656a1568b039c645fdb487ef4bbc7a8f0543e471b243108694dd5e8",
+    "evaluation/routing_reliability_20260914/quality_review_v3/end_of_run_verification.json": "0208335c2122b3bb2848a89b6c3d0fbe74e293d034550fef6bf3bd17a7057cb2",
+    "evaluation/routing_reliability_20260914/quality_review_v3/manual_judgments.json": "e61abf19269706665fac0e6b60567a1d98f2753fbe93342772c7f4d2c5d82800",
+    "evaluation/routing_reliability_20260914/quality_review_v3/plan_sha256_v1.json": "816015c32bb7fa65df912d8df24eca7fbac3ac2de28e0175ff8df0d2422d4380",
+    "evaluation/routing_reliability_20260914/quality_review_v3/protocol.json": "386cfb87d4d0dc1f38c6cb8f532903d378e38210d77a88b79a3406eff3cd1749",
+    "evaluation/routing_reliability_20260914/quality_review_v3/review.md": "b006bdb285694d72221d1b8af30f24e00a3036775f11495119ceeda0dec480b5",
+    "evaluation/routing_reliability_20260914/quality_review_v3/review_plan_v1.md": "4b2ce7c6ca2ac9caf7563f1512bc7fc56093b0cddae6d1835570686abb147d9f",
+    "evaluation/routing_reliability_20260914/quality_review_v3/review_rows.jsonl": "175592ecfc689901f29468218bd4d9caa97f9d3b35e8d58b5cb0aa3671e28063",
+    "evaluation/routing_reliability_20260914/quality_review_v3/summary.json": "475846a9b3e0fbc9bcd5e97a87cac4441c7b295712feec2217ce6b329dd792ef"
+  }
+}

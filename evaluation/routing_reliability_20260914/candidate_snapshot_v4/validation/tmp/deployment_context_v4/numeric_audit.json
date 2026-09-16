@@ -1,0 +1,104 @@
+{
+  "scope": "Independent root numeric and hash audit; no semantic grading or model calls.",
+  "checks": {
+    "complete_requested_order": true,
+    "case_bytes_match_run": true,
+    "run_sources_unchanged": true,
+    "raw_call_traces_identical": true,
+    "runner_completed_all": true,
+    "runner_and_cleanup_no_error": true,
+    "all_rows_ok": true,
+    "all_calls_ok": true,
+    "isolated_empty_store": true,
+    "quality_v3_optional_02_call_bounds": true,
+    "quality_v3_optional_02_generation_dispatch_count": true,
+    "quality_v3_optional_02_review_result_count": true,
+    "robot_specs_call_bounds": true,
+    "robot_specs_generation_dispatch_count": true,
+    "robot_specs_review_result_count": true,
+    "explicit_speech_tools_call_bounds": true,
+    "explicit_speech_tools_generation_dispatch_count": true,
+    "explicit_speech_tools_review_result_count": true,
+    "ordinary_whisper_word_call_bounds": true,
+    "ordinary_whisper_word_generation_dispatch_count": true,
+    "ordinary_whisper_word_review_result_count": true
+  },
+  "failed_checks": [],
+  "case_count": 4,
+  "raw_mode_matches": 4,
+  "final_mode_matches": 4,
+  "call_count": 15,
+  "call_kinds": {
+    "compute": 4,
+    "generation": 5,
+    "answer_review": 4,
+    "dependency_review": 2
+  },
+  "per_case_calls": {
+    "quality_v3_optional_02": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "robot_specs": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "explicit_speech_tools": {
+      "compute": 1,
+      "dependency_review": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "ordinary_whisper_word": {
+      "compute": 1,
+      "dependency_review": 1,
+      "generation": 2,
+      "answer_review": 1
+    }
+  },
+  "models": {
+    "qwen3:0.6b": 8,
+    "qwen3:1.7b": 7
+  },
+  "latency_all": {
+    "count": 4,
+    "median_seconds": 67.04823146000001,
+    "min_seconds": 43.173266705,
+    "max_seconds": 94.479950711
+  },
+  "latency_delivered_generation": {
+    "count": 4,
+    "median_seconds": 67.04823146000001,
+    "min_seconds": 43.173266705,
+    "max_seconds": 94.479950711
+  },
+  "latency_application_response": {
+    "count": 0,
+    "median_seconds": null,
+    "min_seconds": null,
+    "max_seconds": null
+  },
+  "source_file_count": 42,
+  "input_sha256": {
+    "summary.json": "cc371dbe0c8df1e841ca132ee5e28e160b64149cabdb6c33798fa6f66d86a129",
+    "metadata.json": "59fb68649b9ea05079a2f0f335995f471b447372b373fcf7f07934b21d395bc3",
+    "observations.jsonl": "92bf732b22c70b9da54cdd5f06b8a9d066339e2031de6ea485bf0712dca5e4b0",
+    "model_calls.jsonl": "fff1b0061181cf635cbcfca323d6513fcb97f8c92eef155f4f2d192c7a682604"
+  },
+  "runner_summary": {
+    "schema_version": "routing_reliability_v2",
+    "case_count": 4,
+    "completed": 4,
+    "outcomes": {
+      "general_answer": 4
+    },
+    "label_matches": 4,
+    "label_mismatches": 0,
+    "failure": null,
+    "cleanup_error": null,
+    "wall_ns": 271907061295,
+    "interpretation": "Clarifications and errors are separate from delivered answers; label agreement is not answer correctness."
+  }
+}

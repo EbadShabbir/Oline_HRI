@@ -1,0 +1,68 @@
+{
+  "scope": "Known deployment-guidance regression plus targeted positive controls; not an unseen release benchmark.",
+  "cases": [
+    {
+      "id": "quality_v3_optional_02",
+      "text": "Make a three-step plan for sorting a crowded email inbox. Adapt it to any stored workflow preferences; if you have none, give a simple general plan.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "deliverable_criteria": {
+        "required_content": [
+          "An ordered sequence of three concrete inbox-organizing actions."
+        ],
+        "count_constraint": {
+          "unit": "ordered steps",
+          "requested": 3
+        },
+        "nonanswer_examples_by_form": [
+          "Only promises to create a plan.",
+          "Asks for preferences instead of giving the permitted general plan.",
+          "Says to organize the inbox without describing actions."
+        ],
+        "grounding": "Do not claim access to, inspection of, or modification of the actual inbox or knowledge of an unstated workflow."
+      }
+    },
+    {
+      "id": "robot_specs",
+      "text": "What are your specifications, robot?",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ]
+    },
+    {
+      "id": "explicit_speech_tools",
+      "category": "none",
+      "text": "What do you use Whisper and Silero VAD for?",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": "",
+      "deliverable_criteria": {
+        "required_content": [
+          "Explain speech transcription and speech detection using the actual deployment roles."
+        ],
+        "grounding": "No invented non-speech capabilities."
+      }
+    },
+    {
+      "id": "ordinary_whisper_word",
+      "category": "none",
+      "text": "Write one short sentence using the word whisper in an ordinary, nontechnical way.",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "expected_general_request": "",
+      "deliverable_criteria": {
+        "required_content": [
+          "One short ordinary sentence using whisper, without technical tool guidance."
+        ],
+        "grounding": "Fictional wording is allowed."
+      }
+    }
+  ]
+}

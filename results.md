@@ -1198,3 +1198,267 @@ and [independent review](evaluation/routing_reliability_20260914/release_review_
 preserve this failed result. These cases became development material after
 inspection. Later corrections require separate validation; neither fitted
 calibration scores nor passing unit tests establish unseen response quality.
+
+## 2026-09-15: second routing candidate, release failures preserved
+
+The second frozen candidate completed all 32 newly authored text cases, with
+**29/32 raw dependency matches and 28/32 final matches**. Independent review
+accepted the delivered behavior in 21/32 cases; **20/32 satisfied both routing
+and delivery criteria**. This candidate still failed the full release check.
+
+| Behavior | Observed result |
+| --- | --- |
+| Required missing personal information | 8/8 asked for the missing detail |
+| Optional personalization without evidence | 4/6 delivered useful general content; two were nonanswers |
+| Standalone general components completed | 10/18 |
+| Unnecessary clarification or solicitation | 2/18 standalone answerable turns |
+| Incorrect memory refusals on answerable turns | 0/18 |
+| Mixed requests | 2/2 retained general prose and a missing-fact question; both explanations were partial |
+| Unsupported personal or deployment/action claims | Zero observed in 32 delivered replies |
+
+The remaining optional failures repeated an escape-room request or offered to
+recommend an audio drama without giving a recommendation. A comparison
+followup lost its general history and received unrelated examples. One
+incomplete utterance was incorrectly framed as missing personal memory.
+General factual quality also remained weak: the hexagon count was wrong,
+and several explanations were incomplete or misleading. Nine outputs passed
+the model answer reviewer but failed independent usefulness assessment.
+
+All **82 actual model calls** were retained: 32 size decisions, seven
+dependency reviews, 22 answer generations and 21 answer reviews. Every turn
+stayed within its review and retry limits. Two contradictory review objects
+were rejected and preserved; no transport or cleanup error occurred. The
+19 replies with an accepted generation took **45.43 seconds median**, with
+a 40.40–86.99 second range. Total run time was 1,175.78 seconds, including
+loading and without concurrent unit tests. These are local text timings,
+not speech-to-response timing or a demonstrated speed improvement.
+
+The old Boolean router, replayed for routing only on the same inputs, requested
+memory incorrectly on 6/12 general questions and missed 1/8 required recalls.
+It matched 16/28 Boolean projections; four clarification cases have no Boolean
+equivalent. Its 64 calls took 36.16 seconds and generated no answers, so that
+time is not comparable to the full replacement conversation.
+
+The [independent review](evaluation/routing_reliability_20260914/release_review_v2/review.md),
+[raw run](evaluation/routing_reliability_20260914/release_learned_v2/summary.json),
+[numeric audit](evaluation/routing_reliability_20260914/release_numeric_audit_v2.json),
+and [legacy comparison](evaluation/routing_reliability_20260914/release_legacy_v2/interpretation.json)
+preserve the failures and denominators. All 46 frozen source files matched at
+run completion before development resumed. This corpus is now development
+material. Its empty store and general/draft histories do not themselves test
+deletion, correction or expiry; those require the separate lifecycle and
+deliberately wrong-route regressions.
+
+The next focused repairs added statement/promise detection, retained ordinary
+comparison context and clarified unresolved speech without a personal-facts
+review. The complete offline suite then passed **1,328 tests, with 26 skipped**.
+Four known live regressions matched all four modes; three complete replies
+passed review. The fourth replaced an empty offer with an audio-drama title
+whose existence and described qualities could not be verified, so it was not
+counted as a factual-quality success.
+
+An independently authored, frozen **eight-case focused quality check** then
+matched all eight dependency labels and produced substantive content for every
+case, with no memory refusal, unnecessary clarification or promise-only
+nonanswer. Nevertheless, **only 3/8 satisfied every predeclared criterion**.
+Three replies missed a count/format requirement, an analogy omitted its needed
+mapping, and an inbox plan appended unsupported advice to use the speech-input
+tools for sorting email. No unsupported personal fact or performed physical
+action was observed. Five answers passed the model reviewer but failed the
+independent assessment. These are quality failures, not a successful release.
+
+That check made 28 actual calls, stayed within all budgets, and shut down
+cleanly. Median observed reply time was **53.21 seconds** (41.21–82.92 seconds),
+including loading without concurrent heavy tests. Its
+[review](evaluation/routing_reliability_20260914/quality_review_v3/review.md),
+[frozen candidate](evaluation/routing_reliability_20260914/candidate_freeze_v3/freeze.json),
+and [numeric audit](evaluation/routing_reliability_20260914/quality_numeric_audit_v3.json)
+preserve the unchanged cases, exact outputs and all 46 matching source hashes.
+This is a focused check, not a new full four-mode release or representative
+factual-accuracy benchmark. It exercised text replies, not microphone capture.
+
+## 2026-09-15: final scoped repair and remaining limits
+
+Detailed deployment facts now reach generation only for relevant
+assistant/specification/tool questions. Every independent answer review still
+receives the complete facts. A separate bounded guard rejects unsolicited
+instructions involving configured internal tools. Whisper's transcription role
+and Silero VAD's speech-detection role are explicit, and ordinary creative uses
+of “whisper” remain separate from software context.
+
+The final four known regression/control cases matched **4/4 dependency modes**
+and all delivered general answers. The inbox request received its three-step
+general fallback without speech-tool advice. The explicit tools question
+correctly distinguished transcription from speech detection. The specification
+reply stayed within configured software facts but was thin and formatted the
+model names awkwardly. The creative control stayed nontechnical but used
+“whispered” instead of the requested literal “whisper”. Its first generic
+sentence was conservatively rejected as an unsupported personal claim even
+though no actual private value was asserted; one larger retry followed.
+Those limitations are preserved, not counted as complete answer-quality fixes.
+
+All **15 actual calls** stayed within their limits: four size decisions, two
+dependency reviews, five generations and four answer reviews. The run completed
+and unloaded cleanly; model digests were unchanged. Median text reply time was
+**67.05 seconds**, with a 43.17–94.48 second range and no concurrent heavy tests.
+The [targeted review](tmp/deployment_context_v4/independent_review.json) and
+[numeric audit](tmp/deployment_context_v4/numeric_audit.json) retain the exact
+outputs, all source/case checks and the bounded false-positive retry.
+These are known regression/control cases, not a new unseen release. The earlier
+20/32 full-release and 3/8 focused-quality failures remain failures. General
+truthfulness, precise instruction following and latency remain limitations;
+there is no new live microphone result for this final candidate.
+
+The final complete offline suite ran **1,334 tests with 26 skipped** and passed
+in **109.450 seconds** using `PYTHONPATH=src:scripts`. An isolated wheel build
+verified exact bytes for five selected runtime modules and the classifier
+artifact. The [final source and validation snapshot](evaluation/routing_reliability_20260914/candidate_snapshot_v4/snapshot.json)
+archives 46 source/configuration files, 95 test files, model identities and
+the completed test/replay evidence. It records the implemented four-part repair
+and bounded reply checks, without claiming unrestricted conversation reliability.
+
+## 2026-09-15: context-first conversation openings
+
+Missing-context replies now ask one short question without opening with
+“I don't have that memory/detail”. Safe general requests and their
+clarifications can provide context for the next turn through the existing
+history checks. Required recall and detected private content remain withheld
+from general task history.
+
+First-person wording alone does not establish recall. The shared guard now
+distinguishes obligation questions (“What have I got to do…”), supplied work,
+and procedural location questions from requests for an unstated personal value.
+An accepted `required` prediction without recognizable recall intent gets one
+bounded review; disagreement asks for context. Explicit stored inputs and
+direct personal-value questions remain protected without requiring “remember”.
+The classifier artifact and routing-review prompt are unchanged.
+
+In six known fresh-session text cases, **5/6 raw predictions and 6/6 final modes**
+fell inside their predeclared accepted sets. All six omitted memory-availability
+preambles, but only **4/6 delivered acceptable behavior**. The day-planning
+question repeated an already stated task, and a twenty-minute desk request
+received only an offer to help. General guitar-learning steps and both genuine
+missing-recall questions passed. No unsupported personal or deployment claim
+was delivered. All twelve calls stayed within their limits.
+
+The two affected cases were then replayed after replacing the generic opening
+with “Could you say a little more?” and rejecting modal offers that only repeat
+the requested task and constraints. **One of two behaviors passed**: the new
+day question invites context, though generically. The desk nonanswer was now
+rejected, but the larger retry offered to gather items itself and was also
+withheld. That run therefore still did not deliver useful desk instructions.
+Its five calls stayed bounded. A subsequent prompt refinement explicitly asks
+practical-task retries to give steps the human can perform.
+
+That final one-case prompt check **still failed the desk task**. The larger
+model again offered to gather and sort the items itself. Both generated
+candidates were withheld, leaving a clarification rather than useful steps.
+The route remained `none`; this question came from exhausted answer-quality
+checks, not a request for personal memory. The three calls stayed bounded,
+with no answer-review call and clean shutdown. This remaining model-quality
+problem has not been solved by the routing/clarification repair.
+
+The complete suite before these final refinements passed **1,351 tests with
+26 skipped** in 111.173 seconds. The final routing, reply, opening, evidence and
+CLI-focused suite passed **174 tests** in 1.877 seconds. The
+[validation record](tmp/conversation_opening_20260915/validation.json) preserves
+the separate runs and their source hashes. These are development/regression
+checks, not an unseen release, a pooled accuracy estimate or a microphone test.
+
+## 2026-09-15: practical-answer quality repair
+
+Explicit practical-help requests with recognized exact minute budgets now use
+a typed human-instruction format on the configured general-large model from
+their first generation attempt (`practical_guidance_large`). The original
+compute decision is preserved separately from the actual generation; an
+unattempted small answer is not reported as a fallback. Untimed
+practical requests use it on the existing quality retry. Both remain within
+the two-generation limit, and apply only to general requests or optional
+personalization without linked evidence. Drafts, explanations, ambiguous help
+and required recall retain their existing response paths. Retry feedback comes from application-owned issue
+codes; rejected prose never becomes task context or personal evidence.
+
+For a recognized exact minute budget, the application frames the model's
+short instructions with “Set a N-minute timer” and “Stop when it rings”, using
+the current request's parsed budget. The model supplies task steps without
+computing time allocations. Untimed requests use numbered instruction strings
+without the timer framing. Both formats reject malformed fields,
+robot/first-person actor wording and model-added list markers. The existing
+evidence and quality guards check both rendered text and the unnumbered
+instruction content; the independent model reviewer still checks the delivered
+answer. The actual raw generation is preserved, with the explicit
+`human_guidance_steps` response transform.
+
+The first development replay with an untimed step schema still failed human
+assessment: it copied an irrelevant “Open the folder” prompt example and
+ignored the twenty-minute budget, despite a model-review pass. Its
+[manual assessment](tmp/practical_answers_20260915/known_desk/manual_review.json)
+is preserved. An intermediate format removed concrete prompt examples and
+required model-generated minute allocations to sum to the budget; its
+failures are retained below. The final timer framing does not establish the
+feasibility of arbitrary instructions or start a real timer on the robot.
+
+The first six-case run used the typed format only after a failed first answer.
+It repaired the desk case, but independent review accepted only **4/6 complete
+outcomes**: a paper-sorting answer did not clearly enforce its ten-minute
+limit, and a laundry answer offered help and asked for folding instructions
+without providing them. Both passed the model reviewer. All six final modes
+matched, and all 19 calls stayed within their bounds. Its
+[independent review](tmp/practical_answers_20260915/live/independent_review.json)
+and [end-of-run source verification](tmp/practical_answers_20260915/live/end_of_run_verification.json)
+are preserved separately from later changes. This exposed the need to enforce
+the typed timed format on the first attempt, without depending on a review
+failure to trigger it.
+
+That first-attempt allocation experiment also passed only **4/6**. Both
+models assigned `1, 2, 3, 4, 5` minutes to the paper and laundry steps, giving
+15 minutes for ten- and twelve-minute tasks. The parser correctly withheld
+those outputs, so neither task received usable help. The desk and three
+non-practical controls passed. The
+[allocation experiment](tmp/practical_answers_20260915/live_proactive/independent_review.json)
+is preserved separately. The final format uses the application-owned timer
+instruction and stop rule to avoid this unnecessary model-arithmetic
+dependency. All three affected practical requests were replayed with their
+original criteria; earlier controls remain separate observations.
+
+The first timer-framing replay still passed **0/3 complete practical outcomes**.
+All three time limits were now explicit, but the small model generated
+incoherent action sequences and the larger reviewer approved them. Examples
+included emptying all desk drawers without a destination, checking whether a
+folder was empty after filling it, and dismantling a laundry pile after placing
+it in the basket. These were partial answers, not pure offers or explicit
+instructions to discard the papers. The
+[timer-only review](tmp/practical_answers_20260915/live_timer/independent_review.json)
+retains those distinctions. This led to the explicit general-large generation
+policy above, while preserving the same timer framing, evidence checks and
+review. Its answer generation does not escalate onward to a separately configured
+personal-memory model or fabricate a small-model answer attempt.
+
+The final direct-1.7B replay passed **2/3 complete practical outcomes**:
+
+| Case | Independent result | Turn time |
+| --- | --- | --- |
+| Twenty-minute desk tidy | Complete: clearing, sorting, cleaning and storage steps with a timer/stop rule. The original clarification failure is repaired in this replay. | 50.13 s |
+| Ten-minute paper organization | Complete: group the papers, store them in the supplied folder and account for all papers. | 56.95 s |
+| Twelve-minute laundry task | Partial: folding and basket placement are supplied, but “from the floor” and a “provided fastener” assume details that were not supplied. | 50.66 s |
+
+All three original dependency/compute decisions remain recorded, while each
+actual answer generation used `qwen3:1.7b` and `practical_guidance_large`.
+There was no small-model answer attempt or invented fallback. All ten calls
+met their bounds: three compute decisions, one dependency review, three
+generations and three answer reviews. The
+[independent review](tmp/practical_answers_20260915/live_large/independent_review.json)
+and [numeric audit](tmp/practical_answers_20260915/live_large/numeric_audit.json)
+separate delivered usefulness from the model review's three passes. The laundry
+resource presuppositions remain a quality/evidence limitation; they are not
+personal-history recall or disclosure. No blanket absence of unsupported facts
+is claimed. Median turn time was **50.66 seconds**, not evidence of interactive
+voice responsiveness.
+
+The final full suite passed: **1,384 tests run, 26 skipped**, in **113.202 seconds**.
+The focused suite passed **205 tests** in **2.119 seconds**. All 43 run-source
+hashes matched after validation, and their exact files plus the new tests are
+preserved with the [validation record](tmp/practical_answers_20260915/validation.json).
+These are known development/regression cases, with the earlier failures retained.
+No new microphone/transcription sample or broad answer-quality guarantee is
+established by this repair.

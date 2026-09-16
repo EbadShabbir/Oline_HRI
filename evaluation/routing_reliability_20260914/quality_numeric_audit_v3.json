@@ -1,0 +1,140 @@
+{
+  "scope": "Independent root numeric and hash audit; no semantic grading or model calls.",
+  "checks": {
+    "complete_requested_order": true,
+    "case_bytes_match_run_and_freeze": true,
+    "all_frozen_sources_unchanged": true,
+    "all_frozen_tests_unchanged": true,
+    "run_sources_unchanged": true,
+    "raw_call_traces_identical": true,
+    "runner_completed_all": true,
+    "runner_and_cleanup_no_error": true,
+    "all_rows_ok": true,
+    "all_calls_ok": true,
+    "isolated_empty_store": true,
+    "quality_v3_optional_01_call_bounds": true,
+    "quality_v3_optional_01_generation_dispatch_count": true,
+    "quality_v3_optional_01_review_result_count": true,
+    "quality_v3_optional_02_call_bounds": true,
+    "quality_v3_optional_02_generation_dispatch_count": true,
+    "quality_v3_optional_02_review_result_count": true,
+    "quality_v3_optional_03_call_bounds": true,
+    "quality_v3_optional_03_generation_dispatch_count": true,
+    "quality_v3_optional_03_review_result_count": true,
+    "quality_v3_optional_04_call_bounds": true,
+    "quality_v3_optional_04_generation_dispatch_count": true,
+    "quality_v3_optional_04_review_result_count": true,
+    "quality_v3_general_01_call_bounds": true,
+    "quality_v3_general_01_generation_dispatch_count": true,
+    "quality_v3_general_01_review_result_count": true,
+    "quality_v3_followup_01_call_bounds": true,
+    "quality_v3_followup_01_generation_dispatch_count": true,
+    "quality_v3_followup_01_review_result_count": true,
+    "quality_v3_questions_01_call_bounds": true,
+    "quality_v3_questions_01_generation_dispatch_count": true,
+    "quality_v3_questions_01_review_result_count": true,
+    "quality_v3_draft_01_call_bounds": true,
+    "quality_v3_draft_01_generation_dispatch_count": true,
+    "quality_v3_draft_01_review_result_count": true
+  },
+  "failed_checks": [],
+  "case_count": 8,
+  "raw_mode_matches": 8,
+  "final_mode_matches": 8,
+  "call_count": 28,
+  "call_kinds": {
+    "compute": 8,
+    "generation": 9,
+    "answer_review": 8,
+    "dependency_review": 3
+  },
+  "per_case_calls": {
+    "quality_v3_optional_01": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "quality_v3_optional_02": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "quality_v3_optional_03": {
+      "compute": 1,
+      "generation": 2,
+      "answer_review": 1
+    },
+    "quality_v3_optional_04": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "quality_v3_general_01": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "quality_v3_followup_01": {
+      "compute": 1,
+      "dependency_review": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "quality_v3_questions_01": {
+      "compute": 1,
+      "dependency_review": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "quality_v3_draft_01": {
+      "compute": 1,
+      "dependency_review": 1,
+      "generation": 1,
+      "answer_review": 1
+    }
+  },
+  "models": {
+    "qwen3:0.6b": 16,
+    "qwen3:1.7b": 12
+  },
+  "latency_all": {
+    "count": 8,
+    "median_seconds": 53.206037427,
+    "min_seconds": 41.212746238,
+    "max_seconds": 82.922145842
+  },
+  "latency_delivered_generation": {
+    "count": 8,
+    "median_seconds": 53.206037427,
+    "min_seconds": 41.212746238,
+    "max_seconds": 82.922145842
+  },
+  "latency_application_response": {
+    "count": 0,
+    "median_seconds": null,
+    "min_seconds": null,
+    "max_seconds": null
+  },
+  "source_file_count": 46,
+  "freeze_sha256": "b8d50f4f2c3d49dde80126a6e61b63123552f8af92dfc7b77e044a34f5449cff",
+  "input_sha256": {
+    "summary.json": "75b2f6e2b5c0d468825a5184d3aff5d0f495bf1655a6581b8e0cc2c5db661ae4",
+    "metadata.json": "a381d6238221cb32400e99435d64d7822340744845ea17aa8cd1c97596c6be30",
+    "observations.jsonl": "15c4cb494f346fdd13dd3e9389b1df852b76006d8cd474d31a969ac4b6d1de7b",
+    "model_calls.jsonl": "57619c9a1671ae88a8d9b23443db532b765e830df10f06076fd6b62fd854ac95"
+  },
+  "runner_summary": {
+    "schema_version": "routing_reliability_v2",
+    "case_count": 8,
+    "completed": 8,
+    "outcomes": {
+      "general_answer": 8
+    },
+    "label_matches": 8,
+    "label_mismatches": 0,
+    "failure": null,
+    "cleanup_error": null,
+    "wall_ns": 478094143082,
+    "interpretation": "Clarifications and errors are separate from delivered answers; label agreement is not answer correctness."
+  }
+}

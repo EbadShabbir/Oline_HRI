@@ -1,0 +1,40 @@
+# Focused quality V3: independent review
+
+The frozen candidate **fails this focused check: 3/8 cases pass all applicable criteria**, although raw and final dependency decisions match all eight expected labels. Every case receives substantive generated content. None receives a pure promise, unnecessary clarification, or incorrect personal-memory refusal. The remaining failures concern requested counts, an incomplete comparison, and unsupported tool guidance.
+
+This is an eight-case diagnostic with predeclared deliverable criteria, not a representative accuracy estimate, a full new four-mode routing release, or a factual benchmark. The reviewer opened the cases only after the final freeze and explicit authorization. The review plan was frozen beforehand. The reviewer knew earlier failures and contributed safeguards, so this was not an external blind panel. All observations, labels, and criteria remain unchanged.
+
+| Case | Delivered content | Independent result |
+| --- | --- | --- |
+| optional_01 | Two practical reading-distraction strategies | Pass |
+| optional_02 | Three inbox actions, followed by unsupported speech-tool guidance | Content/count complete; overall fail |
+| optional_03 | Personalized notebook and handmade ornament gift ideas | Pass after one retry |
+| optional_04 | Three numbered lines, but connectivity is repeated | Partial: two distinct checks instead of three |
+| general_01 | Backup meaning and purpose in three sentences | Partial: requested two sentences |
+| followup_01 | Proposed car analogy without the required feedback mapping | Partial: observation/target/correction comparison missing |
+| questions_01 | Exactly two usable museum-guide questions | Pass |
+| draft_01 | Both kitchen-reminder actions in one sentence | Partial: requested two sentences |
+
+The corpus's content/count grades are **four complete and four partial**. One structurally complete answer fails the independent evidence/quality check, so these grades must not be substituted for the three overall passes. All four optional requests use the allowed general fallback after empty retrieval; two pass every applicable criterion. Among the four general/context/positive-control cases, one passes every criterion. There are no empty nonanswers or execution errors.
+
+In optional_02, the three useful inbox steps end with “Use your local Whisper and Silero VAD for this.” The verified deployment facts establish speech input and terminal text, not email-organizing functions for those components. The review records this as **one unsupported deployment-tool guidance claim**. It is distinct from an assertion that an inbox was already inspected or changed, and from a claim of performed physical action. No such completed action is claimed.
+
+In optional_04, “Ensure all devices are connected to the internet” and “Check your phone and tablet for any connectivity issues” repeat the same check, with the latter covering a subset of the first. The predeclared rule counts genuine deliverable units, not just numbered lines. Together with audio/video preparation, this yields two distinct checks. The phone/tablet wording also assumes possible device choices, but the review does not interpret a generic imperative as a factual assertion that this person owns a particular device.
+
+The backup response explains the meaning and reason, but has three sentences rather than two; its final sentence repeats the loss-protection purpose. The kitchen reminder supplies both requested actions and contains only ready-to-use reminder text, but has one sentence rather than two. Neither is a nonanswer. The question positive control succeeds completely: the two questions are delivered as requested artifacts, without being mistaken for a request that the user supply more information. The reminder's imperative form is likewise admitted correctly; its failure is solely the sentence count.
+
+The thermostat followup retains both supplied context messages, and one larger dependency review resolves the uncertain route to none. Its proposed car scenario does not identify a target or explicitly map observation, a target, and corrective action to thermostat feedback. That directly fails the predeclared comparison criterion. The statement about engine power responding to road temperature is recorded as an **unverified factual concern**, not declared universally false without verification. The missing comparison establishes the content failure independently of that factual uncertainty.
+
+There were **28 actual model calls**: eight size decisions, three dependency reviews, nine generations, and eight answer reviews. All per-turn bounds hold: at most one dependency review, two generations, and two answer reviews. All transport calls succeeded, and no malformed or contradictory answer review appeared. Each of the eight accepted outputs received a model-review pass; five nonetheless fail the independent assessment. Reviewer approval did not establish count compliance, explanatory completeness, or appropriate tool guidance.
+
+The only retry was optional_03. Its first attempt included concrete gift ideas and a conditional offer to use interests if available. The deterministic guard labeled it `unsupported_personal_claim`, but no actual preference value is asserted in the visible wording. That accusation is retained as a **manual false-positive concern**, not counted as an unsafe personal disclosure. The larger retry supplied two concise gift ideas and passed. All raw attempts and reviews remain in the audit rows.
+
+The four recorded retrieval calls correspond to the four optional cases; each returns an empty list. All eight retrieved, supplied, model-used, application-used, and response memory-ID arrays are empty. No unsupported personal value is observed in any delivered text or raw attempt. One accepted attempt contains the unsupported deployment-tool guidance described above; no performed physical action is claimed. The cases contain no required personal recall or mixed task and do not exercise populated-store correction, deletion, expiry, or concurrent mutation. Zero personal disclosures here cannot establish a universal evidence guarantee.
+
+All eight outputs contain accepted model generation. The observed turn median is **53.21 seconds**, with a range of 41.21–82.92 seconds; total runner time is 478.09 seconds. Loading is included, and root reports heavy tests had finished before replay. These finite local observations are not a general performance benchmark. This run exercises text conversation, not microphone capture or speech-recognition accuracy.
+
+The runner completed all eight cases, exited 0, and reported no failure or cleanup error. At **2026-09-14T20:25:35Z**, independent verification confirmed all **46 working and archived source hashes matched the frozen candidate**. The exact freeze SHA-256 is `b8d50f4f2c3d49dde80126a6e61b63123552f8af92dfc7b77e044a34f5449cff`; corpus SHA-256 is `b92b58264dc313a3086e046e55f453597234e24464098885949735876a0bc1c9`; review-plan SHA-256 remains `4b2ce7c6ca2ac9caf7563f1512bc7fc56093b0cddae6d1835570686abb147d9f`. Recorded run source hashes also match the archive. The end-of-run verification precedes root's subsequent authorization to resume development.
+
+The evidence is saved in [review_rows.jsonl](review_rows.jsonl), [manual_judgments.json](manual_judgments.json), [summary.json](summary.json), and [end_of_run_verification.json](end_of_run_verification.json). Each row retains the unchanged case criteria, exact delivered text, separate route/effective modes, attempts/reviews, evidence metadata, and concrete criterion results. The additional deployment-guidance check is explicitly marked as originating from the independent review protocol. [artifact_sha256.json](artifact_sha256.json) hashes the inputs and review artifacts.
+
+This check is now known developmental evidence. Its failures must remain visible after repairs, and rerunning these same eight cases cannot support a later unseen-validation claim.

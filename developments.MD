@@ -1,6 +1,96 @@
 # Development Decisions
 
+Latest completed evaluation: [changing-memory repairs, 14 September 2026](evaluation/changing_memory_repair_20260914/README.md). The first repair improved useful delivery from 39/96 to 92/96 on matched checkpoints with zero forbidden disclosures; a separate final relationship amendment passed 24/24. Human validation is pending.
+
 This file records confirmed implementation decisions for the offline personalized conversational robot.
+
+## Memory-lifecycle repairs and separate live validation — 2026-09-14
+
+Explicit personal recall now revalidates persistent memory even when prior
+conversation contains the fact. Routing may use the retained session; memory
+generation receives the current question and freshly authorized evidence without
+prior conversation. Snapshot checks still run before and after generation.
+Removed concrete personal-fact prompt examples and improved bounded request,
+location and event-date parsing. Correction-operation timestamps are included
+and required only for questions asking about those operations.
+
+Added guarded location-only composition and current relationship coverage.
+The final relationship amendment binds present status, complete person, role and
+domain qualifiers to the same positive source and delivered-speech relationship;
+past/former, negated, wrong-owner/person/role and borrowed qualifiers remain
+rejected. The real model must still generate the answer and citations. These
+bounded rules do not provide universal language understanding or per-record
+provenance for arbitrary conversation history.
+
+The first source version completed 96 live checkpoints under unchanged models,
+embeddings, generation settings and guards: useful delivery improved from 39/96
+to 92/96, and forbidden disclosures fell from 30 to zero. Two contradictory tea
+answers and two unnecessarily withheld relationship answers remain preserved.
+After sealing and auditing that run, the narrow relationship amendment completed
+a separate full 24-checkpoint scenario with 24 useful deliveries and no
+disclosures or withholding. Its three branches used new databases and three
+real process restarts. The final code was not rerun across all 96 checkpoints;
+the tea contradiction remains unresolved.
+
+Before the first live run, the full offline suite ran 1,093 tests with 26 skipped
+and no failures, followed by 226 passing tests on the final first-repair source.
+The second amendment passed 190 focused tests, including 11 new regressions,
+and received an independent source-bound preflight review. Independent blinded
+assistant reviews cover every answer in both runs; human validation is pending.
+The [implementation and experiment report](evaluation/changing_memory_repair_20260914/README.md)
+preserves all failures, source versions, traces, comparisons and commands.
+
+The CLI-default LLM router, real Qwen3 0.6B/1.7B, BGE ONNX CPU embeddings,
+2048-token context, 192-token output cap, temperature 0, seed 42 and thinking
+disabled remain unchanged. Inference stays serialized under existing resource
+guards. The original 288-checkpoint baseline is immutable. These targeted
+development results concern text, **process restart and controlled logical-time
+expiry**, not held-out accuracy, power-loss recovery or spoken performance.
+
+## Changing-memory lifecycle evaluation — 2026-09-14
+
+Completed the frozen deployed-system experiment across 12 fictional scenarios,
+36 independent databases and 288 live checkpoints. Added the lifecycle runner,
+independent authored ledger, offline harness validation, real process restart
+orchestration, controlled logical clock, immutable tracing, blinded answer
+review, analysis and report tooling. The primary run is preserved without a
+production repair or rerun.
+
+Persistent memory operations and snapshot freshness passed the audit, but
+delivered answers did not reliably honor them. Retained-history current-value
+queries disclosed the superseded value in 21/24 cases; deletion and expiry
+queries disclosed the revoked subject in 39/48 and 27/36 retained-history cases.
+Restart with evaluation-restored history did not remove this behavior. Fresh-history
+queries showed no original-fact resurrection in these deletion/expiry checks,
+but two answers instead matched an unsupported personal preference present in a
+generator prompt example. Storage exclusion is therefore insufficient evidence of delivered
+forgetting or correction.
+
+The traces identify routing that bypasses retrieval while forwarding old history,
+four genuine evidence-selection omissions, unsupported or unrequested generated
+details, and five unnecessary validation withholdings. The validation defects
+concern a “current” relationship qualifier and correction-operation timestamps
+incorrectly required as appointment details. Those five outcomes remain failed
+delivered recall despite supported raw replacements. Further implementation
+changes need a separately labeled evaluation; this result does not establish
+that any proposed repair works.
+
+The observed schema-7 runtime uses the CLI-default LLM router, Qwen3 0.6B/1.7B,
+2048 context, **192 output tokens**, temperature 0, seed 42, thinking disabled,
+and real BGE ONNX CPU embeddings. The resolved 192-token setting is recorded in
+the freeze; the older 128-token decision below is historical. Actual scored
+generator selections were 254 small and 34 large. Existing inference leases,
+residency rules and device guards remained active. All 13 worker admission
+failures preceded inference; no attempted checkpoint was repeated.
+
+All 288 answers received frozen independent assistant review (214 grouped
+packets, complete agreement). Useful full-rubric delivery was 118/288, including
+13/48 replacement recalls; human validation remains pending. A separately
+preserved analysis-parser correction changes only five stage diagnoses, not
+runtime behavior, answer judgments or scores. The [report](evaluation/changing_memory_20260914/README.md)
+links all evidence, tables, figure and reproducible commands. Results concern
+**process restart and controlled logical-time expiry**, not power-loss recovery
+or spoken performance.
 
 ## Superseding deployment decision — 2026-09-09
 
@@ -446,6 +536,144 @@ A correction creates a new record, marks the old record `superseded`, and embeds
 
 ### Evaluation before freezing the design
 
+The matched-evidence generator capability experiment (2026-09-12) is complete:
+120 fresh requests, 30 per category, were independently assistant-reviewed
+before inference and run once on each installed generator. The experiment
+bypasses routing, retrieval, composers, literal-answer constraints, rewriting
+and fallbacks. Both models receive identical complete evidence, empty history,
+raw rendered prompts, free-string JSON schema and 2048/192/temperature-0/seed-42
+settings with thinking disabled. Dataset, protocol, source and model digests
+were frozen; all 240 primary attempts completed under the existing resource
+guards with sole-model residency and no OS configuration changes.
+
+Full-rubric assistant-reviewed success is 43/120 for 0.6B and 76/120 for 1.7B:
+39 both-correct, four only-small, 37 only-large and 40 neither-correct pairs.
+Twenty-six large-only rescues were answerable requests. Mean warm time is
+0.767 versus 3.932 seconds (+3.165 s, 5.13×); preload-amortized block means
+are 1.218 versus 5.032 seconds. The larger model still fails 44 full rubrics
+and succeeds on only 3/18 unresolved-conflict cases. Automatic CPU/GPU placement,
+short authored cases and assistant scoring limit generalization. This supports
+observed complementary capability at measured cost; it establishes no cascade,
+retrieval, spoken-system or deployment-requirement benefit and changes no policy.
+
+Two fresh blinded assistant reviews agreed on label and flags for 232/240
+answers; a third blinded assistant adjudicated eight disagreements before
+unblinding. Independent human validation remains pending. Validation passed
+24 focused and 31 reused guard/telemetry tests plus four excluded live harness
+attempts. The [full report and immutable artifacts](evaluation/matched_evidence_20260912/README.md)
+include raw answers, complete paired examples, loading/timing/energy, frozen
+reviews, source/model audits and reproducible commands. Earlier experiments
+are preserved; current summary tables are in [results.md](results.md).
+
+Step 4 (2026-09-12) completes the final tradeoff analysis and paper figures
+using Step 3's recorded 432 attempts. No new inference or scoring was performed.
+The [analysis and reproducible figures](evaluation/final_tradeoff_analysis_20260912/README.md)
+separate correct delivery from validated delivery, report all three timing
+rounds, and summarize loading and sampled whole-device energy. At five seconds,
+small/large/cascade deliver 42/11/20 fully correct answers out of 144; at fifteen
+seconds they deliver 42/39/46. These are descriptive readouts, not requirements.
+The pooled cascade timing advantage reverses in two rounds and remains
+confounded by GPU allocation; only 3/144 generations use small. The evidence
+does not yet justify the adaptive selector. Human review, retrieval ablations,
+live-memory episodes and integrated speech evaluation remain separate work.
+
+Step 3 (2026-09-12) completed the comparison of small-only, large-only and
+lightweight cascade systems under a separately frozen, user-authorized swap
+allowance. All 432 attempts ran: 48 requests repeated three times per system,
+starting large-only, cascade, then small-only and rotating later rounds.
+Both fixed controls share the policy-first memory gate and classify unresolved
+requests only on their own model. The systems share retrieval and evidence
+checks while retaining router state and model residency between requests.
+
+Assistant-assessed full-rubric success was 42/144 (29.2%) for small-only,
+44/144 (30.6%) for large-only and 46/144 (31.9%) for cascade; mean text-request
+times including cold loads and failures were 2.314, 11.255 and 8.916 seconds.
+The cascade used small for only 3/144 generations. Its pooled speed difference
+from large-only is confounded by CPU/GPU placement and reversed in rounds 2
+and 3. All systems scored zero full successes on temporal/synthesis requests.
+These results do not yet justify the cascade or establish a quality/deadline
+requirement. Independent human review remains pending; repeated observations
+of the same 48 requests are not independent quality samples.
+
+The [full results](results.md) and
+[collection, review and validation record](evaluation/post_memory_comparison_20260912/README.md)
+preserve all nine sessions, 145 resolved blinded output groups and complete
+artifact checks. The revised logical-swap ceiling used existing capacity minus
+a 256 MiB reserve; no swap device or OS setting changed. One zero-request
+temperature rejection was retained separately, then the remaining sessions
+continued without retrying any answered request. Cleanup left no resident model
+and preserved power, boot, thermal-trip counters, source and model metadata.
+The earlier restricted-swap attempt remains historical: only its first
+48-request small-only session ran. Its answers are not pooled into the revised
+comparison. This exploratory reuse of the partly observed application workload
+is distinct from the broader draft's live-memory Stage 3 and the earlier ARC
+benchmark; earlier workloads, scores and source archives remain unchanged.
+
+Step 2 (2026-09-12) improves the shared memory path: embedded personal-request
+recognition, bounded subject/attribute/event linking, candidate field coverage,
+zero disclosure of unlinked neighbors, preserved same-event conflicts, and
+explicit unknown fields in supported partial recall. Consistent stored event
+timestamps support bounded ordering/elapsed-time composition; unsupported or
+contradictory temporal tasks decline it. Real separate-process tests exercise
+correction, forgetting, expiry, profile isolation, and stale-answer rejection.
+The [implementation and offline replay](evaluation/memory_pipeline_20260912/README.md)
+record development checks, limitations, and source preservation. On identical
+recorded candidate sets, all required facts were selected in 47/56 attempts
+before and 54/56 after. This is deterministic function replay, not new answer
+accuracy or a held-out quality result. Original benchmark scores are unchanged.
+
+On 2026-09-12, the first overhead improvement was implemented as opt-in
+`chat --routing-policy lightweight`: deterministic compute selection, zero or
+one memory classifier call, active-generator retention, and a two-easy-turn
+switch rule. Verified compositions reuse selected resident large; model peer
+eviction and exit cleanup remain explicit. This is an untrained heuristic
+awaiting quality and device-speed evaluation, not evidence of a cascade win.
+Automatic capture still uses 0.6B and voice still unloads before recognition.
+The [implementation record](evaluation/lightweight_routing_20260912/README.md)
+contains validation and the blocked preflights (812.5 MiB swap versus the
+unchanged 768 MiB startup limit; zero inference). The exact 34 Stage 2 execution
+files were [archived](evaluation/complete_system_20260911/frozen_source_v2/archive_manifest.json)
+before changes, preserving the source of the earlier results.
+
+Proposed next paper evaluation: [adaptive selection protocol draft](evaluation/adaptive_selection_protocol_draft.md)
+(2026-09-11). This separates paired generator capability, optimized single-model
+comparisons, and memory-lifecycle ablations. Its acceptance thresholds are
+provisional; it records proposed work, not a confirmed deployment change.
+
+The [2026-09-11 ARC capability pilot](evaluation/arc_capability_20260911/README.md)
+completed 100 questions each with 0.6B alone, resident 1.7B alone, and CLARA
+generator selection: 64%, 79%, and 79% correct, with mean question times of
+0.40 s, 0.62 s, and 29.82 s. The cascade selected 1.7B on 95/100 questions;
+this workload shows a larger-generator capability gain but no cascade efficiency
+gain. This is a public science-MCQ subset under a common adapter, not the full
+personalized/spoken system. The permitted Qwen2.5 3B fourth condition later ran
+under a documented 384 MiB startup swap allowance, then stopped during request
+84 when swap crossed the unchanged 512 MiB runtime ceiling. It produced 59
+correct accepted answers among 83 successful requests; later successful
+requests averaged 0.80 s. A user-requested continuation completed only the
+17 remaining questions, with 12 correct, giving 71/100 composite item accuracy
+(38/50 Easy, 33/50 Challenge). The continuation used a documented 1 GiB runtime
+swap ceiling and automatically placed 30/37 layers on GPU, versus 37/37 in the
+first segment; later successful requests averaged 1.86 s. This is segmented
+item coverage, not a successful uninterrupted run under the original 512 MiB
+criterion. Cleanup unloaded the model and preserved swap/power configuration;
+swap occupancy remained about 546 MiB. The 4B model was not loaded and was
+removed at the user's request. Full evidence and limitations are linked.
+
+The [complete text-system pilot](evaluation/complete_system_20260911/README.md)
+then recorded 184 of 432 planned attempts using the real routing, retrieval,
+generation, and validation path. On the same 40 first-round requests, assistant
+rubric review scored small-only 16/40, large-only 21/40, and CLARA 19/40.
+Small-only was fastest; cascade loading consumed 58% of its request time and
+its first session stopped at the 768 MiB available-RAM floor. A later large-only
+session completed, but residual swap blocked subsequent startup under the
+unchanged common policy. Five sessions remain unattempted. Variable CPU/GPU
+placement, unequal achieved repetitions, authored workload, and pending human
+review limit inference. The [full results](results.md) preserve all failures,
+coverage, timings, and diagnostics. This measures a prepared memory snapshot
+and complete text path; spoken-system and independently varied retrieval/live
+memory tests remain outstanding. No cascade advantage has been established.
+
 The pre-redesign Step 16 run executed the embedding, retrieval, routing, and
 answer paths against the Step 15 controlled seven-day fixture. A current rerun
 should also use other project-specific query-memory pairs. LoCoMo remains a
@@ -832,3 +1060,139 @@ Freeze the engine version, voice-model hash, configuration, pronunciation dictio
 - [sherpa-onnx Kokoro documentation and CPU benchmarks](https://k2-fsa.github.io/sherpa/onnx/tts/pretrained_models/kokoro.html)
 - [NVIDIA Riva support and memory matrix](https://docs.nvidia.com/deeplearning/riva/user-guide/docs/support-matrix/support-matrix.html)
 - [NIDCD guidance for communicating with older adults with hearing loss](https://www.nidcd.nih.gov/sites/default/files/hearinglossolderadults-508.pdf)
+
+## Completed routing-overhead experiment — 2026-09-12
+
+The [controlled four-turn experiment](evaluation/routing_overhead_20260912/README.md)
+is complete: 12 authored sequences, three timing repetitions, three matched
+main systems and a diagnostic adaptive routing-bypass replay produced 144
+sequence attempts/576 turns. All 546 delivered responses and 30 technical
+failures remain recorded. The earlier post-memory comparison remains a separate
+result; its 48-request sessions used different history and cold-start boundaries.
+
+| System | Mean four-turn sequence, s | Fully correct / 144 attempts |
+| --- | ---: | ---: |
+| Small-only | 20.115 | 66 |
+| Large-only | 78.454 | 97 |
+| Lightweight adaptive | 65.694 | 77 |
+| Diagnostic replay | 57.434 | 77 |
+
+The sequence span includes BGE/prepared-memory/router/Conversation startup,
+request latency and intervening measured work. Admission/client initialization,
+cleanup and scheduler waits are separate. Adaptive averaged 12.760 seconds
+less than large-only, 45.579 seconds more than small-only and 8.261 seconds
+more than exact-request replay. Selection recovered its measured costs against
+large-only chiefly for EEEE (50.912 seconds saved), while DDEE averaged 5.558
+seconds slower than large-only. All nine adaptive DDEE traces exercised the
+actual large/large/large/small rule; the final return has no observed following
+turn. DDDD used large throughout, so its small timing difference cannot be
+attributed to small-model selection. EDED showed variable results.
+
+These measurements do not establish quality–latency dominance or justify an
+unconditional policy change. Adaptive gained 11 fully correct answers over
+small-only at much greater latency and lost 20 against large-only. Two blinded
+assistant contexts agreed on 145/146 output groups; one disagreement was
+adjudicated. Human review remains pending. Repetitions and shared workload
+forms/profile are dependent. Large-model CPU/GPU allocation, output lengths,
+cache/thermal conditions and replay's fixed last position limit attribution.
+Replay preserves exact generation requests and shared retrieval/validation but
+requires an observed trace, so it remains a diagnostic rather than a policy.
+
+The implementation now records monotonic actual-path selection/classifier,
+eviction-request/verified-absence, retrieval, generation, validation and total
+request spans with before/after residency. Backend load/prefill/decode durations
+are nested diagnostics and never added again. Fixed systems enforce their sole
+model for classifiers and answer helpers. All main systems made 93 memory
+classifier calls and zero compute classifier calls; replay made zero selection
+calls. Settings remained Qwen3 0.6B/1.7B, context 2048, cap 192, temperature 0,
+seed 42, thinking disabled and serialized guarded inference.
+
+The initial harness incorrectly treated an ordinary final-turn validation
+rejection as fatal. A documented prospective v2 amendment repaired only failure
+handling/provenance before continuation. All 88 earlier attempts were reused
+unchanged, the original rejected answer remains failed, and none was retried
+or completed by splicing. The application, workload, settings, model digests,
+guards and measurement boundaries stayed fixed. Offline validation passed
+920 tests with 26 skipped (946 total). The
+[corrected collection-integrity audit](evaluation/routing_overhead_20260912/final_collection_audit_v2_corrected/summary.json)
+passed; the [audit correction record](evaluation/routing_overhead_20260912/final_collection_audit_correction.json)
+preserves its predecessor and does not alter collection evidence.
+
+The [reviewed results](evaluation/routing_overhead_20260912/report_reviewed_v2/report.md),
+[sequence figure](evaluation/routing_overhead_20260912/report_reviewed_v2/sequence_latency.pdf),
+[component figure](evaluation/routing_overhead_20260912/report_reviewed_v2/components.pdf)
+and [detailed paired tables](evaluation/routing_overhead_20260912/report_details_final_v2/paired_sequence_components.csv)
+are archived with raw traces and reproducible commands. Broader useful-answer
+gains, an optimal two-easy threshold, the unobserved fifth turn after a small
+return and spoken-interaction performance remain open questions.
+
+
+## Independent retrieval experiment completed — 2026-09-13
+
+The six-condition comparison is complete: 48 independently reviewed fresh
+fictional requests, two fixed generators, three retrieval policies and three
+counterbalanced timing repetitions, totaling **864 attempts**. The
+[report](evaluation/independent_retrieval_20260913/report_reviewed_v3/report.md)
+and [reproducible experiment directory](evaluation/independent_retrieval_20260913/README.md)
+preserve all 856 delivered answers and eight failed attempts.
+
+The experiment separates authorization from memory relevance. OFF supplies
+no personal evidence; ALWAYS PERMITTED attempts retrieval on every authorized
+request; SELECTIVE uses the current memory-need policy. Every condition
+retains consent, profile isolation, prohibited-data and lifecycle/freshness
+checks. Equivalent prepared snapshots include lifecycle changes before
+collection. Fresh request histories and OFF input audits exclude personal
+fact leakage. The actual condition model remains fixed for classifiers,
+generation, helper rendering and fallbacks. Experimental decoding uses
+2048 context, 192 output tokens, temperature 0, seed 42 and no thinking.
+These experimental settings do not silently replace prior deployment settings.
+
+Observed implications:
+
+- **0.6B:** SELECTIVE matches ALWAYS's 53/78 known-recall successes, including
+  the same mean success on each known question, while reducing unnecessary
+  retrieval from 24 to 6. It is slower overall: 2.030 versus 1.941 s per
+  request, with 91 versus 93 total task successes. The memory-access reduction
+  is supported; a time-saving claim is not.
+- **1.7B:** SELECTIVE reduces unnecessary retrieval from 24 to 3 and mean time
+  from 10.460 to 9.117 s after selection costs. Known-recall success falls
+  from 53/78 to 52/78; overall success rises from 86/144 to 89/144. p95 time
+  worsens from 20.657 to 30.457 s. This is an observed mean-time benefit with
+  quality and tail-latency costs, not established quality preservation.
+- Both retrieval policies remain weak on paraphrases (6/24 successes) and
+  uncertainty/conflict handling. OFF has zero known-fact recall successes;
+  appropriate caution without evidence is separately reported as missed
+  personalization, rather than successful recall.
+
+No blanket deployment change follows from this coverage experiment. Further
+work should address paraphrase retrieval/evidence linking, uncertainty and
+conflict handling, and sustained residency in a new prospectively frozen
+study. No fix or prompt change was introduced into the collected workload to
+improve its unfavorable outcomes. Live before/after propagation remains a
+separate experiment.
+
+Collection kept original source, model digests, configuration and device
+guards unchanged. Eight available-memory-floor stops were preserved once;
+each independently approved continuation resumed only an unattempted suffix.
+The 18 logical blocks required 26 physical fragments and 35 rejected
+zero-request admissions. Each fragment retained its sole model, but sustained
+1.7B residency across every uninterrupted block was not achieved. Extra cold
+loads, failures and selection costs remain in primary timing. Device placement,
+background load and repeated observations limit broader causal claims.
+
+Independent blinded assistants reviewed 159 distinct question/outcome groups;
+147 agreed and 12 were adjudicated by a third fresh blinded context. All
+judgments were sealed before mapping, and every attempt has verified review
+coverage. Human validation remains pending. Paired statistics average three
+repetitions per request and resample eight shared fictional scenario clusters;
+there is no noninferiority margin or population-equivalence claim.
+
+Validation includes 37 focused pre-collection harness/guard checks, a separate
+12/12 live development smoke, 17 continuation checks, and 24 final analysis
+tests. Independent final audits passed 99,319 numerical checks and 181 report
+checks. The original failed offline audit and renderer attempt are retained.
+The [audit-only correction](evaluation/independent_retrieval_20260913/analysis_audit_correction_v1.md)
+recognizes an existing helper's 24 evidence-dependent question rewrites;
+semantic neutrality is not assumed. Runtime behavior, raw answers, references,
+rubrics and statistical rules remained fixed. Earlier development decisions
+and evaluation records are preserved.

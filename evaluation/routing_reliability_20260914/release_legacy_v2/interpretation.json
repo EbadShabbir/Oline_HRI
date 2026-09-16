@@ -1,0 +1,29 @@
+{
+  "scope": "Routing-only Boolean projection; no generated answers or answer-quality comparison.",
+  "case_count": 32,
+  "call_count": 64,
+  "status_counts": {
+    "ok": 32
+  },
+  "sources_match_frozen_v2": true,
+  "case_hash_matches_frozen_v2": true,
+  "general_cases": 12,
+  "general_incorrect_memory_routes": 6,
+  "required_only_cases": 8,
+  "required_only_missed_memory_routes": 1,
+  "runner_summary": {
+    "schema_version": "routing_reliability_v2",
+    "case_count": 32,
+    "completed": 32,
+    "outcomes": {
+      "routed_memory": 19,
+      "routed_general": 13
+    },
+    "label_matches": 16,
+    "label_mismatches": 12,
+    "failure": null,
+    "cleanup_error": null,
+    "wall_ns": 36161630494,
+    "interpretation": "Clarifications and errors are separate from delivered answers; label agreement is not answer correctness."
+  }
+}

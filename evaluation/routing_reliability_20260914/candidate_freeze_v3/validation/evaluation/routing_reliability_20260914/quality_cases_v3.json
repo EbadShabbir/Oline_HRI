@@ -1,0 +1,237 @@
+{
+  "schema_version": "answer_quality_check_v3",
+  "purpose": "Focused eight-case check of concrete answer delivery and appropriate question/draft outputs; not a full four-mode routing release benchmark.",
+  "provenance": {
+    "author": "semantic_router_agent",
+    "created_at_utc": "2026-09-14T20:00:40.081493+00:00",
+    "authoring_method": "Newly authored from the requested category mix and runner case schema, without model calls.",
+    "visible_development_context": "The user goal and earlier known original-regression quality failures were available to the author.",
+    "excluded_inputs": [
+      "Fresh release V2 cases and results",
+      "Upcoming reply_guard edits"
+    ],
+    "case_text_disclosed_to_root_before_freeze": false,
+    "case_revisions_after_model_outputs": false,
+    "limitations": "Small authored diagnostic with predeclared criteria; not a representative sample, statistical accuracy estimate, or proof of quality."
+  },
+  "review_protocol": {
+    "context": "Use the runner's isolated empty personal store and production history admission; criteria and expected labels must not be included in model inputs.",
+    "control_flow": "Optional cases allow general fallback; remaining cases are self-contained or have supplied general task context.",
+    "delivery_grades": [
+      "complete",
+      "partial",
+      "nonanswer",
+      "error"
+    ],
+    "grading_rule": "Count genuine deliverable units. A smaller-than-requested but concrete answer is partial, not automatically a nonanswer. Pure offers, task restatements, or unnecessary requests for personalization without a deliverable are nonanswers.",
+    "separate_checks": [
+      "Expected route/effective fallback behavior",
+      "Concrete deliverable and explicit count requirements",
+      "Unsupported personal claims or personalization framing",
+      "Repetition, physical-action claims, factual concerns, and formatting defects"
+    ],
+    "positive_controls": "Actual questions and imperative wording are valid answers when the user explicitly requests those outputs."
+  },
+  "cases": [
+    {
+      "id": "quality_v3_optional_01",
+      "text": "Give me two ways to reduce distractions while reading at home. Use any saved study preferences if available; otherwise give general suggestions.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "deliverable_criteria": {
+        "required_content": [
+          "Two distinct actions or environmental changes that could reduce reading distractions."
+        ],
+        "count_constraint": {
+          "unit": "distinct practical suggestions",
+          "requested": 2
+        },
+        "nonanswer_examples_by_form": [
+          "Only offers to suggest something later.",
+          "Only asks for study preferences.",
+          "Repeats the instruction without providing a practical suggestion."
+        ],
+        "grounding": "With no supplied preferences, provide general suggestions without claiming they are based on known personal habits."
+      }
+    },
+    {
+      "id": "quality_v3_optional_02",
+      "text": "Make a three-step plan for sorting a crowded email inbox. Adapt it to any stored workflow preferences; if you have none, give a simple general plan.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "deliverable_criteria": {
+        "required_content": [
+          "An ordered sequence of three concrete inbox-organizing actions."
+        ],
+        "count_constraint": {
+          "unit": "ordered steps",
+          "requested": 3
+        },
+        "nonanswer_examples_by_form": [
+          "Only promises to create a plan.",
+          "Asks for preferences instead of giving the permitted general plan.",
+          "Says to organize the inbox without describing actions."
+        ],
+        "grounding": "Do not claim access to, inspection of, or modification of the actual inbox or knowledge of an unstated workflow."
+      }
+    },
+    {
+      "id": "quality_v3_optional_03",
+      "text": "Suggest two inexpensive things I could make as a thank-you gift. Use any saved craft interests if you know them; otherwise offer general ideas.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "deliverable_criteria": {
+        "required_content": [
+          "Two identifiable makeable gift ideas, with enough detail to distinguish them."
+        ],
+        "count_constraint": {
+          "unit": "distinct gift ideas",
+          "requested": 2
+        },
+        "nonanswer_examples_by_form": [
+          "Only says to choose a thoughtful gift.",
+          "Offers to tailor ideas after learning interests without naming a gift.",
+          "Names interests rather than actual things to make."
+        ],
+        "grounding": "Do not invent the user's craft interests or a recipient's preferences. Exact prices are neither required nor supported."
+      }
+    },
+    {
+      "id": "quality_v3_optional_04",
+      "text": "Give me a three-item checklist for preparing for a video call. Use saved accessibility preferences if any are available; otherwise provide a general checklist.",
+      "prior_turns": [],
+      "expected_modes": [
+        "optional"
+      ],
+      "deliverable_criteria": {
+        "required_content": [
+          "Three concrete preparation checks or actions relevant to joining a video call."
+        ],
+        "count_constraint": {
+          "unit": "checklist items",
+          "requested": 3
+        },
+        "nonanswer_examples_by_form": [
+          "Only promises a checklist.",
+          "Requires disclosure of accessibility needs before providing any general checks.",
+          "Repeats that preparation is important without providing checks."
+        ],
+        "grounding": "Do not invent accessibility needs, claim to have tested devices, or claim a setting was changed."
+      }
+    },
+    {
+      "id": "quality_v3_general_01",
+      "text": "Explain in two sentences what a file backup is and why someone would keep one.",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "deliverable_criteria": {
+        "required_content": [
+          "A backup is an additional copy of data kept for possible recovery.",
+          "A concrete reason for keeping it, such as recovering after loss or damage."
+        ],
+        "count_constraint": {
+          "unit": "sentences",
+          "requested": 2
+        },
+        "nonanswer_examples_by_form": [
+          "Only offers to explain backups.",
+          "Repeats the question or calls backups important without explaining them."
+        ],
+        "grounding": "A general explanation is sufficient; do not claim knowledge of the user's files or existing backups."
+      }
+    },
+    {
+      "id": "quality_v3_followup_01",
+      "text": "Give me one everyday analogy for that feedback process and explain the comparison.",
+      "prior_turns": [
+        {
+          "role": "user",
+          "content": "Describe how a thermostat keeps a room near a chosen temperature."
+        },
+        {
+          "role": "assistant",
+          "content": "A thermostat compares the measured room temperature with a set temperature. It turns heating on when the room is too cool and off when the target is reached."
+        }
+      ],
+      "expected_modes": [
+        "none"
+      ],
+      "deliverable_criteria": {
+        "required_content": [
+          "One recognizable everyday analogy.",
+          "An explicit comparison linking observation, a target, and corrective action to the supplied thermostat feedback process."
+        ],
+        "count_constraint": {
+          "unit": "analogies",
+          "requested": 1
+        },
+        "nonanswer_examples_by_form": [
+          "Only says an analogy could help.",
+          "Asks what process is meant despite the complete supplied context.",
+          "Repeats the thermostat description without giving an analogy."
+        ],
+        "grounding": "Use the supplied general task context; do not invent facts about the user's home or thermostat."
+      }
+    },
+    {
+      "id": "quality_v3_questions_01",
+      "text": "Give me exactly two questions to ask a museum guide about how an artifact was made.",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "deliverable_criteria": {
+        "required_content": [
+          "Two usable questions directed to a guide about an artifact's construction, materials, tools, or making process."
+        ],
+        "count_constraint": {
+          "unit": "questions",
+          "requested": 2
+        },
+        "positive_control": "Questions are the requested deliverable. Delivering appropriate questions must not be rejected merely for asking questions or using question wording.",
+        "nonanswer_examples_by_form": [
+          "Asks the user for the artifact before offering any reusable questions.",
+          "Only offers to draft questions."
+        ],
+        "grounding": "Do not assert an artifact's unknown origin, material, or history as fact; asking about those details is appropriate."
+      }
+    },
+    {
+      "id": "quality_v3_draft_01",
+      "text": "Write a two-sentence reminder for a shared kitchen asking people to wash their mugs and leave the sink clear. Give only the reminder.",
+      "prior_turns": [],
+      "expected_modes": [
+        "none"
+      ],
+      "deliverable_criteria": {
+        "required_content": [
+          "Ready-to-use reminder wording asking people to wash their mugs.",
+          "Ready-to-use wording asking people to leave the sink clear."
+        ],
+        "count_constraint": {
+          "unit": "sentences",
+          "requested": 2
+        },
+        "positive_control": "Polite instructions and direct request wording are the requested draft. They are not a nonanswer merely because they use imperatives or repeat the requested actions.",
+        "nonanswer_examples_by_form": [
+          "Only promises to write the reminder.",
+          "Describes what a reminder should say without supplying usable wording."
+        ],
+        "grounding": "This is a supplied drafting situation, not evidence about a personal household; do not invent a named resident or claim to post the reminder."
+      }
+    }
+  ],
+  "corpus_fingerprint": {
+    "algorithm": "sha256",
+    "serialization": "UTF-8 canonical JSON, sorted keys and compact separators, excluding corpus_fingerprint",
+    "value": "d8d7cf2c2f86cd8ec6f2c94a3d69b45d98de1fbf07c516e7adb10e59d06d0549"
+  }
+}

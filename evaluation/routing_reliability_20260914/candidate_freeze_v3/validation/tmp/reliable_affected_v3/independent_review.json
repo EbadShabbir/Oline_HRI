@@ -1,0 +1,500 @@
+{
+  "schema_version": "known_affected_development_review_v3",
+  "created_at": "2026-09-14T20:12:26.559570+00:00",
+  "scope": "Four known V2 failures replayed after targeted fixes. Development regression evidence, not unseen validation. No microphone or transcription test.",
+  "source_verification": {
+    "checked_count": 42,
+    "working_source_mismatches": [],
+    "recorded_source_sha256": {
+      "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+      "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+      "src/oline_hri/answer_guidance.py": "0202dbd3d818fe8364e7de55c7711a53ed3a9c3a00ab637f6a80ea67bab4f24c",
+      "src/oline_hri/answer_review.py": "358393c0b7d1f54e89d37616ba3e492270ea96da3578657cdc34481d34847f49",
+      "src/oline_hri/cli.py": "c47e15bed05ccc0e9f00c4295d9b4ddf7d5df85f85c47a5135228139195703b1",
+      "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+      "src/oline_hri/conversation.py": "878361152fcfed2dac6867badb3b935f0dea727f5ef2300cb704008a1444e2a7",
+      "src/oline_hri/dependency_classifier.py": "2dc25a405fc3c8e63c9ddeffa08c14d3491d8d182c8ff3f2e6299236d86ffb4b",
+      "src/oline_hri/dependency_review.py": "90842f6849641dec9325196bbe6c34eb874773a5d4c93ec39a89e41a627e0968",
+      "src/oline_hri/dependency_routing.py": "979935708ec0f21716715665438f6d9333f4d37ebf51d69a91b6085beb34277d",
+      "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+      "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+      "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+      "src/oline_hri/evaluation_experiment.py": "c58046a9143e0e0a2b1989549bb1d6d11490ebeca704d73ee65395867c7169cb",
+      "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+      "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+      "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+      "src/oline_hri/evaluation_runner.py": "fb3c521cee73d0f869ff7a115370b4213fc233904c330204300f7ba6f9eefd8f",
+      "src/oline_hri/evaluation_scoring.py": "e8a7e829415d928024f1c0273be8f04412947db792b1bc0b9316226ecccd2723",
+      "src/oline_hri/evaluation_systems.py": "77437ef8a579d2de531a4770fc2bda2a2088d3310cad4d3db3be536e4203f66a",
+      "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+      "src/oline_hri/grounded_composition.py": "52e458baa35b59aa7bc00736daf7a2e8b98b38a0fae1ce77b872fcf40eff7507",
+      "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+      "src/oline_hri/memory.py": "7910213701283ac86bf3157d9271c78114cfbc4104f8f20aed3db59924ee5f38",
+      "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+      "src/oline_hri/memory_evidence.py": "c0b1b0744f022fd593501e7a7310040309b4d198ba56435643ba14f2645d22e7",
+      "src/oline_hri/ollama.py": "7a82fe0a71461c7bd02faee3fbd739b32e4d4388e5f42ec146ab685e208a43d1",
+      "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+      "src/oline_hri/relationships.py": "29f04fc94ab15a357ef90bdf0bd645958ecf2ecdadc3ad857363756528cae505",
+      "src/oline_hri/reliable_conversation.py": "2f18d11697c3422091b33e340535d5c156cce8c7881db35bebfda6cf1bc71971",
+      "src/oline_hri/reply_guard.py": "43c43775293aab937ccffba8cbe0fed3a8e6d0f113ec94db01cecff2095e5cee",
+      "src/oline_hri/response.py": "563c9acf7fd955a531f618383e68dd0bf122278486dbbc4b611e45f0939c6273",
+      "src/oline_hri/retrieval.py": "def5286fb421b895328f7b97718592dd5a9b73ff82a039ba1e8f84fac7fa31f2",
+      "src/oline_hri/routing.py": "2e2c9e7ea0dc59c422f6062daabbff6fc93185ccf564fb080969091568921d3c",
+      "src/oline_hri/semantic_routing.py": "0612dc153fed76e52536c413edf69f981bc7b7b3c2f7412d4c7ed3ef178a83bf",
+      "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0",
+      "src/oline_hri/timing.py": "23c1c126c26d65e03833dc1c107ffa14670843fefd3755fd42ecd0969af1a445",
+      "src/oline_hri/default_config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+      "src/oline_hri/dependency_classifier_v1.json": "2ac2fa20d05c2bd172c6e54fdb8ab50224a848effd45a768fcfbbf26ce74ac33",
+      "src/oline_hri/fictional_seven_day_v1.json": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e",
+      "src/oline_hri/fictional_seven_day_v1_1.json": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d",
+      "scripts/run_routing_reliability.py": "4a1dc4edb2c8074c9097fd441d01676bf0875f395dc5d1f641d9c0114be22686"
+    }
+  },
+  "input_sha256": {
+    "tmp/reliable_affected_v3/metadata.json": "fc9311d338ca41be103eed2de92d43debdc7e3f83fbb3a43a64bce31e3f7ba5d",
+    "tmp/reliable_affected_v3/observations.jsonl": "1b78199fb0bc5daa627a509d9540e3a7d15b7031c6f242e6e07755652013e6b8",
+    "tmp/reliable_affected_v3/model_calls.jsonl": "dd72f2e5211f234ce3a1fe5c009326949f7339c288e2db0a84808e26631f881c",
+    "tmp/reliable_affected_v3/summary.json": "44d4c56734bff0180d354060c7766b22dab7c1267a96c837f7c6ba113575938d"
+  },
+  "case_file_sha256": "70e3d30e1df01229abf311c137104a692311e574d1e19209fbf75a23134ab645",
+  "completed": 4,
+  "runner_failure": null,
+  "cleanup_error": null,
+  "all_final_routes_match": true,
+  "independently_accepted": 3,
+  "unverified_material_factual_cases": [
+    "r2_14"
+  ],
+  "unqualified_all_case_pass": false,
+  "confirmed_unsupported_delivered_personal_facts": 0,
+  "confirmed_unsupported_delivered_deployment_or_action_claims": 0,
+  "actual_call_counts": {
+    "model_size": 4,
+    "dependency_review": 1,
+    "answer_generation": 5,
+    "answer_review": 3
+  },
+  "all_call_bounds_pass": true,
+  "rows": [
+    {
+      "id": "r2_12",
+      "case": {
+        "id": "r2_12",
+        "category": "none",
+        "text": "Give a household example of each.",
+        "prior_turns": [
+          {
+            "role": "user",
+            "content": "Distinguish a thermometer from a thermostat."
+          },
+          {
+            "role": "assistant",
+            "content": "A thermometer measures temperature. A thermostat controls a system to maintain a target temperature."
+          }
+        ],
+        "expected_modes": [
+          "none"
+        ],
+        "expected_general_request": ""
+      },
+      "exact_delivered_text": "A thermometer measures temperature, such as a kitchen thermometer. A thermostat controls a system, such as a heating system, to maintain a target temperature.",
+      "status": "ok",
+      "raw_predicted_mode": "none",
+      "thresholded_mode": "clarify",
+      "final_dependency": {
+        "form": "request",
+        "mode": "none",
+        "missing_fact": "",
+        "general_request": "",
+        "uncertain": false
+      },
+      "effective_mode": "none",
+      "label_match": true,
+      "admitted_history_messages": 2,
+      "dependency_review": {
+        "model": "qwen3:1.7b",
+        "content": "{\"needs_personal_facts\": false}",
+        "done_reason": "stop",
+        "total_duration_ns": 26078332530,
+        "load_duration_ns": 24062094132,
+        "prompt_eval_count": 341,
+        "eval_count": 9,
+        "eval_duration_ns": 1189053000,
+        "prompt_eval_duration_ns": 814339000,
+        "citation_annotations_removed": 0
+      },
+      "generation_policy": "reliable_generation",
+      "application_only_output": false,
+      "attempts": [
+        {
+          "model": "qwen3:0.6b",
+          "raw_content": "{\"speech\": \"A thermometer measures temperature, such as a kitchen thermometer. A thermostat controls a system, such as a heating system, to maintain a target temperature.\",\"gesture_id\": \"NO_ACTION\",\"memory_used\": []}",
+          "accepted": true,
+          "confirmed_unsupported_personal_fact": false,
+          "confirmed_unsupported_deployment_or_action_claim": false
+        }
+      ],
+      "raw_review_attempts": [
+        {
+          "model": "qwen3:1.7b",
+          "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+          "done_reason": "stop",
+          "total_duration_ns": 31793345121,
+          "load_duration_ns": 25307300164,
+          "prompt_eval_count": 436,
+          "eval_count": 22,
+          "eval_duration_ns": 5463055000,
+          "prompt_eval_duration_ns": 997218000,
+          "citation_annotations_removed": 0
+        }
+      ],
+      "answer_reviews": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer",
+          "generation": {
+            "model": "qwen3:1.7b",
+            "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+            "done_reason": "stop",
+            "total_duration_ns": 31793345121,
+            "load_duration_ns": 25307300164,
+            "prompt_eval_count": 436,
+            "eval_count": 22,
+            "eval_duration_ns": 5463055000,
+            "prompt_eval_duration_ns": 997218000,
+            "citation_annotations_removed": 0
+          }
+        }
+      ],
+      "quality_issues": [],
+      "actual_call_counts": {
+        "model_size": 1,
+        "dependency_review": 1,
+        "answer_generation": 1,
+        "answer_review": 1
+      },
+      "actual_call_bounds_pass": true,
+      "all_transport_calls_ok": true,
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "response_memory_ids": [],
+      "application_memory_ids": [],
+      "confirmed_unsupported_delivered_personal_fact": false,
+      "confirmed_unsupported_delivered_deployment_or_action_claim": false,
+      "wall_seconds": 81.119851016,
+      "judgment": {
+        "result": "pass",
+        "primary_delivered_form": "substantive_general_answer",
+        "deliverable_status": "complete",
+        "reason": "Both comparison-history messages are retained. The answer supplies a kitchen thermometer and the use of a thermostat for home heating. It follows the requested pair rather than introducing unrelated appliances.",
+        "checks": {
+          "comparison_context_retained": true,
+          "both_requested_examples_addressed": true,
+          "unnecessary_clarification": false
+        }
+      }
+    },
+    {
+      "id": "r2_13",
+      "case": {
+        "id": "r2_13",
+        "category": "optional",
+        "text": "I am choosing an escape-room theme. You can use any interests you know for me; otherwise pick a broadly appealing theme.",
+        "prior_turns": [],
+        "expected_modes": [
+          "optional"
+        ],
+        "expected_general_request": ""
+      },
+      "exact_delivered_text": "I'll pick a broadly appealing theme for your escape room. Let's go with a classic mystery theme, as it's engaging and allows for creative storytelling.",
+      "status": "ok",
+      "raw_predicted_mode": "optional",
+      "thresholded_mode": "optional",
+      "final_dependency": {
+        "form": "request",
+        "mode": "optional",
+        "missing_fact": "personal context",
+        "general_request": "",
+        "uncertain": false
+      },
+      "effective_mode": "none",
+      "label_match": true,
+      "admitted_history_messages": 0,
+      "dependency_review": null,
+      "generation_policy": "reliable_quality_retry",
+      "application_only_output": false,
+      "attempts": [
+        {
+          "model": "qwen3:0.6b",
+          "raw_content": "{\n  \"speech\": \"I'm choosing an escape-room theme. Let's plan a fun and engaging experience for you.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+          "accepted": false,
+          "confirmed_unsupported_personal_fact": false,
+          "confirmed_unsupported_deployment_or_action_claim": false
+        },
+        {
+          "model": "qwen3:1.7b",
+          "raw_content": "{\n  \"speech\": \"I'll pick a broadly appealing theme for your escape room. Let's go with a classic mystery theme, as it's engaging and allows for creative storytelling.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+          "accepted": true,
+          "confirmed_unsupported_personal_fact": false,
+          "confirmed_unsupported_deployment_or_action_claim": false
+        }
+      ],
+      "raw_review_attempts": [
+        {
+          "model": "qwen3:1.7b",
+          "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+          "done_reason": "stop",
+          "total_duration_ns": 9517838155,
+          "load_duration_ns": 1954481,
+          "prompt_eval_count": 438,
+          "eval_count": 21,
+          "eval_duration_ns": 8720880000,
+          "prompt_eval_duration_ns": 738173000,
+          "citation_annotations_removed": 0
+        }
+      ],
+      "answer_reviews": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer",
+          "generation": {
+            "model": "qwen3:1.7b",
+            "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+            "done_reason": "stop",
+            "total_duration_ns": 9517838155,
+            "load_duration_ns": 1954481,
+            "prompt_eval_count": 438,
+            "eval_count": 21,
+            "eval_duration_ns": 8720880000,
+            "prompt_eval_duration_ns": 738173000,
+            "citation_annotations_removed": 0
+          }
+        }
+      ],
+      "quality_issues": [
+        "promise_only"
+      ],
+      "actual_call_counts": {
+        "model_size": 1,
+        "answer_generation": 2,
+        "answer_review": 1
+      },
+      "actual_call_bounds_pass": true,
+      "all_transport_calls_ok": true,
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "response_memory_ids": [],
+      "application_memory_ids": [],
+      "confirmed_unsupported_delivered_personal_fact": false,
+      "confirmed_unsupported_delivered_deployment_or_action_claim": false,
+      "wall_seconds": 56.194057972,
+      "judgment": {
+        "result": "pass",
+        "primary_delivered_form": "substantive_general_answer",
+        "deliverable_status": "complete",
+        "reason": "A classic mystery theme and its suitability are supplied. The introductory promise is followed by the actual selection, so this is no longer a promise-only answer. No particular human interest is inferred.",
+        "checks": {
+          "actual_optional_deliverable": true,
+          "general_fallback_allowed": true,
+          "small_promise_withheld": true,
+          "unnecessary_clarification": false
+        }
+      }
+    },
+    {
+      "id": "r2_14",
+      "case": {
+        "id": "r2_14",
+        "category": "optional",
+        "text": "Recommend a short audio drama. Knowing my tastes could help, but choose a beginner-friendly one if you lack them.",
+        "prior_turns": [],
+        "expected_modes": [
+          "optional"
+        ],
+        "expected_general_request": ""
+      },
+      "exact_delivered_text": "I recommend 'The Journey of the Brave' - a short audio drama with gentle storytelling and a peaceful tone. It's perfect for beginners and offers a warm, immersive experience.",
+      "status": "ok",
+      "raw_predicted_mode": "optional",
+      "thresholded_mode": "optional",
+      "final_dependency": {
+        "form": "request",
+        "mode": "optional",
+        "missing_fact": "personal context",
+        "general_request": "",
+        "uncertain": false
+      },
+      "effective_mode": "none",
+      "label_match": true,
+      "admitted_history_messages": 0,
+      "dependency_review": null,
+      "generation_policy": "reliable_quality_retry",
+      "application_only_output": false,
+      "attempts": [
+        {
+          "model": "qwen3:0.6b",
+          "raw_content": "{\n  \"speech\": \"I don't have personal preferences, but I can recommend a short audio drama. Let me know if you're looking for something beginner-friendly.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+          "accepted": false,
+          "confirmed_unsupported_personal_fact": false,
+          "confirmed_unsupported_deployment_or_action_claim": false
+        },
+        {
+          "model": "qwen3:1.7b",
+          "raw_content": "{\n  \"speech\": \"I recommend 'The Journey of the Brave' - a short audio drama with gentle storytelling and a peaceful tone. It's perfect for beginners and offers a warm, immersive experience.\",\n  \"gesture_id\": \"NO_ACTION\",\n  \"memory_used\": []\n}",
+          "accepted": true,
+          "confirmed_unsupported_personal_fact": false,
+          "confirmed_unsupported_deployment_or_action_claim": false
+        }
+      ],
+      "raw_review_attempts": [
+        {
+          "model": "qwen3:1.7b",
+          "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+          "done_reason": "stop",
+          "total_duration_ns": 8753158604,
+          "load_duration_ns": 2747619,
+          "prompt_eval_count": 413,
+          "eval_count": 21,
+          "eval_duration_ns": 7988512000,
+          "prompt_eval_duration_ns": 711165000,
+          "citation_annotations_removed": 0
+        }
+      ],
+      "answer_reviews": [
+        {
+          "verdict": "pass",
+          "reason": "supported_answer",
+          "generation": {
+            "model": "qwen3:1.7b",
+            "content": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+            "done_reason": "stop",
+            "total_duration_ns": 8753158604,
+            "load_duration_ns": 2747619,
+            "prompt_eval_count": 413,
+            "eval_count": 21,
+            "eval_duration_ns": 7988512000,
+            "prompt_eval_duration_ns": 711165000,
+            "citation_annotations_removed": 0
+          }
+        }
+      ],
+      "quality_issues": [
+        "promise_only"
+      ],
+      "actual_call_counts": {
+        "model_size": 1,
+        "answer_generation": 2,
+        "answer_review": 1
+      },
+      "actual_call_bounds_pass": true,
+      "all_transport_calls_ok": true,
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "response_memory_ids": [],
+      "application_memory_ids": [],
+      "confirmed_unsupported_delivered_personal_fact": false,
+      "confirmed_unsupported_delivered_deployment_or_action_claim": false,
+      "wall_seconds": 56.782154514,
+      "judgment": {
+        "result": "unverified_material_factual_criterion",
+        "primary_delivered_form": "substantive_general_answer",
+        "deliverable_status": "recommendation_present_but_unverified",
+        "reason": "The large retry supplies a title and properties rather than merely offering help. However, a real short audio drama called The Journey of the Brave and the claimed gentle/beginner-friendly properties were not corroborated by exact-title searches. The answer is not labeled a fictional proposal. This is an unverified recommendation, not proof the title does not exist. It prevents an unqualified usefulness pass despite the valid model review.",
+        "checks": {
+          "actual_named_recommendation_present": true,
+          "general_fallback_allowed": true,
+          "small_promise_withheld": true,
+          "unnecessary_clarification": false,
+          "recommended_work_and_properties_verified": false
+        },
+        "verification": {
+          "method": "Independent web searches after observation; no runtime or reviewer-model changes.",
+          "queries": [
+            "\"The Journey of the Brave\" \"audio drama\"",
+            "\"The Journey of the Brave\" podcast"
+          ],
+          "conclusion": "No corroborating audio-drama or producer source found in these results. Search absence does not establish nonexistence.",
+          "same_title_result": {
+            "title": "The Journey of the Brave — AI Other Stories, rafasonic",
+            "url": "https://www.story.com/ai-stories/ai-other-stories/the-journey-of-the-brave",
+            "relationship": "Same title alone does not verify the recommended audio drama or its attributes."
+          }
+        }
+      }
+    },
+    {
+      "id": "r2_28",
+      "case": {
+        "id": "r2_28",
+        "category": "clarify",
+        "text": "The blue bit near, uh...",
+        "prior_turns": [],
+        "expected_modes": [
+          "clarify"
+        ],
+        "expected_general_request": ""
+      },
+      "exact_delivered_text": "Could you clarify what you would like me to help with?",
+      "status": "ok",
+      "raw_predicted_mode": "clarify",
+      "thresholded_mode": "clarify",
+      "final_dependency": {
+        "form": "request",
+        "mode": "clarify",
+        "missing_fact": "request context",
+        "general_request": "",
+        "uncertain": true
+      },
+      "effective_mode": "clarify",
+      "label_match": true,
+      "admitted_history_messages": 0,
+      "dependency_review": null,
+      "generation_policy": "application_clarification",
+      "application_only_output": true,
+      "attempts": [],
+      "raw_review_attempts": [],
+      "answer_reviews": [],
+      "quality_issues": [],
+      "actual_call_counts": {
+        "model_size": 1
+      },
+      "actual_call_bounds_pass": true,
+      "all_transport_calls_ok": true,
+      "memory_diagnostics": {
+        "retrieved_ids": [],
+        "supplied_ids": [],
+        "model_used_ids": []
+      },
+      "response_memory_ids": [],
+      "application_memory_ids": [],
+      "confirmed_unsupported_delivered_personal_fact": false,
+      "confirmed_unsupported_delivered_deployment_or_action_claim": false,
+      "wall_seconds": 10.093834786,
+      "judgment": {
+        "result": "pass",
+        "primary_delivered_form": "clarification",
+        "deliverable_status": "appropriate_clarification",
+        "reason": "The unfinished speech receives a short request for task context with no claim of missing personal memory. Raw/final/effective mode remains clarify. Uncertainty is handled through the permitted clarification path, with zero generation attempts or dependency reviews.",
+        "checks": {
+          "correct_incomplete_speech_clarification": true,
+          "incorrect_memory_refusal": false,
+          "unnecessary_clarification": false
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Finite empty-store observations do not establish universal factual, personal-evidence, or lifecycle guarantees.",
+    "A material public-fact recommendation remains unverified despite improved delivery and a model-review pass.",
+    "Later eight-case quality corpus remains unopened; review plan was frozen separately before any access."
+  ]
+}

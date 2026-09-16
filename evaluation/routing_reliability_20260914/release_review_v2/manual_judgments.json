@@ -1,0 +1,799 @@
+{
+  "r2_01": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": true,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "partial",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "weak",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "Mentions reflection but largely restates the appearance of flipping. It does not explain the front/back reversal and viewing comparison underlying the apparent left/right reversal, and both directions is ambiguous. This is a weak explanatory answer despite reviewer pass.",
+    "factual_scope": "The ambiguous directions claim is flagged as a concern, not asserted as a separately verified false statement; no external physics validation was performed."
+  },
+  "r2_02": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "useful_concise",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Gives a concise causal explanation connecting refraction at water/air interfaces to the spectrum of colors. It is simplified and omits droplet/internal-reflection detail, but it directly answers the broad formation question without personal claims.",
+    "factual_scope": "Basic explanatory adequacy assessed; no exhaustive optics treatment or external source verification required."
+  },
+  "r2_03": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "useful_concise",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Directly says the tomato is a botanical fruit and connects that classification to development from the plant ovary. The vague season phrase does not prevent completion. The larger dependency review resolves initial uncertainty to none.",
+    "factual_scope": "Basic stable botanical classification assessed; no external verification performed."
+  },
+  "r2_04": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "not_useful",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The task clearly asks whether this deployment fetches objects or provides conversation. Available deployment facts suffice, but raw clarify is retained after the larger reviewer says personal facts are not needed; the generic question provides no capability answer.",
+    "factual_scope": "No unsupported deployment claim is delivered, because no capability answer is given."
+  },
+  "r2_05": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "weak",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Offers the simple-task-first heuristic and concrete examples, which minimally provides a manageable starting idea without demanding memory or more details. The grocery/walk examples may not match the two actual errands and the response is weakly tailored, but they are suggestions rather than asserted user facts.",
+    "factual_scope": "No actual errand, preference, or past action is inferred; no external factual verification needed."
+  },
+  "r2_06": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "weak",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Names one compatible bread/hummus/cucumber combination from the supplied ingredients. This minimally meets the combination request, but repeats the input and adds an unnecessary choose-from-these instruction instead of helpful assembly detail. No recipe or preparation steps were explicitly required, so it is weak rather than a wholly absent deliverable.",
+    "factual_scope": "Ingredient and requested-count consistency assessed; no nutritional or food-safety claim made."
+  },
+  "r2_07": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": true,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "incorrect",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "incorrect_answer",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The delivered count of 6 is wrong: a hexagon has 6*(6-3)/2 = 9 diagonals. Dependency routing is correct, but the larger answer reviewer passes this incorrect small-model answer.",
+    "factual_math_error": true,
+    "factual_scope": "Independently checked by the elementary n*(n-3)/2 count; no external source required."
+  },
+  "r2_08": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "acknowledgment": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "appropriate_acknowledgment",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Briefly congratulates the human for the puzzle completion asserted in the current message. No hidden personal history or additional accomplishment is invented. This none-mode turn calls for acknowledgment rather than factual explanation.",
+    "factual_scope": "The only human event mentioned is supplied in the current input."
+  },
+  "r2_09": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": true,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "partial",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "weak",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "Identifies integrity checking but describes comparing the file hash with the hash of the same file, without a reference/expected checksum. The self-comparison wording is circular or misleading and does not clearly explain what comparison can establish, despite reviewer pass.",
+    "factual_scope": "Recorded as an explanatory accuracy/clarity concern; no universal integrity guarantee is accepted and no external verification was performed."
+  },
+  "r2_10": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": true,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "incorrect",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "incorrect_answer",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The rust context is retained, but the response denies that dry air changes rust formation instead of explaining that reduced moisture reduces the conditions supporting rusting. Its own water-and-oxygen explanation does not support the practical no-change conclusion. The larger reviewer nevertheless passes it.",
+    "factual_scope": "The response is assessed against the supplied moisture-dependent explanation and basic qualitative rusting behavior; no exhaustive corrosion or rate claim is made."
+  },
+  "r2_11": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "draft_edit": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "weak",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Retains the supplied fictional postcard and adds a hopeful reunion sentence. This is a minimal tonal edit rather than an extensive rewrite, but it changes the ending toward hope and preserves the task context. Reuse of original wording is appropriate for the requested edit; its first-person statements are fictional, not personal-memory assertions.",
+    "factual_scope": "Draft fidelity/tone assessed; the fictional island and recipient are not treated as real personal facts."
+  },
+  "r2_12": {
+    "primary_delivered_form": "unhelpful_nonanswer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": true,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": true,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "requested_examples": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "irrelevant_answer",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The supplied two-device context is entirely withheld. The response invents a list of three unrelated appliances instead of giving a household thermometer and thermostat example. The toaster/vacuum descriptions are also imprecise; the main failure is loss of the requested objects and deliverable, despite reviewer pass.",
+    "factual_scope": "Task-object and count mismatch are directly observable from supplied context. No private household possessions are asserted."
+  },
+  "r2_13": {
+    "primary_delivered_form": "unhelpful_nonanswer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": true,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "theme_choice": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "promise_echo_without_answer",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "Copies the choosing-an-escape-room-theme premise into robot first person and offers to plan an experience, but never names a theme. Optional fallback and the model reviewer both execute, yet the requested choice is absent.",
+    "request_echo": true,
+    "factual_scope": "No actual preference is inferred and no physical action is claimed; failure is missing deliverable/role-confused echo."
+  },
+  "r2_14": {
+    "primary_delivered_form": "unhelpful_nonanswer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": true,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": true,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "missing",
+      "recommendation": "missing",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "promise_echo_without_answer",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "Offers to recommend an audio drama without identifying one, then solicits confirmation of the beginner-friendly constraint already present in the request. The optional-personalization path fails to supply its permitted general fallback despite reviewer pass.",
+    "factual_scope": "No title or preference fact is delivered. The personal-preferences disclaimer is not counted as an explicit refusal requiring missing user memory."
+  },
+  "r2_15": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "weak",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Supplies a minimal plant/soil/small-space arrangement procedure and permits customization. It is generic and offers little visual design detail, but contains immediate actions rather than only a promise. It does not invent an actual saved style preference.",
+    "factual_scope": "Assessed presence of a basic arrangement suggestion; detailed horticultural suitability was not independently verified."
+  },
+  "r2_16": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "theme_choice": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "useful",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Provides two concrete creative trivia themes, nature and history, without requiring or inventing personal interests. The request does not impose an exact one-item count, so offering alternatives still supplies the requested theme idea.",
+    "factual_scope": "Creative theme proposals are not claims about existing published works or the human."
+  },
+  "r2_17": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "useful_concise",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Names two concrete origami designs, a flower or star. This supplies the requested simple design idea without needing or inferring any actual saved interest.",
+    "factual_scope": "Creative project suggestions assessed; no specific folding instructions or personal facts are asserted."
+  },
+  "r2_18": {
+    "primary_delivered_form": "substantive_general_answer",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "complete",
+      "personal_information_request": "not_applicable"
+    },
+    "independent_usefulness": "useful_concise",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "Suggests a tropical mango or pineapple mocktail idea. The user explicitly accepts a generic alcohol-free idea rather than requiring a full recipe, and no alcoholic ingredient or actual flavor preference is introduced.",
+    "factual_scope": "The suggestion is an idea, not a nutrition or personal-taste claim."
+  },
+  "r2_19": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The requested specific personal value/constraint is absent from the isolated canonical store. Required routing correctly produces a concise missing-information question, without generating or inventing the requested value.",
+    "factual_scope": "No actual personal value is delivered."
+  },
+  "r2_20": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The requested specific personal value/constraint is absent from the isolated canonical store. Required routing correctly produces a concise missing-information question, without generating or inventing the requested value.",
+    "factual_scope": "No actual personal value is delivered."
+  },
+  "r2_21": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The requested specific personal value/constraint is absent from the isolated canonical store. Required routing correctly produces a concise missing-information question, without generating or inventing the requested value.",
+    "factual_scope": "No actual personal value is delivered."
+  },
+  "r2_22": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The requested specific personal value/constraint is absent from the isolated canonical store. Required routing correctly produces a concise missing-information question, without generating or inventing the requested value.",
+    "factual_scope": "No actual personal value is delivered."
+  },
+  "r2_23": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The requested specific personal value/constraint is absent from the isolated canonical store. Required routing correctly produces a concise missing-information question, without generating or inventing the requested value.",
+    "factual_scope": "No actual personal value is delivered."
+  },
+  "r2_24": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The requested specific personal value/constraint is absent from the isolated canonical store. Required routing correctly produces a concise missing-information question, without generating or inventing the requested value.",
+    "factual_scope": "No actual personal value is delivered."
+  },
+  "r2_25": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The requested specific personal value/constraint is absent from the isolated canonical store. Required routing correctly produces a concise missing-information question, without generating or inventing the requested value.",
+    "factual_scope": "No actual personal value is delivered."
+  },
+  "r2_26": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "appropriate_missing_information_request",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The requested specific personal value/constraint is absent from the isolated canonical store. Required routing correctly produces a concise missing-information question, without generating or inventing the requested value.",
+    "factual_scope": "No actual personal value is delivered."
+  },
+  "r2_27": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "not_applicable",
+      "request_context_question": "complete"
+    },
+    "independent_usefulness": "appropriate_request_clarification",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The target and alternative to switch between are unresolved. A short clarification is appropriate and does not invent a task or physical action.",
+    "factual_scope": "No factual value is delivered."
+  },
+  "r2_28": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": false,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": true,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "not_applicable",
+      "request_context_question": "not_targeted"
+    },
+    "independent_usefulness": "unfocused_clarification",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The utterance is unfinished and its referent/task are unresolved. Although asking for more information is needed, the larger dependency review incorrectly turns clarification into required personal recall; the delivered text frames the problem as an unavailable personal detail instead of asking what the speaker means.",
+    "factual_scope": "No factual value is delivered.",
+    "misframed_personal_memory_abstention": true
+  },
+  "r2_29": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "not_applicable",
+      "request_context_question": "complete"
+    },
+    "independent_usefulness": "appropriate_request_clarification",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The referent of that and the criterion for enough are unresolved. The short request for clarification is appropriate; no quantity, task or personal value is invented.",
+    "factual_scope": "No factual value is delivered."
+  },
+  "r2_30": {
+    "primary_delivered_form": "clarification",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": false,
+      "incomplete_execution": true
+    },
+    "requested_components": {
+      "general_answer": "not_applicable",
+      "personal_information_request": "not_applicable",
+      "request_context_question": "complete"
+    },
+    "independent_usefulness": "appropriate_request_clarification",
+    "strict_behavioral_acceptance": true,
+    "manual_reason": "The final application question appropriately asks for missing context. The route is nevertheless wrong (none instead of clarify). The small attempt copied the unrelated earlier pulley explanation and was withheld; the large attempt acknowledged that the number could not be determined. Its raw reviewer output paired pass with unsupported_personal_claim, which was rejected as a RoutingError. Both attempts and the invalid review are preserved; no number was invented.",
+    "factual_scope": "No factual value is delivered.",
+    "raw_review_validation_failure": true
+  },
+  "r2_31": {
+    "primary_delivered_form": "substantive_mixed_answer",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": true,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "partial",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "weak",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The unavailable helmet-size part is handled with a missing-information question, and a general explanation is present. However, saying a barrier reduces collision force does not explain how impact energy is absorbed; the requested mechanism is omitted. The unqualified preventing-injuries wording is also overbroad. This is partial general content, not a missing general part or an unsupported personal value.",
+    "factual_scope": "Primary-source check: CPSC explains that bicycle-helmet foam crushes to absorb impact energy and describes reducing severe-injury risk. The answer omits the crush/energy mechanism; no individual helmet size is asserted.",
+    "factual_sources": [
+      {
+        "title": "CPSC: Which Helmet for Which Activity?",
+        "url": "https://www.cpsc.gov/s3fs-public/349-WhichHelmetBrochure_5-13-22_WEB_508.pdf",
+        "support": "Foam crushes to absorb impact energy; helmet protection reduces risk rather than ensuring no injury."
+      }
+    ]
+  },
+  "r2_32": {
+    "primary_delivered_form": "substantive_mixed_answer",
+    "flags": {
+      "appropriate_clarification": true,
+      "unnecessary_clarification": false,
+      "incorrect_memory_refusal": false,
+      "missing_mixed_general_answer": false,
+      "repetition": false,
+      "promise_echo_without_delivery": false,
+      "count_format_constraint_failure": false,
+      "unsupported_personal_fact": false,
+      "unsupported_deployment_claim": false,
+      "other_factual_concern": true,
+      "incomplete_execution": false
+    },
+    "requested_components": {
+      "general_answer": "partial",
+      "personal_information_request": "complete"
+    },
+    "independent_usefulness": "weak",
+    "strict_behavioral_acceptance": false,
+    "manual_reason": "The unavailable tutor part is handled with a missing-information question and the general nib topic is addressed. The final answer identifies a wide tip but replaces the useful thick/thin stroke explanation with unsupported claims of generally smoother, more even writing. It is partial and misleading as an explanation of what a broad-edged nib does. The first small answer and contradictory pass/unsupported_personal_claim review were withheld; the bounded large retry and later valid pass are recorded. No tutor identity is invented.",
+    "factual_scope": "Primary manufacturer source describes broad-edge nibs producing thick and thin ribbon-like strokes. No universal narrow-versus-broad smoothness comparison is established here; the unsupported comparison is a factual concern, not a personal-evidence breach.",
+    "factual_sources": [
+      {
+        "title": "Speedball: Calligraphy and Illustration catalogue",
+        "url": "https://www.speedballart.com/wp-content/uploads/2025/06/05-24-103-BR-CatalogUpdate_CI_6-10.pdf",
+        "support": "Broad-edge nibs have a flat edge that produces thick and thin ribbon-like strokes."
+      }
+    ],
+    "raw_review_validation_failure": true
+  }
+}

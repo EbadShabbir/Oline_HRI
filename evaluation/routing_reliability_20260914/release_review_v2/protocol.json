@@ -1,0 +1,10 @@
+{
+  "schema_version": "independent_release_answer_review_v2",
+  "started_at": "2026-09-14T19:44:06.925188+00:00",
+  "candidate_freeze_sha256": "7b4fd78f09f1221fb2ac246f88e55c93ff19255b7aa97105cbd155cdc7d3a515",
+  "case_sha256": "abca3ad3fb364995b6673c6835b3bde28218c92e239266bc4b0825a02abe0eea",
+  "source_integrity_at_review_start": "all46 current frozen source files match",
+  "protocol_integrity": "original plan and streaming addendum hashes match frozen manifest",
+  "reviewer_provenance": "Did not author or read release v2 before candidate freeze and explicit review authorization; knows v1 results and contributed bounded guards. No model grading calls.",
+  "runtime_policy": "Read/annotate completed rows only; no source/prompt/model/config/case changes or prompt feedback; final aggregation after32 and cleanup."
+}

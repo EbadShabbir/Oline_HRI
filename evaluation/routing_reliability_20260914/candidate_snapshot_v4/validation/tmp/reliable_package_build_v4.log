@@ -1,0 +1,158 @@
+running bdist_wheel
+running build
+running build_py
+creating build
+creating build/lib
+creating build/lib/oline_hri
+copying src/oline_hri/routing.py -> build/lib/oline_hri
+copying src/oline_hri/evaluation_model_pairs.py -> build/lib/oline_hri
+copying src/oline_hri/config.py -> build/lib/oline_hri
+copying src/oline_hri/evaluation_scoring.py -> build/lib/oline_hri
+copying src/oline_hri/conversation.py -> build/lib/oline_hri
+copying src/oline_hri/evaluation_telemetry.py -> build/lib/oline_hri
+copying src/oline_hri/__init__.py -> build/lib/oline_hri
+copying src/oline_hri/evaluation_runner.py -> build/lib/oline_hri
+copying src/oline_hri/reliable_conversation.py -> build/lib/oline_hri
+copying src/oline_hri/answer_review.py -> build/lib/oline_hri
+copying src/oline_hri/memory.py -> build/lib/oline_hri
+copying src/oline_hri/response.py -> build/lib/oline_hri
+copying src/oline_hri/answer_guidance.py -> build/lib/oline_hri
+copying src/oline_hri/dependency_classifier.py -> build/lib/oline_hri
+copying src/oline_hri/operational_planning.py -> build/lib/oline_hri
+copying src/oline_hri/dependency_routing.py -> build/lib/oline_hri
+copying src/oline_hri/embedding.py -> build/lib/oline_hri
+copying src/oline_hri/cli.py -> build/lib/oline_hri
+copying src/oline_hri/ollama.py -> build/lib/oline_hri
+copying src/oline_hri/evaluation.py -> build/lib/oline_hri
+copying src/oline_hri/reply_guard.py -> build/lib/oline_hri
+copying src/oline_hri/evaluation_experiment.py -> build/lib/oline_hri
+copying src/oline_hri/memory_capture.py -> build/lib/oline_hri
+copying src/oline_hri/dependency_review.py -> build/lib/oline_hri
+copying src/oline_hri/timing.py -> build/lib/oline_hri
+copying src/oline_hri/semantic_routing.py -> build/lib/oline_hri
+copying src/oline_hri/evaluation_benchmark.py -> build/lib/oline_hri
+copying src/oline_hri/evaluation_merge.py -> build/lib/oline_hri
+copying src/oline_hri/grounded_composition.py -> build/lib/oline_hri
+copying src/oline_hri/lightweight_routing.py -> build/lib/oline_hri
+copying src/oline_hri/speech.py -> build/lib/oline_hri
+copying src/oline_hri/evaluation_router.py -> build/lib/oline_hri
+copying src/oline_hri/evaluation_systems.py -> build/lib/oline_hri
+copying src/oline_hri/relationships.py -> build/lib/oline_hri
+copying src/oline_hri/memory_evidence.py -> build/lib/oline_hri
+copying src/oline_hri/__main__.py -> build/lib/oline_hri
+copying src/oline_hri/retrieval.py -> build/lib/oline_hri
+running egg_info
+creating src/oline_hri.egg-info
+writing src/oline_hri.egg-info/PKG-INFO
+writing dependency_links to src/oline_hri.egg-info/dependency_links.txt
+writing entry points to src/oline_hri.egg-info/entry_points.txt
+writing requirements to src/oline_hri.egg-info/requires.txt
+writing top-level names to src/oline_hri.egg-info/top_level.txt
+writing manifest file 'src/oline_hri.egg-info/SOURCES.txt'
+reading manifest file 'src/oline_hri.egg-info/SOURCES.txt'
+writing manifest file 'src/oline_hri.egg-info/SOURCES.txt'
+copying src/oline_hri/default_config.json -> build/lib/oline_hri
+copying src/oline_hri/dependency_classifier_v1.json -> build/lib/oline_hri
+copying src/oline_hri/fictional_seven_day_v1.json -> build/lib/oline_hri
+copying src/oline_hri/fictional_seven_day_v1_1.json -> build/lib/oline_hri
+/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/.venv/lib/python3.10/site-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+installing to build/bdist.linux-aarch64/wheel
+running install
+running install_lib
+creating build/bdist.linux-aarch64
+creating build/bdist.linux-aarch64/wheel
+creating build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/routing.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/default_config.json -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/evaluation_model_pairs.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/config.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/evaluation_scoring.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/conversation.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/evaluation_telemetry.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/__init__.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/evaluation_runner.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/reliable_conversation.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/answer_review.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/memory.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/response.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/answer_guidance.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/dependency_classifier.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/operational_planning.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/dependency_routing.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/fictional_seven_day_v1.json -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/embedding.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/cli.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/ollama.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/evaluation.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/reply_guard.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/evaluation_experiment.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/memory_capture.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/dependency_review.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/timing.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/semantic_routing.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/dependency_classifier_v1.json -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/evaluation_benchmark.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/evaluation_merge.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/grounded_composition.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/lightweight_routing.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/speech.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/fictional_seven_day_v1_1.json -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/evaluation_router.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/evaluation_systems.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/relationships.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/memory_evidence.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/__main__.py -> build/bdist.linux-aarch64/wheel/oline_hri
+copying build/lib/oline_hri/retrieval.py -> build/bdist.linux-aarch64/wheel/oline_hri
+running install_egg_info
+Copying src/oline_hri.egg-info to build/bdist.linux-aarch64/wheel/oline_hri-0.1.0.egg-info
+running install_scripts
+creating build/bdist.linux-aarch64/wheel/oline_hri-0.1.0.dist-info/WHEEL
+creating 'dist/oline_hri-0.1.0-py3-none-any.whl' and adding 'build/bdist.linux-aarch64/wheel' to it
+adding 'oline_hri/__init__.py'
+adding 'oline_hri/__main__.py'
+adding 'oline_hri/answer_guidance.py'
+adding 'oline_hri/answer_review.py'
+adding 'oline_hri/cli.py'
+adding 'oline_hri/config.py'
+adding 'oline_hri/conversation.py'
+adding 'oline_hri/default_config.json'
+adding 'oline_hri/dependency_classifier.py'
+adding 'oline_hri/dependency_classifier_v1.json'
+adding 'oline_hri/dependency_review.py'
+adding 'oline_hri/dependency_routing.py'
+adding 'oline_hri/embedding.py'
+adding 'oline_hri/evaluation.py'
+adding 'oline_hri/evaluation_benchmark.py'
+adding 'oline_hri/evaluation_experiment.py'
+adding 'oline_hri/evaluation_merge.py'
+adding 'oline_hri/evaluation_model_pairs.py'
+adding 'oline_hri/evaluation_router.py'
+adding 'oline_hri/evaluation_runner.py'
+adding 'oline_hri/evaluation_scoring.py'
+adding 'oline_hri/evaluation_systems.py'
+adding 'oline_hri/evaluation_telemetry.py'
+adding 'oline_hri/fictional_seven_day_v1.json'
+adding 'oline_hri/fictional_seven_day_v1_1.json'
+adding 'oline_hri/grounded_composition.py'
+adding 'oline_hri/lightweight_routing.py'
+adding 'oline_hri/memory.py'
+adding 'oline_hri/memory_capture.py'
+adding 'oline_hri/memory_evidence.py'
+adding 'oline_hri/ollama.py'
+adding 'oline_hri/operational_planning.py'
+adding 'oline_hri/relationships.py'
+adding 'oline_hri/reliable_conversation.py'
+adding 'oline_hri/reply_guard.py'
+adding 'oline_hri/response.py'
+adding 'oline_hri/retrieval.py'
+adding 'oline_hri/routing.py'
+adding 'oline_hri/semantic_routing.py'
+adding 'oline_hri/speech.py'
+adding 'oline_hri/timing.py'
+adding 'oline_hri-0.1.0.dist-info/METADATA'
+adding 'oline_hri-0.1.0.dist-info/WHEEL'
+adding 'oline_hri-0.1.0.dist-info/entry_points.txt'
+adding 'oline_hri-0.1.0.dist-info/top_level.txt'
+adding 'oline_hri-0.1.0.dist-info/RECORD'
+removing build/bdist.linux-aarch64/wheel

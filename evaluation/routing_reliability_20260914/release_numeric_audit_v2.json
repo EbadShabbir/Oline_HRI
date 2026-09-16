@@ -1,0 +1,314 @@
+{
+  "scope": "Independent root numeric and hash audit; no semantic grading or model calls.",
+  "checks": {
+    "complete_requested_order": true,
+    "case_bytes_match_run_and_freeze": true,
+    "all_frozen_sources_unchanged": true,
+    "all_frozen_tests_unchanged": true,
+    "run_sources_unchanged": true,
+    "raw_call_traces_identical": true,
+    "runner_completed_all": true,
+    "runner_and_cleanup_no_error": true,
+    "all_rows_ok": true,
+    "all_calls_ok": true,
+    "isolated_empty_store": true,
+    "r2_01_call_bounds": true,
+    "r2_01_generation_dispatch_count": true,
+    "r2_01_review_result_count": true,
+    "r2_02_call_bounds": true,
+    "r2_02_generation_dispatch_count": true,
+    "r2_02_review_result_count": true,
+    "r2_03_call_bounds": true,
+    "r2_03_generation_dispatch_count": true,
+    "r2_03_review_result_count": true,
+    "r2_04_call_bounds": true,
+    "r2_04_generation_dispatch_count": true,
+    "r2_04_review_result_count": true,
+    "r2_05_call_bounds": true,
+    "r2_05_generation_dispatch_count": true,
+    "r2_05_review_result_count": true,
+    "r2_06_call_bounds": true,
+    "r2_06_generation_dispatch_count": true,
+    "r2_06_review_result_count": true,
+    "r2_07_call_bounds": true,
+    "r2_07_generation_dispatch_count": true,
+    "r2_07_review_result_count": true,
+    "r2_08_call_bounds": true,
+    "r2_08_generation_dispatch_count": true,
+    "r2_08_review_result_count": true,
+    "r2_09_call_bounds": true,
+    "r2_09_generation_dispatch_count": true,
+    "r2_09_review_result_count": true,
+    "r2_10_call_bounds": true,
+    "r2_10_generation_dispatch_count": true,
+    "r2_10_review_result_count": true,
+    "r2_11_call_bounds": true,
+    "r2_11_generation_dispatch_count": true,
+    "r2_11_review_result_count": true,
+    "r2_12_call_bounds": true,
+    "r2_12_generation_dispatch_count": true,
+    "r2_12_review_result_count": true,
+    "r2_13_call_bounds": true,
+    "r2_13_generation_dispatch_count": true,
+    "r2_13_review_result_count": true,
+    "r2_14_call_bounds": true,
+    "r2_14_generation_dispatch_count": true,
+    "r2_14_review_result_count": true,
+    "r2_15_call_bounds": true,
+    "r2_15_generation_dispatch_count": true,
+    "r2_15_review_result_count": true,
+    "r2_16_call_bounds": true,
+    "r2_16_generation_dispatch_count": true,
+    "r2_16_review_result_count": true,
+    "r2_17_call_bounds": true,
+    "r2_17_generation_dispatch_count": true,
+    "r2_17_review_result_count": true,
+    "r2_18_call_bounds": true,
+    "r2_18_generation_dispatch_count": true,
+    "r2_18_review_result_count": true,
+    "r2_19_call_bounds": true,
+    "r2_19_generation_dispatch_count": true,
+    "r2_19_review_result_count": true,
+    "r2_20_call_bounds": true,
+    "r2_20_generation_dispatch_count": true,
+    "r2_20_review_result_count": true,
+    "r2_21_call_bounds": true,
+    "r2_21_generation_dispatch_count": true,
+    "r2_21_review_result_count": true,
+    "r2_22_call_bounds": true,
+    "r2_22_generation_dispatch_count": true,
+    "r2_22_review_result_count": true,
+    "r2_23_call_bounds": true,
+    "r2_23_generation_dispatch_count": true,
+    "r2_23_review_result_count": true,
+    "r2_24_call_bounds": true,
+    "r2_24_generation_dispatch_count": true,
+    "r2_24_review_result_count": true,
+    "r2_25_call_bounds": true,
+    "r2_25_generation_dispatch_count": true,
+    "r2_25_review_result_count": true,
+    "r2_26_call_bounds": true,
+    "r2_26_generation_dispatch_count": true,
+    "r2_26_review_result_count": true,
+    "r2_27_call_bounds": true,
+    "r2_27_generation_dispatch_count": true,
+    "r2_27_review_result_count": true,
+    "r2_28_call_bounds": true,
+    "r2_28_generation_dispatch_count": true,
+    "r2_28_review_result_count": true,
+    "r2_29_call_bounds": true,
+    "r2_29_generation_dispatch_count": true,
+    "r2_29_review_result_count": true,
+    "r2_30_call_bounds": true,
+    "r2_30_generation_dispatch_count": true,
+    "r2_30_review_result_count": true,
+    "r2_31_call_bounds": true,
+    "r2_31_generation_dispatch_count": true,
+    "r2_31_review_result_count": true,
+    "r2_32_call_bounds": true,
+    "r2_32_generation_dispatch_count": true,
+    "r2_32_review_result_count": true
+  },
+  "failed_checks": [],
+  "case_count": 32,
+  "raw_mode_matches": 29,
+  "final_mode_matches": 28,
+  "call_count": 82,
+  "call_kinds": {
+    "compute": 32,
+    "generation": 22,
+    "answer_review": 21,
+    "dependency_review": 7
+  },
+  "per_case_calls": {
+    "r2_01": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_02": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_03": {
+      "compute": 1,
+      "dependency_review": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_04": {
+      "compute": 1,
+      "dependency_review": 1
+    },
+    "r2_05": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_06": {
+      "compute": 1,
+      "dependency_review": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_07": {
+      "compute": 1,
+      "dependency_review": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_08": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_09": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_10": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_11": {
+      "compute": 1,
+      "dependency_review": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_12": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_13": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_14": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_15": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_16": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_17": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_18": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_19": {
+      "compute": 1
+    },
+    "r2_20": {
+      "compute": 1
+    },
+    "r2_21": {
+      "compute": 1
+    },
+    "r2_22": {
+      "compute": 1
+    },
+    "r2_23": {
+      "compute": 1
+    },
+    "r2_24": {
+      "compute": 1
+    },
+    "r2_25": {
+      "compute": 1
+    },
+    "r2_26": {
+      "compute": 1
+    },
+    "r2_27": {
+      "compute": 1
+    },
+    "r2_28": {
+      "compute": 1,
+      "dependency_review": 1
+    },
+    "r2_29": {
+      "compute": 1
+    },
+    "r2_30": {
+      "compute": 1,
+      "dependency_review": 1,
+      "generation": 2,
+      "answer_review": 1
+    },
+    "r2_31": {
+      "compute": 1,
+      "generation": 1,
+      "answer_review": 1
+    },
+    "r2_32": {
+      "compute": 1,
+      "generation": 2,
+      "answer_review": 2
+    }
+  },
+  "models": {
+    "qwen3:0.6b": 52,
+    "qwen3:1.7b": 30
+  },
+  "latency_all": {
+    "count": 32,
+    "median_seconds": 42.3304780475,
+    "min_seconds": 0.260643499,
+    "max_seconds": 86.992652016
+  },
+  "latency_delivered_generation": {
+    "count": 19,
+    "median_seconds": 45.426334942,
+    "min_seconds": 40.401673572,
+    "max_seconds": 86.992652016
+  },
+  "latency_application_response": {
+    "count": 13,
+    "median_seconds": 0.46855691,
+    "min_seconds": 0.260643499,
+    "max_seconds": 76.640765279
+  },
+  "source_file_count": 46,
+  "freeze_sha256": "7b4fd78f09f1221fb2ac246f88e55c93ff19255b7aa97105cbd155cdc7d3a515",
+  "input_sha256": {
+    "summary.json": "5f0297d1717a3e68a31f6a796657cc870570628dece40ade379ef82a85be9fa1",
+    "metadata.json": "6402fbb85e1cf79c6ef69ccb2443629a2d5b3ca031b1706c15c74a2e797ee575",
+    "observations.jsonl": "c3f1e6a6d051c5e57fe544ca6cd39f7199fb791c211fba375a9f3e2711b90ef3",
+    "model_calls.jsonl": "c4ba78388a1a19aa5d2fa34817884898d103cc6fb92ebddbc71e1c94d4e71a1b"
+  },
+  "runner_summary": {
+    "schema_version": "routing_reliability_v2",
+    "case_count": 32,
+    "completed": 32,
+    "outcomes": {
+      "general_answer": 17,
+      "clarification": 13,
+      "personal_or_mixed_answer": 2
+    },
+    "label_matches": 28,
+    "label_mismatches": 4,
+    "failure": null,
+    "cleanup_error": null,
+    "wall_ns": 1175780214382,
+    "interpretation": "Clarifications and errors are separate from delivered answers; label agreement is not answer correctness."
+  }
+}

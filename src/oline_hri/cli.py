@@ -27,8 +27,14 @@ from .memory_capture import (
     MemoryCaptureError,
 )
 from .ollama import OllamaClient, OllamaError
-from .retrieval import HybridRetriever
+from .retrieval import HybridRetriever, RetrievalError
 from .routing import ConversationRouter, RoutingError, RoutingResult
+from .lightweight_routing import LightweightRouter
+from .dependency_classifier import DependencyClassifier
+from .dependency_routing import LearnedSemanticRouter
+from .reliable_conversation import (
+    ReliableConversation, ReliableConversationReply, deployment_facts,
+)
 from .speech import (
     NoSpeechDetected,
     OfflineSpeechRecognizer,
@@ -44,7 +50,7 @@ class _RouteReportingRouter:
 
     def __init__(
         self,
-        router: ConversationRouter,
+        router: ConversationRouter | LightweightRouter,
         *,
         small_model: str,
         general_large_model: str,
@@ -71,7 +77,23 @@ class _RouteReportingRouter:
             "route> "
             f"model_size={decision.model_size} "
             f"selected_generator={selected_model} "
-            f"memory_required={memory_required}",
+            f"memory_required={memory_required}"
+            + (
+                f" memory_mode={result.dependency.mode}"
+                f" reviewed={str(result.review_generation is not None).lower()}"
+                if getattr(result, "dependency", None) is not None else ""
+            )
+            + (
+                f" policy={result.policy}"
+                f" compute_source={result.model_size_decision_source}"
+                f" memory_source={result.memory_decision_source}"
+                f" resident_hint={result.resident_model or 'unknown_or_empty'}"
+                if result.policy == "lightweight_v1" else ""
+            )
+            + (
+                f" policy={result.policy} dependency_source={result.memory_decision_source}"
+                if result.policy == "dependency_v1" else ""
+            ),
             file=self._output,
             flush=True,
         )
@@ -111,6 +133,16 @@ def build_parser() -> argparse.ArgumentParser:
         "--voice",
         action="store_true",
         help="use the configured offline microphone and speech recognizer",
+    )
+    chat_parser.add_argument(
+        "--routing-policy",
+        choices=("llm", "lightweight", "reliable"),
+        default="reliable",
+        help=(
+            "reliable (default) uses local dependency classification, evidence "
+            "checks, and reply review; llm uses the original two classifiers; "
+            "lightweight uses local compute rules and retains the active model"
+        ),
     )
     chat_parser.add_argument(
         "--show-route",
@@ -320,8 +352,13 @@ def main(
 
     if args.command == "chat":
         client: Optional[OllamaClient] = None
+        exit_code = 3
         try:
-            client = OllamaClient(config.ollama, config.generation)
+            client = (
+                OllamaClient(config.ollama, config.generation, retain_large_model=True)
+                if args.routing_policy in {"lightweight", "reliable"}
+                else OllamaClient(config.ollama, config.generation)
+            )
             embedder = BgeOnnxEmbedder(
                 config.embedding.model_directory,
                 config.embedding.intra_op_threads,
@@ -342,9 +379,21 @@ def main(
                 if args.auto_memory
                 else None
             )
-            router = ConversationRouter(
-                client, model=config.ollama.small_model
-            )
+            if args.routing_policy == "reliable":
+                classifier = DependencyClassifier(embedder)
+                router = LearnedSemanticRouter(
+                    client, small_model=config.ollama.small_model,
+                    large_model=config.ollama.large_model,
+                    classifier=classifier,
+                )
+            elif args.routing_policy == "lightweight":
+                router = LightweightRouter(
+                    client,
+                    small_model=config.ollama.small_model,
+                    large_model=config.ollama.large_model,
+                )
+            else:
+                router = ConversationRouter(client, model=config.ollama.small_model)
             if args.show_route:
                 router = _RouteReportingRouter(
                     router,
@@ -353,7 +402,11 @@ def main(
                     large_model=config.ollama.large_model,
                     output=errors,
                 )
-            conversation = Conversation(
+            conversation_type = (ReliableConversation if args.routing_policy == "reliable"
+                                 else Conversation)
+            reliable_options = ({"runtime_facts": deployment_facts(config)}
+                                if args.routing_policy == "reliable" else {})
+            conversation = conversation_type(
                 client,
                 router=router,
                 retriever=HybridRetriever(store),
@@ -363,10 +416,11 @@ def main(
                 system_prompt=config.conversation.system_prompt,
                 context_length=config.generation.context_length,
                 max_output_tokens=config.generation.max_output_tokens,
+                **reliable_options,
             )
             if args.voice:
                 recognizer = OfflineSpeechRecognizer(config.speech)
-                return _run_voice_chat(
+                exit_code = _run_voice_chat(
                     conversation,
                     recognizer,
                     client=client,
@@ -374,28 +428,31 @@ def main(
                     output=output,
                     errors=errors,
                     show_memory_ids=args.show_memory_ids,
+                    show_route=args.show_route,
                 )
-            return _run_chat(
-                conversation,
-                memory_store=store,
-                automatic_memory=automatic_memory,
-                prompt=args.prompt,
-                input_stream=input_stream,
-                output=output,
-                errors=errors,
-                show_memory_ids=args.show_memory_ids,
-            )
+            else:
+                exit_code = _run_chat(
+                    conversation,
+                    memory_store=store,
+                    automatic_memory=automatic_memory,
+                    prompt=args.prompt,
+                    input_stream=input_stream,
+                    output=output,
+                    errors=errors,
+                    show_memory_ids=args.show_memory_ids,
+                    show_route=args.show_route,
+                )
         except KeyboardInterrupt:
             if args.voice and client is not None:
                 _best_effort_unload(client)
             print("voice interrupted" if args.voice else "chat interrupted", file=errors)
-            return 130
+            exit_code = 130
         except SpeechRecognitionError:
             print(
                 "speech error: request could not be completed safely",
                 file=errors,
             )
-            return 5
+            exit_code = 5
         except (
             ConversationError,
             EmbeddingError,
@@ -405,7 +462,18 @@ def main(
             ValueError,
         ):
             print("chat error: request could not be completed safely", file=errors)
-            return 3
+            exit_code = 3
+        finally:
+            if client is not None and args.routing_policy in {"lightweight", "reliable"}:
+                # Retaining large is scoped to this chat session. Voice chat
+                # additionally releases it before every speech-recognition stage.
+                try:
+                    client.unload_all()
+                except (OllamaError, KeyboardInterrupt):
+                    print("chat cleanup error: model unloading could not be confirmed", file=errors)
+                    if exit_code == 0:
+                        exit_code = 3
+        return exit_code
 
     if args.command == "memory":
         try:
@@ -454,6 +522,7 @@ def _run_chat(
     output: TextIO,
     errors: TextIO,
     show_memory_ids: bool,
+    show_route: bool = False,
 ) -> int:
     if prompt is not None:
         try:
@@ -472,7 +541,9 @@ def _run_chat(
             raise
         if show_memory_ids:
             _report_memory_ids(reply, errors)
-        print(reply.response.speech, file=output, flush=True)
+        if show_route:
+            _report_reply_checks(reply, errors)
+        _write_reply(conversation, reply, output=output, errors=errors)
         _consider_automatic_memory(
             automatic_memory, prompt, diagnostics=errors
         )
@@ -560,7 +631,9 @@ def _run_chat(
         else:
             if show_memory_ids:
                 _report_memory_ids(reply, errors)
-            print(f"robot> {reply.response.speech}", file=output, flush=True)
+            if show_route:
+                _report_reply_checks(reply, errors)
+            _write_reply(conversation, reply, output=output, errors=errors, prefix="robot> ")
         # Capture the user's accepted input independently of reply generation.
         # Successful replies remain visible before the classification call.
         _consider_automatic_memory(
@@ -571,12 +644,41 @@ def _run_chat(
 def _report_memory_ids(reply: ConversationReply, output: TextIO) -> None:
     """Print only opaque IDs from a fully validated successful turn."""
 
+    diagnostics = reply.memory_diagnostics.to_dict()
+    if isinstance(reply, ReliableConversationReply):
+        diagnostics["response_used_ids"] = list(reply.response.memory_used)
+        diagnostics["application_used_ids"] = list(reply.application_memory_ids)
     payload = json.dumps(
-        reply.memory_diagnostics.to_dict(),
+        diagnostics,
         ensure_ascii=True,
         separators=(",", ":"),
     )
     print(f"memory> {payload}", file=output, flush=True)
+
+
+def _report_reply_checks(reply: ConversationReply, output: TextIO) -> None:
+    if not isinstance(reply, ReliableConversationReply):
+        return
+    generator = reply.generation.model if reply.generation is not None else "application"
+    print(
+        f"answer> effective_mode={reply.effective_mode} retrieval={reply.retrieval_status} "
+        f"generator={generator} attempts={len(reply.attempted_models)} "
+        f"reviews={len(reply.review_attempts)}",
+        file=output, flush=True,
+    )
+
+
+def _write_reply(conversation, reply, *, output, errors, prefix="") -> None:
+    if not isinstance(conversation, ReliableConversation):
+        print(prefix + reply.response.speech, file=output, flush=True)
+        return
+    try:
+        with conversation.disclosure_guard(reply):
+            print(prefix + reply.response.speech, file=output, flush=True)
+    except (ConversationError, MemoryStoreError, RetrievalError):
+        print("answer> personal evidence changed before output; reply withheld", file=errors, flush=True)
+        print(prefix + "Could you provide the current details?",
+              file=output, flush=True)
 
 
 def _run_voice_chat(
@@ -588,6 +690,7 @@ def _run_voice_chat(
     output: TextIO,
     errors: TextIO,
     show_memory_ids: bool,
+    show_route: bool = False,
 ) -> int:
     print("Offline voice chat", file=output)
     print("Speak after 'listening...'; press Ctrl+C to exit", file=output)
@@ -627,7 +730,9 @@ def _run_voice_chat(
             else:
                 if show_memory_ids:
                     _report_memory_ids(reply, errors)
-                print(f"robot> {reply.response.speech}", file=output, flush=True)
+                if show_route:
+                    _report_reply_checks(reply, errors)
+                _write_reply(conversation, reply, output=output, errors=errors, prefix="robot> ")
             _consider_automatic_memory(
                 automatic_memory,
                 transcription.text,

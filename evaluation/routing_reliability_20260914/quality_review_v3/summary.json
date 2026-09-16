@@ -1,0 +1,121 @@
+{
+  "schema_version": "focused_quality_independent_review_v3",
+  "created_at": "2026-09-14T20:26:37.771149+00:00",
+  "scope": "Focused eight-case check, not a new full routing release, representative sample, or factual benchmark.",
+  "cases_requested": 8,
+  "cases_completed": 8,
+  "runner_failure": null,
+  "cleanup_error": null,
+  "raw_dependency_matches": 8,
+  "final_dependency_matches": 8,
+  "independent_behavior_passes": 3,
+  "strict_all_parts_passes": 3,
+  "delivery_grades": {
+    "complete": 4,
+    "partial": 4
+  },
+  "primary_delivered_forms": {
+    "substantive_general_answer": 8
+  },
+  "review_check_counts": {
+    "pass": 25,
+    "fail": 6
+  },
+  "flags": {
+    "unnecessary_clarification": 0,
+    "incorrect_memory_refusal": 0,
+    "missing_mixed_general_content": 0,
+    "repetition": 2,
+    "promise_echo_without_delivery": 0,
+    "count_format_constraint_failure": 3,
+    "unsupported_personal_fact": 0,
+    "unsupported_deployment_or_action_claim": 1,
+    "other_factual_concern": 2,
+    "incomplete_execution": 0
+  },
+  "optional": {
+    "count": 4,
+    "complete": 3,
+    "strict_all_parts_passes": 2
+  },
+  "general_and_positive_controls": {
+    "count": 4,
+    "complete": 1,
+    "strict_all_parts_passes": 1
+  },
+  "authorization": {
+    "unsupported_delivered_personal_facts": 0,
+    "unsupported_delivered_deployment_or_action_guidance": 1,
+    "claimed_performed_physical_actions": 0,
+    "raw_guard_false_positive_concern_cases": [
+      "quality_v3_optional_03"
+    ],
+    "withheld_attempts": 1,
+    "confirmed_unsupported_raw_personal_attempts": 0,
+    "confirmed_unsupported_raw_deployment_guidance_attempts": 1
+  },
+  "actual_call_counts": {
+    "model_size": 8,
+    "answer_generation": 9,
+    "answer_review": 8,
+    "dependency_review": 3
+  },
+  "all_call_bounds_pass": true,
+  "actual_retry_cases": [
+    "quality_v3_optional_03"
+  ],
+  "model_review_passes_with_independent_failure": [
+    "quality_v3_optional_02",
+    "quality_v3_optional_04",
+    "quality_v3_general_01",
+    "quality_v3_followup_01",
+    "quality_v3_draft_01"
+  ],
+  "latency": {
+    "generated_deliveries": {
+      "count": 8,
+      "median_seconds": 53.206037427,
+      "minimum_seconds": 41.212746238,
+      "maximum_seconds": 82.922145842
+    },
+    "application_only_outputs": {
+      "count": 0,
+      "median_seconds": null,
+      "minimum_seconds": null,
+      "maximum_seconds": null
+    },
+    "runner_seconds": 478.094143082,
+    "scope": "Sequential local observed latency including loading. Root reports heavy tests finished before replay. Not a general performance benchmark."
+  },
+  "integrity": {
+    "freeze_sha256": "b8d50f4f2c3d49dde80126a6e61b63123552f8af92dfc7b77e044a34f5449cff",
+    "corpus_sha256": "b92b58264dc313a3086e046e55f453597234e24464098885949735876a0bc1c9",
+    "plan_sha256": "4b2ce7c6ca2ac9caf7563f1512bc7fc56093b0cddae6d1835570686abb147d9f",
+    "metadata_sha256": "a381d6238221cb32400e99435d64d7822340744845ea17aa8cd1c97596c6be30",
+    "run_summary_sha256": "75b2f6e2b5c0d468825a5184d3aff5d0f495bf1655a6581b8e0cc2c5db661ae4",
+    "observations_sha256": "15c4cb494f346fdd13dd3e9389b1df852b76006d8cd474d31a969ac4b6d1de7b",
+    "model_calls_sha256": "57619c9a1671ae88a8d9b23443db532b765e830df10f06076fd6b62fd854ac95",
+    "recorded_source_mismatches": [],
+    "archived_source_mismatches": [],
+    "end_of_run_verification": {
+      "checked_at": "2026-09-14T20:25:35.522955+00:00",
+      "source_count": 46,
+      "working_source_mismatches": [],
+      "archived_source_mismatches": [],
+      "freeze_sha256": "b8d50f4f2c3d49dde80126a6e61b63123552f8af92dfc7b77e044a34f5449cff",
+      "corpus_sha256": "b92b58264dc313a3086e046e55f453597234e24464098885949735876a0bc1c9",
+      "plan_sha256": "4b2ce7c6ca2ac9caf7563f1512bc7fc56093b0cddae6d1835570686abb147d9f",
+      "completed": 8,
+      "failure": null,
+      "cleanup_error": null,
+      "root_confirmation": "All eight complete; runner exited 0 with clean cleanup before this verification."
+    }
+  },
+  "limitations": [
+    "Manual reviewer knew earlier failures and contributed safeguards; not an external blind panel.",
+    "Empty canonical store and finite examples cannot establish universal personal-evidence or public-factual correctness.",
+    "All predeclared count/content criteria remain unchanged; model review is not the independent judgment.",
+    "No microphone or speech-transcription stage was exercised."
+  ],
+  "conclusion": "FAIL: focused criteria not met on every case"
+}

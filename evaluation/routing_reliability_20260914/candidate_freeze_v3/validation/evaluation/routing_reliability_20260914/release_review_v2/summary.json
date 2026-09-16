@@ -1,0 +1,233 @@
+{
+  "schema_version": "independent_release_answer_review_v2",
+  "created_at": "2026-09-14T20:05:46.227224+00:00",
+  "cases_requested": 32,
+  "cases_completed": 32,
+  "runner_failure": null,
+  "runner_cleanup_error": null,
+  "raw_dependency_matches": 29,
+  "final_dependency_matches": 28,
+  "raw_confusion_matrix": {
+    "none": {
+      "none": 10,
+      "optional": 1,
+      "required": 0,
+      "clarify": 1
+    },
+    "optional": {
+      "none": 0,
+      "optional": 6,
+      "required": 0,
+      "clarify": 0
+    },
+    "required": {
+      "none": 0,
+      "optional": 0,
+      "required": 10,
+      "clarify": 0
+    },
+    "clarify": {
+      "none": 1,
+      "optional": 0,
+      "required": 0,
+      "clarify": 3
+    }
+  },
+  "final_confusion_matrix": {
+    "none": {
+      "none": 10,
+      "optional": 1,
+      "required": 0,
+      "clarify": 1
+    },
+    "optional": {
+      "none": 0,
+      "optional": 6,
+      "required": 0,
+      "clarify": 0
+    },
+    "required": {
+      "none": 0,
+      "optional": 0,
+      "required": 10,
+      "clarify": 0
+    },
+    "clarify": {
+      "none": 1,
+      "optional": 0,
+      "required": 1,
+      "clarify": 2
+    }
+  },
+  "strict_all_parts_passes": 20,
+  "independently_accepted_deliveries": 21,
+  "primary_delivered_forms": {
+    "substantive_general_answer": 14,
+    "clarification": 13,
+    "unhelpful_nonanswer": 3,
+    "substantive_mixed_answer": 2
+  },
+  "independent_usefulness": {
+    "weak": 8,
+    "useful_concise": 4,
+    "not_useful": 1,
+    "incorrect_answer": 2,
+    "appropriate_acknowledgment": 1,
+    "irrelevant_answer": 1,
+    "promise_echo_without_answer": 2,
+    "useful": 1,
+    "appropriate_missing_information_request": 8,
+    "appropriate_request_clarification": 3,
+    "unfocused_clarification": 1
+  },
+  "flags": {
+    "appropriate_clarification": 13,
+    "unnecessary_clarification": 2,
+    "incorrect_memory_refusal": 1,
+    "missing_mixed_general_answer": 0,
+    "repetition": 0,
+    "promise_echo_without_delivery": 2,
+    "count_format_constraint_failure": 1,
+    "unsupported_personal_fact": 0,
+    "unsupported_deployment_claim": 0,
+    "other_factual_concern": 7,
+    "incomplete_execution": 1
+  },
+  "standalone_answerable": {
+    "denominator": 18,
+    "substantive_general_outputs_including_acknowledgment": 14,
+    "complete_general_components": 10,
+    "strict_all_parts_passes": 10,
+    "unnecessary_clarification_or_withholding": 2,
+    "incorrect_memory_refusals": 0
+  },
+  "mixed": {
+    "denominator": 2,
+    "general_components_present": 2,
+    "partial_general_components": 2,
+    "completed_general_components": 0,
+    "missing_general_components": 0
+  },
+  "per_category": {
+    "none": {
+      "count": 12,
+      "strict_all_parts_passes": 6
+    },
+    "optional": {
+      "count": 6,
+      "strict_all_parts_passes": 4
+    },
+    "required": {
+      "count": 8,
+      "strict_all_parts_passes": 8
+    },
+    "clarify": {
+      "count": 4,
+      "strict_all_parts_passes": 2
+    },
+    "mixed": {
+      "count": 2,
+      "strict_all_parts_passes": 0
+    }
+  },
+  "execution": {
+    "actual_call_stage_counts": {
+      "model_size": 32,
+      "answer_generation": 22,
+      "answer_review": 21,
+      "dependency_review": 7
+    },
+    "maximum_generation_dispatches": 2,
+    "all_turn_call_bounds_pass": true,
+    "invalid_review_cases": [
+      "r2_30",
+      "r2_32"
+    ],
+    "actual_retry_cases": [
+      "r2_30",
+      "r2_32"
+    ],
+    "uncertain_whole_requests": 7,
+    "dependency_reviewed_cases": [
+      "r2_03",
+      "r2_04",
+      "r2_06",
+      "r2_07",
+      "r2_11",
+      "r2_28",
+      "r2_30"
+    ],
+    "model_review_passes_with_independent_failure": [
+      "r2_01",
+      "r2_07",
+      "r2_09",
+      "r2_10",
+      "r2_12",
+      "r2_13",
+      "r2_14",
+      "r2_31",
+      "r2_32"
+    ]
+  },
+  "authorization": {
+    "unsupported_delivered_personal_facts": 0,
+    "unsupported_delivered_deployment_or_action_claims": 0,
+    "confirmed_unsafe_raw_personal_attempts": 0,
+    "confirmed_unsafe_raw_deployment_attempts": 0,
+    "withheld_raw_attempts": 3,
+    "scope": "Finite empty-store text observations. Personal histories in this corpus contain no factual personal values. Populated-memory lifecycle and forced-wrong-route controls require separate regression evidence; no universal entailment or safety claim."
+  },
+  "latency": {
+    "generated_delivered_answers": {
+      "count": 19,
+      "median_seconds": 45.426334942,
+      "minimum_seconds": 40.401673572,
+      "maximum_seconds": 86.992652016
+    },
+    "application_only_outputs": {
+      "count": 13,
+      "median_seconds": 0.46855691,
+      "minimum_seconds": 0.260643499,
+      "maximum_seconds": 76.640765279
+    },
+    "runner_total_seconds": 1175.780214382,
+    "scope": "Observed sequential local run including model loading. Root reports offline suites completed before replay, with no CPU-suite overlap. Not a population benchmark; fast abstention is not answer latency."
+  },
+  "integrity": {
+    "candidate_freeze_sha256": "7b4fd78f09f1221fb2ac246f88e55c93ff19255b7aa97105cbd155cdc7d3a515",
+    "cases_sha256": "abca3ad3fb364995b6673c6835b3bde28218c92e239266bc4b0825a02abe0eea",
+    "review_plan_sha256": "edadae26f204e29d0b62ee30db1c9f779a98f20594ecc2066e8f1ee02ff43efd",
+    "streaming_addendum_sha256": "3ea1a13cfe09c3e426ca28d497afbfce242105d35a89db70428f15f6711fb2e8",
+    "observations_sha256": "c3f1e6a6d051c5e57fe544ca6cd39f7199fb791c211fba375a9f3e2711b90ef3",
+    "model_calls_sha256": "c4ba78388a1a19aa5d2fa34817884898d103cc6fb92ebddbc71e1c94d4e71a1b",
+    "manual_judgments_sha256": "495c16c65b6014bf9d67f8af80ff608fae06596e9606160ea30164bff9d8db82",
+    "review_rows_sha256": "3e506e484acaf548a0f8a26d15000a597b8198888e0e37bb7dd9fe199bab4390",
+    "end_of_run_verification": {
+      "checked_at": "2026-09-14T20:04:08.468388+00:00",
+      "freeze_sha256": "7b4fd78f09f1221fb2ac246f88e55c93ff19255b7aa97105cbd155cdc7d3a515",
+      "source_count": 46,
+      "working_source_mismatches": [],
+      "archived_source_mismatches": [],
+      "release_cases_sha256": "abca3ad3fb364995b6673c6835b3bde28218c92e239266bc4b0825a02abe0eea",
+      "completed": 32,
+      "failure": null,
+      "cleanup_error": null,
+      "root_confirmation": "Runner exited 0, all 32 complete, clean cleanup; received from root before verification."
+    },
+    "end_of_run_verification_sha256": "7b4ab85945c045b0450a6675e6005fa24021f94f6da90d38db1b618797c29967",
+    "current_source_mismatches_at_report_build": [
+      "src/oline_hri/dependency_routing.py",
+      "src/oline_hri/reply_guard.py"
+    ],
+    "working_tree_note": "The captured end-of-run verification precedes root authorization to unfreeze. Later working-tree edits do not change the archived candidate or observations.",
+    "recorded_source_mismatches": [],
+    "archived_source_mismatches": []
+  },
+  "limits": [
+    "Manual reviewer did not author/read v2 before freeze, but knew v1 and contributed safeguards; not a blind external panel.",
+    "All completed rows were reviewed under the frozen streaming addendum. No runtime tuning or model grading calls.",
+    "Weak, incomplete, incorrect, and absent answers are distinguished from model-review pass and route label agreement.",
+    "This replay has no microphone or transcription stage. No speech accuracy claim follows from it."
+  ],
+  "release_conclusion": "FAIL: at least one required routing, delivery, usefulness, or evidence behavior is unmet."
+}

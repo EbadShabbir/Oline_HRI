@@ -1,0 +1,30 @@
+{
+  "wheel": "oline_hri-0.1.0-py3-none-any.whl",
+  "checked_exact_source_bytes": {
+    "dependency_classifier.py": {
+      "size": 36202,
+      "sha256": "2dc25a405fc3c8e63c9ddeffa08c14d3491d8d182c8ff3f2e6299236d86ffb4b"
+    },
+    "dependency_classifier_v1.json": {
+      "size": 504956,
+      "sha256": "2ac2fa20d05c2bd172c6e54fdb8ab50224a848effd45a768fcfbbf26ce74ac33"
+    },
+    "dependency_review.py": {
+      "size": 4470,
+      "sha256": "90842f6849641dec9325196bbe6c34eb874773a5d4c93ec39a89e41a627e0968"
+    },
+    "dependency_routing.py": {
+      "size": 9811,
+      "sha256": "979935708ec0f21716715665438f6d9333f4d37ebf51d69a91b6085beb34277d"
+    },
+    "reply_guard.py": {
+      "size": 44107,
+      "sha256": "a84e1301d2bf7f771883e23cd8c4f7e7b616e8964d679be90a21bdae201d73e4"
+    },
+    "reliable_conversation.py": {
+      "size": 25706,
+      "sha256": "f83b608c9ce48cfd22db1548807a17674be57c7ce964b7c7db65c5201ac67b35"
+    }
+  },
+  "scope": "Offline isolated wheel build; temporary build files removed."
+}

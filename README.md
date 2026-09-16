@@ -10,14 +10,21 @@ The research concept and system decisions remain documented in
 
 The current milestone provides the Python 3.10 package, validated JSON
 configuration, offline automated tests, microphone speech-to-text, and routed
-terminal conversation through local Ollama models. The resident `qwen3:0.6b` makes two independent
-structured classifications per turn: the memory request returns `form`
-(`question`, `statement`, or `request`) followed by `memory_required`, and
-another request returns `model_size`. Neither routing decision is
-derived from the other. Both large routes use `qwen3:1.7b`; memory need changes
-whether verified retrieval is supplied, not which large-model tag is loaded.
-Only `qwen3:0.6b` and `qwen3:1.7b` are configured for deployment. Model output
-is constrained and validated as:
+terminal conversation through local Ollama models. The candidate
+`--routing-policy reliable` adds a local, trained four-mode dependency
+classifier, independent personal-evidence checks, and bounded answer review.
+`chat` selects this candidate by default. The four-part repair is implemented;
+finite validation and measured limitations are recorded under
+[reliable routing](#candidate-reliable-routing). General factual quality and
+model-switching latency remain limitations.
+
+The historical `--routing-policy llm` path remains available for reproducibility.
+It asks `qwen3:0.6b` for two independent structured decisions: input `form` plus
+`memory_required`, and `model_size`. The reliable candidate replaces the memory
+decision with the local dependency classifier and retains independent 0.6B
+compute selection. Both large generator roles use `qwen3:1.7b`; only these two
+model tags are configured for deployment. Generated responses are constrained
+and validated as:
 
 ```json
 {
@@ -27,15 +34,22 @@ is constrained and validated as:
 }
 ```
 
+An experimental `chat --routing-policy lightweight` mode removes the compute
+classifier call and retains the active generator between text turns. It uses
+local rules for compute selection and the existing memory-intent policy before
+any optional memory classifier. See [lightweight routing](#experimental-lightweight-routing)
+for behavior and validation limits; no speed or quality improvement is established yet.
+
 Of the model output, only validated `speech` is printed to standard output.
 Optional route and ID-only diagnostics are written to standard error.
 `gesture_id` remains `NO_ACTION` until the later hardware-action milestone.
 `memory_used` may contain only unique IDs from the exact verified evidence
 supplied for that turn. Request-linked records are required citations; when
 linked evidence exists, unrelated candidates are excluded from both the prompt
-and citation allowlist. Without a high-confidence request link, the
-application returns a fixed safe abstention instead of trusting generated
-personal claims.
+and citation allowlist. The historical `llm` path returns a fixed abstention
+without a high-confidence request link. The reliable candidate instead
+distinguishes optional personalization, which can fall back to general help,
+from required recall, which asks for the missing detail.
 
 Add `--show-memory-ids` to print privacy-safe, ID-only diagnostics after a
 validated reply. They distinguish the ranked records returned by retrieval,
@@ -67,6 +81,8 @@ PYTHONPATH=src .venv/bin/python -m oline_hri config show
 PYTHONPATH=src .venv/bin/python -m oline_hri chat --prompt "Hello"
 PYTHONPATH=src .venv/bin/python -m oline_hri chat
 PYTHONPATH=src .venv/bin/python -m oline_hri chat --show-route --show-memory-ids
+PYTHONPATH=src .venv/bin/python -m oline_hri chat --routing-policy reliable --show-route
+PYTHONPATH=src .venv/bin/python -m oline_hri chat --routing-policy reliable --voice --show-route
 PYTHONPATH=src .venv/bin/python -m oline_hri chat --voice --auto-memory --show-route --show-memory-ids
 PYTHONPATH=src .venv/bin/python -m oline_hri speech check
 PYTHONPATH=src .venv/bin/python -m oline_hri speech listen --show-metrics
@@ -84,7 +100,7 @@ PYTHONPATH=src .venv/bin/python -m oline_hri memory correct MEMORY_ID
 PYTHONPATH=src .venv/bin/python -m oline_hri memory forget MEMORY_ID
 PYTHONPATH=src .venv/bin/python -m oline_hri.evaluation validate
 PYTHONPATH=src .venv/bin/python -m oline_hri.evaluation prompts --track all
-PYTHONPATH=src .venv/bin/python -m unittest discover -s tests -v
+PYTHONPATH=src:scripts .venv/bin/python -m unittest discover -s tests -v
 ```
 
 ## Offline microphone speech-to-text
@@ -225,11 +241,15 @@ session history tests database recall; restarting chat also preserves those
 records until their deadlines. After updating application code, exit and
 restart any already-running chat process to load the changes.
 
-Personal statements receive a brief acknowledgment. If the small model echoes
+In the historical `--routing-policy llm` path, personal statements receive a
+brief acknowledgment. If the small model echoes
 one as a robot-owned preference or possession (for example, `I prefer...`), the
 application uses `Thanks for telling me.` and excludes that bad echo from
 history. Standalone recall questions use fresh retrieved evidence without
 unrelated earlier replies; explicit follow-ups can still use session context.
+The reliable candidate additionally checks acknowledgment quality and excludes
+detected personal values from reusable history regardless of the predicted route;
+ordinary general discussion and recognized draft edits can retain context.
 
 `remember` prints the exact retention deadline. Cleanup happens automatically
 before every memory command and whenever chat actually takes a memory route;
@@ -281,9 +301,168 @@ personal records cannot be redirected or echoed through routine error output.
 Interactive chat reports a failed turn with one fixed message and remains open;
 a failed `chat --prompt` request exits with status `3`.
 
-## Routed chat and hybrid retrieval
+## Candidate reliable routing
 
-Each chat turn follows this sequence:
+The [14 September repair record](evaluation/routing_reliability_20260914/README.md)
+documents the candidate, validation failures and subsequent focused repairs. It addresses the difference
+between mentioning a personal situation and needing an unstated personal fact.
+General support can use what the person has just said without recalling a
+stored memory.
+
+`DependencyClassifier` combines the pinned CPU BGE embedding with learned
+word/character TF-IDF features and a regularized ridge classifier. It predicts
+four request dependencies from the current text and admitted task history:
+
+| Mode | Response behavior |
+| --- | --- |
+| `none` | Answer from the current request and general knowledge; skip personal retrieval. |
+| `optional` | Use relevant authorized context when available; otherwise give a useful general answer. |
+| `required` | Retrieve the unstated personal fact needed to answer; ask for the missing detail if unavailable. |
+| `clarify` | Ask a short question when the intended task or referent is unresolved. |
+
+Vocabulary, IDF, and classifier weights are fitted on training examples.
+Separate development groups fit empirical thresholds on the gap between the
+two highest scores. An observed-support floor prevents extending acceptance
+below the smallest accepted calibration margin for each class. This leaves
+the fitted weights and accepted calibration rows unchanged. A rejected margin
+or disabled class marks uncertainty.
+These margins are not probabilities, and calibration on authored examples is
+not a guarantee for new conversation. The first release clarified on rejected
+margins and withheld too many general answers. The revised candidate adds one
+bounded larger-model check of whether an uncertain `none`, `optional`, or
+`required` prediction needs an unstated personal value. A raw `clarify`
+prediction directly asks a short question: a Boolean personal-facts verdict
+cannot establish that the task or referent is clear. Accepted required
+predictions with recognizable recall intent remain in place. Without that
+signal, an accepted required prediction gets one bounded review; disagreement
+asks for clarification instead of assuming missing memory or downgrading to
+an unrestricted general answer. Direct personal-value questions and explicit
+stored-input requests need no special word such as “remember”. Bare “I”, “me”
+or “my” is insufficient to establish recall. A
+separate `qwen3:0.6b` call selects generator
+size; an invalid size result conservatively selects large without changing
+the dependency. Classifier scores and artifact provenance remain local
+metadata, with no fabricated dependency-model generation.
+
+```mermaid
+flowchart TD
+    Input[Current request and admitted task history] --> Dependency[CPU BGE and learned TF-IDF/ridge]
+    Input --> Compute[0.6B compute selection]
+    Dependency -->|Accepted dependency| Evidence[Dependency and evidence handling]
+    Dependency -->|Uncertain none/optional/required or unverified required| DependencyReview[One bounded 1.7B dependency review]
+    DependencyReview --> Evidence
+    Dependency -->|Unresolved task| Clarify
+    Evidence -->|Answerable| Candidate[Small or large answer candidate]
+    Evidence -->|Missing required context| Clarify[Application clarification]
+    Compute --> Candidate
+    Candidate --> Checks[Independent evidence and quality checks]
+    Checks -->|Pass| Review[1.7B answer review]
+    Review -->|Pass| Output[Guarded terminal output]
+```
+
+Routing does not authorize facts. Current assertions and freshly authorized,
+request-linked records are the only personal sources. Question premises and
+old assistant replies are not evidence. Detected personal disclosures and answers
+are withheld from future model history even after a wrong general route. History
+admission keeps bounded general tasks and explicit draft artifacts, including
+recognized fictional first-person edits; it can conservatively drop useful
+context.
+
+Mixed recall plus independent general help can preserve both parts. A bounded
+verified renderer supplies a personal prefix from current records, while the
+generator receives only the standalone general subrequest. Missing personal
+evidence produces a question plus the independently answerable general part.
+The combined answer is reviewed, and cited snapshots are checked again after
+review and inside a short database transaction for final output. Corrections
+or deletion cannot interleave with that guarded write. Clock expiry is checked
+when the lock is acquired; time itself continues during the brief write.
+
+Deterministic checks detect bounded repetition, promise-only replies, copied
+unrelated answers, unsupported physical-action claims, and unsupported
+personal claims. The existing 1.7B model
+independently reviews usefulness, personal evidence, and configured robot
+identity/capabilities. A rejected small answer can receive one 1.7B retry;
+there are at most two generation attempts in total. Unusable optional evidence
+can be discarded within that same budget. Exhaustion returns an application
+clarification. The reliable path does not use the historical large-to-small
+timeout fallback described below.
+
+Detailed deployment context is supplied to generation only for relevant
+assistant/specification/tool questions. The independent reviewer always
+receives the complete deployment facts. A separate bounded check rejects
+unsolicited instructions involving configured internal tools; ordinary uses
+of words such as “whisper” are not intended as tool references.
+
+`--show-route` adds an `answer>` diagnostic with effective mode, retrieval
+outcome, actual generator or `application`, and answer/review attempt counts.
+Raw candidates, review outputs, original classifier metadata, and any
+application-added memory citations remain distinct in the reply record.
+Both typed and voice chat use the same guarded writer. The client retains the
+active model between text calls, unloads peers before switching, and unloads
+on exit; voice mode also unloads before speech recognition.
+
+When context is missing, the application asks one short question without an
+“I don't have that memory” preamble. Safe general requests and their
+clarification questions can become context for the next turn through the
+existing history checks. Required recall and detected private content remain
+outside general task history.
+
+The finite lexical checks and model review do not prove that all future
+invented facts or poor answers will be caught. Paraphrases, ambiguous entities,
+unrecognized disclosures, and reviewer errors remain limitations. The conversation-opening
+full suite ran 1,351 tests with 26 skipped and passed before its final wording
+and retry refinements; all 174 final focused tests also pass. The second frozen 32-case
+release passed only 20 complete routing-and-delivery criteria; its failures
+remain recorded. Subsequent targeted repairs correct observed nonanswers,
+comparison context and incomplete-speech handling, while a recommended audio
+title remains unverified. The later focused quality check passed only 3/8
+complete outcomes, despite eight correct routes; that quality failure remains
+recorded. See the repair record for the separate targeted checks and measured
+latency. The final deployment-context repair passed its four narrow live
+controls; a literal-word mismatch and thin specification wording remain.
+The [V4 source and validation snapshot](evaluation/routing_reliability_20260914/candidate_snapshot_v4/snapshot.json)
+preserves that earlier suite, packaging check and targeted text replay. The
+[later conversation-opening checks](tmp/conversation_opening_20260915/validation.json)
+record that context-first follow-up and its test suite.
+That follow-up exposed a model-quality failure: the desk-tidying request
+routed generally, but both bounded attempts were withheld and the final reply
+asked for detail. Generic practical-task retry guidance did not resolve it.
+The subsequent practical-answer repair uses a closed instruction format from
+the first attempt for explicit practical-help requests with recognized exact
+minute budgets and without linked memory. These plans use the configured
+general-large model directly (`practical_guidance_large`), because the small
+model produced incoherent steps that passed model review. The raw compute
+decision remains recorded separately from the actual generator. The application adds an instruction
+to set a timer for the supplied budget and stop when it rings; the model supplies
+the task steps. Untimed practical requests use this format on
+the existing small-to-large retry. Both rendered text and unnumbered instructions
+pass the existing evidence and quality checks, followed by model review. Raw
+model output is retained separately from the `human_guidance_steps` rendering.
+This format excludes drafts and required recall; it does not add another attempt
+after an initial large-model failure. See [the practical-answer results](results.md#2026-09-15-practical-answer-quality-repair)
+for the separate development failures and validation runs.
+The latest practical-answer check passes the desk and paper tasks (2/3); the
+laundry reply still assumes an unsupplied location/accessory. The final suite
+passed with 1,384 tests run and 26 skipped; 205 focused tests also passed.
+The [validation record](tmp/practical_answers_20260915/validation.json) preserves
+the final source, actual model calls and the remaining failure.
+A new microphone speech-to-text sample has
+not been recorded for this repair.
+
+## Historical LLM routing and shared hybrid retrieval
+
+The [2026-09-12 shared-memory improvements](evaluation/memory_pipeline_20260912/README.md)
+add explicit subject/attribute matching, coverage of multiple requested fields,
+and recognition of personal inputs in later clauses. Unlinked neighbors are
+never supplied to generation. Conflicting values for the same event are kept;
+bounded partial recall can state supported facts and missing fields separately.
+Bounded event ordering/interval calculations use consistent stored timestamps
+and retain literal-answer, citation, and freshness checks. These shared evidence
+checks are reused by the reliable wrapper as well as earlier routing modes
+and fixed-generator controls. The linked report describes earlier validation;
+new model quality and performance measurements remain pending.
+
+With the historical `--routing-policy llm`, each chat turn follows this sequence:
 
 ```text
 user text
@@ -370,6 +549,8 @@ client holds one lock across each complete peer-unload and chat transaction, so
 two application conversations cannot switch or generate concurrently through
 the shared client.
 
+The historical `--routing-policy llm` policy uses this lifecycle:
+
 | Requested model | Before generation | Ollama `keep_alive` | State after success |
 | --- | --- | ---: | --- |
 | `qwen3:0.6b` | Unload 1.7B when startup state is unknown; unload it if known resident | `-1` | 0.6B remains resident |
@@ -387,14 +568,56 @@ This guarantee covers calls using the one shared application client. A separate
 Ollama frontend, direct API caller, or another `OllamaClient` can bypass its
 lock, so do not run competing model clients on the deployment service.
 
-### Timeout and fallback policy
+### Experimental lightweight routing
+
+Select this mode explicitly for a text session:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m oline_hri chat --routing-policy lightweight --show-route
+```
+
+The untrained `lightweight_v1` policy recognizes bounded greetings, direct
+facts, and simple recall as small-model candidates. Explicit reasoning,
+constraints, and unrecognized or context-dependent requests select large.
+When large is already resident, the first consecutive easy request keeps it;
+the second selects small. A complex request or lost residency resets that
+streak. This rule is a starting heuristic, not a measured break-even threshold.
+
+Memory remains an independent decision. Existing explicit privacy, personal,
+and general intent rules run first. An ambiguous memory decision makes one
+structured classifier call on the cached resident model, or the intended
+generator when residency is unknown. Compute routing never calls an LLM.
+Route metadata records `None` for skipped generations and reports the actual
+decision sources with `--show-route`.
+
+Both generators use `keep_alive=-1` in this mode. The same client lock and peer
+eviction maintain sequential model use. Its `resident_model` property is a
+cached hint; it cannot detect external Ollama clients. Verified composed
+answers keep a selected, already resident large model with the same literal
+answer and citation checks. The text session unloads on exit, including errors
+and interruption; failed cleanup is reported and makes an otherwise successful
+exit nonzero. Abrupt process termination cannot guarantee cleanup.
+
+`--auto-memory` still classifies eligible disclosures on 0.6B after the answer,
+which can evict a retained large model. Voice chat still unloads before every
+speech-recognition stage. Cross-turn text residency gains therefore cannot be
+assumed for these paths. Retrieval, memory freshness checks, answer validation,
+and the timeout fallback retain their existing behavior.
+
+The [implementation and diagnostic record](evaluation/lightweight_routing_20260912/README.md)
+documents offline tests and blocked hardware preflights. The existing benchmark
+runners still select their original routers. Measuring this mode requires a
+new source freeze and comparison; prior result tables describe the prior code.
+
+### Historical LLM timeout and fallback policy
 
 Configuration schema 6 introduced separate local Ollama socket timeouts by workload:
 unload requests use 30 seconds, router and small-model requests use 60 seconds,
 and large-model requests use 120 seconds. These are failure budgets, not latency
 targets.
 
-Only one failure class has a generation fallback: if a routed `qwen3:1.7b`
+For `--routing-policy llm` and the earlier lightweight runtime, only one
+failure class has a generation fallback: if a routed `qwen3:1.7b`
 request times out, the application makes exactly one `qwen3:0.6b` attempt with
 the same prompt, history, response schema, and memory-ID allowlist. The reply
 records the timed-out model in `fallback_from_model` while its generation
@@ -408,7 +631,10 @@ checked before the large attempt, again before disclosing it to the fallback,
 and once more after generation. Ollama HTTP bodies are read with a 64 KiB cap;
 route JSON is capped at 512 characters and robot-response JSON at 16,384
 characters before parsing. Transport, router, retrieval, and freshness errors
-cross public boundaries only as fixed application-authored messages.
+cross public boundaries only as fixed application-authored messages. The
+reliable wrapper uses its separate bounded retry policy described above.
+
+### Shared retrieval and evidence checks
 
 Hybrid retrieval takes at most 20 candidates from each index, deduplicates by
 authoritative memory ID, and uses equal-weight reciprocal-rank fusion with
@@ -436,13 +662,16 @@ retrieved record explicitly binds that exact person to the human user.
 Answerable prompts contain only linked whole records, excluding optional
 neighbors and their citation IDs. If all required records cannot fit, the turn
 fails before generation. All required IDs must be cited. When no candidate has a high-confidence request
-link, the application discards generated prose and returns exactly `I do not
-have a verified personal memory that answers that.` This conservative rule also
+link, the historical `--routing-policy llm` application discards generated prose
+and returns exactly `I do not have a verified personal memory that answers that.`
+This conservative rule also
 covers an unlinked answer with empty or optional-only citations. Any empty
 `memory_used` is first replaced with the fixed abstention; if linked evidence
 exists, the subsequent required-citation gate rejects that response. Incomplete
 linked citations likewise fail validation rather than silently accepting the
-answer.
+answer. The reliable wrapper handles absent evidence before entering this
+memory generator: optional personalization falls back to general answering,
+and required recall asks for the missing information.
 
 This request-link analysis is deliberately best-effort, not a calibrated
 semantic-relevance test. In particular, a genuinely relevant candidate found
