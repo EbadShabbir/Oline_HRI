@@ -1,0 +1,1301 @@
+{
+  "schema_version": "fresh_routing_metrics_v1",
+  "summary": {
+    "planned": 12,
+    "raw_match": {
+      "count": 10,
+      "denominator": 12,
+      "rate": 0.8333333333333334
+    },
+    "thresholded_match": {
+      "count": 6,
+      "denominator": 12,
+      "rate": 0.5
+    },
+    "final_match": {
+      "count": 4,
+      "denominator": 12,
+      "rate": 0.3333333333333333
+    },
+    "quality_pass": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "combined_pass": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "useful_general_help": {
+      "count": 2,
+      "denominator": 12,
+      "rate": 0.16666666666666666
+    },
+    "general_component_cases": 10,
+    "useful_general_help_when_expected": {
+      "count": 2,
+      "denominator": 10,
+      "rate": 0.2
+    },
+    "effective_mode_match": {
+      "count": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "observed": 12,
+    "errors": 0,
+    "missing": 0,
+    "delivered": 12,
+    "generated_delivery": 4,
+    "application_delivery": 8
+  },
+  "per_mode": {
+    "none": {
+      "planned": 8,
+      "raw_match": {
+        "count": 6,
+        "denominator": 8,
+        "rate": 0.75
+      },
+      "thresholded_match": {
+        "count": 2,
+        "denominator": 8,
+        "rate": 0.25
+      },
+      "final_match": {
+        "count": 2,
+        "denominator": 8,
+        "rate": 0.25
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 8,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 1,
+        "denominator": 8,
+        "rate": 0.125
+      },
+      "general_component_cases": 8,
+      "useful_general_help_when_expected": {
+        "count": 1,
+        "denominator": 8,
+        "rate": 0.125
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 8,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 8,
+      "generated_delivery": 2,
+      "application_delivery": 6
+    },
+    "optional": {
+      "planned": 0,
+      "raw_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "thresholded_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "final_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "general_component_cases": 0,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 0,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 0,
+      "generated_delivery": 0,
+      "application_delivery": 0
+    },
+    "required": {
+      "planned": 3,
+      "raw_match": {
+        "count": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "final_match": {
+        "count": 2,
+        "denominator": 3,
+        "rate": 0.6666666666666666
+      },
+      "quality_pass": {
+        "count": 1,
+        "denominator": 3,
+        "rate": 0.3333333333333333
+      },
+      "combined_pass": {
+        "count": 1,
+        "denominator": 3,
+        "rate": 0.3333333333333333
+      },
+      "useful_general_help": {
+        "count": 1,
+        "denominator": 3,
+        "rate": 0.3333333333333333
+      },
+      "general_component_cases": 2,
+      "useful_general_help_when_expected": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 3,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 3,
+      "generated_delivery": 2,
+      "application_delivery": 1
+    },
+    "clarify": {
+      "planned": 1,
+      "raw_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "final_match": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "general_component_cases": 0,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 1,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 1,
+      "generated_delivery": 0,
+      "application_delivery": 1
+    }
+  },
+  "per_category": {
+    "creative_format": {
+      "planned": 1,
+      "raw_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "final_match": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "general_component_cases": 1,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 1,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 1,
+      "generated_delivery": 0,
+      "application_delivery": 1
+    },
+    "data_formatting": {
+      "planned": 1,
+      "raw_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "final_match": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "general_component_cases": 1,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 1,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 1,
+      "generated_delivery": 0,
+      "application_delivery": 1
+    },
+    "draft_or_edit": {
+      "planned": 2,
+      "raw_match": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "thresholded_match": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "final_match": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "general_component_cases": 2,
+      "useful_general_help_when_expected": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 2,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 2,
+      "generated_delivery": 1,
+      "application_delivery": 1
+    },
+    "general_explanation": {
+      "planned": 1,
+      "raw_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "final_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "general_component_cases": 1,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 1,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 1,
+      "generated_delivery": 0,
+      "application_delivery": 1
+    },
+    "mixed_recall_general": {
+      "planned": 2,
+      "raw_match": {
+        "count": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "final_match": {
+        "count": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "quality_pass": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "combined_pass": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "useful_general_help": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "general_component_cases": 2,
+      "useful_general_help_when_expected": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 2,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 2,
+      "generated_delivery": 2,
+      "application_delivery": 0
+    },
+    "supplied_time_budget": {
+      "planned": 3,
+      "raw_match": {
+        "count": 2,
+        "denominator": 3,
+        "rate": 0.6666666666666666
+      },
+      "thresholded_match": {
+        "count": 1,
+        "denominator": 3,
+        "rate": 0.3333333333333333
+      },
+      "final_match": {
+        "count": 1,
+        "denominator": 3,
+        "rate": 0.3333333333333333
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "general_component_cases": 3,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 3,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 3,
+      "generated_delivery": 1,
+      "application_delivery": 2
+    },
+    "unresolved_task": {
+      "planned": 1,
+      "raw_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "final_match": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "general_component_cases": 0,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 1,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 1,
+      "generated_delivery": 0,
+      "application_delivery": 1
+    },
+    "untrusted_assistant_claim": {
+      "planned": 1,
+      "raw_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "final_match": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "general_component_cases": 0,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 1,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 1,
+      "generated_delivery": 0,
+      "application_delivery": 1
+    }
+  },
+  "confusion": {
+    "raw_mode": {
+      "none": {
+        "none": 6,
+        "required": 2
+      },
+      "optional": {},
+      "required": {
+        "required": 3
+      },
+      "clarify": {
+        "clarify": 1
+      }
+    },
+    "thresholded_mode": {
+      "none": {
+        "none": 2,
+        "required": 2,
+        "clarify": 4
+      },
+      "optional": {},
+      "required": {
+        "required": 3
+      },
+      "clarify": {
+        "clarify": 1
+      }
+    },
+    "final_mode": {
+      "none": {
+        "none": 2,
+        "required": 5,
+        "optional": 1
+      },
+      "optional": {},
+      "required": {
+        "clarify": 1,
+        "required": 2
+      },
+      "clarify": {
+        "required": 1
+      }
+    },
+    "effective_mode": {
+      "none": {
+        "clarify": 2,
+        "required": 5,
+        "none": 1
+      },
+      "optional": {},
+      "required": {
+        "clarify": 1,
+        "required": 2
+      },
+      "clarify": {
+        "required": 1
+      }
+    }
+  },
+  "flags": {
+    "bullet_format_violation": 1,
+    "line_count_violation": 1,
+    "missing_assumption_fact_distinction": 1,
+    "missing_clue_texts": 1,
+    "missing_csv_deliverable": 1,
+    "missing_date_and_place": 1,
+    "missing_event_location": 1,
+    "missing_general_component": 1,
+    "missing_general_explanation": 1,
+    "missing_item_coverage": 1,
+    "missing_item_placement_steps": 1,
+    "missing_operation_question": 1,
+    "missing_placement_sequence": 1,
+    "missing_poem": 1,
+    "missing_preparation_plan": 1,
+    "missing_required_word": 1,
+    "missing_text_rewrite": 1,
+    "missing_three_item_checklist": 1,
+    "missing_time_allocation": 3,
+    "missing_unavailable_recall_acknowledgment": 1,
+    "output_format_violation": 2,
+    "sentence_count_violation": 1,
+    "task_misframed_as_missing_recall": 6,
+    "unnecessary_clarification": 7,
+    "unnecessary_task_clarification": 1
+  },
+  "primary_outcomes": {
+    "inappropriate_clarification": 9,
+    "incomplete_deliverable": 2,
+    "pass": 1
+  },
+  "unsupported_subtypes": {},
+  "generation_policies": {
+    "application_clarification": 8,
+    "reliable_generation": 4
+  },
+  "selected_generation_models": {
+    "application_or_unavailable": 8,
+    "qwen3:1.7b": 4
+  },
+  "classifier_threshold_rejections": 5,
+  "raw_to_final_mode_changes": 7,
+  "generation_model_fallbacks": 0,
+  "actual_calls": {
+    "total": 20,
+    "by_role": {
+      "dependency_review": 8,
+      "answer_generation": 8,
+      "answer_review": 4
+    },
+    "by_model": {
+      "qwen3:1.7b": 20
+    },
+    "by_role_and_model": [
+      {
+        "role": "answer_generation",
+        "model": "qwen3:1.7b",
+        "count": 8
+      },
+      {
+        "role": "answer_review",
+        "model": "qwen3:1.7b",
+        "count": 4
+      },
+      {
+        "role": "dependency_review",
+        "model": "qwen3:1.7b",
+        "count": 8
+      }
+    ],
+    "by_status": {
+      "ok": 20
+    },
+    "declared_bounds_per_case": {
+      "answer_generation": 2,
+      "answer_review": 2,
+      "dependency_review": 1,
+      "compute_classifier": 1
+    },
+    "bound_violations": {},
+    "call_count_distribution": {
+      "1": 6,
+      "2": 4,
+      "3": 2
+    },
+    "generation_attempt_distribution": {
+      "0": 6,
+      "1": 4,
+      "2": 2
+    },
+    "case_wall_seconds_total": 64.43258160199998,
+    "recorded_call_wall_seconds_total": 60.953360016,
+    "backend_total_seconds_available": 60.61753405,
+    "backend_load_seconds_available": 19.339493765,
+    "calls_missing_backend_duration": 0,
+    "timing_interpretation": "Backend load is inside backend total; calls are inside case wall. Different timing scopes cannot identify causal overhead."
+  },
+  "latency": {
+    "overall_observed": {
+      "n": 12,
+      "planned_in_group": 12,
+      "missing_latency": 0,
+      "p50_seconds": 4.031021833,
+      "p95_seconds": 16.084267478549993,
+      "mean_seconds": 5.369381800166667,
+      "minimum_seconds": 0.592532085,
+      "maximum_seconds": 21.23409856
+    },
+    "delivered_model_generated": {
+      "n": 4,
+      "planned_in_group": 4,
+      "missing_latency": 0,
+      "p50_seconds": 4.4673518465,
+      "p95_seconds": 5.6282142609,
+      "mean_seconds": 4.6291089315,
+      "minimum_seconds": 3.781652816,
+      "maximum_seconds": 5.800079217
+    },
+    "application_only": {
+      "n": 8,
+      "planned_in_group": 8,
+      "missing_latency": 0,
+      "p50_seconds": 0.885136699,
+      "p95_seconds": 17.956933326349994,
+      "mean_seconds": 5.7395182345,
+      "minimum_seconds": 0.592532085,
+      "maximum_seconds": 21.23409856
+    },
+    "full_quality": {
+      "n": 1,
+      "planned_in_group": 1,
+      "missing_latency": 0,
+      "p50_seconds": 4.654312843,
+      "p95_seconds": 4.654312843,
+      "mean_seconds": 4.654312843,
+      "minimum_seconds": 4.654312843,
+      "maximum_seconds": 4.654312843
+    },
+    "combined_success": {
+      "n": 1,
+      "planned_in_group": 1,
+      "missing_latency": 0,
+      "p50_seconds": 4.654312843,
+      "p95_seconds": 4.654312843,
+      "mean_seconds": 4.654312843,
+      "minimum_seconds": 4.654312843,
+      "maximum_seconds": 4.654312843
+    },
+    "per_category": {
+      "creative_format": {
+        "n": 1,
+        "planned_in_group": 1,
+        "missing_latency": 0,
+        "p50_seconds": 0.719377668,
+        "p95_seconds": 0.719377668,
+        "mean_seconds": 0.719377668,
+        "minimum_seconds": 0.719377668,
+        "maximum_seconds": 0.719377668
+      },
+      "data_formatting": {
+        "n": 1,
+        "planned_in_group": 1,
+        "missing_latency": 0,
+        "p50_seconds": 0.805556251,
+        "p95_seconds": 0.805556251,
+        "mean_seconds": 0.805556251,
+        "minimum_seconds": 0.805556251,
+        "maximum_seconds": 0.805556251
+      },
+      "draft_or_edit": {
+        "n": 2,
+        "planned_in_group": 2,
+        "missing_latency": 0,
+        "p50_seconds": 3.2694406995000005,
+        "p95_seconds": 5.54701536525,
+        "mean_seconds": 3.2694406995,
+        "minimum_seconds": 0.738802182,
+        "maximum_seconds": 5.800079217
+      },
+      "general_explanation": {
+        "n": 1,
+        "planned_in_group": 1,
+        "missing_latency": 0,
+        "p50_seconds": 8.990292662,
+        "p95_seconds": 8.990292662,
+        "mean_seconds": 8.990292662,
+        "minimum_seconds": 8.990292662,
+        "maximum_seconds": 8.990292662
+      },
+      "mixed_recall_general": {
+        "n": 2,
+        "planned_in_group": 2,
+        "missing_latency": 0,
+        "p50_seconds": 4.2179828294999995,
+        "p95_seconds": 4.61067984165,
+        "mean_seconds": 4.2179828294999995,
+        "minimum_seconds": 3.781652816,
+        "maximum_seconds": 4.654312843
+      },
+      "supplied_time_budget": {
+        "n": 3,
+        "planned_in_group": 3,
+        "missing_latency": 0,
+        "p50_seconds": 4.28039085,
+        "p95_seconds": 11.111731473899997,
+        "mean_seconds": 5.705292439333333,
+        "minimum_seconds": 0.964717147,
+        "maximum_seconds": 11.870769321
+      },
+      "unresolved_task": {
+        "n": 1,
+        "planned_in_group": 1,
+        "missing_latency": 0,
+        "p50_seconds": 21.23409856,
+        "p95_seconds": 21.23409856,
+        "mean_seconds": 21.23409856,
+        "minimum_seconds": 21.23409856,
+        "maximum_seconds": 21.23409856
+      },
+      "untrusted_assistant_claim": {
+        "n": 1,
+        "planned_in_group": 1,
+        "missing_latency": 0,
+        "p50_seconds": 0.592532085,
+        "p95_seconds": 0.592532085,
+        "mean_seconds": 0.592532085,
+        "minimum_seconds": 0.592532085,
+        "maximum_seconds": 0.592532085
+      }
+    },
+    "per_mode": {
+      "none": {
+        "n": 8,
+        "planned_in_group": 8,
+        "missing_latency": 0,
+        "p50_seconds": 2.6225539985,
+        "p95_seconds": 10.862602490349998,
+        "mean_seconds": 4.27124816225,
+        "minimum_seconds": 0.719377668,
+        "maximum_seconds": 11.870769321
+      },
+      "optional": {
+        "n": 0,
+        "planned_in_group": 0,
+        "missing_latency": 0,
+        "p50_seconds": null,
+        "p95_seconds": null,
+        "mean_seconds": null,
+        "minimum_seconds": null,
+        "maximum_seconds": null
+      },
+      "required": {
+        "n": 3,
+        "planned_in_group": 3,
+        "missing_latency": 0,
+        "p50_seconds": 3.781652816,
+        "p95_seconds": 4.5670468403,
+        "mean_seconds": 3.009499248,
+        "minimum_seconds": 0.592532085,
+        "maximum_seconds": 4.654312843
+      },
+      "clarify": {
+        "n": 1,
+        "planned_in_group": 1,
+        "missing_latency": 0,
+        "p50_seconds": 21.23409856,
+        "p95_seconds": 21.23409856,
+        "mean_seconds": 21.23409856,
+        "minimum_seconds": 21.23409856,
+        "maximum_seconds": 21.23409856
+      }
+    },
+    "quantile_method": "linear interpolation at (n-1)*q",
+    "units": "seconds"
+  },
+  "quality_deadlines": {
+    "5": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "10": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "30": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "60": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    }
+  },
+  "combined_deadlines": {
+    "5": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "10": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "30": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "60": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    }
+  },
+  "generated_quality_deadlines": {
+    "5": {
+      "count": 1,
+      "denominator": 4,
+      "rate": 0.25
+    },
+    "10": {
+      "count": 1,
+      "denominator": 4,
+      "rate": 0.25
+    },
+    "30": {
+      "count": 1,
+      "denominator": 4,
+      "rate": 0.25
+    },
+    "60": {
+      "count": 1,
+      "denominator": 4,
+      "rate": 0.25
+    }
+  },
+  "generated_quality_deadlines_all_planned": {
+    "5": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "10": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "30": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    },
+    "60": {
+      "count": 1,
+      "denominator": 12,
+      "rate": 0.08333333333333333
+    }
+  },
+  "deadline_interpretation": "quality_deadlines and combined_deadlines use all planned cases and include appropriate application replies. generated_quality_deadlines is conditional on delivered model-generated text; generated_quality_deadlines_all_planned uses the full planned denominator.",
+  "review_complete": true,
+  "interpretation": "Finite single-pass assistant-reviewed empty-memory text evaluation; effective fallback modes never replace final dependency labels. Errors and missing cases fail planned-case metrics.",
+  "integrity": {
+    "verified": true,
+    "verification_source_root": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/candidate_source",
+    "input_sha256": {
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/cases.json": "ca50150451733370cb98bc3fb6b443db8dfe4a2c91d7c07ffac82a7824a4972b",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/adjudicated_judgments.json": "d74ed52804fac32f22a318ceeddfa875c80238fa05d8e25e5aab52a768aeb8bc",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/candidate_freeze.json": "f122733ef58dfaecde7274ced341920ed2a49065474e7430b8915de6dce24760",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/collection/artifact_sha256.json": "70ce46cc9e93b62b1211ac73c18a2faa07c97c871426bc994b14f98d9ea91b5b",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/collection/integrity_before.json": "fa496a1e7cd330adacd96d7285d88a23221006eb0cd0183ee9845759669d5b2d",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/collection/integrity_after.json": "fa496a1e7cd330adacd96d7285d88a23221006eb0cd0183ee9845759669d5b2d",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/collection/models_before.json": "482fbd259f03c7791a96686c1980a0c3e6d286b4fa02b6154743b9aa26c5e9f5",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/collection/models_after.json": "482fbd259f03c7791a96686c1980a0c3e6d286b4fa02b6154743b9aa26c5e9f5",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/collection/run/metadata.json": "77130fcc90c803e360ebe1002c8ed89684c7e560d754573dbb9469541ebef17c",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/collection/run/summary.json": "eaafe4b6f653166db3c5021a639b32c5cc85fafe9f3074092738708726901b7c",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/protocol.md": "20ee67021154845941518cad04d2a49419472d8fa5a2b642bab6029558713a74",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/analyze.py": "5b7dbd9bb3b2cc736e0ebdbc0b33c0d9c91ac1a9aee2913de8ceda9a7f0c9337",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/collection/run/observations.jsonl": "51cdfb6f4d7ae3f743502fa83eebcd6da36d56e89736d0e9c1a1736a429fa5a5",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/development_v1/evaluation_freeze.json": "426bb9223a0adea73651f06928fc8c703f9578b5ed26bbffd62ee76271a8c7e5"
+    },
+    "models": {
+      "ollama_version": {
+        "version": "0.33.3"
+      },
+      "models": {
+        "qwen3:0.6b": {
+          "name": "qwen3:0.6b",
+          "size": 522653767,
+          "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "751.63M",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 1024
+          },
+          "family": "qwen3",
+          "format": "gguf",
+          "parameter_count": 751632384,
+          "parameter_size": "751.63M",
+          "quantization_level": "Q4_K_M",
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        },
+        "qwen3:1.7b": {
+          "name": "qwen3:1.7b",
+          "size": 1359293444,
+          "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "2.0B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 2048
+          },
+          "family": "qwen3",
+          "format": "gguf",
+          "parameter_count": 2031739904,
+          "parameter_size": "2.0B",
+          "quantization_level": "Q4_K_M",
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        }
+      }
+    },
+    "runner_summary": {
+      "schema_version": "routing_reliability_v2",
+      "case_count": 12,
+      "completed": 12,
+      "outcomes": {
+        "clarification": 8,
+        "personal_or_mixed_answer": 3,
+        "general_answer": 1
+      },
+      "label_matches": 4,
+      "label_mismatches": 8,
+      "failure": null,
+      "cleanup_error": null,
+      "wall_ns": 64780749442,
+      "interpretation": "Clarifications and errors are separate from delivered answers; label agreement is not answer correctness."
+    },
+    "collection_finish": {
+      "runner_exit_code": 0,
+      "failure": null,
+      "cleanup_errors": [],
+      "snapshot": {
+        "boot_id": "c0e155e9-d16b-4054-be35-885c29c814e7",
+        "captured_at": "2026-09-16T19:28:24.951219+00:00",
+        "fan_pwm": 105,
+        "memory": {
+          "mem_total_kib": 7803200,
+          "mem_available_kib": 2459680,
+          "swap_total_kib": 3901584,
+          "swap_free_kib": 3559312,
+          "swap_used_kib": 342272
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "MAINSWRST",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 57.5,
+          "gpu-thermal": 57.593,
+          "soc0-thermal": 55.875,
+          "soc1-thermal": 55.781,
+          "soc2-thermal": 56.593,
+          "tj-thermal": 57.593
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "gpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "telemetry": {
+        "record_type": "jetson_telemetry_summary",
+        "sample_count": 129,
+        "schema_version": 1,
+        "metrics": {
+          "cpu_mean_percent": {
+            "max": 96.66666666666667,
+            "p50": 53.333333333333336,
+            "p95": 72.16666666666667
+          },
+          "gr3d_percent": {
+            "max": 99,
+            "p50": 97,
+            "p95": 99
+          },
+          "ram_used_mb": {
+            "max": 6323,
+            "p50": 6202,
+            "p95": 6293
+          },
+          "swap_used_mb": {
+            "max": 334,
+            "p50": 209,
+            "p95": 323
+          },
+          "vdd_in_average_mw": {
+            "max": 12014,
+            "p50": 9739,
+            "p95": 11929
+          },
+          "vdd_in_mw": {
+            "max": 14849,
+            "p50": 14421,
+            "p95": 14849
+          }
+        },
+        "temperatures_c": {
+          "cpu": {
+            "sample_count": 129,
+            "max": 58.187,
+            "p50": 55.0,
+            "p95": 57.5
+          },
+          "gpu": {
+            "sample_count": 129,
+            "max": 58.812,
+            "p50": 56.156,
+            "p95": 58.593
+          },
+          "soc0": {
+            "sample_count": 129,
+            "max": 56.062,
+            "p50": 53.437,
+            "p95": 55.875
+          },
+          "soc1": {
+            "sample_count": 129,
+            "max": 55.875,
+            "p50": 53.125,
+            "p95": 55.531
+          },
+          "soc2": {
+            "sample_count": 129,
+            "max": 56.937,
+            "p50": 54.218,
+            "p95": 56.687
+          },
+          "tj": {
+            "sample_count": 129,
+            "max": 58.812,
+            "p50": 56.156,
+            "p95": 58.593
+          }
+        },
+        "duration_seconds": 65.009804492,
+        "vdd_in_energy_joules": 782.863086737211
+      },
+      "guard_violation": null,
+      "complete": true
+    },
+    "frozen_artifact_manifest_verified": true
+  },
+  "evaluation_complete": true,
+  "operational_success": true,
+  "completion_interpretation": "Evaluation completion means all planned cases and judgments were captured with verified integrity and clean finalization. Candidate execution errors, quality failures, and call-bound violations remain measured outcomes."
+}

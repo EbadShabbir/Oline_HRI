@@ -1,0 +1,142 @@
+[
+  {
+    "id": "fresh_023",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_welcome_message", "missing_authorized_fallback", "sentence_count_violation"],
+    "required_components_pass": [
+      {"component": "Provide a warm, understandable two-sentence welcome message suitable for a casual board-game group.", "pass": false},
+      {"component": "Use the supplied fallback when no writing-tone memory is available.", "pass": false}
+    ],
+    "reason": "A warm general tone is explicitly authorized, but the response asks for more situation details instead of supplying the two-sentence welcome.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_027",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_chore_order", "missing_reason"],
+    "required_components_pass": [
+      {"component": "Provide an order containing each of the four supplied chores once.", "pass": false},
+      {"component": "Give a short plausible reason for the chosen default order.", "pass": false}
+    ],
+    "reason": "The current request supplies the four chores and authorizes a reasonable default. The generic question gives neither an order nor a reason.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_041",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_general_component", "missing_title_ordering"],
+    "required_components_pass": [
+      {"component": "Acknowledge that the user's pickup branch is unavailable.", "pass": true},
+      {"component": "Order the supplied titles as Amber Trail, Cedar Boat, Willow Door.", "pass": false}
+    ],
+    "reason": "The answer appropriately acknowledges the unavailable branch and asks for it, but omits the independent alphabetical ordering of the supplied titles.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_022",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_break_idea", "missing_authorized_fallback"],
+    "required_components_pass": [
+      {"component": "Offer an indoor solo break that fits within 15 minutes and can be done with the supplied items.", "pass": false},
+      {"component": "Make the proposal usable without any recalled hobby.", "pass": false}
+    ],
+    "reason": "The generic question replaces the requested self-contained break despite the available materials, time limit, and explicit fallback permission.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_048",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Ask which operation or result the user wants, such as a sum, average, or another calculation.", "pass": true}
+    ],
+    "reason": "The question directly requests the missing calculation to perform on the numbers without guessing or invoking personal memory.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_047",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["unresolved_recipient_selected", "missing_recipient_clarification", "conflated_recipients_requests"],
+    "required_components_pass": [
+      {"component": "Ask whether the intended recipient is Alex Kim or Alex Rao before committing to one addressed reply.", "pass": false}
+    ],
+    "reason": "The answer silently chooses Alex Kim and gives a definitive addressed reply instead of resolving which Alex is intended. It also includes Friday's unavailability in Kim's reply even though Friday was Rao's request.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_032",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question"],
+    "required_components_pass": [
+      {"component": "Explain that the frame's previously supplied width, height, and units are unavailable; a request for the measurements is acceptable.", "pass": false}
+    ],
+    "reason": "The generic request for more detail neither explains that the earlier measurements are unavailable nor specifically requests the missing width, height, and units.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_037",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Acknowledge that the user's previously named favorite author is unavailable.", "pass": true},
+      {"component": "Also give a two-sentence general explanation that a chapter is a section of a book, while the whole book is the complete work and may contain multiple chapters.", "pass": true}
+    ],
+    "reason": "The response acknowledges unavailable author information and asks for the name. Its two explanatory sentences describe chapters as sections and explain how multiple chapters collectively form the whole narrative, supplying the requested general distinction.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_001",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["incorrect_item_destinations", "missing_pencil_storage", "missing_scrap_recycling", "missing_book_storage"],
+    "required_components_pass": [
+      {"component": "Provide actionable steps that put the pencils in the jar, scrap paper in the recycling bin, and book and cup on the shelf.", "pass": false},
+      {"component": "Assign durations or time intervals that together account for 7 minutes.", "pass": true}
+    ],
+    "reason": "The five durations total seven minutes, and the cup reaches its correct shelf. The remaining required placements fail: the book and pencils remain on the table, scraps are not recycled, and moving the bin does not accomplish their disposal.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_004",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["missing_sun_hat", "contradicted_supplied_item_locations", "redundant_refill_of_filled_bottle"],
+    "required_components_pass": [
+      {"component": "Provide three preparation phases whose durations total 8 minutes.", "pass": true},
+      {"component": "Account for the tote and all five other listed items; the hat may be packed or worn.", "pass": false}
+    ],
+    "reason": "The three allocations total eight minutes and offer some material arrangement, but the sun hat is omitted. The instructions also take the pencil and eraser from the bag despite their stated location on the table and refill a bottle already supplied as filled.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_008",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_shadow_region_explanation"],
+    "required_components_pass": [
+      {"component": "Explain that the object blocks light and that the less-lit region behind it is a shadow.", "pass": false},
+      {"component": "Use exactly two short, understandable sentences.", "pass": true}
+    ],
+    "reason": "The answer gives two short sentences and the useful light-blocking idea. It then discusses shape rather than explaining that the shadow is the less-lit region behind the object, leaving that required part of the explanation absent.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_030",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question"],
+    "required_components_pass": [
+      {"component": "State that Leena's birthday date is unavailable from the supplied conversation and memory; optionally ask the user to provide it.", "pass": false}
+    ],
+    "reason": "The generic detail question does not state that Leena's birthday is unavailable or identify the missing date being requested.",
+    "useful_general_help": null
+  }
+]

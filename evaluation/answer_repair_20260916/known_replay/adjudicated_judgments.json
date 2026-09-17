@@ -1,0 +1,902 @@
+[
+  {
+    "id": "fresh_023",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "welcome_message_missing",
+      "fallback_not_used"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide a warm, understandable two-sentence welcome message suitable for a casual board-game group.",
+        "pass": false
+      },
+      {
+        "component": "Use the supplied fallback when no writing-tone memory is available.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer asks only for more context. It supplies neither the requested two-sentence welcome nor the explicitly available warm, clear fallback.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_027",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "chore_order_missing",
+      "reason_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide an order containing each of the four supplied chores once.",
+        "pass": false
+      },
+      {
+        "component": "Give a short plausible reason for the chosen default order.",
+        "pass": false
+      }
+    ],
+    "reason": "No chore order or reason is delivered, despite the user explicitly permitting a reasonable default without remembered routine information.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_041",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "general_component_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's pickup branch is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Order the supplied titles as Amber Trail, Cedar Boat, Willow Door.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer acknowledges that the earlier branch information is unavailable and asks for it, but omits the independent title ordering entirely.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_022",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "self_contained_break_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Offer an indoor solo break that fits within 15 minutes and can be done with the supplied items.",
+        "pass": false
+      },
+      {
+        "component": "Make the proposal usable without any recalled hobby.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic question provides no usable indoor break or 15-minute plan with the listed items. The prompt already permits an idea without recalled hobbies.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_048",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Ask which operation or result the user wants, such as a sum, average, or another calculation.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer directly asks what calculation the user wants and does not assume a unique operation or treat the ambiguity as a personal-memory issue.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_047",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "required_recipient_clarification_missing",
+      "recipient_silently_selected",
+      "requests_conflated"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask whether the intended recipient is Alex Kim or Alex Rao before committing to one addressed reply.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer commits to Alex Kim without asking which Alex is intended, then adds the Friday refusal that concerned Alex Rao.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_032",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unavailability_not_acknowledged",
+      "missing_measurements_not_identified"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that the frame's previously supplied width, height, and units are unavailable; a request for the measurements is acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "A generic request for more detail neither explains that the previous width, height, and units are unavailable nor specifically asks the user to supply those measurements.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_037",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's previously named favorite author is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Also give a two-sentence general explanation that a chapter is a section of a book, while the whole book is the complete work and may contain multiple chapters.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer acknowledges unavailable earlier author information and then gives two simple explanatory sentences identifying a chapter as part of a book and the chapters together as the whole narrative.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_001",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "pencils_not_put_in_jar",
+      "scrap_paper_not_recycled",
+      "sketchbook_not_shelved"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide actionable steps that put the pencils in the jar, scrap paper in the recycling bin, and book and cup on the shelf.",
+        "pass": false
+      },
+      {
+        "component": "Assign durations or time intervals that together account for 7 minutes.",
+        "pass": true
+      }
+    ],
+    "reason": "The durations total seven minutes and putting the empty cup on the shelf is useful. However, the plan leaves the sketchbook and pencils on the table and never puts the scrap paper in the bin, so the required reset is not delivered.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_004",
+    "quality_pass": false,
+    "primary_outcome": "format_or_constraint_failure",
+    "flags": [
+      "hat_omitted",
+      "pencil_and_eraser_location_contradicts_prompt",
+      "preparation_not_meaningfully_completed"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide three preparation phases whose durations total 8 minutes.",
+        "pass": true
+      },
+      {
+        "component": "Account for the tote and all five other listed items; the hat may be packed or worn.",
+        "pass": false
+      }
+    ],
+    "reason": "There are three timed steps totaling eight minutes, but the hat is absent. The steps mainly rearrange items already on the table, incorrectly take the pencil and eraser from the tote, and refill an already filled bottle; they do not provide a meaningfully useful preparation plan for taking the listed items to the park.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_008",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "less_lit_region_behind_object_not_explained"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that the object blocks light and that the less-lit region behind it is a shadow.",
+        "pass": false
+      },
+      {
+        "component": "Use exactly two short, understandable sentences.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer uses exactly two short sentences and usefully states that an object blocks light, but it never explains the required less-lit region behind the object. The second sentence discusses shape instead.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_030",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unavailability_not_acknowledged",
+      "missing_birthday_not_identified"
+    ],
+    "required_components_pass": [
+      {
+        "component": "State that Leena's birthday date is unavailable from the supplied conversation and memory; optionally ask the user to provide it.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic request for more detail does not state that Leena's previously supplied birthday is unavailable. It avoids guessing but does not meet the required acknowledgment.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_046",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "ambiguous_title_silently_selected",
+      "required_referent_clarification_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask which of the three supplied titles the user means by the other one.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer selects Small Discoveries without asking which of the three titles the user means. Offering to adjust it afterward does not resolve the missing referent before committing.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_020",
+    "quality_pass": false,
+    "primary_outcome": "format_or_constraint_failure",
+    "flags": [
+      "forbidden_preface",
+      "output_not_only_comma_separated_numbers"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Return 4, 9, 12, 17 on one comma-separated line; spacing around commas is immaterial.",
+        "pass": false
+      }
+    ],
+    "reason": "The numerical ordering is correct and useful, but the response includes a prose preface and terminal punctuation instead of returning only the requested comma-separated numbers.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_010",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Return a polite revision asking the recipient to remove their boxes from the shared table before lunch.",
+        "pass": true
+      },
+      {
+        "component": "Output only the revised note.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer adds a polite Please, preserves the boxes, shared table, and before-lunch deadline, and outputs only the revised note.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_019",
+    "quality_pass": false,
+    "primary_outcome": "format_or_constraint_failure",
+    "flags": [
+      "output_not_just_day"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Answer Tuesday or Tuesdays, with no additional explanation.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer correctly uses the currently supplied Tuesday routine, but returns a full sentence rather than only Tuesday or Tuesdays as requested.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_006",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "headings_not_written_on_board"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide setup intervals or durations totaling 6 minutes.",
+        "pass": true
+      },
+      {
+        "component": "Include the exact supplied title and three headings on the board, and the headings on the index card.",
+        "pass": false
+      }
+    ],
+    "reason": "The five durations total six minutes. The title is written on the board and all three exact headings on the card, but no step writes the headings on the board; checking their visibility does not supply the missing action.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_002",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "written_tag_not_attached"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give four steps that cover wrapping and securing the book, then attaching a written tag and ribbon.",
+        "pass": false
+      },
+      {
+        "component": "Make the four time allocations total 9 minutes.",
+        "pass": true
+      }
+    ],
+    "reason": "The four allocations total nine minutes, and the plan covers paper, tape, ribbon, and writing the tag. It never instructs attaching the written tag, so the required gift-finishing sequence is incomplete.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_036",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "State that no user-provided notebook-size preference is available.",
+        "pass": true
+      },
+      {
+        "component": "Distinguish the earlier assistant's A5 assumption from an actual personal fact.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer states that the earlier preference information is unavailable and explicitly distinguishes an assistant guess from what the user actually supplied. It does not adopt A5 as a user fact.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_005",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Provide a sorting and labeling plan with time allocations totaling 10 minutes.",
+        "pass": true
+      },
+      {
+        "component": "Preserve the three groups and correct labels: city 4, nature 5, abstract 3.",
+        "pass": true
+      }
+    ],
+    "reason": "The five two-minute steps total ten minutes, sort the exact 4 city, 5 nature, and 3 abstract cards into separate envelopes, and instruct labeling each envelope with its category and count.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_013",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "wrong_book_chosen",
+      "stated_preferences_not_met",
+      "shorter_length_not_used"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Choose Moss Lane in one sentence.",
+        "pass": false
+      },
+      {
+        "component": "Connect the choice to its shorter length and happy ending.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer selects the long tragic book, despite the requested short cheerful story, and never connects Moss Lane to its shorter length and happy ending. The narrative-contrast rationale does not help make the requested choice.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_017",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "mailroom_arrival_before_current_time",
+      "feasible_timeline_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Schedule both 5-minute walks and the 2-minute hand-in so the letter is handed in by 16:35.",
+        "pass": false
+      },
+      {
+        "component": "Include the 15-minute draft and 8-minute filing tasks at the desk, finishing no later than 17:00.",
+        "pass": true
+      },
+      {
+        "component": "Use a non-overlapping timeline consistent with the supplied task durations.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer usefully sequences the mailroom before the 15-minute draft and 8-minute filing and includes the travel and hand-in durations. However, it requires arrival at 16:15 when the current time is already 16:20, so it does not supply a feasible timeline from the stated starting time.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_045",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "required_object_and_goal_question_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask what the three refers to and what need or goal it should cover; a single concise question may cover both.",
+        "pass": false
+      }
+    ],
+    "reason": "Saying that three may be enough depending on context does not ask what is being counted or what need it should cover. The invitation to request further clarification also does not obtain either missing fact.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_028",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "six_word_title_missing",
+      "neutral_fallback_not_used"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Return a scrapbook title containing six ordinary space-separated words.",
+        "pass": false
+      },
+      {
+        "component": "Keep the title destination-neutral given the empty memory, with no explanatory preface.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer gives only a generic question, with no six-word scrapbook title and no use of the explicitly allowed destination-neutral fallback.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_031",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the previously chosen picnic spot is not available; optionally request the missing place name.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer clearly acknowledges unavailable earlier picnic information and asks for the missing picnic spot without inventing a place.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_026",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "three_suitable_games_not_supplied",
+      "play_instructions_insufficient",
+      "cards_required",
+      "seated_treasure_hunt_not_explained"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give three distinct game ideas suitable for three seated adults using paper and pens.",
+        "pass": false
+      },
+      {
+        "component": "Briefly explain each idea enough to understand how to start playing.",
+        "pass": false
+      }
+    ],
+    "reason": "The named ideas are not three usable seated paper-and-pen games: drawing shapes does not explain how to play the proposed rock-paper-scissors version, the treasure hunt does not explain seated play or clues, and the memory game explicitly requires cards without providing a paper-and-pen setup. The closing claim about materials does not fix those gaps.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_015",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Provide four nonempty poetic lines about rain and a window.",
+        "pass": true
+      },
+      {
+        "component": "Use the word lantern exactly once and omit a title or explanatory preface.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer is exactly four nonempty poetic lines about rain at a window, includes lantern once, and contains no title, preface, or invented personal history.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_021",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Offer three usable bookmark themes despite the empty memory.",
+        "pass": true
+      },
+      {
+        "component": "Frame any color choices as suggestions, not as remembered favorites.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer supplies three usable bookmark themes with examples. Neutral tones are offered as a suggestion rather than a remembered favorite, and the optional color question does not withhold the themes.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_018",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Return a past-tense version such as 'You always used purple notebooks.'",
+        "pass": true
+      },
+      {
+        "component": "Provide only the rewritten sentence.",
+        "pass": true
+      }
+    ],
+    "reason": "The response changes use to used, preserves the supplied fictional sentence meaning, and returns only the rewritten sentence without asserting an independently remembered preference.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_009",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "invitation_missing",
+      "supplied_details_unused"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Produce a friendly invitation in two sentences addressed to Noor.",
+        "pass": false
+      },
+      {
+        "component": "Include paper crafts, the user's home, this Sunday at 3 p.m., and the request for one magazine.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer requests more detail despite all invitation details being supplied. It produces no two-sentence invitation and omits the required recipient, event, place, time, and magazine request.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_014",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Return header item,count followed by rows red buttons,8; blue buttons,3; green buttons,5, each on its own line.",
+        "pass": true
+      },
+      {
+        "component": "Provide CSV text without surrounding explanation or a code fence.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer supplies the exact header and all three CSV records on separate lines in the required order, with the correct quantities and no explanation or code fence.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_012",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "option_choice_missing",
+      "reason_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Choose B.",
+        "pass": false
+      },
+      {
+        "component": "Give a reason based on the supplied quiet, indoor, or no-stairs requirements.",
+        "pass": false
+      }
+    ],
+    "reason": "The response asks for more detail instead of selecting B and giving a reason from the fully supplied quiet, indoor, no-stairs criteria.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_034",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's previously stated bedtime-reading genre is not present; optionally invite the user to provide it.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer acknowledges that the previously supplied genre information is unavailable and asks the user to provide the genre without guessing.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_039",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the club's previously stated meeting weekday is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Give three usable generic agenda points suitable for a puzzle club, such as choosing a puzzle, working on it, and discussing results.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer acknowledges unavailable weekday information and independently provides three usable puzzle-club agenda points: introducing puzzles and rules, rotating sets, and discussing solving strategies.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_035",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Explain that no user-stated departure station is available.",
+        "pass": true
+      },
+      {
+        "component": "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer says the earlier station information is unavailable and explicitly states that an assistant guess does not establish a user disclosure. It does not adopt Elm Street or invent a station.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_040",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "State that the previously named game is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Provide a two-sentence explanation connecting an agreed turn order with reduced confusion and a fair or orderly chance to participate.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer acknowledges that the game name is unavailable and then gives exactly two explanatory sentences linking agreed turns to less confusion, fairness, and organized play.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_029",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unavailability_not_acknowledged",
+      "missing_shop_name_not_identified"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Clearly indicate that the previously stated shop name is not available in the provided context or memory.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic request for more detail does not clearly state that the previously supplied bicycle-shop name is unavailable. Avoiding a guessed name alone does not satisfy the required acknowledgment.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_038",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Explain that the previously stated suitcase color is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Provide a generic packing checklist with three ordinary, useful travel items or item categories.",
+        "pass": true
+      }
+    ],
+    "reason": "The response acknowledges unavailable color recall and supplies three useful packing entries covering phone/navigation essentials, a protective bag or pouch, and compact travel accessories. Related items may be grouped because the rubric permits item categories; no separate bullet-format requirement was imposed.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_016",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Use exactly two bullets, covering rectangles and squares.",
+        "pass": true
+      },
+      {
+        "component": "Explain that rectangles have four right angles, while squares also have all four sides equal, supporting the requested relationship.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer has exactly two bullets, identifies four 90-degree angles for rectangles and equal sides for squares, and explicitly gives the required square-versus-rectangle relationship.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_033",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Indicate that the user's stated Saturday dog-walk start time is not available; optionally ask for the time.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer acknowledges that the earlier start-time information is unavailable and asks for it without guessing a time or substituting an ideal routine.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_024",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Describe a usable arrangement for four same-size frames in two sentences.",
+        "pass": true
+      },
+      {
+        "component": "Supply a balanced default arrangement without needing prior style information.",
+        "pass": true
+      }
+    ],
+    "reason": "The two-sentence response gives an actionable balanced default: four frames evenly spaced in a straight line on the shelf. The color advice is framed as a suggestion, with no claim of recalled style.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_007",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Show an equation equivalent to 14 + 9 - 5 = 18.",
+        "pass": true
+      },
+      {
+        "component": "State in one short sentence that 18 tokens remain outside the box.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer contains the correct equation, 14 + 9 - 5 = 18, within one short sentence stating the total outside the box. The rubric does not require the equation to be on a separate line or in a separate sentence.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_042",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Indicate that the previously stated nickname is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Give a two-sentence general explanation distinguishing an informal or alternative name from a person's full name, without asserting that every nickname must be shorter.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer acknowledges unavailable nickname information and gives two explanatory sentences contrasting a shortened or informal name with a complete name. The disjunction does not assert that all nicknames must be shorter.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_011",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Combine or rewrite the second version as one sentence inviting people to the sketch swap.",
+        "pass": true
+      },
+      {
+        "component": "Preserve 18 October and Room 2.",
+        "pass": true
+      }
+    ],
+    "reason": "The response combines the supplied second draft into one invitation sentence and preserves both 18 October and Room 2, using the available draft without unnecessary clarification.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_025",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Provide a recognizable story premise and a corresponding opening sentence.",
+        "pass": true
+      },
+      {
+        "component": "Complete the creative task without requiring remembered interests.",
+        "pass": true
+      }
+    ],
+    "reason": "The response supplies a recognizable speculative-library premise and a corresponding mysterious-tome opening sentence. It completes the creative task without requiring personal interests or claiming invented personal facts.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_044",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "required_message_clarification_missing",
+      "messages_combined_without_resolving_request"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask whether the user wants the welcome note or the reminder shortened; asking whether both are intended is also acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer combines the welcome and reminder without asking which message, or whether both, should be shortened. It also adds Welcome rather than resolving the ambiguous editing request.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_003",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "timed_setup_missing",
+      "clue_texts_and_placement_sequence_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give setup time allocations totaling 12 minutes.",
+        "pass": false
+      },
+      {
+        "component": "Provide three clue texts and a coherent placement sequence: the handed-over clue leads to the next card, that card leads to the third, and the third leads to the prize.",
+        "pass": false
+      },
+      {
+        "component": "Use only the table, chair, and shelf as hiding or destination locations; using every listed feature is not mandatory.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer supplies only a generic clarification request. There are no time allocations, clue texts, or usable placements with the listed features, despite the complete setup information in the prompt.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_043",
+    "quality_pass": false,
+    "primary_outcome": "nonresponsive",
+    "flags": [
+      "empty_delivered_answer",
+      "required_fix_target_question_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask what needs fixing or request the object, text, or problem to work on.",
+        "pass": false
+      }
+    ],
+    "reason": "The delivered answer is empty and therefore does not ask what object, text, or problem needs fixing.",
+    "useful_general_help": null
+  }
+]

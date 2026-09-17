@@ -1,0 +1,56 @@
+{
+  "scope": "Root resolution notes, preserving both original assistant reviews. No production or frozen-case changes.",
+  "cases": {
+    "fresh_006": {
+      "field": "useful_general_help",
+      "review_a": false,
+      "review_b": true,
+      "resolved": false,
+      "reason": "The delivered text repeats the already supplied title, headings and intended placement as first-person promises. It adds no preparation method or time allocation. This is a nonanswer to the requested timed plan, despite accurately repeating the supplied labels. Both reviewers independently fail strict quality. As with case017, plan-perspective ambiguity is recorded without asserting that the assistant promised robot execution.",
+      "overrides": {
+        "flags": [
+          "missing_time_allocations",
+          "request_echo",
+          "ambiguous_actor_perspective"
+        ]
+      }
+    },
+    "fresh_001": {
+      "field": "flags",
+      "add": [
+        "ambiguous_actor_perspective"
+      ],
+      "previous_root_note_preserved": {
+        "field": "flags",
+        "add": [
+          "unsupported_physical_action_promise"
+        ],
+        "reason": "The ordinary guidance response says 'I will reset the table' and describes future physical actions by its speaker. This is an unsupported action promise outside a requested draft; it is not a claim that an action was already completed. Review A preserved a separate flag addendum."
+      },
+      "reason": "The first-person wording is ambiguous in a requested user plan. It does not conclusively establish a robot capability or performed-action claim. Record perspective ambiguity instead of a confirmed unsupported physical-action promise. The incorrect destinations and missing allocations independently fail quality."
+    },
+    "fresh_017": {
+      "field": "quality_pass",
+      "review_a": false,
+      "review_b": true,
+      "resolved": true,
+      "reason": "All requested timeline components pass: 16:20 start, hand-in by16:27, return16:32, drafting through16:47 and filing through16:55. In this requested plan, first-person wording can reasonably be the user's plan and does not unequivocally promise robot execution. No second-person style requirement was in the task. Record perspective ambiguity as a non-disqualifying observation rather than introduce a new requirement.",
+      "overrides": {
+        "quality_pass": true,
+        "primary_outcome": "pass",
+        "flags": [
+          "ambiguous_actor_perspective"
+        ],
+        "reason": "All requested timeline components pass: 16:20 start, hand-in by16:27, return16:32, drafting through16:47 and filing through16:55. In this requested plan, first-person wording can reasonably be the user's plan and does not unequivocally promise robot execution. No second-person style requirement was in the task. Record perspective ambiguity as a non-disqualifying observation rather than introduce a new requirement."
+      }
+    },
+    "fresh_039": {
+      "field": "component_interpretation",
+      "component": "three generic agenda points",
+      "review_a": true,
+      "review_b": false,
+      "resolved": true,
+      "reason": "The three delivered headings can serve as high-level puzzle-club discussion topics. The frozen rubric permits a generic agenda and does not require timed activities or an explicit start/end sequence. Retain the permissive component judgment while noting its weak specificity; overall quality still fails because the unavailable weekday is not acknowledged."
+    }
+  }
+}

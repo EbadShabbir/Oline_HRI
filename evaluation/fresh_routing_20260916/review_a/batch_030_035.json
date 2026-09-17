@@ -1,0 +1,101 @@
+[
+  {
+    "id": "fresh_014",
+    "quality_pass": false,
+    "primary_outcome": "nonanswer",
+    "flags": [
+      "missing_csv_rows",
+      "format_violation",
+      "missing_general_component"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Return header item,count followed by rows red buttons,8; blue buttons,3; green buttons,5, each on its own line.",
+        "pass": false
+      },
+      {
+        "component": "Provide CSV text without surrounding explanation or a code fence.",
+        "pass": false
+      }
+    ],
+    "reason": "The response merely announces a conversion; it provides neither the CSV header as a CSV line nor any of the three data rows, and the explanatory preface violates the only-CSV requirement.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_012",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Choose B.",
+        "pass": true
+      },
+      {
+        "component": "Give a reason based on the supplied quiet, indoor, or no-stairs requirements.",
+        "pass": true
+      }
+    ],
+    "reason": "The response chooses B and supports that choice with the supplied quiet, indoor, and stair-free suitability. The explanation is repetitive but does not add unsupported facts or violate a specified sentence limit.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_034",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "nonspecific_followup"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's previously stated bedtime-reading genre is not present; optionally invite the user to provide it.",
+        "pass": false
+      }
+    ],
+    "reason": "The response does not acknowledge that the previously stated genre is unavailable or specifically invite the user to provide that genre; it asks only for unspecified detail.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_039",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "nonspecific_followup"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the club's previously stated meeting weekday is unavailable.",
+        "pass": false
+      },
+      {
+        "component": "Give three usable generic agenda points suitable for a puzzle club, such as choosing a puzzle, working on it, and discussing results.",
+        "pass": true
+      }
+    ],
+    "reason": "The response never acknowledges the missing meeting weekday and asks only for unspecified detail. Its three brief points on puzzle-solving skills, collaboration, and varied puzzles are relevant high-level club agenda points; the rubric does not require particular activities or timings.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_035",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_error",
+      "empty_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that no user-stated departure station is available.",
+        "pass": false
+      },
+      {
+        "component": "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed with no delivered answer, so neither the missing user-stated station nor the unsupported status of the earlier hunch is explained.",
+    "useful_general_help": null
+  }
+]

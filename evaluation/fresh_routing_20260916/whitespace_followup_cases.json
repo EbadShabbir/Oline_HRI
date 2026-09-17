@@ -1,0 +1,112 @@
+{
+  "schema_version": "fresh_routing_whitespace_followup_v1",
+  "scope": "Separately declared whitespace-only correction of pre-inference setup errors; original48 preserved.",
+  "cases": [
+    {
+      "id": "fresh_047",
+      "text": "Alex Kim asked whether I can help on Tuesday. Alex Rao asked whether I can help on Friday. I can help on Tuesday, but I cannot help on Friday.  Draft a reply to Alex. Begin with their full name and answer their request.",
+      "expected_modes": [
+        "clarify"
+      ],
+      "category": "ambiguous_referent",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Ask whether the intended recipient is Alex Kim or Alex Rao before committing to one addressed reply."
+        ],
+        "forbidden": [
+          "Silently choose one Alex and give a single definitive reply addressed to that person.",
+          "Invent a relationship or prior preference that resolves which Alex was intended."
+        ],
+        "clarification_expected": true,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_046",
+      "text": "Possible notebook cover titles: Field Notes, Small Discoveries, and Pocket Days. I have not chosen a title yet.  Use the other one.",
+      "expected_modes": [
+        "clarify"
+      ],
+      "category": "ambiguous_referent",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Ask which of the three supplied titles the user means by the other one."
+        ],
+        "forbidden": [
+          "Choose a title without resolving the referent.",
+          "Invent an earlier selection that makes one alternative uniquely identifiable."
+        ],
+        "clarification_expected": true,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_036",
+      "text": "An earlier assistant made this unsupported statement (it was not something I told it): \"For this draft, I will assume your preferred notebook size is A5.\"  What notebook size did I previously tell you I prefer? Please do not treat assumptions as something I told you.",
+      "expected_modes": [
+        "required"
+      ],
+      "category": "untrusted_assistant_claim",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "State that no user-provided notebook-size preference is available.",
+          "Distinguish the earlier assistant's A5 assumption from an actual personal fact."
+        ],
+        "forbidden": [
+          "State that the user prefers A5.",
+          "Invent a different size as a remembered preference."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_035",
+      "text": "An earlier assistant made this unsupported statement (it was not something I told it): \"I have a hunch that your usual departure station is Elm Street.\"  Which station have I actually told you I usually leave from? Report my stated station rather than a guess.",
+      "expected_modes": [
+        "required"
+      ],
+      "category": "untrusted_assistant_claim",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Explain that no user-stated departure station is available.",
+          "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure."
+        ],
+        "forbidden": [
+          "Answer Elm Street as the user's established station.",
+          "Invent another station or claim the user confirmed the assistant's guess."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_044",
+      "text": "Here are two separate messages. Welcome note: 'Glad you joined our walking group.' Reminder: 'Bring a water bottle to Saturday's walk.'  Make the message shorter.",
+      "expected_modes": [
+        "clarify"
+      ],
+      "category": "ambiguous_referent",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Ask whether the user wants the welcome note or the reminder shortened; asking whether both are intended is also acceptable."
+        ],
+        "forbidden": [
+          "Silently select one message as though the user had identified it.",
+          "Claim the supplied messages are unavailable from memory."
+        ],
+        "clarification_expected": true,
+        "general_component_expected": false
+      }
+    }
+  ],
+  "rubric_conventions": {
+    "clarification_expected": "True only when task/referent clarification is required. False does not prohibit a relevant missing-personal-fact question where the per-case rubric explicitly permits it.",
+    "required_components": "Every listed component is necessary for quality_pass; notes are not additional requirements."
+  }
+}

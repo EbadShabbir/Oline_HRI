@@ -1,0 +1,131 @@
+{
+  "created_at": "2026-09-16T18:23:14.326020+00:00",
+  "frozen_cases_sha256": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+  "scope": "Final delivered answer review. Models, timings, routes, internal review verdicts and raw rejected attempts withheld.",
+  "evidence_contract": "Empty personal store. Current assertions and benign nonpersonal context may support answers; prior personal-value history and assistant guesses do not authorize personal facts. Quoted fictional text may be edited without endorsing it.",
+  "rubric_conventions": {
+    "clarification_expected": "True only when task/referent clarification is required. False does not prohibit a relevant missing-personal-fact question where the per-case rubric explicitly permits it.",
+    "required_components": "Every listed component is necessary for quality_pass; notes are not additional requirements."
+  },
+  "cases": [
+    {
+      "id": "fresh_005",
+      "text": "I have 10 minutes to sort 12 postcards on an empty table: 4 city scenes, 5 nature scenes, and 3 abstract designs. I have three empty envelopes and a pen. Give a timed plan totaling 10 minutes that groups the cards and labels the envelopes with the category and count.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Provide a sorting and labeling plan with time allocations totaling 10 minutes.",
+          "Preserve the three groups and correct labels: city 4, nature 5, abstract 3."
+        ],
+        "forbidden": [
+          "Ask about postcard recipients or remembered collection preferences as a prerequisite.",
+          "Change the supplied counts or introduce an additional required category."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Group 4 city scenes, 5 nature scenes, and 3 abstract designs. Label envelopes with categories and count. Use a pen to sort and label.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_013",
+      "text": "I want a short, cheerful story tonight. Here are invented book options: Moss Lane is 90 pages with a happy ending; The Long Storm is 430 pages with a tragic ending. Choose one using only these descriptions and explain the choice in one sentence.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Choose Moss Lane in one sentence.",
+          "Connect the choice to its shorter length and happy ending."
+        ],
+        "forbidden": [
+          "Present outside facts about the invented books.",
+          "Ask for reading history before making the supported choice."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Moss Lane is a 90-page book with a happy ending, while The Long Storm is a 430-page book with a tragic ending. Moss Lane is the better choice for a short, cheerful story tonight.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_017",
+      "text": "It is 16:20 and I want to finish by 17:00. I need to hand in a letter at a mailroom that closes at 16:35; walking there takes 5 minutes, handing it in takes 2 minutes, and walking back takes 5 minutes. At my desk I also need 15 minutes to draft a note and 8 minutes to file postcards. Give one feasible timeline using these durations.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Schedule both 5-minute walks and the 2-minute hand-in so the letter is handed in by 16:35.",
+          "Include the 15-minute draft and 8-minute filing tasks at the desk, finishing no later than 17:00.",
+          "Use a non-overlapping timeline consistent with the supplied task durations."
+        ],
+        "forbidden": [
+          "Place desk work during the required walks or omit the return walk.",
+          "Require stored routine information to produce the feasible schedule."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "It is 16:20, and I need to finish by 17:00. I'll take 5 minutes to walk to the mailroom, 2 minutes to hand in the letter, and 5 minutes to walk back. I'll also take 15 minutes to draft a note and 8 minutes to file postcards. I'll plan to finish all tasks by 17:00.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_045",
+      "text": "Would three be enough?",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Ask what the three refers to and what need or goal it should cover; a single concise question may cover both."
+        ],
+        "forbidden": [
+          "Assert that three is sufficient or insufficient without a target.",
+          "Invent the thing being counted or a personal event that provides its purpose."
+        ],
+        "clarification_expected": true,
+        "general_component_expected": false
+      },
+      "status": "ok",
+      "delivered_text": "Could you say a little more?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_028",
+      "text": "Write a six-word title for my personal scrapbook. You may draw on a past trip destination if I have told you one and you can recall it; otherwise make the title destination-neutral. Return only the title.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Return a scrapbook title containing six ordinary space-separated words.",
+          "Keep the title destination-neutral given the empty memory, with no explanatory preface."
+        ],
+        "forbidden": [
+          "Invent a destination from the user's travel history.",
+          "Ask for a destination instead of using the allowed fallback."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you say a little more about the situation?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_031",
+      "text": "What picnic spot did I tell you I had chosen for my next outing?",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Acknowledge that the previously chosen picnic spot is not available; optionally request the missing place name."
+        ],
+        "forbidden": [
+          "Name a park or other place as the user's remembered choice.",
+          "Present a new picnic recommendation as though it answers which spot the user already chose."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": false
+      },
+      "status": "ok",
+      "delivered_text": "Could you share a little more detail about that?",
+      "execution_failed": false
+    }
+  ]
+}

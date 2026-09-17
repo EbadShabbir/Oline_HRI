@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-09-16T20:13:49.832050+00:00",
+  "reviewer": "independent eval_harness assistant",
+  "files": [
+    "README.md",
+    "fresh_holdout/README.md"
+  ],
+  "result": "No concrete factual errors found. Verified quality/routing denominators, mode table, usefulness, review agreement/adjudications, latency/deadlines, call accounting, development results, full test log, operational and matched audits. Fresh holdout correctly remains unrun with unmeasured quality.",
+  "readiness_note": "First check788MiB, later786.5MiB; both above768MiB. No approval to close GNOME Software received.",
+  "human_validation": false
+}

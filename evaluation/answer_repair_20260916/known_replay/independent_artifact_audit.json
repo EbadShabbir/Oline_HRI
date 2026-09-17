@@ -1,0 +1,464 @@
+{
+  "created_at": "2026-09-16T20:07:13.230576+00:00",
+  "method": "Independent standard-library arithmetic and artifact checks; no production, analyzer or reviewer imports.",
+  "cohort_dir": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay",
+  "cohort_kind": "known_replay",
+  "preregistered_scope": "Final candidate; single replay of all 48 known original cases with unchanged prompt bytes/order/rubrics; not fresh evidence.",
+  "case_ids": [
+    "fresh_023",
+    "fresh_027",
+    "fresh_041",
+    "fresh_022",
+    "fresh_048",
+    "fresh_047",
+    "fresh_032",
+    "fresh_037",
+    "fresh_001",
+    "fresh_004",
+    "fresh_008",
+    "fresh_030",
+    "fresh_046",
+    "fresh_020",
+    "fresh_010",
+    "fresh_019",
+    "fresh_006",
+    "fresh_002",
+    "fresh_036",
+    "fresh_005",
+    "fresh_013",
+    "fresh_017",
+    "fresh_045",
+    "fresh_028",
+    "fresh_031",
+    "fresh_026",
+    "fresh_015",
+    "fresh_021",
+    "fresh_018",
+    "fresh_009",
+    "fresh_014",
+    "fresh_012",
+    "fresh_034",
+    "fresh_039",
+    "fresh_035",
+    "fresh_040",
+    "fresh_029",
+    "fresh_038",
+    "fresh_016",
+    "fresh_033",
+    "fresh_024",
+    "fresh_007",
+    "fresh_042",
+    "fresh_011",
+    "fresh_025",
+    "fresh_044",
+    "fresh_003",
+    "fresh_043"
+  ],
+  "source_verification": {
+    "verification_source_root": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/candidate_source",
+    "archived_source_count": 48,
+    "working_source_drift": [],
+    "working_drift_interpretation": "Working drift is permitted only when another explicit source root, normally the historical archive, is verified. It never changes the cohort's archived candidate."
+  },
+  "model_identities": {
+    "ollama_version": {
+      "version": "0.33.3"
+    },
+    "models": {
+      "qwen3:0.6b": {
+        "name": "qwen3:0.6b",
+        "size": 522653767,
+        "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "751.63M",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 1024
+        },
+        "family": "qwen3",
+        "format": "gguf",
+        "parameter_count": 751632384,
+        "parameter_size": "751.63M",
+        "quantization_level": "Q4_K_M",
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      },
+      "qwen3:1.7b": {
+        "name": "qwen3:1.7b",
+        "size": 1359293444,
+        "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "2.0B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 40960,
+          "embedding_length": 2048
+        },
+        "family": "qwen3",
+        "format": "gguf",
+        "parameter_count": 2031739904,
+        "parameter_size": "2.0B",
+        "quantization_level": "Q4_K_M",
+        "capabilities": [
+          "completion",
+          "tools",
+          "thinking"
+        ]
+      }
+    }
+  },
+  "actual_calls": {
+    "total": 106,
+    "by_role": {
+      "answer_generation": 52,
+      "dependency_review": 18,
+      "answer_review": 36
+    },
+    "by_model": {
+      "qwen3:1.7b": 106
+    },
+    "by_status": {
+      "ok": 105,
+      "error": 1
+    },
+    "bound_violations": {},
+    "recorded_call_wall_seconds_total": 264.270229448,
+    "backend_total_seconds_available": 262.050987806,
+    "backend_load_seconds_available": 19.23790637,
+    "calls_missing_backend_duration": 1,
+    "deterministic_size_policy_cases": [
+      "fresh_023",
+      "fresh_027",
+      "fresh_041",
+      "fresh_022",
+      "fresh_048",
+      "fresh_047",
+      "fresh_032",
+      "fresh_037",
+      "fresh_001",
+      "fresh_004",
+      "fresh_008",
+      "fresh_030",
+      "fresh_046",
+      "fresh_020",
+      "fresh_010",
+      "fresh_019",
+      "fresh_006",
+      "fresh_002",
+      "fresh_036",
+      "fresh_005",
+      "fresh_013",
+      "fresh_017",
+      "fresh_045",
+      "fresh_028",
+      "fresh_031",
+      "fresh_026",
+      "fresh_015",
+      "fresh_021",
+      "fresh_018",
+      "fresh_009",
+      "fresh_014",
+      "fresh_012",
+      "fresh_034",
+      "fresh_039",
+      "fresh_035",
+      "fresh_040",
+      "fresh_029",
+      "fresh_038",
+      "fresh_016",
+      "fresh_033",
+      "fresh_024",
+      "fresh_007",
+      "fresh_042",
+      "fresh_011",
+      "fresh_025",
+      "fresh_044",
+      "fresh_003"
+    ],
+    "candidate_within_declared_call_bounds": true,
+    "timing_interpretation": "Backend load is part of backend total; call wall is part of case wall. No causal overhead estimate is inferred."
+  },
+  "resources": {
+    "samples": 537,
+    "minimum_free_ram_mb": 1022,
+    "maximum_swap_used_mb": 788,
+    "maximum_temperature_c": 63.406,
+    "maximum_sample_gap_seconds": 1.693034182,
+    "residency_scope": "Snapshots show startup/final empty. Existing backend checks enforce at most one resident model; raw tegrastats has no model-residency field."
+  },
+  "memory": {
+    "retrieval_calls": 16,
+    "successful_empty_retrievals": 16,
+    "retrieval_error_count": 0,
+    "retrieval_errors": [],
+    "candidate_retrieval_operations_successful": true,
+    "table_counts": {
+      "memory_item": 0,
+      "memory_audit": 0,
+      "memory_embedding": 0,
+      "memory_fts": 0
+    },
+    "database_quick_check": "ok",
+    "error_interpretation": "Recorded retrieval errors are candidate outcomes, not empty-result successes or artifact-integrity failures."
+  },
+  "prompt_boundaries": {
+    "messages_checked": 214,
+    "rubric_strings_available": 180,
+    "findings": [],
+    "scope": "Checks hidden rubric-field keys, case IDs, and unique complete rubric sentences >=40 characters/6 words absent from authorized input. Generic mode words are intentionally excluded; this literal check is not proof against semantic leakage."
+  },
+  "measurement_audited": false,
+  "interpretation": "This single cohort is never merged with another attempt. Known development/replay cases do not become fresh by receiving new model outputs.",
+  "audited_artifact_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/cases.json": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/candidate_freeze.json": "a32628e611195118fde2b29ee62c5fbb351d9d0d579f4cedca06e7e8ba1cf77b",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/evaluation_freeze.json": "11b488b4ecf61bea94b6b4571aa89934d2dcf1046d796c7635af0ec04ec19c24",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/artifact_sha256.json": "ec238862abad61f805a593f2d76064dfed2660d013283ef0e9bd1146535783d4",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/run/observations.jsonl": "db65c1ea6b52590ff7e503da91d458abd67ee08956ec1a5291a881bf9b9111d8",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/audit_results.py": "81fccb858656a22fd55af27a468e9b4e3911fe6bea41add78ea9a13c5ace080a"
+  },
+  "checks": [
+    {
+      "check": "nonempty unique planned cohort",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "one valid preregistered dependency label per case",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "every planned observation retained in exact frozen order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "embedded cases unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "normal learned conversation policy used",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "candidate and preregistered corpus hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "preregistered artifact SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "sealed collection SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "before/after source, configuration, corpus and embeddings unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "evaluation and candidate source sets agree",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "archived candidate SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "selected verification source SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "complete runtime source set was frozen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "archived offline tests SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "archived working diff SHA256",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "model digests and server version unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "model artifact bounds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged strict Stage 2 guard policy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "declared bounded cohort and unchanged generation parameters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "launcher used this candidate manifest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runner corpus and configuration hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runner runtime source hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runner planned and completed denominators",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "runner raw label-match summary",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all durable raw calls match observations exactly",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all actual call schemas recognized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "every call and result uses its frozen model",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "attempts, selections, reviews and skipped compute retain actual provenance",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "cohort: startup resource gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: initial/final model eviction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: running fan snapshots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: device invariants",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: power mode and zero trip counters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: guard and cleanup outcome",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "check": "cohort: telemetry count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: telemetry monotonic and unstalled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: sampled runtime RAM/swap/temperature bounds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: all successful retrieval results empty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: failed retrievals preserve explicit errors without evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: no fabricated memory evidence IDs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "cohort: isolated SQLite empty and valid",
+      "passed": true,
+      "detail": {
+        "memory_item": 0,
+        "memory_audit": 0,
+        "memory_embedding": 0,
+        "memory_fts": 0
+      }
+    },
+    {
+      "check": "cohort: SQLite audit was read-only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cohort: no hidden labels or unique rubric literals in model prompts",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "known development is not relabeled as fresh",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "checks_passed": 43,
+  "checks_failed": 1,
+  "passed": false
+}

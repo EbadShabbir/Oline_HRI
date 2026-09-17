@@ -1,0 +1,13 @@
+{
+  "command": ".venv/bin/python -m unittest discover -s tests",
+  "pythonpath": "src:tests",
+  "live_opt_ins": "all five explicitly disabled",
+  "exit_code": 1,
+  "tests": 1411,
+  "failures": 13,
+  "errors": 1,
+  "skipped": 26,
+  "duration_seconds": 110.468,
+  "error_note": "Supervisor subprocess import failed because scripts was missing from PYTHONPATH; rerun with absolute src:tests:scripts paths.",
+  "failure_note": "Legacy clarification wording expectations need review against new explicit missing-memory and targeted-question behavior. Named relationship fallback revealed an actual irrelevant-question defect."
+}

@@ -1,0 +1,124 @@
+[
+  {
+    "id": "fresh_020",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_general_component",
+      "format_violation",
+      "nonanswer"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Return 4, 9, 12, 17 on one comma-separated line; spacing around commas is immaterial.",
+        "pass": false
+      }
+    ],
+    "reason": "The four numbers and requested operation are explicit. The response asks for unspecified information instead of returning the sorted comma-separated line.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_010",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Return a polite revision asking the recipient to remove their boxes from the shared table before lunch.",
+        "pass": true
+      },
+      {
+        "component": "Output only the revised note.",
+        "pass": true
+      }
+    ],
+    "reason": "Adding Please makes the note polite while preserving the boxes, shared table, and before-lunch deadline; only the revised note is returned.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_019",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_general_component",
+      "format_violation",
+      "nonanswer"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Answer Tuesday or Tuesdays, with no additional explanation.",
+        "pass": false
+      }
+    ],
+    "reason": "Tuesday is explicitly supplied in the current message. The response asks for more information instead of giving the requested day alone.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_006",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_time_allocations",
+      "unsupported_action_claim",
+      "request_echo"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide setup intervals or durations totaling 6 minutes.",
+        "pass": false
+      },
+      {
+        "component": "Include the exact supplied title and three headings on the board, and the headings on the index card.",
+        "pass": true
+      }
+    ],
+    "reason": "The exact title and headings are assigned to the requested board and card, but no setup intervals or durations are given. The response mainly repeats the requested result and promises that the assistant will physically place the text, although this was a request for a preparation plan.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_002",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_time_allocations",
+      "incomplete_wrapping_steps",
+      "missing_written_tag",
+      "missing_tag_and_ribbon_attachment"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give four steps that cover wrapping and securing the book, then attaching a written tag and ribbon.",
+        "pass": false
+      },
+      {
+        "component": "Make the four time allocations total 9 minutes.",
+        "pass": false
+      }
+    ],
+    "reason": "Four steps are listed and cutting ribbon or taping paper are relevant fragments, but the book is never explicitly wrapped and secured, the tag is never written or attached, and the ribbon is not attached. A single total of nine minutes does not allocate time to the four steps.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_036",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_error",
+      "empty_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "State that no user-provided notebook-size preference is available.",
+        "pass": false
+      },
+      {
+        "component": "Distinguish the earlier assistant's A5 assumption from an actual personal fact.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and delivered no text, so neither missing-preference acknowledgment nor distinction of the A5 assumption was provided.",
+    "useful_general_help": null
+  }
+]

@@ -1,0 +1,29 @@
+test_accepted_required_mixed_request_retains_raw_fragment_checks_without_model_review (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_accepted_required_route_preserves_local_decision_without_dependency_review (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_case_error_is_flushed_and_cleanup_runs_even_after_interrupt (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_case_validation_accepts_legacy_unscored_and_rejects_malformed_cases (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_conversation_serializes_actual_attempts_reviews_and_isolated_store (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_draft_edit_history_matches_production_admission (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_existing_output_is_not_overwritten_or_used_for_inference (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_history_admission_excludes_old_personal_values_and_their_followups (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_learned_route_preserves_classifier_metadata_without_fabricated_generations (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_legacy_boolean_schema_remains_supported (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_legacy_conversation_combination_is_rejected_before_loading (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_legacy_mode_projection_leaves_clarification_unscored (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_main_defaults_to_learned_and_constructs_classifier_without_personal_store (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_malformed_learned_review_is_recorded_then_clarifies_without_another_review (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_raw_large_review_and_final_clarification_are_distinct (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_retrieval_errors_are_persisted_even_if_conversation_recovers (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_routing_records_hashes_raw_results_and_excludes_labels_from_prompts (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_setup_and_cleanup_failures_are_preserved (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_uncertain_routes_preserve_actual_dependency_review (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_withheld_personal_pair_clears_draft_provenance (tests.test_routing_reliability_runner.RoutingReliabilityRunnerTests) ... ok
+test_both_backend_recorders_preserve_actual_review_even_when_json_is_invalid (tests.test_dependency_evaluation_compatibility.DependencyEvaluationCompatibilityTests) ... ok
+test_exact_boolean_review_has_a_distinct_purpose_and_no_memory_allowlist (tests.test_dependency_evaluation_compatibility.DependencyEvaluationCompatibilityTests) ... ok
+test_legacy_observation_reader_cannot_misreport_review_as_a_classifier (tests.test_dependency_evaluation_compatibility.DependencyEvaluationCompatibilityTests) ... ok
+test_review_recognition_rejects_weakened_or_extended_contracts (tests.test_dependency_evaluation_compatibility.DependencyEvaluationCompatibilityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.798s
+
+OK

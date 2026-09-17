@@ -1,0 +1,161 @@
+[
+  {
+    "id": "repair_holdout_001",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "required_numbering_missing",
+      "six_numbered_cards_not_specified"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give exactly four numbered steps that respectively position the tray, arrange the six models, write and place six numbered cards, and check the display.",
+        "pass": false
+      },
+      {
+        "component": "Retain the supplied allocations of 2, 3, 4, and 2 minutes and state the total as 11 minutes.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer gives useful setup actions and retains the 2, 3, 4, and 2 minute allocations with an explicit 11-minute total. However, it is not four numbered steps and does not specify writing and placing six numbered cards, one per model.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_002",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Show four phases with intervals 0–3, 3–5, 5–11, and 11–14 minutes, or equivalent time notation.",
+        "pass": true
+      },
+      {
+        "component": "Assign the intervals respectively to reading, arranging, performing both voices, and writing notes.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer gives all four exact intervals, 0–3, 3–5, 5–11, and 11–14 minutes, with reading, arranging, performing both voices, and writing notes assigned correctly. In this requested planning context the first-person wording alone does not establish an unequivocal robot-action promise.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_003",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "csv_header_missing",
+      "three_lines_instead_of_four"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Output exactly four lines: shelf,boxes followed by north,6 then south,2 then west,9.",
+        "pass": false
+      },
+      {
+        "component": "Preserve the supplied labels, quantities, and order, with no surrounding prose or code fence.",
+        "pass": true
+      }
+    ],
+    "reason": "The three data rows correctly preserve north,6; south,2; and west,9 without prose or a code fence, so they are useful. The required shelf,boxes header is missing, leaving three lines instead of the required four.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_004",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "numbered_lines_missing",
+      "middle_label_missing",
+      "workable_alternating_fold_sequence_missing",
+      "extra_fastener_introduced"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give three numbered lines with the text labels Start:, Middle:, and Finish: in order.",
+        "pass": false
+      },
+      {
+        "component": "Describe a workable sequence of starting a fold, continuing alternating folds, and gathering or pinching one end to open a fan.",
+        "pass": false
+      }
+    ],
+    "reason": "The response is one paragraph without numbering or a Middle label. Folding into an unexplained triangle and folding the ends in opposite directions does not supply the required repeated alternating folds and gathered end that open into a fan; the final ribbon-or-string instruction also introduces an extra fastener.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_005",
+    "quality_pass": false,
+    "primary_outcome": "format_or_constraint_failure",
+    "flags": [
+      "explanation_instead_of_only_whole_number"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Return only 31, allowing surrounding whitespace.",
+        "pass": false
+      }
+    ],
+    "reason": "The arithmetic correctly computes 7*4 + 3 = 31 and is useful, but the answer includes explanatory prose and an equation despite the explicit requirement to return only 31.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_006",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "required_announcement_details_missing",
+      "unsupported_time_change"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide an announcement of no more than 16 whitespace-separated words.",
+        "pass": true
+      },
+      {
+        "component": "Preserve the rehearsal moving from Tuesday to Thursday, at noon, in Studio 3.",
+        "pass": false
+      }
+    ],
+    "reason": "The seven-word output is within the length limit, but it omits the rehearsal, Tuesday, Thursday, noon, and Studio 3. Its vague new-time wording does not preserve the stated weekday change and is not a usable announcement of the supplied event.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_007",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "rotation_to_day_and_night_explanation_incomplete",
+      "sun_position_causal_direction_misleading"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Use two short sentences mentioning Earth and the Sun.",
+        "pass": true
+      },
+      {
+        "component": "Explain that Earth's rotation brings a place toward the sunlit side for day and away from sunlight for night.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer uses two short sentences mentioning Earth and the Sun and correctly names rotation as the cause of the cycle. However, its second sentence attributes regions facing toward or away from the Sun to the Sun changing sky position, rather than explaining that rotation carries a place into sunlight for day and away for night. That required mechanism is not accurately completed.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_008",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Give exactly two nonempty story lines about a kite that gets away.",
+        "pass": true
+      },
+      {
+        "component": "Make home the final word of the second line; ordinary final punctuation is acceptable.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer has exactly two nonempty story lines about a kite that flies away, with home as the final word of the second line. It adds no title, preface, or claim of personal recollection.",
+    "useful_general_help": true
+  }
+]

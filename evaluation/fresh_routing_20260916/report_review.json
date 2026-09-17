@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-09-16T18:51:23.760086+00:00",
+  "recorded_by": "root from independent reviewer messages",
+  "reviewer": "/root/fresh_review_b",
+  "scope": "Read-only unblinded narrative check after completion of blinded quality reviews; original judgments unchanged.",
+  "documents": [
+    "README.md",
+    "../../results.md"
+  ],
+  "reviewed_artifact_sha256": {
+    "README.md": "88121b8092b4aa701c5586cbf846f59c716c9d86f2e69ee31fee5aa25d127f7b",
+    "../../results.md": "34b6438ceedd36b1f0ef91e1d68494e05a9ae787522e986855cc6801a123a55e"
+  },
+  "finding_corrected": {
+    "case": "fresh_046",
+    "initial_narrative": "Final route none",
+    "corrected_narrative": "Final dependency optional, effective fallback none; counts unchanged."
+  },
+  "conclusion": "Pass after correction. Counts, latency, cohort accounting, review agreement, and history-admission claims match the records. Limitations explicit; no remaining material issues found within audit scope.",
+  "checks": [
+    "Original, follow-up and exploratory scores",
+    "Per-mode and final confusion counts",
+    "Quoted latency summaries and deadlines",
+    "137 calls, bounds and loading share",
+    "Resource and empty-retrieval counts",
+    "Review agreement and adjudication",
+    "32 correct-route quality failures and 20 runtime-review false passes",
+    "Six failed allocation tasks",
+    "History supplied/admitted011:2/0 and018:1/0",
+    "No causal historical comparison or human-validation claim"
+  ]
+}

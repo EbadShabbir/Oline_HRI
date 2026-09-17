@@ -1,0 +1,1 @@
+Development v1 used one independent assistant reviewer, blinded to source, models, routes and timings, in two sequential packets. Root inspected all twelve requests, rubrics and raw deliveries and agrees with these judgments. This is development debugging evidence, not a fresh or two-reviewer validation. Strict quality passes only fresh_040 (1/12).

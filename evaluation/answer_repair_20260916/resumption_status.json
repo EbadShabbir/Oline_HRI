@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-09-17T10:42:51.430851+00:00",
+  "requested_validation_complete": false,
+  "first_fresh_attempt_recorded": true,
+  "independent_reviews_complete": true,
+  "independent_audit_complete": true,
+  "clean_device_run_verified": false,
+  "first_fresh_attempt": {
+    "planned": 16,
+    "observed": 16,
+    "final_route_match": 8,
+    "quality_pass": 0,
+    "combined_pass": 0,
+    "errors": 8,
+    "application_deliveries": 8,
+    "generated_deliveries": 0,
+    "recorded_api_attempts": 25,
+    "successful_api_attempts": 1,
+    "failed_api_attempts": 24,
+    "independent_audit": {
+      "passed": 258,
+      "failed": 2
+    },
+    "operational_success": false
+  },
+  "recovery": {
+    "prepared": true,
+    "offline_validation_passed": true,
+    "attempted": 0,
+    "latest_readiness": {
+      "ready": false,
+      "error": {
+        "type": "SafetyGateError",
+        "message": "swap use exceeds the Stage 2 768 MiB start gate"
+      },
+      "snapshot": {
+        "boot_id": "c0e155e9-d16b-4054-be35-885c29c814e7",
+        "captured_at": "2026-09-17T10:42:14.814683+00:00",
+        "fan_pwm": 77,
+        "memory": {
+          "mem_total_kib": 7803200,
+          "mem_available_kib": 2766492,
+          "swap_total_kib": 3901584,
+          "swap_free_kib": 2866832,
+          "swap_used_kib": 1034752
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "MAINSWRST",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 50.406,
+          "gpu-thermal": 50.5,
+          "soc0-thermal": 49.5,
+          "soc1-thermal": 49.968,
+          "soc2-thermal": 50.062,
+          "tj-thermal": 50.687
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "gpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      }
+    },
+    "permission_pending": "Close idle Software Center/Software Updater apps and temporarily cycle existing swap, then recheck unchanged admission gate. No authorization received yet."
+  },
+  "source_files_verified": 48,
+  "test_files_verified": 104,
+  "prior_progress_artifacts_verified": 1150,
+  "prior_progress_snapshot_mapping": "pre_completion_snapshot/manifest.json",
+  "fresh_and_recovery_seal_entries_verified": 18,
+  "production_or_test_changes_this_resumption": false,
+  "app_or_system_settings_changed_this_resumption": false
+}

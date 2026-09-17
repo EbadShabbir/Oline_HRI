@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-09-17T10:41:59.651506+00:00",
+  "scope": "Read-only factual check of the three completion summaries against independent audited outcomes; no source, model or device calls.",
+  "document_sha256": {
+    "README.md": "e4ca06d347f3e8d8aca9fc67708ebb503e4a84d3d7f0e5cc8f9c716cbb44ea3b",
+    "fresh_holdout/README.md": "cb8b0fdc5b1d5790c422f365bfdd06dad82422455e77572680b2be98dca0e467",
+    "fresh_recovery_v1/README.md": "1afc21f52f753c902fccd9f43f8262ad1394e41743b46123c2c4fc770eb2011d"
+  },
+  "numerical_or_outcome_errors": [],
+  "verified": [
+    "Fresh denominator 16 includes eight errors and eight generic application clarifications.",
+    "Final routing 8/16; delivered quality 0/16; combined 0/16.",
+    "25 recorded client attempts comprise one successful raw generation and 24 guard errors; zero generated answers delivered.",
+    "Independent audit has 258 passing checks and two operational failures; evaluation_complete remains false.",
+    "First above-swap-ceiling sample 59/63 occurs 29.389390628 seconds after first sample; five samples exceed the ceiling.",
+    "Failed-attempt latency is explicitly excluded from a successful-response performance claim.",
+    "Recovery collection absent at review time, same case bytes and runtime source; described as now-observed replay.",
+    "All relative Markdown artifact links resolve."
+  ],
+  "wording_findings": [
+    {
+      "file": "README.md",
+      "text": "this already-opened holdout must not be used to tune the present candidate before its first evaluation",
+      "issue": "The first evaluation has already occurred; the remaining frozen phase is the operational recovery replay.",
+      "suggestion": "The candidate remains frozen through the operational recovery replay; any further tuning needs a newly authored holdout."
+    }
+  ],
+  "edits_made": false
+}

@@ -1,0 +1,257 @@
+{
+  "created_at": "2026-09-17T10:49:46.076090+00:00",
+  "scope": "Artifact-only audit of approved cleanup; no live /proc, device, model, network or configuration access by this auditor.",
+  "authorization_evidence_limit": "User and normal pkexec authorization are documented in the operator's saved scope record; this audit does not independently query the OS authentication log.",
+  "checks": [
+    {
+      "check": "saved authorization records identify approved bounded cleanup",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cleanup script bytes match recorded invocation source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no active package transaction in saved preflight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "only approved app actions recorded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "software quit succeeded and targeted processes absent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updater PID matches preflight identity",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "models absent before and after app cleanup and at swap start",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "complete monotonic cleanup event sequence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "exact six existing zram device identities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all six original sizes and priorities retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "total swap capacity unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "initial drain had at least 1GiB reserve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram0 sequential disable and restoration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram0 restored successfully with complete inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram0 only one device capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram0 recorded drain headroom",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram1 sequential disable and restoration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram1 restored successfully with complete inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram1 only one device capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram1 recorded drain headroom",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram2 sequential disable and restoration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram2 restored successfully with complete inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram2 only one device capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram2 recorded drain headroom",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram3 sequential disable and restoration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram3 restored successfully with complete inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram3 only one device capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram3 recorded drain headroom",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram4 sequential disable and restoration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram4 restored successfully with complete inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram4 only one device capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram4 recorded drain headroom",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram5 sequential disable and restoration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram5 restored successfully with complete inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram5 only one device capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram5 recorded drain headroom",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all devices restored and empty at completion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no cleanup error event",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no persistent-setting change recorded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post-cleanup readiness independently satisfies start gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "saved boot power and thermal counters unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cleanup completed before readiness capture",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "previous manifest bytes retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "five exact prior document snapshots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all 1354 previous manifest hashes preserved using explicit mappings",
+      "passed": true,
+      "detail": {
+        "mapped_documents": [],
+        "mismatches": []
+      }
+    }
+  ],
+  "checks_passed": 45,
+  "checks_failed": 0,
+  "passed": true,
+  "cleanup_device_count": 6,
+  "original_swap_used_kib": 979712,
+  "final_swap_used_kib": 0,
+  "swap_total_kib": 3901584,
+  "swap_device_size_kib": 650264,
+  "swap_device_priority": 5,
+  "post_cleanup_available_kib": 2327252,
+  "post_cleanup_max_temperature_c": 50.5,
+  "artifact_sha256": {
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/cleanup_preflight.json": "b20e42acbc0699e1845f46c9a924be588762f5daf400ef8bdffb8adc94cb42f7",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/approved_app_cleanup.json": "c4175467113d4dc954751d835153d38efa4a60cbcd70b1e3503ea33e68133a37",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/cleanup_authorization_and_scope.json": "64bbabc848f3abe3ccc426dca5696211f546dcb4baf51b8d85e64899954c54bc",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/swap_reset.log": "d001a011fc1e3e56fa3caf02371466cbac05a0218c5f70ae3b263e8c9beeaf39",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/post_cleanup_readiness.json": "d7bb0ca262bdfe0c184cf9a769dd317725b808db143c76aef700af2b7a59874e",
+    "evaluation/answer_repair_20260916/reset_swap_once.py": "1a3d4ec63f21f27b6ead4335a7a310a995da04aeb1b52e1d152349b3d2016d58",
+    "evaluation/answer_repair_20260916/pre_recovery_completion_snapshot/manifest.json": "76936d85a19f290be5bc3f9186a9af2aee4f346a465eccd029e727d6da9bd072",
+    "evaluation/answer_repair_20260916/fresh_attempt_manifest.json": "ec5a80ad3922af5a15298d260b7959b7b3303c3fe2e2186a15b2c55098ae6477",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/independent_cleanup_audit_source.py": "1fd6623bcf1fd071ef83e571b6491190616d9c592545c5888350cda61dc2b28a"
+  }
+}

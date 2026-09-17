@@ -1,0 +1,147 @@
+[
+  {
+    "id": "fresh_007",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": [
+      "equation_count_violation",
+      "sentence_count_violation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Show an equation equivalent to 14 + 9 - 5 = 18.",
+        "pass": true
+      },
+      {
+        "component": "State in one short sentence that 18 tokens remain outside the box.",
+        "pass": true
+      }
+    ],
+    "reason": "The arithmetic correctly gives 23 total tokens, nine blue tokens left outside, and 18 tokens outside altogether. The final sentence states the correct answer, but the delivered response contains three equations and three sentences instead of the requested one equation and one short sentence.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_042",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "nonspecific_followup",
+      "incorrect_name_length_generalization"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Indicate that the previously stated nickname is unavailable.",
+        "pass": false
+      },
+      {
+        "component": "Give a two-sentence general explanation distinguishing an informal or alternative name from a person's full name, without asserting that every nickname must be shorter.",
+        "pass": false
+      }
+    ],
+    "reason": "The response never acknowledges that the personal nickname is unavailable. Its general explanation usefully distinguishes informal/casual usage, but categorically describes a nickname as short and a full name as longer, contrary to the rubric's explicit restriction against treating all nicknames as shorter.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_011",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_general_component",
+      "nonanswer"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Combine or rewrite the second version as one sentence inviting people to the sketch swap.",
+        "pass": false
+      },
+      {
+        "component": "Preserve 18 October and Room 2.",
+        "pass": false
+      }
+    ],
+    "reason": "The supplied benign history contains an unambiguous second version with its date and room. The response asks for more information instead of producing the requested one-sentence announcement.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_025",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_opening_sentence"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide a recognizable story premise and a corresponding opening sentence.",
+        "pass": false
+      },
+      {
+        "component": "Complete the creative task without requiring remembered interests.",
+        "pass": true
+      }
+    ],
+    "reason": "The sentence provides a recognizable imaginative premise about a traveler and a whispering library. It does not separately supply the requested corresponding story opening; no labels are required, but the two requested deliverables are not distinguishable. The standalone creative idea does not depend on remembered interests.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_044",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_error",
+      "empty_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask whether the user wants the welcome note or the reminder shortened; asking whether both are intended is also acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and no answer was delivered, so the intended message was not clarified.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_003",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_time_allocations",
+      "missing_clue_texts",
+      "missing_clue_sequence",
+      "request_echo"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give setup time allocations totaling 12 minutes.",
+        "pass": false
+      },
+      {
+        "component": "Provide three clue texts and a coherent placement sequence: the handed-over clue leads to the next card, that card leads to the third, and the third leads to the prize.",
+        "pass": false
+      },
+      {
+        "component": "Use only the table, chair, and shelf as hiding or destination locations; using every listed feature is not mandatory.",
+        "pass": true
+      }
+    ],
+    "reason": "The response names only permitted room features, but merely restates the task: it supplies no timed allocations, actual clue texts, or coherent card-to-card-to-prize placement sequence.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_043",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "nonspecific_clarification"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask what needs fixing or request the object, text, or problem to work on.",
+        "pass": false
+      }
+    ],
+    "reason": "The response requests unspecified elaboration without asking what needs fixing or requesting the object, text, or problem to work on.",
+    "useful_general_help": null
+  }
+]

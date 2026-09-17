@@ -1,0 +1,39 @@
+[
+  {
+    "id": "fresh_016",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_general_explanation", "bullet_format_violation"],
+    "required_components_pass": [
+      {"component": "Use exactly two bullets, covering rectangles and squares.", "pass": false},
+      {"component": "Explain that rectangles have four right angles, while squares also have all four sides equal, supporting the requested relationship.", "pass": false}
+    ],
+    "reason": "The task specifies the concepts, relationship, and format. The clarification question provides no geometric explanation and no bullet points.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_011",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "task_misframed_as_missing_recall", "missing_text_rewrite", "missing_date_and_place"],
+    "required_components_pass": [
+      {"component": "Combine or rewrite the second version as one sentence inviting people to the sketch swap.", "pass": false},
+      {"component": "Preserve 18 October and Room 2.", "pass": false}
+    ],
+    "reason": "The declared benign draft context identifies version two and supplies 18 October and Room 2. The delivered response treats the information as unavailable recall instead of providing the one-sentence rewrite; neither required detail appears. This assesses the delivered end-to-end result without assuming which context reached a model.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_003",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "task_misframed_as_missing_recall", "missing_time_allocation", "missing_clue_texts", "missing_placement_sequence"],
+    "required_components_pass": [
+      {"component": "Give setup time allocations totaling 12 minutes.", "pass": false},
+      {"component": "Provide three clue texts and a coherent placement sequence: the handed-over clue leads to the next card, that card leads to the third, and the third leads to the prize.", "pass": false},
+      {"component": "Use only the table, chair, and shelf as hiding or destination locations; using every listed feature is not mandatory.", "pass": true}
+    ],
+    "reason": "The current prompt supplies enough information to construct the hunt. The response instead requests earlier detail and supplies no time allocations, clues, or placement sequence. It introduces no prohibited location, but that constraint compliance does not remedy the missing task.",
+    "useful_general_help": false
+  }
+]

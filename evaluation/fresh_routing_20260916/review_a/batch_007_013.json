@@ -1,0 +1,123 @@
+[
+  {
+    "id": "fresh_037",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "missing_general_component",
+      "nonspecific_followup",
+      "nonanswer"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's previously named favorite author is unavailable.",
+        "pass": false
+      },
+      {
+        "component": "Also give a two-sentence general explanation that a chapter is a section of a book, while the whole book is the complete work and may contain multiple chapters.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic request for more detail neither acknowledges the missing favorite author nor provides the independently requested chapter-versus-book explanation.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_001",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": [
+      "incorrect_item_destinations",
+      "missing_time_allocations",
+      "incomplete_deliverable"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide actionable steps that put the pencils in the jar, scrap paper in the recycling bin, and book and cup on the shelf.",
+        "pass": false
+      },
+      {
+        "component": "Assign durations or time intervals that together account for 7 minutes.",
+        "pass": false
+      }
+    ],
+    "reason": "The response puts the scraps and recycling bin on the shelf instead of placing scraps in the bin, never clearly puts pencils in the jar or the book and cup on the shelf, and gives no durations totaling seven minutes. Opening the book and emptying an already empty cup do not complete the reset.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_004",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_general_component",
+      "nonanswer"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide three preparation phases whose durations total 8 minutes.",
+        "pass": false
+      },
+      {
+        "component": "Account for the tote and all five other listed items; the hat may be packed or worn.",
+        "pass": false
+      }
+    ],
+    "reason": "All preparation inputs are supplied, but the response requests unspecified information and gives neither the three timed phases nor a plan accounting for the listed items.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_008",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": [
+      "incorrect_shadow_explanation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that the object blocks light and that the less-lit region behind it is a shadow.",
+        "pass": false
+      },
+      {
+        "component": "Use exactly two short, understandable sentences.",
+        "pass": true
+      }
+    ],
+    "reason": "The first sentence usefully connects a shadow with blocked sunlight. The second incorrectly places the object as a barrier between light and the object itself, rather than explaining the less-lit region behind it; the two-sentence format is satisfied.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_030",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "nonspecific_followup"
+    ],
+    "required_components_pass": [
+      {
+        "component": "State that Leena's birthday date is unavailable from the supplied conversation and memory; optionally ask the user to provide it.",
+        "pass": false
+      }
+    ],
+    "reason": "The response does not state that the previously supplied birthday is unavailable or specifically request Leena's missing birthday date; it only asks for unspecified detail.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_046",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_error",
+      "empty_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask which of the three supplied titles the user means by the other one.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed with no delivered text, so no clarification of the intended notebook title was provided.",
+    "useful_general_help": null
+  }
+]

@@ -1,0 +1,144 @@
+[
+  {
+    "id": "fresh_031",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Acknowledge that the previously chosen picnic spot is not available; optionally request the missing place name.", "pass": true}
+    ],
+    "reason": "The response acknowledges unavailable earlier information and specifically requests the picnic spot without guessing a location.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_026",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["requires_unsupplied_cards", "incomplete_paper_and_pen_adaptation", "insufficient_game_rules"],
+    "required_components_pass": [
+      {"component": "Give three distinct game ideas suitable for three seated adults using paper and pens.", "pass": false},
+      {"component": "Briefly explain each idea enough to understand how to start playing.", "pass": false}
+    ],
+    "reason": "Three recognizable game ideas provide some relevant inspiration, but the matching game calls for cards without describing a paper-only version. Drawing shapes does not explain how the proposed rock-paper-scissors game works, and the treasure-hunt description does not establish how its clues are played at the table. The claim that all use only paper and pens does not fix these gaps.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_015",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Provide four nonempty poetic lines about rain and a window.", "pass": true},
+      {"component": "Use the word lantern exactly once and omit a title or explanatory preface.", "pass": true}
+    ],
+    "reason": "The answer gives four poetic lines with rain, window, and glass imagery, one occurrence of 'lantern', and no title or prefatory prose.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_021",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Offer three usable bookmark themes despite the empty memory.", "pass": true},
+      {"component": "Frame any color choices as suggestions, not as remembered favorites.", "pass": true}
+    ],
+    "reason": "Nature, classic elegance, and personal touches provide three usable themes with concrete examples. Neutral tones are suggested rather than attributed to memory, and the optional final color question does not withhold the themes.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_018",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Return a past-tense version such as 'You always used purple notebooks.'", "pass": true},
+      {"component": "Provide only the rewritten sentence.", "pass": true}
+    ],
+    "reason": "The response returns exactly the requested past-tense rewrite, with no added assertion of a real preference or other text.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_009",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_invitation", "missing_supplied_details", "sentence_count_violation"],
+    "required_components_pass": [
+      {"component": "Produce a friendly invitation in two sentences addressed to Noor.", "pass": false},
+      {"component": "Include paper crafts, the user's home, this Sunday at 3 p.m., and the request for one magazine.", "pass": false}
+    ],
+    "reason": "The current request already provides every invitation detail. The single generic question supplies no invitation or required information.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_014",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Return header item,count followed by rows red buttons,8; blue buttons,3; green buttons,5, each on its own line.", "pass": true},
+      {"component": "Provide CSV text without surrounding explanation or a code fence.", "pass": true}
+    ],
+    "reason": "The output is CSV with the exact header, all three rows in order, and the correct quantities. Spaces before the numeric values do not change their quantities; there is no extra prose or code fence.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_012",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_option_choice", "missing_reason"],
+    "required_components_pass": [
+      {"component": "Choose B.", "pass": false},
+      {"component": "Give a reason based on the supplied quiet, indoor, or no-stairs requirements.", "pass": false}
+    ],
+    "reason": "The supplied options and needs determine B, but the generic request for detail delivers neither the choice nor a supporting reason.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_034",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Acknowledge that the user's previously stated bedtime-reading genre is not present; optionally invite the user to provide it.", "pass": true}
+    ],
+    "reason": "The response acknowledges unavailable earlier information and specifically asks for the fiction genre without inventing a preference.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_039",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Acknowledge that the club's previously stated meeting weekday is unavailable.", "pass": true},
+      {"component": "Give three usable generic agenda points suitable for a puzzle club, such as choosing a puzzle, working on it, and discussing results.", "pass": true}
+    ],
+    "reason": "The response acknowledges the unavailable weekday, asks for it, and independently supplies three usable agenda activities: introduce puzzles/rules, rotate puzzle sets, and discuss strategies.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_035",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Explain that no user-stated departure station is available.", "pass": true},
+      {"component": "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure.", "pass": true}
+    ],
+    "reason": "The answer acknowledges the missing station and explicitly separates an assistant guess from what the user told it, then requests the station without adopting the hunch.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_040",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "State that the previously named game is unavailable.", "pass": true},
+      {"component": "Provide a two-sentence explanation connecting an agreed turn order with reduced confusion and a fair or orderly chance to participate.", "pass": true}
+    ],
+    "reason": "The answer acknowledges unavailable game recall and asks for the specific name. Its separate two-sentence explanation connects agreed turns with preventing confusion, fairness, turn taking, and organized play.",
+    "useful_general_help": true
+  }
+]

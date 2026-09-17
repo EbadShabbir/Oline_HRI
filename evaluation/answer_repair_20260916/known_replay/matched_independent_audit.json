@@ -1,0 +1,820 @@
+{
+  "passed": true,
+  "checks_passed": 158,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "check": "all 48 replay observations retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original 43 valid and five setup-error subsets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "exact matched IDs and original order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "entire original and replay frozen corpus bytes agree",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_027",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_041",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_048",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_032",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_037",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_001",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_004",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_008",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_030",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_020",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_019",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_006",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_002",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_005",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_045",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_028",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_015",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_021",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_018",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_009",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_014",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_012",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_034",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_039",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_040",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_029",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_038",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_016",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_007",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_042",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_011",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_003",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "unchanged prompt/context/criteria: fresh_043",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_before denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_before/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_before/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_before/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_before/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_before/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_before statuses preserve errors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_before independent linear percentiles",
+      "passed": true,
+      "detail": {
+        "n": 43,
+        "mean_seconds": 41.15310153302325,
+        "p50_seconds": 38.207283324,
+        "p95_seconds": 81.8832925418
+      }
+    },
+    {
+      "check": "matched_after denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_after/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_after/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_after/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_after/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_after/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_after statuses preserve errors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "matched_after independent linear percentiles",
+      "passed": true,
+      "detail": {
+        "n": 43,
+        "mean_seconds": 5.948393946418604,
+        "p50_seconds": 5.377323686,
+        "p95_seconds": 12.692837984899997
+      }
+    },
+    {
+      "check": "final_full_cohort denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final_full_cohort/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final_full_cohort/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final_full_cohort/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final_full_cohort/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final_full_cohort/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final_full_cohort statuses preserve errors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final_full_cohort independent linear percentiles",
+      "passed": true,
+      "detail": {
+        "n": 48,
+        "mean_seconds": 5.646556176729167,
+        "p50_seconds": 5.206950711999999,
+        "p95_seconds": 12.157014704649997
+      }
+    },
+    {
+      "check": "paired values and deltas: fresh_023",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_027",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_041",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_022",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_048",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_032",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_037",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_001",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_004",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_008",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_030",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_020",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_010",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_019",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_006",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_002",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_005",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_013",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_017",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_045",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_028",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_031",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_026",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_015",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_021",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_018",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_009",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_014",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_012",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_034",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_039",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_040",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_029",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_038",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_016",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_033",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_024",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_007",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_042",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_011",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_025",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_003",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "paired values and deltas: fresh_043",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "quality transitions match raw observations and adjudications",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "setup failures stay outside the paired comparison",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "newly covered input values: fresh_047",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "newly covered input values: fresh_046",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "newly covered input values: fresh_036",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "newly covered input values: fresh_035",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "newly covered input values: fresh_044",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "guard-aborted case remains a matched failure",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/cases.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/observations.jsonl",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/adjudicated_judgments.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/artifact_sha256.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/cases.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/run/observations.jsonl",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/adjudicated_judgments.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/run/metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/artifact_sha256.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/matched_comparison_source_v1.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "operational-status addition preserves measurement: matched_count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "operational-status addition preserves measurement: matched_ids",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "operational-status addition preserves measurement: matched_before",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "operational-status addition preserves measurement: matched_after",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "operational-status addition preserves measurement: quality_transitions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "operational-status addition preserves measurement: final_full_cohort",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "operational-status addition preserves measurement: original_setup_failures_excluded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated paired rows are byte-for-byte unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison explicitly preserves guard failure and clean cleanup",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/cases.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/observations.jsonl",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/adjudicated_judgments.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/artifact_sha256.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/finish.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/summary.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/cases.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/run/observations.jsonl",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/adjudicated_judgments.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/run/metadata.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/artifact_sha256.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/finish.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/run/summary.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "updated comparison input/source hash: /home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/compare_matched.py",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "previous comparison artifacts not rewritten",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "operational_success": false,
+  "evaluation_complete": false,
+  "interpretation": "Comparison arithmetic and provenance verify; the replay still failed its memory guard. This audit does not validate a clean operational run or infer causal speedup.",
+  "original_comparison_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/matched_comparison.json": "d9770aafd1ad74ae83b4cd49a957ef22c701f3a2a83193ed607778b557b62199",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/matched_per_case.jsonl": "6bd59b63a972580a503ac1c048fa1b289721bc6bd25cef1940718cef118818bf"
+  },
+  "auditor_sha256": "4ca1c80b90c313cc0101f10dbc0d964ff5f2eab3b93a8034d9923549efd9608f"
+}

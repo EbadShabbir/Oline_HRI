@@ -1,0 +1,1590 @@
+{
+  "schema_version": "fresh_routing_metrics_v1",
+  "summary": {
+    "planned": 48,
+    "raw_match": {
+      "count": 36,
+      "denominator": 48,
+      "rate": 0.75
+    },
+    "thresholded_match": {
+      "count": 25,
+      "denominator": 48,
+      "rate": 0.5208333333333334
+    },
+    "final_match": {
+      "count": 36,
+      "denominator": 48,
+      "rate": 0.75
+    },
+    "quality_pass": {
+      "count": 4,
+      "denominator": 48,
+      "rate": 0.08333333333333333
+    },
+    "combined_pass": {
+      "count": 4,
+      "denominator": 48,
+      "rate": 0.08333333333333333
+    },
+    "useful_general_help": {
+      "count": 19,
+      "denominator": 48,
+      "rate": 0.3958333333333333
+    },
+    "general_component_cases": 34,
+    "useful_general_help_when_expected": {
+      "count": 19,
+      "denominator": 34,
+      "rate": 0.5588235294117647
+    },
+    "effective_mode_match": {
+      "count": 0,
+      "denominator": 0,
+      "rate": null
+    },
+    "observed": 48,
+    "errors": 5,
+    "missing": 0,
+    "delivered": 43,
+    "generated_delivery": 24,
+    "application_delivery": 19
+  },
+  "per_mode": {
+    "none": {
+      "planned": 20,
+      "raw_match": {
+        "count": 14,
+        "denominator": 20,
+        "rate": 0.7
+      },
+      "thresholded_match": {
+        "count": 6,
+        "denominator": 20,
+        "rate": 0.3
+      },
+      "final_match": {
+        "count": 14,
+        "denominator": 20,
+        "rate": 0.7
+      },
+      "quality_pass": {
+        "count": 3,
+        "denominator": 20,
+        "rate": 0.15
+      },
+      "combined_pass": {
+        "count": 3,
+        "denominator": 20,
+        "rate": 0.15
+      },
+      "useful_general_help": {
+        "count": 10,
+        "denominator": 20,
+        "rate": 0.5
+      },
+      "general_component_cases": 20,
+      "useful_general_help_when_expected": {
+        "count": 10,
+        "denominator": 20,
+        "rate": 0.5
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 20,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 20,
+      "generated_delivery": 14,
+      "application_delivery": 6
+    },
+    "optional": {
+      "planned": 8,
+      "raw_match": {
+        "count": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 5,
+        "denominator": 8,
+        "rate": 0.625
+      },
+      "final_match": {
+        "count": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "quality_pass": {
+        "count": 1,
+        "denominator": 8,
+        "rate": 0.125
+      },
+      "combined_pass": {
+        "count": 1,
+        "denominator": 8,
+        "rate": 0.125
+      },
+      "useful_general_help": {
+        "count": 5,
+        "denominator": 8,
+        "rate": 0.625
+      },
+      "general_component_cases": 8,
+      "useful_general_help_when_expected": {
+        "count": 5,
+        "denominator": 8,
+        "rate": 0.625
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 8,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 8,
+      "generated_delivery": 6,
+      "application_delivery": 2
+    },
+    "required": {
+      "planned": 14,
+      "raw_match": {
+        "count": 11,
+        "denominator": 14,
+        "rate": 0.7857142857142857
+      },
+      "thresholded_match": {
+        "count": 11,
+        "denominator": 14,
+        "rate": 0.7857142857142857
+      },
+      "final_match": {
+        "count": 11,
+        "denominator": 14,
+        "rate": 0.7857142857142857
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 14,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 14,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 4,
+        "denominator": 14,
+        "rate": 0.2857142857142857
+      },
+      "general_component_cases": 6,
+      "useful_general_help_when_expected": {
+        "count": 4,
+        "denominator": 6,
+        "rate": 0.6666666666666666
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 14,
+      "errors": 2,
+      "missing": 0,
+      "delivered": 12,
+      "generated_delivery": 4,
+      "application_delivery": 8
+    },
+    "clarify": {
+      "planned": 6,
+      "raw_match": {
+        "count": 3,
+        "denominator": 6,
+        "rate": 0.5
+      },
+      "thresholded_match": {
+        "count": 3,
+        "denominator": 6,
+        "rate": 0.5
+      },
+      "final_match": {
+        "count": 3,
+        "denominator": 6,
+        "rate": 0.5
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "general_component_cases": 0,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 6,
+      "errors": 3,
+      "missing": 0,
+      "delivered": 3,
+      "generated_delivery": 0,
+      "application_delivery": 3
+    }
+  },
+  "per_category": {
+    "ambiguous_referent": {
+      "planned": 3,
+      "raw_match": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "thresholded_match": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "final_match": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "general_component_cases": 0,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 3,
+      "errors": 3,
+      "missing": 0,
+      "delivered": 0,
+      "generated_delivery": 0,
+      "application_delivery": 0
+    },
+    "creative_format": {
+      "planned": 1,
+      "raw_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "final_match": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "general_component_cases": 1,
+      "useful_general_help_when_expected": {
+        "count": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 1,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 1,
+      "generated_delivery": 1,
+      "application_delivery": 0
+    },
+    "current_input_reasoning": {
+      "planned": 5,
+      "raw_match": {
+        "count": 4,
+        "denominator": 5,
+        "rate": 0.8
+      },
+      "thresholded_match": {
+        "count": 2,
+        "denominator": 5,
+        "rate": 0.4
+      },
+      "final_match": {
+        "count": 4,
+        "denominator": 5,
+        "rate": 0.8
+      },
+      "quality_pass": {
+        "count": 2,
+        "denominator": 5,
+        "rate": 0.4
+      },
+      "combined_pass": {
+        "count": 2,
+        "denominator": 5,
+        "rate": 0.4
+      },
+      "useful_general_help": {
+        "count": 4,
+        "denominator": 5,
+        "rate": 0.8
+      },
+      "general_component_cases": 5,
+      "useful_general_help_when_expected": {
+        "count": 4,
+        "denominator": 5,
+        "rate": 0.8
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 5,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 5,
+      "generated_delivery": 4,
+      "application_delivery": 1
+    },
+    "data_formatting": {
+      "planned": 2,
+      "raw_match": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "thresholded_match": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "final_match": {
+        "count": 1,
+        "denominator": 2,
+        "rate": 0.5
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "general_component_cases": 2,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 2,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 2,
+      "generated_delivery": 1,
+      "application_delivery": 1
+    },
+    "draft_or_edit": {
+      "planned": 4,
+      "raw_match": {
+        "count": 1,
+        "denominator": 4,
+        "rate": 0.25
+      },
+      "thresholded_match": {
+        "count": 0,
+        "denominator": 4,
+        "rate": 0.0
+      },
+      "final_match": {
+        "count": 1,
+        "denominator": 4,
+        "rate": 0.25
+      },
+      "quality_pass": {
+        "count": 1,
+        "denominator": 4,
+        "rate": 0.25
+      },
+      "combined_pass": {
+        "count": 1,
+        "denominator": 4,
+        "rate": 0.25
+      },
+      "useful_general_help": {
+        "count": 1,
+        "denominator": 4,
+        "rate": 0.25
+      },
+      "general_component_cases": 4,
+      "useful_general_help_when_expected": {
+        "count": 1,
+        "denominator": 4,
+        "rate": 0.25
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 4,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 4,
+      "generated_delivery": 1,
+      "application_delivery": 3
+    },
+    "general_explanation": {
+      "planned": 2,
+      "raw_match": {
+        "count": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "final_match": {
+        "count": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "general_component_cases": 2,
+      "useful_general_help_when_expected": {
+        "count": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 2,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 2,
+      "generated_delivery": 2,
+      "application_delivery": 0
+    },
+    "missing_memory": {
+      "planned": 6,
+      "raw_match": {
+        "count": 6,
+        "denominator": 6,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 6,
+        "denominator": 6,
+        "rate": 1.0
+      },
+      "final_match": {
+        "count": 6,
+        "denominator": 6,
+        "rate": 1.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "general_component_cases": 0,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 6,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 6,
+      "generated_delivery": 0,
+      "application_delivery": 6
+    },
+    "mixed_recall_general": {
+      "planned": 6,
+      "raw_match": {
+        "count": 5,
+        "denominator": 6,
+        "rate": 0.8333333333333334
+      },
+      "thresholded_match": {
+        "count": 5,
+        "denominator": 6,
+        "rate": 0.8333333333333334
+      },
+      "final_match": {
+        "count": 5,
+        "denominator": 6,
+        "rate": 0.8333333333333334
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 4,
+        "denominator": 6,
+        "rate": 0.6666666666666666
+      },
+      "general_component_cases": 6,
+      "useful_general_help_when_expected": {
+        "count": 4,
+        "denominator": 6,
+        "rate": 0.6666666666666666
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 6,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 6,
+      "generated_delivery": 4,
+      "application_delivery": 2
+    },
+    "optional_personalization": {
+      "planned": 8,
+      "raw_match": {
+        "count": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 5,
+        "denominator": 8,
+        "rate": 0.625
+      },
+      "final_match": {
+        "count": 8,
+        "denominator": 8,
+        "rate": 1.0
+      },
+      "quality_pass": {
+        "count": 1,
+        "denominator": 8,
+        "rate": 0.125
+      },
+      "combined_pass": {
+        "count": 1,
+        "denominator": 8,
+        "rate": 0.125
+      },
+      "useful_general_help": {
+        "count": 5,
+        "denominator": 8,
+        "rate": 0.625
+      },
+      "general_component_cases": 8,
+      "useful_general_help_when_expected": {
+        "count": 5,
+        "denominator": 8,
+        "rate": 0.625
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 8,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 8,
+      "generated_delivery": 6,
+      "application_delivery": 2
+    },
+    "supplied_time_budget": {
+      "planned": 6,
+      "raw_match": {
+        "count": 5,
+        "denominator": 6,
+        "rate": 0.8333333333333334
+      },
+      "thresholded_match": {
+        "count": 2,
+        "denominator": 6,
+        "rate": 0.3333333333333333
+      },
+      "final_match": {
+        "count": 5,
+        "denominator": 6,
+        "rate": 0.8333333333333334
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 6,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 2,
+        "denominator": 6,
+        "rate": 0.3333333333333333
+      },
+      "general_component_cases": 6,
+      "useful_general_help_when_expected": {
+        "count": 2,
+        "denominator": 6,
+        "rate": 0.3333333333333333
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 6,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 6,
+      "generated_delivery": 5,
+      "application_delivery": 1
+    },
+    "unresolved_task": {
+      "planned": 3,
+      "raw_match": {
+        "count": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "thresholded_match": {
+        "count": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "final_match": {
+        "count": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 3,
+        "rate": 0.0
+      },
+      "general_component_cases": 0,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 3,
+      "errors": 0,
+      "missing": 0,
+      "delivered": 3,
+      "generated_delivery": 0,
+      "application_delivery": 3
+    },
+    "untrusted_assistant_claim": {
+      "planned": 2,
+      "raw_match": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "thresholded_match": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "final_match": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "quality_pass": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "combined_pass": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "useful_general_help": {
+        "count": 0,
+        "denominator": 2,
+        "rate": 0.0
+      },
+      "general_component_cases": 0,
+      "useful_general_help_when_expected": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "effective_mode_match": {
+        "count": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "observed": 2,
+      "errors": 2,
+      "missing": 0,
+      "delivered": 0,
+      "generated_delivery": 0,
+      "application_delivery": 0
+    }
+  },
+  "confusion": {
+    "raw_mode": {
+      "none": {
+        "none": 14,
+        "required": 3,
+        "clarify": 3
+      },
+      "optional": {
+        "optional": 8
+      },
+      "required": {
+        "required": 11,
+        "none": 1,
+        "error": 2
+      },
+      "clarify": {
+        "clarify": 3,
+        "error": 3
+      }
+    },
+    "thresholded_mode": {
+      "none": {
+        "none": 6,
+        "required": 3,
+        "clarify": 11
+      },
+      "optional": {
+        "optional": 5,
+        "clarify": 3
+      },
+      "required": {
+        "required": 11,
+        "clarify": 1,
+        "error": 2
+      },
+      "clarify": {
+        "clarify": 3,
+        "error": 3
+      }
+    },
+    "final_mode": {
+      "none": {
+        "none": 14,
+        "clarify": 6
+      },
+      "optional": {
+        "optional": 8
+      },
+      "required": {
+        "required": 11,
+        "none": 1,
+        "error": 2
+      },
+      "clarify": {
+        "clarify": 3,
+        "error": 3
+      }
+    },
+    "effective_mode": {
+      "none": {
+        "none": 14,
+        "clarify": 6
+      },
+      "optional": {
+        "none": 6,
+        "clarify": 2
+      },
+      "required": {
+        "required": 10,
+        "clarify": 2,
+        "error": 2
+      },
+      "clarify": {
+        "clarify": 3,
+        "error": 3
+      }
+    }
+  },
+  "flags": {
+    "ambiguous_actor_perspective": 3,
+    "bullet_format_violation": 1,
+    "empty_output": 5,
+    "equation_count_violation": 1,
+    "execution_error": 5,
+    "format_violation": 5,
+    "game_count_violation": 1,
+    "incomplete_deliverable": 1,
+    "incomplete_general_component": 3,
+    "incomplete_wrapping_steps": 1,
+    "incorrect_item_destinations": 1,
+    "incorrect_name_length_generalization": 1,
+    "incorrect_shadow_explanation": 1,
+    "line_count_violation": 1,
+    "missing_clue_sequence": 1,
+    "missing_clue_texts": 1,
+    "missing_csv_rows": 1,
+    "missing_general_component": 11,
+    "missing_opening_sentence": 1,
+    "missing_playable_rules": 1,
+    "missing_recall_acknowledgment": 12,
+    "missing_tag_and_ribbon_attachment": 1,
+    "missing_time_allocations": 5,
+    "missing_written_tag": 1,
+    "nonanswer": 10,
+    "nonspecific_clarification": 3,
+    "nonspecific_followup": 12,
+    "off_task_content": 1,
+    "request_echo": 3,
+    "sentence_count_violation": 4,
+    "setup_input_error": 5,
+    "unnecessary_clarification": 8
+  },
+  "primary_outcomes": {
+    "constraint_violation": 7,
+    "inappropriate_clarification": 11,
+    "incomplete_deliverable": 17,
+    "execution_error": 5,
+    "incorrect_answer": 3,
+    "pass": 4,
+    "nonanswer": 1
+  },
+  "unsupported_subtypes": {},
+  "generation_policies": {
+    "reliable_generation": 21,
+    "application_clarification": 19,
+    "unavailable": 5,
+    "reliable_quality_retry": 3
+  },
+  "selected_generation_models": {
+    "qwen3:0.6b": 21,
+    "application_or_unavailable": 24,
+    "qwen3:1.7b": 3
+  },
+  "classifier_threshold_rejections": 17,
+  "raw_to_final_mode_changes": 3,
+  "generation_model_fallbacks": 3,
+  "actual_calls": {
+    "total": 123,
+    "by_role": {
+      "compute_classifier": 43,
+      "answer_generation": 35,
+      "answer_review": 28,
+      "dependency_review": 17
+    },
+    "by_model": {
+      "qwen3:0.6b": 71,
+      "qwen3:1.7b": 52
+    },
+    "by_role_and_model": [
+      {
+        "role": "answer_generation",
+        "model": "qwen3:0.6b",
+        "count": 28
+      },
+      {
+        "role": "answer_generation",
+        "model": "qwen3:1.7b",
+        "count": 7
+      },
+      {
+        "role": "answer_review",
+        "model": "qwen3:1.7b",
+        "count": 28
+      },
+      {
+        "role": "compute_classifier",
+        "model": "qwen3:0.6b",
+        "count": 43
+      },
+      {
+        "role": "dependency_review",
+        "model": "qwen3:1.7b",
+        "count": 17
+      }
+    ],
+    "by_status": {
+      "ok": 123
+    },
+    "declared_bounds_per_case": {
+      "answer_generation": 2,
+      "answer_review": 2,
+      "dependency_review": 1,
+      "compute_classifier": 1
+    },
+    "bound_violations": {},
+    "call_count_distribution": {
+      "0": 5,
+      "1": 11,
+      "2": 4,
+      "3": 14,
+      "4": 10,
+      "5": 2,
+      "6": 2
+    },
+    "generation_attempt_distribution": {
+      "0": 20,
+      "1": 21,
+      "2": 7
+    },
+    "case_wall_seconds_total": 1769.5849633569997,
+    "recorded_call_wall_seconds_total": 1762.681657938,
+    "backend_total_seconds_available": 1760.125104642,
+    "backend_load_seconds_available": 1454.39175644,
+    "calls_missing_backend_duration": 0,
+    "timing_interpretation": "Backend load is inside backend total; calls are inside case wall. Different timing scopes cannot identify causal overhead."
+  },
+  "latency": {
+    "overall_observed": {
+      "n": 48,
+      "planned_in_group": 48,
+      "missing_latency": 0,
+      "p50_seconds": 36.241202040999994,
+      "p95_seconds": 81.3377933788,
+      "mean_seconds": 36.866353403270836,
+      "minimum_seconds": 0.000276135,
+      "maximum_seconds": 88.995497862
+    },
+    "delivered_model_generated": {
+      "n": 24,
+      "planned_in_group": 24,
+      "missing_latency": 0,
+      "p50_seconds": 43.569493724,
+      "p95_seconds": 84.92935933964999,
+      "mean_seconds": 53.5031560685,
+      "minimum_seconds": 27.812533198,
+      "maximum_seconds": 88.995497862
+    },
+    "application_only": {
+      "n": 19,
+      "planned_in_group": 19,
+      "missing_latency": 0,
+      "p50_seconds": 9.932842054,
+      "p95_seconds": 70.23617124449999,
+      "mean_seconds": 25.55303264610526,
+      "minimum_seconds": 0.498142282,
+      "maximum_seconds": 78.416093274
+    },
+    "full_quality": {
+      "n": 4,
+      "planned_in_group": 4,
+      "missing_latency": 0,
+      "p50_seconds": 68.708995733,
+      "p95_seconds": 81.29201512785001,
+      "mean_seconds": 64.53414290525001,
+      "minimum_seconds": 38.617087948,
+      "maximum_seconds": 82.101492207
+    },
+    "combined_success": {
+      "n": 4,
+      "planned_in_group": 4,
+      "missing_latency": 0,
+      "p50_seconds": 68.708995733,
+      "p95_seconds": 81.29201512785001,
+      "mean_seconds": 64.53414290525001,
+      "minimum_seconds": 38.617087948,
+      "maximum_seconds": 82.101492207
+    },
+    "per_category": {
+      "ambiguous_referent": {
+        "n": 3,
+        "planned_in_group": 3,
+        "missing_latency": 0,
+        "p50_seconds": 0.000280514,
+        "p95_seconds": 0.0003282374,
+        "mean_seconds": 0.00029672966666666667,
+        "minimum_seconds": 0.000276135,
+        "maximum_seconds": 0.00033354
+      },
+      "creative_format": {
+        "n": 1,
+        "planned_in_group": 1,
+        "missing_latency": 0,
+        "p50_seconds": 79.919495555,
+        "p95_seconds": 79.919495555,
+        "mean_seconds": 79.919495555,
+        "minimum_seconds": 79.919495555,
+        "maximum_seconds": 79.919495555
+      },
+      "current_input_reasoning": {
+        "n": 5,
+        "planned_in_group": 5,
+        "missing_latency": 0,
+        "p50_seconds": 42.819744281,
+        "p95_seconds": 86.5373939588,
+        "mean_seconds": 55.981073361,
+        "minimum_seconds": 32.768058368,
+        "maximum_seconds": 88.995497862
+      },
+      "data_formatting": {
+        "n": 2,
+        "planned_in_group": 2,
+        "missing_latency": 0,
+        "p50_seconds": 47.658313041499994,
+        "p95_seconds": 81.65138654855,
+        "mean_seconds": 47.6583130415,
+        "minimum_seconds": 9.888231367,
+        "maximum_seconds": 85.428394716
+      },
+      "draft_or_edit": {
+        "n": 4,
+        "planned_in_group": 4,
+        "missing_latency": 0,
+        "p50_seconds": 17.9291665485,
+        "p95_seconds": 55.497793925999986,
+        "mean_seconds": 26.555378076,
+        "minimum_seconds": 9.650166087,
+        "maximum_seconds": 60.71301312
+      },
+      "general_explanation": {
+        "n": 2,
+        "planned_in_group": 2,
+        "missing_latency": 0,
+        "p50_seconds": 37.345352321,
+        "p95_seconds": 38.1210902237,
+        "mean_seconds": 37.345352321,
+        "minimum_seconds": 36.483421318,
+        "maximum_seconds": 38.207283324
+      },
+      "missing_memory": {
+        "n": 6,
+        "planned_in_group": 6,
+        "missing_latency": 0,
+        "p50_seconds": 9.8281841405,
+        "p95_seconds": 67.15472572775,
+        "mean_seconds": 23.592489852333333,
+        "minimum_seconds": 0.498142282,
+        "maximum_seconds": 78.416093274
+      },
+      "mixed_recall_general": {
+        "n": 6,
+        "planned_in_group": 6,
+        "missing_latency": 0,
+        "p50_seconds": 38.958822648,
+        "p95_seconds": 62.424293851,
+        "mean_seconds": 38.143473270166666,
+        "minimum_seconds": 9.932842054,
+        "maximum_seconds": 69.327291019
+      },
+      "optional_personalization": {
+        "n": 8,
+        "planned_in_group": 8,
+        "missing_latency": 0,
+        "p50_seconds": 50.8841508025,
+        "p95_seconds": 75.183529477,
+        "mean_seconds": 50.389867803,
+        "minimum_seconds": 27.812533198,
+        "maximum_seconds": 82.101492207
+      },
+      "supplied_time_budget": {
+        "n": 6,
+        "planned_in_group": 6,
+        "missing_latency": 0,
+        "p50_seconds": 57.13555276150001,
+        "p95_seconds": 74.51046683825,
+        "mean_seconds": 55.133771599,
+        "minimum_seconds": 34.472614066,
+        "maximum_seconds": 75.990970056
+      },
+      "unresolved_task": {
+        "n": 3,
+        "planned_in_group": 3,
+        "missing_latency": 0,
+        "p50_seconds": 9.680490495,
+        "p95_seconds": 9.821189268,
+        "mean_seconds": 9.730769926,
+        "minimum_seconds": 9.674996818,
+        "maximum_seconds": 9.836822465
+      },
+      "untrusted_assistant_claim": {
+        "n": 2,
+        "planned_in_group": 2,
+        "missing_latency": 0,
+        "p50_seconds": 0.000353624,
+        "p95_seconds": 0.0004102331,
+        "mean_seconds": 0.000353624,
+        "minimum_seconds": 0.000290725,
+        "maximum_seconds": 0.000416523
+      }
+    },
+    "per_mode": {
+      "none": {
+        "n": 20,
+        "planned_in_group": 20,
+        "missing_latency": 0,
+        "p50_seconds": 40.7184161145,
+        "p95_seconds": 85.6067498733,
+        "mean_seconds": 48.342816749149996,
+        "minimum_seconds": 9.650166087,
+        "maximum_seconds": 88.995497862
+      },
+      "optional": {
+        "n": 8,
+        "planned_in_group": 8,
+        "missing_latency": 0,
+        "p50_seconds": 50.8841508025,
+        "p95_seconds": 75.183529477,
+        "mean_seconds": 50.389867803,
+        "minimum_seconds": 27.812533198,
+        "maximum_seconds": 82.101492207
+      },
+      "required": {
+        "n": 14,
+        "planned_in_group": 14,
+        "missing_latency": 0,
+        "p50_seconds": 19.988981051499998,
+        "p95_seconds": 72.50837180825,
+        "mean_seconds": 26.458320427357144,
+        "minimum_seconds": 0.000290725,
+        "maximum_seconds": 78.416093274
+      },
+      "clarify": {
+        "n": 6,
+        "planned_in_group": 6,
+        "missing_latency": 0,
+        "p50_seconds": 4.837665179,
+        "p95_seconds": 9.7977394725,
+        "mean_seconds": 4.865533327833333,
+        "minimum_seconds": 0.000276135,
+        "maximum_seconds": 9.836822465
+      }
+    },
+    "quantile_method": "linear interpolation at (n-1)*q",
+    "units": "seconds"
+  },
+  "quality_deadlines": {
+    "5": {
+      "count": 0,
+      "denominator": 48,
+      "rate": 0.0
+    },
+    "10": {
+      "count": 0,
+      "denominator": 48,
+      "rate": 0.0
+    },
+    "30": {
+      "count": 0,
+      "denominator": 48,
+      "rate": 0.0
+    },
+    "60": {
+      "count": 1,
+      "denominator": 48,
+      "rate": 0.020833333333333332
+    }
+  },
+  "combined_deadlines": {
+    "5": {
+      "count": 0,
+      "denominator": 48,
+      "rate": 0.0
+    },
+    "10": {
+      "count": 0,
+      "denominator": 48,
+      "rate": 0.0
+    },
+    "30": {
+      "count": 0,
+      "denominator": 48,
+      "rate": 0.0
+    },
+    "60": {
+      "count": 1,
+      "denominator": 48,
+      "rate": 0.020833333333333332
+    }
+  },
+  "generated_quality_deadlines": {
+    "5": {
+      "count": 0,
+      "denominator": 24,
+      "rate": 0.0
+    },
+    "10": {
+      "count": 0,
+      "denominator": 24,
+      "rate": 0.0
+    },
+    "30": {
+      "count": 0,
+      "denominator": 24,
+      "rate": 0.0
+    },
+    "60": {
+      "count": 1,
+      "denominator": 24,
+      "rate": 0.041666666666666664
+    }
+  },
+  "generated_quality_deadlines_all_planned": {
+    "5": {
+      "count": 0,
+      "denominator": 48,
+      "rate": 0.0
+    },
+    "10": {
+      "count": 0,
+      "denominator": 48,
+      "rate": 0.0
+    },
+    "30": {
+      "count": 0,
+      "denominator": 48,
+      "rate": 0.0
+    },
+    "60": {
+      "count": 1,
+      "denominator": 48,
+      "rate": 0.020833333333333332
+    }
+  },
+  "deadline_interpretation": "quality_deadlines and combined_deadlines use all planned cases and include appropriate application replies. generated_quality_deadlines is conditional on delivered model-generated text; generated_quality_deadlines_all_planned uses the full planned denominator.",
+  "review_complete": true,
+  "interpretation": "Finite single-pass assistant-reviewed empty-memory text evaluation; effective fallback modes never replace final dependency labels. Errors and missing cases fail planned-case metrics.",
+  "integrity": {
+    "verified": true,
+    "input_sha256": {
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/cases.json": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/adjudicated_judgments.json": "8ee53c1b5b41db714d42867d1c4f3efc5bcdeab2881342dd6226df6e0c263fe9",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/candidate_freeze.json": "0538ee1dc055afff14e3f72726f26242fdbbf63df6ca64c21dd883121584d142",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/artifact_sha256.json": "749af32aaa23a0740a7325aff8b0a8149d8f4fe2933805c31cb3a46f242b7c55",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/integrity_before.json": "62480f68d1c6dc1d9cc7cb86f31442f1cb22d58fe06bdcd0f6ff19b15628f21d",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/integrity_after.json": "62480f68d1c6dc1d9cc7cb86f31442f1cb22d58fe06bdcd0f6ff19b15628f21d",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/models_before.json": "482fbd259f03c7791a96686c1980a0c3e6d286b4fa02b6154743b9aa26c5e9f5",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/models_after.json": "482fbd259f03c7791a96686c1980a0c3e6d286b4fa02b6154743b9aa26c5e9f5",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/metadata.json": "ea45c8b2c781be970d012cb198137052a802db021665f441afab665096c23880",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/summary.json": "7d166b4dd1cb7035fb3c368bb2fc2b5ce2f80d0587cf727d0c3926c189a238e7",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/protocol.md": "e23f107a1b988fcb8a8bac26df9bc3cd40cfd46caca149ff4b0a874817f7ea9f",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/analyze.py": "0f7e2ff4c0a230c8d6844f5fe6fcc568b645d63673104e8a3d0fd5533619f9c1",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/observations.jsonl": "bd332ca77c9b4d015c72e68956681080ca63bfe98decb4353d139557a81d8dbf",
+      "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/evaluation_freeze.json": "ac1e503f5966258d4ceab2d0ae6d0f76b8b7cca8428d0345c8489da37b5653d8"
+    },
+    "models": {
+      "ollama_version": {
+        "version": "0.33.3"
+      },
+      "models": {
+        "qwen3:0.6b": {
+          "name": "qwen3:0.6b",
+          "size": 522653767,
+          "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "751.63M",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 1024
+          },
+          "family": "qwen3",
+          "format": "gguf",
+          "parameter_count": 751632384,
+          "parameter_size": "751.63M",
+          "quantization_level": "Q4_K_M",
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        },
+        "qwen3:1.7b": {
+          "name": "qwen3:1.7b",
+          "size": 1359293444,
+          "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "2.0B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 2048
+          },
+          "family": "qwen3",
+          "format": "gguf",
+          "parameter_count": 2031739904,
+          "parameter_size": "2.0B",
+          "quantization_level": "Q4_K_M",
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        }
+      }
+    },
+    "runner_summary": {
+      "schema_version": "routing_reliability_v2",
+      "case_count": 48,
+      "completed": 48,
+      "outcomes": {
+        "general_answer": 20,
+        "clarification": 19,
+        "error": 5,
+        "personal_or_mixed_answer": 4
+      },
+      "label_matches": 36,
+      "label_mismatches": 7,
+      "failure": null,
+      "cleanup_error": null,
+      "wall_ns": 1770201840870,
+      "interpretation": "Clarifications and errors are separate from delivered answers; label agreement is not answer correctness."
+    },
+    "collection_finish": {
+      "runner_exit_code": 1,
+      "failure": null,
+      "cleanup_errors": [],
+      "snapshot": {
+        "boot_id": "c0e155e9-d16b-4054-be35-885c29c814e7",
+        "captured_at": "2026-09-16T18:39:00.146680+00:00",
+        "fan_pwm": 88,
+        "memory": {
+          "mem_total_kib": 7803200,
+          "mem_available_kib": 2423408,
+          "swap_total_kib": 3901584,
+          "swap_free_kib": 3807376,
+          "swap_used_kib": 94208
+        },
+        "power_mode": "NV Power Mode: 15W\n0",
+        "reset_reason": "MAINSWRST",
+        "resident_models": [],
+        "temperatures_c": {
+          "cpu-thermal": 53.687,
+          "gpu-thermal": 54.125,
+          "soc0-thermal": 52.75,
+          "soc1-thermal": 52.656,
+          "soc2-thermal": 53.187,
+          "tj-thermal": 54.125
+        },
+        "thermal_trip_events": {
+          "cpu": 0,
+          "gpu": 0,
+          "cv0": 0,
+          "cv1": 0,
+          "cv2": 0,
+          "soc0": 0,
+          "soc1": 0,
+          "soc2": 0
+        }
+      },
+      "telemetry": {
+        "record_type": "jetson_telemetry_summary",
+        "sample_count": 3492,
+        "schema_version": 1,
+        "metrics": {
+          "cpu_mean_percent": {
+            "max": 99.66666666666667,
+            "p50": 40.5,
+            "p95": 86.66666666666667
+          },
+          "gr3d_percent": {
+            "max": 99,
+            "p50": 58,
+            "p95": 98
+          },
+          "ram_used_mb": {
+            "max": 6601,
+            "p50": 6040,
+            "p95": 6386
+          },
+          "swap_used_mb": {
+            "max": 93,
+            "p50": 92,
+            "p95": 93
+          },
+          "vdd_in_average_mw": {
+            "max": 8643,
+            "p50": 7678,
+            "p95": 8300
+          },
+          "vdd_in_mw": {
+            "max": 14849,
+            "p50": 7336,
+            "p95": 11066
+          }
+        },
+        "temperatures_c": {
+          "cpu": {
+            "sample_count": 3492,
+            "max": 56.031,
+            "p50": 53.25,
+            "p95": 54.687
+          },
+          "gpu": {
+            "sample_count": 3492,
+            "max": 56.343,
+            "p50": 53.656,
+            "p95": 54.937
+          },
+          "soc0": {
+            "sample_count": 3492,
+            "max": 53.843,
+            "p50": 52.531,
+            "p95": 53.312
+          },
+          "soc1": {
+            "sample_count": 3492,
+            "max": 53.687,
+            "p50": 52.562,
+            "p95": 53.25
+          },
+          "soc2": {
+            "sample_count": 3492,
+            "max": 54.718,
+            "p50": 52.812,
+            "p95": 53.781
+          },
+          "tj": {
+            "sample_count": 3492,
+            "max": 56.343,
+            "p50": 53.656,
+            "p95": 54.968
+          }
+        },
+        "duration_seconds": 1770.128012781,
+        "vdd_in_energy_joules": 13723.799128380768
+      },
+      "guard_violation": null,
+      "complete": false
+    },
+    "frozen_artifact_manifest_verified": true
+  },
+  "evaluation_complete": true,
+  "operational_success": false,
+  "completion_interpretation": "Evaluation completion means all planned cases and judgments were captured with verified integrity and clean finalization. Candidate execution errors, quality failures, and call-bound violations remain measured outcomes."
+}

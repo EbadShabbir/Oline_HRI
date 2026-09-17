@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-09-17T10:48:27.433785+00:00",
+  "user_authorization": "yeah do it",
+  "authorized_scope": "Close idle SoftwareCenter/Updater apps and temporarily reset existing swap, then retry the frozen16-case recovery under unchanged limits.",
+  "os_authorization": "Normal pkexec administrator authorization; reset returned exit0. Non-interactive sudo was unavailable, so no password was supplied in chat or command arguments.",
+  "cleanup_script": "../reset_swap_once.py",
+  "cleanup_script_sha256": "1a3d4ec63f21f27b6ead4335a7a310a995da04aeb1b52e1d152349b3d2016d58",
+  "action_records": [
+    "cleanup_preflight.json",
+    "approved_app_cleanup.json",
+    "swap_reset.log",
+    "post_cleanup_readiness.json"
+  ],
+  "frozen_protocol_unchanged": "The sealed recovery_protocol.md recorded permission pending when declared. This later record documents the actual approval and cleanup without rewriting that preregistration.",
+  "resource_state_change": "Idle apps were closed and swapped pages were brought into RAM. Swap devices/sizes/priorities and all persistent model/hardware/guard settings were unchanged. Recovery latency is a separate session, not a causal comparison."
+}

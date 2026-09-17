@@ -1,0 +1,86 @@
+[
+  {
+    "id": "fresh_007",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["equation_count_violation", "sentence_count_violation"],
+    "required_components_pass": [
+      {"component": "Show an equation equivalent to 14 + 9 - 5 = 18.", "pass": true},
+      {"component": "State in one short sentence that 18 tokens remain outside the box.", "pass": true},
+      {"component": "Follow the explicit request to answer with one equation and one short sentence.", "pass": false}
+    ],
+    "reason": "The arithmetic is correct, and the final sentence states that 18 tokens remain outside. However, the response contains three equations across three sentences, exceeding the explicit one-equation, one-short-sentence answer format.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_042",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question", "inaccurate_nickname_definition"],
+    "required_components_pass": [
+      {"component": "Indicate that the previously stated nickname is unavailable.", "pass": false},
+      {"component": "Give a two-sentence general explanation distinguishing an informal or alternative name from a person's full name, without asserting that every nickname must be shorter.", "pass": false}
+    ],
+    "reason": "The opening generic question does not acknowledge unavailable nickname recall. The explanation usefully contrasts informal and official names but defines a nickname as short and a full name as longer without qualification, violating the rubric's explicit restriction on that generalization.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_011",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_text_rewrite", "missing_date_and_place", "available_nonpersonal_context_not_used"],
+    "required_components_pass": [
+      {"component": "Combine or rewrite the second version as one sentence inviting people to the sketch swap.", "pass": false},
+      {"component": "Preserve 18 October and Room 2.", "pass": false}
+    ],
+    "reason": "The declared nonpersonal dialogue identifies version two and supplies its date and place. The generic question delivers no rewritten invitation and omits both required details.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_025",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_corresponding_opening_sentence"],
+    "required_components_pass": [
+      {"component": "Provide a recognizable story premise and a corresponding opening sentence.", "pass": false},
+      {"component": "Complete the creative task without requiring remembered interests.", "pass": true}
+    ],
+    "reason": "The lonely traveler and whispering library provide a recognizable standalone premise without inventing personal interests. Only that single synopsis sentence is delivered; no corresponding story opening is separately supplied.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_044",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": ["execution_failed", "absent_output"],
+    "required_components_pass": [
+      {"component": "Ask whether the user wants the welcome note or the reminder shortened; asking whether both are intended is also acceptable.", "pass": false}
+    ],
+    "reason": "The recorded execution failed and delivered no text, so it did not resolve which supplied message should be shortened.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_003",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_time_allocation", "missing_clue_texts", "missing_placement_sequence"],
+    "required_components_pass": [
+      {"component": "Give setup time allocations totaling 12 minutes.", "pass": false},
+      {"component": "Provide three clue texts and a coherent placement sequence: the handed-over clue leads to the next card, that card leads to the third, and the third leads to the prize.", "pass": false},
+      {"component": "Use only the table, chair, and shelf as hiding or destination locations; using every listed feature is not mandatory.", "pass": true}
+    ],
+    "reason": "The answer only repeats the total time and permitted furniture and announces three clues. It supplies neither time allocations nor any clue text or linked placement sequence. Its named locations do stay within the permitted furniture.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_043",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["untargeted_clarification"],
+    "required_components_pass": [
+      {"component": "Ask what needs fixing or request the object, text, or problem to work on.", "pass": false}
+    ],
+    "reason": "The response appropriately avoids inventing or claiming a fix, but its generic request for more information does not ask what needs fixing or request the object, text, or problem specified by the rubric.",
+    "useful_general_help": null
+  }
+]

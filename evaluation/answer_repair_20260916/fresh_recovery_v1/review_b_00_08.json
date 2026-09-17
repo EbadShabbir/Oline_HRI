@@ -1,0 +1,97 @@
+[
+  {
+    "id": "repair_holdout_001",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["missing_numbered_steps", "missing_numbered_card_placement_detail"],
+    "required_components_pass": [
+      {"component": "Give exactly four numbered steps that respectively position the tray, arrange the six models, write and place six numbered cards, and check the display.", "pass": false},
+      {"component": "Retain the supplied allocations of 2, 3, 4, and 2 minutes and state the total as 11 minutes.", "pass": true}
+    ],
+    "reason": "The response preserves the four actions, allocations, and eleven-minute total, but renders a paragraph rather than four numbered steps and does not specify numbering the cards or placing one per model.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_002",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Show four phases with intervals 0–3, 3–5, 5–11, and 11–14 minutes, or equivalent time notation.", "pass": true},
+      {"component": "Assign the intervals respectively to reading, arranging, performing both voices, and writing notes.", "pass": true}
+    ],
+    "reason": "The answer provides the exact four intervals with the correct reading, arranging, both-voices performance, and note-writing assignments. First-person wording can express the requested rehearsal plan and is not a conclusive robot-action claim.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_003",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_csv_header", "line_count_violation"],
+    "required_components_pass": [
+      {"component": "Output exactly four lines: shelf,boxes followed by north,6 then south,2 then west,9.", "pass": false},
+      {"component": "Preserve the supplied labels, quantities, and order, with no surrounding prose or code fence.", "pass": true}
+    ],
+    "reason": "All three data rows have the correct labels, counts, and order with no extra prose, but the required shelf,boxes header is missing, leaving three lines instead of four.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_004",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["missing_numbered_lines", "missing_middle_label", "nonworkable_fan_sequence", "requires_extra_materials"],
+    "required_components_pass": [
+      {"component": "Give three numbered lines with the text labels Start:, Middle:, and Finish: in order.", "pass": false},
+      {"component": "Describe a workable sequence of starting a fold, continuing alternating folds, and gathering or pinching one end to open a fan.", "pass": false}
+    ],
+    "reason": "The paragraph has no numbered lines or Middle label. Folding in half and into a triangle, then folding the ends, does not explain repeated alternating folds followed by opening a fan. The final step also requires ribbon or string beyond the one supplied sheet.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_005",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["number_only_format_violation", "unwanted_explanation"],
+    "required_components_pass": [
+      {"component": "Return only 31, allowing surrounding whitespace.", "pass": false}
+    ],
+    "reason": "The calculation 7*4+3=31 is correct, but the response includes two explanatory statements and an equation instead of returning only the whole number.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_006",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["missing_rehearsal_details", "missing_old_and_new_weekdays", "missing_time_and_room", "unsupported_time_change"],
+    "required_components_pass": [
+      {"component": "Provide an announcement of no more than 16 whitespace-separated words.", "pass": true},
+      {"component": "Preserve the rehearsal moving from Tuesday to Thursday, at noon, in Studio 3.", "pass": false}
+    ],
+    "reason": "The short announcement is within sixteen words, but replaces the actual change with generic placeholders. It omits rehearsal, Tuesday, Thursday, noon, and Studio 3, and suggests a new time instead of preserving the specified noon time.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_007",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["reversed_rotation_and_apparent_sun_motion_causality"],
+    "required_components_pass": [
+      {"component": "Use two short sentences mentioning Earth and the Sun.", "pass": true},
+      {"component": "Explain that Earth's rotation brings a place toward the sunlit side for day and away from sunlight for night.", "pass": false}
+    ],
+    "reason": "The two sentences mention Earth and the Sun and correctly identify rotation as relevant. However, the second sentence says the Sun's changing sky position causes regions to face toward or away from it, reversing the required explanation that Earth's rotation causes those orientation changes and the Sun's apparent motion.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_008",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Give exactly two nonempty story lines about a kite that gets away.", "pass": true},
+      {"component": "Make home the final word of the second line; ordinary final punctuation is acceptable.", "pass": true}
+    ],
+    "reason": "The two-line micro-story describes a kite soaring and flying away, ends its second line with home, and includes no title or preface.",
+    "useful_general_help": true
+  }
+]

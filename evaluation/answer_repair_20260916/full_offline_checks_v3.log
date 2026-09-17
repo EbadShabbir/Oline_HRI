@@ -1,0 +1,150 @@
+training failed: RuntimeError: offline asset unavailable
+{"output": "/tmp/clara-changing-analysis-offline-8pjqq8l1/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-changing-analysis-offline-8pjqq8l1/reviews", "groups": 132, "disagreements": 1}
+{"output": "/tmp/clara-changing-analysis-offline-2y2irqba/prepared", "review_groups": 133, "attempts": 287, "missing": 1, "packet_sha256": "d564a0058251af11a0c7e72f4a88c1232a75716e319ecab1c6ded0c510b790bc"}
+{"output": "/tmp/clara-changing-analysis-offline-fqm9ixgi/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-changing-analysis-offline-wd0dulha/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-changing-analysis-offline-wd0dulha/reviews", "groups": 132, "disagreements": 0}
+{"output": "/tmp/clara-changing-analysis-offline-wd0dulha/analysis", "planned": 288, "attempted": 288, "useful_correct": 288, "disagreements": 0}
+{"output": "/tmp/clara-changing-analysis-offline-me36_xmg/prepared", "review_groups": 132, "attempts": 288, "missing": 0, "packet_sha256": "eb2e1474d3d28113b69ab802c2ebcbc52a0984fb40611a6b760fd0d6bfcb49c2"}
+{"output": "/tmp/clara-batch-review-offline-rjb9jdqy/prepared_batch", "scenarios": ["cm01"], "checkpoints": 24, "review_groups": 11, "packet_sha256": "5ea388617301f0627abe96ab5f62805dc35df1fb6068e3fad9b8a0f4414a945f"}
+{"output": "/tmp/clara-batch-review-offline-a0t0nyb5/bound", "final_groups": 2, "batches": 2, "reviewer_a": "offline-a", "reviewer_b": "offline-b"}
+embedded 4/28
+embedded 8/28
+embedded 12/28
+embedded 16/28
+embedded 20/28
+embedded 24/28
+embedded 28/28
+{"artifact": "/tmp/tmp5zhhnq2z/run/classifier.json", "calibration": {"method": "held_group_top_two_margin_v1", "target_error_rate": 0.0, "minimum_accepted": 3, "count": 12, "accepted": 12, "errors": 0, "raw_accuracy": 1.0, "coverage": 1.0, "per_mode": {"none": {"enabled": true, "threshold": 0.0, "accepted": 3, "errors": 0, "available": 3}, "optional": {"enabled": true, "threshold": 0.0, "accepted": 3, "errors": 0, "available": 3}, "required": {"enabled": true, "threshold": 0.0, "accepted": 3, "errors": 0, "available": 3}, "clarify": {"enabled": true, "threshold": 0.0, "accepted": 3, "errors": 0, "available": 3}}, "scope": "Finite held-group empirical calibration; not probabilities or a universal error guarantee."}}
+embedded 4/28
+embedded 8/28
+embedded 12/28
+embedded 16/28
+embedded 20/28
+embedded 24/28
+embedded 28/28
+{"artifact": "/tmp/tmpmr96ezcs/run/classifier.json", "calibration": {"method": "held_group_top_two_margin_v1", "target_error_rate": 0.0, "minimum_accepted": 3, "count": 12, "accepted": 12, "errors": 0, "raw_accuracy": 1.0, "coverage": 1.0, "per_mode": {"none": {"enabled": true, "threshold": 0.0, "accepted": 3, "errors": 0, "available": 3}, "optional": {"enabled": true, "threshold": 0.0, "accepted": 3, "errors": 0, "available": 3}, "required": {"enabled": true, "threshold": 0.0, "accepted": 3, "errors": 0, "available": 3}, "clarify": {"enabled": true, "threshold": 0.0, "accepted": 3, "errors": 0, "available": 3}}, "scope": "Finite held-group empirical calibration; not probabilities or a universal error guarantee."}}
+grid failed: DependencyClassifierError: unsupported dependency corpus version
+embedded 8/28
+embedded 16/28
+embedded 24/28
+embedded 28/28
+{"variant": "variant_01", "settings": {"regularization": 0.1, "embedding_weight": 0.25, "lexical_weight": 1.0}, "raw_accuracy": 1.0, "accepted": 12, "count": 12}
+{"variant": "variant_02", "settings": {"regularization": 0.1, "embedding_weight": 1.0, "lexical_weight": 1.0}, "raw_accuracy": 1.0, "accepted": 12, "count": 12}
+{"variant": "variant_03", "settings": {"regularization": 1.0, "embedding_weight": 0.25, "lexical_weight": 1.0}, "raw_accuracy": 1.0, "accepted": 12, "count": 12}
+{"variant": "variant_04", "settings": {"regularization": 1.0, "embedding_weight": 1.0, "lexical_weight": 1.0}, "raw_accuracy": 1.0, "accepted": 12, "count": 12}
+{"variant": "variant_05", "settings": {"regularization": 10.0, "embedding_weight": 0.25, "lexical_weight": 1.0}, "raw_accuracy": 1.0, "accepted": 12, "count": 12}
+{"variant": "variant_06", "settings": {"regularization": 10.0, "embedding_weight": 1.0, "lexical_weight": 1.0}, "raw_accuracy": 1.0, "accepted": 12, "count": 12}
+slot 01 qwen3:0.6b OFF r1 1/2 request interrupted 0.004s
+BATCH /tmp/tmpt0cn86dq/run status=interrupted
+SESSION 1/9 large r1
+SESSION 2/9 cascade r1
+SESSION 3/9 small r1
+SESSION 4/9 cascade r2
+SESSION 5/9 small r2
+SESSION 6/9 large r2
+SESSION 7/9 small r3
+SESSION 8/9 large r3
+SESSION 9/9 cascade r3
+BATCH /tmp/tmpp_4f4uv_/run status=complete
+SESSION 1/9 large r1
+BATCH /tmp/tmp8k6_1jya/run status=interrupted
+SESSION 1/9 large r1
+BATCH /tmp/tmpak36dctc/run status=interrupted
+======================================================================
+FAIL: test_default_policy_uses_actual_learned_reliable_construction (test_reliable_cli.ReliableCliConstructionTests) (proposed='none', uncertain=False, resolved='none', request='Explain recursion.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_reliable_cli.py", line 359, in assert_reliable_construction
+    self.assertIn(f"policy=dependency_v1 dependency_source={source}", errors.getvalue())
+AssertionError: 'policy=dependency_v1 dependency_source=dependency_classifier' not found in 'route> model_size=large selected_generator=qwen3:1.7b memory_required=false memory_mode=none reviewed=false policy=dependency_v1 dependency_source=dependency_task_guard\nmemory> {"retrieved_ids":[],"supplied_ids":[],"model_used_ids":[],"response_used_ids":[],"application_used_ids":[]}\nanswer> effective_mode=none retrieval=skipped generator=qwen3:1.7b attempts=1 reviews=1\n'
+
+======================================================================
+FAIL: test_default_policy_uses_actual_learned_reliable_construction (test_reliable_cli.ReliableCliConstructionTests) (proposed='none', uncertain=True, resolved='none', request='Explain recursion.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_reliable_cli.py", line 345, in assert_reliable_construction
+    self.assertEqual([call[0] for call in backend.calls], [*expected_calls, expected_model])
+AssertionError: Lists differ: ['qwen3:1.7b', 'qwen3:1.7b'] != ['qwen3:4b', 'qwen3:1.7b']
+
+First differing element 0:
+'qwen3:1.7b'
+'qwen3:4b'
+
+- ['qwen3:1.7b', 'qwen3:1.7b']
+?         ^^^
+
++ ['qwen3:4b', 'qwen3:1.7b']
+?         ^
+
+
+======================================================================
+FAIL: test_default_policy_uses_actual_learned_reliable_construction (test_reliable_cli.ReliableCliConstructionTests) (proposed='required', uncertain=True, resolved='none', request='Explain recursion.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_reliable_cli.py", line 345, in assert_reliable_construction
+    self.assertEqual([call[0] for call in backend.calls], [*expected_calls, expected_model])
+AssertionError: Lists differ: ['qwen3:1.7b', 'qwen3:1.7b'] != ['qwen3:4b', 'qwen3:1.7b']
+
+First differing element 0:
+'qwen3:1.7b'
+'qwen3:4b'
+
+- ['qwen3:1.7b', 'qwen3:1.7b']
+?         ^^^
+
++ ['qwen3:4b', 'qwen3:1.7b']
+?         ^
+
+
+======================================================================
+FAIL: test_explicit_reliable_policy_preserves_roles_and_reports_actual_attempts (test_reliable_cli.ReliableCliConstructionTests) (proposed='none', uncertain=False, resolved='none', request='Explain recursion.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_reliable_cli.py", line 359, in assert_reliable_construction
+    self.assertIn(f"policy=dependency_v1 dependency_source={source}", errors.getvalue())
+AssertionError: 'policy=dependency_v1 dependency_source=dependency_classifier' not found in 'route> model_size=large selected_generator=qwen3:1.7b memory_required=false memory_mode=none reviewed=false policy=dependency_v1 dependency_source=dependency_task_guard\nmemory> {"retrieved_ids":[],"supplied_ids":[],"model_used_ids":[],"response_used_ids":[],"application_used_ids":[]}\nanswer> effective_mode=none retrieval=skipped generator=qwen3:1.7b attempts=1 reviews=1\n'
+
+======================================================================
+FAIL: test_explicit_reliable_policy_preserves_roles_and_reports_actual_attempts (test_reliable_cli.ReliableCliConstructionTests) (proposed='none', uncertain=True, resolved='none', request='Explain recursion.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_reliable_cli.py", line 345, in assert_reliable_construction
+    self.assertEqual([call[0] for call in backend.calls], [*expected_calls, expected_model])
+AssertionError: Lists differ: ['qwen3:1.7b', 'qwen3:1.7b'] != ['qwen3:4b', 'qwen3:1.7b']
+
+First differing element 0:
+'qwen3:1.7b'
+'qwen3:4b'
+
+- ['qwen3:1.7b', 'qwen3:1.7b']
+?         ^^^
+
++ ['qwen3:4b', 'qwen3:1.7b']
+?         ^
+
+
+======================================================================
+FAIL: test_explicit_reliable_policy_preserves_roles_and_reports_actual_attempts (test_reliable_cli.ReliableCliConstructionTests) (proposed='required', uncertain=True, resolved='none', request='Explain recursion.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_reliable_cli.py", line 345, in assert_reliable_construction
+    self.assertEqual([call[0] for call in backend.calls], [*expected_calls, expected_model])
+AssertionError: Lists differ: ['qwen3:1.7b', 'qwen3:1.7b'] != ['qwen3:4b', 'qwen3:1.7b']
+
+First differing element 0:
+'qwen3:1.7b'
+'qwen3:4b'
+
+- ['qwen3:1.7b', 'qwen3:1.7b']
+?         ^^^
+
++ ['qwen3:4b', 'qwen3:1.7b']
+?         ^
+
+
+----------------------------------------------------------------------
+Ran 1439 tests in 110.167s
+
+FAILED (failures=6, skipped=26)

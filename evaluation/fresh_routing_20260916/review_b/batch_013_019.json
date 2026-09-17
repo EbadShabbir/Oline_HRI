@@ -1,0 +1,72 @@
+[
+  {
+    "id": "fresh_020",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_sorted_numbers", "output_format_violation"],
+    "required_components_pass": [
+      {"component": "Return 4, 9, 12, 17 on one comma-separated line; spacing around commas is immaterial.", "pass": false}
+    ],
+    "reason": "The input and required order are unambiguous. A clarification question omits all four ordered numbers and violates the numbers-only comma-separated format.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_010",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Return a polite revision asking the recipient to remove their boxes from the shared table before lunch.", "pass": true},
+      {"component": "Output only the revised note.", "pass": true}
+    ],
+    "reason": "Adding 'Please' makes the note more polite while preserving the boxes, shared table, and before-lunch deadline. The output contains only the revised note.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_019",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "current_input_not_used", "missing_requested_day", "output_format_violation"],
+    "required_components_pass": [
+      {"component": "Answer Tuesday or Tuesdays, with no additional explanation.", "pass": false}
+    ],
+    "reason": "The current request explicitly supplies Tuesday. The generic question neither returns that day nor follows the day-only format.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_006",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_time_allocation"],
+    "required_components_pass": [
+      {"component": "Provide setup intervals or durations totaling 6 minutes.", "pass": false},
+      {"component": "Include the exact supplied title and three headings on the board, and the headings on the index card.", "pass": true}
+    ],
+    "reason": "The response places the exact title and headings on the board and repeats the headings on the card, but merely restates the six-minute availability without assigning any durations or intervals.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_002",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_time_allocation", "missing_written_tag", "missing_tag_and_ribbon_attachment", "incomplete_wrapping_instructions"],
+    "required_components_pass": [
+      {"component": "Give four steps that cover wrapping and securing the book, then attaching a written tag and ribbon.", "pass": false},
+      {"component": "Make the four time allocations total 9 minutes.", "pass": false}
+    ],
+    "reason": "There are four numbered actions and some relevant material preparation, but they never specify wrapping the book or writing and attaching the tag and ribbon. The single 'Time: 9 minutes' statement provides none of the four requested time allocations.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_036",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": ["execution_failed", "absent_output"],
+    "required_components_pass": [
+      {"component": "State that no user-provided notebook-size preference is available.", "pass": false},
+      {"component": "Distinguish the earlier assistant's A5 assumption from an actual personal fact.", "pass": false}
+    ],
+    "reason": "The recorded execution failed and delivered no text, so neither missing-preference acknowledgment nor the distinction between an assistant assumption and a user fact was provided.",
+    "useful_general_help": null
+  }
+]

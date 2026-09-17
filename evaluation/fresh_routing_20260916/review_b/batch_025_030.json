@@ -1,0 +1,62 @@
+[
+  {
+    "id": "fresh_026",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_three_distinct_games", "missing_playable_rules"],
+    "required_components_pass": [
+      {"component": "Give three distinct game ideas suitable for three seated adults using paper and pens.", "pass": false},
+      {"component": "Briefly explain each idea enough to understand how to start playing.", "pass": false}
+    ],
+    "reason": "Only the first numbered item resembles a game idea, and merely taking turns writing unspecified numbers does not explain a playable game. The other two items concern seating and encouragement, so they are not distinct games or rules.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_015",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["line_count_violation"],
+    "required_components_pass": [
+      {"component": "Provide four nonempty poetic lines about rain and a window.", "pass": false},
+      {"component": "Use the word lantern exactly once and omit a title or explanatory preface.", "pass": true}
+    ],
+    "reason": "The rain-and-window imagery is relevant and 'lantern' appears once with no title or preface, but the delivered text is one paragraph rather than four poetic lines.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_021",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Offer three usable bookmark themes despite the empty memory.", "pass": true},
+      {"component": "Frame any color choices as suggestions, not as remembered favorites.", "pass": true}
+    ],
+    "reason": "Nature, friendship, and adventure are three usable bookmark themes. No color is claimed as a remembered favorite; the awkward final sentence is conditional and does not assert a specific personal fact.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_018",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_text_rewrite", "output_format_violation"],
+    "required_components_pass": [
+      {"component": "Return a past-tense version such as 'You always used purple notebooks.'", "pass": false},
+      {"component": "Provide only the rewritten sentence.", "pass": false}
+    ],
+    "reason": "The fictional sentence and editing operation are both supplied. The generic clarification replaces the straightforward past-tense rewrite and is not the requested rewritten sentence.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_009",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_invitation", "sentence_count_violation", "missing_supplied_details"],
+    "required_components_pass": [
+      {"component": "Produce a friendly invitation in two sentences addressed to Noor.", "pass": false},
+      {"component": "Include paper crafts, the user's home, this Sunday at 3 p.m., and the request for one magazine.", "pass": false}
+    ],
+    "reason": "The single generic question supplies no invitation or event details, despite the current request giving all information needed for the two-sentence draft.",
+    "useful_general_help": false
+  }
+]

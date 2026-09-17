@@ -1,0 +1,235 @@
+[
+  {
+    "id": "fresh_023",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "welcome_message_missing",
+      "fallback_not_used"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide a warm, understandable two-sentence welcome message suitable for a casual board-game group.",
+        "pass": false
+      },
+      {
+        "component": "Use the supplied fallback when no writing-tone memory is available.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer asks only for more context. It supplies neither the requested two-sentence welcome nor the explicitly available warm, clear fallback.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_027",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "chore_order_missing",
+      "reason_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide an order containing each of the four supplied chores once.",
+        "pass": false
+      },
+      {
+        "component": "Give a short plausible reason for the chosen default order.",
+        "pass": false
+      }
+    ],
+    "reason": "No chore order or reason is delivered, despite the user explicitly permitting a reasonable default without remembered routine information.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_041",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "general_component_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's pickup branch is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Order the supplied titles as Amber Trail, Cedar Boat, Willow Door.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer acknowledges that the earlier branch information is unavailable and asks for it, but omits the independent title ordering entirely.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_022",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "self_contained_break_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Offer an indoor solo break that fits within 15 minutes and can be done with the supplied items.",
+        "pass": false
+      },
+      {
+        "component": "Make the proposal usable without any recalled hobby.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic question provides no usable indoor break or 15-minute plan with the listed items. The prompt already permits an idea without recalled hobbies.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_048",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Ask which operation or result the user wants, such as a sum, average, or another calculation.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer directly asks what calculation the user wants and does not assume a unique operation or treat the ambiguity as a personal-memory issue.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_047",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "required_recipient_clarification_missing",
+      "recipient_silently_selected",
+      "requests_conflated"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask whether the intended recipient is Alex Kim or Alex Rao before committing to one addressed reply.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer commits to Alex Kim without asking which Alex is intended, then adds the Friday refusal that concerned Alex Rao.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_032",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unavailability_not_acknowledged",
+      "missing_measurements_not_identified"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that the frame's previously supplied width, height, and units are unavailable; a request for the measurements is acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "A generic request for more detail neither explains that the previous width, height, and units are unavailable nor specifically asks the user to supply those measurements.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_037",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's previously named favorite author is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Also give a two-sentence general explanation that a chapter is a section of a book, while the whole book is the complete work and may contain multiple chapters.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer acknowledges unavailable earlier author information and then gives two simple explanatory sentences identifying a chapter as part of a book and the chapters together as the whole narrative.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_001",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "pencils_not_put_in_jar",
+      "scrap_paper_not_recycled",
+      "sketchbook_not_shelved"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide actionable steps that put the pencils in the jar, scrap paper in the recycling bin, and book and cup on the shelf.",
+        "pass": false
+      },
+      {
+        "component": "Assign durations or time intervals that together account for 7 minutes.",
+        "pass": true
+      }
+    ],
+    "reason": "The durations total seven minutes and putting the empty cup on the shelf is useful. However, the plan leaves the sketchbook and pencils on the table and never puts the scrap paper in the bin, so the required reset is not delivered.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_004",
+    "quality_pass": false,
+    "primary_outcome": "format_or_constraint_failure",
+    "flags": [
+      "hat_omitted",
+      "pencil_and_eraser_location_contradicts_prompt",
+      "preparation_not_meaningfully_completed"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide three preparation phases whose durations total 8 minutes.",
+        "pass": true
+      },
+      {
+        "component": "Account for the tote and all five other listed items; the hat may be packed or worn.",
+        "pass": false
+      }
+    ],
+    "reason": "There are three timed steps totaling eight minutes, but the hat is absent. The steps mainly rearrange items already on the table, incorrectly take the pencil and eraser from the tote, and refill an already filled bottle; they do not provide a meaningfully useful preparation plan for taking the listed items to the park.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_008",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "less_lit_region_behind_object_not_explained"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that the object blocks light and that the less-lit region behind it is a shadow.",
+        "pass": false
+      },
+      {
+        "component": "Use exactly two short, understandable sentences.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer uses exactly two short sentences and usefully states that an object blocks light, but it never explains the required less-lit region behind the object. The second sentence discusses shape instead.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_030",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unavailability_not_acknowledged",
+      "missing_birthday_not_identified"
+    ],
+    "required_components_pass": [
+      {
+        "component": "State that Leena's birthday date is unavailable from the supplied conversation and memory; optionally ask the user to provide it.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic request for more detail does not state that Leena's previously supplied birthday is unavailable. It avoids guessing but does not meet the required acknowledgment.",
+    "useful_general_help": null
+  }
+]

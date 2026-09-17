@@ -1,0 +1,177 @@
+{
+  "created_at": "2026-09-17T10:49:08.372243+00:00",
+  "cases_sha256": "c621f0b9cba7c0bd22dae169261a8694fc6c6f2c9f08f3553ac727e0ab3c22bf",
+  "scope": "Complete delivered text; routes, model identity, timing, internal verdicts and withheld outputs hidden.",
+  "evidence_contract": "Empty personal store. Current assertions and benign supplied drafts can support answers; assistant guesses and prior personal values cannot authorize recall.",
+  "rubric_conventions": {},
+  "cases": [
+    {
+      "id": "repair_holdout_001",
+      "text": "Turn these allocations into a practical 11-minute setup plan for a tiny clay display: 2 minutes to position a tray, 3 minutes to arrange six dry clay models, 4 minutes to write and place one numbered card per model, and 2 minutes for a final check. I have the tray, models, six blank cards, a pen, and an empty table. Use exactly four numbered steps and state the total time.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Give exactly four numbered steps that respectively position the tray, arrange the six models, write and place six numbered cards, and check the display.",
+          "Retain the supplied allocations of 2, 3, 4, and 2 minutes and state the total as 11 minutes."
+        ],
+        "forbidden": [
+          "Require personal memory or an unanswered preference question before providing the plan.",
+          "Make additional supplies a necessary part of completing the plan."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Position the tray in 2 minutes. Arrange the six models in 3 minutes. Write and place cards in 4 minutes. Final check in 2 minutes. Total time: 11 minutes.",
+      "execution_failed": false
+    },
+    {
+      "id": "repair_holdout_002",
+      "text": "Organize a 14-minute solo rehearsal of a two-character puppet scene. I have the printed script, two puppets, a table, a clock, paper, and a pen. Allocate 3 minutes to reading the script, 2 minutes to arranging the puppets, 6 minutes to performing both voices, and 3 minutes to writing notes. Show the four phases with start and end times measured from minute zero.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Show four phases with intervals 0–3, 3–5, 5–11, and 11–14 minutes, or equivalent time notation.",
+          "Assign the intervals respectively to reading, arranging, performing both voices, and writing notes."
+        ],
+        "forbidden": [
+          "Omit a supplied phase or change its duration.",
+          "Require a second performer or personal-history information."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "I will organize a 14-minute solo rehearsal of a two-character puppet scene. The four phases will be: 0-3 minutes reading the script, 3-5 minutes arranging the puppets, 5-11 minutes performing both voices, and 11-14 minutes writing notes. I will use the printed script, two puppets, a table, a clock, paper, and a pen as needed.",
+      "execution_failed": false
+    },
+    {
+      "id": "repair_holdout_003",
+      "text": "Produce CSV for this inventory: the north shelf has 6 boxes, the south shelf has 2, and the west shelf has 9. The header must be shelf,boxes. Use the shelf labels north, south, west in that order. Return only the four CSV lines, without a code fence or explanation.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Output exactly four lines: shelf,boxes followed by north,6 then south,2 then west,9.",
+          "Preserve the supplied labels, quantities, and order, with no surrounding prose or code fence."
+        ],
+        "forbidden": [
+          "Add another column or change a count.",
+          "Claim the inventory must be recovered from personal memory."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "north,6\nsouth,2\nwest,9",
+      "execution_failed": false
+    },
+    {
+      "id": "repair_holdout_004",
+      "text": "Describe how to make a simple paper fan from one sheet. Give exactly three numbered lines. Begin their text with Start:, Middle:, and Finish: in that order. Include alternating folds and gathering one end. Add no introduction or closing comment.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Give three numbered lines with the text labels Start:, Middle:, and Finish: in order.",
+          "Describe a workable sequence of starting a fold, continuing alternating folds, and gathering or pinching one end to open a fan."
+        ],
+        "forbidden": [
+          "Add an introduction, closing comment, or fourth step.",
+          "Make unavailable personal knowledge a prerequisite for the instructions."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Start: Fold the paper in half vertically, then fold it again to create a smaller triangle. Gather one end and fold it toward the center, then fold the other end in the opposite direction. Finish: Align the edges, secure with a ribbon or string, and display the fan.",
+      "execution_failed": false
+    },
+    {
+      "id": "repair_holdout_005",
+      "text": "I put 7 beads into each of 4 cups, then add 3 extra beads to one of those cups. How many beads are in the cups altogether? Return only the whole number.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Return only 31, allowing surrounding whitespace."
+        ],
+        "forbidden": [
+          "Add the 3 extra beads to every cup rather than one cup.",
+          "Add an explanation, a question, or a memory disclaimer."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "There are 7 beads in each of the 4 cups, and 3 extra beads added to one cup. Total beads: 7*4 + 3 = 31.",
+      "execution_failed": false
+    },
+    {
+      "id": "repair_holdout_006",
+      "text": "Shorten that announcement to no more than 16 words. Keep the old and new weekdays, the time, and the room. Return only the announcement.",
+      "declared_prior_turns": [
+        {
+          "role": "user",
+          "content": "Draft a short announcement that our rehearsal has moved from Tuesday to Thursday at noon in Studio 3."
+        },
+        {
+          "role": "assistant",
+          "content": "Please note that our rehearsal has been moved from Tuesday to Thursday at noon in Studio 3."
+        }
+      ],
+      "rubric": {
+        "required_components": [
+          "Provide an announcement of no more than 16 whitespace-separated words.",
+          "Preserve the rehearsal moving from Tuesday to Thursday, at noon, in Studio 3."
+        ],
+        "forbidden": [
+          "Ask which announcement the user means or claim its text is unavailable.",
+          "Change the direction of the move, omit a required detail, or add commentary outside the announcement."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Announcement: Old weekdays, new time, same room.",
+      "execution_failed": false
+    },
+    {
+      "id": "repair_holdout_007",
+      "text": "Explain why a place on Earth has daytime and nighttime. Use exactly two short sentences, and mention both Earth and the Sun.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Use two short sentences mentioning Earth and the Sun.",
+          "Explain that Earth's rotation brings a place toward the sunlit side for day and away from sunlight for night."
+        ],
+        "forbidden": [
+          "Explain the daily cycle as the Sun circling Earth or the Sun turning off.",
+          "Require the user's location or personal history to give the general explanation."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Daytime and nighttime on Earth occur due to the rotation of the Earth on its axis. The Sun's position in the sky changes throughout the day, causing different regions to face the Sun or away from it.",
+      "execution_failed": false
+    },
+    {
+      "id": "repair_holdout_008",
+      "text": "Write a two-line micro-story about a runaway kite. End the second line with the word home. Give only the story, without a title.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Give exactly two nonempty story lines about a kite that gets away.",
+          "Make home the final word of the second line; ordinary final punctuation is acceptable."
+        ],
+        "forbidden": [
+          "Add a title or explanatory preface.",
+          "Present the story as a recalled event from the user's life."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "The kite soared high, its wings painted with dreams that never landed.\nIt flew away, chasing the sky, and finally home.",
+      "execution_failed": false
+    }
+  ]
+}

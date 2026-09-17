@@ -1,0 +1,20 @@
+======================================================================
+FAIL: test_malformed_learned_review_is_recorded_then_clarifies_without_another_review (test_routing_reliability_runner.RoutingReliabilityRunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_reliability_runner.py", line 333, in test_malformed_learned_review_is_recorded_then_clarifies_without_another_review
+    self.assertEqual(row["route"]["review_generation"], asdict(broken))
+AssertionError: None != {'model': 'qwen3:1.7b', 'content': '{"inv[212 chars]': 0}
+
+======================================================================
+FAIL: test_uncertain_routes_preserve_actual_dependency_review (test_routing_reliability_runner.RoutingReliabilityRunnerTests) (mode='none', uncertain=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_reliability_runner.py", line 276, in test_uncertain_routes_preserve_actual_dependency_review
+    self.assertEqual(route["review_generation"], asdict(review))
+AssertionError: None != {'model': 'qwen3:1.7b', 'content': '{"mod[212 chars]': 0}
+
+----------------------------------------------------------------------
+Ran 197 tests in 1.276s
+
+FAILED (failures=2)

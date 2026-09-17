@@ -1,0 +1,72 @@
+[
+  {
+    "id": "fresh_037",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["unnecessary_clarification", "missing_unavailable_recall_acknowledgment", "missing_general_component"],
+    "required_components_pass": [
+      {"component": "Acknowledge that the user's previously named favorite author is unavailable.", "pass": false},
+      {"component": "Also give a two-sentence general explanation that a chapter is a section of a book, while the whole book is the complete work and may contain multiple chapters.", "pass": false}
+    ],
+    "reason": "The generic question does not acknowledge unavailable author recall and entirely omits the independent two-sentence explanation.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_001",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["incorrect_item_destinations", "missing_required_steps", "missing_time_allocation"],
+    "required_components_pass": [
+      {"component": "Provide actionable steps that put the pencils in the jar, scrap paper in the recycling bin, and book and cup on the shelf.", "pass": false},
+      {"component": "Assign durations or time intervals that together account for 7 minutes.", "pass": false}
+    ],
+    "reason": "The answer opens the closed book, empties an already empty cup, and puts scrap paper and the recycling bin on the shelf. It never supplies the required placements or allocates time among steps; saying 'in 7 minutes' is not a timed plan.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_004",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_preparation_plan", "missing_time_allocation", "missing_item_coverage"],
+    "required_components_pass": [
+      {"component": "Provide three preparation phases whose durations total 8 minutes.", "pass": false},
+      {"component": "Account for the tote and all five other listed items; the hat may be packed or worn.", "pass": false}
+    ],
+    "reason": "The prompt already supplies the equipment and desired preparation format. The generic clarification question supplies no phases, timings, or item preparation.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_008",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["inaccurate_shadow_explanation"],
+    "required_components_pass": [
+      {"component": "Explain that the object blocks light and that the less-lit region behind it is a shadow.", "pass": false},
+      {"component": "Use exactly two short, understandable sentences.", "pass": true}
+    ],
+    "reason": "The two short sentences begin with the useful idea that an object blocks sunlight, but the second incorrectly places the object between light and the object itself. The explanation never clearly identifies the less-lit region behind the blocking object as the shadow.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_030",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question"],
+    "required_components_pass": [
+      {"component": "State that Leena's birthday date is unavailable from the supplied conversation and memory; optionally ask the user to provide it.", "pass": false}
+    ],
+    "reason": "The generic request for more detail does not state that Leena's birthday is unavailable or identify the missing date being requested.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_046",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": ["execution_failed", "absent_output"],
+    "required_components_pass": [
+      {"component": "Ask which of the three supplied titles the user means by the other one.", "pass": false}
+    ],
+    "reason": "The recorded execution failed and delivered no clarification or other text.",
+    "useful_general_help": null
+  }
+]

@@ -1,0 +1,22 @@
+.....................................F..........F..........slot 01 qwen3:0.6b OFF r1 1/2 request interrupted 0.006s
+.......
+======================================================================
+FAIL: test_mixed_request_answers_only_standalone_general_fragment (test_reliable_conversation.ReliableConversationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_reliable_conversation.py", line 233, in test_mixed_request_answers_only_standalone_general_fragment
+    self.assertIn("time or date", result.response.speech)
+AssertionError: 'time or date' not found in "I don't have that earlier information available. What time is your appointment? Batteries convert chemical energy into electrical energy."
+
+======================================================================
+FAIL: test_required_missing_returns_application_question_without_generation (test_reliable_conversation.ReliableConversationTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_reliable_conversation.py", line 167, in test_required_missing_returns_application_question_without_generation
+    self.assertIn("What time is your appointment?", result.response.speech)
+AssertionError: 'What time is your appointment?' not found in "I don't have that earlier information available. Could you remind me of the time or date?"
+
+----------------------------------------------------------------------
+Ran 66 tests in 0.553s
+
+FAILED (failures=2)

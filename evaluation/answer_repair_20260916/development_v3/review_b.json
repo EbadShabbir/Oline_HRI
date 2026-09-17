@@ -1,0 +1,146 @@
+[
+  {
+    "id": "fresh_048",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Ask which operation or result the user wants, such as a sum, average, or another calculation.", "pass": true}
+    ],
+    "reason": "The response directly asks what calculation is wanted for the supplied numbers without inventing an operation or treating it as personal recall.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_001",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["incorrect_item_destinations", "missing_pencil_storage", "missing_scrap_recycling", "missing_book_storage"],
+    "required_components_pass": [
+      {"component": "Provide actionable steps that put the pencils in the jar, scrap paper in the recycling bin, and book and cup on the shelf.", "pass": false},
+      {"component": "Assign durations or time intervals that together account for 7 minutes.", "pass": true}
+    ],
+    "reason": "The allocations correctly total seven minutes, and putting the cup on the shelf is useful. However, the book and pencils are left on the table instead of stored, the scraps are not recycled, and repositioning the already adjacent bin does not complete the required placements.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_004",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_pencil_eraser_and_hat", "redundant_refill_of_filled_bottle"],
+    "required_components_pass": [
+      {"component": "Provide three preparation phases whose durations total 8 minutes.", "pass": true},
+      {"component": "Account for the tote and all five other listed items; the hat may be packed or worn.", "pass": false}
+    ],
+    "reason": "Three material-positioning/preparation phases have correct allocations of three, three, and two minutes. They cover the tote, sketchbook, and bottle, but omit the pencil, eraser, and sun hat and unnecessarily refill a bottle the prompt says is filled. The partial staging instructions do not complete preparation of all listed items.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_015",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Provide four nonempty poetic lines about rain and a window.", "pass": true},
+      {"component": "Use the word lantern exactly once and omit a title or explanatory preface.", "pass": true}
+    ],
+    "reason": "The delivered poem has four nonempty lines with rain and window imagery, uses 'lantern' once, and adds no title or preface.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_009",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_invitation", "missing_supplied_details", "sentence_count_violation"],
+    "required_components_pass": [
+      {"component": "Produce a friendly invitation in two sentences addressed to Noor.", "pass": false},
+      {"component": "Include paper crafts, the user's home, this Sunday at 3 p.m., and the request for one magazine.", "pass": false}
+    ],
+    "reason": "The fully specified invitation is replaced by a generic clarification question. No draft, event details, or requested two-sentence format is supplied.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_014",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Return header item,count followed by rows red buttons,8; blue buttons,3; green buttons,5, each on its own line.", "pass": true},
+      {"component": "Provide CSV text without surrounding explanation or a code fence.", "pass": true}
+    ],
+    "reason": "The CSV contains the exact header and three correct rows in the requested order, each on its own line, with no surrounding prose or fence.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_035",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Explain that no user-stated departure station is available.", "pass": true},
+      {"component": "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure.", "pass": true}
+    ],
+    "reason": "The answer acknowledges missing earlier station information, explicitly distinguishes an assistant guess from what the user stated, and asks for the missing station without adopting the guess.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_040",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "State that the previously named game is unavailable.", "pass": true},
+      {"component": "Provide a two-sentence explanation connecting an agreed turn order with reduced confusion and a fair or orderly chance to participate.", "pass": true}
+    ],
+    "reason": "The response acknowledges unavailable game recall and asks for the specific game. Its independent two-sentence explanation connects agreed turns to fairness, less confusion, and organized turn taking.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_038",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Explain that the previously stated suitcase color is unavailable.", "pass": true},
+      {"component": "Provide a generic packing checklist with three ordinary, useful travel items or item categories.", "pass": true}
+    ],
+    "reason": "The answer acknowledges unavailable suitcase-color recall and supplies three useful checklist groups: phone/navigation essentials, suitable clothing, and first-aid/hydration supplies. The rubric permits item categories, so related supplies may be grouped; the first marker sharing the introduction's line does not violate a requested bullet-specific format.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_016",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Use exactly two bullets, covering rectangles and squares.", "pass": true},
+      {"component": "Explain that rectangles have four right angles, while squares also have all four sides equal, supporting the requested relationship.", "pass": true}
+    ],
+    "reason": "Exactly two bullets correctly describe rectangle right angles and the additional equal-side condition for squares, establishing that every square is a rectangle but not every rectangle is a square.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_011",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Combine or rewrite the second version as one sentence inviting people to the sketch swap.", "pass": true},
+      {"component": "Preserve 18 October and Room 2.", "pass": true}
+    ],
+    "reason": "The answer combines the second version into one invitation sentence and preserves the exact date and room.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_003",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_time_allocation", "missing_clue_texts", "missing_placement_sequence"],
+    "required_components_pass": [
+      {"component": "Give setup time allocations totaling 12 minutes.", "pass": false},
+      {"component": "Provide three clue texts and a coherent placement sequence: the handed-over clue leads to the next card, that card leads to the third, and the third leads to the prize.", "pass": false},
+      {"component": "Use only the table, chair, and shelf as hiding or destination locations; using every listed feature is not mandatory.", "pass": true}
+    ],
+    "reason": "The generic clarification supplies no timed setup, clues, or placement chain although the request provides enough information. It introduces no prohibited location, but the substantive task remains entirely undelivered.",
+    "useful_general_help": false
+  }
+]

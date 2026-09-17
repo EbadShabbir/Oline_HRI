@@ -1,0 +1,23 @@
+{
+  "created_at": "2026-09-17T10:34:03.078639+00:00",
+  "purpose": "Preserve exact pending-state documents before appending completed fresh-evaluation findings. The prior progress manifest remains unchanged; verify changed document entries through this explicit mapping.",
+  "progress_manifest_sha256": "b4dcc8823ac3633270a1399d674dd6003f6e0a4dace68bf9b63da383f49f4101",
+  "documents": {
+    "README.md": {
+      "snapshot_path": "evaluation/answer_repair_20260916/pre_completion_snapshot/files/README.md",
+      "sha256": "c1c50d47e14aac1dfb1d0504961fa5ce25161197a45790f37741cd50451094d4"
+    },
+    "results.md": {
+      "snapshot_path": "evaluation/answer_repair_20260916/pre_completion_snapshot/files/results.md",
+      "sha256": "f2b035fd3322634bdc795137bb829036c34374b4ab18d6316cba69620fec2b07"
+    },
+    "evaluation/answer_repair_20260916/README.md": {
+      "snapshot_path": "evaluation/answer_repair_20260916/pre_completion_snapshot/files/evaluation/answer_repair_20260916/README.md",
+      "sha256": "59cfa808f204b7491e35455fc12f739bc1543a200132fc39eaa379b19be31f18"
+    },
+    "evaluation/answer_repair_20260916/fresh_holdout/README.md": {
+      "snapshot_path": "evaluation/answer_repair_20260916/pre_completion_snapshot/files/evaluation/answer_repair_20260916/fresh_holdout/README.md",
+      "sha256": "403c5fe53aa230ea7c7f874b4413e3a365026d49ccc3b11839806eec97924556"
+    }
+  }
+}

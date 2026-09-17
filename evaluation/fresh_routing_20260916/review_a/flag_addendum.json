@@ -1,0 +1,13 @@
+[
+  {
+    "id": "fresh_001",
+    "original_judgment_file": "review_a/batch_007_013.json",
+    "addendum_type": "overlapping_flag_clarification",
+    "proposed_additional_flags": ["unsupported_action_claim"],
+    "action_claim_type": "future_physical_actor_promise",
+    "performed_action_claim": false,
+    "evidence": "I will reset the table in 7 minutes. I will first open the sketchbook, then use the pencil jar, and finally empty the cup.",
+    "reason": "The request was for a timed plan, not a first-person draft. The delivered answer promises that the assistant will perform physical table-resetting actions without support for that capability. This is a future promise, not a claim that an action has already been performed. The original judgment already fails for incorrect item destinations and missing time allocations; that judgment remains unchanged.",
+    "provenance": "Added after the independent batch judgment, following the reviewer's consistency check while reviewing fresh_006 and the coordinator's request to preserve the clarification separately. No other reviewer judgments or raw inference data were inspected."
+  }
+]

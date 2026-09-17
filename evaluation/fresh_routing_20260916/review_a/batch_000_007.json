@@ -1,0 +1,139 @@
+[
+  {
+    "id": "fresh_023",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": [
+      "sentence_count_violation",
+      "off_task_content"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide a warm, understandable two-sentence welcome message suitable for a casual board-game group.",
+        "pass": false
+      },
+      {
+        "component": "Use the supplied fallback when no writing-tone memory is available.",
+        "pass": true
+      }
+    ],
+    "reason": "The opening provides a usable warm welcome, but the delivered draft has five sentences rather than the required two and adds unnecessary companion-role language.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_027",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "missing_general_component",
+      "unnecessary_clarification",
+      "nonanswer"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide an order containing each of the four supplied chores once.",
+        "pass": false
+      },
+      {
+        "component": "Give a short plausible reason for the chosen default order.",
+        "pass": false
+      }
+    ],
+    "reason": "The request supplies all four chores and permits a default order. The response asks for unspecified context and supplies neither an order nor a reason.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_041",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "missing_general_component",
+      "nonspecific_followup",
+      "nonanswer"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's pickup branch is unavailable.",
+        "pass": false
+      },
+      {
+        "component": "Order the supplied titles as Amber Trail, Cedar Boat, Willow Door.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic request for detail neither acknowledges the unavailable pickup branch nor alphabetizes the fully supplied titles.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_022",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "incomplete_general_component",
+      "request_echo"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Offer an indoor solo break that fits within 15 minutes and can be done with the supplied items.",
+        "pass": false
+      },
+      {
+        "component": "Make the proposal usable without any recalled hobby.",
+        "pass": false
+      }
+    ],
+    "reason": "Stretching is a relevant generic break idea, but no self-contained break using the supplied notebook, pen, and chair is delivered. Reading requires an unlisted book; the remaining text promises or restates the requested proposal instead of completing it.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_048",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "nonspecific_clarification"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask which operation or result the user wants, such as a sum, average, or another calculation.",
+        "pass": false
+      }
+    ],
+    "reason": "The response requests more information without asking which calculation or result is wanted, leaving the particular task ambiguity unidentified.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_047",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_error",
+      "empty_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask whether the intended recipient is Alex Kim or Alex Rao before committing to one addressed reply.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and delivered no text; the required recipient clarification was not delivered.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_032",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "nonspecific_followup"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that the frame's previously supplied width, height, and units are unavailable; a request for the measurements is acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic request for more detail does not explain that the previous width, height, and units are unavailable or specifically request the missing measurements.",
+    "useful_general_help": null
+  }
+]

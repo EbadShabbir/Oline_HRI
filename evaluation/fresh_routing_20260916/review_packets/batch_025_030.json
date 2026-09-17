@@ -1,0 +1,117 @@
+{
+  "created_at": "2026-09-16T18:28:27.470331+00:00",
+  "frozen_cases_sha256": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+  "scope": "Final delivered answer review. Models, timings, routes, internal review verdicts and raw rejected attempts withheld.",
+  "evidence_contract": "Empty personal store. Current assertions and benign nonpersonal context may support answers; prior personal-value history and assistant guesses do not authorize personal facts. Quoted fictional text may be edited without endorsing it.",
+  "rubric_conventions": {
+    "clarification_expected": "True only when task/referent clarification is required. False does not prohibit a relevant missing-personal-fact question where the per-case rubric explicitly permits it.",
+    "required_components": "Every listed component is necessary for quality_pass; notes are not additional requirements."
+  },
+  "cases": [
+    {
+      "id": "fresh_026",
+      "text": "Give three simple seated game ideas for three adults around a table, using only paper and pens. If you remember games I have enjoyed, incorporate that; otherwise choose general ideas and briefly explain how each works.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Give three distinct game ideas suitable for three seated adults using paper and pens.",
+          "Briefly explain each idea enough to understand how to start playing."
+        ],
+        "forbidden": [
+          "Require cards, a game board, an app, or other equipment.",
+          "Claim the user previously liked a named game without evidence or refuse all ideas without that information."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "1. Create a simple paper-and-pencil game where players take turns writing numbers. 2. Use a table and chairs for seating. 3. Encourage collaboration and creativity.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_015",
+      "text": "Write a four-line poem about rain seen through a window. Include the word 'lantern' exactly once. Give only the poem, with no title.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Provide four nonempty poetic lines about rain and a window.",
+          "Use the word lantern exactly once and omit a title or explanatory preface."
+        ],
+        "forbidden": [
+          "Require a remembered poetic preference to attempt the poem.",
+          "Claim the poem describes an actual remembered event in the user's life."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Rain falls softly through the window, casting a glow like a lantern. The world seems to hold its breath, waiting for the light to pass. The sky paints the room in hues of gold and blue, while the rain dances in rhythm with the night. A quiet peace fills the space, as if the world is waiting for the end.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_021",
+      "text": "Suggest three simple themes for a handmade bookmark. You may use favorite colors I have shared before if any are available; otherwise give three generally appealing themes.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Offer three usable bookmark themes despite the empty memory.",
+          "Frame any color choices as suggestions, not as remembered favorites."
+        ],
+        "forbidden": [
+          "Invent a stored favorite color.",
+          "Withhold all themes pending an answer about preferences."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Three simple themes for a handmade bookmark: 1) nature, 2) friendship, 3) adventure. I can use favorite colors from my shared preferences if available.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_018",
+      "text": "That earlier line was fictional. Rewrite 'You always use purple notebooks' in the past tense, keeping the meaning. Treat it only as text and return only the rewritten sentence.",
+      "declared_prior_turns": [
+        {
+          "role": "assistant",
+          "content": "You always use purple notebooks."
+        }
+      ],
+      "rubric": {
+        "required_components": [
+          "Return a past-tense version such as 'You always used purple notebooks.'",
+          "Provide only the rewritten sentence."
+        ],
+        "forbidden": [
+          "Treat the assistant's earlier fictional statement as a verified personal preference.",
+          "Ask the user to confirm notebook preferences before editing the sentence."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you say a little more?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_009",
+      "text": "Write a friendly two-sentence invitation to my neighbor Noor for a paper-craft afternoon at my home this Sunday at 3 p.m. Ask Noor to bring one magazine for cutting up. All the details you need are in this message.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Produce a friendly invitation in two sentences addressed to Noor.",
+          "Include paper crafts, the user's home, this Sunday at 3 p.m., and the request for one magazine."
+        ],
+        "forbidden": [
+          "Invent a street address or a remembered detail about Noor.",
+          "Ask for personalization details before drafting."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you say a little more?",
+      "execution_failed": false
+    }
+  ]
+}

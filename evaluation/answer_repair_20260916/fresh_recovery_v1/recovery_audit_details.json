@@ -1,0 +1,234 @@
+{
+  "created_at": "2026-09-17T10:53:17.249645+00:00",
+  "scope": "Separate operational recovery replay of 16 now-observed cases. Identical candidate/cases/guards; not new holdout evidence, pooled quality, or a causal cleanup/speedup experiment.",
+  "operational_success": true,
+  "evaluation_complete": true,
+  "checks_passed": 260,
+  "checks_failed": 0,
+  "all_planned_observations_recorded": true,
+  "first_fresh_attempt_retained": {
+    "quality": 0,
+    "denominator": 16,
+    "checks_passed": 258,
+    "checks_failed": 2,
+    "evaluation_complete": false,
+    "artifact_sha256": "dac015aa8943da6e76fc62495acca948628b378eea3abd1132777e50e1b2f4f9"
+  },
+  "start_utc": "2026-09-17T10:47:46.699365+00:00",
+  "finish_utc": "2026-09-17T10:49:28.285659+00:00",
+  "runner_wall_seconds": 100.798340266,
+  "snapshot_interval_seconds": 101.586294,
+  "start_resources": {
+    "available_kib": 2308424,
+    "swap_used_kib": 0,
+    "max_temperature_c": 50.531
+  },
+  "telemetry": {
+    "samples": 200,
+    "minimum_free_ram_mb": 1177,
+    "maximum_swap_used_mb": 276,
+    "maximum_temperature_c": 59.875,
+    "maximum_sample_gap_seconds": 1.991219364,
+    "residency_scope": "Snapshots show startup/final empty. Existing backend checks enforce at most one resident model; raw tegrastats has no model-residency field.",
+    "duration_seconds": 100.957215511,
+    "ram_measurement_note": "minimum_free_ram_mb is tegrastats total-minus-used RAM, not the MemAvailable quantity used by the runtime guard."
+  },
+  "guard_violation": null,
+  "cleanup_errors": [],
+  "final_resident_models": [],
+  "final_available_kib": 2397772,
+  "final_swap_used_kib": 282368,
+  "counts": {
+    "raw_match": 14,
+    "thresholded_match": 10,
+    "final_match": 12,
+    "quality_pass": 4,
+    "combined_pass": 4
+  },
+  "statuses": {
+    "ok": 16
+  },
+  "latency": {
+    "overall_observed": {
+      "n": 16,
+      "mean_seconds": 6.2772873558125,
+      "minimum_seconds": 3.148752981,
+      "maximum_seconds": 27.281662464,
+      "p50_seconds": 4.684181837500001,
+      "p95_seconds": 13.566017937749999
+    },
+    "delivered_model_generated": {
+      "n": 16,
+      "mean_seconds": 6.2772873558125,
+      "minimum_seconds": 3.148752981,
+      "maximum_seconds": 27.281662464,
+      "p50_seconds": 4.684181837500001,
+      "p95_seconds": 13.566017937749999
+    },
+    "application_only": {
+      "n": 0,
+      "p50_seconds": null,
+      "p95_seconds": null,
+      "mean_seconds": null,
+      "minimum_seconds": null,
+      "maximum_seconds": null
+    },
+    "full_quality": {
+      "n": 4,
+      "mean_seconds": 4.87889450625,
+      "minimum_seconds": 3.236337251,
+      "maximum_seconds": 8.055127453,
+      "p50_seconds": 4.1120566605,
+      "p95_seconds": 7.591038417400001
+    },
+    "combined_success": {
+      "n": 4,
+      "mean_seconds": 4.87889450625,
+      "minimum_seconds": 3.236337251,
+      "maximum_seconds": 8.055127453,
+      "p50_seconds": 4.1120566605,
+      "p95_seconds": 7.591038417400001
+    }
+  },
+  "quality_deadlines": {
+    "5": {
+      "count": 3,
+      "denominator": 16,
+      "rate": 0.1875
+    },
+    "10": {
+      "count": 4,
+      "denominator": 16,
+      "rate": 0.25
+    },
+    "30": {
+      "count": 4,
+      "denominator": 16,
+      "rate": 0.25
+    },
+    "60": {
+      "count": 4,
+      "denominator": 16,
+      "rate": 0.25
+    }
+  },
+  "useful_general_help": {
+    "count": 10,
+    "denominator": 12,
+    "rate": 0.8333333333333334
+  },
+  "calls": {
+    "total": 41,
+    "by_role": {
+      "answer_generation": 17,
+      "answer_review": 16,
+      "dependency_review": 8
+    },
+    "by_model": {
+      "qwen3:1.7b": 41
+    },
+    "by_status": {
+      "ok": 41
+    },
+    "bound_violations": {},
+    "recorded_call_wall_seconds_total": 97.503413487,
+    "backend_total_seconds_available": 96.791439446,
+    "backend_load_seconds_available": 20.141820111,
+    "calls_missing_backend_duration": 0,
+    "deterministic_size_policy_cases": [
+      "repair_holdout_001",
+      "repair_holdout_002",
+      "repair_holdout_003",
+      "repair_holdout_004",
+      "repair_holdout_005",
+      "repair_holdout_006",
+      "repair_holdout_007",
+      "repair_holdout_008",
+      "repair_holdout_009",
+      "repair_holdout_010",
+      "repair_holdout_011",
+      "repair_holdout_012",
+      "repair_holdout_013",
+      "repair_holdout_014",
+      "repair_holdout_015",
+      "repair_holdout_016"
+    ],
+    "candidate_within_declared_call_bounds": true,
+    "timing_interpretation": "Backend load is part of backend total; call wall is part of case wall. No causal overhead estimate is inferred."
+  },
+  "memory": {
+    "retrieval_calls": 4,
+    "successful_empty_retrievals": 4,
+    "retrieval_error_count": 0,
+    "retrieval_errors": [],
+    "candidate_retrieval_operations_successful": true,
+    "table_counts": {
+      "memory_item": 0,
+      "memory_audit": 0,
+      "memory_embedding": 0,
+      "memory_fts": 0
+    },
+    "database_quick_check": "ok",
+    "error_interpretation": "Recorded retrieval errors are candidate outcomes, not empty-result successes or artifact-integrity failures."
+  },
+  "prompt_boundaries": {
+    "messages_checked": 82,
+    "rubric_strings_available": 59,
+    "findings": [],
+    "scope": "Checks hidden rubric-field keys, case IDs, and unique complete rubric sentences >=40 characters/6 words absent from authorized input. Generic mode words are intentionally excluded; this literal check is not proof against semantic leakage."
+  },
+  "semantic_personal_recall_failure": {
+    "id": "repair_holdout_011",
+    "requested_text": "Which pattern did I tell you I had chosen for my patchwork cushion? I want the pattern I already selected, not a new suggestion.",
+    "expected_modes": [
+      "required"
+    ],
+    "final_mode": "none",
+    "mode_source": "dependency_review",
+    "delivered_text": "You mentioned choosing a pattern for your patchwork cushion. The pattern you selected was a floral print with geometric accents. Let me confirm that this is the one you wanted.",
+    "retrieval_status": "skipped",
+    "memory_diagnostics": {
+      "retrieved_ids": [],
+      "supplied_ids": [],
+      "model_used_ids": []
+    },
+    "reference_ids": [],
+    "application_memory_ids": [],
+    "raw_dependency_review": "{\"mode\": \"none\"}",
+    "raw_answer_review": "{\n  \"verdict\": \"pass\",\n  \"reason\": \"supported_answer\"\n}",
+    "judgment": {
+      "id": "repair_holdout_011",
+      "quality_pass": false,
+      "primary_outcome": "unsupported_personalization",
+      "flags": [
+        "invented_recalled_cushion_pattern",
+        "unavailability_not_acknowledged"
+      ],
+      "required_components_pass": [
+        {
+          "component": "Clearly state that the previously chosen pattern is unavailable from the supplied context or memory; a relevant follow-up request is optional.",
+          "pass": false
+        }
+      ],
+      "reason": "The answer asserts a floral print with geometric accents as the user's selected pattern despite the empty personal store and absence of that information in the prompt. Offering to confirm the assertion does not make it supported or acknowledge unavailable recall.",
+      "useful_general_help": null
+    },
+    "interpretation": "The fabricated recall is not backed by stored or supplied evidence. Empty evidence identifiers and a passing runtime answer review did not establish semantic support. The independent delivered-quality failure is preserved."
+  },
+  "limited_conclusion": "One bounded 16-case execution finished under existing guards. This does not erase either earlier resource-aborted run, establish long-duration stability, or establish acceptable answer quality.",
+  "artifact_sha256": {
+    "independent_audit.json": "3adef308a007ab0e29fc017ec5e5be1e0a163c4a64a16ed0d71443f9afb35214",
+    "independent_audit_source.py": "81fccb858656a22fd55af27a468e9b4e3911fe6bea41add78ea9a13c5ace080a",
+    "independent_cleanup_audit.json": "d2efcd217443867d60d1b89507d468f15d4cdcbff127b503fb6553e3351130e4",
+    "candidate_freeze.json": "dadaa08f140ae6295dfb391affa56db2c7e174d366497f55346b84062612e96a",
+    "evaluation_freeze.json": "333ae40a6ef6ee636fb54f6e04b169f1e011cd9d71b482343c01657d0d522546",
+    "cases.json": "c621f0b9cba7c0bd22dae169261a8694fc6c6f2c9f08f3553ac727e0ab3c22bf",
+    "metrics.json": "ed56d9952a43a0e8af0557c493f79f911fcc1deeed7b756f092b8129df79af49",
+    "adjudicated_judgments.json": "953318c880f71612a8d66adb304a544e00835d68c61a28aaea413198e3a20be4",
+    "collection/start.json": "6bf9eba06fdeb082fbe19ce45d27a92768aeb068b3a9bf274ed2bf181fa8ae3c",
+    "collection/finish.json": "a868d81d365e0e46f1ab030ac7dc258e102a24edaedbd9187bb43b036ba0aec6",
+    "collection/run/summary.json": "4bab064faec64e51b123c4161478aae45a8a2ef8b0a64d1f421ecdbb773f6d4e",
+    "collection/run/observations.jsonl": "5f303be7fc39220ee65cc2e43c0b25e0ac2c831bc5f37a3b2f87b0923c27f006",
+    "collection/telemetry.jsonl": "5ba683d7490160097ef796c7a0c414a68c50765ce36d1313466b98337950b0a9"
+  }
+}

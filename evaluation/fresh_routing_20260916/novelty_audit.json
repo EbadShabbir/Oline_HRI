@@ -1,0 +1,755 @@
+{
+  "scope": "Available named case/training/workload JSON wording audit; not a semantic or pretraining novelty guarantee.",
+  "corpus_sha256": "24261d24ceffecf1c2e94d9b516ed5af8aea8ac0b0e81d4187cd061a191a9062",
+  "case_count": 48,
+  "expected_modes": {
+    "none": 20,
+    "optional": 8,
+    "required": 14,
+    "clarify": 6
+  },
+  "within_corpus_unique_normalized_texts": 48,
+  "prior_unique_prompts": 765,
+  "prior_file_sha256": {
+    "evaluation/fictional_seven_day_v1.json": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e",
+    "evaluation/fictional_seven_day_v1_1.json": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d",
+    "evaluation/routing_reliability_20260914/dependency_training_v2.json": "ca0cab074d42a1d7bfc7036eec7c77e91d86e4da43516a63beef27a16b77e0a4",
+    "evaluation/routing_reliability_20260914/quality_cases_v3.json": "b92b58264dc313a3086e046e55f453597234e24464098885949735876a0bc1c9",
+    "evaluation/routing_reliability_20260914/dependency_observed_regressions_v2.json": "da5afa1c23ef26c2ca0bee8c48b32581c58b19c3110cbb703dbc0aabe65bc2c0",
+    "evaluation/routing_reliability_20260914/dependency_training_v1.json": "266850cfd685140b8282d1d3a0f502d10858785bf8676f6792c2832971d14bd3",
+    "evaluation/routing_reliability_20260914/dependency_training_expansion_v2.json": "96c624f001f92d970ecfe9b8d3185b93375f0d749facbf1de5eb747c289c68ba",
+    "evaluation/routing_reliability_20260914/release_cases_v1.json": "9d44076a5c1d7d3d248fdf53b99c740cd9367013f4b885f173c2acbd3a3da56b",
+    "evaluation/routing_reliability_20260914/release_cases_v2.json": "abca3ad3fb364995b6673c6835b3bde28218c92e239266bc4b0825a02abe0eea",
+    "evaluation/routing_reliability_20260914/candidate_freeze_v3/source/src/oline_hri/fictional_seven_day_v1.json": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e",
+    "evaluation/routing_reliability_20260914/candidate_freeze_v3/source/src/oline_hri/fictional_seven_day_v1_1.json": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d",
+    "evaluation/routing_reliability_20260914/candidate_freeze_v3/validation/evaluation/routing_reliability_20260914/quality_cases_v3.json": "b92b58264dc313a3086e046e55f453597234e24464098885949735876a0bc1c9",
+    "evaluation/routing_reliability_20260914/candidate_snapshot_v4/source/src/oline_hri/fictional_seven_day_v1.json": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e",
+    "evaluation/routing_reliability_20260914/candidate_snapshot_v4/source/src/oline_hri/fictional_seven_day_v1_1.json": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d",
+    "evaluation/routing_reliability_20260914/candidate_snapshot_v4/validation/tmp/deployment_context_v4_cases.json": "291b249b3762db4dc6fcffe63b348aa6010830095711c72dae59a8a9621359e6",
+    "evaluation/routing_reliability_20260914/candidate_freeze_v1/source/src/oline_hri/fictional_seven_day_v1.json": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e",
+    "evaluation/routing_reliability_20260914/candidate_freeze_v1/source/src/oline_hri/fictional_seven_day_v1_1.json": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d",
+    "evaluation/routing_reliability_20260914/candidate_freeze_v2/source/src/oline_hri/fictional_seven_day_v1.json": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e",
+    "evaluation/routing_reliability_20260914/candidate_freeze_v2/source/src/oline_hri/fictional_seven_day_v1_1.json": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d",
+    "evaluation/post_memory_comparison_20260912/workload.json": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+    "evaluation/post_memory_comparison_20260912/frozen_v1/workload.json": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+    "evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1/workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+    "evaluation/post_memory_comparison_20260912/run_v2/01_large_r1/workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+    "evaluation/post_memory_comparison_20260912/frozen_v2/workload.json": "5599e106f4bb502a96e92538bee70cec3ee8743a3e282bbc2051354bb5c7ec59",
+    "evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2/workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+    "evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1/workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+    "evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3/workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+    "evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3/workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+    "evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2/workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+    "evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3/workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+    "evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2/workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+    "evaluation/post_memory_comparison_20260912/run_v1/01_small_r1/workload.json": "4cc7555c45cbc6b62b9217235714fbbbd5a4921e6862b174a56d1a3cccb983a4",
+    "evaluation/model_pair_runs/20260910_recall_paraphrases.json": "5003916425a9eb5870cad6b913912e1463c0bf8a3dba4089c594c9e84d772be5",
+    "evaluation/model_pair_runs/20260910_reliability_paraphrases.json": "51e3f460acaa1f97ce052a994ed7093dba4cc1093cf063f70b964d7645e2eef7",
+    "evaluation/routing_overhead_20260912/workload.json": "d8e2cd9a03accbdfb2a81a79045dba92485a8f6a94a4c3ddec095cd7c2fddd8b",
+    "evaluation/routing_overhead_20260912/frozen_v1/workload.json": "d8e2cd9a03accbdfb2a81a79045dba92485a8f6a94a4c3ddec095cd7c2fddd8b",
+    "evaluation/routing_overhead_20260912/frozen_v2/workload.json": "d8e2cd9a03accbdfb2a81a79045dba92485a8f6a94a4c3ddec095cd7c2fddd8b",
+    "evaluation/complete_system_20260911/workload.json": "5ac0f9f8c160862e0a14a2162e6bda0d61a3cdf6045ed31e844f63f93996542c",
+    "tmp/deployment_context_v4_cases.json": "291b249b3762db4dc6fcffe63b348aa6010830095711c72dae59a8a9621359e6",
+    "tmp/reliable_final_original_cases_v1.json": "d611842b3a0445a621bd11b855bc4397b59c46cb6e0ac44eccb7c7db6a5e72dd",
+    "tmp/reliable_optional_regression_v2_cases.json": "16cc2f65b61dbf31e640566008f228bad77dcc8c5da53f845276d88ef95ef956",
+    "tmp/dependency_C_development_cases_v3.json": "ef6f7bc0c835025c173e6ccf0f06cd1238169f343742c7497484d05cbb54c064",
+    "tmp/reliable_affected_v3_cases.json": "70e3d30e1df01229abf311c137104a692311e574d1e19209fbf75a23134ab645",
+    "tmp/dependency_regression_v2/sources/tmp/reliable_development_20260914/smoke_cases_v1.json": "de23ddb0a2d61f6f45720804c62d3f62059525bf305bffee5a6b6c76b30aea3a",
+    "tmp/dependency_regression_v2/sources/tmp/routing_robustness_20260914/independent_cases.json": "05be6f6b78b377603d1c5cee3745c2120c0f304312bfe0d86e73fa6b2cdf812a",
+    "tmp/dependency_grid_v2/corpus.json": "ca0cab074d42a1d7bfc7036eec7c77e91d86e4da43516a63beef27a16b77e0a4",
+    "tmp/dependency_candidates_v3/sources/tmp/reliable_development_20260914/smoke_cases_v1.json": "de23ddb0a2d61f6f45720804c62d3f62059525bf305bffee5a6b6c76b30aea3a",
+    "tmp/dependency_candidates_v3/sources/tmp/routing_robustness_20260914/independent_cases.json": "05be6f6b78b377603d1c5cee3745c2120c0f304312bfe0d86e73fa6b2cdf812a",
+    "tmp/practical_answers_20260915/final_practical_cases.json": "09d8040b5d08b763ee15cc8179db5ef1dda677ec3300489bc6f7a0d25cd733b4",
+    "tmp/practical_answers_20260915/cases.json": "82d65abdb0b0783a31d6a918e0c077582d17a7f4314f245f75a2cf5c58c48c91",
+    "tmp/practical_answers_20260915/final_source/src/oline_hri/fictional_seven_day_v1.json": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e",
+    "tmp/practical_answers_20260915/final_source/src/oline_hri/fictional_seven_day_v1_1.json": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d",
+    "tmp/reliable_development_20260914/smoke_cases_v1.json": "de23ddb0a2d61f6f45720804c62d3f62059525bf305bffee5a6b6c76b30aea3a",
+    "tmp/dependency_training_v2/corpus.json": "266850cfd685140b8282d1d3a0f502d10858785bf8676f6792c2832971d14bd3",
+    "tmp/dependency_training_v1/corpus.json": "266850cfd685140b8282d1d3a0f502d10858785bf8676f6792c2832971d14bd3",
+    "tmp/routing_robustness_20260914/independent_cases.json": "05be6f6b78b377603d1c5cee3745c2120c0f304312bfe0d86e73fa6b2cdf812a",
+    "tmp/conversation_opening_20260915/final_desk_case.json": "229441cc731e182c52cf6e5446bcfcc84fbfefdcf0a69c4076383206f8e563e7",
+    "tmp/conversation_opening_20260915/affected_cases.json": "5ecbf1e284095d5fb4f270e58fbbf7cea0b3ad0146ab90e3ae3c32a588d8a534",
+    "tmp/conversation_opening_20260915/cases.json": "5b74da3901b1648a5b3a226a82cf78cbbebe69845500f6ffa90f2191245ed5df",
+    "tmp/dependency_development_v1/sources/tmp/reliable_development_20260914/smoke_cases_v1.json": "de23ddb0a2d61f6f45720804c62d3f62059525bf305bffee5a6b6c76b30aea3a",
+    "tmp/dependency_development_v1/sources/tmp/routing_robustness_20260914/independent_cases.json": "05be6f6b78b377603d1c5cee3745c2120c0f304312bfe0d86e73fa6b2cdf812a",
+    "src/oline_hri/fictional_seven_day_v1.json": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e",
+    "src/oline_hri/fictional_seven_day_v1_1.json": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d"
+  },
+  "read_errors": [],
+  "rows": [
+    {
+      "id": "fresh_001",
+      "exact_match": false,
+      "maximum_character_similarity": 0.3311827956989247,
+      "nearest_normalized_text": "suppose my dress rehearsal lasts 45 minutes from its stored start time would that finish before the stored finish by time for my next lantern workshop give the finish time and remaining margin",
+      "nearest_source_files": [
+        "evaluation/complete_system_20260911/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_002",
+      "exact_match": false,
+      "maximum_character_similarity": 0.38421052631578945,
+      "nearest_normalized_text": "give me a simple way to learn keyboard shortcuts if a current saved learning preference is available use it otherwise describe a generally useful practice routine",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_003",
+      "exact_match": false,
+      "maximum_character_similarity": 0.3159722222222222,
+      "nearest_normalized_text": "for this fictional gate a red light means stop unless the permit code is 7 with code 7 the action is go regardless of light colour with any other code and a non red light the action is wait give actions for red 5 red 7 and blue 5 in that order",
+      "nearest_source_files": [
+        "evaluation/post_memory_comparison_20260912/frozen_v1/workload.json",
+        "evaluation/post_memory_comparison_20260912/frozen_v2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v1/01_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/01_large_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_004",
+      "exact_match": false,
+      "maximum_character_similarity": 0.3235955056179775,
+      "nearest_normalized_text": "first print all 12 labels at 4 labels per minute only after all printing is finished fold them at 3 labels per minute there is no setup time give the printing time folding time and total time",
+      "nearest_source_files": [
+        "evaluation/complete_system_20260911/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_005",
+      "exact_match": false,
+      "maximum_character_similarity": 0.3595505617977528,
+      "nearest_normalized_text": "the values are 11 17 13 and 19 first correct 17 to 9 give the mean and the median of the corrected four values for four values the median is the average of the middle two after sorting",
+      "nearest_source_files": [
+        "evaluation/post_memory_comparison_20260912/frozen_v1/workload.json",
+        "evaluation/post_memory_comparison_20260912/frozen_v2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v1/01_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/01_large_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_006",
+      "exact_match": false,
+      "maximum_character_similarity": 0.328719723183391,
+      "nearest_normalized_text": "for this fictional gate a red light means stop unless the permit code is 7 with code 7 the action is go regardless of light colour with any other code and a non red light the action is wait give actions for red 5 red 7 and blue 5 in that order",
+      "nearest_source_files": [
+        "evaluation/post_memory_comparison_20260912/frozen_v1/workload.json",
+        "evaluation/post_memory_comparison_20260912/frozen_v2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v1/01_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/01_large_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_007",
+      "exact_match": false,
+      "maximum_character_similarity": 0.3701492537313433,
+      "nearest_normalized_text": "compare offers a and b a gives 6 folders for 18 credits b gives 5 folders for 20 credits identify the lower cost per folder and the difference per folder",
+      "nearest_source_files": [
+        "evaluation/routing_overhead_20260912/frozen_v1/workload.json",
+        "evaluation/routing_overhead_20260912/frozen_v2/workload.json",
+        "evaluation/routing_overhead_20260912/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_008",
+      "exact_match": false,
+      "maximum_character_similarity": 0.4198895027624309,
+      "nearest_normalized_text": "any cheering up ideas feel free to use an interest of mine or just give ordinary ideas",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_expansion_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_009",
+      "exact_match": false,
+      "maximum_character_similarity": 0.3444730077120823,
+      "nearest_normalized_text": "create a three stage preparation plan for presenting the completed navigation prototype during my preferred project meeting window and explicitly note my answer length preference",
+      "nearest_source_files": [
+        "evaluation/fictional_seven_day_v1.json",
+        "evaluation/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v1/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v1/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v2/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v2/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v3/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v3/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_snapshot_v4/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_snapshot_v4/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "src/oline_hri/fictional_seven_day_v1.json",
+        "src/oline_hri/fictional_seven_day_v1_1.json",
+        "tmp/practical_answers_20260915/final_source/src/oline_hri/fictional_seven_day_v1.json",
+        "tmp/practical_answers_20260915/final_source/src/oline_hri/fictional_seven_day_v1_1.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_010",
+      "exact_match": false,
+      "maximum_character_similarity": 0.47509578544061304,
+      "nearest_normalized_text": "shorten this note without changing its meaning thank you for lending the projector i will return it to reception on friday morning",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_011",
+      "exact_match": false,
+      "maximum_character_similarity": 0.527027027027027,
+      "nearest_normalized_text": "make the second sentence less formal and keep the first sentence unchanged",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_012",
+      "exact_match": false,
+      "maximum_character_similarity": 0.3431151241534989,
+      "nearest_normalized_text": "suppose my dress rehearsal lasts 45 minutes from its stored start time would that finish before the stored finish by time for my next lantern workshop give the finish time and remaining margin",
+      "nearest_source_files": [
+        "evaluation/complete_system_20260911/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_013",
+      "exact_match": false,
+      "maximum_character_similarity": 0.37889688249400477,
+      "nearest_normalized_text": "create a three stage preparation plan for presenting the completed navigation prototype during my preferred project meeting window and explicitly note my answer length preference",
+      "nearest_source_files": [
+        "evaluation/fictional_seven_day_v1.json",
+        "evaluation/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v1/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v1/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v2/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v2/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v3/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v3/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_snapshot_v4/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_snapshot_v4/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "src/oline_hri/fictional_seven_day_v1.json",
+        "src/oline_hri/fictional_seven_day_v1_1.json",
+        "tmp/practical_answers_20260915/final_source/src/oline_hri/fictional_seven_day_v1.json",
+        "tmp/practical_answers_20260915/final_source/src/oline_hri/fictional_seven_day_v1_1.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_014",
+      "exact_match": false,
+      "maximum_character_similarity": 0.38283828382838286,
+      "nearest_normalized_text": "compare offers a and b a gives 6 folders for 18 credits b gives 5 folders for 20 credits identify the lower cost per folder and the difference per folder",
+      "nearest_source_files": [
+        "evaluation/routing_overhead_20260912/frozen_v1/workload.json",
+        "evaluation/routing_overhead_20260912/frozen_v2/workload.json",
+        "evaluation/routing_overhead_20260912/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_015",
+      "exact_match": false,
+      "maximum_character_similarity": 0.41245136186770426,
+      "nearest_normalized_text": "write a two sentence reminder for a shared kitchen asking people to wash their mugs and leave the sink clear give only the reminder",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/candidate_freeze_v3/validation/evaluation/routing_reliability_20260914/quality_cases_v3.json",
+        "evaluation/routing_reliability_20260914/quality_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_016",
+      "exact_match": false,
+      "maximum_character_similarity": 0.4,
+      "nearest_normalized_text": "a code uses x y and z exactly once each x cannot be first and y must be before z list all valid codes and no others",
+      "nearest_source_files": [
+        "evaluation/post_memory_comparison_20260912/frozen_v1/workload.json",
+        "evaluation/post_memory_comparison_20260912/frozen_v2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v1/01_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/01_large_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_017",
+      "exact_match": false,
+      "maximum_character_similarity": 0.34843205574912894,
+      "nearest_normalized_text": "at 14 00 baking starts for 20 minutes and printing starts for 8 minutes cooling takes 15 minutes immediately after baking packing takes 5 minutes and must wait until both printing and cooling finish give the earliest packing start and final finish",
+      "nearest_source_files": [
+        "evaluation/post_memory_comparison_20260912/frozen_v1/workload.json",
+        "evaluation/post_memory_comparison_20260912/frozen_v2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v1/01_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/01_large_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_018",
+      "exact_match": false,
+      "maximum_character_similarity": 0.40131578947368424,
+      "nearest_normalized_text": "analyze how a correction racing with semantic retrieval could expose stale data then propose layered mitigations and their limitations",
+      "nearest_source_files": [
+        "evaluation/fictional_seven_day_v1.json",
+        "evaluation/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v1/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v1/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v2/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v2/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v3/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_freeze_v3/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "evaluation/routing_reliability_20260914/candidate_snapshot_v4/source/src/oline_hri/fictional_seven_day_v1.json",
+        "evaluation/routing_reliability_20260914/candidate_snapshot_v4/source/src/oline_hri/fictional_seven_day_v1_1.json",
+        "src/oline_hri/fictional_seven_day_v1.json",
+        "src/oline_hri/fictional_seven_day_v1_1.json",
+        "tmp/practical_answers_20260915/final_source/src/oline_hri/fictional_seven_day_v1.json",
+        "tmp/practical_answers_20260915/final_source/src/oline_hri/fictional_seven_day_v1_1.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_019",
+      "exact_match": false,
+      "maximum_character_similarity": 0.39543726235741444,
+      "nearest_normalized_text": "read only this description the orange crate holds brushes and the purple crate holds towels which crate holds the towels",
+      "nearest_source_files": [
+        "evaluation/complete_system_20260911/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_020",
+      "exact_match": false,
+      "maximum_character_similarity": 0.40625,
+      "nearest_normalized_text": "create the seating plan using the guest relationships and separation requests i gave you earlier",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_v1.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_training_v1/corpus.json",
+        "tmp/dependency_training_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_021",
+      "exact_match": false,
+      "maximum_character_similarity": 0.6,
+      "nearest_normalized_text": "suggest three conversation starters for a neighbourhood gathering you may draw on interests i have asked you to remember if any are still available otherwise keep the topics general",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_022",
+      "exact_match": false,
+      "maximum_character_similarity": 0.4196185286103542,
+      "nearest_normalized_text": "create a 30 minute desk tidying plan if you have a saved preference about how i organize tasks adapt the steps to it otherwise use a straightforward order",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_023",
+      "exact_match": false,
+      "maximum_character_similarity": 0.49517684887459806,
+      "nearest_normalized_text": "draft a short thank you note for someone who helped carry boxes match my remembered writing style if you have it otherwise use a friendly neutral tone",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_024",
+      "exact_match": false,
+      "maximum_character_similarity": 0.40860215053763443,
+      "nearest_normalized_text": "draft a short thank you note for someone who helped carry boxes match my remembered writing style if you have it otherwise use a friendly neutral tone",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_025",
+      "exact_match": false,
+      "maximum_character_similarity": 0.43523316062176165,
+      "nearest_normalized_text": "suggest three conversation starters for a neighbourhood gathering you may draw on interests i have asked you to remember if any are still available otherwise keep the topics general",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_026",
+      "exact_match": false,
+      "maximum_character_similarity": 0.4281842818428184,
+      "nearest_normalized_text": "give me a three item checklist for preparing for a video call use saved accessibility preferences if any are available otherwise provide a general checklist",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/candidate_freeze_v3/validation/evaluation/routing_reliability_20260914/quality_cases_v3.json",
+        "evaluation/routing_reliability_20260914/quality_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_027",
+      "exact_match": false,
+      "maximum_character_similarity": 0.36533957845433257,
+      "nearest_normalized_text": "it is 17 05 on 3 october based on when i applied the display frame adhesive and my usual waiting rule is it ready to touch give the earliest allowed time and any remaining wait",
+      "nearest_source_files": [
+        "evaluation/post_memory_comparison_20260912/frozen_v1/workload.json",
+        "evaluation/post_memory_comparison_20260912/frozen_v2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v1/01_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/01_large_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2/02_cascade_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/03_small_r1/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/04_cascade_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/05_small_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/06_large_r2/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/07_small_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/08_large_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/run_v2_resumed/09_cascade_r3/workload.json",
+        "evaluation/post_memory_comparison_20260912/workload.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_028",
+      "exact_match": false,
+      "maximum_character_similarity": 0.4671916010498688,
+      "nearest_normalized_text": "suggest three conversation starters for a neighbourhood gathering you may draw on interests i have asked you to remember if any are still available otherwise keep the topics general",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_029",
+      "exact_match": false,
+      "maximum_character_similarity": 0.5494505494505495,
+      "nearest_normalized_text": "what was the name of the pottery class i told you i signed up for last month",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_observed_regressions_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_candidates_v3/sources/tmp/routing_robustness_20260914/independent_cases.json",
+        "tmp/dependency_development_v1/sources/tmp/routing_robustness_20260914/independent_cases.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_regression_v2/sources/tmp/routing_robustness_20260914/independent_cases.json",
+        "tmp/routing_robustness_20260914/independent_cases.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_030",
+      "exact_match": false,
+      "maximum_character_similarity": 0.4539877300613497,
+      "nearest_normalized_text": "what day does my rent payment go out explain what a recurring payment is",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_expansion_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_031",
+      "exact_match": false,
+      "maximum_character_similarity": 0.6379310344827587,
+      "nearest_normalized_text": "which route did i tell you i completed on my last run",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_v1.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_training_v1/corpus.json",
+        "tmp/dependency_training_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_032",
+      "exact_match": false,
+      "maximum_character_similarity": 0.46153846153846156,
+      "nearest_normalized_text": "which gravity experiment did i pick for my class explain why objects fall at the same rate without air resistance",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_expansion_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_033",
+      "exact_match": false,
+      "maximum_character_similarity": 0.5471698113207547,
+      "nearest_normalized_text": "what is the nickname i use for my houseplant",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_observed_regressions_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_candidates_v3/sources/tmp/routing_robustness_20260914/independent_cases.json",
+        "tmp/dependency_development_v1/sources/tmp/routing_robustness_20260914/independent_cases.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_regression_v2/sources/tmp/routing_robustness_20260914/independent_cases.json",
+        "tmp/routing_robustness_20260914/independent_cases.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_034",
+      "exact_match": false,
+      "maximum_character_similarity": 0.7049180327868853,
+      "nearest_normalized_text": "which section and row did i tell you i booked for the concert",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_v1.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_training_v1/corpus.json",
+        "tmp/dependency_training_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_035",
+      "exact_match": false,
+      "maximum_character_similarity": 0.43820224719101125,
+      "nearest_normalized_text": "which setting do i use for my wool blanket and explain why wool can shrink",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_expansion_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_036",
+      "exact_match": false,
+      "maximum_character_similarity": 0.42201834862385323,
+      "nearest_normalized_text": "suggest a wall color using a saved decorating preference if possible and a neutral option if nothing is saved",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_v1.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_training_v1/corpus.json",
+        "tmp/dependency_training_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_037",
+      "exact_match": false,
+      "maximum_character_similarity": 0.4166666666666667,
+      "nearest_normalized_text": "what variable name did i choose for my sensor reading explain what a variable represents",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_expansion_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_038",
+      "exact_match": false,
+      "maximum_character_similarity": 0.5081081081081081,
+      "nearest_normalized_text": "what paint color did i choose for my latest picture give a general tip for cleaning a brush",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_expansion_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_039",
+      "exact_match": false,
+      "maximum_character_similarity": 0.43601895734597157,
+      "nearest_normalized_text": "which wash setting did i ask you to remember for the linen curtains explain what a spin cycle does",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_v1.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_training_v1/corpus.json",
+        "tmp/dependency_training_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_040",
+      "exact_match": false,
+      "maximum_character_similarity": 0.39344262295081966,
+      "nearest_normalized_text": "what departure time is on the train booking i told you about explain what a platform number means",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_v1.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_training_v1/corpus.json",
+        "tmp/dependency_training_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_041",
+      "exact_match": false,
+      "maximum_character_similarity": 0.42448979591836733,
+      "nearest_normalized_text": "which wash setting did i ask you to remember for the linen curtains explain what a spin cycle does",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_v1.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_training_v1/corpus.json",
+        "tmp/dependency_training_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_042",
+      "exact_match": false,
+      "maximum_character_similarity": 0.463768115942029,
+      "nearest_normalized_text": "which chat model did i choose for my own project and explain what a language model does",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_expansion_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_043",
+      "exact_match": false,
+      "maximum_character_similarity": 0.6153846153846154,
+      "nearest_normalized_text": "can you add it to the other one",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_expansion_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_044",
+      "exact_match": false,
+      "maximum_character_similarity": 0.5306122448979592,
+      "nearest_normalized_text": "make it sound less formal",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_expansion_v2.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_045",
+      "exact_match": false,
+      "maximum_character_similarity": 0.4888888888888889,
+      "nearest_normalized_text": "what about the other one",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_046",
+      "exact_match": false,
+      "maximum_character_similarity": 0.7317073170731707,
+      "nearest_normalized_text": "what about the other one",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/release_cases_v1.json",
+        "tmp/dependency_C_development_cases_v3.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_047",
+      "exact_match": false,
+      "maximum_character_similarity": 0.4311377245508982,
+      "nearest_normalized_text": "set out a watering schedule that follows the travel dates and plant list i previously supplied",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_v1.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_training_v1/corpus.json",
+        "tmp/dependency_training_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    },
+    {
+      "id": "fresh_048",
+      "exact_match": false,
+      "maximum_character_similarity": 0.4631578947368421,
+      "nearest_normalized_text": "the route goes past that place right so which way",
+      "nearest_source_files": [
+        "evaluation/routing_reliability_20260914/dependency_training_v1.json",
+        "evaluation/routing_reliability_20260914/dependency_training_v2.json",
+        "tmp/dependency_grid_v2/corpus.json",
+        "tmp/dependency_training_v1/corpus.json",
+        "tmp/dependency_training_v2/corpus.json"
+      ],
+      "near_match_for_manual_review": false
+    }
+  ]
+}

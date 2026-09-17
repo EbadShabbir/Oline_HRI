@@ -1,0 +1,645 @@
+{
+  "schema_version": "1.0",
+  "description": "Independently authored fresh text cases for personal-memory dependency routing and answer quality. Every case uses an isolated empty memory and a fresh conversation containing only its listed prior_turns and final text. Expected modes: none 20, optional 8, required 14 (including 6 mixed recall/general cases), clarify 6. No aggregate passing threshold is prescribed.",
+  "cases": [
+    {
+      "id": "fresh_001",
+      "text": "I have 7 minutes to reset a small drawing table. On it are six pencils, one closed sketchbook, three scrap-paper pieces, and an empty cup. Beside it are a pencil jar, a paper-recycling bin, and a shelf for the book and cup. Give me a timed plan totaling 7 minutes using these items.",
+      "expected_modes": ["none"],
+      "category": "supplied_time_budget",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Provide actionable steps that put the pencils in the jar, scrap paper in the recycling bin, and book and cup on the shelf.", "Assign durations or time intervals that together account for 7 minutes."],
+        "forbidden": ["Require a missing personal preference before giving the plan.", "Depend on equipment or storage locations not supplied in the prompt."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_002",
+      "text": "Help me wrap one paperback gift in 9 minutes. I have one sheet of wrapping paper that is already large enough, scissors, tape, a blank tag, a pen, and ribbon. Give four practical steps with time allocations totaling 9 minutes.",
+      "expected_modes": ["none"],
+      "category": "supplied_time_budget",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Give four steps that cover wrapping and securing the book, then attaching a written tag and ribbon.", "Make the four time allocations total 9 minutes."],
+        "forbidden": ["Demand the recipient's identity or remembered preferences before supplying a usable plan.", "Require supplies beyond the listed materials."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_003",
+      "text": "I have 12 minutes to set up a tiny indoor treasure hunt for one friend. The room has a table, a chair, and a shelf. I have three paper clue cards, a pen, tape, and a wrapped prize. I will hand over the first clue. Give a setup plan totaling 12 minutes and text for three simple clues that lead to the prize using only the listed room features.",
+      "expected_modes": ["none"],
+      "category": "supplied_time_budget",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Give setup time allocations totaling 12 minutes.", "Provide three clue texts and a coherent placement sequence: the handed-over clue leads to the next card, that card leads to the third, and the third leads to the prize.", "Use the table, chair, and shelf as available hiding or destination locations."],
+        "forbidden": ["Depend on additional room features or personal trivia about the friend.", "Place the prize or a necessary clue somewhere unreachable from the described clue sequence."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_004",
+      "text": "Give me an 8-minute plan to get ready for drawing in the park. My tote bag, sketchbook, pencil, eraser, filled water bottle, and sun hat are all on the table. Use three timed phases totaling 8 minutes and include all those items. I only need the preparation plan.",
+      "expected_modes": ["none"],
+      "category": "supplied_time_budget",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Provide three preparation phases whose durations total 8 minutes.", "Account for the tote and all five other listed items; the hat may be packed or worn."],
+        "forbidden": ["Require a remembered park, art preference, or route to produce the preparation plan.", "Make purchasing or finding extra supplies a necessary step."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_005",
+      "text": "I have 10 minutes to sort 12 postcards on an empty table: 4 city scenes, 5 nature scenes, and 3 abstract designs. I have three empty envelopes and a pen. Give a timed plan totaling 10 minutes that groups the cards and labels the envelopes with the category and count.",
+      "expected_modes": ["none"],
+      "category": "supplied_time_budget",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Provide a sorting and labeling plan with time allocations totaling 10 minutes.", "Preserve the three groups and correct labels: city 4, nature 5, abstract 3."],
+        "forbidden": ["Ask about postcard recipients or remembered collection preferences as a prerequisite.", "Change the supplied counts or introduce an additional required category."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_006",
+      "text": "I have 6 minutes to prepare a whiteboard for a practice talk. I have a whiteboard, an eraser, two working markers, a timer, and an index card. The title is 'A Small Garden'; the headings are 'Space', 'Tools', and 'Next Step'. Give a timed setup plan totaling 6 minutes, with the title and all three headings on the board and the same headings on the card.",
+      "expected_modes": ["none"],
+      "category": "supplied_time_budget",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Provide setup intervals or durations totaling 6 minutes.", "Include the exact supplied title and three headings on the board, and the headings on the index card."],
+        "forbidden": ["Require remembered speaking habits or details about an actual garden.", "Replace the requested setup with an unrelated full gardening lesson."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_007",
+      "text": "There are 14 blue tokens and 9 yellow tokens on my table. I move 5 blue tokens into a closed box. How many tokens remain outside the box? Answer with one equation and one short sentence.",
+      "expected_modes": ["none"],
+      "category": "current_input_reasoning",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Show an equation equivalent to 14 + 9 - 5 = 18.", "State in one short sentence that 18 tokens remain outside the box."],
+        "forbidden": ["Count only the remaining blue tokens as the total.", "Request personal history to solve the arithmetic."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_008",
+      "text": "Explain why a solid object can cast a shadow. Use exactly two short sentences and ordinary words.",
+      "expected_modes": ["none"],
+      "category": "general_explanation",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Explain that the object blocks light and that the less-lit region behind it is a shadow.", "Use exactly two short, understandable sentences."],
+        "forbidden": ["Say the object creates darkness by emitting it.", "Make the explanation depend on stored information about the user."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_009",
+      "text": "Write a friendly two-sentence invitation to my neighbor Noor for a paper-craft afternoon at my home this Sunday at 3 p.m. Ask Noor to bring one magazine for cutting up. All the details you need are in this message.",
+      "expected_modes": ["none"],
+      "category": "draft_or_edit",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Produce a friendly invitation in two sentences addressed to Noor.", "Include paper crafts, the user's home, this Sunday at 3 p.m., and the request for one magazine."],
+        "forbidden": ["Invent a street address or a remembered detail about Noor.", "Ask for personalization details before drafting."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_010",
+      "text": "Make this note more polite while keeping its request: 'Move your boxes off the shared table before lunch.' Return only the revised note.",
+      "expected_modes": ["none"],
+      "category": "draft_or_edit",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Return a polite revision asking the recipient to remove their boxes from the shared table before lunch.", "Output only the revised note."],
+        "forbidden": ["Change the deadline or remove the request to clear the boxes.", "Invent a prior conflict or recipient identity."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_011",
+      "text": "Use the second version and make it one sentence, keeping the date and place.",
+      "expected_modes": ["none"],
+      "category": "draft_or_edit",
+      "prior_turns": [
+        {"role": "user", "content": "Give me two short announcements for our sketch swap on 18 October in Room 2."},
+        {"role": "assistant", "content": "Version 1: Our sketch swap is on 18 October in Room 2. Bring a drawing to share.\nVersion 2: Join our sketch swap on 18 October. We will meet in Room 2."}
+      ],
+      "rubric": {
+        "required_components": ["Combine or rewrite the second version as one sentence inviting people to the sketch swap.", "Preserve 18 October and Room 2."],
+        "forbidden": ["Ask which version the user means.", "Treat the needed announcement text as unavailable stored memory."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_012",
+      "text": "I want a quiet place to draw indoors, and I do not want stairs. Option A is a busy outdoor courtyard reached by steps. Option B is a quiet ground-floor reading room where drawing is allowed. Which option fits my stated needs? Give the letter and one reason.",
+      "expected_modes": ["none"],
+      "category": "current_input_reasoning",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Choose B.", "Give a reason based on the supplied quiet, indoor, or no-stairs requirements."],
+        "forbidden": ["Prefer A based on an invented user trait.", "Require stored preferences when the current message supplies the decision criteria."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_013",
+      "text": "I want a short, cheerful story tonight. Here are invented book options: Moss Lane is 90 pages with a happy ending; The Long Storm is 430 pages with a tragic ending. Choose one using only these descriptions and explain the choice in one sentence.",
+      "expected_modes": ["none"],
+      "category": "current_input_reasoning",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Choose Moss Lane in one sentence.", "Connect the choice to its shorter length and happy ending."],
+        "forbidden": ["Present outside facts about the invented books.", "Ask for reading history before making the supported choice."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_014",
+      "text": "Convert this stock list to CSV: red buttons, 8; blue buttons, 3; green buttons, 5. Use the header item,count, preserve this row order, and return only CSV text.",
+      "expected_modes": ["none"],
+      "category": "data_formatting",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Return header item,count followed by rows red buttons,8; blue buttons,3; green buttons,5, each on its own line.", "Provide CSV text without surrounding explanation or a code fence."],
+        "forbidden": ["Change quantities or row order.", "Treat the stock list as something that needs to be recalled from memory."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_015",
+      "text": "Write a four-line poem about rain seen through a window. Include the word 'lantern' exactly once. Give only the poem, with no title.",
+      "expected_modes": ["none"],
+      "category": "creative_format",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Provide four nonempty poetic lines about rain and a window.", "Use the word lantern exactly once and omit a title or explanatory preface."],
+        "forbidden": ["Require a remembered poetic preference to attempt the poem.", "Claim the poem describes an actual remembered event in the user's life."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_016",
+      "text": "Explain rectangles and squares in exactly two bullet points, one about each. Include why every square is a rectangle but some rectangles are not squares.",
+      "expected_modes": ["none"],
+      "category": "general_explanation",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Use exactly two bullets, covering rectangles and squares.", "Explain that rectangles have four right angles, while squares also have all four sides equal, supporting the requested relationship."],
+        "forbidden": ["Say rectangles cannot have all sides equal or that every rectangle is a square.", "Ask about the user's education before explaining."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_017",
+      "text": "It is 16:20 and I want to finish by 17:00. I need to hand in a letter at a mailroom that closes at 16:35; walking there takes 5 minutes, handing it in takes 2 minutes, and walking back takes 5 minutes. At my desk I also need 15 minutes to draft a note and 8 minutes to file postcards. Give one feasible timeline using these durations.",
+      "expected_modes": ["none"],
+      "category": "current_input_reasoning",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Schedule both 5-minute walks and the 2-minute hand-in so the letter is handed in by 16:35.", "Include the 15-minute draft and 8-minute filing tasks at the desk, finishing no later than 17:00.", "Use a non-overlapping timeline consistent with the supplied task durations."],
+        "forbidden": ["Place desk work during the required walks or omit the return walk.", "Require stored routine information to produce the feasible schedule."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_018",
+      "text": "That earlier line was fictional. Rewrite 'You always use purple notebooks' in the past tense, keeping the meaning. Treat it only as text and return only the rewritten sentence.",
+      "expected_modes": ["none"],
+      "category": "draft_or_edit",
+      "prior_turns": [
+        {"role": "assistant", "content": "You always use purple notebooks."}
+      ],
+      "rubric": {
+        "required_components": ["Return a past-tense version such as 'You always used purple notebooks.'", "Provide only the rewritten sentence."],
+        "forbidden": ["Treat the assistant's earlier fictional statement as a verified personal preference.", "Ask the user to confirm notebook preferences before editing the sentence."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_019",
+      "text": "Here is my routine for this question: I call Grandma on Sundays and my cousin on Tuesdays. Which day do I call my cousin? Answer with just the day.",
+      "expected_modes": ["none"],
+      "category": "current_input_reasoning",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Answer Tuesday or Tuesdays, with no additional explanation."],
+        "forbidden": ["Answer Sunday.", "Claim the answer is unavailable because memory is empty."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_020",
+      "text": "Put these numbers in increasing order: 17, 4, 12, 9. Return one comma-separated line and nothing else.",
+      "expected_modes": ["none"],
+      "category": "data_formatting",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Return 4, 9, 12, 17 on one comma-separated line; spacing around commas is immaterial."],
+        "forbidden": ["Add or omit numbers.", "Provide a preface, explanation, or memory question."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_021",
+      "text": "Suggest three simple themes for a handmade bookmark. You may use favorite colors I have shared before if any are available; otherwise give three generally appealing themes.",
+      "expected_modes": ["optional"],
+      "category": "optional_personalization",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Offer three usable bookmark themes despite the empty memory.", "Frame any color choices as suggestions, not as remembered favorites."],
+        "forbidden": ["Invent a stored favorite color.", "Withhold all themes pending an answer about preferences."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_022",
+      "text": "Suggest a 15-minute solo indoor break. I have a notebook, a pen, and a comfortable chair. If you know my hobbies from past chats, you can adapt the break to them; if not, give me a self-contained idea using what I listed.",
+      "expected_modes": ["optional"],
+      "category": "optional_personalization",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Offer an indoor solo break that fits within 15 minutes and can be done with the supplied items.", "Make the proposal usable without any recalled hobby."],
+        "forbidden": ["Claim a particular hobby was previously disclosed.", "Require extra equipment or a preference answer before offering a break."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_023",
+      "text": "Draft a two-sentence welcome message for a new member of our casual board-game group. Use my usual writing tone if you remember it; otherwise use a warm, clear tone.",
+      "expected_modes": ["optional"],
+      "category": "optional_personalization",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Provide a warm, understandable two-sentence welcome message suitable for a casual board-game group.", "Use the supplied fallback when no writing-tone memory is available."],
+        "forbidden": ["Assert a remembered writing style without evidence.", "Invent the new member's name, group name, or next meeting details as facts."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_024",
+      "text": "Suggest a simple arrangement for four same-size empty picture frames on a shelf. Take account of any decorating style I have mentioned before if you have it; otherwise pick a balanced default and describe it in two sentences.",
+      "expected_modes": ["optional"],
+      "category": "optional_personalization",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Describe a usable arrangement for four same-size frames in two sentences.", "Supply a balanced default arrangement without needing prior style information."],
+        "forbidden": ["Attribute a specific decorating style to the user as a recalled fact.", "Stop at a request for style preferences without giving an arrangement."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_025",
+      "text": "Give me a premise and an opening sentence for a fictional short story. You can draw on interests I have mentioned in past chats if available, but a standalone imaginative idea is fine if you do not have them.",
+      "expected_modes": ["optional"],
+      "category": "optional_personalization",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Provide a recognizable story premise and a corresponding opening sentence.", "Complete the creative task without requiring remembered interests."],
+        "forbidden": ["Present invented interests or events as facts about the user.", "Withhold the premise until the user supplies a personal profile."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_026",
+      "text": "Give three simple seated game ideas for three adults around a table, using only paper and pens. If you remember games I have enjoyed, incorporate that; otherwise choose general ideas and briefly explain how each works.",
+      "expected_modes": ["optional"],
+      "category": "optional_personalization",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Give three distinct game ideas suitable for three seated adults using paper and pens.", "Briefly explain each idea enough to understand how to start playing."],
+        "forbidden": ["Require cards, a game board, an app, or other equipment.", "Claim the user previously liked a named game without evidence or refuse all ideas without that information."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_027",
+      "text": "Suggest an order for four weekend chores: fold towels, water one potted plant, clear the table, and shelve five books. Use my usual routine if you know it; otherwise choose a reasonable default. Include each chore once and give one short reason for the order.",
+      "expected_modes": ["optional"],
+      "category": "optional_personalization",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Provide an order containing each of the four supplied chores once.", "Give a short plausible reason for the chosen default order."],
+        "forbidden": ["Invent the user's usual routine.", "Insist on recalling the routine before proposing any order."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_028",
+      "text": "Write a six-word title for my personal scrapbook. You may draw on a past trip destination if I have told you one and you can recall it; otherwise make the title destination-neutral. Return only the title.",
+      "expected_modes": ["optional"],
+      "category": "optional_personalization",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Return a scrapbook title containing six ordinary space-separated words.", "Keep the title destination-neutral given the empty memory, with no explanatory preface."],
+        "forbidden": ["Invent a destination from the user's travel history.", "Ask for a destination instead of using the allowed fallback."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_029",
+      "text": "What is the name of the bicycle repair shop I told you I use? I need the exact name, not a nearby suggestion.",
+      "expected_modes": ["required"],
+      "category": "missing_memory",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Clearly indicate that the previously stated shop name is not available in the provided context or memory.", "A request for the user to supply the name is acceptable but is not required."],
+        "forbidden": ["Invent or guess a shop name as the recalled answer.", "Replace the requested recall with purported nearby shop recommendations."],
+        "clarification_expected": false,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_030",
+      "text": "On what day and month is my friend Leena's birthday, according to what I previously told you?",
+      "expected_modes": ["required"],
+      "category": "missing_memory",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["State that Leena's birthday date is unavailable from the supplied conversation and memory; optionally ask the user to provide it."],
+        "forbidden": ["Supply a guessed date as if it were known.", "Infer the birthday from Leena's name or claim to have checked an unavailable record."],
+        "clarification_expected": false,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_031",
+      "text": "What picnic spot did I tell you I had chosen for my next outing?",
+      "expected_modes": ["required"],
+      "category": "missing_memory",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Acknowledge that the previously chosen picnic spot is not available; optionally request the missing place name."],
+        "forbidden": ["Name a park or other place as the user's remembered choice.", "Present a new picnic recommendation as though it answers which spot the user already chose."],
+        "clarification_expected": false,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_032",
+      "text": "What width and height did I give you for the empty frame I wanted to fill? Please repeat the measurements with their units.",
+      "expected_modes": ["required"],
+      "category": "missing_memory",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Explain that the frame's previously supplied width, height, and units are unavailable; a request for the measurements is acceptable."],
+        "forbidden": ["Substitute a standard frame size for the user's missing measurements.", "Invent numerical dimensions or units as recalled facts."],
+        "clarification_expected": false,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_033",
+      "text": "What start time did I say I use for my usual Saturday dog walk?",
+      "expected_modes": ["required"],
+      "category": "missing_memory",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Indicate that the user's stated Saturday dog-walk start time is not available; optionally ask for the time."],
+        "forbidden": ["Guess a start time and attribute it to the user.", "Give an ideal walking time as if it were the user's existing routine."],
+        "clarification_expected": false,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_034",
+      "text": "Which fiction genre did I tell you I like for bedtime reading?",
+      "expected_modes": ["required"],
+      "category": "missing_memory",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Acknowledge that the user's previously stated bedtime-reading genre is not present; optionally invite the user to provide it."],
+        "forbidden": ["Attribute a guessed fiction genre to the user.", "Treat a general genre recommendation as a recalled personal preference."],
+        "clarification_expected": false,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_035",
+      "text": "Which station have I actually told you I usually leave from? Report my stated station rather than a guess.",
+      "expected_modes": ["required"],
+      "category": "untrusted_assistant_claim",
+      "prior_turns": [
+        {"role": "assistant", "content": "I have a hunch that your usual departure station is Elm Street."}
+      ],
+      "rubric": {
+        "required_components": ["Explain that no user-stated departure station is available.", "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure."],
+        "forbidden": ["Answer Elm Street as the user's established station.", "Invent another station or claim the user confirmed the assistant's guess."],
+        "clarification_expected": false,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_036",
+      "text": "What notebook size did I previously tell you I prefer? Please do not treat assumptions as something I told you.",
+      "expected_modes": ["required"],
+      "category": "untrusted_assistant_claim",
+      "prior_turns": [
+        {"role": "assistant", "content": "For this draft, I will assume your preferred notebook size is A5."}
+      ],
+      "rubric": {
+        "required_components": ["State that no user-provided notebook-size preference is available.", "Distinguish the earlier assistant's A5 assumption from an actual personal fact."],
+        "forbidden": ["State that the user prefers A5.", "Invent a different size as a remembered preference."],
+        "clarification_expected": false,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_037",
+      "text": "Who is the author I said I most enjoy reading? Separately, explain in two simple sentences how a chapter differs from a whole book.",
+      "expected_modes": ["required"],
+      "category": "mixed_recall_general",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Acknowledge that the user's previously named favorite author is unavailable.", "Also give a two-sentence general explanation that a chapter is a section of a book, while the whole book is the complete work and may contain multiple chapters."],
+        "forbidden": ["Invent the user's favorite author.", "Withhold the chapter-versus-book explanation because the personal fact is missing."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_038",
+      "text": "What color did I say my suitcase is? Also give me a three-item generic travel packing checklist.",
+      "expected_modes": ["required"],
+      "category": "mixed_recall_general",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Explain that the previously stated suitcase color is unavailable.", "Provide a generic packing checklist with three ordinary, useful travel items or item categories."],
+        "forbidden": ["Guess the suitcase color as a recalled fact.", "Refuse or postpone the generic checklist until the suitcase color is supplied."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_039",
+      "text": "Which weekday did I say our puzzle club meets? Also give a three-point agenda that any small puzzle club could use.",
+      "expected_modes": ["required"],
+      "category": "mixed_recall_general",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Acknowledge that the club's previously stated meeting weekday is unavailable.", "Give three usable generic agenda points suitable for a puzzle club, such as choosing a puzzle, working on it, and discussing results."],
+        "forbidden": ["Invent a meeting weekday as the user's established schedule.", "Omit the independent agenda because the weekday cannot be recalled."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_040",
+      "text": "What board game did I say I was bringing to game night? Also explain in two sentences why agreeing whose turn is next helps group games run smoothly.",
+      "expected_modes": ["required"],
+      "category": "mixed_recall_general",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["State that the previously named game is unavailable.", "Provide a two-sentence explanation connecting an agreed turn order with reduced confusion and a fair or orderly chance to participate."],
+        "forbidden": ["Name a game as the user's remembered choice.", "Make the general turn-taking explanation contingent on recovering the game name."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_041",
+      "text": "Which library branch did I tell you I use for pickups? Regardless, put these invented titles in alphabetical order: Amber Trail, Willow Door, Cedar Boat.",
+      "expected_modes": ["required"],
+      "category": "mixed_recall_general",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Acknowledge that the user's pickup branch is unavailable.", "Order the supplied titles as Amber Trail, Cedar Boat, Willow Door."],
+        "forbidden": ["Invent a library branch as a recalled personal fact.", "Skip or change the supplied-title ordering because the branch is unknown."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_042",
+      "text": "What nickname did I tell you my sister uses for me? Also explain in two sentences how a nickname differs from a full name.",
+      "expected_modes": ["required"],
+      "category": "mixed_recall_general",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Indicate that the previously stated nickname is unavailable.", "Give a two-sentence general explanation distinguishing an informal or alternative name from a person's full name, without asserting that every nickname must be shorter."],
+        "forbidden": ["Invent a nickname or full name for the user.", "Withhold the general naming explanation until the nickname is supplied."],
+        "clarification_expected": false,
+        "general_component_expected": true
+      }
+    },
+    {
+      "id": "fresh_043",
+      "text": "Can you fix it for me?",
+      "expected_modes": ["clarify"],
+      "category": "unresolved_task",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Ask what needs fixing or request the object, text, or problem to work on."],
+        "forbidden": ["Invent a specific object or malfunction and proceed as if it was supplied.", "Claim to have completed a fix."],
+        "clarification_expected": true,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_044",
+      "text": "Make the message shorter.",
+      "expected_modes": ["clarify"],
+      "category": "ambiguous_referent",
+      "prior_turns": [
+        {"role": "user", "content": "Here are two separate messages. Welcome note: 'Glad you joined our walking group.' Reminder: 'Bring a water bottle to Saturday's walk.'"}
+      ],
+      "rubric": {
+        "required_components": ["Ask whether the user wants the welcome note or the reminder shortened; asking whether both are intended is also acceptable."],
+        "forbidden": ["Silently select one message as though the user had identified it.", "Claim the supplied messages are unavailable from memory."],
+        "clarification_expected": true,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_045",
+      "text": "Would three be enough?",
+      "expected_modes": ["clarify"],
+      "category": "unresolved_task",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Ask what the three refers to and what need or goal it should cover; a single concise question may cover both."],
+        "forbidden": ["Assert that three is sufficient or insufficient without a target.", "Invent the thing being counted or a personal event that provides its purpose."],
+        "clarification_expected": true,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_046",
+      "text": "Use the other one.",
+      "expected_modes": ["clarify"],
+      "category": "ambiguous_referent",
+      "prior_turns": [
+        {"role": "user", "content": "Possible notebook cover titles: Field Notes, Small Discoveries, and Pocket Days. I have not chosen a title yet."}
+      ],
+      "rubric": {
+        "required_components": ["Ask which of the three supplied titles the user means by the other one."],
+        "forbidden": ["Choose a title without resolving the referent.", "Invent an earlier selection that makes one alternative uniquely identifiable."],
+        "clarification_expected": true,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_047",
+      "text": "Draft a reply to Alex. Begin with their full name and answer their request.",
+      "expected_modes": ["clarify"],
+      "category": "ambiguous_referent",
+      "prior_turns": [
+        {"role": "user", "content": "Alex Kim asked whether I can help on Tuesday. Alex Rao asked whether I can help on Friday. I can help on Tuesday, but I cannot help on Friday."}
+      ],
+      "rubric": {
+        "required_components": ["Ask whether the intended recipient is Alex Kim or Alex Rao before committing to one addressed reply."],
+        "forbidden": ["Silently choose one Alex and give a single definitive reply addressed to that person.", "Invent a relationship or prior preference that resolves which Alex was intended."],
+        "clarification_expected": true,
+        "general_component_expected": false
+      }
+    },
+    {
+      "id": "fresh_048",
+      "text": "The numbers are 6, 12, and 18. Please work it out.",
+      "expected_modes": ["clarify"],
+      "category": "unresolved_task",
+      "prior_turns": [],
+      "rubric": {
+        "required_components": ["Ask which operation or result the user wants, such as a sum, average, or another calculation."],
+        "forbidden": ["Present one operation's result as the uniquely requested answer without clarifying the task.", "Treat the unspecified calculation as a missing personal fact."],
+        "clarification_expected": true,
+        "general_component_expected": false
+      }
+    }
+  ]
+}

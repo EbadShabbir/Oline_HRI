@@ -1,0 +1,120 @@
+{
+  "runner_exit_code": 1,
+  "failure": {
+    "type": "SafetyGateError",
+    "message": "available memory crossed the runtime floor"
+  },
+  "cleanup_errors": [],
+  "snapshot": {
+    "boot_id": "c0e155e9-d16b-4054-be35-885c29c814e7",
+    "captured_at": "2026-09-16T20:03:48.640501+00:00",
+    "fan_pwm": 117,
+    "memory": {
+      "mem_total_kib": 7803200,
+      "mem_available_kib": 2671856,
+      "swap_total_kib": 3901584,
+      "swap_free_kib": 3094672,
+      "swap_used_kib": 806912
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "MAINSWRST",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 62.437,
+      "gpu-thermal": 62.093,
+      "soc0-thermal": 60.187,
+      "soc1-thermal": 60.0,
+      "soc2-thermal": 61.125,
+      "tj-thermal": 62.656
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "telemetry": {
+    "record_type": "jetson_telemetry_summary",
+    "sample_count": 537,
+    "schema_version": 1,
+    "metrics": {
+      "cpu_mean_percent": {
+        "max": 92.5,
+        "p50": 48.5,
+        "p95": 67.16666666666667
+      },
+      "gr3d_percent": {
+        "max": 99,
+        "p50": 99,
+        "p95": 99
+      },
+      "ram_used_mb": {
+        "max": 6598,
+        "p50": 6430,
+        "p95": 6586
+      },
+      "swap_used_mb": {
+        "max": 788,
+        "p50": 685,
+        "p95": 760
+      },
+      "vdd_in_average_mw": {
+        "max": 13668,
+        "p50": 13037,
+        "p95": 13619
+      },
+      "vdd_in_mw": {
+        "max": 14849,
+        "p50": 14460,
+        "p95": 14825
+      }
+    },
+    "temperatures_c": {
+      "cpu": {
+        "sample_count": 537,
+        "max": 62.406,
+        "p50": 60.218,
+        "p95": 61.875
+      },
+      "gpu": {
+        "sample_count": 537,
+        "max": 63.406,
+        "p50": 61.375,
+        "p95": 62.906
+      },
+      "soc0": {
+        "sample_count": 537,
+        "max": 60.343,
+        "p50": 58.687,
+        "p95": 60.156
+      },
+      "soc1": {
+        "sample_count": 537,
+        "max": 60.218,
+        "p50": 58.375,
+        "p95": 59.875
+      },
+      "soc2": {
+        "sample_count": 537,
+        "max": 61.281,
+        "p50": 59.468,
+        "p95": 61.093
+      },
+      "tj": {
+        "sample_count": 537,
+        "max": 63.406,
+        "p50": 61.375,
+        "p95": 62.906
+      }
+    },
+    "duration_seconds": 271.834558168,
+    "vdd_in_energy_joules": 3716.853380042948
+  },
+  "guard_violation": "available memory crossed the runtime floor",
+  "complete": false
+}

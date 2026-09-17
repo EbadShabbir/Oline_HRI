@@ -1,0 +1,1809 @@
+{
+  "created_at": "2026-09-16T18:45:46.297275+00:00",
+  "method": "Independent standard-library recomputation; analyze.py and individual reviews are never imported/read.",
+  "primary": {
+    "arithmetic": {
+      "planned": 48,
+      "counts": {
+        "raw_match": 36,
+        "thresholded_match": 25,
+        "final_match": 36,
+        "quality_pass": 4,
+        "combined_pass": 4
+      },
+      "statuses": {
+        "ok": 43,
+        "error": 5
+      },
+      "latency": {
+        "overall_observed": {
+          "n": 48,
+          "mean_seconds": 36.866353403270836,
+          "minimum_seconds": 0.000276135,
+          "maximum_seconds": 88.995497862,
+          "p50_seconds": 36.241202040999994,
+          "p95_seconds": 81.3377933788
+        },
+        "delivered_model_generated": {
+          "n": 24,
+          "mean_seconds": 53.503156068500004,
+          "minimum_seconds": 27.812533198,
+          "maximum_seconds": 88.995497862,
+          "p50_seconds": 43.569493724,
+          "p95_seconds": 84.92935933965
+        },
+        "application_only": {
+          "n": 19,
+          "mean_seconds": 25.553032646105265,
+          "minimum_seconds": 0.498142282,
+          "maximum_seconds": 78.416093274,
+          "p50_seconds": 9.932842054,
+          "p95_seconds": 70.23617124450001
+        },
+        "full_quality": {
+          "n": 4,
+          "mean_seconds": 64.53414290525001,
+          "minimum_seconds": 38.617087948,
+          "maximum_seconds": 82.101492207,
+          "p50_seconds": 68.708995733,
+          "p95_seconds": 81.29201512785001
+        },
+        "combined_success": {
+          "n": 4,
+          "mean_seconds": 64.53414290525001,
+          "minimum_seconds": 38.617087948,
+          "maximum_seconds": 82.101492207,
+          "p50_seconds": 68.708995733,
+          "p95_seconds": 81.29201512785001
+        }
+      }
+    },
+    "resources": {
+      "samples": 3492,
+      "minimum_free_ram_mb": 1019,
+      "maximum_swap_used_mb": 93,
+      "maximum_temperature_c": 56.343,
+      "maximum_sample_gap_seconds": 2.133192568,
+      "residency_scope": "Snapshots show startup/final empty. Existing backend checks enforce at most one resident model; raw tegrastats has no model-residency field."
+    },
+    "memory": {
+      "retrieval_calls": 19,
+      "table_counts": {
+        "memory_item": 0,
+        "memory_audit": 0,
+        "memory_embedding": 0,
+        "memory_fts": 0
+      },
+      "database_quick_check": "ok"
+    },
+    "prompt_boundaries": {
+      "messages_checked": 348,
+      "rubric_strings_available": 180,
+      "findings": [],
+      "scope": "Checks hidden rubric-field keys, case IDs, and unique complete rubric sentences >=40 characters/6 words absent from authorized input. Generic mode words are intentionally excluded; this literal check is not proof against semantic leakage."
+    },
+    "actual_calls": {
+      "compute_classifier": 43,
+      "answer_generation": 35,
+      "answer_review": 28,
+      "dependency_review": 17
+    },
+    "model_identities": {
+      "ollama_version": {
+        "version": "0.33.3"
+      },
+      "models": {
+        "qwen3:0.6b": {
+          "name": "qwen3:0.6b",
+          "size": 522653767,
+          "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "751.63M",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 1024
+          },
+          "family": "qwen3",
+          "format": "gguf",
+          "parameter_count": 751632384,
+          "parameter_size": "751.63M",
+          "quantization_level": "Q4_K_M",
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        },
+        "qwen3:1.7b": {
+          "name": "qwen3:1.7b",
+          "size": 1359293444,
+          "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "2.0B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 2048
+          },
+          "family": "qwen3",
+          "format": "gguf",
+          "parameter_count": 2031739904,
+          "parameter_size": "2.0B",
+          "quantization_level": "Q4_K_M",
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        }
+      }
+    },
+    "case_ids": [
+      "fresh_023",
+      "fresh_027",
+      "fresh_041",
+      "fresh_022",
+      "fresh_048",
+      "fresh_047",
+      "fresh_032",
+      "fresh_037",
+      "fresh_001",
+      "fresh_004",
+      "fresh_008",
+      "fresh_030",
+      "fresh_046",
+      "fresh_020",
+      "fresh_010",
+      "fresh_019",
+      "fresh_006",
+      "fresh_002",
+      "fresh_036",
+      "fresh_005",
+      "fresh_013",
+      "fresh_017",
+      "fresh_045",
+      "fresh_028",
+      "fresh_031",
+      "fresh_026",
+      "fresh_015",
+      "fresh_021",
+      "fresh_018",
+      "fresh_009",
+      "fresh_014",
+      "fresh_012",
+      "fresh_034",
+      "fresh_039",
+      "fresh_035",
+      "fresh_040",
+      "fresh_029",
+      "fresh_038",
+      "fresh_016",
+      "fresh_033",
+      "fresh_024",
+      "fresh_007",
+      "fresh_042",
+      "fresh_011",
+      "fresh_025",
+      "fresh_044",
+      "fresh_003",
+      "fresh_043"
+    ]
+  },
+  "supplement": {
+    "arithmetic": {
+      "planned": 5,
+      "counts": {
+        "raw_match": 2,
+        "thresholded_match": 3,
+        "final_match": 3,
+        "quality_pass": 1,
+        "combined_pass": 0
+      },
+      "statuses": {
+        "ok": 5
+      },
+      "latency": {
+        "overall_observed": {
+          "n": 5,
+          "mean_seconds": 49.383750717,
+          "minimum_seconds": 33.51870583,
+          "maximum_seconds": 73.029699616,
+          "p50_seconds": 34.65815667,
+          "p95_seconds": 72.7568928076
+        },
+        "delivered_model_generated": {
+          "n": 2,
+          "mean_seconds": 72.34768259500001,
+          "minimum_seconds": 71.665665574,
+          "maximum_seconds": 73.029699616,
+          "p50_seconds": 72.34768259500001,
+          "p95_seconds": 72.9614979139
+        },
+        "application_only": {
+          "n": 3,
+          "mean_seconds": 34.074462798333336,
+          "minimum_seconds": 33.51870583,
+          "maximum_seconds": 34.65815667,
+          "p50_seconds": 34.046525895,
+          "p95_seconds": 34.5969935925
+        },
+        "full_quality": {
+          "n": 1,
+          "mean_seconds": 71.665665574,
+          "minimum_seconds": 71.665665574,
+          "maximum_seconds": 71.665665574,
+          "p50_seconds": 71.665665574,
+          "p95_seconds": 71.665665574
+        },
+        "combined_success": {
+          "n": 0,
+          "p50_seconds": null,
+          "p95_seconds": null,
+          "mean_seconds": null,
+          "minimum_seconds": null,
+          "maximum_seconds": null
+        }
+      }
+    },
+    "resources": {
+      "samples": 488,
+      "minimum_free_ram_mb": 1109,
+      "maximum_swap_used_mb": 92,
+      "maximum_temperature_c": 55.031,
+      "maximum_sample_gap_seconds": 1.75390026,
+      "residency_scope": "Snapshots show startup/final empty. Existing backend checks enforce at most one resident model; raw tegrastats has no model-residency field."
+    },
+    "memory": {
+      "retrieval_calls": 2,
+      "table_counts": {
+        "memory_item": 0,
+        "memory_audit": 0,
+        "memory_embedding": 0,
+        "memory_fts": 0
+      },
+      "database_quick_check": "ok"
+    },
+    "prompt_boundaries": {
+      "messages_checked": 58,
+      "rubric_strings_available": 17,
+      "findings": [],
+      "scope": "Checks hidden rubric-field keys, case IDs, and unique complete rubric sentences >=40 characters/6 words absent from authorized input. Generic mode words are intentionally excluded; this literal check is not proof against semantic leakage."
+    },
+    "actual_calls": {
+      "compute_classifier": 5,
+      "dependency_review": 5,
+      "answer_generation": 2,
+      "answer_review": 2
+    },
+    "model_identities": {
+      "ollama_version": {
+        "version": "0.33.3"
+      },
+      "models": {
+        "qwen3:0.6b": {
+          "name": "qwen3:0.6b",
+          "size": 522653767,
+          "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "751.63M",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 1024
+          },
+          "family": "qwen3",
+          "format": "gguf",
+          "parameter_count": 751632384,
+          "parameter_size": "751.63M",
+          "quantization_level": "Q4_K_M",
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        },
+        "qwen3:1.7b": {
+          "name": "qwen3:1.7b",
+          "size": 1359293444,
+          "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "2.0B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 40960,
+            "embedding_length": 2048
+          },
+          "family": "qwen3",
+          "format": "gguf",
+          "parameter_count": 2031739904,
+          "parameter_size": "2.0B",
+          "quantization_level": "Q4_K_M",
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        }
+      }
+    },
+    "case_ids": [
+      "fresh_047",
+      "fresh_046",
+      "fresh_036",
+      "fresh_035",
+      "fresh_044"
+    ]
+  },
+  "exploratory_corrected_input": {
+    "denominator": 48,
+    "counts": {
+      "raw_match": 38,
+      "thresholded_match": 28,
+      "final_match": 39,
+      "quality_pass": 5,
+      "combined_pass": 4
+    },
+    "warning": "43 original observations plus 5 normalized observations from another session; not the preregistered 48-case result or a single-session latency estimate."
+  },
+  "audited_artifact_sha256": {
+    "script": "8f99d5af0068c216beda2920078fb3bc46aa50d2ceaea598dff66112b783e60f",
+    "primary_metrics": "f7689c6be6b2e94fc23c1c3713c3692b8eb49cd8bda630dd01b001711ea6e48a",
+    "primary_judgments": "8ee53c1b5b41db714d42867d1c4f3efc5bcdeab2881342dd6226df6e0c263fe9"
+  },
+  "checks": [
+    {
+      "check": "archived candidate SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "archived harness SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "preregistered seeded shuffle of authored IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "exact original fresh_001..fresh_048 IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: complete case count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: exact frozen order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: unique observation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: exact adjudication coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: embedded cases unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: frozen corpus hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: working source SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "primary: preregistered artifact SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "primary: sealed collection SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "primary: before/after source/config/corpus/embedding",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: runtime sources were frozen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: model/server identity unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: model artifact bounds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: raw-call exact correspondence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: all call schemas recognized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: independent model-call counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: bounded generation/review calls",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "primary: only frozen models called",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: planned denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/ambiguous_referent denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/ambiguous_referent/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/ambiguous_referent/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/ambiguous_referent/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/ambiguous_referent/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/ambiguous_referent/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/creative_format denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/creative_format/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/creative_format/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/creative_format/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/creative_format/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/creative_format/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/current_input_reasoning denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/current_input_reasoning/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/current_input_reasoning/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/current_input_reasoning/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/current_input_reasoning/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/current_input_reasoning/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/data_formatting denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/data_formatting/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/data_formatting/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/data_formatting/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/data_formatting/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/data_formatting/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/draft_or_edit denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/draft_or_edit/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/draft_or_edit/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/draft_or_edit/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/draft_or_edit/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/draft_or_edit/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/general_explanation denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/general_explanation/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/general_explanation/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/general_explanation/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/general_explanation/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/general_explanation/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/missing_memory denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/missing_memory/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/missing_memory/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/missing_memory/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/missing_memory/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/missing_memory/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/mixed_recall_general denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/mixed_recall_general/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/mixed_recall_general/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/mixed_recall_general/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/mixed_recall_general/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/mixed_recall_general/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/optional_personalization denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/optional_personalization/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/optional_personalization/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/optional_personalization/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/optional_personalization/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/optional_personalization/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/supplied_time_budget denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/supplied_time_budget/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/supplied_time_budget/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/supplied_time_budget/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/supplied_time_budget/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/supplied_time_budget/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/unresolved_task denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/unresolved_task/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/unresolved_task/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/unresolved_task/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/unresolved_task/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/unresolved_task/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/untrusted_assistant_claim denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/untrusted_assistant_claim/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/untrusted_assistant_claim/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/untrusted_assistant_claim/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/untrusted_assistant_claim/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_category/untrusted_assistant_claim/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/clarify denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/clarify/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/clarify/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/clarify/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/clarify/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/clarify/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/none denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/none/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/none/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/none/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/none/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/none/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/optional denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/optional/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/optional/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/optional/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/optional/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/optional/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/required denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/required/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/required/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/required/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/required/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: per_mode/required/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/overall_observed",
+      "passed": true,
+      "detail": {
+        "n": 48,
+        "mean_seconds": 36.866353403270836,
+        "minimum_seconds": 0.000276135,
+        "maximum_seconds": 88.995497862,
+        "p50_seconds": 36.241202040999994,
+        "p95_seconds": 81.3377933788
+      }
+    },
+    {
+      "check": "primary: latency/delivered_model_generated",
+      "passed": true,
+      "detail": {
+        "n": 24,
+        "mean_seconds": 53.503156068500004,
+        "minimum_seconds": 27.812533198,
+        "maximum_seconds": 88.995497862,
+        "p50_seconds": 43.569493724,
+        "p95_seconds": 84.92935933965
+      }
+    },
+    {
+      "check": "primary: latency/application_only",
+      "passed": true,
+      "detail": {
+        "n": 19,
+        "mean_seconds": 25.553032646105265,
+        "minimum_seconds": 0.498142282,
+        "maximum_seconds": 78.416093274,
+        "p50_seconds": 9.932842054,
+        "p95_seconds": 70.23617124450001
+      }
+    },
+    {
+      "check": "primary: latency/full_quality",
+      "passed": true,
+      "detail": {
+        "n": 4,
+        "mean_seconds": 64.53414290525001,
+        "minimum_seconds": 38.617087948,
+        "maximum_seconds": 82.101492207,
+        "p50_seconds": 68.708995733,
+        "p95_seconds": 81.29201512785001
+      }
+    },
+    {
+      "check": "primary: latency/combined_success",
+      "passed": true,
+      "detail": {
+        "n": 4,
+        "mean_seconds": 64.53414290525001,
+        "minimum_seconds": 38.617087948,
+        "maximum_seconds": 82.101492207,
+        "p50_seconds": 68.708995733,
+        "p95_seconds": 81.29201512785001
+      }
+    },
+    {
+      "check": "primary: latency/per_category/ambiguous_referent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/creative_format",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/current_input_reasoning",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/data_formatting",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/draft_or_edit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/general_explanation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/missing_memory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/mixed_recall_general",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/optional_personalization",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/supplied_time_budget",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/unresolved_task",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_category/untrusted_assistant_claim",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_mode/clarify",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_mode/none",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_mode/optional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: latency/per_mode/required",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: quality_deadlines/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: combined_deadlines/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: generated_quality_deadlines/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: generated_quality_deadlines_all_planned/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: quality_deadlines/10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: combined_deadlines/10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: generated_quality_deadlines/10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: generated_quality_deadlines_all_planned/10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: quality_deadlines/30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: combined_deadlines/30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: generated_quality_deadlines/30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: generated_quality_deadlines_all_planned/30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: quality_deadlines/60",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: combined_deadlines/60",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: generated_quality_deadlines/60",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: generated_quality_deadlines_all_planned/60",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: startup resource gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: initial/final model eviction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: running fan snapshots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: device invariants",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: power mode and zero trip counters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: guard and cleanup outcome",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: telemetry count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: telemetry monotonic and unstalled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: sampled runtime RAM/swap/temperature bounds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: all retrieval results empty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: no fabricated memory evidence IDs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "primary: isolated SQLite empty and valid",
+      "passed": true,
+      "detail": {
+        "memory_item": 0,
+        "memory_audit": 0,
+        "memory_embedding": 0,
+        "memory_fts": 0
+      }
+    },
+    {
+      "check": "primary: SQLite audit was read-only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "primary: no hidden labels or unique rubric literals in model prompts",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "supplement contains exactly preregistered five IDs in relative order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement whitespace-only input change: fresh_047",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement whitespace-only input change: fresh_046",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement whitespace-only input change: fresh_036",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement whitespace-only input change: fresh_035",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement whitespace-only input change: fresh_044",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement mechanical zero-call rejection eligibility",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: complete case count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: exact frozen order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: unique observation IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: exact adjudication coverage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: embedded cases unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: frozen corpus hash",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: working source SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "supplement: preregistered artifact SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "supplement: sealed collection SHA256",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "supplement: before/after source/config/corpus/embedding",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: runtime sources were frozen",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: model/server identity unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: model artifact bounds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: raw-call exact correspondence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: all call schemas recognized",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: independent model-call counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: bounded generation/review calls",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "supplement: only frozen models called",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: planned denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/ambiguous_referent denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/ambiguous_referent/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/ambiguous_referent/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/ambiguous_referent/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/ambiguous_referent/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/ambiguous_referent/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/untrusted_assistant_claim denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/untrusted_assistant_claim/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/untrusted_assistant_claim/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/untrusted_assistant_claim/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/untrusted_assistant_claim/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_category/untrusted_assistant_claim/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/clarify denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/clarify/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/clarify/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/clarify/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/clarify/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/clarify/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/required denominator",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/required/raw_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/required/thresholded_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/required/final_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/required/quality_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: per_mode/required/combined_pass",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: latency/overall_observed",
+      "passed": true,
+      "detail": {
+        "n": 5,
+        "mean_seconds": 49.383750717,
+        "minimum_seconds": 33.51870583,
+        "maximum_seconds": 73.029699616,
+        "p50_seconds": 34.65815667,
+        "p95_seconds": 72.7568928076
+      }
+    },
+    {
+      "check": "supplement: latency/delivered_model_generated",
+      "passed": true,
+      "detail": {
+        "n": 2,
+        "mean_seconds": 72.34768259500001,
+        "minimum_seconds": 71.665665574,
+        "maximum_seconds": 73.029699616,
+        "p50_seconds": 72.34768259500001,
+        "p95_seconds": 72.9614979139
+      }
+    },
+    {
+      "check": "supplement: latency/application_only",
+      "passed": true,
+      "detail": {
+        "n": 3,
+        "mean_seconds": 34.074462798333336,
+        "minimum_seconds": 33.51870583,
+        "maximum_seconds": 34.65815667,
+        "p50_seconds": 34.046525895,
+        "p95_seconds": 34.5969935925
+      }
+    },
+    {
+      "check": "supplement: latency/full_quality",
+      "passed": true,
+      "detail": {
+        "n": 1,
+        "mean_seconds": 71.665665574,
+        "minimum_seconds": 71.665665574,
+        "maximum_seconds": 71.665665574,
+        "p50_seconds": 71.665665574,
+        "p95_seconds": 71.665665574
+      }
+    },
+    {
+      "check": "supplement: latency/combined_success",
+      "passed": true,
+      "detail": {
+        "n": 0,
+        "p50_seconds": null,
+        "p95_seconds": null,
+        "mean_seconds": null,
+        "minimum_seconds": null,
+        "maximum_seconds": null
+      }
+    },
+    {
+      "check": "supplement: latency/per_category/ambiguous_referent",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: latency/per_category/untrusted_assistant_claim",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: latency/per_mode/clarify",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: latency/per_mode/required",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: quality_deadlines/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: combined_deadlines/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: generated_quality_deadlines/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: generated_quality_deadlines_all_planned/5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: quality_deadlines/10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: combined_deadlines/10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: generated_quality_deadlines/10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: generated_quality_deadlines_all_planned/10",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: quality_deadlines/30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: combined_deadlines/30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: generated_quality_deadlines/30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: generated_quality_deadlines_all_planned/30",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: quality_deadlines/60",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: combined_deadlines/60",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: generated_quality_deadlines/60",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: generated_quality_deadlines_all_planned/60",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: startup resource gates",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: initial/final model eviction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: running fan snapshots",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: device invariants",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: power mode and zero trip counters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: guard and cleanup outcome",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: telemetry count",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: telemetry monotonic and unstalled",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: sampled runtime RAM/swap/temperature bounds",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: all retrieval results empty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: no fabricated memory evidence IDs",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "supplement: isolated SQLite empty and valid",
+      "passed": true,
+      "detail": {
+        "memory_item": 0,
+        "memory_audit": 0,
+        "memory_embedding": 0,
+        "memory_fts": 0
+      }
+    },
+    {
+      "check": "supplement: SQLite audit was read-only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "supplement: no hidden labels or unique rubric literals in model prompts",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "all 53 attempts preserved",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "checks_passed": 270,
+  "checks_failed": 0,
+  "passed": true
+}

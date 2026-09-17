@@ -1,0 +1,120 @@
+{
+  "runner_exit_code": 1,
+  "failure": {
+    "type": "SafetyGateError",
+    "message": "telemetry swap ceiling crossed"
+  },
+  "cleanup_errors": [],
+  "snapshot": {
+    "boot_id": "c0e155e9-d16b-4054-be35-885c29c814e7",
+    "captured_at": "2026-09-17T10:33:47.953906+00:00",
+    "fan_pwm": 77,
+    "memory": {
+      "mem_total_kib": 7803200,
+      "mem_available_kib": 2703268,
+      "swap_total_kib": 3901584,
+      "swap_free_kib": 2851216,
+      "swap_used_kib": 1050368
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "MAINSWRST",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 49.968,
+      "gpu-thermal": 50.531,
+      "soc0-thermal": 49.343,
+      "soc1-thermal": 49.437,
+      "soc2-thermal": 49.687,
+      "tj-thermal": 50.718
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "telemetry": {
+    "record_type": "jetson_telemetry_summary",
+    "sample_count": 63,
+    "schema_version": 1,
+    "metrics": {
+      "cpu_mean_percent": {
+        "max": 73.33333333333333,
+        "p50": 37.0,
+        "p95": 63.166666666666664
+      },
+      "gr3d_percent": {
+        "max": 99,
+        "p50": 38,
+        "p95": 99
+      },
+      "ram_used_mb": {
+        "max": 6054,
+        "p50": 5722,
+        "p95": 6041
+      },
+      "swap_used_mb": {
+        "max": 1026,
+        "p50": 1005,
+        "p95": 1026
+      },
+      "vdd_in_average_mw": {
+        "max": 7649,
+        "p50": 6677,
+        "p95": 7608
+      },
+      "vdd_in_mw": {
+        "max": 14874,
+        "p50": 6512,
+        "p95": 14874
+      }
+    },
+    "temperatures_c": {
+      "cpu": {
+        "sample_count": 63,
+        "max": 50.687,
+        "p50": 48.312,
+        "p95": 50.468
+      },
+      "gpu": {
+        "sample_count": 63,
+        "max": 52.406,
+        "p50": 48.968,
+        "p95": 52.218
+      },
+      "soc0": {
+        "sample_count": 63,
+        "max": 49.562,
+        "p50": 48.0,
+        "p95": 49.406
+      },
+      "soc1": {
+        "sample_count": 63,
+        "max": 49.531,
+        "p50": 48.343,
+        "p95": 49.437
+      },
+      "soc2": {
+        "sample_count": 63,
+        "max": 50.468,
+        "p50": 48.375,
+        "p95": 50.25
+      },
+      "tj": {
+        "sample_count": 63,
+        "max": 52.406,
+        "p50": 49.0,
+        "p95": 52.062
+      }
+    },
+    "duration_seconds": 31.41316154,
+    "vdd_in_energy_joules": 240.39764766953252
+  },
+  "guard_violation": "telemetry swap ceiling crossed",
+  "complete": false
+}

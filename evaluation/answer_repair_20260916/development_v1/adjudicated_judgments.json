@@ -1,0 +1,268 @@
+[
+  {
+    "id": "fresh_048",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "missing_operation_question",
+      "task_misframed_as_missing_recall"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask which operation or result the user wants, such as a sum, average, or another calculation.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer asks to be reminded of earlier information rather than asking which calculation to perform on the supplied numbers. It incorrectly frames the unresolved operation as missing recall.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_001",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_item_placement_steps",
+      "missing_time_allocation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide actionable steps that put the pencils in the jar, scrap paper in the recycling bin, and book and cup on the shelf.",
+        "pass": false
+      },
+      {
+        "component": "Assign durations or time intervals that together account for 7 minutes.",
+        "pass": false
+      }
+    ],
+    "reason": "The current request supplies the items, destinations, and time budget. Asking for more detail or rephrasing gives neither the requested placements nor a seven-minute allocation.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_004",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "task_misframed_as_missing_recall",
+      "missing_preparation_plan",
+      "missing_time_allocation",
+      "missing_item_coverage"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide three preparation phases whose durations total 8 minutes.",
+        "pass": false
+      },
+      {
+        "component": "Account for the tote and all five other listed items; the hat may be packed or worn.",
+        "pass": false
+      }
+    ],
+    "reason": "No earlier fact is needed for the supplied preparation task. The answer asks for a reminder and announces 'Preparing the plan...' but supplies no phases, durations, or item preparation.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_015",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "task_misframed_as_missing_recall",
+      "missing_poem",
+      "line_count_violation",
+      "missing_required_word",
+      "output_format_violation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide four nonempty poetic lines about rain and a window.",
+        "pass": false
+      },
+      {
+        "component": "Use the word lantern exactly once and omit a title or explanatory preface.",
+        "pass": false
+      }
+    ],
+    "reason": "The response requests unavailable earlier detail even though the creative task is fully specified. It supplies no poem, four-line structure, or occurrence of 'lantern'.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_009",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "sentence_count_violation",
+      "missing_event_location"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Produce a friendly invitation in two sentences addressed to Noor.",
+        "pass": false
+      },
+      {
+        "component": "Include paper crafts, the user's home, this Sunday at 3 p.m., and the request for one magazine.",
+        "pass": false
+      }
+    ],
+    "reason": "The friendly draft addresses Noor and includes paper crafts, this Sunday at 3 p.m., and one magazine for cutting. It omits the user's home as the venue and contains three sentences, including 'Hi Noor!', instead of two.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_014",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "task_misframed_as_missing_recall",
+      "missing_csv_deliverable",
+      "output_format_violation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Return header item,count followed by rows red buttons,8; blue buttons,3; green buttons,5, each on its own line.",
+        "pass": false
+      },
+      {
+        "component": "Provide CSV text without surrounding explanation or a code fence.",
+        "pass": false
+      }
+    ],
+    "reason": "The current message supplies every CSV value. The response instead requests earlier information and provides no header or rows, violating the CSV-only format and the prohibition on treating this as recall.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_035",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_task_clarification",
+      "missing_unavailable_recall_acknowledgment",
+      "missing_assumption_fact_distinction"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that no user-stated departure station is available.",
+        "pass": false
+      },
+      {
+        "component": "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure.",
+        "pass": false
+      }
+    ],
+    "reason": "The desired task and result are already explicit. Asking what help and result are wanted does not acknowledge the missing user-stated station or distinguish the earlier hunch from a disclosure.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_040",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "State that the previously named game is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Provide a two-sentence explanation connecting an agreed turn order with reduced confusion and a fair or orderly chance to participate.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer acknowledges unavailable earlier information and specifically asks for the board game. Its two independent explanatory sentences connect agreed turns to preventing confusion, fair play, cooperation, and an organized game.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_038",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_general_component",
+      "missing_three_item_checklist"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that the previously stated suitcase color is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Provide a generic packing checklist with three ordinary, useful travel items or item categories.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer appropriately acknowledges the unavailable color and requests it, but only announces a three-item checklist without supplying any packing items.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_016",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_general_explanation",
+      "bullet_format_violation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Use exactly two bullets, covering rectangles and squares.",
+        "pass": false
+      },
+      {
+        "component": "Explain that rectangles have four right angles, while squares also have all four sides equal, supporting the requested relationship.",
+        "pass": false
+      }
+    ],
+    "reason": "The task specifies the concepts, relationship, and format. The clarification question provides no geometric explanation and no bullet points.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_011",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "task_misframed_as_missing_recall",
+      "missing_text_rewrite",
+      "missing_date_and_place"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Combine or rewrite the second version as one sentence inviting people to the sketch swap.",
+        "pass": false
+      },
+      {
+        "component": "Preserve 18 October and Room 2.",
+        "pass": false
+      }
+    ],
+    "reason": "The declared benign draft context identifies version two and supplies 18 October and Room 2. The delivered response treats the information as unavailable recall instead of providing the one-sentence rewrite; neither required detail appears. This assesses the delivered end-to-end result without assuming which context reached a model.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_003",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "task_misframed_as_missing_recall",
+      "missing_time_allocation",
+      "missing_clue_texts",
+      "missing_placement_sequence"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give setup time allocations totaling 12 minutes.",
+        "pass": false
+      },
+      {
+        "component": "Provide three clue texts and a coherent placement sequence: the handed-over clue leads to the next card, that card leads to the third, and the third leads to the prize.",
+        "pass": false
+      },
+      {
+        "component": "Use only the table, chair, and shelf as hiding or destination locations; using every listed feature is not mandatory.",
+        "pass": true
+      }
+    ],
+    "reason": "The current prompt supplies enough information to construct the hunt. The response instead requests earlier detail and supplies no time allocations, clues, or placement sequence. It introduces no prohibited location, but that constraint compliance does not remedy the missing task.",
+    "useful_general_help": false
+  }
+]

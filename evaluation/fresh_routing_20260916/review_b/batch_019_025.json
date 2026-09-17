@@ -1,0 +1,73 @@
+[
+  {
+    "id": "fresh_005",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_time_allocation"],
+    "required_components_pass": [
+      {"component": "Provide a sorting and labeling plan with time allocations totaling 10 minutes.", "pass": false},
+      {"component": "Preserve the three groups and correct labels: city 4, nature 5, abstract 3.", "pass": true}
+    ],
+    "reason": "The grouping and category/count labeling preserve all three supplied groups, but the answer provides no time allocations for the requested ten-minute plan.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_013",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["sentence_count_violation"],
+    "required_components_pass": [
+      {"component": "Choose Moss Lane in one sentence.", "pass": false},
+      {"component": "Connect the choice to its shorter length and happy ending.", "pass": true}
+    ],
+    "reason": "The answer correctly chooses Moss Lane and supports it with its 90-page length and happy ending, but uses two sentences rather than the requested one.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_017",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Schedule both 5-minute walks and the 2-minute hand-in so the letter is handed in by 16:35.", "pass": true},
+      {"component": "Include the 15-minute draft and 8-minute filing tasks at the desk, finishing no later than 17:00.", "pass": true},
+      {"component": "Use a non-overlapping timeline consistent with the supplied task durations.", "pass": true}
+    ],
+    "reason": "Starting at the stated 16:20, the listed sequence gives the outbound walk to 16:25, hand-in to 16:27, return to 16:32, draft to 16:47, and filing to 16:55. This preserves every duration and meets both deadlines without overlap. Explicit clock labels on every interval were not required.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_045",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["untargeted_clarification"],
+    "required_components_pass": [
+      {"component": "Ask what the three refers to and what need or goal it should cover; a single concise question may cover both.", "pass": false}
+    ],
+    "reason": "The generic request for more information asks neither what is being counted nor the need or goal, so it does not deliver the specified clarification.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_028",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_scrapbook_title", "word_count_violation", "output_format_violation"],
+    "required_components_pass": [
+      {"component": "Return a scrapbook title containing six ordinary space-separated words.", "pass": false},
+      {"component": "Keep the title destination-neutral given the empty memory, with no explanatory preface.", "pass": false}
+    ],
+    "reason": "The answer asks an unnecessary nine-word question instead of providing the explicitly authorized destination-neutral six-word title.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_031",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question"],
+    "required_components_pass": [
+      {"component": "Acknowledge that the previously chosen picnic spot is not available; optionally request the missing place name.", "pass": false}
+    ],
+    "reason": "The generic detail question neither acknowledges the unavailable picnic choice nor specifically requests its place name.",
+    "useful_general_help": null
+  }
+]

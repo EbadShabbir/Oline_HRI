@@ -1,0 +1,70 @@
+{
+  "uid": 1000,
+  "snapshot": {
+    "boot_id": "c0e155e9-d16b-4054-be35-885c29c814e7",
+    "captured_at": "2026-09-17T10:43:59.092708+00:00",
+    "fan_pwm": 72,
+    "memory": {
+      "mem_total_kib": 7803200,
+      "mem_available_kib": 2756964,
+      "swap_total_kib": 3901584,
+      "swap_free_kib": 2868112,
+      "swap_used_kib": 1033472
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "MAINSWRST",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 50.156,
+      "gpu-thermal": 50.25,
+      "soc0-thermal": 49.187,
+      "soc1-thermal": 49.468,
+      "soc2-thermal": 49.625,
+      "tj-thermal": 50.25
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "swaps": "Filename\t\t\t\tType\t\tSize\t\tUsed\t\tPriority\n/dev/zram0                              partition\t650264\t\t172300\t\t5\n/dev/zram1                              partition\t650264\t\t171852\t\t5\n/dev/zram2                              partition\t650264\t\t172912\t\t5\n/dev/zram3                              partition\t650264\t\t172152\t\t5\n/dev/zram4                              partition\t650264\t\t172200\t\t5\n/dev/zram5                              partition\t650264\t\t172056\t\t5\n",
+  "relevant_processes": [
+    {
+      "Name": "gnome-software",
+      "Pid": "8387",
+      "PPid": "8058",
+      "Uid": "1000\t1000\t1000\t1000",
+      "VmRSS": "176632 kB",
+      "VmSwap": "52968 kB"
+    },
+    {
+      "Name": "update-manager",
+      "Pid": "51665",
+      "PPid": "6696",
+      "Uid": "1000\t1000\t1000\t1000",
+      "VmRSS": "245068 kB",
+      "VmSwap": "0 kB"
+    }
+  ],
+  "sudo": {
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "sudo: a password is required\n"
+  },
+  "package_transactions": {
+    "returncode": 0,
+    "stdout": "ao 0\n",
+    "stderr": ""
+  },
+  "software_help": {
+    "returncode": 0,
+    "stdout": "Usage:\n  org.gnome.Software [OPTION\u2026]\n\nHelp Options:\n  -h, --help                    Show help options\n  --help-all                    Show all help options\n  --help-gapplication           Show GApplication options\n  --help-gtk                    Show GTK+ Options\n\nApplication Options:\n  --mode=MODE                   Start up mode: either \u2018updates\u2019, \u2018updated\u2019, \u2018installed\u2019 or \u2018overview\u2019\n  --search=SEARCH               Search for applications\n  --details=ID                  Show application details (using application ID)\n  --details-pkg=PKGNAME         Show application details (using package name)\n  --install=ID                  Install the application (using application ID)\n  --local-filename=FILENAME     Open a local package file\n  --interaction                 The kind of interaction expected for this action: either \u2018none\u2019, \u2018notify\u2019, or \u2018full\u2019\n  --verbose                     Show verbose debugging information\n  --autoupdate                  Installs any pending updates in the background\n  --prefs                       Show update preferences\n  --quit                        Quit the running instance\n  --prefer-local                Prefer local file sources to AppStream\n  --version                     Show version number\n  --display=DISPLAY             X display to use\n\n",
+    "stderr": ""
+  }
+}

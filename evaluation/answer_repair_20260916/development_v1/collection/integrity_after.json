@@ -1,0 +1,123 @@
+{
+  "source_sha256": {
+    "src/oline_hri/__init__.py": "9277b006a17fef00262f9473cdcc2554f49bc993652b5b75316b149a329884f3",
+    "src/oline_hri/__main__.py": "d2a607769c31fe4394238e5c9e0205bc4206576c3568ce167f00f124dea202e2",
+    "src/oline_hri/answer_guidance.py": "be67393844039c26978a67bd91d877225950ee539a9d8b8107a3d2ac7479db93",
+    "src/oline_hri/answer_review.py": "4edead5ee577291b24c773adc59189d686586c947d1f89f41a350737bb3fcffd",
+    "src/oline_hri/cli.py": "857214123a068850c280bb1ce5b9301a29e572cdc29f4fa6f69991127d6c0c51",
+    "src/oline_hri/config.py": "7b0034095010c2921b77d8c73e97a144e503c332028e5e268fc0e44f47e67d8f",
+    "src/oline_hri/conversation.py": "6b97afc1ad0d420198c30c5fc241fe555f2b2d1b99b51130e43f4fa0f1bcf8c8",
+    "src/oline_hri/dependency_classifier.py": "2dc25a405fc3c8e63c9ddeffa08c14d3491d8d182c8ff3f2e6299236d86ffb4b",
+    "src/oline_hri/dependency_review.py": "c4ea46986ab9572f0722fe533540c1fb93b095657cb3a7b509bddff69adea5ee",
+    "src/oline_hri/dependency_routing.py": "75b0ad8ca6dba52c793aeda3b037339de166bfcf7fec7c3a339841aa5723f92c",
+    "src/oline_hri/embedding.py": "9016ce8bbb88d1a7ed9a308d24bc6c7ef99b69f89852412e234db5749859d18c",
+    "src/oline_hri/evaluation.py": "ac0dcbfa4cd32b9b5f271132b4cabf0c5c41ffe74f0319e75f2649b066059c33",
+    "src/oline_hri/evaluation_benchmark.py": "c1920b0d75f791c8320b314fbe410b3e25ebc68ee4edca06bac0ba52792cbda6",
+    "src/oline_hri/evaluation_experiment.py": "e779918f7401f5a0807cda42851cc7702a819c3a396112b0f37feed0780abc2b",
+    "src/oline_hri/evaluation_merge.py": "aa4480cba2d4ae8eda4c0d41968781d109b0fe2836e43b4fb511dd1355314038",
+    "src/oline_hri/evaluation_model_pairs.py": "44b54e046957df3ef8dc6041d385065a8de3f98b67792be2129a627da2f79fcc",
+    "src/oline_hri/evaluation_router.py": "22409df38d43f9c04cb16cfb031d17e81a30f8c29ce7d310de8082876d731c2a",
+    "src/oline_hri/evaluation_runner.py": "b644069e9d31b42895e3043bef00ae1bfa158e457ed77672de7a17ef560a0c78",
+    "src/oline_hri/evaluation_scoring.py": "e8a7e829415d928024f1c0273be8f04412947db792b1bc0b9316226ecccd2723",
+    "src/oline_hri/evaluation_systems.py": "77437ef8a579d2de531a4770fc2bda2a2088d3310cad4d3db3be536e4203f66a",
+    "src/oline_hri/evaluation_telemetry.py": "1f95054f676c2a9b0e95a53fe4a192db1022d8ecc0d219d4723588cef5411b31",
+    "src/oline_hri/grounded_composition.py": "52e458baa35b59aa7bc00736daf7a2e8b98b38a0fae1ce77b872fcf40eff7507",
+    "src/oline_hri/human_guidance.py": "a97fdbefb4552ff447bfb573a99b4a5f3fa61665f03b7bb8c22bbfd83bc1f124",
+    "src/oline_hri/lightweight_routing.py": "579805c1fb7a26cd7fc0aa48be5c49aec5a73e63ecbe53329e60681026e7f6ad",
+    "src/oline_hri/memory.py": "7910213701283ac86bf3157d9271c78114cfbc4104f8f20aed3db59924ee5f38",
+    "src/oline_hri/memory_capture.py": "475b14095bf397ce197db114799452c0fd2efc09dcb00662f6c7cac98d2ac7bd",
+    "src/oline_hri/memory_evidence.py": "c0b1b0744f022fd593501e7a7310040309b4d198ba56435643ba14f2645d22e7",
+    "src/oline_hri/ollama.py": "7a82fe0a71461c7bd02faee3fbd739b32e4d4388e5f42ec146ab685e208a43d1",
+    "src/oline_hri/operational_planning.py": "d3161eac5d36615e15e81a41b71beafc4ac6fd1886bd899fa67a0bb0b6df25a0",
+    "src/oline_hri/relationships.py": "29f04fc94ab15a357ef90bdf0bd645958ecf2ecdadc3ad857363756528cae505",
+    "src/oline_hri/reliable_conversation.py": "bccc8b8e882db6b56e7ffd499a365a4af90475978f48a21ddf0a8c5c09770e93",
+    "src/oline_hri/reply_guard.py": "acca0d314ed827fb67fd7894bf61cc73fb730e4ead5835969856cfce9c5e946f",
+    "src/oline_hri/response.py": "e8ea4dc6358ab7345b58e0716a317eb633dfd8ce1fecbf91262940d44af09b25",
+    "src/oline_hri/retrieval.py": "def5286fb421b895328f7b97718592dd5a9b73ff82a039ba1e8f84fac7fa31f2",
+    "src/oline_hri/routing.py": "2e2c9e7ea0dc59c422f6062daabbff6fc93185ccf564fb080969091568921d3c",
+    "src/oline_hri/semantic_routing.py": "7c88f2e9cfcbb05f21f6122dab870ef8a1cafbf483d71a16c170c99ebc4927c6",
+    "src/oline_hri/speech.py": "4efb169a48d51d903f8c614d6eac0b43af6593a05527203c1f99050c9170b0f0",
+    "src/oline_hri/task_contract.py": "57ab4e2eb8f67e9a452cdf446b2b6df0b07f5316fab13dad6e1124888b9ace34",
+    "src/oline_hri/timing.py": "23c1c126c26d65e03833dc1c107ffa14670843fefd3755fd42ecd0969af1a445",
+    "src/oline_hri/default_config.json": "ec44f88b0393c4dcc5465bd5bc0e4e042d49500a7f00aadc1e56422a6d08c3c9",
+    "src/oline_hri/dependency_classifier_v1.json": "2ac2fa20d05c2bd172c6e54fdb8ab50224a848effd45a768fcfbbf26ce74ac33",
+    "src/oline_hri/fictional_seven_day_v1.json": "d83e5c85338e58d6eb5a08e2c27f4e2f9e8fb3203da95974115a6480d06eff9e",
+    "src/oline_hri/fictional_seven_day_v1_1.json": "fd046641e1b2839bfbcd98d8701f107cd030a18d5149963fe0fd405032d91c1d",
+    "scripts/run_routing_reliability.py": "fdf1376cb9e46a17b5f512dda3e48587a29635eb38b0999ebac9d8578e52e8b2",
+    "scripts/run_pair_remediation_validation.py": "5e9ce447e2591c17b741781638140a1cec06d3b99603f29fd335639591cbbb13",
+    "scripts/complete_system_device_guard.py": "54904b4854babde0a5635bdba7f00717342594400945270a433cd494ebf9c814",
+    "evaluation/answer_repair_20260916/run_guarded.py": "93924f38de261ec1812873c583ac2d64b7ee4a1b5c9ffa95b38cd19ab6bdd0af"
+  },
+  "cases_sha256": "ca50150451733370cb98bc3fb6b443db8dfe4a2c91d7c07ffac82a7824a4972b",
+  "config": {
+    "schema_version": 7,
+    "profile": {
+      "active": "general"
+    },
+    "ollama": {
+      "base_url": "http://127.0.0.1:11434",
+      "small_model": "qwen3:0.6b",
+      "general_large_model": "qwen3:1.7b",
+      "large_model": "qwen3:1.7b",
+      "request_timeout_seconds": 60,
+      "large_request_timeout_seconds": 120,
+      "unload_timeout_seconds": 30
+    },
+    "generation": {
+      "context_length": 2048,
+      "max_output_tokens": 192,
+      "temperature": 0.0,
+      "thinking": false
+    },
+    "conversation": {
+      "system_prompt": "You are a concise, friendly assistant running fully offline on a household companion robot. Be honest about uncertainty and never claim that a physical action occurred."
+    },
+    "memory": {
+      "database_path": "~/.local/share/oline-hri/memory.sqlite3",
+      "profile_id": "default_user",
+      "retention_days": 7
+    },
+    "embedding": {
+      "model_directory": "~/.local/share/oline-hri/models/bge-small-en-v1.5/5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+      "intra_op_threads": 2
+    },
+    "speech": {
+      "capture_executable_path": "/usr/bin/arecord",
+      "capture_device": "plughw:CARD=Microphone,DEV=0",
+      "sample_rate_hz": 16000,
+      "chunk_samples": 512,
+      "silero": {
+        "model_path": "~/.local/share/oline-hri/stt/models/silero_vad-v6.2.1.onnx",
+        "threshold": 0.5,
+        "silence_threshold": 0.35,
+        "pre_roll_seconds": 0.3,
+        "start_timeout_seconds": 30.0,
+        "start_trigger_seconds": 0.096,
+        "end_silence_seconds": 1.0,
+        "min_utterance_seconds": 0.3,
+        "max_utterance_seconds": 30.0
+      },
+      "whisper": {
+        "executable_path": "~/.local/share/oline-hri/stt/bin/whisper-cli",
+        "primary_model_path": "~/.local/share/oline-hri/stt/models/ggml-small.en-q5_0.bin",
+        "fallback_model_path": "~/.local/share/oline-hri/stt/models/ggml-base.en-q5_0.bin",
+        "language": "en",
+        "threads": 4,
+        "timeout_seconds": 120
+      },
+      "quality": {
+        "min_mean_token_probability": 0.2,
+        "min_text_characters": 1,
+        "max_text_characters": 1000
+      }
+    },
+    "logging": {
+      "level": "INFO"
+    }
+  },
+  "embedding_sha256": {
+    "config.json": "094f8e891b932f2000c92cfc663bac4c62069f5d8af5b5278c4306aef3084750",
+    "tokenizer.json": "d241a60d5e8f04cc1b2b3e9ef7a4921b27bf526d9f6050ab90f9267a1f9e5c66",
+    "onnx/model.onnx": "828e1496d7fabb79cfa4dcd84fa38625c0d3d21da474a00f08db0f559940cf35"
+  }
+}

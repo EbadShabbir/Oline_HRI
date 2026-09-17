@@ -1,0 +1,107 @@
+[
+  {
+    "id": "fresh_026",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "game_count_violation",
+      "missing_playable_rules",
+      "incomplete_general_component"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give three distinct game ideas suitable for three seated adults using paper and pens.",
+        "pass": false
+      },
+      {
+        "component": "Briefly explain each idea enough to understand how to start playing.",
+        "pass": false
+      }
+    ],
+    "reason": "Only one vague number-writing activity is mentioned, without enough rules to constitute a usable game; seating and encouraging creativity are not two additional game ideas. No three playable paper-and-pen games are delivered.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_015",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": [
+      "line_count_violation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide four nonempty poetic lines about rain and a window.",
+        "pass": false
+      },
+      {
+        "component": "Use the word lantern exactly once and omit a title or explanatory preface.",
+        "pass": true
+      }
+    ],
+    "reason": "The response supplies relevant poetic rain/window imagery and uses lantern exactly once without a title or preface, but it is one paragraph rather than four nonempty lines.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_021",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Offer three usable bookmark themes despite the empty memory.",
+        "pass": true
+      },
+      {
+        "component": "Frame any color choices as suggestions, not as remembered favorites.",
+        "pass": true
+      }
+    ],
+    "reason": "Nature, friendship, and adventure are three usable general bookmark themes. The awkward conditional closing does not name or assert any remembered favorite color, and no actual personal preference is invented.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_018",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_general_component",
+      "format_violation",
+      "nonanswer"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Return a past-tense version such as 'You always used purple notebooks.'",
+        "pass": false
+      },
+      {
+        "component": "Provide only the rewritten sentence.",
+        "pass": false
+      }
+    ],
+    "reason": "The sentence and requested tense change are explicitly supplied, but the response requests more information rather than returning the past-tense sentence.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_009",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_general_component",
+      "nonanswer"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Produce a friendly invitation in two sentences addressed to Noor.",
+        "pass": false
+      },
+      {
+        "component": "Include paper crafts, the user's home, this Sunday at 3 p.m., and the request for one magazine.",
+        "pass": false
+      }
+    ],
+    "reason": "The recipient, event, place, time, and magazine request are all supplied. The response asks for more information and delivers no invitation.",
+    "useful_general_help": false
+  }
+]

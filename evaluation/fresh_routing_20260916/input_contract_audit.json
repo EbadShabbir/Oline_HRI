@@ -1,0 +1,252 @@
+{
+  "created_at": "2026-09-16T18:29:16.123029+00:00",
+  "scope": "Read-only production input contract check; no inference, no source or input edits. Added after first observed newline setup failure.",
+  "groups": {
+    "cases.json": {
+      "sha256": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+      "rows": [
+        {
+          "id": "fresh_023",
+          "valid": true
+        },
+        {
+          "id": "fresh_027",
+          "valid": true
+        },
+        {
+          "id": "fresh_041",
+          "valid": true
+        },
+        {
+          "id": "fresh_022",
+          "valid": true
+        },
+        {
+          "id": "fresh_048",
+          "valid": true
+        },
+        {
+          "id": "fresh_047",
+          "valid": false,
+          "error": {
+            "type": "ValueError",
+            "message": "user message cannot contain control characters"
+          }
+        },
+        {
+          "id": "fresh_032",
+          "valid": true
+        },
+        {
+          "id": "fresh_037",
+          "valid": true
+        },
+        {
+          "id": "fresh_001",
+          "valid": true
+        },
+        {
+          "id": "fresh_004",
+          "valid": true
+        },
+        {
+          "id": "fresh_008",
+          "valid": true
+        },
+        {
+          "id": "fresh_030",
+          "valid": true
+        },
+        {
+          "id": "fresh_046",
+          "valid": false,
+          "error": {
+            "type": "ValueError",
+            "message": "user message cannot contain control characters"
+          }
+        },
+        {
+          "id": "fresh_020",
+          "valid": true
+        },
+        {
+          "id": "fresh_010",
+          "valid": true
+        },
+        {
+          "id": "fresh_019",
+          "valid": true
+        },
+        {
+          "id": "fresh_006",
+          "valid": true
+        },
+        {
+          "id": "fresh_002",
+          "valid": true
+        },
+        {
+          "id": "fresh_036",
+          "valid": false,
+          "error": {
+            "type": "ValueError",
+            "message": "user message cannot contain control characters"
+          }
+        },
+        {
+          "id": "fresh_005",
+          "valid": true
+        },
+        {
+          "id": "fresh_013",
+          "valid": true
+        },
+        {
+          "id": "fresh_017",
+          "valid": true
+        },
+        {
+          "id": "fresh_045",
+          "valid": true
+        },
+        {
+          "id": "fresh_028",
+          "valid": true
+        },
+        {
+          "id": "fresh_031",
+          "valid": true
+        },
+        {
+          "id": "fresh_026",
+          "valid": true
+        },
+        {
+          "id": "fresh_015",
+          "valid": true
+        },
+        {
+          "id": "fresh_021",
+          "valid": true
+        },
+        {
+          "id": "fresh_018",
+          "valid": true
+        },
+        {
+          "id": "fresh_009",
+          "valid": true
+        },
+        {
+          "id": "fresh_014",
+          "valid": true
+        },
+        {
+          "id": "fresh_012",
+          "valid": true
+        },
+        {
+          "id": "fresh_034",
+          "valid": true
+        },
+        {
+          "id": "fresh_039",
+          "valid": true
+        },
+        {
+          "id": "fresh_035",
+          "valid": false,
+          "error": {
+            "type": "ValueError",
+            "message": "user message cannot contain control characters"
+          }
+        },
+        {
+          "id": "fresh_040",
+          "valid": true
+        },
+        {
+          "id": "fresh_029",
+          "valid": true
+        },
+        {
+          "id": "fresh_038",
+          "valid": true
+        },
+        {
+          "id": "fresh_016",
+          "valid": true
+        },
+        {
+          "id": "fresh_033",
+          "valid": true
+        },
+        {
+          "id": "fresh_024",
+          "valid": true
+        },
+        {
+          "id": "fresh_007",
+          "valid": true
+        },
+        {
+          "id": "fresh_042",
+          "valid": true
+        },
+        {
+          "id": "fresh_011",
+          "valid": true
+        },
+        {
+          "id": "fresh_025",
+          "valid": true
+        },
+        {
+          "id": "fresh_044",
+          "valid": false,
+          "error": {
+            "type": "ValueError",
+            "message": "user message cannot contain control characters"
+          }
+        },
+        {
+          "id": "fresh_003",
+          "valid": true
+        },
+        {
+          "id": "fresh_043",
+          "valid": true
+        }
+      ],
+      "valid": 43,
+      "total": 48
+    },
+    "whitespace_followup_cases.json": {
+      "sha256": "7317d946002b8a586b2be80a7889ceaa77222b9de3e33a98e5a97f7aa9855c69",
+      "rows": [
+        {
+          "id": "fresh_047",
+          "valid": true
+        },
+        {
+          "id": "fresh_046",
+          "valid": true
+        },
+        {
+          "id": "fresh_036",
+          "valid": true
+        },
+        {
+          "id": "fresh_035",
+          "valid": true
+        },
+        {
+          "id": "fresh_044",
+          "valid": true
+        }
+      ],
+      "valid": 5,
+      "total": 5
+    }
+  }
+}

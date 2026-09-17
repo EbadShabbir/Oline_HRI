@@ -1,0 +1,1 @@
+Development v2 used the same independent assistant reviewer B on a sanitized packet, plus root review of all delivered text and criteria. Root accepts all judgments, including the explicitly documented borderline cases035 and038; no extra unstated requirement is imposed. This is known development evidence, not two-reviewer or fresh validation.

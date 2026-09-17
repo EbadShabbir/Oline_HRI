@@ -1,0 +1,99 @@
+{
+  "created_at": "2026-09-16T18:41:26.715556+00:00",
+  "cases": 48,
+  "quality_agreements": 47,
+  "useful_general_agreements": 47,
+  "adjudicated_differences": [
+    {
+      "id": "fresh_006",
+      "field": "useful_general_help",
+      "review_a": false,
+      "review_b": true,
+      "resolved": false,
+      "reason": "The delivered text repeats the already supplied title, headings and intended placement as first-person promises. It adds no preparation method or time allocation. This is a nonanswer to the requested timed plan, despite accurately repeating the supplied labels. Both reviewers independently fail strict quality. As with case017, plan-perspective ambiguity is recorded without asserting that the assistant promised robot execution."
+    },
+    {
+      "id": "fresh_017",
+      "field": "quality_pass",
+      "review_a": false,
+      "review_b": true,
+      "resolved": true,
+      "reason": "All requested timeline components pass: 16:20 start, hand-in by16:27, return16:32, drafting through16:47 and filing through16:55. In this requested plan, first-person wording can reasonably be the user's plan and does not unequivocally promise robot execution. No second-person style requirement was in the task. Record perspective ambiguity as a non-disqualifying observation rather than introduce a new requirement."
+    }
+  ],
+  "root_notes": {
+    "fresh_006": {
+      "field": "useful_general_help",
+      "review_a": false,
+      "review_b": true,
+      "resolved": false,
+      "reason": "The delivered text repeats the already supplied title, headings and intended placement as first-person promises. It adds no preparation method or time allocation. This is a nonanswer to the requested timed plan, despite accurately repeating the supplied labels. Both reviewers independently fail strict quality. As with case017, plan-perspective ambiguity is recorded without asserting that the assistant promised robot execution.",
+      "overrides": {
+        "flags": [
+          "missing_time_allocations",
+          "request_echo",
+          "ambiguous_actor_perspective"
+        ]
+      }
+    },
+    "fresh_001": {
+      "field": "flags",
+      "add": [
+        "ambiguous_actor_perspective"
+      ],
+      "previous_root_note_preserved": {
+        "field": "flags",
+        "add": [
+          "unsupported_physical_action_promise"
+        ],
+        "reason": "The ordinary guidance response says 'I will reset the table' and describes future physical actions by its speaker. This is an unsupported action promise outside a requested draft; it is not a claim that an action was already completed. Review A preserved a separate flag addendum."
+      },
+      "reason": "The first-person wording is ambiguous in a requested user plan. It does not conclusively establish a robot capability or performed-action claim. Record perspective ambiguity instead of a confirmed unsupported physical-action promise. The incorrect destinations and missing allocations independently fail quality."
+    },
+    "fresh_017": {
+      "field": "quality_pass",
+      "review_a": false,
+      "review_b": true,
+      "resolved": true,
+      "reason": "All requested timeline components pass: 16:20 start, hand-in by16:27, return16:32, drafting through16:47 and filing through16:55. In this requested plan, first-person wording can reasonably be the user's plan and does not unequivocally promise robot execution. No second-person style requirement was in the task. Record perspective ambiguity as a non-disqualifying observation rather than introduce a new requirement.",
+      "overrides": {
+        "quality_pass": true,
+        "primary_outcome": "pass",
+        "flags": [
+          "ambiguous_actor_perspective"
+        ],
+        "reason": "All requested timeline components pass: 16:20 start, hand-in by16:27, return16:32, drafting through16:47 and filing through16:55. In this requested plan, first-person wording can reasonably be the user's plan and does not unequivocally promise robot execution. No second-person style requirement was in the task. Record perspective ambiguity as a non-disqualifying observation rather than introduce a new requirement."
+      }
+    },
+    "fresh_039": {
+      "field": "component_interpretation",
+      "component": "three generic agenda points",
+      "review_a": true,
+      "review_b": false,
+      "resolved": true,
+      "reason": "The three delivered headings can serve as high-level puzzle-club discussion topics. The frozen rubric permits a generic agenda and does not require timed activities or an explicit start/end sequence. Retain the permissive component judgment while noting its weak specificity; overall quality still fails because the unavailable weekday is not acknowledged."
+    }
+  },
+  "reviewer_independence": "Separate assistant contexts; no access to each other's judgments. Reviewer A audited labels before inference; neither authored the cases or changed the candidate.",
+  "source_sha256": {
+    "review_a/batch_000_007.json": "ea6e1dd98b3962bf4d8f9929326f66c277e0a6c07734136afc9262ea33358d8b",
+    "review_a/batch_007_013.json": "cf379b5012631a29ff66afab642e789259ec4d5dd8d72559d43ce9a48953a233",
+    "review_a/batch_013_019.json": "30e36cf8f3fbc49233454fea4dcbf58af58784b0cbeee2211fe951847d317f9a",
+    "review_a/batch_019_025.json": "09264b2621be29059fa5f4af8128cd00a3e0e692e6ded8a994de817e7f1128a7",
+    "review_a/batch_025_030.json": "d43d85876e6e960647733095cd1319317de4442905e2c8a8febecd5e572ecded",
+    "review_a/batch_030_035.json": "99536b1b9d4a5be0fa9a70da0442510f89a39d34bf27f28529ad34c1e5f70a0e",
+    "review_a/batch_035_041.json": "3ae358498daaa1d6f8f16ec44666996ce5c4ac081d0079f8316a6b6f60c519f0",
+    "review_a/batch_041_048.json": "6509002ab159dd59374fc6663e2ed4caede2c2326c73ac4b567c72847b557bfd",
+    "review_b/batch_000_007.json": "529bda36a8cde6da2b68c115177fa142151e9310b99a1c365c9b3ee72c97e726",
+    "review_b/batch_007_013.json": "76da646d57aa817a9c97d0a63a66215355d7239064bbd5372601301a76c13ebf",
+    "review_b/batch_013_019.json": "1c1a638e0c2fd70daae1a67b3b8800ffd1bc574c85e8b21e5ad57787bf800f0b",
+    "review_b/batch_019_025.json": "908450afa97ca0d948464a973f5746536def623be749662f23b4b5399b835265",
+    "review_b/batch_025_030.json": "2814535f6ea5a7103535e5113d1843514e15f92fd4accf3ef5ce31bd738e4ce4",
+    "review_b/batch_030_035.json": "4298eb21685d12a798aa21ad104da02eba5ae618a876691ca4c2f5e719339de2",
+    "review_b/batch_035_041.json": "d206e82422c999e78b392f12d9aae5e1b2168ee8311deeafc03a688ac5634b29",
+    "review_b/batch_041_048.json": "7a929559af7e5b79b1c8239f9b8e84b94f189f5a7fd83500f1f9376bf9d0d65f",
+    "cases.json": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+    "adjudication_notes.json": "b5069659595a2f6ad2b814b3ff56a4ebc9d59f92725e4b1d8e036b6d54a6cc07"
+  },
+  "adjudicated_sha256": "8ee53c1b5b41db714d42867d1c4f3efc5bcdeab2881342dd6226df6e0c263fe9"
+}

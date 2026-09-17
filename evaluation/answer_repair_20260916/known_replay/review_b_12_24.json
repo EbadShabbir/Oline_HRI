@@ -1,0 +1,143 @@
+[
+  {
+    "id": "fresh_046",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["unresolved_title_selected", "missing_referent_clarification"],
+    "required_components_pass": [
+      {"component": "Ask which of the three supplied titles the user means by the other one.", "pass": false}
+    ],
+    "reason": "The answer chooses Small Discoveries without resolving which title 'the other one' refers to. Offering to adjust the unsupported selection afterward does not provide the required clarification.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_020",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["unwanted_preface", "output_format_violation"],
+    "required_components_pass": [
+      {"component": "Return 4, 9, 12, 17 on one comma-separated line; spacing around commas is immaterial.", "pass": false}
+    ],
+    "reason": "The numbers are correctly sorted and complete, but the response adds a prose preface and sentence punctuation instead of returning only the comma-separated numbers.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_010",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Return a polite revision asking the recipient to remove their boxes from the shared table before lunch.", "pass": true},
+      {"component": "Output only the revised note.", "pass": true}
+    ],
+    "reason": "The note adds politeness while preserving the boxes, shared table, and before-lunch deadline, with no extra text.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_019",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["day_only_format_violation"],
+    "required_components_pass": [
+      {"component": "Answer Tuesday or Tuesdays, with no additional explanation.", "pass": false}
+    ],
+    "reason": "The answer correctly identifies Tuesdays from the current input, but returns a full sentence instead of the explicitly requested day alone.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_006",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_board_headings"],
+    "required_components_pass": [
+      {"component": "Provide setup intervals or durations totaling 6 minutes.", "pass": true},
+      {"component": "Include the exact supplied title and three headings on the board, and the headings on the index card.", "pass": false}
+    ],
+    "reason": "The five durations total six minutes, and the exact title goes on the board while all three headings go on the card. No step writes those headings on the board; a later visibility check does not supply that missing placement.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_002",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_tag_attachment"],
+    "required_components_pass": [
+      {"component": "Give four steps that cover wrapping and securing the book, then attaching a written tag and ribbon.", "pass": false},
+      {"component": "Make the four time allocations total 9 minutes.", "pass": true}
+    ],
+    "reason": "The response supplies four practical wrapping actions with allocations totaling nine minutes, secures the paper, attaches ribbon, and writes the tag. It never attaches the written tag, so the required finished-gift sequence is incomplete.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_036",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "State that no user-provided notebook-size preference is available.", "pass": true},
+      {"component": "Distinguish the earlier assistant's A5 assumption from an actual personal fact.", "pass": true}
+    ],
+    "reason": "The answer states that the earlier information is unavailable, explicitly distinguishes an assistant guess from user testimony, and requests the notebook size without adopting A5.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_005",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Provide a sorting and labeling plan with time allocations totaling 10 minutes.", "pass": true},
+      {"component": "Preserve the three groups and correct labels: city 4, nature 5, abstract 3.", "pass": true}
+    ],
+    "reason": "Five two-minute steps total ten minutes. The plan places the correct city, nature, and abstract counts into separate envelopes and instructs labeling each with its category and count.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_013",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["wrong_book_choice", "ignored_short_cheerful_criteria"],
+    "required_components_pass": [
+      {"component": "Choose Moss Lane in one sentence.", "pass": false},
+      {"component": "Connect the choice to its shorter length and happy ending.", "pass": false}
+    ],
+    "reason": "Although the answer is one sentence, it chooses the long tragic book for contrast rather than Moss Lane for the user's stated short, cheerful preference. It does not connect the chosen answer to the required length and ending criteria.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_017",
+    "quality_pass": false,
+    "primary_outcome": "incorrect_answer",
+    "flags": ["timeline_starts_before_current_time", "infeasible_mailroom_arrival"],
+    "required_components_pass": [
+      {"component": "Schedule both 5-minute walks and the 2-minute hand-in so the letter is handed in by 16:35.", "pass": false},
+      {"component": "Include the 15-minute draft and 8-minute filing tasks at the desk, finishing no later than 17:00.", "pass": true},
+      {"component": "Use a non-overlapping timeline consistent with the supplied task durations.", "pass": false}
+    ],
+    "reason": "The answer preserves the walk, hand-in, draft, and filing durations and puts the desk tasks after the return, but requires arrival at 16:15 when the current time is already 16:20. That impossible timing prevents a feasible overall timeline despite a useful mailroom-first task order.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_045",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_referent_and_goal_questions"],
+    "required_components_pass": [
+      {"component": "Ask what the three refers to and what need or goal it should cover; a single concise question may cover both.", "pass": false}
+    ],
+    "reason": "The response acknowledges that sufficiency depends on context but never asks what is being counted or what need it must cover. Offering further clarification does not resolve either missing input.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_028",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_scrapbook_title", "word_count_violation", "output_format_violation"],
+    "required_components_pass": [
+      {"component": "Return a scrapbook title containing six ordinary space-separated words.", "pass": false},
+      {"component": "Keep the title destination-neutral given the empty memory, with no explanatory preface.", "pass": false}
+    ],
+    "reason": "The explicit destination-neutral fallback allows immediate completion, but the answer asks for more detail instead of returning a six-word title.",
+    "useful_general_help": false
+  }
+]

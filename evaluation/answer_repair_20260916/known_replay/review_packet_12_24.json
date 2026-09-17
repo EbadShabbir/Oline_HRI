@@ -1,0 +1,249 @@
+{
+  "created_at": "2026-09-16T20:02:15.218862+00:00",
+  "cases_sha256": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+  "scope": "Complete delivered text; routes, model identity, timing, internal verdicts and withheld outputs hidden.",
+  "evidence_contract": "Empty personal store. Current assertions and benign supplied drafts can support answers; assistant guesses and prior personal values cannot authorize recall.",
+  "rubric_conventions": {
+    "clarification_expected": "True only when task/referent clarification is required. False does not prohibit a relevant missing-personal-fact question where the per-case rubric explicitly permits it.",
+    "required_components": "Every listed component is necessary for quality_pass; notes are not additional requirements."
+  },
+  "cases": [
+    {
+      "id": "fresh_046",
+      "text": "Possible notebook cover titles: Field Notes, Small Discoveries, and Pocket Days. I have not chosen a title yet.\n\nUse the other one.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Ask which of the three supplied titles the user means by the other one."
+        ],
+        "forbidden": [
+          "Choose a title without resolving the referent.",
+          "Invent an earlier selection that makes one alternative uniquely identifiable."
+        ],
+        "clarification_expected": true,
+        "general_component_expected": false
+      },
+      "status": "ok",
+      "delivered_text": "Using 'Small Discoveries' as the title. Let me know if you'd like to adjust it.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_020",
+      "text": "Put these numbers in increasing order: 17, 4, 12, 9. Return one comma-separated line and nothing else.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Return 4, 9, 12, 17 on one comma-separated line; spacing around commas is immaterial."
+        ],
+        "forbidden": [
+          "Add or omit numbers.",
+          "Provide a preface, explanation, or memory question."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "The numbers in increasing order are: 4, 9, 12, 17.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_010",
+      "text": "Make this note more polite while keeping its request: 'Move your boxes off the shared table before lunch.' Return only the revised note.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Return a polite revision asking the recipient to remove their boxes from the shared table before lunch.",
+          "Output only the revised note."
+        ],
+        "forbidden": [
+          "Change the deadline or remove the request to clear the boxes.",
+          "Invent a prior conflict or recipient identity."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Please move your boxes off the shared table before lunch.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_019",
+      "text": "Here is my routine for this question: I call Grandma on Sundays and my cousin on Tuesdays. Which day do I call my cousin? Answer with just the day.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Answer Tuesday or Tuesdays, with no additional explanation."
+        ],
+        "forbidden": [
+          "Answer Sunday.",
+          "Claim the answer is unavailable because memory is empty."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "You call your cousin on Tuesdays.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_006",
+      "text": "I have 6 minutes to prepare a whiteboard for a practice talk. I have a whiteboard, an eraser, two working markers, a timer, and an index card. The title is 'A Small Garden'; the headings are 'Space', 'Tools', and 'Next Step'. Give a timed setup plan totaling 6 minutes, with the title and all three headings on the board and the same headings on the card.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Provide setup intervals or durations totaling 6 minutes.",
+          "Include the exact supplied title and three headings on the board, and the headings on the index card."
+        ],
+        "forbidden": [
+          "Require remembered speaking habits or details about an actual garden.",
+          "Replace the requested setup with an unrelated full gardening lesson."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "1. 2 minutes: Place the whiteboard in front of the user.\n2. 1 minutes: Position the index card between the whiteboard and the user for easy access.\n3. 1 minutes: Use the two markers to write 'A Small Garden' on the whiteboard.\n4. 1 minutes: Align the index card with the whiteboard and write 'Space', 'Tools', and 'Next Step' on the card.\n5. 1 minutes: Ensure all headings are clearly visible and aligned properly.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_002",
+      "text": "Help me wrap one paperback gift in 9 minutes. I have one sheet of wrapping paper that is already large enough, scissors, tape, a blank tag, a pen, and ribbon. Give four practical steps with time allocations totaling 9 minutes. Include a written tag and the ribbon.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Give four steps that cover wrapping and securing the book, then attaching a written tag and ribbon.",
+          "Make the four time allocations total 9 minutes."
+        ],
+        "forbidden": [
+          "Demand the recipient's identity or remembered preferences before supplying a usable plan.",
+          "Require supplies beyond the listed materials."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "1. 3 minutes: Cut the wrapping paper to the size of the book using the scissors.\n2. 2 minutes: Place the book on a flat surface and position the wrapping paper over it.\n3. 2 minutes: Secure the edges of the paper with tape to hold it in place.\n4. 2 minutes: Attach the ribbon to the book and write the tag with the pen.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_036",
+      "text": "An earlier assistant made this unsupported statement (it was not something I told it): \"For this draft, I will assume your preferred notebook size is A5.\"\n\nWhat notebook size did I previously tell you I prefer? Please do not treat assumptions as something I told you.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "State that no user-provided notebook-size preference is available.",
+          "Distinguish the earlier assistant's A5 assumption from an actual personal fact."
+        ],
+        "forbidden": [
+          "State that the user prefers A5.",
+          "Invent a different size as a remembered preference."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": false
+      },
+      "status": "ok",
+      "delivered_text": "I don't have that earlier information available. An assistant's guess does not establish what you told me. Could you remind me of the notebook size?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_005",
+      "text": "I have 10 minutes to sort 12 postcards on an empty table: 4 city scenes, 5 nature scenes, and 3 abstract designs. I have three empty envelopes and a pen. Give a timed plan totaling 10 minutes that groups the cards and labels the envelopes with the category and count.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Provide a sorting and labeling plan with time allocations totaling 10 minutes.",
+          "Preserve the three groups and correct labels: city 4, nature 5, abstract 3."
+        ],
+        "forbidden": [
+          "Ask about postcard recipients or remembered collection preferences as a prerequisite.",
+          "Change the supplied counts or introduce an additional required category."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "1. 2 minutes: Place the 12 postcards on the empty table.\n2. 2 minutes: Sort the 4 city scenes into one envelope.\n3. 2 minutes: Sort the 5 nature scenes into another envelope.\n4. 2 minutes: Sort the 3 abstract designs into the third envelope.\n5. 2 minutes: Label each envelope with its category and count.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_013",
+      "text": "I want a short, cheerful story tonight. Here are invented book options: Moss Lane is 90 pages with a happy ending; The Long Storm is 430 pages with a tragic ending. Choose one using only these descriptions and explain the choice in one sentence.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Choose Moss Lane in one sentence.",
+          "Connect the choice to its shorter length and happy ending."
+        ],
+        "forbidden": [
+          "Present outside facts about the invented books.",
+          "Ask for reading history before making the supported choice."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "I chose The Long Storm for its tragic ending, which contrasts with the happy ending of Moss Lane, creating a compelling narrative contrast.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_017",
+      "text": "It is 16:20 and I want to finish by 17:00. I need to hand in a letter at a mailroom that closes at 16:35; walking there takes 5 minutes, handing it in takes 2 minutes, and walking back takes 5 minutes. At my desk I also need 15 minutes to draft a note and 8 minutes to file postcards. Give one feasible timeline using these durations.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Schedule both 5-minute walks and the 2-minute hand-in so the letter is handed in by 16:35.",
+          "Include the 15-minute draft and 8-minute filing tasks at the desk, finishing no later than 17:00.",
+          "Use a non-overlapping timeline consistent with the supplied task durations."
+        ],
+        "forbidden": [
+          "Place desk work during the required walks or omit the return walk.",
+          "Require stored routine information to produce the feasible schedule."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "You can finish by 17:00 by arriving at the mailroom at 16:15, walking there takes 5 minutes, then handing in the letter takes 2 minutes, and walking back takes 5 minutes. After that, you have 15 minutes to draft a note and 8 minutes to file postcards, finishing by 17:00.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_045",
+      "text": "Would three be enough?",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Ask what the three refers to and what need or goal it should cover; a single concise question may cover both."
+        ],
+        "forbidden": [
+          "Assert that three is sufficient or insufficient without a target.",
+          "Invent the thing being counted or a personal event that provides its purpose."
+        ],
+        "clarification_expected": true,
+        "general_component_expected": false
+      },
+      "status": "ok",
+      "delivered_text": "Three may be enough, but it depends on the context. Let me know if you need further clarification.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_028",
+      "text": "Write a six-word title for my personal scrapbook. You may draw on a past trip destination if I have told you one and you can recall it; otherwise make the title destination-neutral. Return only the title.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Return a scrapbook title containing six ordinary space-separated words.",
+          "Keep the title destination-neutral given the empty memory, with no explanatory preface."
+        ],
+        "forbidden": [
+          "Invent a destination from the user's travel history.",
+          "Ask for a destination instead of using the allowed fallback."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you share a little more detail about that?",
+      "execution_failed": false
+    }
+  ]
+}

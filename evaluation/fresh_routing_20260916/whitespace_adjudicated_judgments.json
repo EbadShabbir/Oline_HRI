@@ -1,0 +1,279 @@
+[
+  {
+    "id": "fresh_047",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "nonspecific_clarification"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask whether the intended recipient is Alex Kim or Alex Rao before committing to one addressed reply.",
+        "pass": false
+      }
+    ],
+    "reason": "The response asks for unspecified elaboration without asking whether the intended recipient is Alex Kim or Alex Rao.",
+    "useful_general_help": null,
+    "review_a": {
+      "id": "fresh_047",
+      "quality_pass": false,
+      "primary_outcome": "inappropriate_clarification",
+      "flags": [
+        "nonspecific_clarification"
+      ],
+      "required_components_pass": [
+        {
+          "component": "Ask whether the intended recipient is Alex Kim or Alex Rao before committing to one addressed reply.",
+          "pass": false
+        }
+      ],
+      "reason": "The response asks for unspecified elaboration without asking whether the intended recipient is Alex Kim or Alex Rao.",
+      "useful_general_help": null
+    },
+    "review_b": {
+      "id": "fresh_047",
+      "quality_pass": false,
+      "primary_outcome": "incomplete_deliverable",
+      "flags": [
+        "untargeted_clarification"
+      ],
+      "required_components_pass": [
+        {
+          "component": "Ask whether the intended recipient is Alex Kim or Alex Rao before committing to one addressed reply.",
+          "pass": false
+        }
+      ],
+      "reason": "The generic request for more information avoids silently choosing a recipient, but does not ask whether the intended Alex is Kim or Rao.",
+      "useful_general_help": null
+    },
+    "review_basis": "Two separate assistant reviewers, blinded to model identity, routes, latency and runtime review verdicts; root adjudication. Not human validation."
+  },
+  {
+    "id": "fresh_046",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Ask which of the three supplied titles the user means by the other one.",
+        "pass": true
+      }
+    ],
+    "reason": "The response lists all three supplied titles and explicitly requests a choice among them, resolving the ambiguous other one without inventing an earlier selection.",
+    "useful_general_help": null,
+    "review_a": {
+      "id": "fresh_046",
+      "quality_pass": true,
+      "primary_outcome": "pass",
+      "flags": [],
+      "required_components_pass": [
+        {
+          "component": "Ask which of the three supplied titles the user means by the other one.",
+          "pass": true
+        }
+      ],
+      "reason": "The response lists all three supplied titles and explicitly requests a choice among them, resolving the ambiguous other one without inventing an earlier selection.",
+      "useful_general_help": null
+    },
+    "review_b": {
+      "id": "fresh_046",
+      "quality_pass": true,
+      "primary_outcome": "pass",
+      "flags": [],
+      "required_components_pass": [
+        {
+          "component": "Ask which of the three supplied titles the user means by the other one.",
+          "pass": true
+        }
+      ],
+      "reason": "The response lists all three supplied titles and asks the user to choose among them, thereby resolving the ambiguous title reference without inventing a prior selection.",
+      "useful_general_help": null
+    },
+    "review_basis": "Two separate assistant reviewers, blinded to model identity, routes, latency and runtime review verdicts; root adjudication. Not human validation."
+  },
+  {
+    "id": "fresh_036",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "missing_assumption_distinction",
+      "nonspecific_followup",
+      "nonanswer"
+    ],
+    "required_components_pass": [
+      {
+        "component": "State that no user-provided notebook-size preference is available.",
+        "pass": false
+      },
+      {
+        "component": "Distinguish the earlier assistant's A5 assumption from an actual personal fact.",
+        "pass": false
+      }
+    ],
+    "reason": "The response gives generic offers of help and requests for information. It neither states that no user-provided notebook preference is available nor distinguishes the quoted A5 assumption from a personal fact.",
+    "useful_general_help": null,
+    "review_a": {
+      "id": "fresh_036",
+      "quality_pass": false,
+      "primary_outcome": "incomplete_deliverable",
+      "flags": [
+        "missing_recall_acknowledgment",
+        "missing_assumption_distinction",
+        "nonspecific_followup",
+        "nonanswer"
+      ],
+      "required_components_pass": [
+        {
+          "component": "State that no user-provided notebook-size preference is available.",
+          "pass": false
+        },
+        {
+          "component": "Distinguish the earlier assistant's A5 assumption from an actual personal fact.",
+          "pass": false
+        }
+      ],
+      "reason": "The response gives generic offers of help and requests for information. It neither states that no user-provided notebook preference is available nor distinguishes the quoted A5 assumption from a personal fact.",
+      "useful_general_help": null
+    },
+    "review_b": {
+      "id": "fresh_036",
+      "quality_pass": false,
+      "primary_outcome": "incomplete_deliverable",
+      "flags": [
+        "missing_unavailable_recall_acknowledgment",
+        "missing_assumption_fact_distinction",
+        "untargeted_missing_fact_question"
+      ],
+      "required_components_pass": [
+        {
+          "component": "State that no user-provided notebook-size preference is available.",
+          "pass": false
+        },
+        {
+          "component": "Distinguish the earlier assistant's A5 assumption from an actual personal fact.",
+          "pass": false
+        }
+      ],
+      "reason": "The generic requests for information and offers to help do not state that no notebook preference is available or distinguish the A5 assumption from a user disclosure.",
+      "useful_general_help": null
+    },
+    "review_basis": "Two separate assistant reviewers, blinded to model identity, routes, latency and runtime review verdicts; root adjudication. Not human validation."
+  },
+  {
+    "id": "fresh_035",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "missing_assumption_distinction",
+      "nonspecific_followup"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that no user-stated departure station is available.",
+        "pass": false
+      },
+      {
+        "component": "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic request for elaboration neither explains the absence of a user-stated station nor identifies the quoted assistant hunch as unsupported.",
+    "useful_general_help": null,
+    "review_a": {
+      "id": "fresh_035",
+      "quality_pass": false,
+      "primary_outcome": "incomplete_deliverable",
+      "flags": [
+        "missing_recall_acknowledgment",
+        "missing_assumption_distinction",
+        "nonspecific_followup"
+      ],
+      "required_components_pass": [
+        {
+          "component": "Explain that no user-stated departure station is available.",
+          "pass": false
+        },
+        {
+          "component": "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure.",
+          "pass": false
+        }
+      ],
+      "reason": "The generic request for elaboration neither explains the absence of a user-stated station nor identifies the quoted assistant hunch as unsupported.",
+      "useful_general_help": null
+    },
+    "review_b": {
+      "id": "fresh_035",
+      "quality_pass": false,
+      "primary_outcome": "incomplete_deliverable",
+      "flags": [
+        "missing_unavailable_recall_acknowledgment",
+        "missing_assumption_fact_distinction",
+        "untargeted_missing_fact_question"
+      ],
+      "required_components_pass": [
+        {
+          "component": "Explain that no user-stated departure station is available.",
+          "pass": false
+        },
+        {
+          "component": "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure.",
+          "pass": false
+        }
+      ],
+      "reason": "The generic question neither explains that the actual user-stated station is unavailable nor identifies the earlier station hunch as an unsupported guess.",
+      "useful_general_help": null
+    },
+    "review_basis": "Two separate assistant reviewers, blinded to model identity, routes, latency and runtime review verdicts; root adjudication. Not human validation."
+  },
+  {
+    "id": "fresh_044",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "nonspecific_clarification"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask whether the user wants the welcome note or the reminder shortened; asking whether both are intended is also acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "The response requests unspecified elaboration without asking whether to shorten the welcome note, the reminder, or both.",
+    "useful_general_help": null,
+    "review_a": {
+      "id": "fresh_044",
+      "quality_pass": false,
+      "primary_outcome": "inappropriate_clarification",
+      "flags": [
+        "nonspecific_clarification"
+      ],
+      "required_components_pass": [
+        {
+          "component": "Ask whether the user wants the welcome note or the reminder shortened; asking whether both are intended is also acceptable.",
+          "pass": false
+        }
+      ],
+      "reason": "The response requests unspecified elaboration without asking whether to shorten the welcome note, the reminder, or both.",
+      "useful_general_help": null
+    },
+    "review_b": {
+      "id": "fresh_044",
+      "quality_pass": false,
+      "primary_outcome": "incomplete_deliverable",
+      "flags": [
+        "untargeted_clarification"
+      ],
+      "required_components_pass": [
+        {
+          "component": "Ask whether the user wants the welcome note or the reminder shortened; asking whether both are intended is also acceptable.",
+          "pass": false
+        }
+      ],
+      "reason": "The generic request for more information does not ask whether the welcome note, reminder, or both should be shortened.",
+      "useful_general_help": null
+    },
+    "review_basis": "Two separate assistant reviewers, blinded to model identity, routes, latency and runtime review verdicts; root adjudication. Not human validation."
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "id": "fresh_029",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question"],
+    "required_components_pass": [
+      {"component": "Clearly indicate that the previously stated shop name is not available in the provided context or memory.", "pass": false}
+    ],
+    "reason": "The generic request for more detail does not clearly indicate that the exact previously stated bicycle-shop name is unavailable.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_038",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Explain that the previously stated suitcase color is unavailable.", "pass": true},
+      {"component": "Provide a generic packing checklist with three ordinary, useful travel items or item categories.", "pass": true}
+    ],
+    "reason": "The response acknowledges unavailable color recall and supplies three useful packing entries covering phone/navigation essentials, a protective bag or pouch, and compact travel accessories. Related items may be grouped because the rubric permits item categories; no separate bullet-format requirement was imposed.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_016",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Use exactly two bullets, covering rectangles and squares.", "pass": true},
+      {"component": "Explain that rectangles have four right angles, while squares also have all four sides equal, supporting the requested relationship.", "pass": true}
+    ],
+    "reason": "The two bullets accurately define rectangle right angles and the extra equal-side condition for squares, establishing the requested inclusion relationship.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_033",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Indicate that the user's stated Saturday dog-walk start time is not available; optionally ask for the time.", "pass": true}
+    ],
+    "reason": "The answer acknowledges unavailable earlier information and specifically requests the missing start time without guessing one.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_024",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Describe a usable arrangement for four same-size frames in two sentences.", "pass": true},
+      {"component": "Supply a balanced default arrangement without needing prior style information.", "pass": true}
+    ],
+    "reason": "Two sentences give an evenly spaced straight row for all four frames and a general color suggestion. The arrangement is usable and balanced without asserting any remembered decorating style.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_007",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Show an equation equivalent to 14 + 9 - 5 = 18.", "pass": true},
+      {"component": "State in one short sentence that 18 tokens remain outside the box.", "pass": true}
+    ],
+    "reason": "The answer contains exactly the correct equation embedded in one short declarative sentence identifying 18 as the outside-box total. Neither separate equation placement nor terminal punctuation was an explicit requirement.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_042",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Indicate that the previously stated nickname is unavailable.", "pass": true},
+      {"component": "Give a two-sentence general explanation distinguishing an informal or alternative name from a person's full name, without asserting that every nickname must be shorter.", "pass": true}
+    ],
+    "reason": "The response acknowledges missing nickname recall and asks for it. The two explanatory sentences distinguish a shortened or informal alternative from the complete name; the 'or informal' alternative avoids asserting that all nicknames must be shorter.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_011",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Combine or rewrite the second version as one sentence inviting people to the sketch swap.", "pass": true},
+      {"component": "Preserve 18 October and Room 2.", "pass": true}
+    ],
+    "reason": "The single invitation sentence combines the second version and preserves both its date and room.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_025",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Provide a recognizable story premise and a corresponding opening sentence.", "pass": true},
+      {"component": "Complete the creative task without requiring remembered interests.", "pass": true}
+    ],
+    "reason": "The answer supplies a traveler discovering a mysterious library premise and a separately identified opening about a lone figure discovering a mysterious tome. The compatible fictional details form a usable opening without inventing facts about the user or requiring remembered interests.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_044",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_message_selection_clarification", "unresolved_messages_combined", "no_shortening_delivered"],
+    "required_components_pass": [
+      {"component": "Ask whether the user wants the welcome note or the reminder shortened; asking whether both are intended is also acceptable.", "pass": false}
+    ],
+    "reason": "The answer repeats both messages together and adds 'Welcome!' rather than asking which message should be shortened. It neither resolves the referent nor performs a shortening.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_003",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_time_allocation", "missing_clue_texts", "missing_placement_sequence"],
+    "required_components_pass": [
+      {"component": "Give setup time allocations totaling 12 minutes.", "pass": false},
+      {"component": "Provide three clue texts and a coherent placement sequence: the handed-over clue leads to the next card, that card leads to the third, and the third leads to the prize.", "pass": false},
+      {"component": "Use only the table, chair, and shelf as hiding or destination locations; using every listed feature is not mandatory.", "pass": true}
+    ],
+    "reason": "The generic question supplies no allocations, clues, or linked placement sequence despite sufficient supplied information. It introduces no prohibited location, but all substantive deliverables remain missing.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_043",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": ["execution_failed", "absent_output"],
+    "required_components_pass": [
+      {"component": "Ask what needs fixing or request the object, text, or problem to work on.", "pass": false}
+    ],
+    "reason": "The recorded execution failed and delivered no text, so it did not ask what needs fixing.",
+    "useful_general_help": null
+  }
+]

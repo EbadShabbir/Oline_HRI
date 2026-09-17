@@ -1,0 +1,41 @@
+{
+  "created_at": "2026-09-16T20:08:42.008409+00:00",
+  "review_method": "Two independent assistant reviewers, blinded to source, model, timing, routes and runtime verdicts. Root adjudicates disagreements using sanitized packets and preregistered rubrics. Root is not blinded and is not a third independent reviewer. This is not human validation.",
+  "quality_agreement": {
+    "count": 47,
+    "denominator": 48
+  },
+  "quality_pass_a": 21,
+  "quality_pass_b": 22,
+  "adjudications": [
+    {
+      "id": "fresh_038",
+      "field": "quality_pass and required_components_pass",
+      "decision": true,
+      "selected": "B",
+      "reason": "The rubric permits item categories and requires no extra labeling or separate bullet layout. The three checklist entries can cover essential phone/navigation items, a protective bag/pouch, and compact travel accessories. Extra members within these categories do not violate that permissive criterion. No guessed suitcase color is given."
+    },
+    {
+      "id": "fresh_004",
+      "field": "useful_general_help",
+      "decision": false,
+      "selected": "A",
+      "reason": "The steps only reposition items already on the table, contradict the supplied pencil/eraser location, and refill an already filled bottle. They do not supply a usable action toward taking the materials to the park. Both reviewers agree on strict failure."
+    },
+    {
+      "id": "fresh_026",
+      "field": "useful_general_help",
+      "decision": false,
+      "selected": "A",
+      "reason": "The names give inspiration but none supplies a playable seated paper-and-pen procedure under the supplied constraints. Missing adaptations/rules and the explicit card requirement prevent actionable partial usefulness. Both reviewers agree on strict failure."
+    },
+    {
+      "id": "fresh_003",
+      "field": "required_components_pass[2]",
+      "decision": false,
+      "selected": "A",
+      "reason": "No hiding or destination placements were delivered. A missing deliverable cannot satisfy this required location component merely by not naming a prohibited location. Both reviewers agree on full-quality and usefulness failure."
+    }
+  ],
+  "other_rows": "Retain A judgments where evaluated booleans agree; preserve both originals and their independent reasons/flags. Differing descriptive outcome labels do not alter quality counts."
+}

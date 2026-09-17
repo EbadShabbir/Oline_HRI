@@ -1,0 +1,13 @@
+...........................F..................
+======================================================================
+FAIL: test_ordinal_event_edit_receives_only_already_admitted_artifact_context (test_routing_reliability_runner.RoutingReliabilityRunnerTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_routing_reliability_runner.py", line 436, in test_ordinal_event_edit_receives_only_already_admitted_artifact_context
+    self.assertEqual(runner._admit_history(orphaned, edit), 0)
+AssertionError: 2 != 0
+
+----------------------------------------------------------------------
+Ran 46 tests in 1.881s
+
+FAILED (failures=1)

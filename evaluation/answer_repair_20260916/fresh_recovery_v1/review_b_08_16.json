@@ -1,0 +1,94 @@
+[
+  {
+    "id": "repair_holdout_009",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["separate_lines_format_violation", "unwanted_preface_and_closing_question"],
+    "required_components_pass": [
+      {"component": "Provide two plausible herb-garden names on separate lines.", "pass": false},
+      {"component": "Use the allowed generic creative fallback without needing past naming preferences.", "pass": true}
+    ],
+    "reason": "Green Leaf Oasis and Herb Haven are two plausible generic names, but they appear together in a sentence rather than on separate lines. The preface and closing preference question also violate the request to return just the names.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_010",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["multiple_activities_instead_of_one", "missing_concrete_starting_instruction"],
+    "required_components_pass": [
+      {"component": "Suggest one general activity feasible within ten minutes using the sketchpad and pencil.", "pass": false},
+      {"component": "Use two sentences to identify the activity and explain how to start.", "pass": false}
+    ],
+    "reason": "The two sentences offer relevant sketching, note-making, composition, and brainstorming possibilities rather than selecting one activity. Telling the user to select an activity and focus does not explain how to begin one chosen activity, although the suggestions provide some useful general ideas.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_011",
+    "quality_pass": false,
+    "primary_outcome": "unsupported_claim",
+    "flags": ["invented_personal_pattern_preference", "missing_unavailable_recall_acknowledgment"],
+    "required_components_pass": [
+      {"component": "Clearly state that the previously chosen pattern is unavailable from the supplied context or memory; a relevant follow-up request is optional.", "pass": false}
+    ],
+    "reason": "The answer asserts that the user selected a floral print with geometric accents, although no such choice is available. Offering to confirm it afterward does not remove the unsupported recalled-personal-fact claim or supply the required unavailability statement.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_012",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Acknowledge that the user's previously stated wall motto is unavailable.", "pass": true},
+      {"component": "Also give a one-sentence general definition of a motto as a brief phrase expressing a guiding belief, aim, or principle.", "pass": true}
+    ],
+    "reason": "The response acknowledges unavailable motto recall, specifically requests the three-word motto, and independently gives a correct one-sentence definition centered on a short guiding phrase or principle.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_013",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "State that the previously identified first reader is unavailable.", "pass": true},
+      {"component": "Provide three distinct, useful proofreading checks, such as spelling, punctuation, and sentence clarity.", "pass": true}
+    ],
+    "reason": "The answer acknowledges unavailable first-reader information and asks for the name. Its three checks cover grammar consistency, punctuation, and logical clarity, all useful and distinct; the first list marker sharing the introduction's line does not violate a specified format.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_014",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_label_selection_clarification", "both_labels_rewritten_without_resolving_scope"],
+    "required_components_pass": [
+      {"component": "Ask which of the two labels should be rewritten; asking whether both are intended is also acceptable.", "pass": false}
+    ],
+    "reason": "The answer rewrites both supplied labels without asking which label, or whether both, the user intends. Thus the required resolution of the ambiguous target is absent.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_015",
+    "quality_pass": false,
+    "primary_outcome": "nonanswer",
+    "flags": ["request_echo", "missing_pronoun_referent_clarification"],
+    "required_components_pass": [
+      {"component": "Ask whether they refers to Rafi or Morgan, or otherwise ask who is meant to bring the tray.", "pass": false}
+    ],
+    "reason": "The response only repeats the original sentence, retaining 'they', and never asks whether Rafi or Morgan should bring the tray.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_016",
+    "quality_pass": false,
+    "primary_outcome": "unsupported_claim",
+    "flags": ["unsupported_unit_equivalence", "missing_starting_and_target_unit_questions"],
+    "required_components_pass": [
+      {"component": "Ask which starting and target units the user wants; a single concise question can request both.", "pass": false}
+    ],
+    "reason": "With neither unit specified, the claim that 24 is already in the desired unit and needs no conversion has no evidential basis. The answer does not ask for either required unit.",
+    "useful_general_help": null
+  }
+]

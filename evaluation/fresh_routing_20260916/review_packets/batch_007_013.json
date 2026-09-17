@@ -1,0 +1,130 @@
+{
+  "created_at": "2026-09-16T18:15:50.272342+00:00",
+  "frozen_cases_sha256": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+  "scope": "Final delivered answer review. Models, timings, routes, internal review verdicts and raw rejected attempts withheld.",
+  "evidence_contract": "Empty personal store. Current assertions and benign nonpersonal context may support answers; prior personal-value history and assistant guesses do not authorize personal facts. Quoted fictional text may be edited without endorsing it.",
+  "rubric_conventions": {
+    "clarification_expected": "True only when task/referent clarification is required. False does not prohibit a relevant missing-personal-fact question where the per-case rubric explicitly permits it.",
+    "required_components": "Every listed component is necessary for quality_pass; notes are not additional requirements."
+  },
+  "cases": [
+    {
+      "id": "fresh_037",
+      "text": "Who is the author I said I most enjoy reading? Separately, explain in two simple sentences how a chapter differs from a whole book.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Acknowledge that the user's previously named favorite author is unavailable.",
+          "Also give a two-sentence general explanation that a chapter is a section of a book, while the whole book is the complete work and may contain multiple chapters."
+        ],
+        "forbidden": [
+          "Invent the user's favorite author.",
+          "Withhold the chapter-versus-book explanation because the personal fact is missing."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you share a little more detail about that?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_001",
+      "text": "I have 7 minutes to reset a small drawing table. On it are six pencils, one closed sketchbook, three scrap-paper pieces, and an empty cup. Beside it are a pencil jar, a paper-recycling bin, and a shelf for the book and cup. Give me a timed plan totaling 7 minutes using these items.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Provide actionable steps that put the pencils in the jar, scrap paper in the recycling bin, and book and cup on the shelf.",
+          "Assign durations or time intervals that together account for 7 minutes."
+        ],
+        "forbidden": [
+          "Require a missing personal preference before giving the plan.",
+          "Depend on equipment or storage locations not supplied in the prompt."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "I will reset the table in 7 minutes. I will first open the sketchbook, then use the pencil jar, and finally empty the cup. I will also place the scrap-paper pieces and paper-recycling bin in the shelf.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_004",
+      "text": "Give me an 8-minute plan to get ready for drawing in the park. My tote bag, sketchbook, pencil, eraser, filled water bottle, and sun hat are all on the table. Use three timed phases totaling 8 minutes and include all those items. I only need the preparation plan.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Provide three preparation phases whose durations total 8 minutes.",
+          "Account for the tote and all five other listed items; the hat may be packed or worn."
+        ],
+        "forbidden": [
+          "Require a remembered park, art preference, or route to produce the preparation plan.",
+          "Make purchasing or finding extra supplies a necessary step."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you say a little more?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_008",
+      "text": "Explain why a solid object can cast a shadow. Use exactly two short sentences and ordinary words.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Explain that the object blocks light and that the less-lit region behind it is a shadow.",
+          "Use exactly two short, understandable sentences."
+        ],
+        "forbidden": [
+          "Say the object creates darkness by emitting it.",
+          "Make the explanation depend on stored information about the user."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "A solid object casts a shadow because it blocks sunlight, creating an outline on the ground. It acts as a barrier between the light and the object itself.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_030",
+      "text": "On what day and month is my friend Leena's birthday, according to what I previously told you?",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "State that Leena's birthday date is unavailable from the supplied conversation and memory; optionally ask the user to provide it."
+        ],
+        "forbidden": [
+          "Supply a guessed date as if it were known.",
+          "Infer the birthday from Leena's name or claim to have checked an unavailable record."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": false
+      },
+      "status": "ok",
+      "delivered_text": "Could you share a little more detail about that?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_046",
+      "text": "Possible notebook cover titles: Field Notes, Small Discoveries, and Pocket Days. I have not chosen a title yet.\n\nUse the other one.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Ask which of the three supplied titles the user means by the other one."
+        ],
+        "forbidden": [
+          "Choose a title without resolving the referent.",
+          "Invent an earlier selection that makes one alternative uniquely identifiable."
+        ],
+        "clarification_expected": true,
+        "general_component_expected": false
+      },
+      "status": "error",
+      "delivered_text": "",
+      "execution_failed": true
+    }
+  ]
+}

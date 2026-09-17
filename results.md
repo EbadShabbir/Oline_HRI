@@ -1462,3 +1462,160 @@ preserved with the [validation record](tmp/practical_answers_20260915/validation
 These are known development/regression cases, with the earlier failures retained.
 No new microphone/transcription sample or broad answer-quality guarantee is
 established by this repair.
+
+## 2026-09-16: fresh evaluation of the latest router and answer repairs
+
+The requested fresh text evaluation is complete. The frozen latest candidate
+ran 48 independently authored challenge cases with an empty isolated memory
+store. **Final routing matched 36/48; full answer quality and combined
+routing-and-answer success each passed 4/48.** Five original attempts were
+rejected before inference because the evaluator inserted newlines into current
+requests that the CLI requires to be single-line. These setup errors remain in
+the original denominator and are not model answer failures. On the 43 valid
+original inputs, routing was **36/43 (83.7%)** and full quality **4/43 (9.3%)**.
+
+A separately declared, whitespace-only correction of those five inputs ran
+once per case with unchanged source and criteria: **3/5 correct routes, 1/5
+complete answers and 0/5 successes on both**. All 53 attempts are preserved.
+An explicitly exploratory joined view of 43 original valid inputs plus five
+corrected inputs gives 39/48 routing, 5/48 quality and 4/48 combined success;
+it is not the original frozen result or a pooled latency experiment.
+
+The 24 original deliveries containing generated text took **43.57 s median /
+84.93 s p95**. Application-only replies took 9.93 s median / 70.24 s p95.
+No original full-quality answer arrived within 30 seconds; one arrived within
+60 seconds. Thirty-two original cases had the right final route but failed
+answer quality; all six explicit minute-allocation tasks failed. Twenty of 24
+generated deliveries passed the runtime reviewer despite failing independent
+task review. The earlier 20/32 release used different cases and source, so these
+observations do not establish an improvement or regression against that score.
+
+Two independent assistant reviewers agreed on quality for 47/48 original and
+5/5 follow-up attempts; the sole original quality disagreement was explicitly
+adjudicated. The independent measurement/integrity audit passed **270/270
+checks**, all 137 model calls stayed within their bounds, device guards and
+cleanup passed, and all frozen source hashes matched. No runtime repairs were
+made during evaluation. Full methodology, setup-error accounting, exact outputs,
+review judgments, latency distributions, raw traces and reproduction commands
+are in the [fresh evaluation report](evaluation/fresh_routing_20260916/README.md).
+
+## 2026-09-17: router and answer improvements; fresh validation pending
+
+Implemented bounded self-contained-task routing, an exact four-mode fallback
+review, direct generator-size policy, structured answer parts, conservative
+format checks, application-owned eligible minute allocations, admitted-draft
+handling, and LF-safe input/retrieval. Personal-evidence checks, bounded retries,
+raw provenance, model settings and device limits remain in place. The full
+offline suite passed **1,440 tests run, 26 skipped**, with no failures or errors.
+
+The final candidate ran once on all 48 known original cases: **37/48 final
+routes, 22/48 full-quality answers, and 21/48 combined successes**. Useful
+general content appeared in 23/34 applicable cases. Two blinded assistant
+reviewers agreed on strict quality for 47/48 cases; the disagreement and three
+component/usefulness differences were explicitly adjudicated. These are known
+regressions, not fresh generalization evidence.
+
+On the **43 unchanged originally valid inputs**, full quality increased from
+**4/43 to 20/43**, combined success from **4/43 to 19/43**, and routing decreased
+from **36/43 to 35/43**. The new error stays in the denominator. Matched overall
+median/p95 turn time changed from **38.207/81.883 seconds** to
+**5.377/12.693 seconds**. These are descriptive historical-session measurements,
+not a controlled causal speedup. The repaired full replay's 30 generated
+deliveries took 5.207 seconds median and 8.281 seconds p95. Exact quality,
+routing, latency groups and all original outcomes are retained separately.
+
+All 48 attempts were recorded, but the last was interrupted by the existing
+available-memory runtime floor. Cleanup unloaded the models. The independent
+audit passed **348/349 checks**, with the operational guard/finalization failure
+explicitly retained; `evaluation_complete` and `operational_success` remain
+false. The original evaluation and every unsuccessful repair iteration remain
+preserved. The original manifest's mutable `results.md` bytes are archived in
+the repair directory before this appended entry.
+
+The independently authored **16-case fresh holdout is frozen but has not run**.
+The candidate was frozen before its first opening, and no production/test
+changes followed. Offline validation passed; live admission is blocked by
+swap usage above the unchanged 768 MiB start ceiling. No fresh score is claimed.
+Unresolved referents, optional fallbacks, exact formatting and semantic plan
+correctness still fail known cases. Full changes, review evidence, raw traces,
+remaining work and the prepared fresh-run command are in the
+[repair report](evaluation/answer_repair_20260916/README.md).
+
+## 2026-09-17: fresh16 attempted and independently audited; clean run still pending
+
+The frozen fresh16 cohort was attempted once after the device passed all
+unchanged admission gates. No source, test, model, app or device-setting changes
+preceded this attempt. During review of the first generated candidate, swap
+crossed the existing 1 GiB runtime ceiling. The latched guard blocked later model
+work. All 16 records remain: **8/16 final routing matches, 0/16 full-quality
+answers, 0/16 combined successes**, eight execution errors and eight generic
+application clarifications. No model-generated answer reached delivery.
+
+Both independent blinded assistant reviewers agreed on every quality,
+usefulness and component boolean. The independent audit passed **258/260
+checks**; the two failures explicitly retain the guard/finalization failure
+and sampled swap-limit breach. Source, cases, models, artifacts and scoring
+verify. There were 25 recorded client/API attempts, only one successfully
+completed raw generation, and 24 guard-error records. A recorded attempt does
+not establish that backend inference ran.
+
+Maximum sampled swap was **1,026 MiB** and temperature **52.406°C**. Cleanup
+succeeded and no model remained resident. The first case took 29.733 seconds;
+the overall 0.074-second median reflects later guard rejection, not useful
+answer performance. Generated-answer and successful-answer latency are
+unmeasured because neither population has any deliveries.
+
+The fresh attempt and its reviews/audit are complete as records of a failed
+run. **Clean operational validation remains unfinished.** One separate recovery
+replay is frozen with identical source, tests, case bytes, order, rubrics and
+limits. It has not run and awaits authorization for idle software-app/swap
+cleanup followed by ordinary admission. Its results cannot replace this first
+fresh failure or be presented as new unseen cases. Exact outputs, reviewer
+judgments and resource evidence are in the
+[fresh16 report](evaluation/answer_repair_20260916/fresh_holdout/README.md).
+
+## 2026-09-17: approved cleanup and clean 16-case recovery completed
+
+The three requested evaluation steps are now complete: the first fresh attempt
+is preserved, both attempts received two independent reviews and measurement
+audits, and a separate **clean 16-case recovery run** verified bounded execution
+under the unchanged device limits. The earlier failed cohorts retain their
+failed operational status; they are not replaced or pooled into this result.
+
+After explicit approval, idle Software Center/Software Updater were closed with
+no package transaction active. The normal administrator authorization mechanism
+cycled the six existing zram swap devices, restoring their original sizes and
+priorities. No persistent swap configuration, fan, power, model, generation or
+guard setting changed. The independent cleanup audit passed **45/45 checks**.
+The frozen source, tests, case bytes, order, histories and rubrics were unchanged.
+
+The recovery delivered generated text on **all 16 cases with zero execution
+errors**. Final routing passed **12/16**, full quality **4/16**, and combined
+routing-and-answer success **4/16**. Raw classifier agreement was 14/16 before
+downstream routing changes. Both reviewers agreed on every quality, usefulness
+and required-component boolean; useful general content appeared in **10/12**
+applicable cases. These are repeated, now-observed inputs rather than a new
+independent holdout.
+
+Median/p95 complete text-turn latency was **4.684/13.566 seconds** (n=16,
+including cold start). For the four complete-quality outcomes it was
+**4.112/7.591 seconds**. Three complete answers arrived within five seconds and
+all four within ten. All **41 calls** completed within their bounds: 17 answer
+generations, 16 answer reviews and eight dependency reviews, all on the configured
+1.7B model; no compute-classifier call was made. Historical sessions and the
+changed memory state do not establish a causal speedup.
+
+The independent recovery audit passed **260/260 checks**. Two hundred telemetry
+samples recorded peak swap **276 MiB** and temperature **59.875°C**, below the
+existing runtime ceilings. The available-memory guard reported no violation.
+The runner exited 0 with clean finalization, no cleanup errors and no remaining
+resident models. This verifies the bounded run, not long-duration stability.
+
+Quality remains limited: exact output formats, draft fidelity, explanation
+accuracy and all three clarification cases failed. Case 011 incorrectly claimed
+a prior cushion-pattern choice despite the empty store: the raw required-recall
+route was changed to no-memory and the answer reviewer falsely approved the
+claim. Independent quality remains false. Operational completion is not a
+release-quality pass. All attempts, judgments, exact source, audit evidence and
+remaining failures are in the
+[recovery report](evaluation/answer_repair_20260916/fresh_recovery_v1/README.md).

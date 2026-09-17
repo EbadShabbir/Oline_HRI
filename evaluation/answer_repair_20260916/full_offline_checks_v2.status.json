@@ -1,0 +1,17 @@
+{
+  "command": ".venv/bin/python -m unittest discover -s tests",
+  "pythonpath": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/src:/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests:/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/scripts",
+  "live_opt_ins": "all five explicitly disabled",
+  "exit_code": 0,
+  "tests": 1412,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 26,
+  "duration_seconds": 108.623,
+  "diff_check_exit_code": 0,
+  "previous_logs_preserved": [
+    "full_offline_checks_v1.log",
+    "clarification_integration_checks_v1.log",
+    "clarification_integration_checks_v2.log"
+  ]
+}

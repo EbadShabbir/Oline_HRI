@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-09-17T10:56:30.843672+00:00",
+  "scope": "Independent factual and local artifact-link review of final evaluation reports; full three evaluation READMEs, current repository README evaluation summary, and newly appended clean-completion results.md section. Historical results entries intentionally remain historical. No source, test, model, device, guard, seal or prior-manifest changes.",
+  "documents_sha256": {
+    "evaluation/answer_repair_20260916/README.md": "5bd6ce57aa355434bbe69678fe4f140500bb77263d1864263e04a15152f9b629",
+    "evaluation/answer_repair_20260916/fresh_holdout/README.md": "bb49a883cc7f8cd98f7a358390707e537d87090ac6c582b4e654ee20a92e82fa",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/README.md": "1a1466514c939e3c069c9a33f7fbdb696a8313c5692d7cbe2f8542da057bf5a7",
+    "README.md": "c7ed8f5f18fbad36db807915e48428a44b1af8c29d4018509d4e7913523d069d",
+    "results.md": "3002ddf292534cdd78dee068c9e377ada61e3f853bfb58ca011e5e332374e3f0"
+  },
+  "checks": [
+    {
+      "check": "recovery audit260/260 clean finish and evaluation_complete",
+      "passed": true
+    },
+    {
+      "check": "cleanup audit45/45",
+      "passed": true
+    },
+    {
+      "check": "raw14 threshold10 final12 quality4 combined4 planned16",
+      "passed": true
+    },
+    {
+      "check": "all16 generated zero errors",
+      "passed": true
+    },
+    {
+      "check": "all-case median4.684 p9513.566 quality median4.112 p957.591",
+      "passed": true
+    },
+    {
+      "check": "sample200 maxswap276 temperature59.875",
+      "passed": true
+    },
+    {
+      "check": "41 completed calls17generation16answerreview8dependencyreview no bounds violations",
+      "passed": true
+    },
+    {
+      "check": "case-wall100.437s is sum of complete observed turns",
+      "passed": true
+    },
+    {
+      "check": "case011 false quality and unsupported recall preserved",
+      "passed": true
+    },
+    {
+      "check": "originalfresh0/16quality258/260 audit failures retained",
+      "passed": true
+    },
+    {
+      "check": "all present artifact links resolve except declared pending completionmanifest",
+      "passed": true
+    }
+  ],
+  "checks_passed": 11,
+  "checks_failed": 0,
+  "factual_findings": [],
+  "link_count": 87,
+  "unresolved_links": [],
+  "expected_pending_links": [
+    {
+      "document": "evaluation/answer_repair_20260916/README.md",
+      "target": "completion_manifest.json",
+      "exists": false
+    }
+  ],
+  "manual_review": [
+    "Clean bounded16-case execution remains separate from answer-quality success and long-duration stability.",
+    "Original fresh guard failure is preserved without pooling/substitution; recovery explicitly uses now-observed inputs.",
+    "Reviewer independence and prior prompt exposure are disclosed; assistant review is not human validation.",
+    "Unsupported personal-recall case011 is explicitly retained despite passing runtime review.",
+    "Cleanup change in memory state and small-cohort latency are not presented as causal speedup.",
+    "All reported remaining failure categories and strict-pass case IDs match adjudicated judgments."
+  ],
+  "ready_except_completion_manifest_link": true,
+  "evidence_sha256": {
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/independent_audit.json": "3adef308a007ab0e29fc017ec5e5be1e0a163c4a64a16ed0d71443f9afb35214",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/independent_cleanup_audit.json": "d2efcd217443867d60d1b89507d468f15d4cdcbff127b503fb6553e3351130e4",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/recovery_audit_details.json": "d12ce9d0332839c289dc74acfe865cbee181499e72b287919ae0d905fbc06498",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/review_method.md": "107e823b8e75421898666e4fcb277985cfbd5c14c3a4fa1bebc0cb26e6b7bf60",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/adjudicated_judgments.json": "953318c880f71612a8d66adb304a544e00835d68c61a28aaea413198e3a20be4",
+    "evaluation/answer_repair_20260916/fresh_holdout/independent_audit.json": "dac015aa8943da6e76fc62495acca948628b378eea3abd1132777e50e1b2f4f9"
+  }
+}

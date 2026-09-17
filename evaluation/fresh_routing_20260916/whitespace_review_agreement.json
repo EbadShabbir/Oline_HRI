@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-09-16T18:45:36.615438+00:00",
+  "cases": 5,
+  "quality_agreements": 5,
+  "useful_general_agreements": 5,
+  "adjudicated_differences": [],
+  "root_notes": {},
+  "reviewer_independence": "Separate assistant contexts; no access to each other's judgments. Reviewer A audited labels before inference; neither authored the cases or changed the candidate.",
+  "source_sha256": {
+    "review_a/whitespace_followup.json": "18dfbd40ac37d26aaad77489dc681fd5b416eb5d5230b53318dff85de6fe79bd",
+    "review_b/whitespace_followup.json": "f6b8305508886f5f048bb7df92c840d796ba9edbc7b68f4e37e18bb6e0eb657a",
+    "whitespace_followup_cases.json": "7317d946002b8a586b2be80a7889ceaa77222b9de3e33a98e5a97f7aa9855c69"
+  },
+  "adjudicated_sha256": "8deebd8e36e2c9fa29a8bbb473faf322348a50126be7095e38105dad5c937d64"
+}

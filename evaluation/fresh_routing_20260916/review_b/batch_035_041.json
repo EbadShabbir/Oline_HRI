@@ -1,0 +1,72 @@
+[
+  {
+    "id": "fresh_040",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question", "incomplete_turn_order_explanation"],
+    "required_components_pass": [
+      {"component": "State that the previously named game is unavailable.", "pass": false},
+      {"component": "Provide a two-sentence explanation connecting an agreed turn order with reduced confusion and a fair or orderly chance to participate.", "pass": false}
+    ],
+    "reason": "The generic question does not state that the game name is unavailable. Two subsequent sentences give useful general reasons about clearer roles, fewer conflicts, and cooperation, but do not explain how turn order provides a fair or orderly chance for participants to take their turns.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_029",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question"],
+    "required_components_pass": [
+      {"component": "Clearly indicate that the previously stated shop name is not available in the provided context or memory.", "pass": false}
+    ],
+    "reason": "The response asks for generic detail without clearly indicating that the exact previously stated bicycle-shop name is unavailable.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_038",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question"],
+    "required_components_pass": [
+      {"component": "Explain that the previously stated suitcase color is unavailable.", "pass": false},
+      {"component": "Provide a generic packing checklist with three ordinary, useful travel items or item categories.", "pass": true}
+    ],
+    "reason": "The backpack with essentials, reusable water bottle, and small first-aid kit form a useful three-item generic checklist. The opening question does not explain that the recalled suitcase color is unavailable.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_016",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["bullet_format_violation"],
+    "required_components_pass": [
+      {"component": "Use exactly two bullets, covering rectangles and squares.", "pass": false},
+      {"component": "Explain that rectangles have four right angles, while squares also have all four sides equal, supporting the requested relationship.", "pass": true}
+    ],
+    "reason": "The geometric definitions and square-versus-rectangle relationship are correct, but the answer is a paragraph with no bullet points instead of exactly two bullets.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_033",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question"],
+    "required_components_pass": [
+      {"component": "Indicate that the user's stated Saturday dog-walk start time is not available; optionally ask for the time.", "pass": false}
+    ],
+    "reason": "The generic question neither indicates that the Saturday start time is unavailable nor identifies that time as the missing fact being requested.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_024",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["sentence_count_violation"],
+    "required_components_pass": [
+      {"component": "Describe a usable arrangement for four same-size frames in two sentences.", "pass": false},
+      {"component": "Supply a balanced default arrangement without needing prior style information.", "pass": true}
+    ],
+    "reason": "A spaced row supplies a usable balanced default for the four supplied frames without asserting a remembered style, but the answer contains three sentences rather than two.",
+    "useful_general_help": true
+  }
+]

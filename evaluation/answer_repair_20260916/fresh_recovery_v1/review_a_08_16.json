@@ -1,0 +1,147 @@
+[
+  {
+    "id": "repair_holdout_009",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "names_not_on_separate_lines",
+      "extra_preface_and_closing_question"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide two plausible herb-garden names on separate lines.",
+        "pass": false
+      },
+      {
+        "component": "Use the allowed generic creative fallback without needing past naming preferences.",
+        "pass": true
+      }
+    ],
+    "reason": "Green Leaf Oasis and Herb Haven are plausible generic garden names supplied without invented preferences. However, they appear in a prose sentence with a preface and closing question, rather than just two names on separate lines.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_010",
+    "quality_pass": false,
+    "primary_outcome": "partial_useful",
+    "flags": [
+      "one_activity_not_selected",
+      "concrete_start_instructions_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Suggest one general activity feasible within ten minutes using the sketchpad and pencil.",
+        "pass": false
+      },
+      {
+        "component": "Use two sentences to identify the activity and explain how to start.",
+        "pass": false
+      }
+    ],
+    "reason": "The two sentences offer several alternatives—sketching, organizing notes, making a composition, and brainstorming—instead of selecting one activity. They give only the broad instruction to select and focus on a task, rather than explaining how to start a chosen activity. The general paper-and-pencil suggestions still provide some useful ideas for the wait.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_011",
+    "quality_pass": false,
+    "primary_outcome": "unsupported_personalization",
+    "flags": [
+      "invented_recalled_cushion_pattern",
+      "unavailability_not_acknowledged"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Clearly state that the previously chosen pattern is unavailable from the supplied context or memory; a relevant follow-up request is optional.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer asserts a floral print with geometric accents as the user's selected pattern despite the empty personal store and absence of that information in the prompt. Offering to confirm the assertion does not make it supported or acknowledge unavailable recall.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_012",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's previously stated wall motto is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Also give a one-sentence general definition of a motto as a brief phrase expressing a guiding belief, aim, or principle.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer acknowledges that the earlier motto is unavailable and independently gives a one-sentence definition of a motto as a short phrase expressing a principle or belief used for guidance.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_013",
+    "quality_pass": true,
+    "primary_outcome": "full_quality",
+    "flags": [],
+    "required_components_pass": [
+      {
+        "component": "State that the previously identified first reader is unavailable.",
+        "pass": true
+      },
+      {
+        "component": "Provide three distinct, useful proofreading checks, such as spelling, punctuation, and sentence clarity.",
+        "pass": true
+      }
+    ],
+    "reason": "The answer acknowledges that the first reader information is unavailable and supplies three distinct useful checks: grammar, punctuation, and logical clarity. The optional name question does not withhold the checklist.",
+    "useful_general_help": true
+  },
+  {
+    "id": "repair_holdout_014",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "required_label_clarification_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask which of the two labels should be rewritten; asking whether both are intended is also acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "The response rewrites both labels without asking which one, or whether both, the user intended. Supplying both revisions does not satisfy the frozen requirement to resolve the target by asking.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_015",
+    "quality_pass": false,
+    "primary_outcome": "nonresponsive",
+    "flags": [
+      "original_sentence_repeated",
+      "required_pronoun_clarification_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask whether they refers to Rafi or Morgan, or otherwise ask who is meant to bring the tray.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer only repeats the original ambiguous sentence. It neither asks whether Rafi or Morgan should bring the tray nor otherwise seeks the intended referent.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_016",
+    "quality_pass": false,
+    "primary_outcome": "other_failure",
+    "flags": [
+      "required_units_question_missing",
+      "unsupported_no_conversion_claim"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask which starting and target units the user wants; a single concise question can request both.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer asserts that 24 is already in the desired unit despite neither starting nor target units being supplied. It does not ask for either required unit.",
+    "useful_general_help": null
+  }
+]

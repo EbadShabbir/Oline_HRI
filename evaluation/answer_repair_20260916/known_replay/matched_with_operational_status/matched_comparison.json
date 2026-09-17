@@ -1,0 +1,448 @@
+{
+  "matched_count": 43,
+  "matched_ids": [
+    "fresh_023",
+    "fresh_027",
+    "fresh_041",
+    "fresh_022",
+    "fresh_048",
+    "fresh_032",
+    "fresh_037",
+    "fresh_001",
+    "fresh_004",
+    "fresh_008",
+    "fresh_030",
+    "fresh_020",
+    "fresh_010",
+    "fresh_019",
+    "fresh_006",
+    "fresh_002",
+    "fresh_005",
+    "fresh_013",
+    "fresh_017",
+    "fresh_045",
+    "fresh_028",
+    "fresh_031",
+    "fresh_026",
+    "fresh_015",
+    "fresh_021",
+    "fresh_018",
+    "fresh_009",
+    "fresh_014",
+    "fresh_012",
+    "fresh_034",
+    "fresh_039",
+    "fresh_040",
+    "fresh_029",
+    "fresh_038",
+    "fresh_016",
+    "fresh_033",
+    "fresh_024",
+    "fresh_007",
+    "fresh_042",
+    "fresh_011",
+    "fresh_025",
+    "fresh_003",
+    "fresh_043"
+  ],
+  "matched_before": {
+    "planned": 43,
+    "raw_match": {
+      "count": 36,
+      "denominator": 43,
+      "rate": 0.8372093023255814
+    },
+    "thresholded_match": {
+      "count": 25,
+      "denominator": 43,
+      "rate": 0.5813953488372093
+    },
+    "final_match": {
+      "count": 36,
+      "denominator": 43,
+      "rate": 0.8372093023255814
+    },
+    "quality_pass": {
+      "count": 4,
+      "denominator": 43,
+      "rate": 0.09302325581395349
+    },
+    "combined_pass": {
+      "count": 4,
+      "denominator": 43,
+      "rate": 0.09302325581395349
+    },
+    "statuses": {
+      "ok": 43
+    },
+    "delivered": 43,
+    "generated_delivery": 24,
+    "wall_latency": {
+      "n": 43,
+      "scope": "All planned matched/selected observed turns, including errors and application replies.",
+      "p50_seconds": 38.207283324,
+      "p95_seconds": 81.8832925418,
+      "mean_seconds": 41.15310153302325
+    }
+  },
+  "matched_after": {
+    "planned": 43,
+    "raw_match": {
+      "count": 36,
+      "denominator": 43,
+      "rate": 0.8372093023255814
+    },
+    "thresholded_match": {
+      "count": 24,
+      "denominator": 43,
+      "rate": 0.5581395348837209
+    },
+    "final_match": {
+      "count": 35,
+      "denominator": 43,
+      "rate": 0.813953488372093
+    },
+    "quality_pass": {
+      "count": 20,
+      "denominator": 43,
+      "rate": 0.46511627906976744
+    },
+    "combined_pass": {
+      "count": 19,
+      "denominator": 43,
+      "rate": 0.4418604651162791
+    },
+    "statuses": {
+      "ok": 42,
+      "error": 1
+    },
+    "delivered": 42,
+    "generated_delivery": 27,
+    "wall_latency": {
+      "n": 43,
+      "scope": "All planned matched/selected observed turns, including errors and application replies.",
+      "p50_seconds": 5.377323686,
+      "p95_seconds": 12.692837984899997,
+      "mean_seconds": 5.948393946418604
+    }
+  },
+  "quality_transitions": {
+    "fail_to_pass": {
+      "count": 18,
+      "ids": [
+        "fresh_048",
+        "fresh_037",
+        "fresh_005",
+        "fresh_031",
+        "fresh_015",
+        "fresh_018",
+        "fresh_014",
+        "fresh_034",
+        "fresh_039",
+        "fresh_040",
+        "fresh_038",
+        "fresh_016",
+        "fresh_033",
+        "fresh_024",
+        "fresh_007",
+        "fresh_042",
+        "fresh_011",
+        "fresh_025"
+      ]
+    },
+    "pass_to_fail": {
+      "count": 2,
+      "ids": [
+        "fresh_017",
+        "fresh_012"
+      ]
+    },
+    "pass_to_pass": {
+      "count": 2,
+      "ids": [
+        "fresh_010",
+        "fresh_021"
+      ]
+    },
+    "fail_to_fail": {
+      "count": 21,
+      "ids": [
+        "fresh_023",
+        "fresh_027",
+        "fresh_041",
+        "fresh_022",
+        "fresh_032",
+        "fresh_001",
+        "fresh_004",
+        "fresh_008",
+        "fresh_030",
+        "fresh_020",
+        "fresh_019",
+        "fresh_006",
+        "fresh_002",
+        "fresh_013",
+        "fresh_045",
+        "fresh_028",
+        "fresh_026",
+        "fresh_009",
+        "fresh_029",
+        "fresh_003",
+        "fresh_043"
+      ]
+    }
+  },
+  "final_full_cohort": {
+    "planned": 48,
+    "raw_match": {
+      "count": 38,
+      "denominator": 48,
+      "rate": 0.7916666666666666
+    },
+    "thresholded_match": {
+      "count": 27,
+      "denominator": 48,
+      "rate": 0.5625
+    },
+    "final_match": {
+      "count": 37,
+      "denominator": 48,
+      "rate": 0.7708333333333334
+    },
+    "quality_pass": {
+      "count": 22,
+      "denominator": 48,
+      "rate": 0.4583333333333333
+    },
+    "combined_pass": {
+      "count": 21,
+      "denominator": 48,
+      "rate": 0.4375
+    },
+    "statuses": {
+      "ok": 47,
+      "error": 1
+    },
+    "delivered": 47,
+    "generated_delivery": 30,
+    "wall_latency": {
+      "n": 48,
+      "scope": "All planned matched/selected observed turns, including errors and application replies.",
+      "p50_seconds": 5.206950711999999,
+      "p95_seconds": 12.157014704649997,
+      "mean_seconds": 5.646556176729167
+    }
+  },
+  "original_setup_failures_excluded": {
+    "count": 5,
+    "cases": [
+      {
+        "id": "fresh_047",
+        "original_status": "error",
+        "original_error": {
+          "type": "ValueError",
+          "message": "user message cannot contain control characters"
+        },
+        "final_replay": {
+          "status": "ok",
+          "raw_mode": "required",
+          "thresholded_mode": "required",
+          "final_mode": "none",
+          "effective_mode": "none",
+          "raw_match": false,
+          "thresholded_match": false,
+          "final_match": false,
+          "quality_pass": false,
+          "combined_pass": false,
+          "delivered": true,
+          "generated_delivery": true,
+          "wall_seconds": 6.158462138,
+          "error": null
+        }
+      },
+      {
+        "id": "fresh_046",
+        "original_status": "error",
+        "original_error": {
+          "type": "ValueError",
+          "message": "user message cannot contain control characters"
+        },
+        "final_replay": {
+          "status": "ok",
+          "raw_mode": "optional",
+          "thresholded_mode": "clarify",
+          "final_mode": "none",
+          "effective_mode": "none",
+          "raw_match": false,
+          "thresholded_match": true,
+          "final_match": false,
+          "quality_pass": false,
+          "combined_pass": false,
+          "delivered": true,
+          "generated_delivery": true,
+          "wall_seconds": 4.505138576,
+          "error": null
+        }
+      },
+      {
+        "id": "fresh_036",
+        "original_status": "error",
+        "original_error": {
+          "type": "ValueError",
+          "message": "user message cannot contain control characters"
+        },
+        "final_replay": {
+          "status": "ok",
+          "raw_mode": "required",
+          "thresholded_mode": "required",
+          "final_mode": "required",
+          "effective_mode": "required",
+          "raw_match": true,
+          "thresholded_match": true,
+          "final_match": true,
+          "quality_pass": true,
+          "combined_pass": true,
+          "delivered": true,
+          "generated_delivery": false,
+          "wall_seconds": 0.118181821,
+          "error": null
+        }
+      },
+      {
+        "id": "fresh_035",
+        "original_status": "error",
+        "original_error": {
+          "type": "ValueError",
+          "message": "user message cannot contain control characters"
+        },
+        "final_replay": {
+          "status": "ok",
+          "raw_mode": "required",
+          "thresholded_mode": "required",
+          "final_mode": "required",
+          "effective_mode": "required",
+          "raw_match": true,
+          "thresholded_match": true,
+          "final_match": true,
+          "quality_pass": true,
+          "combined_pass": true,
+          "delivered": true,
+          "generated_delivery": false,
+          "wall_seconds": 0.138496733,
+          "error": null
+        }
+      },
+      {
+        "id": "fresh_044",
+        "original_status": "error",
+        "original_error": {
+          "type": "ValueError",
+          "message": "user message cannot contain control characters"
+        },
+        "final_replay": {
+          "status": "ok",
+          "raw_mode": "required",
+          "thresholded_mode": "required",
+          "final_mode": "none",
+          "effective_mode": "none",
+          "raw_match": false,
+          "thresholded_match": false,
+          "final_match": false,
+          "quality_pass": false,
+          "combined_pass": false,
+          "delivered": true,
+          "generated_delivery": true,
+          "wall_seconds": 4.333477519,
+          "error": null
+        }
+      }
+    ],
+    "final_replay_summary": {
+      "planned": 5,
+      "raw_match": {
+        "count": 2,
+        "denominator": 5,
+        "rate": 0.4
+      },
+      "thresholded_match": {
+        "count": 3,
+        "denominator": 5,
+        "rate": 0.6
+      },
+      "final_match": {
+        "count": 2,
+        "denominator": 5,
+        "rate": 0.4
+      },
+      "quality_pass": {
+        "count": 2,
+        "denominator": 5,
+        "rate": 0.4
+      },
+      "combined_pass": {
+        "count": 2,
+        "denominator": 5,
+        "rate": 0.4
+      },
+      "statuses": {
+        "ok": 5
+      },
+      "delivered": 5,
+      "generated_delivery": 3,
+      "wall_latency": {
+        "n": 5,
+        "scope": "All planned matched/selected observed turns, including errors and application replies.",
+        "p50_seconds": 4.333477519,
+        "p95_seconds": 5.8277974256,
+        "mean_seconds": 3.0507513574000003
+      }
+    },
+    "interpretation": "These prompts never reached a model in the original release run. Their final replay is newly covered input, not a paired improvement over prior model answers."
+  },
+  "latency_interpretation": "Same prompt bytes and criteria, different historical sessions. Median/p95 use linear interpolation at (n-1)*q over every selected case. Per-case wall deltas are after minus before; these descriptive measurements do not establish a causal speedup.",
+  "review_interpretation": "Quality uses each cohort's preserved adjudications; it does not claim identical reviewers or an independently blinded paired regrade.",
+  "created_at": "2026-09-16T20:10:17.258611+00:00",
+  "schema_version": "matched_known_replay_v1",
+  "original_dir": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916",
+  "replay_dir": "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay",
+  "original_collection_outcome": {
+    "all_planned_observations_recorded": true,
+    "wrapper_complete": false,
+    "runner_exit_code": 1,
+    "guard_violation": null,
+    "wrapper_failure": null,
+    "runner_failure": null,
+    "cleanup_errors": []
+  },
+  "replay_collection_outcome": {
+    "all_planned_observations_recorded": true,
+    "wrapper_complete": false,
+    "runner_exit_code": 1,
+    "guard_violation": "available memory crossed the runtime floor",
+    "wrapper_failure": {
+      "type": "SafetyGateError",
+      "message": "available memory crossed the runtime floor"
+    },
+    "runner_failure": {
+      "type": "KeyboardInterrupt",
+      "message": "Jetson safety boundary crossed"
+    },
+    "cleanup_errors": []
+  },
+  "input_sha256": {
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/cases.json": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/observations.jsonl": "bd332ca77c9b4d015c72e68956681080ca63bfe98decb4353d139557a81d8dbf",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/adjudicated_judgments.json": "8ee53c1b5b41db714d42867d1c4f3efc5bcdeab2881342dd6226df6e0c263fe9",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/metadata.json": "ea45c8b2c781be970d012cb198137052a802db021665f441afab665096c23880",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/artifact_sha256.json": "749af32aaa23a0740a7325aff8b0a8149d8f4fe2933805c31cb3a46f242b7c55",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/finish.json": "5b58c42873ed37a36b15dcebfd1ac6d2ddce70c3670f5cb5f2e1f8488777f41e",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/fresh_routing_20260916/collection/run/summary.json": "7d166b4dd1cb7035fb3c368bb2fc2b5ce2f80d0587cf727d0c3926c189a238e7",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/cases.json": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/run/observations.jsonl": "db65c1ea6b52590ff7e503da91d458abd67ee08956ec1a5291a881bf9b9111d8",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/adjudicated_judgments.json": "86b2cf4dd0b931a0e1b97e42db5a780294b695ac317698b1c28e4e397d507801",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/run/metadata.json": "14f382f7842c2e00aa22c2e747124207b9a5be02aa2c6b42d36f9ba18e33e868",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/artifact_sha256.json": "ec238862abad61f805a593f2d76064dfed2660d013283ef0e9bd1146535783d4",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/finish.json": "03c1bc58111a077d9201d139043152ec38f1846162aa42341a9e6e4904a73731",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/known_replay/collection/run/summary.json": "a06e1948941ee5d86ce0573655a549f5c55abf8ffbcd571cafc05ec05f371b00",
+    "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/evaluation/answer_repair_20260916/compare_matched.py": "3367dcdd65b1a22db0d9e639c24615b2f12144b272985579a4940e3412a250a1"
+  }
+}

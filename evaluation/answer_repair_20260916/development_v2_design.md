@@ -1,0 +1,3 @@
+# Development iteration 2 design
+
+Reuse the identical twelve known development requests in the identical order and original rubrics. Candidate changes follow the retained unsuccessful v1 run: wire task instructions into ReliableConversation's actual general generator path; permit the requested speech layout in the schema description; recognize qualified output counts; and repair bounded answerability guards and fragment extraction. No holdout access or model/config/device changes. Run only after focused offline checks and a new exact source freeze. Archive every attempt, even if unsuccessful. Root's implementation work and development review are disclosed; use the same independent blinded reviewer B for delivered-task judgments.

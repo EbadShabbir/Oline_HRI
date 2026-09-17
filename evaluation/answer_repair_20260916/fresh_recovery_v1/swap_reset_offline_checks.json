@@ -1,0 +1,29 @@
+{
+  "method": "Offline mocked swap-command checks; no device or model operations.",
+  "checks": [
+    {
+      "case": "success",
+      "passed": true,
+      "recorded_error": null,
+      "restoration_preserved": true
+    },
+    {
+      "case": "failure_after_disable",
+      "passed": true,
+      "recorded_error": "CalledProcessError",
+      "restoration_preserved": true
+    },
+    {
+      "case": "interrupt_after_disable",
+      "passed": true,
+      "recorded_error": "InterruptedError",
+      "restoration_preserved": true
+    },
+    {
+      "case": "insufficient_headroom",
+      "passed": true,
+      "recorded_error": "RuntimeError",
+      "restoration_preserved": true
+    }
+  ]
+}

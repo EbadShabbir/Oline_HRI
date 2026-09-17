@@ -1,0 +1,119 @@
+[
+  {
+    "id": "fresh_040",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "nonspecific_followup",
+      "incomplete_general_component"
+    ],
+    "required_components_pass": [
+      {
+        "component": "State that the previously named game is unavailable.",
+        "pass": false
+      },
+      {
+        "component": "Provide a two-sentence explanation connecting an agreed turn order with reduced confusion and a fair or orderly chance to participate.",
+        "pass": false
+      }
+    ],
+    "reason": "The response does not state that the game name is unavailable. Its two general sentences give useful reasons involving clear roles, fewer conflicts, and cooperation, but do not explain the requested fair or orderly chance for each player to participate.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_029",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "nonspecific_followup"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Clearly indicate that the previously stated shop name is not available in the provided context or memory.",
+        "pass": false
+      }
+    ],
+    "reason": "The response asks only for unspecified detail and never clearly indicates that the previously stated shop name is unavailable.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_038",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "nonspecific_followup"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Explain that the previously stated suitcase color is unavailable.",
+        "pass": false
+      },
+      {
+        "component": "Provide a generic packing checklist with three ordinary, useful travel items or item categories.",
+        "pass": true
+      }
+    ],
+    "reason": "The response does not explain that the suitcase color is unavailable. It does deliver three useful generic travel checklist items: a small backpack with essentials, a reusable water bottle, and a first-aid kit.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_016",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": [
+      "bullet_format_violation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Use exactly two bullets, covering rectangles and squares.",
+        "pass": false
+      },
+      {
+        "component": "Explain that rectangles have four right angles, while squares also have all four sides equal, supporting the requested relationship.",
+        "pass": true
+      }
+    ],
+    "reason": "The mathematical definitions and square-rectangle relationship are correct, but the answer is a paragraph rather than exactly two bullet points.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_033",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_recall_acknowledgment",
+      "nonspecific_followup"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Indicate that the user's stated Saturday dog-walk start time is not available; optionally ask for the time.",
+        "pass": false
+      }
+    ],
+    "reason": "The response neither indicates that the previously stated Saturday start time is unavailable nor specifically requests that time.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_024",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": [
+      "sentence_count_violation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Describe a usable arrangement for four same-size frames in two sentences.",
+        "pass": false
+      },
+      {
+        "component": "Supply a balanced default arrangement without needing prior style information.",
+        "pass": true
+      }
+    ],
+    "reason": "Arranging the supplied frames in a row with spacing is a usable balanced fallback, with no invented remembered style. The answer uses three sentences rather than the required two.",
+    "useful_general_help": true
+  }
+]

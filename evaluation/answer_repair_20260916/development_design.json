@@ -1,0 +1,20 @@
+{
+  "scope": "Known development cases selected before repaired-candidate inference; all attempts retained. No fresh holdout read.",
+  "original_cases_sha256": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+  "case_ids": [
+    "fresh_048",
+    "fresh_001",
+    "fresh_004",
+    "fresh_015",
+    "fresh_009",
+    "fresh_014",
+    "fresh_035",
+    "fresh_040",
+    "fresh_038",
+    "fresh_016",
+    "fresh_011",
+    "fresh_003"
+  ],
+  "input_changes": false,
+  "note": "The production input contract now accepts LF, so use original bytes including one newline-containing prior setup error. Baseline metrics remain historical and unchanged."
+}

@@ -18,11 +18,21 @@ finite validation and measured limitations are recorded under
 [reliable routing](#candidate-reliable-routing). General factual quality and
 model-switching latency remain limitations.
 
+The [September 16–17 repair evaluation](evaluation/answer_repair_20260916/README.md)
+records improved complete-answer quality on 43 matched known inputs (4 to 20
+passes), with final routing 36 to 35 and one memory-guard interruption. The
+separate frozen 16-case fresh attempt hit the swap guard, delivering no complete
+answers. The separately recorded recovery completed all 16 cases within device
+limits: 12 correct routes and four complete answers, with a 4.684-second median
+turn time. Both independent reviews and audits are complete. Formatting,
+clarification and unsupported personal recall remain quality limitations.
+
 The historical `--routing-policy llm` path remains available for reproducibility.
 It asks `qwen3:0.6b` for two independent structured decisions: input `form` plus
 `memory_required`, and `model_size`. The reliable candidate replaces the memory
-decision with the local dependency classifier and retains independent 0.6B
-compute selection. Both large generator roles use `qwen3:1.7b`; only these two
+decision with the local dependency classifier and selects generator size with
+an explicit application policy: large for substantive tasks, small for brief
+social turns. It makes no separate model-size inference call. Both large generator roles use `qwen3:1.7b`; only these two
 model tags are configured for deployment. Generated responses are constrained
 and validated as:
 
@@ -327,31 +337,40 @@ below the smallest accepted calibration margin for each class. This leaves
 the fitted weights and accepted calibration rows unchanged. A rejected margin
 or disabled class marks uncertainty.
 These margins are not probabilities, and calibration on authored examples is
-not a guarantee for new conversation. The first release clarified on rejected
-margins and withheld too many general answers. The revised candidate adds one
-bounded larger-model check of whether an uncertain `none`, `optional`, or
-`required` prediction needs an unstated personal value. A raw `clarify`
-prediction directly asks a short question: a Boolean personal-facts verdict
-cannot establish that the task or referent is clear. Accepted required
-predictions with recognizable recall intent remain in place. Without that
-signal, an accepted required prediction gets one bounded review; disagreement
-asks for clarification instead of assuming missing memory or downgrading to
-an unrestricted general answer. Direct personal-value questions and explicit
-stored-input requests need no special word such as “remember”. Bare “I”, “me”
-or “my” is insufficient to establish recall. A
-separate `qwen3:0.6b` call selects generator
-size; an invalid size result conservatively selects large without changing
-the dependency. Classifier scores and artifact provenance remain local
-metadata, with no fabricated dependency-model generation.
+not a guarantee for new conversation. The current candidate permits one bounded
+larger-model review of all four modes for uncertain predictions, raw `clarify`,
+unverified required predictions and unresolved edit references. This can recover
+a complete task that the local classifier called ambiguous. Recognizable
+unstated personal recall stays required; a fallible review cannot erase that
+evidence requirement. Direct personal-value questions and explicit stored-input
+requests need no special word such as “remember”. Bare “I”, “me” or “my” is
+insufficient to establish recall.
+
+Bounded checks can resolve supplied-data transformations, nonpersonal writing
+and explanations, plans with current listed resources, and edits of admitted
+drafts before model review. Their named reasons are recorded alongside the raw
+prediction. An unspecified calculation asks for the intended operation.
+These checks do not authorize personal facts. Mixed-request extraction requires
+an actual recall prefix and a request-shaped general part; a declarative tail
+cannot become the entire answer.
+
+The versioned application size policy selects the configured large generator
+for substantive tasks and can use the small model for short social turns.
+Required recall still passes through retrieval before any answer generation.
+No model is loaded just to select another model; generation and review can
+reuse the large model already resident. Raw classifier scores, the final mode,
+review outputs and the size-policy reason remain distinct. Skipped compute
+calls have no fabricated generation metadata. The classifier artifact and
+training data are unchanged by this repair.
 
 ```mermaid
 flowchart TD
     Input[Current request and admitted task history] --> Dependency[CPU BGE and learned TF-IDF/ridge]
-    Input --> Compute[0.6B compute selection]
+    Input --> Compute[Application generator-size policy]
     Dependency -->|Accepted dependency| Evidence[Dependency and evidence handling]
-    Dependency -->|Uncertain none/optional/required or unverified required| DependencyReview[One bounded 1.7B dependency review]
+    Dependency -->|Uncertain or unresolved prediction| DependencyReview[One bounded four-mode 1.7B review]
     DependencyReview --> Evidence
-    Dependency -->|Unresolved task| Clarify
+    Evidence -->|Unresolved task| Clarify
     Evidence -->|Answerable| Candidate[Small or large answer candidate]
     Evidence -->|Missing required context| Clarify[Application clarification]
     Compute --> Candidate
@@ -379,10 +398,19 @@ when the lock is acquired; time itself continues during the brief write.
 
 Deterministic checks detect bounded repetition, promise-only replies, copied
 unrelated answers, unsupported physical-action claims, and unsupported
-personal claims. The existing 1.7B model
+personal claims. Explicit output-count, CSV and time-allocation checks also
+catch bounded format failures before model review. Requested LF line breaks
+are preserved in text and JSON speech; unsafe controls and internal memory
+identifiers remain blocked. Recognized general format requests use a closed
+array of answer parts; the application adds line breaks or bullet markers.
+Explicit timed plans can use typed steps with application-assigned durations
+that sum to the stated budget. These transformations preserve the raw output
+and do not establish content correctness. Search converts LF to spaces while
+keeping the original request and stored records intact. The existing 1.7B model
 independently reviews usefulness, personal evidence, and configured robot
-identity/capabilities. A rejected small answer can receive one 1.7B retry;
-there are at most two generation attempts in total. Unusable optional evidence
+identity/capabilities. A rejected small answer can receive one large retry;
+a substantive task already using a large generator can receive one repair on
+the same model. There are at most two generation attempts in total. Unusable optional evidence
 can be discarded within that same budget. Exhaustion returns an application
 clarification. The reliable path does not use the historical large-to-small
 timeout fallback described below.
@@ -401,8 +429,9 @@ Both typed and voice chat use the same guarded writer. The client retains the
 active model between text calls, unloads peers before switching, and unloads
 on exit; voice mode also unloads before speech recognition.
 
-When context is missing, the application asks one short question without an
-“I don't have that memory” preamble. Safe general requests and their
+When a task or referent is unresolved, the application asks a focused question.
+When a required personal fact is unavailable, it acknowledges that gap and asks
+for the relevant detail. Safe general requests and their
 clarification questions can become context for the next turn through the
 existing history checks. Required recall and detected private content remain
 outside general task history.
@@ -431,14 +460,16 @@ The subsequent practical-answer repair uses a closed instruction format from
 the first attempt for explicit practical-help requests with recognized exact
 minute budgets and without linked memory. These plans use the configured
 general-large model directly (`practical_guidance_large`), because the small
-model produced incoherent steps that passed model review. The raw compute
-decision remains recorded separately from the actual generator. The application adds an instruction
+model produced incoherent steps that passed model review. In those historical
+runs, the raw compute decision was recorded separately from the actual generator. The application adds an instruction
 to set a timer for the supplied budget and stop when it rings; the model supplies
 the task steps. Untimed practical requests use this format on
 the existing small-to-large retry. Both rendered text and unnumbered instructions
 pass the existing evidence and quality checks, followed by model review. Raw
 model output is retained separately from the `human_guidance_steps` rendering.
-This format excludes drafts and required recall; it does not add another attempt
+This format excludes drafts, required recall and requests for explicit
+per-step allocations; those allocation tasks use ordinary generation with
+duration checks. The timer format does not add another attempt
 after an initial large-model failure. See [the practical-answer results](results.md#2026-09-15-practical-answer-quality-repair)
 for the separate development failures and validation runs.
 The latest practical-answer check passes the desk and paper tasks (2/3); the

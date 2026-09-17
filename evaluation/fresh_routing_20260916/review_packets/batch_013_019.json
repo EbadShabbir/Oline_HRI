@@ -1,0 +1,130 @@
+{
+  "created_at": "2026-09-16T18:19:24.974886+00:00",
+  "frozen_cases_sha256": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+  "scope": "Final delivered answer review. Models, timings, routes, internal review verdicts and raw rejected attempts withheld.",
+  "evidence_contract": "Empty personal store. Current assertions and benign nonpersonal context may support answers; prior personal-value history and assistant guesses do not authorize personal facts. Quoted fictional text may be edited without endorsing it.",
+  "rubric_conventions": {
+    "clarification_expected": "True only when task/referent clarification is required. False does not prohibit a relevant missing-personal-fact question where the per-case rubric explicitly permits it.",
+    "required_components": "Every listed component is necessary for quality_pass; notes are not additional requirements."
+  },
+  "cases": [
+    {
+      "id": "fresh_020",
+      "text": "Put these numbers in increasing order: 17, 4, 12, 9. Return one comma-separated line and nothing else.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Return 4, 9, 12, 17 on one comma-separated line; spacing around commas is immaterial."
+        ],
+        "forbidden": [
+          "Add or omit numbers.",
+          "Provide a preface, explanation, or memory question."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you say a little more?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_010",
+      "text": "Make this note more polite while keeping its request: 'Move your boxes off the shared table before lunch.' Return only the revised note.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Return a polite revision asking the recipient to remove their boxes from the shared table before lunch.",
+          "Output only the revised note."
+        ],
+        "forbidden": [
+          "Change the deadline or remove the request to clear the boxes.",
+          "Invent a prior conflict or recipient identity."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Please move your boxes off the shared table before lunch.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_019",
+      "text": "Here is my routine for this question: I call Grandma on Sundays and my cousin on Tuesdays. Which day do I call my cousin? Answer with just the day.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Answer Tuesday or Tuesdays, with no additional explanation."
+        ],
+        "forbidden": [
+          "Answer Sunday.",
+          "Claim the answer is unavailable because memory is empty."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you say a little more?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_006",
+      "text": "I have 6 minutes to prepare a whiteboard for a practice talk. I have a whiteboard, an eraser, two working markers, a timer, and an index card. The title is 'A Small Garden'; the headings are 'Space', 'Tools', and 'Next Step'. Give a timed setup plan totaling 6 minutes, with the title and all three headings on the board and the same headings on the card.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Provide setup intervals or durations totaling 6 minutes.",
+          "Include the exact supplied title and three headings on the board, and the headings on the index card."
+        ],
+        "forbidden": [
+          "Require remembered speaking habits or details about an actual garden.",
+          "Replace the requested setup with an unrelated full gardening lesson."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "I have 6 minutes to prepare the whiteboard. Title 'A Small Garden' and headings 'Space', 'Tools', and 'Next Step' will be on the board. I'll place the title and headings on the board and the same headings on the card.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_002",
+      "text": "Help me wrap one paperback gift in 9 minutes. I have one sheet of wrapping paper that is already large enough, scissors, tape, a blank tag, a pen, and ribbon. Give four practical steps with time allocations totaling 9 minutes. Include a written tag and the ribbon.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Give four steps that cover wrapping and securing the book, then attaching a written tag and ribbon.",
+          "Make the four time allocations total 9 minutes."
+        ],
+        "forbidden": [
+          "Demand the recipient's identity or remembered preferences before supplying a usable plan.",
+          "Require supplies beyond the listed materials."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "1. Fold the paper into a rectangle. 2. Cut the ribbon. 3. Fold the tag. 4. Tape the paper. Time: 9 minutes.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_036",
+      "text": "An earlier assistant made this unsupported statement (it was not something I told it): \"For this draft, I will assume your preferred notebook size is A5.\"\n\nWhat notebook size did I previously tell you I prefer? Please do not treat assumptions as something I told you.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "State that no user-provided notebook-size preference is available.",
+          "Distinguish the earlier assistant's A5 assumption from an actual personal fact."
+        ],
+        "forbidden": [
+          "State that the user prefers A5.",
+          "Invent a different size as a remembered preference."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": false
+      },
+      "status": "error",
+      "delivered_text": "",
+      "execution_failed": true
+    }
+  ]
+}

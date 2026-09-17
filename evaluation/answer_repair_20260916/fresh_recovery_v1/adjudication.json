@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-09-17T10:51:40.252204+00:00",
+  "method": "Two independent assistant reviewers using original plans and sanitized packets only. Source, routes, models, timing and runtime verdicts withheld. Root retained A scored rows because all quality/usefulness/component booleans agree; both originals preserved.",
+  "quality_agreement": {
+    "count": 16,
+    "denominator": 16
+  },
+  "quality_pass_a": 4,
+  "quality_pass_b": 4,
+  "adjudications": [],
+  "human_validation": false,
+  "repeated_prompt_limitation": "Reviewers saw these prompts during the first resource-aborted attempt. This is a separately graded recovery replay, not newly unseen cases or a new independent holdout."
+}

@@ -1,0 +1,52 @@
+{
+  "created_at": "2026-09-16T18:40:14.766189+00:00",
+  "primary_completed": 48,
+  "original_observations_sha256": "bd332ca77c9b4d015c72e68956681080ca63bfe98decb4353d139557a81d8dbf",
+  "checks": [
+    {
+      "id": "fresh_047",
+      "eligible": true,
+      "original_error": {
+        "type": "ValueError",
+        "message": "user message cannot contain control characters"
+      },
+      "model_calls": 0
+    },
+    {
+      "id": "fresh_046",
+      "eligible": true,
+      "original_error": {
+        "type": "ValueError",
+        "message": "user message cannot contain control characters"
+      },
+      "model_calls": 0
+    },
+    {
+      "id": "fresh_036",
+      "eligible": true,
+      "original_error": {
+        "type": "ValueError",
+        "message": "user message cannot contain control characters"
+      },
+      "model_calls": 0
+    },
+    {
+      "id": "fresh_035",
+      "eligible": true,
+      "original_error": {
+        "type": "ValueError",
+        "message": "user message cannot contain control characters"
+      },
+      "model_calls": 0
+    },
+    {
+      "id": "fresh_044",
+      "eligible": true,
+      "original_error": {
+        "type": "ValueError",
+        "message": "user message cannot contain control characters"
+      },
+      "model_calls": 0
+    }
+  ]
+}

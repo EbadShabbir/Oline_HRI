@@ -1,0 +1,61 @@
+[
+  {
+    "id": "fresh_014",
+    "quality_pass": false,
+    "primary_outcome": "nonanswer",
+    "flags": ["missing_csv_deliverable", "output_format_violation"],
+    "required_components_pass": [
+      {"component": "Return header item,count followed by rows red buttons,8; blue buttons,3; green buttons,5, each on its own line.", "pass": false},
+      {"component": "Provide CSV text without surrounding explanation or a code fence.", "pass": false}
+    ],
+    "reason": "The entire answer is a preface announcing conversion. It supplies no CSV header line or data rows and violates the CSV-only requirement.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_012",
+    "quality_pass": true,
+    "primary_outcome": "pass",
+    "flags": [],
+    "required_components_pass": [
+      {"component": "Choose B.", "pass": true},
+      {"component": "Give a reason based on the supplied quiet, indoor, or no-stairs requirements.", "pass": true}
+    ],
+    "reason": "The response chooses B and explains its fit using the supplied quiet, indoor, ground-floor characteristics. It uses the current criteria without inventing personal preferences.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_034",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question"],
+    "required_components_pass": [
+      {"component": "Acknowledge that the user's previously stated bedtime-reading genre is not present; optionally invite the user to provide it.", "pass": false}
+    ],
+    "reason": "The generic detail question does not acknowledge the unavailable bedtime-reading preference or specifically invite the missing genre.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_039",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question", "missing_usable_agenda"],
+    "required_components_pass": [
+      {"component": "Acknowledge that the club's previously stated meeting weekday is unavailable.", "pass": false},
+      {"component": "Give three usable generic agenda points suitable for a puzzle club, such as choosing a puzzle, working on it, and discussing results.", "pass": false}
+    ],
+    "reason": "The generic question does not acknowledge the missing weekday. The three numbered principles about skills, teamwork, and variety are relevant advice, but they do not specify three meeting activities that form a usable agenda.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_035",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": ["execution_failed", "absent_output"],
+    "required_components_pass": [
+      {"component": "Explain that no user-stated departure station is available.", "pass": false},
+      {"component": "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure.", "pass": false}
+    ],
+    "reason": "The recorded execution failed and delivered no text, so neither required distinction was communicated.",
+    "useful_general_help": null
+  }
+]

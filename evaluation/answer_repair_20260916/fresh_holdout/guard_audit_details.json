@@ -1,0 +1,284 @@
+{
+  "created_at": "2026-09-17T10:39:04.813731+00:00",
+  "scope": "Original fresh holdout only. Read-only artifact audit; no device or model calls, no changed source, settings, or guards.",
+  "operational_success": false,
+  "evaluation_complete": false,
+  "all_planned_observations_recorded": true,
+  "checks_passed": 258,
+  "checks_failed": 2,
+  "failed_checks": [
+    {
+      "check": "cohort: guard and cleanup outcome",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "check": "cohort: sampled runtime RAM/swap/temperature bounds",
+      "passed": false,
+      "detail": null
+    }
+  ],
+  "integrity_interpretation": "Both failed audit checks describe the retained resource-guard failure. Source, tests, corpus, sealed collection, judgments, metric arithmetic, model identities, empty memory, and cleanup checks pass.",
+  "guard_failure": {
+    "type": "SafetyGateError",
+    "message": "telemetry swap ceiling crossed"
+  },
+  "guard_violation": "telemetry swap ceiling crossed",
+  "start_utc": "2026-09-17T10:33:15.881395+00:00",
+  "finish_utc": "2026-09-17T10:33:47.953906+00:00",
+  "snapshot_interval_seconds": 32.072511,
+  "runner_wall_seconds": 31.261592694,
+  "start_available_kib": 3158128,
+  "start_swap_used_kib": 746240,
+  "start_max_temperature_c": 48.781,
+  "runtime_swap_ceiling_kib": 1048576,
+  "telemetry": {
+    "samples": 63,
+    "duration_seconds": 31.41316154,
+    "minimum_total_minus_used_ram_mib": 1566,
+    "maximum_swap_used_mib": 1026,
+    "maximum_temperature_c": 52.406,
+    "over_swap_ceiling_samples": 5,
+    "first_over_swap_ceiling_sample_index_1_based": 59,
+    "first_over_swap_ceiling_monotonic_ns": 63407185971934,
+    "first_over_swap_ceiling_seconds_after_first_sample": 29.389390628,
+    "memory_measurement_note": "Tegrastats total-minus-used RAM is not /proc/meminfo MemAvailable. Samples bound the observed telemetry crossing; no exact unsampled onset is inferred."
+  },
+  "attempt_accounting": {
+    "recorded_client_attempts": 25,
+    "successful_recorded_model_results": 1,
+    "recorded_errors": 24,
+    "by_role": {
+      "answer_generation": 16,
+      "answer_review": 1,
+      "dependency_review": 8
+    },
+    "first_guard_error_case": "repair_holdout_001",
+    "first_guard_error_role": "answer_review",
+    "first_guard_error_call_wall_seconds": 1.715519762,
+    "subsequent_latched_error_attempts": 23,
+    "interpretation": "Case 001 recorded one successful raw generation, then its answer-review attempt returned the swap-guard error. Its retry and all subsequent recorded attempts returned the latched error. These client attempts are not 25 successful backend inferences; no review result or model-generated delivery survived the guard. Frozen TransparentGuardedClient checks the guard before entering the backend and after it returns."
+  },
+  "per_case_outcomes": [
+    {
+      "id": "repair_holdout_001",
+      "status": "ok",
+      "wall_seconds": 29.73297604,
+      "recorded_client_attempts": 3,
+      "error": null,
+      "delivered_text": "Could you add a little detail or rephrase the request?"
+    },
+    {
+      "id": "repair_holdout_002",
+      "status": "ok",
+      "wall_seconds": 0.143626597,
+      "recorded_client_attempts": 2,
+      "error": null,
+      "delivered_text": "Could you add a little detail or rephrase the request?"
+    },
+    {
+      "id": "repair_holdout_003",
+      "status": "error",
+      "wall_seconds": 0.08811584,
+      "recorded_client_attempts": 1,
+      "error": {
+        "type": "SafetyGateError",
+        "message": "telemetry swap ceiling crossed"
+      },
+      "delivered_text": null
+    },
+    {
+      "id": "repair_holdout_004",
+      "status": "error",
+      "wall_seconds": 0.072129738,
+      "recorded_client_attempts": 1,
+      "error": {
+        "type": "SafetyGateError",
+        "message": "telemetry swap ceiling crossed"
+      },
+      "delivered_text": null
+    },
+    {
+      "id": "repair_holdout_005",
+      "status": "error",
+      "wall_seconds": 0.0630938,
+      "recorded_client_attempts": 1,
+      "error": {
+        "type": "SafetyGateError",
+        "message": "telemetry swap ceiling crossed"
+      },
+      "delivered_text": null
+    },
+    {
+      "id": "repair_holdout_006",
+      "status": "error",
+      "wall_seconds": 0.05607845,
+      "recorded_client_attempts": 1,
+      "error": {
+        "type": "SafetyGateError",
+        "message": "telemetry swap ceiling crossed"
+      },
+      "delivered_text": null
+    },
+    {
+      "id": "repair_holdout_007",
+      "status": "ok",
+      "wall_seconds": 0.075857881,
+      "recorded_client_attempts": 2,
+      "error": null,
+      "delivered_text": "Could you add a little detail or rephrase the request?"
+    },
+    {
+      "id": "repair_holdout_008",
+      "status": "ok",
+      "wall_seconds": 0.07217329,
+      "recorded_client_attempts": 2,
+      "error": null,
+      "delivered_text": "Could you add a little detail or rephrase the request?"
+    },
+    {
+      "id": "repair_holdout_009",
+      "status": "ok",
+      "wall_seconds": 0.097888401,
+      "recorded_client_attempts": 2,
+      "error": null,
+      "delivered_text": "Could you add a little detail or rephrase the request?"
+    },
+    {
+      "id": "repair_holdout_010",
+      "status": "ok",
+      "wall_seconds": 0.101294746,
+      "recorded_client_attempts": 2,
+      "error": null,
+      "delivered_text": "Could you add a little detail or rephrase the request?"
+    },
+    {
+      "id": "repair_holdout_011",
+      "status": "error",
+      "wall_seconds": 0.053550748,
+      "recorded_client_attempts": 1,
+      "error": {
+        "type": "SafetyGateError",
+        "message": "telemetry swap ceiling crossed"
+      },
+      "delivered_text": null
+    },
+    {
+      "id": "repair_holdout_012",
+      "status": "ok",
+      "wall_seconds": 0.137096378,
+      "recorded_client_attempts": 2,
+      "error": null,
+      "delivered_text": "Could you add a little detail or rephrase the request?"
+    },
+    {
+      "id": "repair_holdout_013",
+      "status": "ok",
+      "wall_seconds": 0.156588795,
+      "recorded_client_attempts": 2,
+      "error": null,
+      "delivered_text": "Could you add a little detail or rephrase the request?"
+    },
+    {
+      "id": "repair_holdout_014",
+      "status": "error",
+      "wall_seconds": 0.059439801,
+      "recorded_client_attempts": 1,
+      "error": {
+        "type": "SafetyGateError",
+        "message": "telemetry swap ceiling crossed"
+      },
+      "delivered_text": null
+    },
+    {
+      "id": "repair_holdout_015",
+      "status": "error",
+      "wall_seconds": 0.051124008,
+      "recorded_client_attempts": 1,
+      "error": {
+        "type": "SafetyGateError",
+        "message": "telemetry swap ceiling crossed"
+      },
+      "delivered_text": null
+    },
+    {
+      "id": "repair_holdout_016",
+      "status": "error",
+      "wall_seconds": 0.032462647,
+      "recorded_client_attempts": 1,
+      "error": {
+        "type": "SafetyGateError",
+        "message": "telemetry swap ceiling crossed"
+      },
+      "delivered_text": null
+    }
+  ],
+  "measured_counts": {
+    "raw_match": 8,
+    "thresholded_match": 6,
+    "final_match": 8,
+    "quality_pass": 0,
+    "combined_pass": 0
+  },
+  "planned_denominator": 16,
+  "delivered_model_generated_answers": 0,
+  "latency": {
+    "overall_observed": {
+      "n": 16,
+      "mean_seconds": 1.9370935725,
+      "minimum_seconds": 0.032462647,
+      "maximum_seconds": 29.73297604,
+      "p50_seconds": 0.07401558550000001,
+      "p95_seconds": 7.55068560625
+    },
+    "delivered_model_generated": {
+      "n": 0,
+      "p50_seconds": null,
+      "p95_seconds": null,
+      "mean_seconds": null,
+      "minimum_seconds": null,
+      "maximum_seconds": null
+    },
+    "application_only": {
+      "n": 8,
+      "mean_seconds": 3.814687766,
+      "minimum_seconds": 0.07217329,
+      "maximum_seconds": 29.73297604,
+      "p50_seconds": 0.119195562,
+      "p95_seconds": 19.38124050425001
+    },
+    "full_quality": {
+      "n": 0,
+      "p50_seconds": null,
+      "p95_seconds": null,
+      "mean_seconds": null,
+      "minimum_seconds": null,
+      "maximum_seconds": null
+    },
+    "combined_success": {
+      "n": 0,
+      "p50_seconds": null,
+      "p95_seconds": null,
+      "mean_seconds": null,
+      "minimum_seconds": null,
+      "maximum_seconds": null
+    }
+  },
+  "quality_interpretation": "0/16 delivered tasks passed under this failed device run. This does not estimate model answer quality under a clean operational run. All eight errors and eight generic application clarifications remain in the planned denominator.",
+  "latency_interpretation": "The median and p95 include rapid guard rejections and generic fallback returns. They must not be used as successful-answer responsiveness or a speedup headline. No delivered generated answer or quality-pass latency exists for this attempt.",
+  "cleanup_errors": [],
+  "final_resident_models": [],
+  "final_swap_used_kib": 1050368,
+  "final_available_kib": 2703268,
+  "artifact_sha256": {
+    "independent_audit.json": "dac015aa8943da6e76fc62495acca948628b378eea3abd1132777e50e1b2f4f9",
+    "collection/start.json": "d16fb414214135977a2b7f7c9e6ce8b57a9345c34811f24886c44ef5293afaed",
+    "collection/finish.json": "7d3858596a67b7bf31bdff2a6074cb01a957feaa916393342b6337b5f9325d9a",
+    "collection/run/summary.json": "768676f402520477c313a39f734102bf7e531e6408435aa38cad6f02eefff998",
+    "collection/launch.json": "b4c0e048f5a3dcf59dc99978284ecd384c8a4f6b9d50edc131625574bd925564",
+    "collection/run/observations.jsonl": "c1b42ed782a96e9b3312c8f9536b50fa6a68ff5803f722b1644def57daf9782c",
+    "collection/run/model_calls.jsonl": "1379dcf72f5dceb0d4f5074c1faa6faf4bafcd526bbdaf1b13c9f15c42c0b51e",
+    "collection/telemetry.jsonl": "b7f2f2de28cc5ff50a44b619adfcaf75d89692f285e6929bd2b9aa9612e91e4a",
+    "guard_audit_details_source.py": "ae7fed2422615221ee0d7007976a9c5bd35549800fd3738dde41608823114664"
+  }
+}

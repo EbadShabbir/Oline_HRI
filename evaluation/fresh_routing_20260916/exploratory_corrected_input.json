@@ -1,0 +1,289 @@
+{
+  "scope": "Exploratory corrected-input view only:43 original valid-input rows plus5 normalized follow-up rows. Not the original preregistered result; no pooled latency.",
+  "logical_cases": 48,
+  "original_attempts_preserved": 48,
+  "followup_attempts_preserved": 5,
+  "latency_pooled": false,
+  "source_cohort_by_case": [
+    {
+      "id": "fresh_023",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_027",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_041",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_022",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_048",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_047",
+      "cohort": "whitespace_followup",
+      "original_error_preserved": true
+    },
+    {
+      "id": "fresh_032",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_037",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_001",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_004",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_008",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_030",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_046",
+      "cohort": "whitespace_followup",
+      "original_error_preserved": true
+    },
+    {
+      "id": "fresh_020",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_010",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_019",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_006",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_002",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_036",
+      "cohort": "whitespace_followup",
+      "original_error_preserved": true
+    },
+    {
+      "id": "fresh_005",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_013",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_017",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_045",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_028",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_031",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_026",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_015",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_021",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_018",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_009",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_014",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_012",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_034",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_039",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_035",
+      "cohort": "whitespace_followup",
+      "original_error_preserved": true
+    },
+    {
+      "id": "fresh_040",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_029",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_038",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_016",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_033",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_024",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_007",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_042",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_011",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_025",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_044",
+      "cohort": "whitespace_followup",
+      "original_error_preserved": true
+    },
+    {
+      "id": "fresh_003",
+      "cohort": "original",
+      "original_error_preserved": false
+    },
+    {
+      "id": "fresh_043",
+      "cohort": "original",
+      "original_error_preserved": false
+    }
+  ],
+  "counts": {
+    "raw_match": 38,
+    "final_match": 39,
+    "quality_pass": 5,
+    "combined_pass": 4
+  },
+  "per_mode": {
+    "none": {
+      "count": 20,
+      "raw_match": 14,
+      "final_match": 14,
+      "quality_pass": 3,
+      "combined_pass": 3
+    },
+    "optional": {
+      "count": 8,
+      "raw_match": 8,
+      "final_match": 8,
+      "quality_pass": 1,
+      "combined_pass": 1
+    },
+    "required": {
+      "count": 14,
+      "raw_match": 13,
+      "final_match": 12,
+      "quality_pass": 0,
+      "combined_pass": 0
+    },
+    "clarify": {
+      "count": 6,
+      "raw_match": 3,
+      "final_match": 5,
+      "quality_pass": 1,
+      "combined_pass": 0
+    }
+  },
+  "source_sha256": {
+    "per_case.jsonl": "8897924e144ee11f39ff086db85b3184c162b306cd4b2af3cfac379c1d4ca433",
+    "whitespace_analysis/per_case.jsonl": "0e0089fc24aa38233205480676e06f90a6465cc71754476e61d42474ac624921"
+  }
+}

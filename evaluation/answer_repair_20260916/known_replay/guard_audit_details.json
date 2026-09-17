@@ -1,0 +1,65 @@
+{
+  "scope": "Read-only audit of the finalized known replay; no guards or candidate files changed.",
+  "operational_success": false,
+  "evaluation_complete": false,
+  "all_planned_observations_recorded": true,
+  "checks_passed": 43,
+  "checks_failed": 1,
+  "failed_checks": [
+    {
+      "check": "cohort: guard and cleanup outcome",
+      "passed": false,
+      "detail": null
+    }
+  ],
+  "integrity_interpretation": "The sole failed audit check is the recorded guard/operational failure. Source, cases, calls, models, sealed artifacts, empty memory and cleanup are verified.",
+  "guard_failure": {
+    "type": "SafetyGateError",
+    "message": "available memory crossed the runtime floor"
+  },
+  "guard_violation": "available memory crossed the runtime floor",
+  "failing_mem_available_kib": null,
+  "runtime_floor_kib": 786432,
+  "memory_measurement_note": "The guard checked /proc/meminfo MemAvailable and recorded a below-floor violation, but did not persist the failing numeric reading. Tegrastats total-minus-used is a different quantity and cannot establish that the guard reading was above the floor.",
+  "start_utc": "2026-09-16T19:59:16.116507+00:00",
+  "finish_utc": "2026-09-16T20:03:48.640501+00:00",
+  "snapshot_interval_seconds": 272.523994,
+  "runner_wall_seconds": 271.659194037,
+  "error_case": {
+    "index": 48,
+    "id": "fresh_043",
+    "status": "error",
+    "wall_seconds": 0.483704532,
+    "error": {
+      "type": "KeyboardInterrupt",
+      "message": "Jetson safety boundary crossed"
+    },
+    "recorded_calls": 1,
+    "failed_call_wall_seconds": 0.449068195,
+    "recorded_call_role": "dependency_review",
+    "route_available": false,
+    "delivered_text": null
+  },
+  "telemetry": {
+    "samples": 537,
+    "duration_seconds": 271.834558168,
+    "minimum_total_minus_used_ram_mib": 1022,
+    "maximum_swap_used_mib": 788,
+    "maximum_temperature_c": 63.406,
+    "minimum_ram_sample_seconds_after_first": 263.196785723
+  },
+  "cleanup_errors": [],
+  "final_resident_models": [],
+  "final_mem_available_kib": 2671856,
+  "route_matches_out_of_48": {
+    "raw": 38,
+    "thresholded": 27,
+    "final": 37
+  },
+  "all_case_wall_latency": {
+    "n": 48,
+    "p50_seconds": 5.206950711999999,
+    "p95_seconds": 12.157014704649997
+  },
+  "judgment_status": "Quality arithmetic awaits final adjudicated judgments; no pass values inferred."
+}

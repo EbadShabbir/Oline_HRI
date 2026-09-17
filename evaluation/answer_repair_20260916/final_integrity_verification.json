@@ -1,0 +1,1836 @@
+{
+  "created_at": "2026-09-16T20:12:49.279392+00:00",
+  "source_files": 48,
+  "test_files": 104,
+  "candidate_checks": [
+    {
+      "path": "src/oline_hri/__init__.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/__main__.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/answer_guidance.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/answer_review.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/cli.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/config.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/conversation.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/dependency_classifier.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/dependency_review.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/dependency_routing.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/embedding.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/evaluation.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/evaluation_benchmark.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/evaluation_experiment.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/evaluation_merge.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/evaluation_model_pairs.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/evaluation_router.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/evaluation_runner.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/evaluation_scoring.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/evaluation_systems.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/evaluation_telemetry.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/grounded_composition.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/human_guidance.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/lightweight_routing.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/memory.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/memory_capture.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/memory_evidence.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/ollama.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/operational_planning.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/relationships.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/reliable_conversation.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/reply_guard.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/response.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/retrieval.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/routing.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/semantic_routing.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/speech.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/task_contract.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/task_parts.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/timing.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/default_config.json",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/dependency_classifier_v1.json",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/fictional_seven_day_v1.json",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "src/oline_hri/fictional_seven_day_v1_1.json",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "scripts/run_routing_reliability.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "scripts/run_pair_remediation_validation.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "scripts/complete_system_device_guard.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "evaluation/answer_repair_20260916/run_guarded.py",
+      "kind": "source",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/__init__.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_analysis_changing_memory.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_analysis_memory_evidence_v2.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_answer_guidance.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_answer_review.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_arc_capability.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_arc_qwen25_continue.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_arc_qwen25_retry.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_batch_memory_reviews.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_changing_memory.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_chat_quality_live.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_cli.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_complete_system_analysis.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_complete_system_continue_schedule.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_complete_system_device_guard.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_complete_system_pipeline_diagnostics.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_complete_system_runner.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_config.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_conversation.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_conversation_opening.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_conversation_routed.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_current_relationship_repair.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_dependency_classifier.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_dependency_classifier_grid.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_dependency_evaluation_compatibility.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_dependency_repair.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_dependency_routing.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_embedding.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_embedding_live.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_evaluation_benchmark.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_evaluation_experiment.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_evaluation_merge.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_evaluation_model_pairs.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_evaluation_router.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_evaluation_runner.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_evaluation_scoring.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_evaluation_systems.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_evaluation_telemetry.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_general_advice_routing.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_grounded_composition.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_human_guidance.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_human_guidance_allocations.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_human_guidance_integration.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_independent_retrieval_adapter.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_independent_retrieval_runner.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_lifecycle_history_repair.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_lightweight_cli.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_lightweight_integration.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_lightweight_routing.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_lightweight_routing_live_guard.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_lowercase_relationship_recall.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_matched_evidence.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_matched_evidence_analysis.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_capture.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_capture_live.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_disclosure_guard.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_evidence.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_grounding_review_regressions.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_intent_regressions.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_lifecycle_process.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_lifecycle_validation.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_pipeline_offline.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_pipeline_regressions.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_reliability.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_memory_report_tables.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_ollama.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_ollama_lifecycle_live.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_operational_planning.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_package.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_pair_remediation.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_post_memory_analysis.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_post_memory_batch.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_post_memory_comparison.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_post_memory_device_guard.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_recall_intent_context.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_relationships.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_reliable_cli.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_reliable_conversation.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_reply_guard.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_response.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_retrieval.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_retrieval_continuation.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_retrieval_experiment_analysis.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_retrieval_fragment_worker.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_retrieval_review_batches.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_retrieval_review_orchestration.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_routed_chat_live.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_routing.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_routing_lifecycle_revalidation.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_routing_overhead_analysis.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_routing_overhead_runner.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_routing_reliability_runner.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_routing_timing.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_semantic_evaluation_compatibility.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_semantic_routing.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_speech.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_step14_fallbacks.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_step14_safety.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_task_contract.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_task_parts.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_typed_evaluation_compatibility.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    },
+    {
+      "path": "tests/test_wrong_route_personal_answers.py",
+      "kind": "test",
+      "working_matches": true,
+      "archive_matches": true
+    }
+  ],
+  "evaluation_seal_checks": [
+    {
+      "cohort": "known_replay",
+      "path": "cases.json",
+      "matches": true
+    },
+    {
+      "cohort": "known_replay",
+      "path": "candidate_freeze.json",
+      "matches": true
+    },
+    {
+      "cohort": "known_replay",
+      "path": "../protocol.md",
+      "matches": true
+    },
+    {
+      "cohort": "known_replay",
+      "path": "../final_candidate/candidate_freeze.json",
+      "matches": true
+    },
+    {
+      "cohort": "known_replay",
+      "path": "../review_a/review_plan.md",
+      "matches": true
+    },
+    {
+      "cohort": "known_replay",
+      "path": "../review_b/review_plan.md",
+      "matches": true
+    },
+    {
+      "cohort": "known_replay",
+      "path": "../full_offline_checks_v4.log",
+      "matches": true
+    },
+    {
+      "cohort": "known_replay",
+      "path": "../full_offline_checks_v4.status.json",
+      "matches": true
+    },
+    {
+      "cohort": "fresh_holdout",
+      "path": "cases.json",
+      "matches": true
+    },
+    {
+      "cohort": "fresh_holdout",
+      "path": "candidate_freeze.json",
+      "matches": true
+    },
+    {
+      "cohort": "fresh_holdout",
+      "path": "../protocol.md",
+      "matches": true
+    },
+    {
+      "cohort": "fresh_holdout",
+      "path": "../final_candidate/candidate_freeze.json",
+      "matches": true
+    },
+    {
+      "cohort": "fresh_holdout",
+      "path": "../holdout_opening.json",
+      "matches": true
+    },
+    {
+      "cohort": "fresh_holdout",
+      "path": "../holdout_authoring/authoring_notes.md",
+      "matches": true
+    },
+    {
+      "cohort": "fresh_holdout",
+      "path": "../review_a/review_plan.md",
+      "matches": true
+    },
+    {
+      "cohort": "fresh_holdout",
+      "path": "../review_b/review_plan.md",
+      "matches": true
+    },
+    {
+      "cohort": "fresh_holdout",
+      "path": "../full_offline_checks_v4.log",
+      "matches": true
+    },
+    {
+      "cohort": "fresh_holdout",
+      "path": "../full_offline_checks_v4.status.json",
+      "matches": true
+    }
+  ],
+  "original_manifest_checks": [
+    {
+      "original_path": "evaluation/fresh_routing_20260916/README.md",
+      "verified_path": "evaluation/fresh_routing_20260916/README.md",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/adjudicate.py",
+      "verified_path": "evaluation/fresh_routing_20260916/adjudicate.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/adjudicated_judgments.json",
+      "verified_path": "evaluation/fresh_routing_20260916/adjudicated_judgments.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/adjudication_notes.json",
+      "verified_path": "evaluation/fresh_routing_20260916/adjudication_notes.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/analyze.py",
+      "verified_path": "evaluation/fresh_routing_20260916/analyze.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/analyzer_checks.log",
+      "verified_path": "evaluation/fresh_routing_20260916/analyzer_checks.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/answers.md",
+      "verified_path": "evaluation/fresh_routing_20260916/answers.md",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/audit_novelty.py",
+      "verified_path": "evaluation/fresh_routing_20260916/audit_novelty.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/audit_results.py",
+      "verified_path": "evaluation/fresh_routing_20260916/audit_results.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/authoring/authoring_notes.md",
+      "verified_path": "evaluation/fresh_routing_20260916/authoring/authoring_notes.md",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/authoring/cases.json",
+      "verified_path": "evaluation/fresh_routing_20260916/authoring/cases.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_freeze.json",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_freeze.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/scripts/run_routing_reliability.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/scripts/run_routing_reliability.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/__init__.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/__init__.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/__main__.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/__main__.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/answer_guidance.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/answer_guidance.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/answer_review.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/answer_review.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/cli.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/cli.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/config.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/config.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/conversation.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/conversation.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/default_config.json",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/default_config.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/dependency_classifier.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/dependency_classifier.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/dependency_classifier_v1.json",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/dependency_classifier_v1.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/dependency_review.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/dependency_review.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/dependency_routing.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/dependency_routing.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/embedding.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/embedding.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_benchmark.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_benchmark.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_experiment.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_experiment.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_merge.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_merge.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_model_pairs.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_model_pairs.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_router.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_router.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_runner.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_runner.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_scoring.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_scoring.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_systems.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_systems.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_telemetry.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/evaluation_telemetry.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/fictional_seven_day_v1.json",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/fictional_seven_day_v1.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/fictional_seven_day_v1_1.json",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/fictional_seven_day_v1_1.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/grounded_composition.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/grounded_composition.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/human_guidance.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/human_guidance.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/lightweight_routing.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/lightweight_routing.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/memory.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/memory.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/memory_capture.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/memory_capture.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/memory_evidence.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/memory_evidence.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/ollama.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/ollama.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/operational_planning.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/operational_planning.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/relationships.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/relationships.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/reliable_conversation.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/reliable_conversation.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/reply_guard.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/reply_guard.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/response.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/response.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/retrieval.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/retrieval.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/routing.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/routing.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/semantic_routing.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/semantic_routing.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/speech.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/speech.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/timing.py",
+      "verified_path": "evaluation/fresh_routing_20260916/candidate_source/src/oline_hri/timing.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/cases.json",
+      "verified_path": "evaluation/fresh_routing_20260916/cases.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/artifact_sha256.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/artifact_sha256.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/finish.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/finish.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/integrity_after.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/integrity_after.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/integrity_before.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/integrity_before.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/launch.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/launch.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/models_after.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/models_after.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/models_before.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/models_before.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/run/memory.sqlite3",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/run/memory.sqlite3",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/run/metadata.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/run/metadata.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/run/model_calls.jsonl",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/run/model_calls.jsonl",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/run/observations.jsonl",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/run/observations.jsonl",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/run/retrieval_calls.jsonl",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/run/retrieval_calls.jsonl",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/run/summary.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/run/summary.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/start.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/start.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection/telemetry.jsonl",
+      "verified_path": "evaluation/fresh_routing_20260916/collection/telemetry.jsonl",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection.log",
+      "verified_path": "evaluation/fresh_routing_20260916/collection.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/artifact_sha256.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/artifact_sha256.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/finish.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/finish.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/integrity_after.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/integrity_after.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/integrity_before.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/integrity_before.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/launch.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/launch.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/models_after.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/models_after.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/models_before.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/models_before.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/memory.sqlite3",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/memory.sqlite3",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/metadata.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/metadata.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/model_calls.jsonl",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/model_calls.jsonl",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/observations.jsonl",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/observations.jsonl",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/retrieval_calls.jsonl",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/retrieval_calls.jsonl",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/summary.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/run/summary.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/start.json",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/start.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace/telemetry.jsonl",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace/telemetry.jsonl",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/collection_whitespace.log",
+      "verified_path": "evaluation/fresh_routing_20260916/collection_whitespace.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/evaluation_freeze.json",
+      "verified_path": "evaluation/fresh_routing_20260916/evaluation_freeze.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/exploratory_corrected_input.json",
+      "verified_path": "evaluation/fresh_routing_20260916/exploratory_corrected_input.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/final_novelty_audit.json",
+      "verified_path": "evaluation/fresh_routing_20260916/final_novelty_audit.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/final_novelty_audit.log",
+      "verified_path": "evaluation/fresh_routing_20260916/final_novelty_audit.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/final_verification.json",
+      "verified_path": "evaluation/fresh_routing_20260916/final_verification.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/frozen_novelty_audit.json",
+      "verified_path": "evaluation/fresh_routing_20260916/frozen_novelty_audit.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/frozen_novelty_audit.log",
+      "verified_path": "evaluation/fresh_routing_20260916/frozen_novelty_audit.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/harness_freeze.json",
+      "verified_path": "evaluation/fresh_routing_20260916/harness_freeze.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/harness_source/evaluation/fresh_routing_20260916/run_guarded.py",
+      "verified_path": "evaluation/fresh_routing_20260916/harness_source/evaluation/fresh_routing_20260916/run_guarded.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/harness_source/evaluation/fresh_routing_20260916/test_run_guarded.py",
+      "verified_path": "evaluation/fresh_routing_20260916/harness_source/evaluation/fresh_routing_20260916/test_run_guarded.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/harness_source/scripts/complete_system_device_guard.py",
+      "verified_path": "evaluation/fresh_routing_20260916/harness_source/scripts/complete_system_device_guard.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/harness_source/scripts/run_pair_remediation_validation.py",
+      "verified_path": "evaluation/fresh_routing_20260916/harness_source/scripts/run_pair_remediation_validation.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/independent_audit.json",
+      "verified_path": "evaluation/fresh_routing_20260916/independent_audit.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/independent_audit.log",
+      "verified_path": "evaluation/fresh_routing_20260916/independent_audit.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/independent_audit_primary.json",
+      "verified_path": "evaluation/fresh_routing_20260916/independent_audit_primary.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/independent_audit_primary.log",
+      "verified_path": "evaluation/fresh_routing_20260916/independent_audit_primary.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/input_contract_audit.json",
+      "verified_path": "evaluation/fresh_routing_20260916/input_contract_audit.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/launcher_checks.log",
+      "verified_path": "evaluation/fresh_routing_20260916/launcher_checks.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/make_review_packet.py",
+      "verified_path": "evaluation/fresh_routing_20260916/make_review_packet.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/metrics.json",
+      "verified_path": "evaluation/fresh_routing_20260916/metrics.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/novelty_audit.json",
+      "verified_path": "evaluation/fresh_routing_20260916/novelty_audit.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/novelty_audit.log",
+      "verified_path": "evaluation/fresh_routing_20260916/novelty_audit.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/offline_validation/integrity_before.json",
+      "verified_path": "evaluation/fresh_routing_20260916/offline_validation/integrity_before.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/offline_validation/launch.json",
+      "verified_path": "evaluation/fresh_routing_20260916/offline_validation/launch.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/offline_validation/validation.json",
+      "verified_path": "evaluation/fresh_routing_20260916/offline_validation/validation.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/per_case.jsonl",
+      "verified_path": "evaluation/fresh_routing_20260916/per_case.jsonl",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/pre_inference_case_audit.json",
+      "verified_path": "evaluation/fresh_routing_20260916/pre_inference_case_audit.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/protocol.md",
+      "verified_path": "evaluation/fresh_routing_20260916/protocol.md",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/render_answers.py",
+      "verified_path": "evaluation/fresh_routing_20260916/render_answers.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/report_review.json",
+      "verified_path": "evaluation/fresh_routing_20260916/report_review.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/batch_000_007.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/batch_000_007.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/batch_007_013.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/batch_007_013.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/batch_013_019.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/batch_013_019.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/batch_019_025.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/batch_019_025.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/batch_025_030.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/batch_025_030.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/batch_030_035.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/batch_030_035.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/batch_035_041.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/batch_035_041.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/batch_041_048.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/batch_041_048.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/flag_addendum.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/flag_addendum.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/review_plan.md",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/review_plan.md",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_a/whitespace_followup.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_a/whitespace_followup.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_agreement.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_agreement.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_b/batch_000_007.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_b/batch_000_007.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_b/batch_007_013.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_b/batch_007_013.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_b/batch_013_019.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_b/batch_013_019.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_b/batch_019_025.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_b/batch_019_025.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_b/batch_025_030.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_b/batch_025_030.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_b/batch_030_035.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_b/batch_030_035.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_b/batch_035_041.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_b/batch_035_041.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_b/batch_041_048.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_b/batch_041_048.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_b/review_plan.md",
+      "verified_path": "evaluation/fresh_routing_20260916/review_b/review_plan.md",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_b/whitespace_followup.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_b/whitespace_followup.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_packets/batch_000_007.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_packets/batch_000_007.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_packets/batch_007_013.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_packets/batch_007_013.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_packets/batch_013_019.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_packets/batch_013_019.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_packets/batch_019_025.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_packets/batch_019_025.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_packets/batch_025_030.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_packets/batch_025_030.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_packets/batch_030_035.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_packets/batch_030_035.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_packets/batch_035_041.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_packets/batch_035_041.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_packets/batch_041_048.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_packets/batch_041_048.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/review_packets/whitespace_followup.json",
+      "verified_path": "evaluation/fresh_routing_20260916/review_packets/whitespace_followup.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/run_guarded.py",
+      "verified_path": "evaluation/fresh_routing_20260916/run_guarded.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/runner_checks.log",
+      "verified_path": "evaluation/fresh_routing_20260916/runner_checks.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/runner_checks_corrected_path.log",
+      "verified_path": "evaluation/fresh_routing_20260916/runner_checks_corrected_path.log",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/summarize_followup.py",
+      "verified_path": "evaluation/fresh_routing_20260916/summarize_followup.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/test_analyze.py",
+      "verified_path": "evaluation/fresh_routing_20260916/test_analyze.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/test_run_guarded.py",
+      "verified_path": "evaluation/fresh_routing_20260916/test_run_guarded.py",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/whitespace_adjudicated_judgments.json",
+      "verified_path": "evaluation/fresh_routing_20260916/whitespace_adjudicated_judgments.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/whitespace_analysis/metrics.json",
+      "verified_path": "evaluation/fresh_routing_20260916/whitespace_analysis/metrics.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/whitespace_analysis/per_case.jsonl",
+      "verified_path": "evaluation/fresh_routing_20260916/whitespace_analysis/per_case.jsonl",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/whitespace_eligibility.json",
+      "verified_path": "evaluation/fresh_routing_20260916/whitespace_eligibility.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/whitespace_followup_cases.json",
+      "verified_path": "evaluation/fresh_routing_20260916/whitespace_followup_cases.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/whitespace_followup_freeze.json",
+      "verified_path": "evaluation/fresh_routing_20260916/whitespace_followup_freeze.json",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/whitespace_followup_protocol.md",
+      "verified_path": "evaluation/fresh_routing_20260916/whitespace_followup_protocol.md",
+      "matches": true
+    },
+    {
+      "original_path": "evaluation/fresh_routing_20260916/whitespace_review_agreement.json",
+      "verified_path": "evaluation/fresh_routing_20260916/whitespace_review_agreement.json",
+      "matches": true
+    },
+    {
+      "original_path": "results.md",
+      "verified_path": "evaluation/answer_repair_20260916/baseline_results_snapshot.md",
+      "matches": true
+    }
+  ],
+  "original_artifacts_unchanged": true,
+  "original_results_index_preserved_as_snapshot": true,
+  "current_results_index_intentionally_appended": true
+}

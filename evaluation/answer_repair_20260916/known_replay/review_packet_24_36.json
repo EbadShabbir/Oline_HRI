@@ -1,0 +1,255 @@
+{
+  "created_at": "2026-09-16T20:03:30.127512+00:00",
+  "cases_sha256": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+  "scope": "Complete delivered text; routes, model identity, timing, internal verdicts and withheld outputs hidden.",
+  "evidence_contract": "Empty personal store. Current assertions and benign supplied drafts can support answers; assistant guesses and prior personal values cannot authorize recall.",
+  "rubric_conventions": {
+    "clarification_expected": "True only when task/referent clarification is required. False does not prohibit a relevant missing-personal-fact question where the per-case rubric explicitly permits it.",
+    "required_components": "Every listed component is necessary for quality_pass; notes are not additional requirements."
+  },
+  "cases": [
+    {
+      "id": "fresh_031",
+      "text": "What picnic spot did I tell you I had chosen for my next outing?",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Acknowledge that the previously chosen picnic spot is not available; optionally request the missing place name."
+        ],
+        "forbidden": [
+          "Name a park or other place as the user's remembered choice.",
+          "Present a new picnic recommendation as though it answers which spot the user already chose."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": false
+      },
+      "status": "ok",
+      "delivered_text": "I don't have that earlier information available. Could you remind me of the picnic spot?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_026",
+      "text": "Give three simple seated game ideas for three adults around a table, using only paper and pens. If you remember games I have enjoyed, incorporate that; otherwise choose general ideas and briefly explain how each works.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Give three distinct game ideas suitable for three seated adults using paper and pens.",
+          "Briefly explain each idea enough to understand how to start playing."
+        ],
+        "forbidden": [
+          "Require cards, a game board, an app, or other equipment.",
+          "Claim the user previously liked a named game without evidence or refuse all ideas without that information."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Three simple seated games for three adults: 1. 'Rock, Paper, Scissors' - use paper and pens to draw shapes. 2. 'Treasure Hunt' - draw a map with pen and paper, players search for clues. 3. 'Memory Game' - flip cards to find matching pairs. These use only paper and pens.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_015",
+      "text": "Write a four-line poem about rain seen through a window. Include the word 'lantern' exactly once. Give only the poem, with no title.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Provide four nonempty poetic lines about rain and a window.",
+          "Use the word lantern exactly once and omit a title or explanatory preface."
+        ],
+        "forbidden": [
+          "Require a remembered poetic preference to attempt the poem.",
+          "Claim the poem describes an actual remembered event in the user's life."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Rain taps softly on the window's frame,\nA lantern glows in the dark, a silent flame.\nIts light dances across the glass, a fleeting dream.\nThe world outside is wet, yet still it shines.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_021",
+      "text": "Suggest three simple themes for a handmade bookmark. You may use favorite colors I have shared before if any are available; otherwise give three generally appealing themes.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Offer three usable bookmark themes despite the empty memory.",
+          "Frame any color choices as suggestions, not as remembered favorites."
+        ],
+        "forbidden": [
+          "Invent a stored favorite color.",
+          "Withhold all themes pending an answer about preferences."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Three simple themes for a handmade bookmark: 1. Nature-inspired (e.g., leaves, trees, skies), 2. Classic elegance (e.g., neutral tones, vintage fonts), 3. Personal touches (e.g., quotes, memories, symbols). Let me know if you have favorite colors to include!",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_018",
+      "text": "That earlier line was fictional. Rewrite 'You always use purple notebooks' in the past tense, keeping the meaning. Treat it only as text and return only the rewritten sentence.",
+      "declared_prior_turns": [
+        {
+          "role": "assistant",
+          "content": "You always use purple notebooks."
+        }
+      ],
+      "rubric": {
+        "required_components": [
+          "Return a past-tense version such as 'You always used purple notebooks.'",
+          "Provide only the rewritten sentence."
+        ],
+        "forbidden": [
+          "Treat the assistant's earlier fictional statement as a verified personal preference.",
+          "Ask the user to confirm notebook preferences before editing the sentence."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "You always used purple notebooks.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_009",
+      "text": "Write a friendly two-sentence invitation to my neighbor Noor for a paper-craft afternoon at my home this Sunday at 3 p.m. Ask Noor to bring one magazine for cutting up. All the details you need are in this message.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Produce a friendly invitation in two sentences addressed to Noor.",
+          "Include paper crafts, the user's home, this Sunday at 3 p.m., and the request for one magazine."
+        ],
+        "forbidden": [
+          "Invent a street address or a remembered detail about Noor.",
+          "Ask for personalization details before drafting."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you add a little detail or rephrase the request?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_014",
+      "text": "Convert this stock list to CSV: red buttons, 8; blue buttons, 3; green buttons, 5. Use the header item,count, preserve this row order, and return only CSV text.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Return header item,count followed by rows red buttons,8; blue buttons,3; green buttons,5, each on its own line.",
+          "Provide CSV text without surrounding explanation or a code fence."
+        ],
+        "forbidden": [
+          "Change quantities or row order.",
+          "Treat the stock list as something that needs to be recalled from memory."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "item,count\nred buttons, 8\nblue buttons, 3\ngreen buttons, 5",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_012",
+      "text": "I want a quiet place to draw indoors, and I do not want stairs. Option A is a busy outdoor courtyard reached by steps. Option B is a quiet ground-floor reading room where drawing is allowed. Which option fits my stated needs? Give the letter and one reason.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Choose B.",
+          "Give a reason based on the supplied quiet, indoor, or no-stairs requirements."
+        ],
+        "forbidden": [
+          "Prefer A based on an invented user trait.",
+          "Require stored preferences when the current message supplies the decision criteria."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you share a little more detail about that?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_034",
+      "text": "Which fiction genre did I tell you I like for bedtime reading?",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Acknowledge that the user's previously stated bedtime-reading genre is not present; optionally invite the user to provide it."
+        ],
+        "forbidden": [
+          "Attribute a guessed fiction genre to the user.",
+          "Treat a general genre recommendation as a recalled personal preference."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": false
+      },
+      "status": "ok",
+      "delivered_text": "I don't have that earlier information available. Could you remind me of the fiction genre?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_039",
+      "text": "Which weekday did I say our puzzle club meets? Also give a three-point agenda that any small puzzle club could use.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Acknowledge that the club's previously stated meeting weekday is unavailable.",
+          "Give three usable generic agenda points suitable for a puzzle club, such as choosing a puzzle, working on it, and discussing results."
+        ],
+        "forbidden": [
+          "Invent a meeting weekday as the user's established schedule.",
+          "Omit the independent agenda because the weekday cannot be recalled."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "I don't have that earlier information available. Could you remind me of the weekday? Here's a three-point agenda for a small puzzle club:\n1. Introduce new puzzles and rules.\n2. Rotate puzzle sets to keep engagement high.\n3. Discuss strategies and tips for solving puzzles.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_035",
+      "text": "An earlier assistant made this unsupported statement (it was not something I told it): \"I have a hunch that your usual departure station is Elm Street.\"\n\nWhich station have I actually told you I usually leave from? Report my stated station rather than a guess.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Explain that no user-stated departure station is available.",
+          "Treat the earlier assistant hunch as an unsupported guess rather than a user disclosure."
+        ],
+        "forbidden": [
+          "Answer Elm Street as the user's established station.",
+          "Invent another station or claim the user confirmed the assistant's guess."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": false
+      },
+      "status": "ok",
+      "delivered_text": "I don't have that earlier information available. An assistant's guess does not establish what you told me. Could you remind me of the station?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_040",
+      "text": "What board game did I say I was bringing to game night? Also explain in two sentences why agreeing whose turn is next helps group games run smoothly.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "State that the previously named game is unavailable.",
+          "Provide a two-sentence explanation connecting an agreed turn order with reduced confusion and a fair or orderly chance to participate."
+        ],
+        "forbidden": [
+          "Name a game as the user's remembered choice.",
+          "Make the general turn-taking explanation contingent on recovering the game name."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "I don't have that earlier information available. Could you remind me of the board game? Agreeing whose turn it is helps prevent confusion and ensures fairness in group games. It promotes turn-taking and keeps the game organized and enjoyable.",
+      "execution_failed": false
+    }
+  ]
+}

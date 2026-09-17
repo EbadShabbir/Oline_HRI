@@ -1,0 +1,1 @@
+Development v3 used one independent reviewer B on the sanitized packet plus root review. All judgments accepted. Known development evidence only; 8/12 full-task passes. Final cohorts use two independent assistant reviews and explicit root adjudication.

@@ -1,0 +1,12 @@
+======================================================================
+FAIL: test_invalid_payloads_and_hidden_authority_fail (test_task_parts.TaskPartsTests) (raw='{"answer_parts": ["mem_00000000000000000000000000000000", "Other"]}')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_task_parts.py", line 46, in test_invalid_payloads_and_hidden_authority_fail
+    with self.subTest(raw=raw), self.assertRaises(ResponseValidationError):
+AssertionError: ResponseValidationError not raised
+
+----------------------------------------------------------------------
+Ran 75 tests in 0.456s
+
+FAILED (failures=1)

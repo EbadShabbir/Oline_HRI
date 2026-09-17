@@ -1,0 +1,83 @@
+[
+  {
+    "id": "fresh_023",
+    "quality_pass": false,
+    "primary_outcome": "constraint_violation",
+    "flags": ["sentence_count_violation"],
+    "required_components_pass": [
+      {"component": "Provide a warm, understandable two-sentence welcome message suitable for a casual board-game group.", "pass": false},
+      {"component": "Use the supplied fallback when no writing-tone memory is available.", "pass": true}
+    ],
+    "reason": "The warm welcome uses a general fallback without claiming a remembered tone, but the delivered draft has five sentences rather than two.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_027",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": ["unnecessary_clarification", "missing_chore_order", "missing_reason"],
+    "required_components_pass": [
+      {"component": "Provide an order containing each of the four supplied chores once.", "pass": false},
+      {"component": "Give a short plausible reason for the chosen default order.", "pass": false}
+    ],
+    "reason": "The generic question supplies neither the requested chore order nor its reason even though a reasonable default was explicitly authorized.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_041",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["unnecessary_clarification", "missing_unavailable_recall_acknowledgment", "missing_general_component"],
+    "required_components_pass": [
+      {"component": "Acknowledge that the user's pickup branch is unavailable.", "pass": false},
+      {"component": "Order the supplied titles as Amber Trail, Cedar Boat, Willow Door.", "pass": false}
+    ],
+    "reason": "The generic request for detail neither states that the pickup branch is unavailable nor alphabetizes the three supplied titles, which can be done independently.",
+    "useful_general_help": false
+  },
+  {
+    "id": "fresh_022",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_self_contained_break"],
+    "required_components_pass": [
+      {"component": "Offer an indoor solo break that fits within 15 minutes and can be done with the supplied items.", "pass": false},
+      {"component": "Make the proposal usable without any recalled hobby.", "pass": true}
+    ],
+    "reason": "Stretching is a relevant general suggestion that does not depend on recalled hobbies, but the answer never delivers the requested self-contained idea using the listed items. It says it can suggest one and ends by instructing that a plan be suggested; reading also introduces an unlisted book.",
+    "useful_general_help": true
+  },
+  {
+    "id": "fresh_048",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["untargeted_clarification"],
+    "required_components_pass": [
+      {"component": "Ask which operation or result the user wants, such as a sum, average, or another calculation.", "pass": false}
+    ],
+    "reason": "Clarification is appropriate, but 'Could you say a little more?' does not ask which calculation or result is wanted as the rubric requires.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_047",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": ["execution_failed", "absent_output"],
+    "required_components_pass": [
+      {"component": "Ask whether the intended recipient is Alex Kim or Alex Rao before committing to one addressed reply.", "pass": false}
+    ],
+    "reason": "The recorded execution failed and delivered no text, so no recipient clarification was provided.",
+    "useful_general_help": null
+  },
+  {
+    "id": "fresh_032",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": ["missing_unavailable_recall_acknowledgment", "untargeted_missing_fact_question"],
+    "required_components_pass": [
+      {"component": "Explain that the frame's previously supplied width, height, and units are unavailable; a request for the measurements is acceptable.", "pass": false}
+    ],
+    "reason": "The generic request for more detail does not explain that the prior dimensions are unavailable or specifically request the missing measurements and units.",
+    "useful_general_help": null
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "boot_id": "c0e155e9-d16b-4054-be35-885c29c814e7",
+  "captured_at": "2026-09-17T10:33:15.881395+00:00",
+  "fan_pwm": 66,
+  "memory": {
+    "mem_total_kib": 7803200,
+    "mem_available_kib": 3158128,
+    "swap_total_kib": 3901584,
+    "swap_free_kib": 3155344,
+    "swap_used_kib": 746240
+  },
+  "power_mode": "NV Power Mode: 15W\n0",
+  "reset_reason": "MAINSWRST",
+  "resident_models": [],
+  "temperatures_c": {
+    "cpu-thermal": 48.531,
+    "gpu-thermal": 48.781,
+    "soc0-thermal": 47.656,
+    "soc1-thermal": 47.843,
+    "soc2-thermal": 48.125,
+    "tj-thermal": 48.625
+  },
+  "thermal_trip_events": {
+    "cpu": 0,
+    "gpu": 0,
+    "cv0": 0,
+    "cv1": 0,
+    "cv2": 0,
+    "soc0": 0,
+    "soc1": 0,
+    "soc2": 0
+  }
+}

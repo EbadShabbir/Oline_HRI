@@ -1,0 +1,20 @@
+...................................................................................................
+======================================================================
+FAIL: test_sentence_count_handles_decimals_abbreviations_and_separate_equation (test_task_contract.TaskContractTests) (request='Use two sentences.')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/b2jetson/convo_hri_cascading/submodules/Oline_HRI/tests/test_task_contract.py", line 60, in test_sentence_count_handles_decimals_abbreviations_and_separate_equation
+    self.assertEqual(task_contract_issues(request, answer), expected)
+AssertionError: Tuples differ: ('requested_sentence_count',) != ()
+
+First tuple contains 1 additional elements.
+First extra element 0:
+'requested_sentence_count'
+
+- ('requested_sentence_count',)
++ ()
+
+----------------------------------------------------------------------
+Ran 100 tests in 0.427s
+
+FAILED (failures=1)

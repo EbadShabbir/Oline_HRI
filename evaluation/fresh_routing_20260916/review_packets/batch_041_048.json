@@ -1,0 +1,160 @@
+{
+  "created_at": "2026-09-16T18:40:14.881560+00:00",
+  "frozen_cases_sha256": "1c73820a710c4102ce5a84ec4f2e87f024191942542a3afa8eaa04767212b294",
+  "scope": "Final delivered answer review. Models, timings, routes, internal review verdicts and raw rejected attempts withheld.",
+  "evidence_contract": "Empty personal store. Current assertions and benign nonpersonal context may support answers; prior personal-value history and assistant guesses do not authorize personal facts. Quoted fictional text may be edited without endorsing it.",
+  "rubric_conventions": {
+    "clarification_expected": "True only when task/referent clarification is required. False does not prohibit a relevant missing-personal-fact question where the per-case rubric explicitly permits it.",
+    "required_components": "Every listed component is necessary for quality_pass; notes are not additional requirements."
+  },
+  "cases": [
+    {
+      "id": "fresh_007",
+      "text": "There are 14 blue tokens and 9 yellow tokens on my table. I move 5 blue tokens into a closed box. How many tokens remain outside the box? Answer with one equation and one short sentence.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Show an equation equivalent to 14 + 9 - 5 = 18.",
+          "State in one short sentence that 18 tokens remain outside the box."
+        ],
+        "forbidden": [
+          "Count only the remaining blue tokens as the total.",
+          "Request personal history to solve the arithmetic."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "The total number of tokens is 14 blue + 9 yellow = 23 tokens. After moving 5 blue tokens into the box, 14 - 5 = 9 blue tokens remain outside. So, 9 + 9 = 18 tokens remain outside the box.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_042",
+      "text": "What nickname did I tell you my sister uses for me? Also explain in two sentences how a nickname differs from a full name.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Indicate that the previously stated nickname is unavailable.",
+          "Give a two-sentence general explanation distinguishing an informal or alternative name from a person's full name, without asserting that every nickname must be shorter."
+        ],
+        "forbidden": [
+          "Invent a nickname or full name for the user.",
+          "Withhold the general naming explanation until the nickname is supplied."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you share a little more detail about that? A nickname is a short, informal name used by people, while a full name is a longer, official name. Both are personal, but the nickname is often used in a more casual way.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_011",
+      "text": "Use the second version and make it one sentence, keeping the date and place.",
+      "declared_prior_turns": [
+        {
+          "role": "user",
+          "content": "Give me two short announcements for our sketch swap on 18 October in Room 2."
+        },
+        {
+          "role": "assistant",
+          "content": "Version 1: Our sketch swap is on 18 October in Room 2. Bring a drawing to share.\nVersion 2: Join our sketch swap on 18 October. We will meet in Room 2."
+        }
+      ],
+      "rubric": {
+        "required_components": [
+          "Combine or rewrite the second version as one sentence inviting people to the sketch swap.",
+          "Preserve 18 October and Room 2."
+        ],
+        "forbidden": [
+          "Ask which version the user means.",
+          "Treat the needed announcement text as unavailable stored memory."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Could you say a little more?",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_025",
+      "text": "Give me a premise and an opening sentence for a fictional short story. You can draw on interests I have mentioned in past chats if available, but a standalone imaginative idea is fine if you do not have them.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Provide a recognizable story premise and a corresponding opening sentence.",
+          "Complete the creative task without requiring remembered interests."
+        ],
+        "forbidden": [
+          "Present invented interests or events as facts about the user.",
+          "Withhold the premise until the user supplies a personal profile."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "A lonely traveler stumbles upon an ancient library in a forgotten village, where the books whisper secrets of forgotten worlds.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_044",
+      "text": "Here are two separate messages. Welcome note: 'Glad you joined our walking group.' Reminder: 'Bring a water bottle to Saturday's walk.'\n\nMake the message shorter.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Ask whether the user wants the welcome note or the reminder shortened; asking whether both are intended is also acceptable."
+        ],
+        "forbidden": [
+          "Silently select one message as though the user had identified it.",
+          "Claim the supplied messages are unavailable from memory."
+        ],
+        "clarification_expected": true,
+        "general_component_expected": false
+      },
+      "status": "error",
+      "delivered_text": "",
+      "execution_failed": true
+    },
+    {
+      "id": "fresh_003",
+      "text": "I have 12 minutes to set up a tiny indoor treasure hunt for one friend. The room has a table, a chair, and a shelf. I have three paper clue cards, a pen, tape, and a wrapped prize. I will hand over the first clue. Give a setup plan totaling 12 minutes and text for three simple clues that lead to the prize using only the listed room features.",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Give setup time allocations totaling 12 minutes.",
+          "Provide three clue texts and a coherent placement sequence: the handed-over clue leads to the next card, that card leads to the third, and the third leads to the prize.",
+          "Use only the table, chair, and shelf as hiding or destination locations; using every listed feature is not mandatory."
+        ],
+        "forbidden": [
+          "Depend on additional room features or personal trivia about the friend.",
+          "Place the prize or a necessary clue somewhere unreachable from the described clue sequence."
+        ],
+        "clarification_expected": false,
+        "general_component_expected": true
+      },
+      "status": "ok",
+      "delivered_text": "Set up the treasure hunt with 12 minutes. Use the table, chair, and shelf for clues. Three simple clues to start.",
+      "execution_failed": false
+    },
+    {
+      "id": "fresh_043",
+      "text": "Can you fix it for me?",
+      "declared_prior_turns": [],
+      "rubric": {
+        "required_components": [
+          "Ask what needs fixing or request the object, text, or problem to work on."
+        ],
+        "forbidden": [
+          "Invent a specific object or malfunction and proceed as if it was supplied.",
+          "Claim to have completed a fix."
+        ],
+        "clarification_expected": true,
+        "general_component_expected": false
+      },
+      "status": "ok",
+      "delivered_text": "Could you say a little more?",
+      "execution_failed": false
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "created_at": "2026-09-17T10:34:09.667857+00:00",
+  "scope": "Offline hash/metadata verification before resumed final evaluation; no device/model calls and no source/test changes. Holdout prompt or authoring text is not displayed.",
+  "passed": false,
+  "checks_passed": 18,
+  "checks_failed": 1,
+  "checks": [
+    {
+      "check": "identical final and fresh source freeze",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "identical final and fresh test freeze",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "working frozen runtime sources",
+      "passed": true,
+      "detail": {
+        "files": 48,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "working frozen tests",
+      "passed": true,
+      "detail": {
+        "files": 104,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "final candidate archived source",
+      "passed": true,
+      "detail": {
+        "files": 48,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "final candidate archived tests",
+      "passed": true,
+      "detail": {
+        "files": 104,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "final candidate archived diff",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh cohort archived source",
+      "passed": true,
+      "detail": {
+        "files": 48,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "fresh cohort archived tests",
+      "passed": true,
+      "detail": {
+        "files": 104,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "fresh cohort archived diff",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh preregistered artifact seal",
+      "passed": true,
+      "detail": {
+        "files": 10,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "fresh corpus frozen bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "16 unique planned fresh cases",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh case labels meet analyzer contract",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh cases have nonempty text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh inference collection absent before resumption",
+      "passed": false,
+      "detail": null
+    },
+    {
+      "check": "preserved prior progress artifacts",
+      "passed": true,
+      "detail": {
+        "files": 1150,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "prior progress manifest covers1150 artifacts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "pending evidence records zero of16 attempted",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "source_files": 48,
+  "test_files": 104,
+  "fresh_cases_sha256": "c621f0b9cba7c0bd22dae169261a8694fc6c6f2c9f08f3553ac727e0ab3c22bf",
+  "prior_progress_manifest_sha256": "b4dcc8823ac3633270a1399d674dd6003f6e0a4dace68bf9b63da383f49f4101",
+  "prior_progress_artifact_count": 1150,
+  "analysis_tool_sha256": "227495cfd9f28b6a87e981ac58bcd4ecb8fa16760024ee81ab3736737c45bc05",
+  "audit_tool_sha256": "81fccb858656a22fd55af27a468e9b4e3911fe6bea41add78ea9a13c5ace080a",
+  "tools_ready_for_16": {
+    "analyzer_requires_explicit_expected_count": 16,
+    "audit_cohort_kind": "fresh_holdout",
+    "case_denominators": "All16 planned cases, including errors and missing outputs.",
+    "recognized_generation_fields": [
+      "speech",
+      "answer_parts",
+      "steps_for_user",
+      "instructions",
+      "steps"
+    ],
+    "mode_only_dependency_review_supported": true,
+    "compute_omission_keeps_no_fabricated_generation": true,
+    "completion": "Complete observations and adjudications plus clean finalization; operational guard failures remain failures."
+  }
+}

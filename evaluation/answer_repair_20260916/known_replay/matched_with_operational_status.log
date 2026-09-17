@@ -1,0 +1,85 @@
+{
+  "matched_count": 43,
+  "before": {
+    "planned": 43,
+    "raw_match": {
+      "count": 36,
+      "denominator": 43,
+      "rate": 0.8372093023255814
+    },
+    "thresholded_match": {
+      "count": 25,
+      "denominator": 43,
+      "rate": 0.5813953488372093
+    },
+    "final_match": {
+      "count": 36,
+      "denominator": 43,
+      "rate": 0.8372093023255814
+    },
+    "quality_pass": {
+      "count": 4,
+      "denominator": 43,
+      "rate": 0.09302325581395349
+    },
+    "combined_pass": {
+      "count": 4,
+      "denominator": 43,
+      "rate": 0.09302325581395349
+    },
+    "statuses": {
+      "ok": 43
+    },
+    "delivered": 43,
+    "generated_delivery": 24,
+    "wall_latency": {
+      "n": 43,
+      "scope": "All planned matched/selected observed turns, including errors and application replies.",
+      "p50_seconds": 38.207283324,
+      "p95_seconds": 81.8832925418,
+      "mean_seconds": 41.15310153302325
+    }
+  },
+  "after": {
+    "planned": 43,
+    "raw_match": {
+      "count": 36,
+      "denominator": 43,
+      "rate": 0.8372093023255814
+    },
+    "thresholded_match": {
+      "count": 24,
+      "denominator": 43,
+      "rate": 0.5581395348837209
+    },
+    "final_match": {
+      "count": 35,
+      "denominator": 43,
+      "rate": 0.813953488372093
+    },
+    "quality_pass": {
+      "count": 20,
+      "denominator": 43,
+      "rate": 0.46511627906976744
+    },
+    "combined_pass": {
+      "count": 19,
+      "denominator": 43,
+      "rate": 0.4418604651162791
+    },
+    "statuses": {
+      "ok": 42,
+      "error": 1
+    },
+    "delivered": 42,
+    "generated_delivery": 27,
+    "wall_latency": {
+      "n": 43,
+      "scope": "All planned matched/selected observed turns, including errors and application replies.",
+      "p50_seconds": 5.377323686,
+      "p95_seconds": 12.692837984899997,
+      "mean_seconds": 5.948393946418604
+    }
+  },
+  "output": "evaluation/answer_repair_20260916/known_replay/matched_with_operational_status/matched_comparison.json"
+}

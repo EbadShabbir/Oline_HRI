@@ -1,0 +1,324 @@
+[
+  {
+    "id": "repair_holdout_001",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "four_step_setup_missing",
+      "allocations_and_total_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give exactly four numbered steps that respectively position the tray, arrange the six models, write and place six numbered cards, and check the display.",
+        "pass": false
+      },
+      {
+        "component": "Retain the supplied allocations of 2, 3, 4, and 2 minutes and state the total as 11 minutes.",
+        "pass": false
+      }
+    ],
+    "reason": "The response only requests more detail, although the supplies and allocations are complete. It provides none of the four setup steps and does not retain the 2, 3, 4, and 2 minute allocations or state the 11-minute total.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_002",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "four_timed_phases_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Show four phases with intervals 0–3, 3–5, 5–11, and 11–14 minutes, or equivalent time notation.",
+        "pass": false
+      },
+      {
+        "component": "Assign the intervals respectively to reading, arranging, performing both voices, and writing notes.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic question supplies neither the required 0–3, 3–5, 5–11, and 11–14 intervals nor the corresponding reading, arranging, performing, and note-writing phases.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_003",
+    "quality_pass": false,
+    "primary_outcome": "nonresponsive",
+    "flags": [
+      "empty_delivered_answer",
+      "csv_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Output exactly four lines: shelf,boxes followed by north,6 then south,2 then west,9.",
+        "pass": false
+      },
+      {
+        "component": "Preserve the supplied labels, quantities, and order, with no surrounding prose or code fence.",
+        "pass": false
+      }
+    ],
+    "reason": "The delivered answer is empty. It contains no CSV header or inventory rows, so neither the exact four-line output nor preservation of the supplied labels, quantities, and order is achieved.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_004",
+    "quality_pass": false,
+    "primary_outcome": "nonresponsive",
+    "flags": [
+      "empty_delivered_answer",
+      "numbered_labeled_instructions_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give three numbered lines with the text labels Start:, Middle:, and Finish: in order.",
+        "pass": false
+      },
+      {
+        "component": "Describe a workable sequence of starting a fold, continuing alternating folds, and gathering or pinching one end to open a fan.",
+        "pass": false
+      }
+    ],
+    "reason": "The delivered answer is empty. It provides neither the three numbered Start, Middle, and Finish lines nor a workable folding and gathering sequence.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_005",
+    "quality_pass": false,
+    "primary_outcome": "nonresponsive",
+    "flags": [
+      "empty_delivered_answer",
+      "numeric_answer_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Return only 31, allowing surrounding whitespace.",
+        "pass": false
+      }
+    ],
+    "reason": "The delivered answer is empty rather than the required whole number 31.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_006",
+    "quality_pass": false,
+    "primary_outcome": "nonresponsive",
+    "flags": [
+      "empty_delivered_answer",
+      "announcement_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide an announcement of no more than 16 whitespace-separated words.",
+        "pass": false
+      },
+      {
+        "component": "Preserve the rehearsal moving from Tuesday to Thursday, at noon, in Studio 3.",
+        "pass": false
+      }
+    ],
+    "reason": "The delivered answer is empty, so no announcement within the word limit is provided and none of the required rehearsal, weekday, time, or room details is preserved in an answer.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_007",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "two_sentence_explanation_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Use two short sentences mentioning Earth and the Sun.",
+        "pass": false
+      },
+      {
+        "component": "Explain that Earth's rotation brings a place toward the sunlit side for day and away from sunlight for night.",
+        "pass": false
+      }
+    ],
+    "reason": "The response asks for more detail rather than giving two sentences mentioning Earth and the Sun and explaining rotation toward and away from sunlight.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_008",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "two_line_story_missing",
+      "required_final_word_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give exactly two nonempty story lines about a kite that gets away.",
+        "pass": false
+      },
+      {
+        "component": "Make home the final word of the second line; ordinary final punctuation is acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer gives only a generic question, with no two-line runaway-kite story and no second line ending in home.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_009",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "garden_names_missing",
+      "generic_fallback_not_used"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide two plausible herb-garden names on separate lines.",
+        "pass": false
+      },
+      {
+        "component": "Use the allowed generic creative fallback without needing past naming preferences.",
+        "pass": false
+      }
+    ],
+    "reason": "The answer substitutes a generic request for more detail for both garden names and does not use the expressly allowed creative fallback.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_010",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "activity_missing",
+      "two_sentence_start_instructions_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Suggest one general activity feasible within ten minutes using the sketchpad and pencil.",
+        "pass": false
+      },
+      {
+        "component": "Use two sentences to identify the activity and explain how to start.",
+        "pass": false
+      }
+    ],
+    "reason": "The response does not propose any activity or explain how to begin in two sentences, despite the supplied materials and permission to choose a general activity.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_011",
+    "quality_pass": false,
+    "primary_outcome": "nonresponsive",
+    "flags": [
+      "empty_delivered_answer",
+      "unavailability_not_acknowledged"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Clearly state that the previously chosen pattern is unavailable from the supplied context or memory; a relevant follow-up request is optional.",
+        "pass": false
+      }
+    ],
+    "reason": "The delivered answer is empty and therefore does not state that the previously chosen cushion pattern is unavailable.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_012",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "unavailability_not_acknowledged",
+      "general_definition_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's previously stated wall motto is unavailable.",
+        "pass": false
+      },
+      {
+        "component": "Also give a one-sentence general definition of a motto as a brief phrase expressing a guiding belief, aim, or principle.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic request neither acknowledges that the personal motto is unavailable nor supplies the independent one-sentence definition of a motto.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_013",
+    "quality_pass": false,
+    "primary_outcome": "clarification_only",
+    "flags": [
+      "unnecessary_generic_question",
+      "unavailability_not_acknowledged",
+      "proofreading_checklist_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "State that the previously identified first reader is unavailable.",
+        "pass": false
+      },
+      {
+        "component": "Provide three distinct, useful proofreading checks, such as spelling, punctuation, and sentence clarity.",
+        "pass": false
+      }
+    ],
+    "reason": "The generic request neither states that the selected first reader is unavailable nor provides any of the three required useful proofreading checks.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_014",
+    "quality_pass": false,
+    "primary_outcome": "nonresponsive",
+    "flags": [
+      "empty_delivered_answer",
+      "required_label_clarification_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask which of the two labels should be rewritten; asking whether both are intended is also acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "The delivered answer is empty and does not ask which label, or whether both labels, should be rewritten.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_015",
+    "quality_pass": false,
+    "primary_outcome": "nonresponsive",
+    "flags": [
+      "empty_delivered_answer",
+      "required_pronoun_clarification_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask whether they refers to Rafi or Morgan, or otherwise ask who is meant to bring the tray.",
+        "pass": false
+      }
+    ],
+    "reason": "The delivered answer is empty and does not ask whether Rafi or Morgan is meant to bring the tray.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_016",
+    "quality_pass": false,
+    "primary_outcome": "nonresponsive",
+    "flags": [
+      "empty_delivered_answer",
+      "required_unit_clarification_missing"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask which starting and target units the user wants; a single concise question can request both.",
+        "pass": false
+      }
+    ],
+    "reason": "The delivered answer is empty and does not ask for the starting and target units needed for the conversion.",
+    "useful_general_help": null
+  }
+]

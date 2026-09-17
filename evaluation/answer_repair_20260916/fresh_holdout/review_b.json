@@ -1,0 +1,332 @@
+[
+  {
+    "id": "repair_holdout_001",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_numbered_setup_plan",
+      "missing_time_allocation",
+      "missing_total_time"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give exactly four numbered steps that respectively position the tray, arrange the six models, write and place six numbered cards, and check the display.",
+        "pass": false
+      },
+      {
+        "component": "Retain the supplied allocations of 2, 3, 4, and 2 minutes and state the total as 11 minutes.",
+        "pass": false
+      }
+    ],
+    "reason": "The prompt supplies all four actions, allocations, materials, and the eleven-minute total. The generic clarification question delivers neither the numbered setup plan nor its timings.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_002",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_phase_intervals",
+      "missing_rehearsal_activities"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Show four phases with intervals 0–3, 3–5, 5–11, and 11–14 minutes, or equivalent time notation.",
+        "pass": false
+      },
+      {
+        "component": "Assign the intervals respectively to reading, arranging, performing both voices, and writing notes.",
+        "pass": false
+      }
+    ],
+    "reason": "The four supplied phases and durations determine the intervals directly, but the response asks for more detail instead of providing 0–3, 3–5, 5–11, and 11–14 with their activities.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_003",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_failed",
+      "absent_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Output exactly four lines: shelf,boxes followed by north,6 then south,2 then west,9.",
+        "pass": false
+      },
+      {
+        "component": "Preserve the supplied labels, quantities, and order, with no surrounding prose or code fence.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and delivered no text, so none of the required answer components was supplied.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_004",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_failed",
+      "absent_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give three numbered lines with the text labels Start:, Middle:, and Finish: in order.",
+        "pass": false
+      },
+      {
+        "component": "Describe a workable sequence of starting a fold, continuing alternating folds, and gathering or pinching one end to open a fan.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and delivered no text, so none of the required answer components was supplied.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_005",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_failed",
+      "absent_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Return only 31, allowing surrounding whitespace.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and delivered no text, so none of the required answer components was supplied.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_006",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_failed",
+      "absent_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide an announcement of no more than 16 whitespace-separated words.",
+        "pass": false
+      },
+      {
+        "component": "Preserve the rehearsal moving from Tuesday to Thursday, at noon, in Studio 3.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and delivered no text, so none of the required answer components was supplied.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_007",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_general_explanation",
+      "sentence_count_violation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Use two short sentences mentioning Earth and the Sun.",
+        "pass": false
+      },
+      {
+        "component": "Explain that Earth's rotation brings a place toward the sunlit side for day and away from sunlight for night.",
+        "pass": false
+      }
+    ],
+    "reason": "The general day-and-night question is fully specified. The generic clarification supplies neither the two-sentence format nor the explanation of Earth rotating into and away from sunlight.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_008",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_story",
+      "line_count_violation",
+      "missing_required_final_word"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Give exactly two nonempty story lines about a kite that gets away.",
+        "pass": false
+      },
+      {
+        "component": "Make home the final word of the second line; ordinary final punctuation is acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "The creative task needs no additional personal information. The response supplies no kite story, no two-line structure, and no final word home.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_009",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_garden_names",
+      "missing_authorized_fallback",
+      "output_format_violation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Provide two plausible herb-garden names on separate lines.",
+        "pass": false
+      },
+      {
+        "component": "Use the allowed generic creative fallback without needing past naming preferences.",
+        "pass": false
+      }
+    ],
+    "reason": "A general creative fallback is explicitly permitted, but the response replaces the requested two herb-garden names on separate lines with a clarification question.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_010",
+    "quality_pass": false,
+    "primary_outcome": "inappropriate_clarification",
+    "flags": [
+      "unnecessary_clarification",
+      "missing_activity",
+      "missing_starting_instructions",
+      "sentence_count_violation"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Suggest one general activity feasible within ten minutes using the sketchpad and pencil.",
+        "pass": false
+      },
+      {
+        "component": "Use two sentences to identify the activity and explain how to start.",
+        "pass": false
+      }
+    ],
+    "reason": "The activity can be proposed from the supplied sketchpad, pencil, and time limit. The generic question supplies neither an activity nor the required two-sentence explanation of how to begin.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_011",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_failed",
+      "absent_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Clearly state that the previously chosen pattern is unavailable from the supplied context or memory; a relevant follow-up request is optional.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and delivered no text, so none of the required answer components was supplied.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_012",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_unavailable_recall_acknowledgment",
+      "untargeted_missing_fact_question",
+      "missing_general_component",
+      "missing_motto_definition"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Acknowledge that the user's previously stated wall motto is unavailable.",
+        "pass": false
+      },
+      {
+        "component": "Also give a one-sentence general definition of a motto as a brief phrase expressing a guiding belief, aim, or principle.",
+        "pass": false
+      }
+    ],
+    "reason": "The response neither acknowledges that the recalled wall motto is unavailable nor gives the independent one-sentence definition of a motto. A generic request for more detail does not fulfill either component.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_013",
+    "quality_pass": false,
+    "primary_outcome": "incomplete_deliverable",
+    "flags": [
+      "missing_unavailable_recall_acknowledgment",
+      "untargeted_missing_fact_question",
+      "missing_general_component",
+      "missing_proofreading_checklist"
+    ],
+    "required_components_pass": [
+      {
+        "component": "State that the previously identified first reader is unavailable.",
+        "pass": false
+      },
+      {
+        "component": "Provide three distinct, useful proofreading checks, such as spelling, punctuation, and sentence clarity.",
+        "pass": false
+      }
+    ],
+    "reason": "The response neither states that the chosen first reader is unavailable nor supplies any of the three independently answerable proofreading checks.",
+    "useful_general_help": false
+  },
+  {
+    "id": "repair_holdout_014",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_failed",
+      "absent_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask which of the two labels should be rewritten; asking whether both are intended is also acceptable.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and delivered no text, so none of the required answer components was supplied.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_015",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_failed",
+      "absent_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask whether they refers to Rafi or Morgan, or otherwise ask who is meant to bring the tray.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and delivered no text, so none of the required answer components was supplied.",
+    "useful_general_help": null
+  },
+  {
+    "id": "repair_holdout_016",
+    "quality_pass": false,
+    "primary_outcome": "execution_error",
+    "flags": [
+      "execution_failed",
+      "absent_output"
+    ],
+    "required_components_pass": [
+      {
+        "component": "Ask which starting and target units the user wants; a single concise question can request both.",
+        "pass": false
+      }
+    ],
+    "reason": "The recorded execution failed and delivered no text, so none of the required answer components was supplied.",
+    "useful_general_help": null
+  }
+]

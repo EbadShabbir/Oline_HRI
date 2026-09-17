@@ -1,0 +1,92 @@
+{
+  "created_at": "2026-09-17T10:44:08.536794+00:00",
+  "scope": "Offline independent preflight; no device/model calls or source/test/seal changes. Collection absence is intentionally not an integrity condition because authorized launch may race this check.",
+  "checks": [
+    {
+      "check": "working runtime",
+      "passed": true,
+      "detail": {
+        "verified_count": 48,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "archived runtime",
+      "passed": true,
+      "detail": {
+        "verified_count": 48,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "working tests",
+      "passed": true,
+      "detail": {
+        "verified_count": 104,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "archived tests",
+      "passed": true,
+      "detail": {
+        "verified_count": 104,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "preregistered artifacts",
+      "passed": true,
+      "detail": {
+        "verified_count": 8,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "runtime map equals original fresh and final candidate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "test map equals original fresh and final candidate",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "case bytes equal original fresh and sealed hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "archived diff",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "operational replay explicitly not fresh evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original first-attempt operational failures retained",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "offline validation16 passed without inference",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "checks_passed": 12,
+  "checks_failed": 0,
+  "passed": true,
+  "collection_present_at_check": false,
+  "artifact_sha256": {
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/candidate_freeze.json": "dadaa08f140ae6295dfb391affa56db2c7e174d366497f55346b84062612e96a",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/evaluation_freeze.json": "333ae40a6ef6ee636fb54f6e04b169f1e011cd9d71b482343c01657d0d522546",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/cases.json": "c621f0b9cba7c0bd22dae169261a8694fc6c6f2c9f08f3553ac727e0ab3c22bf",
+    "evaluation/answer_repair_20260916/fresh_holdout/independent_audit.json": "dac015aa8943da6e76fc62495acca948628b378eea3abd1132777e50e1b2f4f9",
+    "evaluation/answer_repair_20260916/audit_results.py": "81fccb858656a22fd55af27a468e9b4e3911fe6bea41add78ea9a13c5ace080a"
+  }
+}
