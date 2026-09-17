@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-09-17T11:56:54.551449+00:00",
+  "method": "Standard-library literal AST, hash and raw prompt/evidence verification; no production execution, analysis imports or network access.",
+  "auditor_sha256": "036c9951a70ae1cef3d0e6134eee006983e13918f2a76707661a355f150add69",
+  "checks": [
+    {
+      "check": "reference archive matches frozen and collected source",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "public notes are literal archived constructors, parsed without execution",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all actual personal-memory evidence fields remain empty",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "reference IDs name topic-matched static public notes actually provided to the generator",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "only sealed-auditor failure is its conflation of static references with personal-memory evidence",
+      "passed": true,
+      "detail": [
+        {
+          "check": "cohort: no fabricated memory evidence IDs",
+          "passed": false,
+          "detail": [
+            {
+              "id": "repair_holdout_007",
+              "field": "reference_ids"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "public_reference_uses": [
+    {
+      "id": "repair_holdout_007",
+      "reference_id": "earth_day_night_v1",
+      "sources": [
+        "https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question31.html"
+      ],
+      "reviewed_explicit": "2026-09-17",
+      "static_text_sha256": "9abea5a7e39d8d8fa0f50057cf5dc9ffc16231c8e75da685873f5b704b056bfc"
+    }
+  ],
+  "checks_passed": 5,
+  "checks_failed": 0,
+  "passed": true,
+  "source_sha256": {
+    "evaluation/quality_repair_20260917/development_v1/candidate_source/src/oline_hri/answer_guidance.py": "1cba22e25625a86aab41a33b49a59fe8d342ad3d18339da3c91257d31058747e"
+  },
+  "input_sha256": {
+    "evaluation/quality_repair_20260917/development_v1/candidate_freeze.json": "7218afcca37711ece301385f7e7d8d764b87751b5051822987ba946381f0238e",
+    "evaluation/quality_repair_20260917/development_v1/collection/run/observations.jsonl": "70607a3fbfe4841044c407fbb279c064af2831d32da55b080660f295d185d315",
+    "evaluation/quality_repair_20260917/development_v1/collection/integrity_before.json": "c849ca47cc4987eaf06e8928a63740972f516317ca71530372147635989a713a",
+    "evaluation/quality_repair_20260917/development_v1/collection/integrity_after.json": "c849ca47cc4987eaf06e8928a63740972f516317ca71530372147635989a713a"
+  },
+  "interpretation": "Static public reference IDs are separate from personal-memory evidence. Original audit output is preserved; this supplement corrects that distinction only. It does not validate the reference website, model answer correctness or strict quality, and does not change judgments."
+}

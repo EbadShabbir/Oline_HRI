@@ -1,0 +1,70 @@
+{
+  "schema_version": "publication_validation_v2",
+  "created_at": "2026-09-17T12:18:55.696766+00:00",
+  "publication_action": "Local commit preparation only. No push or network retry authorized by this record.",
+  "baseline_commit": "e3985480cc361b42b469c395f2d9139fcc9ca86a",
+  "proposed_scope": [
+    "Current intended source and tests",
+    "README.md and results.md repair-status updates",
+    "evaluation/quality_repair_20260917 except listed exclusions"
+  ],
+  "new_evaluation_files_at_scan_excluding_this_report": 605,
+  "scanned_file_count": 628,
+  "secret_scan": {
+    "unexpected_flags": [],
+    "already_tracked_dummy_credential_fixtures": 3,
+    "method": "Private-key, GitHub/OpenAI/AWS credential, credential-URL and long secret-assignment patterns; no sensitive values retained."
+  },
+  "empty_database_checks": [
+    {
+      "path": "evaluation/quality_repair_20260917/development_v1/collection/run/memory.sqlite3",
+      "counts": {
+        "memory_item": 0,
+        "memory_audit": 0
+      }
+    },
+    {
+      "path": "evaluation/quality_repair_20260917/development_v2/collection/run/memory.sqlite3",
+      "counts": {
+        "memory_item": 0,
+        "memory_audit": 0
+      }
+    }
+  ],
+  "symlinks": [],
+  "candidate_archives": [
+    {
+      "cohort": "development_v1",
+      "runtime_files": 49,
+      "test_files": 109
+    },
+    {
+      "cohort": "development_v2",
+      "runtime_files": 51,
+      "test_files": 112
+    },
+    {
+      "cohort": "development_v3",
+      "runtime_files": 51,
+      "test_files": 112
+    }
+  ],
+  "archive_hash_failures": [],
+  "latest_candidate_working_source_test_mismatches": [],
+  "baseline_document_snapshots_match_committed_bytes": {
+    "README.md": true,
+    "results.md": true
+  },
+  "prior_evaluation_trees_changed": [],
+  "production_tests_docs_diff_check_exit": 0,
+  "excluded": [
+    "evaluation/quality_repair_20260917/holdout_authoring (unopened, held out for later candidate validation)",
+    "All bytecode/cache files and runtime lock files",
+    "The three pre-existing evaluation lock files outside this cycle"
+  ],
+  "limitations": [
+    "Latest candidate has offline checks only; live validation and independently reviewed new holdout remain pending.",
+    "Prior automatic approval review rejected publication of mixed source/tests and evaluation payload; no push is attempted in this preparation.",
+    "Current status/file manifest is prepared separately by the audit agent after this report; staged bytes will be checked before local commit."
+  ]
+}

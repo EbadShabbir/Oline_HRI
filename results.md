@@ -1619,3 +1619,52 @@ claim. Independent quality remains false. Operational completion is not a
 release-quality pass. All attempts, judgments, exact source, audit evidence and
 remaining failures are in the
 [recovery report](evaluation/answer_repair_20260916/fresh_recovery_v1/README.md).
+
+
+## 2026-09-17: answer-quality repairs improve known cases; latest validation pending
+
+The new [quality-repair cycle](evaluation/quality_repair_20260917/README.md)
+retains the previous recovery's 4/16 strict-quality baseline and reuses those
+sixteen prompts only as known development cases. Independent authors prepared
+another twenty cases; their contents remain unopened until final candidate
+freezing.
+
+The first complete repaired replay passed **16/16 routing and 12/16 full-quality
+answers**, compared with the prior recovery's 12/16 routes and 4/16 answers.
+Both independent assistant reviewers agreed on every scored Boolean. Useful
+general help passed 9/12 applicable cases, with no unsupported personal claims.
+Median/p95 complete text-turn latency was **3.804/14.394 seconds**. All sixteen
+cases completed with zero errors; peak sampled swap was 685 MiB and temperature
+57.406°C, with no guard violation and clean model unloading. These are historical
+known-case comparisons, not a controlled causal speedup or unseen generalization.
+The original measurement audit remains 260/261: it misclassified a static public
+reference identifier as personal evidence. A separate source-and-prompt provenance
+supplement passes 5/5, without changing that failed check or the incorrect answer.
+
+A second candidate added checked arithmetic, supplied-time checks and further
+factual guidance. The RAM floor interrupted it after eleven completed cases and
+one error. Four cases were unattempted. On the planned sixteen-case denominator,
+routing passed **11/16** and strict quality **9/16**; among twelve recorded cases,
+both reviewers passed nine. Audit 260/263 preserves the operational and coverage
+failures. Median/p95 latency of the twelve observations was 5.403/20.754 seconds;
+missing-case latency was not fabricated. All prior raw outputs and failed
+attempts remain available in the separate cohort reports.
+
+The newest source repairs a false rejection of the valid wording “totaling
+11 minutes” and checks the illuminated/dark orientations in the reviewed daily
+cycle explanation. **1,489 tests pass, with 26 live-only skips (1,515 total)**, and
+source/test hashes stayed unchanged during the suite. This latest candidate
+has not completed its device replay; no new live-quality score is claimed.
+
+The existing six zram swap devices were cycled through the previously authorized
+normal administrator mechanism and restored unchanged; the independent cleanup
+audit passed 38/38. RAM remained below the unchanged 2 GiB startup gate. The
+firmware updater was verified idle, but the normal administrator prompt for a
+temporary pause timed out before the third cohort started. The service remained
+running. The next device run, independent twenty-case evaluation and its reviews
+therefore remain pending. Voice/transcription, end-to-end audio latency and live
+populated-memory testing also remain outside this text evaluation.
+
+Repository publication is separately pending explicit approval for the complete
+source/test/evaluation payload: automatic approval review rejected the prepared
+GitHub push before execution. No successful push is claimed.

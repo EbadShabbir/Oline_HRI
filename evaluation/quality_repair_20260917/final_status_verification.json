@@ -1,0 +1,254 @@
+{
+  "created_at": "2026-09-17T12:21:20.589632+00:00",
+  "scope": "Read-only final status, archive-preservation and manifest consistency audit.\n\nNever traverses or reads the new holdout_authoring directory. Historical seals\nuse existing immutable document snapshots when repository index bytes changed.\nNo production imports, inference, network, process or administrator operations.\n",
+  "checks": [
+    {
+      "check": "latest_candidate_clean_device_run remains explicitly false",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh_holdout_completed remains explicitly false",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "github_pushed remains explicitly false",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "requested_work_complete remains explicitly false",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "best measured known cohort is complete v1 with 12/16 quality and 16/16 routes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "v2 preserves 12 observed, one error, four missing and 9/16 quality",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "latest candidate has no collection or live score",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no final holdout freeze, opening record or dispatched cohort exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "offline totals distinguish 1515 run, 26 skipped and 1489 passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "latest tested production/test bytes remain unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "updater authorization timed out before evaluation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final saved updater state is active/running with no pkexec process",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "captured final RAM remains below unchanged admission floor",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original GitHub push was rejected before execution",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "later updater helper has 12 offline checks and no claimed live result",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all explicit immutable document snapshots match recorded hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "historical seal preserved: evaluation/fresh_routing_20260916/completion_manifest.json",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "historical seal preserved: evaluation/answer_repair_20260916/progress_manifest.json",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "historical seal preserved: evaluation/answer_repair_20260916/fresh_attempt_manifest.json",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "historical seal preserved: evaluation/answer_repair_20260916/completion_manifest.json",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "development_v1 preregistered artifacts unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "development_v1 exact runtime and test archive preserved",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "development_v1 all collected artifacts preserved",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "development_v2 preregistered artifacts unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "development_v2 exact runtime and test archive preserved",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "development_v2 all collected artifacts preserved",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "development_v3 preregistered artifacts unchanged",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "development_v3 exact runtime and test archive preserved",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "current-cycle manifest hashes and declared artifact count agree",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "check": "manifest covers every eligible current-cycle artifact without opening holdout",
+      "passed": true,
+      "detail": {
+        "missing": [],
+        "extra": []
+      }
+    },
+    {
+      "check": "manifest excludes its own output, verification result and unopened holdout",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "final mutable repository documents match manifest snapshot",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "checks_passed": 32,
+  "checks_failed": 0,
+  "passed": true,
+  "current_cycle_manifest_sha256": "c7256452b1b845c6940c6881b6e4aa974cb263f6dd6e52cbf619f1af11691f10",
+  "completion_status_sha256": "c515cfc149dfdb9a312d0a29ecb774b64b49b067aa7c37c5f4a7dd8ea59d2133",
+  "auditor_sha256": "0e658f7906f0bed59b749aadb6369ff047733a37037a8d66654669ebe8dc6bcc",
+  "historical_manifest_preservation": [
+    {
+      "manifest": "evaluation/fresh_routing_20260916/completion_manifest.json",
+      "sha256": "945b90433790134165a916378eed230d7b6ffcfcc4983055e4222a6d1a251a3f",
+      "artifact_count": 164,
+      "mapped_documents": [
+        {
+          "original": "results.md",
+          "snapshot": "evaluation/answer_repair_20260916/baseline_results_snapshot.md"
+        }
+      ]
+    },
+    {
+      "manifest": "evaluation/answer_repair_20260916/progress_manifest.json",
+      "sha256": "b4dcc8823ac3633270a1399d674dd6003f6e0a4dace68bf9b63da383f49f4101",
+      "artifact_count": 1150,
+      "mapped_documents": [
+        {
+          "original": "evaluation/answer_repair_20260916/README.md",
+          "snapshot": "evaluation/answer_repair_20260916/pre_completion_snapshot/files/evaluation/answer_repair_20260916/README.md"
+        },
+        {
+          "original": "evaluation/answer_repair_20260916/fresh_holdout/README.md",
+          "snapshot": "evaluation/answer_repair_20260916/pre_completion_snapshot/files/evaluation/answer_repair_20260916/fresh_holdout/README.md"
+        },
+        {
+          "original": "README.md",
+          "snapshot": "evaluation/answer_repair_20260916/pre_completion_snapshot/files/README.md"
+        },
+        {
+          "original": "results.md",
+          "snapshot": "evaluation/answer_repair_20260916/pre_completion_snapshot/files/results.md"
+        }
+      ]
+    },
+    {
+      "manifest": "evaluation/answer_repair_20260916/fresh_attempt_manifest.json",
+      "sha256": "ec5a80ad3922af5a15298d260b7959b7b3303c3fe2e2186a15b2c55098ae6477",
+      "artifact_count": 1354,
+      "mapped_documents": [
+        {
+          "original": "evaluation/answer_repair_20260916/README.md",
+          "snapshot": "evaluation/answer_repair_20260916/pre_recovery_completion_snapshot/files/evaluation/answer_repair_20260916/README.md"
+        },
+        {
+          "original": "evaluation/answer_repair_20260916/fresh_holdout/README.md",
+          "snapshot": "evaluation/answer_repair_20260916/pre_recovery_completion_snapshot/files/evaluation/answer_repair_20260916/fresh_holdout/README.md"
+        },
+        {
+          "original": "evaluation/answer_repair_20260916/fresh_recovery_v1/README.md",
+          "snapshot": "evaluation/answer_repair_20260916/pre_recovery_completion_snapshot/files/evaluation/answer_repair_20260916/fresh_recovery_v1/README.md"
+        },
+        {
+          "original": "README.md",
+          "snapshot": "evaluation/answer_repair_20260916/pre_recovery_completion_snapshot/files/README.md"
+        },
+        {
+          "original": "results.md",
+          "snapshot": "evaluation/answer_repair_20260916/pre_recovery_completion_snapshot/files/results.md"
+        }
+      ]
+    },
+    {
+      "manifest": "evaluation/answer_repair_20260916/completion_manifest.json",
+      "sha256": "975a67b22c96927fec49cdea1ddee541274047d4c5ac8c447f6b4b1dec01dc70",
+      "artifact_count": 1406,
+      "mapped_documents": [
+        {
+          "original": "README.md",
+          "snapshot": "evaluation/quality_repair_20260917/baseline_snapshot/README.md"
+        },
+        {
+          "original": "results.md",
+          "snapshot": "evaluation/quality_repair_20260917/baseline_snapshot/results.md"
+        }
+      ]
+    }
+  ],
+  "interpretation": "Passing status/integrity checks verify an honest incomplete state. They do not turn failed device attempts, unmeasured latest code, unopened holdout or unexecuted GitHub publication into completed work."
+}

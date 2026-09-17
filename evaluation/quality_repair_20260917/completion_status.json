@@ -1,0 +1,156 @@
+{
+  "schema_version": "quality_repair_completion_status_v1",
+  "created_at": "2026-09-17T12:21:17.490147+00:00",
+  "baseline_git_commit": "e3985480cc361b42b469c395f2d9139fcc9ca86a",
+  "latest_candidate_clean_device_run": false,
+  "fresh_holdout_completed": false,
+  "github_pushed": false,
+  "requested_work_complete": false,
+  "release_quality_pass_claimed": false,
+  "best_measured_known_case_result": {
+    "cohort": "development_v1",
+    "planned": 16,
+    "recorded": 16,
+    "final_route_pass": 16,
+    "strict_quality_pass": 12,
+    "combined_pass": 12,
+    "useful_general_help": {
+      "count": 9,
+      "denominator": 12
+    },
+    "execution_errors": 0,
+    "operational_success": true,
+    "two_independent_reviews_complete": true,
+    "turn_wall_median_seconds": 3.8040154939999997,
+    "turn_wall_p95_seconds": 14.39385737625,
+    "audit": {
+      "checks_passed": 260,
+      "checks_failed": 1,
+      "public_reference_provenance_supplement_passed": 5,
+      "original_failure_preserved": true
+    },
+    "interpretation": "Previously observed development cases; this result does not measure the latest source or unseen generalization."
+  },
+  "development_v2": {
+    "planned": 16,
+    "recorded": 12,
+    "execution_errors": 1,
+    "unattempted": 4,
+    "final_route_pass": 11,
+    "strict_quality_pass": 9,
+    "combined_pass": 9,
+    "quality_denominator": 16,
+    "observed_reviewer_quality": {
+      "count": 9,
+      "denominator": 12
+    },
+    "useful_general_help_planned": {
+      "count": 9,
+      "denominator": 12
+    },
+    "operational_success": false,
+    "evaluation_complete": false,
+    "audit": {
+      "checks_passed": 260,
+      "checks_failed": 3
+    },
+    "failure": "Available memory crossed the unchanged 768 MiB runtime floor.",
+    "unattempted_cases_have_no_invented_judgments_or_latency": true,
+    "cleanup_succeeded": true
+  },
+  "latest_candidate": {
+    "cohort": "development_v3",
+    "candidate_freeze": "development_v3/candidate_freeze.json",
+    "evaluation_freeze": "development_v3/evaluation_freeze.json",
+    "planned_cases": 16,
+    "recorded_cases": 0,
+    "inference_started": false,
+    "live_quality_score": null,
+    "device_run_completed": false,
+    "changes_since_measured_v2": [
+      "Accept valid supplied-plan total spellings including totaling/totalling/totals.",
+      "Require the reviewed daily-cycle explanation to connect axial rotation with illuminated and dark orientations."
+    ],
+    "interpretation": "Offline-tested newest source is frozen for known replay but remains unmeasured on the device."
+  },
+  "latest_offline_tests": {
+    "status_path": "full_offline_checks_v4.status.json",
+    "log_path": "full_offline_checks_v4.log",
+    "tests_run": 1515,
+    "skipped": 26,
+    "passed": 1489,
+    "failures": 0,
+    "errors": 0,
+    "test_execution_seconds": 109.219,
+    "launcher_elapsed_seconds": 110.22916478000116,
+    "live_opt_ins_disabled": true,
+    "source_and_tests_unchanged_during_run": true
+  },
+  "fresh_holdout": {
+    "planned": 20,
+    "recorded": 0,
+    "first_semantic_opening_by_implementation_or_evaluation_agents": false,
+    "final_source_freeze_completed": false,
+    "contents_included_in_this_manifest": false,
+    "state": "Independently authored; remains unopened pending final candidate freeze and device readiness."
+  },
+  "device_status": {
+    "saved_final_status": "updater_pause_v1_final_status.json",
+    "captured_at_utc": "2026-09-17T12:16:21.899969+00:00",
+    "firmware_updater_active_state": "active",
+    "firmware_updater_substate": "running",
+    "remaining_pkexec_processes": [],
+    "captured_available_memory_kib": 1980024,
+    "required_start_available_memory_kib": 2097152,
+    "captured_swap_used_kib": 0,
+    "administrator_pause_attempt": "Timed out through normal pkexec authorization before evaluation; service remains active.",
+    "guard_limits_relaxed": false,
+    "cleanup": {
+      "audit": "device_cleanup_v1/independent_cleanup_audit.json",
+      "checks_passed": 38,
+      "checks_failed": 0,
+      "existing_zram_devices_restored": 6,
+      "size_kib_each": 650264,
+      "priority_each": 5,
+      "total_capacity_kib": 3901584,
+      "persistent_swap_configuration_changed": false
+    }
+  },
+  "updater_helper_v2": {
+    "source": "run_with_idle_updater_paused_v2.py",
+    "offline_log": "updater_pause_v2_offline_checks.log",
+    "offline_tests_passed": 12,
+    "live_validated": false,
+    "interpretation": "Separate restoration and timeout handling helper checks; no successful administrator/device run is claimed."
+  },
+  "publication": {
+    "repository": "https://github.com/EbadShabbir/Oline_HRI.git",
+    "branch": "main",
+    "prior_local_commit": "e3985480cc361b42b469c395f2d9139fcc9ca86a",
+    "push_executed": false,
+    "push_succeeded": false,
+    "automatic_review_rejections_before_execution": 2,
+    "blocker": "Explicit approval is required for the complete source/tests/evaluation payload after automatic approval review rejected the push.",
+    "validation_records": [
+      "publication/publication_validation.json",
+      "publication/publication_validation_v2.json"
+    ]
+  },
+  "remaining_authorized_work": [
+    "Complete a clean known-case device run of the latest candidate under unchanged limits.",
+    "Freeze the final candidate before opening the independent twenty cases, then evaluate, independently review and audit them.",
+    "Publish the prepared source/tests/results payload after the required explicit approval."
+  ],
+  "broader_validation_not_performed": [
+    "Voice and transcription",
+    "End-to-end audio latency",
+    "Live populated-memory behavior"
+  ],
+  "preservation": {
+    "baseline_document_mapping": "baseline_snapshot/manifest.json",
+    "manifest": "artifact_manifest.json",
+    "independent_status_verification": "final_status_verification.json",
+    "historical_failed_attempts_retained": true
+  },
+  "interpretation": "This is an explicit incomplete status snapshot. Earlier clean known-case results and passing offline checks do not complete latest live validation, unseen evaluation or GitHub publication."
+}

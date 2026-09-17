@@ -1,0 +1,117 @@
+{
+  "runner_exit_code": 0,
+  "failure": null,
+  "cleanup_errors": [],
+  "snapshot": {
+    "boot_id": "c0e155e9-d16b-4054-be35-885c29c814e7",
+    "captured_at": "2026-09-17T11:52:17.154266+00:00",
+    "fan_pwm": 94,
+    "memory": {
+      "mem_total_kib": 7803200,
+      "mem_available_kib": 2496124,
+      "swap_total_kib": 3901584,
+      "swap_free_kib": 3218832,
+      "swap_used_kib": 682752
+    },
+    "power_mode": "NV Power Mode: 15W\n0",
+    "reset_reason": "MAINSWRST",
+    "resident_models": [],
+    "temperatures_c": {
+      "cpu-thermal": 56.031,
+      "gpu-thermal": 56.0,
+      "soc0-thermal": 54.562,
+      "soc1-thermal": 54.531,
+      "soc2-thermal": 55.093,
+      "tj-thermal": 56.281
+    },
+    "thermal_trip_events": {
+      "cpu": 0,
+      "gpu": 0,
+      "cv0": 0,
+      "cv1": 0,
+      "cv2": 0,
+      "soc0": 0,
+      "soc1": 0,
+      "soc2": 0
+    }
+  },
+  "telemetry": {
+    "record_type": "jetson_telemetry_summary",
+    "sample_count": 162,
+    "schema_version": 1,
+    "metrics": {
+      "cpu_mean_percent": {
+        "max": 99.66666666666667,
+        "p50": 49.166666666666664,
+        "p95": 63.833333333333336
+      },
+      "gr3d_percent": {
+        "max": 99,
+        "p50": 46,
+        "p95": 99
+      },
+      "ram_used_mb": {
+        "max": 6544,
+        "p50": 6273,
+        "p95": 6522
+      },
+      "swap_used_mb": {
+        "max": 685,
+        "p50": 527,
+        "p95": 668
+      },
+      "vdd_in_average_mw": {
+        "max": 10914,
+        "p50": 8711,
+        "p95": 10754
+      },
+      "vdd_in_mw": {
+        "max": 14874,
+        "p50": 12727,
+        "p95": 14849
+      }
+    },
+    "temperatures_c": {
+      "cpu": {
+        "sample_count": 162,
+        "max": 56.312,
+        "p50": 52.562,
+        "p95": 56.093
+      },
+      "gpu": {
+        "sample_count": 162,
+        "max": 57.406,
+        "p50": 54.125,
+        "p95": 57.0
+      },
+      "soc0": {
+        "sample_count": 162,
+        "max": 54.906,
+        "p50": 51.343,
+        "p95": 54.312
+      },
+      "soc1": {
+        "sample_count": 162,
+        "max": 54.406,
+        "p50": 51.281,
+        "p95": 54.062
+      },
+      "soc2": {
+        "sample_count": 162,
+        "max": 55.406,
+        "p50": 52.125,
+        "p95": 55.156
+      },
+      "tj": {
+        "sample_count": 162,
+        "max": 57.406,
+        "p50": 54.125,
+        "p95": 57.0
+      }
+    },
+    "duration_seconds": 81.579725755,
+    "vdd_in_energy_joules": 891.623597917001
+  },
+  "guard_violation": null,
+  "complete": true
+}

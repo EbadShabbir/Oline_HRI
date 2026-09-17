@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-09-17T12:08:59.918452+00:00",
+  "scope": "Read-only device headroom investigation; no service/process mutation, update or inference performed.",
+  "host_snapshot": {
+    "mem_available_kib": 1909376,
+    "swap_total_kib": 3901584,
+    "swap_free_kib": 3901584,
+    "required_start_mem_available_kib": 2097152,
+    "headroom_shortfall_kib": 187776
+  },
+  "fwupd": {
+    "active_state": "active",
+    "sub_state": "running",
+    "main_pid": 8554,
+    "exec_main_start_local": "2026-09-16 20:57:35 +04",
+    "exec_main_status": 0,
+    "can_stop": true,
+    "refuse_manual_stop": false,
+    "memory_current_bytes": 159686656,
+    "rss_kib": 166744,
+    "dbus_status": 1,
+    "dbus_percentage": 0,
+    "status_verified_using": "installed libfwupd.so.3: fwupd_status_to_string(1) == idle",
+    "refresh_service_active_state": "inactive",
+    "refresh_service_sub_state": "dead",
+    "refresh_service_main_pid": 0,
+    "refresh_timer_active_state": "active",
+    "refresh_timer_sub_state": "waiting",
+    "refresh_timer_next_local": "2026-09-17 16:19:26 +04",
+    "systemd_pending_jobs": [],
+    "dbus_activatable": true
+  },
+  "evaluation_workers": {
+    "orphaned_evaluation_workers_identified": [],
+    "active_offline_test_parent": {
+      "pid": 77508,
+      "script": "evaluation/quality_repair_20260917/run_offline_checks.py",
+      "rss_kib": 12924
+    },
+    "active_offline_test_child": {
+      "pid": 77515,
+      "rss_kib": 69412
+    },
+    "action": "Wait for the currently running offline checks to finish; do not terminate them."
+  },
+  "excluded_processes": "Active Code/Codex, GNOME desktop, robot/device utilities and remote access processes were not considered for termination. The numerous Python processes outside the repository belong to nvpmodel_indicator.py, not evaluation orphans.",
+  "proposed_preparation": [
+    "After the current offline checks exit, remeasure available RAM before making any other change.",
+    "If still needed and authorized by the parent, recheck fwupd Status=idle, Percentage=0, no pending systemd jobs and inactive refresh service immediately before a temporary stop.",
+    "Use the ordinary reversible service operation: /usr/bin/systemctl stop fwupd.service (via the normal authorized privilege mechanism). Do not disable or mask the service, alter timers, or change device settings.",
+    "Measure the real available RAM after the stop; keep all existing startup/runtime memory guards unchanged.",
+    "Restore the initially active service with /usr/bin/systemctl start fwupd.service in a finally/cleanup path, and record its resulting active/running state.",
+    "Avoid D-Bus queries while intentionally stopped because querying org.freedesktop.fwupd can automatically restart it; the refresh timer can also reactivate it."
+  ],
+  "limits": "Measured fwupd resident memory is roughly 163 MiB, while the observed gate shortfall is roughly 183 MiB; stopping it alone is not guaranteed to satisfy the 2 GiB start gate or runtime floor. Offline checks currently account for roughly 80 MiB RSS, with shared-page/reclaim effects unmeasured. All values are snapshots and available RAM fluctuates.",
+  "authorization_note": "This report proposes a temporary idle service stop only; it does not execute or grant authorization for that operation.",
+  "data_minimization": "No credentials, environment contents or raw process command arguments were printed or saved."
+}

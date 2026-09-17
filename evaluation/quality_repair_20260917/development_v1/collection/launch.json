@@ -1,0 +1,51 @@
+{
+  "created_at": "2026-09-17T11:50:54.706808+00:00",
+  "case_count": 16,
+  "candidate_manifest_sha256": "7218afcca37711ece301385f7e7d8d764b87751b5051822987ba946381f0238e",
+  "declared_max_cases": 16,
+  "policy": {
+    "policy_id": "complete_system_stage2_common_device_limits_v1",
+    "scope": "all three Stage 2 arms; embeddings through final cleanup",
+    "min_start_available_kib": 2097152,
+    "max_start_swap_used_kib": 786432,
+    "max_start_temperature_c_exclusive": 55.0,
+    "min_runtime_available_kib": 786432,
+    "max_runtime_swap_used_kib": 1048576,
+    "max_runtime_temperature_c_exclusive": 68.0,
+    "maximum_resident_models": 1,
+    "power_mode": "15W mode 0",
+    "fan_required": true,
+    "unchanged_boot_and_thermal_trip_counters": true,
+    "telemetry_interval_ms": 500,
+    "telemetry_stall_ceiling_seconds": 5,
+    "persistent_system_changes": false,
+    "prior_arc_limits_reused": false
+  },
+  "python": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "package_versions": {
+    "numpy": "2.2.6",
+    "onnxruntime": "1.23.2",
+    "tokenizers": "0.23.2"
+  },
+  "invocation": [
+    "evaluation/quality_repair_20260917/run_guarded.py",
+    "--cases",
+    "evaluation/quality_repair_20260917/development_v1/cases.json",
+    "--candidate-manifest",
+    "evaluation/quality_repair_20260917/development_v1/candidate_freeze.json",
+    "--max-cases",
+    "16",
+    "--output-dir",
+    "evaluation/quality_repair_20260917/development_v1/collection"
+  ],
+  "pid": 72325,
+  "validation_only": false,
+  "runner_arguments": [
+    "--stage",
+    "conversation",
+    "--policy",
+    "learned"
+  ],
+  "generation_parameters_modified": false,
+  "latency_scope": "Case/model wall includes guard checks; backend durations exclude those checks."
+}

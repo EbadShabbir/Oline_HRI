@@ -1,0 +1,49 @@
+{
+  "created_at": "2026-09-17T12:08:34.754745+00:00",
+  "review_method": "Two independent assistant reviewers grade the twelve recorded outcomes from a sanitized packet. Delegated aggregation is not a third independent review or human validation. Four unattempted cases have no fabricated reviewer judgments.",
+  "source_sha256": {
+    "review_a.json": "7b168fee6a80c91f65d2e28cb0bb0029ae72e17ee25277110823517f110ca750",
+    "review_b.json": "92382251bcb78e4465ca4769964c6ccb2aafe24c72bf60af49807df602074d53",
+    "review_packet.json": "42ce36153d75364e94c341bd65b3eebe2baa13dfc1c7144557f1eeb5820ff543"
+  },
+  "planned_cases": 16,
+  "observed_and_reviewed": 12,
+  "unattempted_unreviewed_ids": [
+    "repair_holdout_013",
+    "repair_holdout_014",
+    "repair_holdout_015",
+    "repair_holdout_016"
+  ],
+  "quality_agreement": {
+    "count": 12,
+    "denominator": 12
+  },
+  "component_boolean_agreement": {
+    "count": 22,
+    "denominator": 22
+  },
+  "usefulness_field_agreement": {
+    "count": 12,
+    "denominator": 12
+  },
+  "quality_pass_a": 9,
+  "quality_pass_b": 9,
+  "useful_general_help_a": 9,
+  "useful_general_help_b": 9,
+  "observed_general_component_denominator": 11,
+  "planned_general_component_denominator": 12,
+  "adjudications": [
+    {
+      "id": "repair_holdout_007",
+      "field": "flags",
+      "decision": [
+        "missing_required_detail",
+        "content_error"
+      ],
+      "selected": "B flags; A descriptive wording and all agreed booleans retained",
+      "reason": "The answer correctly names axial rotation but then uses the Sun changing position as an explanation of daylight length instead of the required transition into and away from sunlight. Keep the misleading causal-content flag as well as the agreed missing-detail flag. This does not change any quality, component or usefulness boolean."
+    }
+  ],
+  "denominator_policy": "Analyzer retains all sixteen planned cases. The error and four missing outcomes cannot pass; missing cases have no invented delivered answers, timings or independent reviewer scores.",
+  "original_review_files_modified": false
+}

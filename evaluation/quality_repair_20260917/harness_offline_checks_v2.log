@@ -1,0 +1,35 @@
+test_actual_mode_review_is_counted_without_inventing_a_compute_call (test_analyze.AnalysisTests) ... ok
+test_case_order_and_component_contradictions_fail (test_analyze.AnalysisTests) ... ok
+test_effective_fallback_cannot_rescue_wrong_final_route (test_analyze.AnalysisTests) ... ok
+test_linear_quantiles (test_analyze.AnalysisTests) ... ok
+test_missing_and_error_remain_in_quality_and_deadline_denominators (test_analyze.AnalysisTests) ... ok
+test_typed_human_guidance_counts_as_generation (test_analyze.AnalysisTests) ... ok
+test_actual_role_detection_covers_new_and_historical_review_and_guidance (test_audit_results.IndependentAuditTests) ... ok
+test_attempt_omission_and_fabricated_compute_are_detected (test_audit_results.IndependentAuditTests) ... ok
+test_csv_first_data_row_equal_to_header_is_retained (test_audit_results.IndependentAuditTests) ... ok
+test_errors_and_missing_cases_stay_in_denominator_without_effective_route_credit (test_audit_results.IndependentAuditTests) ... ok
+test_historical_archive_is_explicit_and_tampering_fails (test_audit_results.IndependentAuditTests) ... ok
+test_linear_percentiles_and_missing_latency (test_audit_results.IndependentAuditTests) ... ok
+test_mixed_fragment_is_literal_and_prefix_remains_separately_exposed (test_audit_results.IndependentAuditTests) ... ok
+test_negated_header_and_prefix_are_not_inserted (test_audit_results.IndependentAuditTests) ... ok
+test_numbered_input_quoted_approximate_and_negated_mentions_are_not_output_directives (test_audit_results.IndependentAuditTests) ... ok
+test_quoted_directive_is_skipped_but_quoted_header_value_is_literal (test_audit_results.IndependentAuditTests) ... ok
+test_scalar_schema_requires_positive_unquoted_source_directive (test_audit_results.IndependentAuditTests) ... ok
+test_source_derived_header_numbering_and_prefixes_reconstruct (test_audit_results.IndependentAuditTests) ... ok
+test_sqlite_audit_is_read_only_and_detects_nonempty_store (test_audit_results.IndependentAuditTests) ... ok
+test_unrequested_header_changed_content_and_unbound_prompt_fail (test_audit_results.IndependentAuditTests) ... ok
+test_invalid_budget_cannot_bypass_absolute_64_case_limit (test_development_runner.DevelopmentBudgetTests) ... ok
+test_over_budget_fails_before_artifacts_or_inference (test_development_runner.DevelopmentBudgetTests) ... ok
+test_added_source_or_changed_test_fails_before_authoring_access (test_prepare_holdout.HoldoutPreparationTests) ... ok
+test_bad_authored_schema_keeps_semantic_opening_record (test_prepare_holdout.HoldoutPreparationTests) ... ok
+test_either_author_hash_mismatch_fails_before_semantic_opening (test_prepare_holdout.HoldoutPreparationTests) ... ok
+test_existing_opening_or_cohort_cannot_be_overwritten (test_prepare_holdout.HoldoutPreparationTests) ... ok
+test_source_drift_fails_before_authoring_access (test_prepare_holdout.HoldoutPreparationTests) ... ok
+test_success_preserves_parent_and_author_bytes_with_opening_record (test_prepare_holdout.HoldoutPreparationTests) ... ok
+test_post_inference_and_source_drift_fail_before_creating_seal (test_seal_evaluation.SealTests) ... ok
+test_source_archive_and_explicit_artifacts_are_sealed_without_overwrite (test_seal_evaluation.SealTests) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.439s
+
+OK

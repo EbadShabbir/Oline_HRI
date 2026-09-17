@@ -1,0 +1,1055 @@
+diff --git a/src/oline_hri/answer_guidance.py b/src/oline_hri/answer_guidance.py
+index 0c3eaaa..b5d86d0 100644
+--- a/src/oline_hri/answer_guidance.py
++++ b/src/oline_hri/answer_guidance.py
+@@ -22,6 +22,23 @@ class ReferenceNote:
+ 
+ 
+ REFERENCE_NOTES = (
++    ReferenceNote(
++        "paper_fan_v1", r"\b(?:make|fold|create)\b.{0,70}\bpaper\s+fan\b|\bpaper\s+fan\b.{0,50}\b(?:fold|make)\b",
++        "A simple paper fan uses accordion pleats: fold a narrow strip, flip the paper, "
++        "and keep folding back and forth across the sheet. Pinch the pleats together at "
++        "one end and bend that end firmly to hold it; spread the other end. "
++        "This one-sheet version needs no ribbon, string, glue, scissors or other supplies.",
++        ("https://www.vam.ac.uk/blog/museum-life/letsmakewednesdays-fashion",),
++        reviewed="2026-09-17",
++    ),
++    ReferenceNote(
++        "earth_day_night_v1", r"\bEarth\b.*\b(?:day(?:time)?|night(?:time)?)\b|\b(?:day(?:time)?|night(?:time)?)\b.*\bEarth\b",
++        "ROTATION means Earth spinning ON ITS OWN AXIS. A place facing the Sun has daytime; "
++        "as Earth turns that place away from the Sun it has nighttime. "
++        "Orbiting the Sun is a different, yearly motion and does not cause the daily cycle.",
++        ("https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question31.html",),
++        reviewed="2026-09-17",
++    ),
+     ReferenceNote(
+         "cosine_similarity_v1", r"\b(?:cosine similarity|normalized dot product)\b",
+         "Cosine similarity divides the dot product by the product of vector lengths: "
+@@ -57,6 +74,37 @@ REFERENCE_NOTES = (
+ REFERENCE_IDS = frozenset(note.id for note in REFERENCE_NOTES)
+ 
+ 
++def _day_night_cycle_question(request):
++    return bool(re.search(r"\b(?:explain|why|how)\b", request, re.I)
++                and re.search(r"\bEarth\b", request, re.I)
++                and re.search(r"\bday(?:time|light)?\b", request, re.I)
++                and re.search(r"\bnight(?:time)?\b", request, re.I)
++                and not re.search(r"\b(?:length|longer|shorter|hours|seasons?|polar|equinox|solstice)\b", request, re.I))
++
++
++def reference_task_instruction(request):
++    if _day_night_cycle_question(request):
++        return ("Explain the lighting mechanism: Earth's rotation brings a place to face the Sun's light "
++                "for daytime and turns it away into darkness for nighttime. Include BOTH lit and dark "
++                "orientations; do not substitute a statement about the length of daylight.")
++    return ""
++
++
++def reference_task_issues(request, speech, reference_ids):
++    """Catch missing core concepts in the bounded daily-cycle explanation.
++
++    This is a completeness check for one reviewed topic, not a generic factual
++    verifier. Other causes, comparisons, seasons and duration questions are not
++    assigned this contract.
++    """
++    if "earth_day_night_v1" not in reference_ids or not _day_night_cycle_question(request):
++        return ()
++    lit = re.search(r"\b(?:towards?|faces?|facing|sunlit|illuminat\w*|lit)\b|\breceiv\w*\s+(?:the\s+)?sunlight\b", speech, re.I)
++    dark = re.search(r"\b(?:away|dark\w*|unlit|shadow\w*)\b|\b(?:no|without)\s+(?:direct\s+)?sunlight\b", speech, re.I)
++    rotation = re.search(r"\b(?:rotat\w*|spin\w*|turn\w*)\b", speech, re.I)
++    return () if lit and dark and rotation else ("day_night_mechanism",)
++
++
+ def reference_ids_for(request: str) -> tuple[str, ...]:
+     """Select at most two reviewed topic notes, never text from a user record."""
+     search_feature = re.search(r'\b(?:fts[345]|full[ -]text|virtual tables?)\b', request, re.I)
+@@ -125,6 +173,7 @@ def general_response_rule(request: str) -> str:
+         rule += " REVIEWED_TECHNICAL_NOTES (not personal memories): " + " ".join(
+             note.text for note in REFERENCE_NOTES if note.id in ids
+         )
++    rule += " " + reference_task_instruction(request)
+     return rule
+ 
+ 
+@@ -138,6 +187,11 @@ def reference_claim_error(speech: str, reference_ids: tuple[str, ...]) -> str |
+     for clause in re.split(r"[.!?;\n]|\b(?:while|whereas|but)\b", speech, flags=re.I):
+         if re.search(r"\b(?:false|incorrect|myth|wrong)\b", clause, re.I):
+             continue
++        if "earth_day_night_v1" in reference_ids and not re.search(r"\b(?:not|never|doesn't)\b", clause, re.I):
++            if re.search(r"\b(?:rotat\w*|spin\w*)\s+(?:around|about)\s+(?:the\s+)?Sun\b", clause, re.I):
++                return "daily rotation is on Earth's axis, not around the Sun"
++            if re.search(r"\borbit\w*\b.{0,40}\b(?:caus\w*|creat\w*|produc\w*)\b.{0,30}\b(?:day|night)\b", clause, re.I):
++                return "Earth's yearly orbit does not cause the daily cycle"
+         if "sql_transactions_v1" in reference_ids and re.search(
+             r"\bSQLite\s+(?:does\s+not|doesn't)\s+support\s+(?:ACID\s+)?transactions?\b",
+             clause, re.I,
+diff --git a/src/oline_hri/dependency_routing.py b/src/oline_hri/dependency_routing.py
+index 0692818..f7c5657 100644
+--- a/src/oline_hri/dependency_routing.py
++++ b/src/oline_hri/dependency_routing.py
+@@ -27,7 +27,7 @@ from .timing import trace_span
+ 
+ _MODES = frozenset({"none", "optional", "required", "clarify"})
+ SIZE_POLICY_VERSION = "dependency_size_policy_v2"
+-TASK_GUARD_VERSION = "bounded_task_answerability_v1"
++TASK_GUARD_VERSION = "bounded_task_answerability_v2"
+ _SHORT_SOCIAL = re.compile(
+     r"(?:hi|hello|hey|good\s+(?:morning|afternoon|evening|night)|"
+     r"thanks(?:\s+a\s+lot)?|thank\s+you|goodbye|bye|see\s+you\s+later)[.! ]*", re.I,
+@@ -49,6 +49,81 @@ _PRIVATE_ATTRIBUTE = re.compile(
+     r"\b(?:medical|diagnosis|schedule|address|birthday|biography|preferences?|"
+     r"relationship|childhood|health\s+condition)\b", re.I,
+ )
++_QUOTED_TEXT = re.compile(r'"[^"\n]+"|“[^”\n]+”|(?<!\w)\x27[^\x27\n]+\x27(?!\w)')
++_ARTIFACT = r"(?:label|draft|message|note|title|version|option|sentence|paragraph)"
++
++
++def _bounded_ambiguity(text, history):
++    """Recognize missing selections, never infer the user's intended value.
++
++    These finite contracts run before a fallible model can silently choose a
++    target. Explicit selectors and admitted task context retain their ordinary
++    generation path. A failed match is not proof of answerability.
++    """
++    edit = re.search(
++        r"(?:^|[.!?;]['\"’”]?\s+)(?:please\s+)?(?:rewrite|rephrase|edit|shorten|lengthen|change|fix)\s+"
++        r"(?P<target>[^.!?;\n]+)", text, re.I,
++    )
++    if edit:
++        target = edit.group("target")
++        selected = (re.search(r"\b(?:both|all|each|every|first|second|third|fourth|last|"
++                              r"\d+(?:st|nd|rd|th))\b", target, re.I)
++                    or _QUOTED_TEXT.search(target)
++                    or re.search(r"\b(?:named|called|saying|says|beginning|starting|ending|"
++                                 r"about|regarding|containing|number(?:ed)?)\b", target, re.I))
++        singular = re.match(r"(?:(?:the|this|that)\s+" + _ARTIFACT + r"\b|(?:it|that|this)\b)",
++                            target, re.I)
++        supplied = "\n".join([*(message.content for message in history), text[:edit.start("target")]])
++        selected = selected or re.search(
++            r"\b(?:I\s+mean|use|choose|select|pick)\s+(?:the\s+)?"
++            r"(?:first|second|third|fourth|last|\d+(?:st|nd|rd|th))\b", supplied, re.I,
++        )
++        alternatives = (re.search(r"\b(?:two|three|four|five|[2-9])\s+(?:draft\s+)?"
++                                  + _ARTIFACT + r"s\b", supplied, re.I)
++                        or len(set(re.findall(r"\b" + _ARTIFACT + r"\s+(\d+)\s*:",
++                                              supplied, re.I))) > 1)
++        if singular and alternatives and not selected and len(_QUOTED_TEXT.findall(supplied)) >= 2:
++            return "ambiguous_artifact_target"
++
++    pronoun = re.search(
++        r"\b(?:replace|resolve)\s+['\"‘“]?(they|them|their|he|him|his|she|her|it)['\"’”]?\s+"
++        r"(?:with\s+)?(?:the\s+)?(?:(?:intended|correct|right)\s+)?"
++        r"(?:person(?:['’]s)?\s+name|name\s+of\s+the\s+person|referent)\b", text, re.I,
++    )
++    if pronoun:
++        source = "\n".join([*(message.content for message in history), text])
++        explicit = re.search(
++            r"['\"‘“]?\b" + re.escape(pronoun.group(1)) + r"\b['\"’”]?\s+"
++            r"(?:refers?\s+to|means|denotes)\s+[A-Z][\w'-]+\b|"
++            r"\b(?:intended\s+person|intended\s+referent)\s+is\s+[A-Z][\w'-]+\b", source,
++        )
++        source_quotes = [part[1:-1] for part in _QUOTED_TEXT.findall(source)
++                         if re.search(r"\b" + re.escape(pronoun.group(1)) + r"\b", part, re.I)]
++        names = {word for quote in source_quotes for word in re.findall(r"\b[A-Z][a-z][\w'-]*\b", quote)
++                 if word.casefold() not in {"the", "a", "an", "they", "he", "she", "it"}}
++        if not explicit and len(names) != 1:
++            return "ambiguous_pronoun_reference"
++
++    conversion = re.fullmatch(
++        r"(?:please\s+)?convert\s+[-+]?\d+(?:\.\d+)?\s*(.*?)[.!?]?", text.strip(), re.I,
++    )
++    if conversion:
++        tail = re.sub(r",?\s+please[.!?]*$", "", conversion.group(1), flags=re.I).strip()
++        # Representation changes conventionally start from a supplied decimal
++        # number; they are not measurements with an omitted source unit.
++        representation = re.search(r"\b(?:binary|hexadecimal|hex|octal|decimal|roman|"
++                                   r"words|fraction|percentage|percent|base\s+\d+)\b", tail, re.I)
++        if not representation and not re.search(r"[:;\n]|\b(?:CSV|JSON|table)\b", tail, re.I):
++            parts = re.split(r"\s*\b(?:to|into|in)\b\s*", tail, maxsplit=1, flags=re.I)
++            placeholder = r"(?:(?:the|a|an|some|other|another|different|starting|target|original)\s+)*units?"
++            specified = lambda value: bool(value.strip() and not re.fullmatch(placeholder, value.strip(), re.I))
++            complete = len(parts) == 2 and all(specified(part) for part in parts)
++            context = " ".join(message.content for message in history)
++            supplied_pair = re.search(r"\b(?:convert|conversion\s+from)\s+([A-Za-z][\w /-]{0,35}?)\s+"
++                                      r"(?:to|into)\s+([A-Za-z][\w /-]{0,35})", context, re.I)
++            if not complete and not supplied_pair:
++                return "missing_conversion_units"
++    return None
+ 
+ 
+ def _bounded_task_mode(text, history):
+@@ -59,6 +134,9 @@ def _bounded_task_mode(text, history):
+     provenance matter; task difficulty and output constraints do not imply a
+     missing personal record.
+     """
++    ambiguity = _bounded_ambiguity(text, history)
++    if ambiguity:
++        return "clarify", ambiguity
+     if _RECORD_REFERENCE.search(text):
+         return None
+     if is_drafting_followup(text) and history:
+@@ -119,9 +197,11 @@ def _bounded_task_mode(text, history):
+ def _recognizable_recall(text):
+     # An isolated question prefix must not conceal a value asserted elsewhere
+     # in the current input. Mixed/unclear cases still receive semantic review.
++    if has_unstated_recall_intent(text):
++        return True
+     if current_assertions(text):
+         return False
+-    return has_unstated_recall_intent(text) or any(
++    return any(
+         has_unstated_recall_intent(candidate["personal_part"])
+         for candidate in fragment_candidates(text)
+     )
+diff --git a/src/oline_hri/evaluation_runner.py b/src/oline_hri/evaluation_runner.py
+index 327d0e7..f10cfa4 100644
+--- a/src/oline_hri/evaluation_runner.py
++++ b/src/oline_hri/evaluation_runner.py
+@@ -378,6 +378,13 @@ class _EvaluationBackend:
+         effective_seed = EVALUATION_SEED if seed is None else seed
+         purpose = _chat_purpose(response_format)
+         supplied_ids = _schema_supplied_ids(response_format, purpose=purpose)
++        # Retain the actual formatting input internally; publishing a guessed
++        # case prompt would conceal a fragment or rewritten generator request.
++        transform_request = None
++        if (isinstance(response_format, Mapping)
++                and set(response_format.get("properties", {})) == {"answer_parts"}):
++            transform_request = next((message.content for message in reversed(messages)
++                                      if message.role == "user"), None)
+         started = self._clock_ns()
+         try:
+             result = self._delegate.chat(
+@@ -415,6 +422,8 @@ class _EvaluationBackend:
+                 "status": "ok" if generation is not None else "error",
+                 "error_type": None if generation is not None else "InvalidChatResult",
+                 "generation": generation,
++                **({"response_transform_request": transform_request}
++                   if transform_request is not None else {}),
+             }
+         )
+         if generation is None:
+@@ -1247,6 +1256,9 @@ def _run_cascade_case(
+         **({"privacy_gate": True} if privacy_abstention(case.prompt) else {}),
+         **({"response_transform": reply.response_transform}
+            if reply is not None and reply.response_transform is not None else {}),
++        **({"response_transform_request": successful_generator["response_transform_request"]}
++           if reply is not None and reply.response_transform == "task_parts_v1"
++           and successful_generator is not None and "response_transform_request" in successful_generator else {}),
+         **({"answer_constraint": reply.answer_constraint}
+            if reply is not None and reply.answer_constraint is not None else {}),
+         **({"generation_policy": reply.generation_policy}
+@@ -1700,8 +1712,16 @@ def _closed_nonpersonal_generation_schema(response_format: object) -> bool:
+     if field == "answer_parts":
+         from .task_parts import TaskLayout, parts_schema
+ 
+-        if (minimum, maximum) == (2, 32):
++        if (minimum, maximum) == (1, 32):
++            expected = parts_schema(TaskLayout("csv", header="column,value"))
++        elif (minimum, maximum) == (2, 32):
+             expected = parts_schema(TaskLayout("csv"))
++        elif (minimum == maximum == 1 and isinstance(shape.get("items"), Mapping)
++              and shape["items"].get("pattern") == r"^[+-]?\d+$"):
++            expected = parts_schema(TaskLayout("integer", 1))
++        elif (minimum == maximum == 1 and isinstance(shape.get("items"), Mapping)
++              and shape["items"].get("pattern") == r"^[0-9+*/() -]+$"):
++            expected = parts_schema(TaskLayout("calculation", 1))
+         elif minimum == maximum and 1 <= minimum <= 12:
+             expected = parts_schema(TaskLayout("lines", minimum))
+         else:
+diff --git a/src/oline_hri/evaluation_scoring.py b/src/oline_hri/evaluation_scoring.py
+index da88eaa..f5d0b10 100644
+--- a/src/oline_hri/evaluation_scoring.py
++++ b/src/oline_hri/evaluation_scoring.py
+@@ -8,10 +8,12 @@ emits a strategy-blinded worksheet for later human answer review.
+ 
+ from __future__ import annotations
+ 
++import ast
+ from collections import defaultdict
+ from dataclasses import asdict, dataclass
+ from datetime import datetime
+ from hashlib import sha256
++from fractions import Fraction
+ import json
+ from math import ceil, isfinite
+ import os
+@@ -507,6 +509,14 @@ def score_observations(
+     repetitions = int(observations.header["repetitions"])
+     selected_strategies = tuple(observations.header["strategies"])
+     cases = {case.id: case for case in suite.cases}
++    # Parsing checks rendering consistency; only the exact SHA-bound suite
++    # establishes that its copied formatting request is authentic.
++    for observation in observations.cases:
++        cascade = observation.get("cascade")
++        if isinstance(cascade, Mapping) and "response_transform_request" in cascade:
++            case = cases.get(observation.get("case_id"))
++            if case is None or cascade["response_transform_request"] != case.prompt:
++                raise EvaluationScoringError("typed transform request does not match the exact suite prompt")
+     case_order = {case.id: index for index, case in enumerate(suite.cases, 1)}
+     rag_cases = tuple(case for case in suite.cases if "rag" in case.tags)
+ 
+@@ -2193,6 +2203,9 @@ def _cascade(value: object) -> Mapping[str, object]:
+     has_transform = isinstance(value, Mapping) and "response_transform" in value
+     if has_transform:
+         fields = fields | {"response_transform"}
++    has_transform_request = isinstance(value, Mapping) and "response_transform_request" in value
++    if has_transform_request:
++        fields = fields | {"response_transform_request"}
+     has_constraint = isinstance(value, Mapping) and "answer_constraint" in value
+     if has_constraint:
+         fields = fields | {"answer_constraint"}
+@@ -2203,6 +2216,12 @@ def _cascade(value: object) -> Mapping[str, object]:
+     if has_references:
+         fields = fields | {"reference_ids"}
+     data = _exact(value, fields, "cascade observation")
++    if has_transform_request:
++        if data.get("response_transform") != "task_parts_v1":
++            raise EvaluationScoringError("formatting request requires a task-parts transform")
++        request = data["response_transform_request"]
++        _text(request.replace("\n", " ") if isinstance(request, str) else request,
++              "typed transform request", 1, 16_384)
+     if has_references and not (
+         isinstance(data["reference_ids"], list)
+         and 1 <= len(data["reference_ids"]) <= 2
+@@ -2401,8 +2420,220 @@ def _nonpersonal_transform(data: Mapping[str, object], *, has_privacy_gate: bool
+     if field == "answer_parts":
+         parts = [part.strip() for part in decoded[field]]
+         renderings = {" ".join(parts), "\n".join(parts), "\n".join("- " + part for part in parts)}
++        if "response_transform_request" in data:
++            renderings = _source_task_renderings(str(data["response_transform_request"]), parts)
+         if response.get("speech") not in renderings:
+-            raise EvaluationScoringError("task-parts transform changed content beyond separators and markers")
++            raise EvaluationScoringError("task-parts transform changed content beyond source-derived formatting")
++
++
++def _source_task_renderings(request: str, parts: list[str]) -> set[str]:
++    """Independently rederive permitted additions from the recorded request.
++
++    Do not call the runtime renderer or trust layout/header claims. This is a
++    transformation-integrity check, not an answer-quality or factual judgment.
++    The scoring entry point separately binds this request to the suite prompt.
++    """
++    def negated(text, start):
++        boundary = max(text.rfind(mark, 0, start) for mark in ".!?;\n") + 1
++        return bool(re.search(r"\b(?:do\s+not|don't|never|avoid)\b", text[boundary:start], re.I))
++
++    quotes = tuple(re.finditer(r'"[^"\n]*"|“[^”\n]*”|(?<!\w)\x27[^\x27\n]*\x27(?!\w)', request))
++
++    def directive_match(pattern):
++        return next((match for match in re.finditer(pattern, request, re.I)
++                     if not negated(request, match.start())
++                     and not any(quote.start() <= match.start() < quote.end() for quote in quotes)), None)
++
++    unquoted = re.sub(r'"[^"\n]*"|“[^”\n]*”|(?<!\w)\x27[^\x27\n]*\x27(?!\w)', " ", request)
++    counts = "zero one two three four five six seven eight nine ten eleven twelve".split()
++    numbered = False
++    for numbering in re.finditer(
++        r"\b(\d{1,3}|" + "|".join(counts) + r")[ -]+"
++        r"(?:(?:short|brief|simple|exact|practical|timed)\s+){0,2}numbered\s+(?:steps?|lines?|items?)\b",
++        unquoted, re.I,
++    ):
++        count = int(numbering.group(1)) if numbering.group(1).isdigit() else counts.index(numbering.group(1).lower())
++        boundary = max(unquoted.rfind(mark, 0, numbering.start()) for mark in ".!?;\n") + 1
++        prefix = unquoted[boundary:numbering.start()]
++        qualifier = r"(?:(?:exactly|only|just)\s+)?(?:(?:a|an)\s+)?(?:(?:friendly|polite|formal|informal|brief|short|simple|concise)\s+)?"
++        direct = re.search(r"\b(?:write|give|provide|return|use|include|produce|compose|draft|output|suggest|choose|pick)\s+(?:(?:me|us)\s+)?" + qualifier + r"$", prefix, re.I)
++        formatted = re.search(r"\b(?:in|using|with|as|to)\s+" + qualifier + r"$", prefix, re.I)
++        standalone = re.fullmatch(r"\s*(?:exactly|only)\s+", prefix, re.I)
++        if count == len(parts) and not negated(unquoted, numbering.start()) and (direct or formatted or standalone):
++            numbered = True
++    directive = directive_match(
++        r"\b(?:prefixes|labels|(?:start|begin)\s+(?:(?:the|their)\s+)?(?:lines?|text)\s+with)"
++        r"\s*:?\s*([^.!?\n]+)",
++    )
++    prefixes = []
++    if directive and not negated(request, directive.start()):
++        for match in re.finditer(r"\b([A-Za-z][A-Za-z -]{0,24}):", directive.group(1)):
++            prefixes.append(re.sub(r"^and\s+", "", match.group(1)).strip() + ":")
++    header = directive_match(r"\bheader\s+(?:(?:must\s+be|should\s+be|is)\s+)?[\"'`]?"
++                             r"([A-Za-z_]\w*(?:\s*,\s*[A-Za-z_]\w*)+)")
++    # A header can only be added to an explicitly requested CSV output. It
++    # remains a literal supplied string, never a new data row.
++    csv_output = False
++    for sentence in re.split(r"[.!?\n]", unquoted):
++        for clause in (sentence, *sentence.split(";")[1:]):
++            clause = re.sub(r"^\s*(?:please\s+)?(?:(?:can|could|would|will)\s+you\s+)?", "",
++                            clause, flags=re.I).strip()
++            if re.search(r"\b(?:do\s+not|don't|never|avoid)\b", clause, re.I):
++                continue
++            csv_output |= bool(re.fullmatch(r"(?:only\s+CSV|CSV\s+only)[;,\s]*", clause, re.I)
++                or re.match(r"(?:return|output|emit|produce|provide|give|use)\s+(?:(?:only|plain|valid|raw)\s+)*CSV\b", clause, re.I)
++                or re.match(r"(?:convert|format|render|rewrite|return|output|respond|reply|give|provide)\b.*?\b(?:to|into|as|in)\s+(?:(?:plain|valid|raw)\s+)*CSV\b", clause, re.I))
++    if csv_output:
++        if header and not negated(request, header.start()):
++            literal = ",".join(cell.strip() for cell in header.group(1).split(","))
++            parts = [literal, *parts]
++        return {"\n".join(parts)}
++    scalar = directive_match(r"\b(?:return|output|give|answer\s+with)\s+(?:only|just)\s+"
++                             r"(?:the\s+|a\s+)?(?:whole\s+number|integer)\b")
++    if scalar:
++        if len(parts) != 1:
++            raise EvaluationScoringError("scalar task requires one raw part")
++        # Earlier task_parts_v1 observations recorded an already computed
++        # integer. Preserve that representation rather than inventing an
++        # expression provenance for it.
++        if re.fullmatch(r"[+-]?\d+", parts[0]):
++            return {parts[0]}
++        arithmetic = re.search(r"\b(?:how\s+many|altogether|total|calculate|compute|what\s+is|sum|product|"
++                               r"difference|left|remains?|remaining|add|subtract|multiply|divide)\b", unquoted, re.I)
++        if not arithmetic or re.search(r"\b(?:convert|conversion)\b", unquoted, re.I):
++            raise EvaluationScoringError("scalar expression has no arithmetic request")
++        return {_independent_integer_calculation(parts[0], request)}
++    if numbered:
++        normalized = []
++        for index, part in enumerate(parts, 1):
++            part = re.sub(r"^\s*" + str(index) + r"[.)]\s+", "", part).strip()
++            if not part or re.match(r"^(?:[-*•]|\d+[.)])\s", part):
++                raise EvaluationScoringError("task-parts numbering disagrees with its position")
++            normalized.append(part)
++        parts = normalized
++    if prefixes and len(prefixes) == len(parts):
++        parts = [label + " " + (part[len(label):].lstrip() if part.startswith(label) else part)
++                 for label, part in zip(prefixes, parts)]
++    if numbered:
++        return {"\n".join(f"{index}. {part}" for index, part in enumerate(parts, 1))}
++    return {"\n".join(parts), " ".join(parts), "\n".join("- " + part for part in parts)}
++
++
++def _independent_integer_calculation(expression: str, request: str) -> str:
++    """Recompute expression provenance without importing runtime arithmetic.
++
++    Source membership establishes available operands, not whether the model
++    selected the mathematically appropriate expression for a word problem.
++    """
++    if (len(request) > 4096 or len(expression) > 160
++            or not re.fullmatch(r"[0-9+*/() -]+", expression)):
++        raise EvaluationScoringError("invalid bounded integer expression")
++    small = dict(zip("zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split(), range(20)))
++    tens = dict(zip("twenty thirty forty fifty sixty seventy eighty ninety".split(), range(20, 100, 10)))
++
++    def below_hundred(tokens):
++        if len(tokens) == 1:
++            return small.get(tokens[0], tens.get(tokens[0]))
++        if len(tokens) == 2 and tokens[0] in tens and 0 < small.get(tokens[1], 0) < 10:
++            return tens[tokens[0]] + small[tokens[1]]
++        return None
++
++    def below_thousand(tokens):
++        if len(tokens) >= 2 and 0 < small.get(tokens[0], 0) < 10 and tokens[1] == "hundred":
++            tail = tokens[2:]
++            if tail[:1] == ["and"]:
++                tail = tail[1:]
++            remainder = below_hundred(tail) if tail else 0
++            if remainder is not None and (not tail or remainder > 0):
++                return small[tokens[0]] * 100 + remainder
++            return None
++        return below_hundred(tokens)
++
++    def cardinal(tokens):
++        if tokens == ["one", "million"]:
++            return 1000000
++        if tokens.count("thousand") == 1:
++            split = tokens.index("thousand")
++            head, tail = below_thousand(tokens[:split]), tokens[split + 1:]
++            if tail[:1] == ["and"]:
++                tail = tail[1:]
++            rest = below_thousand(tail) if tail else 0
++            if head is not None and 1 <= head <= 999 and rest is not None:
++                return head * 1000 + rest
++            return None
++        return below_thousand(tokens)
++
++    cache = {}
++    def phrase_values(tokens):
++        key = tuple(tokens)
++        if key in cache:
++            return cache[key]
++        value = cardinal(tokens)
++        values = (value,) if value is not None else ()
++        if not values:
++            for index in reversed(range(len(tokens))):
++                if tokens[index] == "and":
++                    left, right = phrase_values(tokens[:index]), phrase_values(tokens[index + 1:])
++                    if left and right:
++                        values = left + right
++                        break
++        cache[key] = values
++        return values
++
++    supplied = set()
++    for token in re.findall(r"(?<![\w.,])[-+]?(?:\d{1,3}(?:,\d{3})+|\d+)(?!\w)(?![.,]\d)", request):
++        digits = token.replace(",", "").lstrip("+-")
++        if len(digits) <= 7 and int(digits) <= 1000000:
++            supplied.add(int(digits))
++    word = r"(?:" + "|".join((*small, *tens, "hundred", "thousand", "million", "billion", "trillion")) + r")"
++    for phrase in re.findall(r"\b" + word + r"(?:[ -]+(?:and[ -]+)?" + word + r")*\b", request, re.I):
++        tokens = re.split(r"[ -]+", phrase.lower())
++        if len(tokens) <= 32:
++            supplied.update(phrase_values(tokens))
++    if len(supplied) < 2:
++        raise EvaluationScoringError("expression needs multiple supplied quantities")
++    try:
++        tree = ast.parse(expression.strip(), mode="eval")
++    except (SyntaxError, ValueError, RecursionError) as error:
++        raise EvaluationScoringError("invalid integer expression syntax") from error
++    allowed = (ast.Expression, ast.Constant, ast.UnaryOp, ast.BinOp,
++               ast.Add, ast.Sub, ast.Mult, ast.Div, ast.UAdd, ast.USub)
++    nodes = list(ast.walk(tree))
++    if len(nodes) > 64 or any(type(node) not in allowed for node in nodes) or not any(type(node) is ast.BinOp for node in nodes):
++        raise EvaluationScoringError("unsupported integer expression operation")
++
++    def calculate(node, depth=0):
++        if depth > 16:
++            raise EvaluationScoringError("integer expression depth exceeded")
++        if type(node) is ast.Expression:
++            value = calculate(node.body, depth + 1)
++        elif type(node) is ast.Constant:
++            if type(node.value) is not int or node.value not in supplied or not 0 <= node.value <= 1000000:
++                raise EvaluationScoringError("integer operand absent from source request")
++            value = Fraction(node.value)
++        elif type(node) is ast.UnaryOp:
++            value = calculate(node.operand, depth + 1) * (-1 if type(node.op) is ast.USub else 1)
++        elif type(node) is ast.BinOp:
++            left, right = calculate(node.left, depth + 1), calculate(node.right, depth + 1)
++            if type(node.op) is ast.Add:
++                value = left + right
++            elif type(node.op) is ast.Sub:
++                value = left - right
++            elif type(node.op) is ast.Mult:
++                value = left * right
++            else:
++                if not right:
++                    raise EvaluationScoringError("integer expression division by zero")
++                value = left / right
++        else:
++            raise EvaluationScoringError("unsupported integer expression node")
++        if abs(value.numerator) > 1000000000000 or value.denominator > 1000000000000:
++            raise EvaluationScoringError("integer expression intermediate bound exceeded")
++        return value
++    result = calculate(tree)
++    if result.denominator != 1 or abs(result.numerator) > 1000000000:
++        raise EvaluationScoringError("integer expression has no bounded exact integer result")
++    return str(result.numerator)
+ 
+ 
+ def _response(value: object, *, allow_line_breaks: bool = False) -> Mapping[str, object]:
+diff --git a/src/oline_hri/reliable_conversation.py b/src/oline_hri/reliable_conversation.py
+index d2bbe8e..49de20e 100644
+--- a/src/oline_hri/reliable_conversation.py
++++ b/src/oline_hri/reliable_conversation.py
+@@ -15,7 +15,10 @@ import re
+ from typing import Sequence
+ 
+ from .answer_review import AnswerReview, AnswerReviewer
+-from .answer_guidance import general_response_rule, reference_ids_for, REFERENCE_NOTES, reference_claim_error
++from .answer_guidance import (general_response_rule, reference_ids_for, REFERENCE_NOTES,
++                              reference_claim_error, reference_task_instruction, reference_task_issues)
++from .draft_contract import draft_contract, draft_instruction, draft_contract_issues
++from .supplied_plan import supplied_plan_instruction, supplied_plan_issues
+ from .conversation import (
+     Conversation, ConversationError, ConversationReply, MemoryDiagnostics,
+     MAX_RETRIEVED_MEMORIES, _bounded_history, _required_memory_ids,
+@@ -53,6 +56,17 @@ _GENERAL_CONTEXT = (
+ _CLARIFICATION = "Could you say a little more?"
+ _RETRY_FEEDBACK = {
+     **TASK_FEEDBACK,
++    "draft_word_limit": "Keep the edited draft within the requested word limit.",
++    "draft_weekdays": "Retain both source weekdays and their original roles.",
++    "draft_time": "Retain the source time in the edited draft.",
++    "draft_location": "Retain the complete source location, including its number.",
++    "draft_subject": "Name the original event in the edited draft.",
++    "draft_move_direction": "Preserve which date is old and which date is new.",
++    "reviewed_reference_contradiction": "The previous answer contradicted the reviewed note. Follow its mechanism exactly; do not add a different cause or substitute other steps.",
++    "day_night_mechanism": "Explain both orientations: facing the Sun gives daylight; Earth's rotation turns the place away into darkness at night. State this mechanism, not daylight length.",
++    "ResponseValidationError": "The previous output failed the required JSON structure or format. Supply complete content in exactly the requested structure.",
++    "supplied_plan_timing": "Keep every fixed duration with its supplied action, in the original order. Write each duration in minutes; do not redistribute or omit it.",
++    "supplied_plan_total": "State the sum of the supplied durations as the total time, within the final requested step.",
+     "promise_only": "The previous attempt only offered help. Supply the requested content now.",
+     "unhelpful_answer": "The previous attempt did not answer the task. Supply specific useful content.",
+     "unhelpful_refusal": "The previous attempt refused ordinary help. Give the requested guidance.",
+@@ -375,6 +389,13 @@ class ReliableConversation(Conversation):
+                                  or draft_context and is_drafting_followup(message.content))
+         drafting = (is_drafting_request(request)
+                     or draft_context and is_drafting_followup(request))
++        inherited_draft = (draft_context and is_drafting_followup(request) and not linked
++                           and re.match(r"^(?:please\s+)?(?:shorten|condense|rewrite|rephrase|tighten|edit|make)\s+"
++                                        r"(?:it|that|this|the\s+(?:announcement|invitation|note|message|draft|text))\b",
++                                        request, re.I)
++                           and ":" not in re.split(r"[.!?]", request, maxsplit=1)[0])
++        draft = draft_contract(request, prior_replies[-1] if inherited_draft and prior_replies else None)
++        draft_rule = draft_instruction(draft)
+         # Authorized assertions are request-local; previous user statements
+         # are never recycled here, including after a falsely general route.
+         facts = (*current_assertions(request), *(match.memory.canonical_text for match in linked))
+@@ -400,7 +421,7 @@ class ReliableConversation(Conversation):
+             try:
+                 if linked:
+                     _require_current_snapshot(self._retriever, linked)
+-                request_system = system
++                request_system = system + " " + draft_rule + " " + supplied_plan_instruction(request)
+                 if mode == "optional" and not linked:
+                     request_system += (
+                         " Personalization is optional: give a general answer now."
+@@ -416,7 +437,7 @@ class ReliableConversation(Conversation):
+                 elif layout is not None:
+                     candidate = self._parts_attempt(
+                         request, layout=layout, model=model, history=history,
+-                        backend=backend, issues=issues,
++                        backend=backend, issues=issues, draft_rule=draft_rule,
+                     )
+                 elif (mode in {"none", "optional"} and not linked and not drafting
+                         and guidance_requested(request)
+@@ -457,6 +478,11 @@ class ReliableConversation(Conversation):
+                 component_answer = (candidate.response.speech[len(verified_prefix):]
+                                     if verified_prefix else candidate.response.speech)
+                 contract_issues = task_contract_issues(request, component_answer)
++                contract_issues += draft_contract_issues(draft, component_answer)
++                contract_issues += supplied_plan_issues(request, component_answer)
++                contract_issues += reference_task_issues(request, component_answer, candidate.reference_ids)
++                if reference_claim_error(component_answer, candidate.reference_ids):
++                    contract_issues += ("reviewed_reference_contradiction",)
+                 if prefix and re.search(r"\b(?:whole|entire|full)\s+(?:reply|response|answer)\b", text, re.I):
+                     contract_issues += task_contract_issues(text, prefix + candidate.response.speech)
+                 candidate_issues = tuple(dict.fromkeys((*candidate_issues, *contract_issues)))
+@@ -584,11 +610,13 @@ class ReliableConversation(Conversation):
+             response_transform=("human_guidance_allocations" if allocation is not None else "human_guidance_steps"),
+         )
+ 
+-    def _parts_attempt(self, request, *, layout, model, history, backend, issues):
++    def _parts_attempt(self, request, *, layout, model, history, backend, issues, draft_rule=""):
+         references = reference_ids_for(request)
+         notes = " ".join(note.text for note in REFERENCE_NOTES if note.id in references)
+         system = ChatMessage("system", self._base_system_prompt + "\n"
+-                             + parts_instruction(request, layout) + " " + notes + " " + _retry_feedback(issues))
++                             + parts_instruction(request, layout) + " " + notes + " " + draft_rule + " "
++                             + supplied_plan_instruction(request) + " " + reference_task_instruction(request)
++                             + " " + _retry_feedback(issues))
+         user = ChatMessage("user", _user_text(request))
+         budget = _prompt_token_budget(self._context_length, self._max_output_tokens)
+         baseline = _estimated_request_tokens((system, user))
+@@ -603,9 +631,6 @@ class ReliableConversation(Conversation):
+             if generation.done_reason != "stop":
+                 raise ResponseValidationError("structured task did not complete")
+             response = parse_parts(generation.content, layout)
+-            reference_error = reference_claim_error(response.speech, references)
+-            if reference_error:
+-                raise ResponseValidationError(reference_error)
+         return ConversationReply(response=response, generation=generation,
+                                  response_transform="task_parts_v1", reference_ids=references)
+ 
+diff --git a/src/oline_hri/reply_guard.py b/src/oline_hri/reply_guard.py
+index f8a366a..8d189ad 100644
+--- a/src/oline_hri/reply_guard.py
++++ b/src/oline_hri/reply_guard.py
+@@ -429,6 +429,36 @@ def has_personal_record_question(user_text: str) -> bool:
+     return False
+ 
+ 
++def _recall_value_assertions(text: str) -> tuple[str, ...]:
++    """Do not treat a request for an earlier answer as supplying that answer.
++
++    This deliberately recognizes a narrow reference-only grammar. The object
++    must repeat the question's requested subject exactly: adding an actual
++    value ("the blue pattern") leaves an ordinary current assertion intact.
++    Other disclosures keep the existing conservative treatment.
++    """
++    focuses = {match.group(1).strip().casefold() for match in re.finditer(
++        r"\b(?:what|which)\s+([\w -]{1,70}?)\s+(?:did|have|had|do)\s+(?:I|we)\b",
++        text, re.I,
++    )}
++    assertions = []
++    for clause in current_assertions(text):
++        reference = re.fullmatch(
++            r"(?:I|we)\s+(?:(?:only|just)\s+)?(?:want|need|am\s+asking\s+for|are\s+asking\s+for)\s+"
++            r"(?:the|my|our)\s+([\w -]{1,70}?)\s+(?:that\s+)?(?:I|we)\s+"
++            r"(?:(?:had|have)\s+)?(?:(?:already|previously)\s+)?"
++            r"(?:chose|chosen|selected|picked|specified|mentioned|requested)"
++            r"(?:\s+(?:earlier|previously|before|last\s+time))?[.!]?", clause, re.I,
++        )
++        if reference and reference.group(1).strip().casefold() in focuses:
++            continue
++        if re.fullmatch(r"not\s+(?:a\s+)?(?:(?:new|fresh|different)\s+)?"
++                        r"(?:suggestion|recommendation|choice|guess|answer)[.!]?", clause, re.I):
++            continue
++        assertions.append(clause)
++    return tuple(assertions)
++
++
+ def has_unstated_recall_intent(user_text: str) -> bool:
+     """Bounded recall signal shared by routing and the proactive safeguard.
+ 
+@@ -449,7 +479,8 @@ def has_unstated_recall_intent(user_text: str) -> bool:
+         r"[\w'-]+(?:\s+[\w'-]+){0,7}[.!?]?", text, re.I,
+     ):
+         return True
+-    if not current_assertions(text) and has_personal_record_question(text):
++    assertions = _recall_value_assertions(text)
++    if not assertions and has_personal_record_question(text):
+         return True
+     # Asking how to locate something permits procedural help. The historical
+     # retrieval parser still supports this wording once recall is established;
+@@ -460,7 +491,7 @@ def has_unstated_recall_intent(user_text: str) -> bool:
+     if request and request.mode == "direct" and any(
+             facet.owner == "user" and facet.attribute is not None for facet in request.facets):
+         return True
+-    if current_assertions(text):
++    if assertions:
+         return False
+     if re.match(r"^who\s+(?!(?:can|could|should|would|may|might|will)\b)\w+\s+"
+                 r"(?:my|our)\s+(?:previous|earlier|last)\s+\w+", text, re.I):
+@@ -1012,10 +1043,19 @@ def safe_history_pair(user_text: str, speech: str, *, drafting: bool = False,
+         return False
+     if draft and re.search(r"\b(?:remember|recall|remind|remembered|earlier|previously|told)\b", user, re.I):
+         return False
+-    if (draft and not re.search(r"\b(?:fiction|fictional|imaginary)\b", user, re.I)
+-            and re.search(r"\b(?:to|for|from|about)\s+[A-Z][a-z]+\b", user)):
+-        return False
+-    if draft and _bounded_event_artifact(user, answer, artifact_context):
++    bounded_event = draft and _bounded_event_artifact(user, answer, artifact_context)
++    if draft and not re.search(r"\b(?:fiction|fictional|imaginary)\b", user, re.I):
++        # Capitalized weekdays in an explicit date range are calendar values,
++        # not addressees. Do not exempt the same words when used as a person's
++        # name ("an invitation to Tuesday"), or bypass event-source checks.
++        weekday = r"(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday)"
++        calendar_spans = tuple(match.span() for match in re.finditer(
++            r"\bfrom\s+" + weekday + r"\s+to\s+" + weekday + r"\b", user, re.I)) if bounded_event else ()
++        if any(not any(start <= match.start() and match.end() <= stop
++                       for start, stop in calendar_spans)
++               for match in re.finditer(r"\b(?:to|for|from|about)\s+[A-Z][a-z]+\b", user)):
++            return False
++    if bounded_event:
+         return True
+     ordinal_edit = drafting and ordinal_request
+     if _WORDING_REQUEST.search(user) or ordinal_edit:
+diff --git a/src/oline_hri/task_contract.py b/src/oline_hri/task_contract.py
+index 2d937e2..bd81f2f 100644
+--- a/src/oline_hri/task_contract.py
++++ b/src/oline_hri/task_contract.py
+@@ -20,7 +20,7 @@ def _number(value):
+ 
+ def requested_count(request, unit):
+     """Recognize a global exact output count, not source data or an upper bound."""
+-    pattern = (r"\b(" + _NUMBER + r")[ -]+(?:(?:short|brief|simple|exact|practical|timed)\s+)?"
++    pattern = (r"\b(" + _NUMBER + r")[ -]+(?:(?:short|brief|simple|exact|practical|timed|numbered|possible|generic|concrete|pen-and-paper)\s+){0,3}"
+                + unit + r"s?\b")
+     quotes = list(re.finditer(r'"[^"\n]*"|“[^”\n]*”|(?<!\w)\'[^\'\n]*\'(?!\w)', request))
+     counts = set()
+@@ -56,7 +56,7 @@ def requested_count(request, unit):
+         qualifier = (r"(?:(?:exactly|only|just)\s+)?(?:(?:a|an)\s+)?"
+                      r"(?:(?:friendly|polite|formal|informal|brief|short|simple|concise)\s+)?")
+         direct = re.search(
+-            r"\b(?:write|give|provide|return|use|include|produce|compose|draft|output)"
++            r"\b(?:write|give|provide|return|use|include|produce|compose|draft|output|suggest|choose|pick)"
+             r"\s+(?:(?:me|us)\s+)?" + qualifier + r"$", prefix, re.I)
+         formatted = (re.search(r"\b(?:in|using|with|as|to)\s+" + qualifier + r"$", prefix, re.I)
+                      and re.search(r"\b(?:write|give|provide|return|respond|answer|reply|use|"
+@@ -98,6 +98,59 @@ def csv_output_requested(request):
+     return False
+ 
+ 
++def requested_csv_header(request):
++    if not csv_output_requested(request):
++        return None
++    pattern = r"\bheader\s+(?:(?:must\s+be|should\s+be|is)\s+)?[\"'`]?([A-Za-z_]\w*(?:\s*,\s*[A-Za-z_]\w*)+)"
++    for match in _positive_directives(pattern, request):
++        return ",".join(cell.strip() for cell in match.group(1).split(","))
++    return None
++
++
++def _unquoted(request):
++    return re.sub(r'"[^"\n]*"|“[^”\n]*”|(?<!\w)\'[^\'\n]*\'(?!\w)', " ", request)
++
++
++def _negated_directive(request, start):
++    boundary = max(request.rfind(mark, 0, start) for mark in ".!?;\n") + 1
++    return bool(re.search(r"\b(?:do\s+not|don't|never|avoid)\b", request[boundary:start], re.I))
++
++
++def _positive_directives(pattern, request):
++    quotes = tuple(re.finditer(r'"[^"\n]*"|“[^”\n]*”|(?<!\w)\'[^\'\n]*\'(?!\w)', request))
++    return (match for match in re.finditer(pattern, request, re.I)
++            if not _negated_directive(request, match.start())
++            and not any(quote.start() <= match.start() < quote.end() for quote in quotes))
++
++
++def scalar_output_requested(request):
++    """A direct request for only one integer; mentioning an integer is insufficient."""
++    text = _unquoted(request)
++    match = re.search(r"\b(?:return|output|give|answer\s+with)\s+(?:only|just)\s+"
++                      r"(?:the\s+|a\s+)?(?:whole\s+number|integer)\b", text, re.I)
++    return bool(match and not _negated_directive(text, match.start()))
++
++
++def numbered_output_requested(request):
++    text = _unquoted(request)
++    return any(requested_count(text, unit) is not None and re.search(
++        r"\b" + _NUMBER + r"[ -]+(?:(?:short|brief|simple|exact|practical|timed)\s+){0,2}"
++        r"numbered\s+" + unit + r"s?\b", text, re.I)
++        for unit in ("step", "line", "item"))
++
++
++def requested_line_prefixes(request, count):
++    """Copy labels only from an explicit prefix directive, never from task data."""
++    if not count:
++        return ()
++    directive = next(_positive_directives(r"\b(?:prefixes|labels|(?:start|begin)\s+(?:(?:the|their)\s+)?(?:lines?|text)\s+with)\s*:?\s*([^.!?\n]+)", request), None)
++    if not directive:
++        return ()
++    labels = re.findall(r"\b([A-Za-z][A-Za-z -]{0,24}):", directive.group(1))
++    labels = [re.sub(r"^(?:and\s+)", "", label).strip() + ":" for label in labels]
++    return tuple(labels) if len(labels) == count else ()
++
++
+ def allocation_budget(request):
+     """An explicit sum requirement, rather than every mentioned duration."""
+     matches = list(re.finditer(
+@@ -143,6 +196,14 @@ def task_contract_issues(request, answer):
+         if len(re.findall(r"\b" + re.escape(word) + r"\b", answer, re.I)) != count:
+             issues.append("requested_word_count")
+     lines = [line.strip() for line in answer.strip().splitlines() if line.strip()]
++    if scalar_output_requested(request) and not re.fullmatch(r"[+-]?\d+", answer.strip()):
++        issues.append("requested_scalar")
++    if numbered_output_requested(request):
++        count = requested_count(request, "step") or requested_count(request, "line") or requested_count(request, "item")
++        if count and (len(lines) != count or any(
++                not re.match(r"^" + str(index) + r"[.)]\s+\S", line)
++                for index, line in enumerate(lines, 1))):
++            issues.append("requested_numbering")
+     bullets = requested_count(request, r"bullet(?:\s+point)?")
+     if bullets is not None and (len(lines) != bullets or any(
+             not re.match(r"^(?:[-*•]|\d+[.)])\s+\S", line) for line in lines)):
+@@ -161,10 +222,10 @@ def task_contract_issues(request, answer):
+             rows = list(csv.reader(StringIO(answer), strict=True))
+         except csv.Error:
+             rows = []
+-        header = re.search(r"\bheader\s+['\"]?([A-Za-z_]\w*(?:,[A-Za-z_]\w*)+)", request, re.I)
++        header = requested_csv_header(request)
+         if (len(rows) < 2 or len(rows[0]) < 2
+                 or any(len(row) != len(rows[0]) or not all(cell.strip() for cell in row) for row in rows)
+-                or (header and rows[0] != header.group(1).split(","))
++                or (header and rows[0] != header.split(","))
+                 or "```" in answer):
+             issues.append("requested_csv")
+     minutes = allocation_budget(request)
+@@ -181,6 +242,8 @@ def task_contract_issues(request, answer):
+ 
+ 
+ TASK_FEEDBACK = {
++    "requested_scalar": "Return only the computed integer, without an equation, units or explanatory words.",
++    "requested_numbering": "Use the requested consecutive numbered lines starting with 1., with no extra introduction or final line.",
+     "requested_word_count": "Use each explicitly counted word exactly the requested number of times across the whole answer.",
+     "requested_bullet_count": "Use exactly the requested number of bullet points, each on its own line, with no introduction.",
+     "requested_line_count": "Use exactly the requested number of nonempty lines; put a JSON-escaped newline between them.",
+@@ -193,6 +256,12 @@ TASK_FEEDBACK = {
+ 
+ def task_instruction(request):
+     rules = []
++    if scalar_output_requested(request):
++        rules.append(TASK_FEEDBACK["requested_scalar"])
++    if numbered_output_requested(request):
++        rules.append(TASK_FEEDBACK["requested_numbering"])
++    if requested_count(request, "activity") == 1:
++        rules.append("Choose one specific activity, not a list of alternatives. Explain its first concrete action using the available supplies.")
+     for word, count in word_occurrences(request):
+         rules.append(f"Use the word '{word}' exactly {count} times across the whole answer.")
+     for unit, label in ((r"bullet(?:\s+point)?", "bullet points on separate lines"),
+@@ -213,6 +282,12 @@ def task_instruction(request):
+ def clarification_question(request):
+     """Ask for the unresolved task/referent, without guessing a missing value."""
+     text = request.casefold()
++    if re.search(r"\b(?:convert|conversion)\b", text):
++        return "What unit is the value in, and which unit should I convert it to?"
++    if re.search(r"\b(?:replace|pronoun|refer)\b", text) and re.search(r"\b(?:they|he|she|them|him|her)\b", text):
++        return "Who does the pronoun refer to? Please name the intended person."
++    if re.search(r"\blabels?\b", text):
++        return "Which label would you like me to change, or should I change both?"
+     if re.search(r"\b(?:numbers?|calculate|calculation|work\s+it\s+out)\b", text):
+         return "What calculation would you like me to do with those numbers?"
+     if re.search(r"\benough\b", text):
+diff --git a/src/oline_hri/task_parts.py b/src/oline_hri/task_parts.py
+index 90a5f3d..aa06bce 100644
+--- a/src/oline_hri/task_parts.py
++++ b/src/oline_hri/task_parts.py
+@@ -1,6 +1,7 @@
+-"""Typed layout for general answers; rendering adds only separators and bullets.
++"""Typed general answers with source-bound formatting and exact arithmetic.
+ 
+-Structure is not a correctness judgment. Callers retain original model JSON and
++Formatting and expression evaluation do not establish task correctness.
++Callers retain original model JSON and
+ run ordinary evidence, task-contract and answer-review checks after rendering.
+ """
+ 
+@@ -9,52 +10,89 @@ import json
+ import re
+ 
+ from .response import RobotResponse, ResponseValidationError
+-from .task_contract import csv_output_requested, requested_count, task_instruction
++from .arithmetic import arithmetic_request, evaluate_integer_expression, expression_instruction
++from .task_contract import (csv_output_requested, requested_count, task_instruction,
++                            requested_csv_header, scalar_output_requested,
++                            numbered_output_requested, requested_line_prefixes)
+ 
+ 
+ @dataclass(frozen=True)
+ class TaskLayout:
+     kind: str
+     count: int | None = None
++    numbered: bool = False
++    prefixes: tuple[str, ...] = ()
++    header: str | None = None
++    source_request: str | None = None
+ 
+ 
+ def task_layout(request):
+     if csv_output_requested(request):
+-        return TaskLayout("csv")
++        return TaskLayout("csv", header=requested_csv_header(request))
++    if scalar_output_requested(request):
++        if arithmetic_request(request):
++            return TaskLayout("calculation", 1, source_request=request)
++        return TaskLayout("integer", 1)
+     for unit, kind in ((r"bullet(?:\s+point)?", "bullets"), ("line", "lines"),
+-                       ("item", "items"), ("sentence", "sentences")):
++                       ("item", "items"), ("step", "items"), ("sentence", "sentences")):
+         count = requested_count(request, unit)
+         if count is not None and 1 <= count <= 12:
+-            return TaskLayout(kind, count)
++            return TaskLayout(kind, count, numbered_output_requested(request),
++                              requested_line_prefixes(request, count))
++    if re.search(r"\b(?:separate\s+lines|each\s+on\s+(?:its\s+own|a\s+separate)\s+line)\b", request, re.I):
++        count = requested_count(request, "name")
++        if count is not None and 1 <= count <= 12:
++            return TaskLayout("lines", count)
+     return None
+ 
+ 
+ def parts_schema(layout):
+-    minimum, maximum = ((2, 32) if layout.kind == "csv" else (layout.count, layout.count))
++    minimum, maximum = (((1 if layout.header else 2), 32) if layout.kind == "csv" else (layout.count, layout.count))
++    item = {"type": "string", "minLength": 1, "maxLength": 600}
++    if layout.kind == "integer":
++        item["pattern"] = r"^[+-]?\d+$"
++    if layout.kind == "calculation":
++        item["pattern"] = r"^[0-9+*/() -]+$"
++        item["maxLength"] = 160
+     return {"type": "object", "properties": {
+         "answer_parts": {"type": "array", "minItems": minimum, "maxItems": maximum,
+-                         "items": {"type": "string", "minLength": 1, "maxLength": 600}}},
++                         "items": item}},
+         "required": ["answer_parts"], "additionalProperties": False}
+ 
+ 
+ def parts_instruction(request, layout):
++    if layout.kind == "calculation":
++        return ("Return only JSON with answer_parts, an array containing one short arithmetic expression string. "
++                + expression_instruction(request)
++                + " The application evaluates the expression and delivers only the integer. "
++                "Do not put the calculated answer, an equals sign, prose or units inside the array.")
+     detail = {
+         "csv": "Each part is one CSV row. Start with the requested header, then preserve all input rows and values in order. Use commas between cells.",
+         "lines": "Each part is one requested line of the answer. Supply the actual content, without a title or introduction unless requested.",
+         "bullets": "Each part contains one complete bullet's content. Do not add bullet markers or numbering; the application adds them.",
+         "items": "Each part contains one actual requested list item, not a heading or an offer to make a list. Omit numbering.",
+         "sentences": "Each part is exactly one complete sentence. Keep any greeting within a sentence, without adding a separate greeting sentence.",
++        "integer": "The single part contains only the computed integer in digits. No equation, label, units or explanation.",
+     }[layout.kind]
++    if layout.header:
++        detail = f"Each part is one CSV DATA row, preserving every supplied row and value in order. The application prepends the exact header {layout.header!r}."
++    if layout.numbered:
++        detail += " Omit numbering: the application numbers the parts consecutively."
++    if layout.prefixes:
++        detail += f" The application prefixes the parts in order with {layout.prefixes!r}; omit those labels from your content."
+     count = "" if layout.count is None else f" Produce exactly {layout.count} parts."
+     return (
+         "Complete the user's task. Return only JSON with answer_parts, an array of strings. "
+         + detail + count +
+         " No line breaks inside a part, code fences, or JSON field names in the answer text. "
+-        "Include every requested detail and constraint; do not merely announce the answer. "
++        "Include every requested detail and constraint; preserve supplied objects, quantities, materials, times and locations. Do not merely announce the answer. "
++        "For an explanation, name the physical cause and connect it to the observed result without contradicting it. "
+         "Use at most 80 words overall. Use current supplied information and general knowledge. "
+         "Do not invent personal facts or claim the robot performed an action. "
+         "A requested draft is wording for the human, not a claim about the robot. "
+         + task_instruction(request)
++        + (" Numbering and the specified prefixes are rendered by the application: omit them inside answer_parts."
++           if layout.numbered or layout.prefixes else "")
+     )
+ 
+ 
+@@ -85,16 +123,35 @@ def parse_parts(content, layout):
+         raise ResponseValidationError("task parts require a bounded nonempty list")
+     if layout.count is not None and len(parts) != layout.count:
+         raise ResponseValidationError("task parts have the wrong count")
+-    if layout.kind == "csv" and len(parts) < 2:
++    if layout.kind == "csv" and not layout.header and len(parts) < 2:
+         raise ResponseValidationError("CSV requires a header and data")
+-    for part in parts:
++    normalized = []
++    for index, part in enumerate(parts, 1):
+         if type(part) is not str or not part.strip() or len(part) > 600 or "\n" in part:
+             raise ResponseValidationError("each task part must be one nonempty line")
+-        if layout.kind in {"items", "bullets"} and re.match(r"\s*(?:[-*•]|\d+[.)])\s", part):
++        if layout.numbered:
++            # Matching consecutive list markers are structure, not content.
++            # A different numeral remains invalid rather than silently changed.
++            part = re.sub(r"^\s*" + str(index) + r"[.)]\s+", "", part)
++        if (layout.kind in {"items", "bullets"} or layout.numbered) and re.match(r"\s*(?:[-*•]|\d+[.)])\s", part):
+             raise ResponseValidationError("task items must omit application list markers")
++        if not part.strip():
++            raise ResponseValidationError("task part requires content after its marker")
++        normalized.append(part.strip())
++    if layout.kind == "integer" and not re.fullmatch(r"[+-]?\d+", parts[0].strip()):
++        raise ResponseValidationError("scalar answer must contain only an integer")
++    parts = normalized
++    if layout.kind == "calculation":
++        parts = [evaluate_integer_expression(parts[0], layout.source_request)]
++    if layout.prefixes:
++        parts = [prefix + " " + (part[len(prefix):].lstrip() if part.startswith(prefix) else part)
++                 for prefix, part in zip(layout.prefixes, parts)]
++    if layout.header:
++        parts.insert(0, layout.header)
+     separator = " " if layout.kind == "sentences" else "\n"
+     marker = "- " if layout.kind in {"items", "bullets"} else ""
+-    speech = separator.join(marker + part.strip() for part in parts)
++    speech = separator.join((f"{index}. " if layout.numbered else marker) + part
++                            for index, part in enumerate(parts, 1))
+     # RobotResponse enforces controls, machine-field/selector exclusion and the
+     # exact public response contract, including NO_ACTION and no memory IDs.
+     return RobotResponse(speech=speech, gesture_id="NO_ACTION", memory_used=())
+diff --git a/tests/test_answer_guidance.py b/tests/test_answer_guidance.py
+index 88992f1..f3ef7ac 100644
+--- a/tests/test_answer_guidance.py
++++ b/tests/test_answer_guidance.py
+@@ -26,7 +26,7 @@ class AnswerGuidanceTests(unittest.TestCase):
+         for note in REFERENCE_NOTES:
+             self.assertTrue(note.sources)
+             self.assertTrue(all(url.startswith('https://') for url in note.sources))
+-            self.assertEqual(note.reviewed, '2026-09-10')
++            self.assertEqual(note.reviewed, '2026-09-17' if note.id in {'earth_day_night_v1', 'paper_fan_v1'} else '2026-09-10')
+             self.assertLess(len(note.text), 650)
+         self.assertEqual(reference_ids_for('What is cosine similarity?'), ('cosine_similarity_v1',))
+         self.assertEqual(reference_ids_for('Compare RRF to raw-score fusion.'), ('rank_fusion_v1',))
+@@ -36,6 +36,8 @@ class AnswerGuidanceTests(unittest.TestCase):
+         self.assertEqual(reference_ids_for('How do SQLite virtual tables work?'), ())
+         self.assertEqual(reference_ids_for('Do SQLite FTS5 updates support transactions?'), ('sql_transactions_v1',))
+         self.assertEqual(reference_ids_for('Make a picnic checklist.'), ())
++        self.assertEqual(reference_ids_for('Why does Earth have day and night?'), ('earth_day_night_v1',))
++        self.assertEqual(reference_ids_for('Write about a night at the opera.'), ())
+         self.assertEqual(len(reference_ids_for('SQLite, RRF and cosine similarity')), 2)
+ 
+     def test_notes_are_facts_not_complete_fixture_answers(self):
+diff --git a/tests/test_task_contract.py b/tests/test_task_contract.py
+index 7061f30..f51b04f 100644
+--- a/tests/test_task_contract.py
++++ b/tests/test_task_contract.py
+@@ -110,7 +110,7 @@ class TaskContractTests(unittest.TestCase):
+         request = "Convert pear, 2; plum, 6 to CSV with header fruit,count. Return only CSV text."
+         bad = chat_result(raw=json.dumps({"answer_parts": ["Here is the fruit list", "Pear and plum"]}),
+                           model=GENERAL_LARGE_MODEL)
+-        good = chat_result(raw=json.dumps({"answer_parts": ["fruit,count", "pear,2", "plum,6"]}),
++        good = chat_result(raw=json.dumps({"answer_parts": ["pear,2", "plum,6"]}),
+                            model=GENERAL_LARGE_MODEL)
+         backend = FakeBackend((bad, good))
+         session, _, _, reviewer = reliable(backend, route=semantic_route(size="large"))

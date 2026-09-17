@@ -1,0 +1,19 @@
+{
+  "created_at": "2026-09-17T11:39:39.097534+00:00",
+  "baseline_git_commit": "e3985480cc361b42b469c395f2d9139fcc9ca86a",
+  "purpose": "Preserve exact committed repository index bytes before this quality-repair cycle appends results. All prior evaluation artifacts and manifests remain unchanged.",
+  "prior_completion_manifest": "evaluation/answer_repair_20260916/completion_manifest.json",
+  "prior_completion_manifest_sha256": "975a67b22c96927fec49cdea1ddee541274047d4c5ac8c447f6b4b1dec01dc70",
+  "documents": {
+    "README.md": {
+      "snapshot_path": "evaluation/quality_repair_20260917/baseline_snapshot/README.md",
+      "sha256": "c7ed8f5f18fbad36db807915e48428a44b1af8c29d4018509d4e7913523d069d",
+      "matches_current_at_snapshot": true
+    },
+    "results.md": {
+      "snapshot_path": "evaluation/quality_repair_20260917/baseline_snapshot/results.md",
+      "sha256": "3002ddf292534cdd78dee068c9e377ada61e3f853bfb58ca011e5e332374e3f0",
+      "matches_current_at_snapshot": true
+    }
+  }
+}

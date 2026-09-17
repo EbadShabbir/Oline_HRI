@@ -1,0 +1,2 @@
+{"at": "2026-09-17T12:11:19.659781+00:00", "event": "before", "active": "active", "status": "u 1", "percentage": "u 0"}
+{"at": "2026-09-17T12:12:49.665475+00:00", "event": "error", "type": "TimeoutExpired", "message": "Command '['pkexec', '--disable-internal-agent', '/usr/bin/systemctl', 'stop', 'fwupd.service']' timed out after 89.9999687350064 seconds"}

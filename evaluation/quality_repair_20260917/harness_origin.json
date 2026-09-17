@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-09-17T11:39:39.159287+00:00",
+  "scope": "Known 16-case development replay only; these cases and outputs were observed before this repair.",
+  "source_path": "evaluation/answer_repair_20260916/fresh_recovery_v1/cases.json",
+  "source_sha256": "c621f0b9cba7c0bd22dae169261a8694fc6c6f2c9f08f3553ac727e0ab3c22bf",
+  "copied_path": "evaluation/quality_repair_20260917/known_cases.json",
+  "copied_sha256": "c621f0b9cba7c0bd22dae169261a8694fc6c6f2c9f08f3553ac727e0ab3c22bf",
+  "copied_harness_files": {
+    "run_guarded.py": "93924f38de261ec1812873c583ac2d64b7ee4a1b5c9ffa95b38cd19ab6bdd0af",
+    "freeze_candidate.py": "1f06bbbf9f52d07954fe96d14581d668b23809b3a30ad8199336250713ae096a",
+    "seal_evaluation.py": "fc3cdba8783ecfad7a3e99bad2dd2686ec9ae2cf65ae6554078c4faf948a5899",
+    "review_packet.py": "8776455cf7c86ea28c0b264a4045a74790288e2f944ac99d7675c9a613260aa0",
+    "analyze.py": "227495cfd9f28b6a87e981ac58bcd4ecb8fa16760024ee81ab3736737c45bc05",
+    "audit_results.py": "81fccb858656a22fd55af27a468e9b4e3911fe6bea41add78ea9a13c5ace080a",
+    "test_development_runner.py": "a6a72d456f3ed90370e42b517a8be355d104b5e1241fbc9449133b9343b4b8b0",
+    "test_analyze.py": "4ede615ff9dd26a4c468dbfbbf2970003ae4ddadbecf1239447c766cc84a7952",
+    "test_audit_results.py": "ffbc5b0c82f8f4fc714f85c55bd2ebb09bdb29b674be303a2a1ce3bbc9e3a185",
+    "test_seal_evaluation.py": "6bc60af66f95787e24066c36bbadde4811a7add74c64bb8a75f06c373139aeda"
+  }
+}

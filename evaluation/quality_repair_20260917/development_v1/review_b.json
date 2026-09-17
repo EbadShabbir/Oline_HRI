@@ -1,0 +1,330 @@
+{
+  "reviewer": "B",
+  "scope": "Complete delivered text; routes, model identity, timing, internal verdicts and withheld outputs hidden.",
+  "packet_sha256": "2a8948c54512053c347cb77800e2d2e4ad1ad1c3b3f9f2df74de2911c8d080bb",
+  "judgments": [
+    {
+      "id": "repair_holdout_001",
+      "quality_pass": false,
+      "required_components_pass": [
+        {
+          "component": "Give exactly four numbered steps that respectively position the tray, arrange the six models, write and place six numbered cards, and check the display.",
+          "pass": false,
+          "reason": "The answer is only a request to add detail or rephrase; it supplies none of the four numbered setup steps."
+        },
+        {
+          "component": "Retain the supplied allocations of 2, 3, 4, and 2 minutes and state the total as 11 minutes.",
+          "pass": false,
+          "reason": "The answer includes no phase durations and no 11-minute total."
+        }
+      ],
+      "useful_general_help": false,
+      "flags": [
+        "missing_required_detail",
+        "format_error",
+        "unhelpful_answer"
+      ],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Unnecessary clarification replaces a self-contained plan.",
+      "rationale": "All supplies, actions, and time allocations are provided. The generic clarification completes none of the requested plan and does not identify any actual missing information."
+    },
+    {
+      "id": "repair_holdout_002",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Show four phases with intervals 0–3, 3–5, 5–11, and 11–14 minutes, or equivalent time notation.",
+          "pass": true,
+          "reason": "The answer explicitly gives 0-3, 3-5, 5-11, and 11-14 minutes."
+        },
+        {
+          "component": "Assign the intervals respectively to reading, arranging, performing both voices, and writing notes.",
+          "pass": true,
+          "reason": "Those intervals are assigned in order to reading the script, arranging the puppets, performing both voices, and writing notes."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Correct four-phase solo rehearsal schedule.",
+      "rationale": "The supplied phase durations and starting/ending times are preserved, and the answer does not require another performer or missing personal information."
+    },
+    {
+      "id": "repair_holdout_003",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Output exactly four lines: shelf,boxes followed by north,6 then south,2 then west,9.",
+          "pass": true,
+          "reason": "The four delivered lines are exactly shelf,boxes; north,6; south,2; and west,9, with each on its own line."
+        },
+        {
+          "component": "Preserve the supplied labels, quantities, and order, with no surrounding prose or code fence.",
+          "pass": true,
+          "reason": "All labels, quantities, and their order match the request; there is no surrounding prose or code fence."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Exact requested CSV.",
+      "rationale": "The answer supplies the complete inventory in the required four-line format with no extra material."
+    },
+    {
+      "id": "repair_holdout_004",
+      "quality_pass": false,
+      "required_components_pass": [
+        {
+          "component": "Give three numbered lines with the text labels Start:, Middle:, and Finish: in order.",
+          "pass": true,
+          "reason": "There are exactly three numbered lines beginning Start:, Middle:, and Finish:, in the requested order."
+        },
+        {
+          "component": "Describe a workable sequence of starting a fold, continuing alternating folds, and gathering or pinching one end to open a fan.",
+          "pass": false,
+          "reason": "The instructions fold the sheet in half and form a cone; they never describe alternating folds or gathering one end of an accordion-folded sheet to open a fan."
+        }
+      ],
+      "useful_general_help": false,
+      "flags": [
+        "content_error",
+        "missing_required_detail"
+      ],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Correct line format but incorrect fan instructions.",
+      "rationale": "The described cone-making sequence does not give a workable alternating-fold paper fan. It also requires ribbon or string even though the requested fan is to be made from one sheet."
+    },
+    {
+      "id": "repair_holdout_005",
+      "quality_pass": false,
+      "required_components_pass": [
+        {
+          "component": "Return only 31, allowing surrounding whitespace.",
+          "pass": false,
+          "reason": "The delivered number is 23; four cups of seven beads plus three extra beads equals 31."
+        }
+      ],
+      "useful_general_help": false,
+      "flags": [
+        "content_error"
+      ],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Incorrect arithmetic result.",
+      "rationale": "The answer respects the number-only format but gives the wrong total: 7 times 4 plus 3 is 31."
+    },
+    {
+      "id": "repair_holdout_006",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Provide an announcement of no more than 16 whitespace-separated words.",
+          "pass": true,
+          "reason": "The announcement contains 11 whitespace-separated words and no additional commentary."
+        },
+        {
+          "component": "Preserve the rehearsal moving from Tuesday to Thursday, at noon, in Studio 3.",
+          "pass": true,
+          "reason": "It states that rehearsal moved from Tuesday to Thursday at noon in Studio 3."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Concise announcement preserves every required detail.",
+      "rationale": "The supplied draft context supports the rewrite, which meets the word limit and retains both weekdays, the direction of the move, the time, and the room."
+    },
+    {
+      "id": "repair_holdout_007",
+      "quality_pass": false,
+      "required_components_pass": [
+        {
+          "component": "Use two short sentences mentioning Earth and the Sun.",
+          "pass": true,
+          "reason": "The answer has two short sentences and mentions both Earth and the Sun."
+        },
+        {
+          "component": "Explain that Earth's rotation brings a place toward the sunlit side for day and away from sunlight for night.",
+          "pass": false,
+          "reason": "Although it names rotation, it describes Earth as spinning around the Sun and never clearly explains a place rotating into sunlight for day and away for night."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [
+        "content_error",
+        "missing_required_detail"
+      ],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Partly informative explanation confuses rotation with orbit.",
+      "rationale": "The answer provides useful general ideas by naming rotation as the cause and relating daylight to the side facing the Sun. Full quality fails because the stated spinning-around-the-Sun mechanism is inaccurate and the transition of a place into and out of sunlight is not correctly explained."
+    },
+    {
+      "id": "repair_holdout_008",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Give exactly two nonempty story lines about a kite that gets away.",
+          "pass": true,
+          "reason": "The answer consists of two nonempty story lines describing a kite soaring and flying away from the house."
+        },
+        {
+          "component": "Make home the final word of the second line; ordinary final punctuation is acceptable.",
+          "pass": true,
+          "reason": "The second line ends with home followed by a period, which the rubric permits."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Two-line runaway-kite story with required ending.",
+      "rationale": "The story meets the explicit line, subject, and final-word constraints without a title, preface, or claim about the user's past. Awkward phrasing does not violate an additional stated requirement."
+    },
+    {
+      "id": "repair_holdout_009",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Provide two plausible herb-garden names on separate lines.",
+          "pass": true,
+          "reason": "Sunset Herb Sanctuary and Whispering Green Oasis are plausible garden names, each delivered on a separate line."
+        },
+        {
+          "component": "Use the allowed generic creative fallback without needing past naming preferences.",
+          "pass": true,
+          "reason": "The answer directly provides generic invented names without seeking or claiming earlier naming preferences."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Two suitable names using the permitted fallback.",
+      "rationale": "The response contains just two plausible names and makes no unsupported claim about remembered preferences."
+    },
+    {
+      "id": "repair_holdout_010",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Suggest one general activity feasible within ten minutes using the sketchpad and pencil.",
+          "pass": true,
+          "reason": "Sketching a simple landscape is a single general activity feasible in a ten-minute wait using the supplied sketchpad and pencil."
+        },
+        {
+          "component": "Use two sentences to identify the activity and explain how to start.",
+          "pass": true,
+          "reason": "The first sentence identifies landscape sketching and the second explains starting with a mountain outline, then adding trees and clouds."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Feasible activity with a clear two-sentence start.",
+      "rationale": "The general fallback is allowed, the suggested sketch needs no extra equipment, and no hobby is attributed to the user as a remembered fact."
+    },
+    {
+      "id": "repair_holdout_011",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Clearly state that the previously chosen pattern is unavailable from the supplied context or memory; a relevant follow-up request is optional.",
+          "pass": true,
+          "reason": "I don't have that earlier information available explicitly acknowledges the unavailable previously chosen pattern, followed by a relevant request for a reminder."
+        }
+      ],
+      "useful_general_help": null,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Acknowledges unavailable personal recall.",
+      "rationale": "The empty personal store cannot establish the earlier cushion pattern; the answer acknowledges that gap and does not invent a choice."
+    },
+    {
+      "id": "repair_holdout_012",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Acknowledge that the user's previously stated wall motto is unavailable.",
+          "pass": true,
+          "reason": "The response says the earlier information is unavailable and asks the user to remind it of the three-word motto."
+        },
+        {
+          "component": "Also give a one-sentence general definition of a motto as a brief phrase expressing a guiding belief, aim, or principle.",
+          "pass": true,
+          "reason": "Its final sentence defines a motto as a short phrase or sentence expressing a principle or belief and serving as a guiding rule or inspiration."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Appropriate recall limitation plus useful definition.",
+      "rationale": "The answer avoids inventing the personal motto while completing the independent request for a one-sentence general definition."
+    },
+    {
+      "id": "repair_holdout_013",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "State that the previously identified first reader is unavailable.",
+          "pass": true,
+          "reason": "The opening states that the earlier information is unavailable and asks for the person's name."
+        },
+        {
+          "component": "Provide three distinct, useful proofreading checks, such as spelling, punctuation, and sentence clarity.",
+          "pass": true,
+          "reason": "Three distinct checks cover grammatical agreement and tense, punctuation placement, and logical flow and clarity."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Acknowledges unavailable reader and supplies three checks.",
+      "rationale": "No chosen reader is invented, and all three useful proofreading items are delivered. The first dash appears after the reminder question but remains an identifiable checklist item; the request specifies no stricter line format."
+    },
+    {
+      "id": "repair_holdout_014",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Ask which of the two labels should be rewritten; asking whether both are intended is also acceptable.",
+          "pass": true,
+          "reason": "The response asks which label to change and explicitly offers the alternative of changing both."
+        }
+      ],
+      "useful_general_help": null,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Clarifies the ambiguous label target.",
+      "rationale": "Two labels are supplied without a uniquely designated target. The question identifies that missing choice and does not silently select a label."
+    },
+    {
+      "id": "repair_holdout_015",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Ask whether they refers to Rafi or Morgan, or otherwise ask who is meant to bring the tray.",
+          "pass": true,
+          "reason": "Who does the pronoun refer to? Please name the intended person directly requests the intended referent of they."
+        }
+      ],
+      "useful_general_help": null,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Requests the unresolved pronoun referent.",
+      "rationale": "The answer asks for the missing intended person without choosing Rafi or Morgan or claiming unsupported knowledge."
+    },
+    {
+      "id": "repair_holdout_016",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Ask which starting and target units the user wants; a single concise question can request both.",
+          "pass": true,
+          "reason": "The single question asks both what unit the value is in and which unit it should be converted to."
+        }
+      ],
+      "useful_general_help": null,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Requests both missing conversion units.",
+      "rationale": "The request does not identify either unit. The answer concisely asks for both and avoids guessing a conversion."
+    }
+  ]
+}

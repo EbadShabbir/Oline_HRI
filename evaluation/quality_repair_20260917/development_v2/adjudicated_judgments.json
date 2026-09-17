@@ -1,0 +1,267 @@
+{
+  "created_at": "2026-09-17T12:08:34.754745+00:00",
+  "scope": "Known sixteen-case development attempt interrupted after twelve recorded outcomes; twelve independent judgments only, with all sixteen planned cases retained by analysis.",
+  "reviewer": "Agreed A and B booleans; explicit descriptive flag adjudication recorded separately",
+  "packet_sha256": "42ce36153d75364e94c341bd65b3eebe2baa13dfc1c7144557f1eeb5820ff543",
+  "source_reviews_sha256": {
+    "review_a.json": "7b168fee6a80c91f65d2e28cb0bb0029ae72e17ee25277110823517f110ca750",
+    "review_b.json": "92382251bcb78e4465ca4769964c6ccb2aafe24c72bf60af49807df602074d53",
+    "review_packet.json": "42ce36153d75364e94c341bd65b3eebe2baa13dfc1c7144557f1eeb5820ff543"
+  },
+  "adjudication_path": "adjudication.json",
+  "judgments": [
+    {
+      "id": "repair_holdout_001",
+      "quality_pass": false,
+      "required_components_pass": [
+        {
+          "component": "Give exactly four numbered steps that respectively position the tray, arrange the six models, write and place six numbered cards, and check the display.",
+          "pass": false,
+          "reason": "The answer asks only for a rephrase and supplies none of the four required numbered setup steps."
+        },
+        {
+          "component": "Retain the supplied allocations of 2, 3, 4, and 2 minutes and state the total as 11 minutes.",
+          "pass": false,
+          "reason": "No phase durations or 11-minute total are given."
+        }
+      ],
+      "useful_general_help": false,
+      "flags": [
+        "unhelpful_answer",
+        "missing_required_detail",
+        "format_error"
+      ],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Unnecessary clarification replaces the complete setup request",
+      "rationale": "The visible request supplies all necessary tasks, materials and durations. Asking generically for more detail completes no part of the requested plan."
+    },
+    {
+      "id": "repair_holdout_002",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Show four phases with intervals 0–3, 3–5, 5–11, and 11–14 minutes, or equivalent time notation.",
+          "pass": true,
+          "reason": "The phases have start and end times 0–3, 3–5, 5–11 and 11–14 minutes."
+        },
+        {
+          "component": "Assign the intervals respectively to reading, arranging, performing both voices, and writing notes.",
+          "pass": true,
+          "reason": "Those intervals are assigned respectively to reading, arranging puppets, performing both voices and writing notes."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Complete four-phase rehearsal schedule",
+      "rationale": "All required phases and durations are preserved. The extra offline sentence violates no requested format constraint and adds no supply or personal-history requirement."
+    },
+    {
+      "id": "repair_holdout_003",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Output exactly four lines: shelf,boxes followed by north,6 then south,2 then west,9.",
+          "pass": true,
+          "reason": "The output has exactly the four specified lines: shelf,boxes followed by north,6, south,2 and west,9."
+        },
+        {
+          "component": "Preserve the supplied labels, quantities, and order, with no surrounding prose or code fence.",
+          "pass": true,
+          "reason": "Labels, counts and order are unchanged, with no code fence or surrounding explanation."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Exact requested CSV",
+      "rationale": "The delivered CSV meets the exact content and formatting requirements."
+    },
+    {
+      "id": "repair_holdout_004",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Give three numbered lines with the text labels Start:, Middle:, and Finish: in order.",
+          "pass": true,
+          "reason": "There are exactly three numbered lines with Start:, Middle: and Finish: in order."
+        },
+        {
+          "component": "Describe a workable sequence of starting a fold, continuing alternating folds, and gathering or pinching one end to open a fan.",
+          "pass": true,
+          "reason": "The first line directs alternating zigzag accordion folds; the second pinches one end and spreads the other to form the fan."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Workable accordion-fold fan sequence",
+      "rationale": "The wording about a narrow strip is imprecise, but the delivered sequence supplies the requested alternating folds and gathering of one end, without requiring extra materials. The final statement remains within the third requested line."
+    },
+    {
+      "id": "repair_holdout_005",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Return only 31, allowing surrounding whitespace.",
+          "pass": true,
+          "reason": "The complete delivered text is 31, equal to 7 × 4 + 3."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Correct number-only bead total",
+      "rationale": "The total is correct and contains no explanation, question or disclaimer."
+    },
+    {
+      "id": "repair_holdout_006",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Provide an announcement of no more than 16 whitespace-separated words.",
+          "pass": true,
+          "reason": "The delivered announcement contains 11 whitespace-separated words and no additional text."
+        },
+        {
+          "component": "Preserve the rehearsal moving from Tuesday to Thursday, at noon, in Studio 3.",
+          "pass": true,
+          "reason": "It retains rehearsal moving from Tuesday to Thursday, at noon, in Studio 3."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Shortened announcement preserves every required detail",
+      "rationale": "The supplied draft context supports the rewrite, and the result satisfies the word limit and all content constraints."
+    },
+    {
+      "id": "repair_holdout_007",
+      "quality_pass": false,
+      "required_components_pass": [
+        {
+          "component": "Use two short sentences mentioning Earth and the Sun.",
+          "pass": true,
+          "reason": "The answer uses exactly two short sentences and mentions both Earth and the Sun."
+        },
+        {
+          "component": "Explain that Earth's rotation brings a place toward the sunlit side for day and away from sunlight for night.",
+          "pass": false,
+          "reason": "It says Earth rotates on its axis but never explains that a place faces sunlight for day and rotates away from sunlight for night."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [
+        "missing_required_detail",
+        "content_error"
+      ],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Correct rotation fact but incomplete day-night explanation",
+      "rationale": "The rotation-on-its-axis statement is useful general content. However, the second sentence about the Sun’s changing position and daylight length does not supply the frozen rubric’s required sunlit-side versus away-from-sunlight explanation."
+    },
+    {
+      "id": "repair_holdout_008",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Give exactly two nonempty story lines about a kite that gets away.",
+          "pass": true,
+          "reason": "The output has two nonempty story lines; the first follows a kite flying away and landing in a field, and the second is Home."
+        },
+        {
+          "component": "Make home the final word of the second line; ordinary final punctuation is acceptable.",
+          "pass": true,
+          "reason": "The final word on line two is Home with ordinary sentence capitalization and a period."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Two-line runaway-kite story with required final word",
+      "rationale": "The two lines tell a kite escape and landing story without a title or preface. The one-word second line is awkward but no minimum line length or lowercase-only constraint is imposed."
+    },
+    {
+      "id": "repair_holdout_009",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Provide two plausible herb-garden names on separate lines.",
+          "pass": true,
+          "reason": "Sunset Herb Sanctuary and Whispering Green Oasis are two plausible names on separate lines."
+        },
+        {
+          "component": "Use the allowed generic creative fallback without needing past naming preferences.",
+          "pass": true,
+          "reason": "The answer supplies generic creative suggestions directly, with no claim about prior naming preferences."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Two suitable generic garden names",
+      "rationale": "The permitted fallback is used and only the two requested names are returned."
+    },
+    {
+      "id": "repair_holdout_010",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Suggest one general activity feasible within ten minutes using the sketchpad and pencil.",
+          "pass": true,
+          "reason": "A simple landscape sketch is one feasible ten-minute activity using the stated sketchpad and pencil."
+        },
+        {
+          "component": "Use two sentences to identify the activity and explain how to start.",
+          "pass": true,
+          "reason": "The first sentence identifies the activity; the second tells the user to begin with a rough mountain outline and add trees and clouds."
+        }
+      ],
+      "useful_general_help": true,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Usable two-sentence landscape-sketching activity",
+      "rationale": "The answer meets the two-sentence constraint, needs no extra equipment and attributes no unsupported hobby to the user."
+    },
+    {
+      "id": "repair_holdout_011",
+      "quality_pass": true,
+      "required_components_pass": [
+        {
+          "component": "Clearly state that the previously chosen pattern is unavailable from the supplied context or memory; a relevant follow-up request is optional.",
+          "pass": true,
+          "reason": "The answer explicitly states that the earlier information is unavailable and asks the user to remind it of the pattern."
+        }
+      ],
+      "useful_general_help": null,
+      "flags": [],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Unavailable pattern recall acknowledged",
+      "rationale": "No selected pattern appears in the supplied evidence. The answer acknowledges that limit and invents neither a recalled choice nor a replacement recommendation."
+    },
+    {
+      "id": "repair_holdout_012",
+      "quality_pass": false,
+      "required_components_pass": [
+        {
+          "component": "Acknowledge that the user's previously stated wall motto is unavailable.",
+          "pass": false,
+          "reason": "The delivered text is empty, so it contains no acknowledgment that the personal motto is unavailable."
+        },
+        {
+          "component": "Also give a one-sentence general definition of a motto as a brief phrase expressing a guiding belief, aim, or principle.",
+          "pass": false,
+          "reason": "The delivered text is empty, so no general definition of a motto is supplied."
+        }
+      ],
+      "useful_general_help": false,
+      "flags": [
+        "execution_error",
+        "unhelpful_answer",
+        "missing_required_detail"
+      ],
+      "unsupported_subtypes": [],
+      "primary_outcome": "Execution failure delivers no answer",
+      "rationale": "The packet records an execution failure and empty output. Neither the personal-memory acknowledgment nor the independent one-sentence definition reaches the user."
+    }
+  ]
+}

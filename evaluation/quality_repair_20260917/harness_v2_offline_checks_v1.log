@@ -1,0 +1,30 @@
+test_actual_role_detection_covers_new_and_historical_review_and_guidance (test_audit_results_v2.IndependentAuditTests) ... ok
+test_arithmetic_provenance_does_not_claim_expression_semantics (test_audit_results_v2.IndependentAuditTests) ... ok
+test_attempt_omission_and_fabricated_compute_are_detected (test_audit_results_v2.IndependentAuditTests) ... ok
+test_csv_first_data_row_equal_to_header_is_retained (test_audit_results_v2.IndependentAuditTests) ... ok
+test_errors_and_missing_cases_stay_in_denominator_without_effective_route_credit (test_audit_results_v2.IndependentAuditTests) ... ok
+test_expression_is_independently_evaluated_from_current_operands (test_audit_results_v2.IndependentAuditTests) ... ok
+test_historical_archive_is_explicit_and_tampering_fails (test_audit_results_v2.IndependentAuditTests) ... ok
+test_linear_percentiles_and_missing_latency (test_audit_results_v2.IndependentAuditTests) ... ok
+test_mixed_fragment_is_literal_and_prefix_remains_separately_exposed (test_audit_results_v2.IndependentAuditTests) ... ok
+test_negated_header_and_prefix_are_not_inserted (test_audit_results_v2.IndependentAuditTests) ... ok
+test_numbered_input_quoted_approximate_and_negated_mentions_are_not_output_directives (test_audit_results_v2.IndependentAuditTests) ... ok
+test_only_matching_consecutive_raw_markers_are_normalized (test_audit_results_v2.IndependentAuditTests) ... ok
+test_public_note_requires_frozen_literal_topic_and_prompt_proof (test_audit_results_v2.IndependentAuditTests) ... ok
+test_quoted_directive_is_skipped_but_quoted_header_value_is_literal (test_audit_results_v2.IndependentAuditTests) ... ok
+test_scalar_schema_requires_positive_unquoted_source_directive (test_audit_results_v2.IndependentAuditTests) ... ok
+test_source_derived_header_numbering_and_prefixes_reconstruct (test_audit_results_v2.IndependentAuditTests) ... ok
+test_sqlite_audit_is_read_only_and_detects_nonempty_store (test_audit_results_v2.IndependentAuditTests) ... ok
+test_unrequested_header_changed_content_and_unbound_prompt_fail (test_audit_results_v2.IndependentAuditTests) ... ok
+test_wrong_constants_guessed_result_and_relaxed_calculation_schema_fail (test_audit_results_v2.IndependentAuditTests) ... ok
+test_arithmetic_selection_rejects_quoted_intent_conversions_and_missing_values (test_independent_arithmetic_v2.IndependentArithmeticTests) ... ok
+test_cardinals_are_whole_operands_and_conjunctions_split_only_when_needed (test_independent_arithmetic_v2.IndependentArithmeticTests) ... ok
+test_decimal_scientific_malformed_and_large_values_are_not_partial_operands (test_independent_arithmetic_v2.IndependentArithmeticTests) ... ok
+test_exact_operations_and_fraction_intermediates (test_independent_arithmetic_v2.IndependentArithmeticTests) ... ok
+test_length_depth_node_intermediate_and_result_bounds (test_independent_arithmetic_v2.IndependentArithmeticTests) ... ok
+test_unsupported_code_operators_unsupplied_values_and_nonintegers_fail (test_independent_arithmetic_v2.IndependentArithmeticTests) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.163s
+
+OK

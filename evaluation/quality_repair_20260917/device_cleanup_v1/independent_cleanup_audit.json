@@ -1,0 +1,216 @@
+{
+  "created_at": "2026-09-17T12:09:46.467272+00:00",
+  "scope": "Saved artifacts and literal source AST only; no live device, /proc, model, network, process or administrator operations.",
+  "authorization_limit": "Prior user and normal administrator authorization are described by the saved operator status; this audit does not query authentication logs.",
+  "checks": [
+    {
+      "check": "saved invocation reports successful bounded authorized helper",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "helper matches prior frozen completion-manifest bytes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "prior restoration tests remain sealed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "sealed mocked success failure interruption and headroom cases preserve restoration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cycle source has both per-device and outer finally restoration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "stderr is empty",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "start and completion are recorded in timestamp order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "models were absent before swap cycling",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "exact six existing zram devices only",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "original sizes and priorities are unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "total swap capacity is unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "initial drain has a 1 GiB RAM reserve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram0 sequential cycle order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram0 successful restoration with unchanged inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram0 only its capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram0 recorded drain reserve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram1 sequential cycle order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram1 successful restoration with unchanged inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram1 only its capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram1 recorded drain reserve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram2 sequential cycle order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram2 successful restoration with unchanged inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram2 only its capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram2 recorded drain reserve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram3 sequential cycle order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram3 successful restoration with unchanged inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram3 only its capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram3 recorded drain reserve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram4 sequential cycle order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram4 successful restoration with unchanged inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram4 only its capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram4 recorded drain reserve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram5 sequential cycle order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram5 successful restoration with unchanged inventory",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram5 only its capacity removed temporarily",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "/dev/zram5 recorded drain reserve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all six devices restored and empty at completion",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no cleanup error or persistent configuration change recorded",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "checks_passed": 38,
+  "checks_failed": 0,
+  "passed": true,
+  "device_count": 6,
+  "initial_swap_used_kib": 750592,
+  "final_swap_used_kib": 0,
+  "swap_total_kib": 3901584,
+  "post_cleanup_mem_available_kib": 2036260,
+  "post_cleanup_meets_2gib_ram_start_gate": false,
+  "readiness_interpretation": "Successful restoration does not establish inference readiness. The captured post-cleanup available RAM must independently meet the unchanged 2 GiB start gate before a new run; other gates are not captured by this swap log.",
+  "artifact_sha256": {
+    "evaluation/quality_repair_20260917/device_cleanup_v1/status.json": "c08beb59d66dfe40e9ce2a4fae941974fd2689f028b45b46c3948aa01a0734d9",
+    "evaluation/quality_repair_20260917/device_cleanup_v1/swap_reset.jsonl": "06a77c23cfe07ea033491743db1ad4dc2a3d0800d97993741d7106ab9d02381d",
+    "evaluation/quality_repair_20260917/device_cleanup_v1/swap_reset.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evaluation/answer_repair_20260916/reset_swap_once.py": "1a3d4ec63f21f27b6ead4335a7a310a995da04aeb1b52e1d152349b3d2016d58",
+    "evaluation/answer_repair_20260916/completion_manifest.json": "975a67b22c96927fec49cdea1ddee541274047d4c5ac8c447f6b4b1dec01dc70",
+    "evaluation/answer_repair_20260916/fresh_recovery_v1/swap_reset_offline_checks.json": "81388b173304adc39a710b3cc9863ee2745378e0066a914df15b319e2c20ada3",
+    "evaluation/quality_repair_20260917/device_cleanup_v1/independent_cleanup_audit_source.py": "8b4167af817356fb5b53bbe9e971a9a5ca1b15751af431f6eb66d7b1f9f3a80f"
+  }
+}

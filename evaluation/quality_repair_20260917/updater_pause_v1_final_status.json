@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-09-17T12:16:21.899969+00:00",
+  "read_only": true,
+  "administrator_operations_attempted": false,
+  "fwupd": {
+    "MainPID": "8554",
+    "ActiveState": "active",
+    "SubState": "running",
+    "Status": {
+      "returncode": 0,
+      "value": "u 1"
+    },
+    "Percentage": {
+      "returncode": 0,
+      "value": "u 0"
+    }
+  },
+  "remaining_pkexec_processes": [],
+  "memory_kib": {
+    "MemAvailable": 1980024,
+    "SwapTotal": 3901584,
+    "SwapFree": 3901584
+  }
+}

@@ -27,6 +27,15 @@ limits: 12 correct routes and four complete answers, with a 4.684-second median
 turn time. Both independent reviews and audits are complete. Formatting,
 clarification and unsupported personal recall remain quality limitations.
 
+The [September 17 answer-quality repair](evaluation/quality_repair_20260917/README.md)
+improved the completed known-case replay to **16/16 routing and 12/16 complete
+answers**, with two independent reviews and no unsupported personal recall.
+A later development run reached the RAM guard and remains recorded as incomplete.
+The newest test suite reports **1,489 passes and 26 live-only skips**; its next
+device replay and the unopened twenty-case holdout await device headroom and
+normal administrator authorization. The best completed replay is development
+evidence, not unseen validation or a release-quality pass.
+
 The historical `--routing-policy llm` path remains available for reproducibility.
 It asks `qwen3:0.6b` for two independent structured decisions: input `form` plus
 `memory_required`, and `model_size`. The reliable candidate replaces the memory

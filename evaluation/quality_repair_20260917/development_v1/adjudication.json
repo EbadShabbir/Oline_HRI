@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-09-17T11:55:32.388559+00:00",
+  "review_method": "Two independent assistant reviewers received only the sealed delivered-text packet and review plan; source, route, model identity, latency, runtime verdicts and withheld outputs were hidden. Review aggregation is not an additional independent review or human validation.",
+  "source_sha256": {
+    "review_a.json": "a81f4d5c45490389e9cd953e60b78b2e82767fd8ee7f85a7602448503b6093bf",
+    "review_b.json": "0e0bea35c52416854047a50f49f69d3eeefab29e2c6c645398b6868e43bd2727",
+    "review_packet.json": "2a8948c54512053c347cb77800e2d2e4ad1ad1c3b3f9f2df74de2911c8d080bb"
+  },
+  "planned_cases": 16,
+  "quality_agreement": {
+    "count": 16,
+    "denominator": 16
+  },
+  "component_boolean_agreement": {
+    "count": 27,
+    "denominator": 27
+  },
+  "usefulness_field_agreement": {
+    "count": 16,
+    "denominator": 16
+  },
+  "applicable_general_component_cases": 12,
+  "quality_pass_a": 12,
+  "quality_pass_b": 12,
+  "useful_general_help_a": 9,
+  "useful_general_help_b": 9,
+  "adjudications": [],
+  "selection_policy": "All quality, required-component and usefulness booleans agree. Flag and unsupported-subtype sets also agree. Retain reviewer A wording and booleans unchanged; differing prose descriptions and flag order require no scoring adjudication. Both independent originals remain unchanged.",
+  "reviewer_a_or_b_files_modified": false
+}
