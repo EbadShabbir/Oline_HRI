@@ -1,0 +1,21 @@
+\subsection{Pending Evaluations (Draft Placeholders)}
+\label{sec:pending_evaluations}
+
+The two evaluations below remain pending for the final frozen system. Their reserved spaces contain proposed protocols and reporting fields, not measured results.
+
+\noindent\fbox{\begin{minipage}[t][0.205\textheight][t]{\dimexpr\columnwidth-2\fboxsep-2\fboxrule\relax}
+\textbf{DRAFT --- Unseen-query evaluation}\par\smallskip
+Freeze the final candidate before opening new queries and fictional memory profiles. Use cases excluded from implementation and repair decisions; compare CLARA, $S$ only, and $L$ only under matched conditions and blinded answer review.\par\smallskip
+\textbf{To report:} distinct queries/profiles, task coverage, assessor type, full task success, unsupported claims, retrieval decisions, and all-attempt median/p95 latency.\par\smallskip
+\textbf{Sample counts and results: [PENDING].}\par
+\vfill\textit{Reserved for the unseen-query comparison and figure.}
+\end{minipage}}
+
+\medskip
+\noindent\fbox{\begin{minipage}[t][0.205\textheight][t]{\dimexpr\columnwidth-2\fboxsep-2\fboxrule\relax}
+\textbf{DRAFT --- Complete spoken pipeline}\par\smallskip
+Evaluate microphone input $\rightarrow$ speech-to-text $\rightarrow$ CLARA routing, memory, generation, and validation $\rightarrow$ text-to-speech $\rightarrow$ audible playback on the target device. Declare speakers, utterances, acoustic conditions, and cold/warm starts before collection.\par\smallskip
+\textbf{To report:} word error rate, spoken task success, failures, and median/p95 delay from end of user speech to first audio and to playback completion. Include stage timings and a matched text-input comparison.\par\smallskip
+\textbf{Sample counts and results: [PENDING].}\par
+\vfill\textit{Reserved for stage-latency results and failure analysis.}
+\end{minipage}}
